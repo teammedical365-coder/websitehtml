@@ -1,0 +1,2 @@
+Missing master footer:
+landingpages_sitemap.html

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCRM ERP - Enterprise Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* =========================================
+           PREMIUM DESIGN SYSTEM & VARIABLES
+           ========================================= */
+        :root {
+            /* Core Color Palette */
+            --primary: #4f46e5;         /* Indigo 600 */
+            --primary-hover: #4338ca;   /* Indigo 700 */
+            --primary-light: #e0e7ff;   /* Indigo 100 */
+            --primary-ring: rgba(79, 70, 229, 0.2);
+            
+            --secondary: #0d9488;       /* Teal 600 */
+            --secondary-hover: #0f766e; /* Teal 700 */
+            --secondary-light: #ccfbf1; /* Teal 100 */
+
+            /* Semantic Colors */
+            --danger: #ef4444;          
+            --danger-bg: #fef2f2;       
+            --danger-border: #fecaca;   
+
+            --success: #10b981;         
+            --success-bg: #ecfdf5;      
+            
+            --warning: #f59e0b;
+            --warning-bg: #fffbeb;
+
+            /* Neutral & Backgrounds */
+            --bg-body: #f8fafc;         /* Slate 50 */
+            --bg-surface: #ffffff;      /* White */
+            --bg-sidebar: #ffffff;
+            
+            /* Typography */
+            --text-heading: #0f172a;    /* Slate 900 */
+            --text-main: #334155;       /* Slate 700 */
+            --text-muted: #64748b;      /* Slate 500 */
+            --text-light: #94a3b8;      /* Slate 400 */
+
+            /* Structural Elements */
+            --border-color: #e2e8f0;    /* Slate 200 */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            
+            /* Shadows & Effects (Soft & Layered) */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            --shadow-inner-btn: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* =========================================
+           GLOBAL RESETS & BASE STYLES
+           ========================================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        body {
+            background-color: var(--bg-body); color: var(--text-main);
+            display: flex; height: 100vh; overflow: hidden; font-size: 0.875rem;
+            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Typography */
+        h1, h2, h3, h4 { color: var(--text-heading); font-weight: 700; letter-spacing: -0.025em; line-height: 1.2; }
+        p { line-height: 1.5; }
+
+        /* =========================================
+           COMMON COMPONENTS
+           ========================================= */
+        /* Premium Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.5rem 1rem; border-radius: var(--radius-md); font-weight: 500;
+            cursor: pointer; transition: var(--transition); border: 1px solid transparent;
+            font-size: 0.875rem; white-space: nowrap; outline: none;
+        }
+        .btn:active { transform: scale(0.97); }
+        .btn:focus-visible { box-shadow: var(--focus-ring); }
+        
+        .btn-primary { background: var(--primary); color: white; box-shadow: var(--shadow-sm), var(--shadow-inner-btn); }
+        .btn-primary:hover { background: var(--primary-hover); box-shadow: var(--shadow-md), var(--shadow-inner-btn); }
+        
+        .btn-secondary { background: var(--secondary); color: white; box-shadow: var(--shadow-sm), var(--shadow-inner-btn); }
+        .btn-secondary:hover { background: var(--secondary-hover); }
+
+        .btn-outline { background: var(--bg-surface); border-color: var(--border-color); color: var(--text-main); box-shadow: var(--shadow-sm); }
+        .btn-outline:hover { background: #f8fafc; border-color: #cbd5e1; color: var(--text-heading); }
+
+        .btn-danger-light { background: var(--danger-bg); color: var(--danger); border-color: var(--danger-border); }
+        .btn-danger-light:hover { background: #fee2e2; }
+
+        .btn-icon { width: 32px; height: 32px; border-radius: var(--radius-md); border: 1px solid transparent; display: flex; align-items: center; justify-content: center; background: transparent; cursor: pointer; color: var(--text-muted); transition: var(--transition); outline: none;}
+        .btn-icon:hover { background: #f1f5f9; border-color: var(--border-color); color: var(--primary); }
+        .btn-icon.delete:hover { color: var(--danger); background: var(--danger-bg); border-color: var(--danger-border); }
+        .btn-icon:focus-visible { box-shadow: var(--focus-ring); }
+
+        /* Panels & Cards */
+        .panel {
+            background: var(--bg-surface); border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+            display: flex; flex-direction: column; overflow: hidden; transition: var(--transition);
+        }
+        .panel-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: #ffffff; }
+        .panel-title { font-size: 1.125rem; font-weight: 700; color: var(--text-heading); display: flex; align-items: center; gap: 0.5rem;}
+        .panel-body { padding: 1.5rem; flex: 1; overflow-y: auto; }
+        .panel-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border-color); background: #f8fafc; }
+
+        /* Forms & Inputs */
+        .form-group { margin-bottom: 1.25rem; }
+        .form-label { display: block; font-size: 0.875rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.375rem; }
+        .form-control {
+            width: 100%; padding: 0.625rem 0.875rem; border: 1px solid #cbd5e1;
+            border-radius: var(--radius-md); font-size: 0.875rem; color: var(--text-heading); transition: var(--transition);
+            background-color: #fff; outline: none;
+        }
+        .form-control:hover { border-color: #94a3b8; }
+        .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-ring); }
+        .form-control::placeholder { color: var(--text-light); }
+
+        /* Badges */
+        .badge { padding: 0.25rem 0.625rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.375rem; }
+        .badge-success { background: var(--success-bg); color: #065f46; border: 1px solid #a7f3d0; }
+        .badge-primary { background: var(--primary-light); color: var(--primary); }
+        .badge-outline { border: 1px solid var(--border-color); color: var(--text-muted); background: var(--bg-surface); }
+
+        /* Custom Checkboxes */
+        .checkbox-wrapper { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.625rem; cursor: pointer; font-size: 0.875rem; color: var(--text-main); user-select: none; transition: color 0.2s;}
+        .checkbox-wrapper:hover { color: var(--text-heading); }
+        .checkbox-wrapper input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+        .checkmark { width: 18px; height: 18px; background-color: #fff; border: 1px solid #cbd5e1; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+        .checkbox-wrapper:hover input ~ .checkmark { border-color: var(--primary); }
+        .checkbox-wrapper input:focus-visible ~ .checkmark { box-shadow: 0 0 0 3px var(--primary-ring); border-color: var(--primary); }
+        .checkbox-wrapper input:checked ~ .checkmark { background-color: var(--primary); border-color: var(--primary); }
+        .checkmark:after { content: ""; display: none; width: 4px; height: 8px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg); margin-bottom: 2px; }
+        .checkbox-wrapper input:checked ~ .checkmark:after { display: block; }
+
+        /* =========================================
+           LAYOUT STRUCTURE
+           ========================================= */
+        /* Sidebar */
+        .sidebar {
+            width: 260px; flex-shrink: 0; background-color: var(--bg-sidebar);
+            border-right: 1px solid var(--border-color); display: flex; flex-direction: column;
+            z-index: 50; transition: transform 0.3s ease; justify-content: space-between;
+        }
+        .brand {
+            padding: 1.5rem; font-size: 1.25rem; font-weight: 800; color: var(--text-heading);
+            display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid var(--border-color);
+            letter-spacing: -0.025em;
+        }
+        .brand i { color: var(--primary); font-size: 1.5rem;}
+        
+        .nav-menu { padding: 1.5rem 1rem; flex: 1; display: flex; flex-direction: column; gap: 0.375rem; }
+        .nav-item {
+            display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem;
+            color: var(--text-muted); text-decoration: none; border-radius: var(--radius-md);
+            font-weight: 500; transition: var(--transition); cursor: pointer; border: 1px solid transparent;
+        }
+        .nav-item i { width: 20px; text-align: center; font-size: 1.1rem; transition: color 0.2s; }
+        .nav-item:hover { background-color: #f1f5f9; color: var(--text-heading); }
+        .nav-item.active { background-color: var(--primary-light); color: var(--primary); font-weight: 600; } 
+        .nav-item.active i { color: var(--primary); }
+
+        /* Sidebar Footer */
+        .sidebar-footer { padding: 1rem; border-top: 1px solid var(--border-color); }
+        .nav-item-bottom { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; color: var(--text-muted); font-weight: 500; border-radius: var(--radius-md); cursor: pointer; transition: var(--transition); }
+        .nav-item-bottom:hover { background-color: #f1f5f9; color: var(--text-heading); }
+
+        /* Main Content */
+        .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; position: relative; }
+
+        /* Header (Glassmorphism) */
+        .top-header {
+            background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            padding: 0.875rem 2rem; border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            display: flex; justify-content: space-between; align-items: center; z-index: 40;
+        }
+        .header-left { display: flex; align-items: center; gap: 1rem; }
+        .mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer; }
+        
+        .breadcrumb { color: var(--text-muted); font-size: 0.875rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 500;}
+        .breadcrumb span.current { color: var(--primary); background-color: var(--primary-light); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        
+        .header-right { display: flex; align-items: center; gap: 1.5rem; }
+        .notification-bell { color: var(--text-muted); font-size: 1.25rem; cursor: pointer; position: relative; transition: color 0.2s; }
+        .notification-bell:hover { color: var(--text-heading); }
+        .notification-dot { position: absolute; top: 0; right: 0; width: 8px; height: 8px; background: var(--danger); border-radius: 50%; border: 2px solid white; }
+
+        .user-profile { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.375rem; border-radius: var(--radius-lg); transition: var(--transition); border: 1px solid transparent; }
+        .user-profile:hover { background: #f1f5f9; border-color: var(--border-color); }
+        .user-info { text-align: right; }
+        .user-name { font-weight: 600; font-size: 0.875rem; color: var(--text-heading); }
+        .user-email { color: var(--text-muted); font-size: 0.75rem; }
+        .avatar-header { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), #818cf8); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary-light); font-size: 0.875rem;}
+
+        /* Workspace Wrapper */
+        .workspace { flex: 1; overflow-y: auto; padding: 2rem; position: relative; scroll-behavior: smooth;}
+        
+        /* View Sections (Animations) */
+        .view-section { display: none; animation: slideUpFade 0.3s ease-out forwards; max-width: 1400px; margin: 0 auto; width: 100%;}
+        .view-section.active { display: block; }
+        
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-header { margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;}
+        .page-title { font-size: 1.875rem; margin-bottom: 0.375rem; display: flex; align-items: center; gap: 0.75rem; color: var(--text-heading); }
+        .page-subtitle { color: var(--text-muted); font-size: 0.95rem; max-width: 600px; }
+
+        /* =========================================
+           VIEW 1: SYSTEM OVERVIEW SPECIFICS
+           ========================================= */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .stat-card { background: var(--bg-surface); border-radius: var(--radius-xl); padding: 1.5rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow-sm); transition: var(--transition); }
+        .stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: #cbd5e1; }
+        .stat-left { display: flex; align-items: center; gap: 1.25rem; }
+        .stat-icon { width: 50px; height: 50px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+        .bg-blue { background: #eff6ff; color: #3b82f6; }
+        .bg-green { background: #ecfdf5; color: #10b981; }
+        .bg-purple { background: #f5f3ff; color: #8b5cf6; }
+        .stat-info h4 { color: var(--text-muted); font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+        .stat-info h2 { font-size: 1.75rem; font-weight: 800; color: var(--text-heading); line-height: 1; }
+        .stat-trend { display: flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 1rem; }
+        .trend-up { background: #dcfce7; color: #166534; }
+        .trend-neutral { background: #f1f5f9; color: #475569; }
+
+        .controls-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+        .tabs { display: flex; background: var(--bg-surface); padding: 0.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+        .tab { padding: 0.5rem 1rem; background: transparent; border: none; border-radius: var(--radius-sm); color: var(--text-muted); font-weight: 500; font-size: 0.875rem; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 0.5rem; }
+        .tab:hover { color: var(--text-heading); }
+        .tab.active { background: #f1f5f9; color: var(--text-heading); font-weight: 600; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); }
+
+        .hospital-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+        .h-card { background: var(--bg-surface); border-radius: var(--radius-xl); padding: 1.5rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); display: flex; flex-direction: column; transition: var(--transition); }
+        .h-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: #cbd5e1; }
+        
+        .hc-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem; }
+        .hc-logo { width: 48px; height: 48px; background: #f8fafc; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; color: var(--primary); border: 1px solid #e2e8f0; }
+        .hc-title { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--text-heading); }
+        .hc-subtitle { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem; min-height: 1.2em; }
+        
+        .hc-info { list-style: none; margin-bottom: 1.25rem; font-size: 0.875rem; color: var(--text-main); flex: 1; }
+        .hc-info li { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.5rem; line-height: 1.4; }
+        .hc-info i { width: 16px; color: var(--text-light); text-align: center; margin-top: 0.125rem;}
+        
+        .hc-depts { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.5; background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+        
+        .analytics-link { font-size: 0.875rem; color: var(--primary); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 0.375rem; margin-bottom: 1.25rem; transition: gap 0.2s; }
+        .analytics-link:hover { gap: 0.625rem; text-decoration: underline; }
+        
+        .hc-actions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem; }
+
+        /* =========================================
+           VIEW 2: QUESTION LIBRARY SPECIFICS
+           ========================================= */
+        .workflow-tabs-wrapper { margin-bottom: 2rem; position: relative; border-bottom: 1px solid var(--border-color);}
+        .workflow-tabs { display: flex; gap: 1.5rem; overflow-x: auto; scrollbar-width: none; margin-bottom: -1px;}
+        .workflow-tabs::-webkit-scrollbar { display: none; }
+        .wf-tab { white-space: nowrap; padding: 0.75rem 0.5rem; background: transparent; border: none; border-bottom: 2px solid transparent; color: var(--text-muted); font-weight: 500; font-size: 0.875rem; cursor: pointer; transition: var(--transition); }
+        .wf-tab:hover { color: var(--text-heading); }
+        .wf-tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+
+        .builder-grid { display: grid; grid-template-columns: 280px 1fr; gap: 2rem; align-items: start; }
+        
+        .category-panel { display: flex; flex-direction: column; gap: 1rem; }
+        .add-category-box { background: rgba(255,255,255,0.5); border: 1px dashed #cbd5e1; border-radius: var(--radius-lg); padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; transition: var(--transition); }
+        .add-category-box:focus-within { border-color: var(--primary); background: white; box-shadow: var(--shadow-sm);}
+        
+        .category-list { display: flex; flex-direction: column; gap: 0.375rem; }
+        .category-item { background: transparent; border-radius: var(--radius-md); padding: 0.625rem 0.75rem; font-size: 0.875rem; font-weight: 500; color: var(--text-main); display: flex; align-items: center; cursor: pointer; transition: var(--transition); border: 1px solid transparent;}
+        .drag-handle { color: var(--text-light); margin-right: 0.5rem; cursor: grab; font-size: 0.875rem; padding: 0.25rem; transition: color 0.2s;}
+        .category-item:hover { background: #f1f5f9; }
+        .category-item:hover .drag-handle { color: var(--text-muted); }
+        .category-item.active { background-color: var(--primary-light); color: var(--primary); border-color: #c7d2fe; font-weight: 600;}
+        .category-item .item-count { margin-left: auto; background: var(--border-color); color: var(--text-main); padding: 0.125rem 0.5rem; border-radius: 1rem; font-size: 0.75rem; }
+        .category-item.active .item-count { background: white; color: var(--primary); }
+
+        .editor-canvas { background: var(--bg-surface); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border-color); display: flex; flex-direction: column; min-height: 500px; }
+        .editor-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: #ffffff; border-radius: var(--radius-xl) var(--radius-xl) 0 0; }
+        .editor-title { font-size: 1.125rem; font-weight: 700; color: var(--text-heading); display: flex; align-items: center; gap: 0.5rem; }
+        .editor-body { padding: 1.5rem; flex: 1; background: var(--bg-body); border-radius: 0 0 var(--radius-xl) var(--radius-xl); }
+
+        .question-list { display: flex; flex-direction: column; gap: 1rem; }
+        .question-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; transition: var(--transition); overflow: hidden; }
+        .question-card:hover { border-color: #cbd5e1; box-shadow: var(--shadow-md); transform: translateY(-1px); }
+        .card-drag-zone { background: #f8fafc; padding: 1rem 0.5rem; display: flex; align-items: center; justify-content: center; color: #cbd5e1; cursor: grab; border-right: 1px solid var(--border-color); transition: background 0.2s, color 0.2s;}
+        .card-drag-zone:hover { background: #f1f5f9; color: var(--text-muted); }
+        .card-content { padding: 1.25rem; flex: 1; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+        .question-label { font-weight: 600; font-size: 1rem; color: var(--text-heading); }
+        .question-type { font-size: 0.7rem; font-weight: 600; color: var(--secondary); background: var(--secondary-light); padding: 0.125rem 0.5rem; border-radius: 0.25rem; margin-top: 0.25rem; display: inline-block;}
+        
+        .preview-input { width: 100%; max-width: 400px; padding: 0.625rem 0.875rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--text-muted); background: #f8fafc; font-size: 0.875rem;}
+
+        /* =========================================
+           VIEW 3: ROLES & PERMISSIONS SPECIFICS
+           ========================================= */
+        .roles-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem; align-items: start; }
+        .roles-panel-fixed { height: calc(100vh - 220px); } /* Lock height for internal scroll */
+        
+        .link-builder-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
+        .btn-add-link { width: 100%; padding: 0.625rem; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: var(--radius-md); color: var(--text-muted); font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: 0.2s; }
+        .btn-add-link:hover { border-color: var(--primary); color: var(--primary); background: #f1f5f9; }
+
+        .permissions-container { border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; flex-direction: column; flex: 1; min-height: 200px; overflow: hidden; background: #fff;}
+        .permissions-header { background: #f8fafc; padding: 0.75rem 1rem; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); border-bottom: 1px solid var(--border-color); text-transform: uppercase; letter-spacing: 0.05em; }
+        .permissions-list { padding: 1rem; overflow-y: auto; flex: 1; }
+        .perm-category { margin-bottom: 1.5rem; }
+        .perm-category:last-child { margin-bottom: 0; }
+        .perm-category-title { font-size: 0.75rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.25rem; }
+
+        .role-card { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); transition: background-color 0.2s; }
+        .role-card:last-child { border-bottom: none; }
+        .role-card:hover { background-color: #f8fafc; }
+        .role-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+        .role-title-wrap { display: flex; align-items: center; gap: 0.75rem; }
+        .role-name { font-size: 1rem; font-weight: 700; color: var(--text-heading); }
+        .role-desc { font-size: 0.875rem; color: var(--text-main); margin-bottom: 0.75rem; }
+        .role-path { font-size: 0.75rem; color: var(--text-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.375rem; font-weight: 500;}
+        .perm-pills { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+        .pill { background: #f1f5f9; border: 1px solid var(--border-color); color: var(--text-main); font-size: 0.7rem; font-weight: 500; padding: 0.125rem 0.5rem; border-radius: 1rem; }
+        .pill.more { background: var(--primary-light); color: var(--primary); border-color: transparent; cursor: pointer; font-weight: 600;}
+
+        /* =========================================
+           VIEW 4: MANAGE STAFF SPECIFICS
+           ========================================= */
+        .staff-summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+        .summary-panel { padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-items: flex-start;}
+        
+        .table-toolbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); background: #ffffff;}
+        .search-wrap { position: relative; width: 300px; }
+        .search-wrap i { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-light); }
+        .search-wrap input { width: 100%; padding: 0.5rem 1rem 0.5rem 2.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.875rem; outline: none; transition: var(--transition);}
+        .search-wrap input:focus { border-color: var(--primary); box-shadow: var(--focus-ring); }
+
+        .table-panel { padding: 0; overflow: hidden; display: block; }
+        .table-responsive { width: 100%; overflow-x: auto; }
+        .staff-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .staff-table th { padding: 1rem 1.5rem; background: #f8fafc; color: var(--text-muted); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border-color); white-space: nowrap; }
+        .staff-table td { padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); vertical-align: middle; font-size: 0.875rem; color: var(--text-main); white-space: nowrap; }
+        .staff-table tbody tr { transition: background-color 0.2s; }
+        .staff-table tbody tr:hover { background-color: #f1f5f9; }
+        .row-avatar { width: 32px; height: 32px; background-color: #e2e8f0; color: #475569; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.75rem; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);}
+        .row-name { font-weight: 600; color: var(--text-heading); }
+
+        /* Role Badges specifically for table */
+        .r-badge { padding: 0.25rem 0.625rem; border-radius: 1rem; font-size: 0.7rem; font-weight: 600; display: inline-block; letter-spacing: 0.025em; }
+        .rb-pharm { background: #dcfce7; color: #166534; }
+        .rb-lab { background: #f3e8ff; color: #6b21a8; }
+        .rb-jr { background: #e0f2fe; color: #0369a1; }
+        .rb-doc { background: #dbeafe; color: #1e40af; }
+        .rb-recp { background: #ffedd5; color: #c2410c; }
+
+        /* =========================================
+           MOBILE & RESPONSIVE
+           ========================================= */
+        .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(2px); z-index: 45; display: none; opacity: 0; transition: opacity 0.3s; }
+
+        @media (max-width: 1200px) {
+            .roles-grid { grid-template-columns: 1fr; }
+            .roles-panel-fixed { height: auto; min-height: 500px; max-height: 800px; }
+            .staff-summary-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 1024px) {
+            .builder-grid { grid-template-columns: 240px 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .sidebar { position: fixed; height: 100%; transform: translateX(-100%); box-shadow: none; }
+            .sidebar.active { transform: translateX(0); box-shadow: 4px 0 24px rgba(0,0,0,0.15); }
+            .sidebar-overlay.active { display: block; opacity: 1; }
+            
+            .user-info { display: none; } 
+            .workspace { padding: 1.25rem; }
+            .builder-grid { grid-template-columns: 1fr; } 
+            .editor-canvas { min-height: auto; }
+            
+            .page-header { flex-direction: column; align-items: flex-start; }
+            .page-title { font-size: 1.5rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .table-toolbar { flex-direction: column; gap: 1rem; align-items: stretch;}
+            .search-wrap { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Overlay -->
+    <div class="sidebar-overlay" id="overlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div>
+            <div class="brand">
+                <i class="fa-solid fa-notes-medical"></i> MediCRM
+            </div>
+            <nav class="nav-menu">
+                <a class="nav-item active" data-target="view-overview">
+                    <i class="fa-solid fa-chart-pie"></i> System Overview
+                </a>
+                <a class="nav-item" data-target="view-questions">
+                    <i class="fa-regular fa-file-lines"></i> Question Library
+                </a>
+                <a class="nav-item" data-target="view-roles">
+                    <i class="fa-solid fa-shield-halved"></i> Roles & Perms
+                </a>
+                <a class="nav-item" data-target="view-staff">
+                    <i class="fa-solid fa-users"></i> Staff Directory
+                </a>
+            </nav>
+        </div>
+        <div class="sidebar-footer">
+            <a class="nav-item-bottom">
+                <i class="fa-solid fa-gear" style="width: 20px; text-align: center; color: var(--text-light);"></i> Settings
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+        
+        <!-- Global Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+                <div class="breadcrumb">
+                    <span id="breadcrumb-page">System Overview</span> <span style="color: var(--border-color);">/</span> <span class="current">CENTRALADMIN</span>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <div class="notification-bell" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="notification-dot"></div>
+                </div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <div class="user-name">Dr. Harsh</div>
+                        <div class="user-email">harsh@gmail.com</div>
+                    </div>
+                    <div class="avatar-header">H</div>
+                    <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; color: var(--text-light); margin-left: 0.25rem;"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dynamic Views Container -->
+        <div class="workspace">
+
+            <!-- =======================================================
+                 VIEW 1: SYSTEM OVERVIEW
+                 ======================================================= -->
+            <section id="view-overview" class="view-section active">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Central Administration</h1>
+                        <p class="page-subtitle">High-level overview of network hospitals, active staff, and global configs.</p>
+                    </div>
+                    <button class="btn btn-secondary"><i class="fa-solid fa-download"></i> Export Report</button>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-left">
+                            <div class="stat-icon bg-blue"><i class="fa-solid fa-hospital"></i></div>
+                            <div class="stat-info"><h4>Total Registered</h4><h2>24</h2></div>
+                        </div>
+                        <div class="stat-trend trend-up"><i class="fa-solid fa-arrow-trend-up"></i> 12%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-left">
+                            <div class="stat-icon bg-green"><i class="fa-solid fa-user-doctor"></i></div>
+                            <div class="stat-info"><h4>Active Staff</h4><h2>1,482</h2></div>
+                        </div>
+                        <div class="stat-trend trend-up"><i class="fa-solid fa-arrow-trend-up"></i> 4%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-left">
+                            <div class="stat-icon bg-purple"><i class="fa-solid fa-bed-pulse"></i></div>
+                            <div class="stat-info"><h4>Total Depts</h4><h2>86</h2></div>
+                        </div>
+                        <div class="stat-trend trend-neutral"><i class="fa-solid fa-minus"></i> 0%</div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="controls-bar">
+                    <div class="tabs">
+                        <button class="tab active">Hospitals</button>
+                        <button class="tab">All Staff</button>
+                        <button class="tab">Configurations</button>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem;">
+                        <button class="btn btn-outline"><i class="fa-solid fa-user-plus"></i> Add Admin</button>
+                        <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Hospital</button>
+                    </div>
+                </div>
+
+                <!-- Hospital Grid -->
+                <div class="hospital-grid">
+                    <!-- Card 1 -->
+                    <div class="h-card">
+                        <div class="hc-header">
+                            <div class="hc-logo"><i class="fa-solid fa-house-medical"></i></div>
+                            <span class="badge badge-success"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> ACTIVE</span>
+                        </div>
+                        <h3 class="hc-title">AKG Hospital</h3>
+                        <p class="hc-subtitle">Caring life</p>
+                        <ul class="hc-info">
+                            <li><i class="fa-solid fa-location-dot"></i> JAIPUR, Rajasthan</li>
+                            <li><i class="fa-solid fa-phone"></i> 09929017969</li>
+                            <li><i class="fa-regular fa-envelope"></i> harshjat397@gmail.com</li>
+                        </ul>
+                        <div class="hc-depts"><strong>Depts:</strong> ENT, Orthopedics</div>
+                        <a href="#" class="analytics-link">View analytics <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <div class="hc-actions">
+                            <button class="btn btn-outline" style="padding: 0.375rem; font-size: 0.75rem;">Branding</button>
+                            <button class="btn btn-outline" style="padding: 0.375rem; font-size: 0.75rem; color: var(--primary);">Edit</button>
+                            <button class="btn btn-danger-light" style="padding: 0.375rem; font-size: 0.75rem;">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="h-card">
+                        <div class="hc-header">
+                            <div class="hc-logo"><i class="fa-solid fa-hospital-user"></i></div>
+                            <span class="badge badge-success"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> ACTIVE</span>
+                        </div>
+                        <h3 class="hc-title">Sunrise Multispeciality</h3>
+                        <p class="hc-subtitle">&nbsp;</p>
+                        <ul class="hc-info">
+                            <li><i class="fa-solid fa-location-dot"></i> Kota, Rajasthan</li>
+                            <li><i class="fa-solid fa-phone"></i> 91 9876543210</li>
+                            <li><i class="fa-regular fa-envelope"></i> info@sunrise.com</li>
+                        </ul>
+                        <div class="hc-depts"><strong>Depts:</strong> ENT, Dermatology</div>
+                        <a href="#" class="analytics-link">View analytics <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <div class="hc-actions">
+                            <button class="btn btn-outline" style="padding: 0.375rem; font-size: 0.75rem;">Branding</button>
+                            <button class="btn btn-outline" style="padding: 0.375rem; font-size: 0.75rem; color: var(--primary);">Edit</button>
+                            <button class="btn btn-danger-light" style="padding: 0.375rem; font-size: 0.75rem;">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="h-card">
+                        <div class="hc-header">
+                            <div class="hc-logo"><i class="fa-solid fa-hospital-user"></i></div>
+                            <span class="badge badge-success"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> ACTIVE</span>
+                        </div>
+                        <h3 class="hc-title">Green Valley Super</h3>
+                        <p class="hc-subtitle">&nbsp;</p>
+                        <ul class="hc-info">
+                            <li><i class="fa-solid fa-location-dot"></i> Udaipur, Rajasthan</li>
+                            <li><i class="fa-solid fa-phone"></i> 9876543210</li>
+                            <li><i class="fa-regular fa-envelope"></i> info@greenvalley.com</li>
+                        </ul>
+                        <div class="hc-depts"><strong>Depts:</strong> Oncology, Dermatology, Gynecology...</div>
+                        <a href="#" class="analytics-link">View analytics <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <div class="hc-actions">
+                            <button class="btn btn-outline" style="padding: 0.375rem; font-size: 0.75rem;">Branding</button>
+                            <button class="btn btn-outline" style="padding: 0.375rem; font-size: 0.75rem; color: var(--primary);">Edit</button>
+                            <button class="btn btn-danger-light" style="padding: 0.375rem; font-size: 0.75rem;">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =======================================================
+                 VIEW 2: QUESTION LIBRARY
+                 ======================================================= -->
+            <section id="view-questions" class="view-section">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Question Library Builder</h1>
+                        <p class="page-subtitle">Construct dynamic diagnostic forms and intake workflows.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-tabs-wrapper">
+                    <div class="workflow-tabs">
+                        <button class="wf-tab active">ENT Workflows</button>
+                        <button class="wf-tab">Orthopedics</button>
+                        <button class="wf-tab">Dermatology</button>
+                        <button class="wf-tab">Cardiology</button>
+                        <button class="wf-tab">Pediatrics</button>
+                        <button class="wf-tab">Oncology</button>
+                    </div>
+                </div>
+
+                <div class="builder-grid">
+                    <!-- Left: Categories -->
+                    <div class="category-panel">
+                        <div class="add-category-box">
+                            <input type="text" class="form-control" placeholder="New category name...">
+                            <button class="btn btn-outline" style="width: 100%; border-style: dashed;"><i class="fa-solid fa-plus"></i> Add Category</button>
+                        </div>
+                        <div class="category-list">
+                            <div class="category-item active"><i class="fa-solid fa-grip-vertical drag-handle"></i> EAR <span class="item-count">3</span></div>
+                            <div class="category-item"><i class="fa-solid fa-grip-vertical drag-handle"></i> Pediatric Vitals <span class="item-count">8</span></div>
+                            <div class="category-item"><i class="fa-solid fa-grip-vertical drag-handle"></i> Otology (Ear) <span class="item-count">12</span></div>
+                            <div class="category-item"><i class="fa-solid fa-grip-vertical drag-handle"></i> Rhinology <span class="item-count">5</span></div>
+                            <div class="category-item"><i class="fa-solid fa-grip-vertical drag-handle"></i> Laryngology <span class="item-count">7</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Editor Canvas -->
+                    <div class="editor-canvas">
+                        <div class="editor-header">
+                            <div class="editor-title">EAR Workflow</div>
+                            <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Question</button>
+                        </div>
+                        <div class="editor-body">
+                            <div class="question-list">
+                                <!-- Q1 -->
+                                <div class="question-card">
+                                    <div class="card-drag-zone"><i class="fa-solid fa-grip-vertical"></i></div>
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <div>
+                                                <div class="question-label">Pain Level</div>
+                                                <div class="question-type">Dropdown Select</div>
+                                            </div>
+                                            <div style="display: flex; gap: 0.25rem;">
+                                                <button class="btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                                <button class="btn-icon delete" title="Delete"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                        <select class="form-control" style="max-width: 300px; color: var(--text-muted);" disabled>
+                                            <option>Select severity...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Q2 -->
+                                <div class="question-card">
+                                    <div class="card-drag-zone"><i class="fa-solid fa-grip-vertical"></i></div>
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <div>
+                                                <div class="question-label">Duration of Symptoms</div>
+                                                <div class="question-type" style="background: var(--primary-light); color: var(--primary);">Short Text</div>
+                                            </div>
+                                            <div style="display: flex; gap: 0.25rem;">
+                                                <button class="btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                                <button class="btn-icon delete" title="Delete"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                        <input type="text" class="form-control" style="max-width: 400px;" placeholder="e.g., 3 days, 2 weeks..." disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =======================================================
+                 VIEW 3: ROLES & PERMISSIONS
+                 ======================================================= -->
+            <section id="view-roles" class="view-section">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Role & Permission Manager</h1>
+                        <p class="page-subtitle">Define robust access control matrices for different staff archetypes.</p>
+                    </div>
+                </div>
+
+                <div class="roles-grid">
+                    <!-- Left: Form -->
+                    <div class="panel roles-panel-fixed">
+                        <div class="panel-header"><h2 class="panel-title">Create New Role</h2></div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="form-label">Role Name</label>
+                                <input type="text" class="form-control" placeholder="e.g. Senior Nurse">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Default Dashboard Path</label>
+                                <input type="text" class="form-control" value="/">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Navigation Links <span style="font-weight: normal; color: var(--text-muted);">(Optional)</span></label>
+                                <div class="link-builder-row">
+                                    <input type="text" class="form-control" placeholder="Label">
+                                    <input type="text" class="form-control" placeholder="Path">
+                                    <button class="btn-icon delete"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <button class="btn-add-link"><i class="fa-solid fa-plus"></i> Add Link</button>
+                            </div>
+
+                            <div class="permissions-container">
+                                <div class="permissions-header">Assign Permissions Matrix</div>
+                                <div class="permissions-list">
+                                    <div class="perm-category">
+                                        <div class="perm-category-title">Patient Management</div>
+                                        <label class="checkbox-wrapper"><input type="checkbox"><span class="checkmark"></span> Register New Patients</label>
+                                        <label class="checkbox-wrapper"><input type="checkbox"><span class="checkmark"></span> Search Patient Database</label>
+                                        <label class="checkbox-wrapper"><input type="checkbox"><span class="checkmark"></span> View Patient Profiles</label>
+                                    </div>
+                                    <div class="perm-category">
+                                        <div class="perm-category-title">Operations</div>
+                                        <label class="checkbox-wrapper"><input type="checkbox" checked><span class="checkmark"></span> Manage Appointments</label>
+                                        <label class="checkbox-wrapper"><input type="checkbox"><span class="checkmark"></span> Manage Lab Tests</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-primary" style="width: 100%;">Create Role</button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Active List -->
+                    <div class="panel roles-panel-fixed">
+                        <div class="panel-header">
+                            <h2 class="panel-title">Active Roles</h2>
+                            <span class="badge badge-outline">8 Found</span>
+                        </div>
+                        <div class="panel-body" style="padding: 0;">
+                            <!-- Role 1 -->
+                            <div class="role-card">
+                                <div class="role-card-header">
+                                    <div class="role-title-wrap">
+                                        <div class="role-name">Billing / Cashier</div>
+                                        <span class="badge badge-primary" style="font-size: 0.65rem;">3 Perms</span>
+                                    </div>
+                                    <div style="display: flex; gap: 0.25rem;">
+                                        <button class="btn-icon edit"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn-icon delete"><i class="fa-regular fa-trash-can"></i></button>
+                                    </div>
+                                </div>
+                                <div class="role-desc">Handles payments & billing</div>
+                                <div class="role-path"><i class="fa-solid fa-link" style="color:#cbd5e1;"></i> Dashboard: /</div>
+                                <div class="perm-pills">
+                                    <span class="pill">billing view</span><span class="pill">billing manage</span><span class="pill">patient view</span>
+                                </div>
+                            </div>
+                            <!-- Role 2 -->
+                            <div class="role-card">
+                                <div class="role-card-header">
+                                    <div class="role-title-wrap">
+                                        <div class="role-name">Doctor</div>
+                                        <span class="badge badge-primary" style="font-size: 0.65rem;">8 Perms</span>
+                                    </div>
+                                    <div style="display: flex; gap: 0.25rem;">
+                                        <button class="btn-icon edit"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn-icon delete"><i class="fa-regular fa-trash-can"></i></button>
+                                    </div>
+                                </div>
+                                <div class="role-desc">Handles diagnosis & treatment</div>
+                                <div class="role-path"><i class="fa-solid fa-link" style="color:#cbd5e1;"></i> Dashboard: /</div>
+                                <div class="perm-pills">
+                                    <span class="pill">patient view</span><span class="pill">clinical history</span><span class="pill more">+6 more</span>
+                                </div>
+                            </div>
+                             <!-- Role 3 -->
+                             <div class="role-card">
+                                <div class="role-card-header">
+                                    <div class="role-title-wrap">
+                                        <div class="role-name">Super Admin</div>
+                                        <span class="badge badge-primary" style="font-size: 0.65rem;">18 Perms</span>
+                                    </div>
+                                    <div style="display: flex; gap: 0.25rem;">
+                                        <button class="btn-icon edit"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn-icon delete"><i class="fa-regular fa-trash-can"></i></button>
+                                    </div>
+                                </div>
+                                <div class="role-desc">Full system control</div>
+                                <div class="role-path"><i class="fa-solid fa-link" style="color:#cbd5e1;"></i> Dashboard: /</div>
+                                <div class="perm-pills">
+                                    <span class="pill">admin manage roles</span><span class="pill">billing manage</span><span class="pill more">+15 more</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =======================================================
+                 VIEW 4: MANAGE ALL STAFF
+                 ======================================================= -->
+            <section id="view-staff" class="view-section">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Manage Staff Directory</h1>
+                        <p class="page-subtitle">Centralized view of all hospital employees and credentials.</p>
+                    </div>
+                </div>
+
+                <div class="staff-summary-grid">
+                    <div class="panel summary-panel" style="background: linear-gradient(to right bottom, #ffffff, #f1f5f9);">
+                        <div>
+                            <h2 style="font-size: 1.25rem; color: var(--text-heading); margin-bottom: 0.25rem;">Role Management</h2>
+                            <p style="color: var(--text-muted); font-size: 0.875rem;">Configure global permissions and access levels.</p>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <button class="btn btn-outline" onclick="document.querySelector('[data-target=\'view-roles\']').click()"><i class="fa-solid fa-shield-halved"></i> Edit Roles</button>
+                        </div>
+                    </div>
+                    <div class="panel summary-panel">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Create Staff Account</h3>
+                            <p style="color: var(--text-muted); font-size: 0.875rem;">Provision credentials for incoming doctors or technicians.</p>
+                        </div>
+                        <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Staff Member</button>
+                    </div>
+                </div>
+
+                <div class="panel table-panel">
+                    <div class="table-toolbar">
+                        <div class="search-wrap">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search by name, email, or role...">
+                        </div>
+                        <button class="btn btn-outline"><i class="fa-solid fa-filter"></i> Filters</button>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="staff-table">
+                            <thead>
+                                <tr>
+                                    <th>Employee</th>
+                                    <th>Email Address</th>
+                                    <th>Assigned Role</th>
+                                    <th>Phone Contact</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div class="row-avatar">P</div>
+                                            <span class="row-name">Preeti</span>
+                                        </div>
+                                    </td>
+                                    <td>preeti@gmail.com</td>
+                                    <td><span class="r-badge rb-pharm">Pharmacist</span></td>
+                                    <td>64747849486353</td>
+                                    <td>
+                                        <div style="display: flex; gap: 0.25rem;">
+                                            <button class="btn-icon edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                            <button class="btn-icon delete" title="Delete"><i class="fa-regular fa-trash-can"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div class="row-avatar">J</div>
+                                            <span class="row-name">Jitu</span>
+                                        </div>
+                                    </td>
+                                    <td>jitu@gmail.com</td>
+                                    <td><span class="r-badge rb-lab">Lab Tech</span></td>
+                                    <td>6473898564</td>
+                                    <td>
+                                        <div style="display: flex; gap: 0.25rem;">
+                                            <button class="btn-icon edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                            <button class="btn-icon delete" title="Delete"><i class="fa-regular fa-trash-can"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div class="row-avatar">T</div>
+                                            <span class="row-name">Tina</span>
+                                        </div>
+                                    </td>
+                                    <td>tina@gmail.com</td>
+                                    <td><span class="r-badge rb-doc">Doctor</span></td>
+                                    <td>64758987356</td>
+                                    <td>
+                                        <div style="display: flex; gap: 0.25rem;">
+                                            <button class="btn-icon edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                            <button class="btn-icon delete" title="Delete"><i class="fa-regular fa-trash-can"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div class="row-avatar" style="background-color: #ffedd5; color: #c2410c;">G</div>
+                                            <span class="row-name">Garima</span>
+                                        </div>
+                                    </td>
+                                    <td>garima@gmail.com</td>
+                                    <td><span class="r-badge rb-recp">Receptionist</span></td>
+                                    <td>7678504098</td>
+                                    <td>
+                                        <div style="display: flex; gap: 0.25rem;">
+                                            <button class="btn-icon edit" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                                            <button class="btn-icon delete" title="Delete"><i class="fa-regular fa-trash-can"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Interactive Logic (SPA Routing & Mobile Menu) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Mobile Sidebar Logic ---
+            const mobileToggle = document.getElementById('mobileToggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            }
+
+            mobileToggle.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+
+
+            // --- SPA View Routing Logic ---
+            const navItems = document.querySelectorAll('.nav-menu .nav-item');
+            const views = document.querySelectorAll('.view-section');
+            const breadcrumb = document.getElementById('breadcrumb-page');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const targetViewId = item.getAttribute('data-target');
+                    if (!targetViewId) return;
+
+                    // 1. Update Navigation Active State
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    item.classList.add('active');
+
+                    // 2. Hide all views, show target view
+                    views.forEach(view => {
+                        view.classList.remove('active');
+                        // Reset animation to trigger it again
+                        view.style.animation = 'none';
+                        view.offsetHeight; // trigger reflow
+                        view.style.animation = null; 
+                    });
+                    document.getElementById(targetViewId).classList.add('active');
+
+                    // 3. Update Breadcrumb Text
+                    const linkText = item.innerText.trim();
+                    breadcrumb.innerText = linkText;
+
+                    // 4. Close mobile menu if it's open
+                    if (sidebar.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                    
+                    // 5. Scroll workspace to top smoothly
+                    document.querySelector('.workspace').scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

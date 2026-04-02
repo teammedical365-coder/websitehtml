@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical365 | Coming Soon</title>
+    <meta name="description" content="Medical365 - India's most intuitive and powerful Hospital Management System. Launching soon.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        medical: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="global-styles.css?v=3.0">
+</head>
+<body class="bg-animate min-h-screen font-sans text-gray-800 flex flex-col justify-center items-center p-4 sm:p-8">
+
+    <div class="absolute top-6 left-6 md:top-10 md:left-10 flex items-center gap-2">
+        <div class="w-10 h-10 bg-medical-600 rounded-lg flex items-center justify-center shadow-lg">
+            <i class="fas fa-heartbeat text-white text-xl"></i>
+        </div>
+        <div class="text-2xl tracking-tight text-gray-900 font-extrabold">
+            Medical<span class="text-medical-600">365</span><span class="text-medical-500 text-3xl leading-none">.in</span>
+        </div>
+    </div>
+
+    <main class="glass-card max-w-4xl w-full rounded-3xl shadow-[0_20px_50px_rgba(37,99,235,0.1)] p-8 md:p-16 text-center mt-16 md:mt-0 border border-white/50 relative overflow-hidden">
+        
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-medical-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 z-0"></div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 z-0"></div>
+
+        <div class="relative z-10">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-medical-50 text-medical-600 font-semibold text-sm tracking-widest uppercase mb-6 border border-medical-100 shadow-sm">
+                Launching Soon
+            </span>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
+                The Future of <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-medical-600 to-teal-400">Hospital Management</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                We are building India's most powerful, secure, and intuitive Hospital Management System. Simplify billing, secure patient records, and optimize your clinic's workflow all in one place.
+            </p>
+
+            <form action="#" method="POST" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 mb-16">
+                <input type="email" placeholder="Enter your email address" required 
+                    class="w-full flex-grow px-5 py-4 rounded-xl border border-gray-200 bg-white/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-medical-500 transition shadow-sm text-gray-700 placeholder-gray-400">
+                <button type="submit" 
+                    class="w-full sm:w-auto px-8 py-4 bg-medical-600 hover:bg-medical-900 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+                    Get Early Access
+                </button>
+            </form>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left border-t border-gray-100 pt-10">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-medical-600 shrink-0">
+                        <i class="fas fa-file-invoice-dollar text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Smart Billing</h3>
+                        <p class="text-sm text-gray-500 mt-1">Automated invoicing, insurance claims, and digital payments.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 shrink-0">
+                        <i class="fas fa-notes-medical text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Patient EMR</h3>
+                        <p class="text-sm text-gray-500 mt-1">Secure, cloud-based electronic medical records accessible 24/7.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
+                        <i class="fas fa-calendar-check text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Easy Scheduling</h3>
+                        <p class="text-sm text-gray-500 mt-1">Seamless appointment booking for doctors and patients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-12 text-center text-sm text-gray-500 pb-8">
+        <p>&copy; 2026 Medical365.in. All rights reserved.</p>
+        <div class="flex justify-center gap-4 mt-3">
+            <a href="#" class="hover:text-medical-600 transition"><i class="fab fa-twitter text-lg"></i></a>
+            <a href="#" class="hover:text-medical-600 transition"><i class="fab fa-linkedin text-lg"></i></a>
+            <a href="#" class="hover:text-medical-600 transition"><i class="fas fa-envelope text-lg"></i></a>
+        </div>
+    </footer>
+
+
+<script src="global-scripts.js?v=3.0"></script>
+
+</body>
+</html>
