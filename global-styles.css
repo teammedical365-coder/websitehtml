@@ -35,6 +35,9 @@
 
     /* Header Heights */
     --header-h: 88px;
+
+    /* Legacy compatibility for injected sections */
+    --primary-color: var(--brand-blue);
 }
 
 * {
@@ -1494,10 +1497,76 @@ p, li {
     margin-bottom: 40px;
 }
 
-/* Testimonial text-on-dark fix: any <p> inside a dark-bg testimonial block is white */
 .testimonial-section [style*="linear-gradient"] p,
-.testimonial-section [style*="brand-blue"] p {
+.testimonial-section [style*="brand-blue"] p,
+.onboarding-section p,
+.roi-section p {
     color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.onboarding-section p {
+    color: var(--text-secondary) !important;
+}
+
+/* Impact Stats Grid Refined */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.stats-grid .stat-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.stats-grid .stat-card h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--brand-blue);
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+}
+
+.stats-grid .stat-card p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* ROI Stats Grid Refinement (Overrides for dark section) */
+.roi-section .stats-grid {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    gap: 24px;
+}
+
+.roi-section .stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px 20px;
+}
+
+.roi-section .stat-card h2,
+.roi-section .stat-card div[style*="font-size: 3.5rem"] {
+    color: var(--brand-teal) !important;
+}
+
+.stat-card {
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+}
+
+.roi-section .stat-card:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--brand-teal) !important;
 }
 
 /* Footer */

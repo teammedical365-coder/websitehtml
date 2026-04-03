@@ -25,7 +25,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap">
     </noscript>
 
-    <link rel="stylesheet" href="global-styles.min.css?v=4.0">
+    <link rel="stylesheet" href="global-styles.css?v=4.2">
+    <style>
+        /* Critical UI Overrides to bypass caching and ensure contrast */
+        .roi-section p { color: #ffffff !important; opacity: 0.95 !important; font-weight: 600 !important; }
+        .process-steps .step-card div[style*="width: 60px"] { background-color: #1D5A9F !important; color: #ffffff !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: 800 !important; }
+        .stat-card div[style*="color: #37B39C"] { color: #37B39C !important; }
+    </style>
     <script src="global-scripts.js?v=4.0" defer></script>
 </head>
 <body>
@@ -773,17 +779,17 @@
         </div>
         <div class="process-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 60px; position: relative;">
             <div class="step-card text-center fade-in-up">
-                <div style="width: 60px; height: 60px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 800; box-shadow: 0 10px 20px rgba(29, 90, 159, 0.2);">1</div>
+                <div style="width: 60px; height: 60px; background: var(--brand-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 800; box-shadow: 0 10px 20px rgba(29, 90, 159, 0.2);">1</div>
                 <h3 style="font-weight: 700; margin-bottom: 12px; color: #0F172A;">Discovery & Customization</h3>
                 <p style="color: var(--text-secondary);">We map your hospital's unique clinical and financial workflows to ensure the platform fits you like a glove.</p>
             </div>
             <div class="step-card text-center fade-in-up" style="animation-delay: 0.15s;">
-                <div style="width: 60px; height: 60px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 800; box-shadow: 0 10px 20px rgba(29, 90, 159, 0.2);">2</div>
+                <div style="width: 60px; height: 60px; background: var(--brand-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 800; box-shadow: 0 10px 20px rgba(29, 90, 159, 0.2);">2</div>
                 <h3 style="font-weight: 700; margin-bottom: 12px; color: #0F172A;">Data Migration</h3>
                 <p style="color: var(--text-secondary);">Secure, encrypted transfer of your historical patient records, lab history, and inventory data into Medical365.</p>
             </div>
             <div class="step-card text-center fade-in-up" style="animation-delay: 0.3s;">
-                <div style="width: 60px; height: 60px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 800; box-shadow: 0 10px 20px rgba(29, 90, 159, 0.2);">3</div>
+                <div style="width: 60px; height: 60px; background: var(--brand-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 24px; font-weight: 800; box-shadow: 0 10px 20px rgba(29, 90, 159, 0.2);">3</div>
                 <h3 style="font-weight: 700; margin-bottom: 12px; color: #0F172A;">On-Site Training & Go-Live</h3>
                 <p style="color: var(--text-secondary);">We train your staff until they are 100% confident, then flip the switch. Our team stays with you through the transition.</p>
             </div>
@@ -926,19 +932,19 @@
         <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
             <div class="stat-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 40px 20px; animation-delay: 0.1s;">
                 <div style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; color: #37B39C;">40%</div>
-                <p style="font-weight: 600; opacity: 0.9;">Faster Revenue Realization</p>
+                <p style="font-weight: 600; color: rgba(255, 255, 255, 0.92) !important;">Faster Revenue Realization</p>
             </div>
             <div class="stat-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 40px 20px; animation-delay: 0.2s;">
                 <div style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; color: #37B39C;">30%</div>
-                <p style="font-weight: 600; opacity: 0.9;">Reduction in Patient Wait Times</p>
+                <p style="font-weight: 600; color: rgba(255, 255, 255, 0.92) !important;">Reduction in Patient Wait Times</p>
             </div>
             <div class="stat-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 40px 20px; animation-delay: 0.3s;">
                 <div style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; color: #37B39C;">Zero</div>
-                <p style="font-weight: 600; opacity: 0.9;">Data Breaches (ISO 27001)</p>
+                <p style="font-weight: 600; color: rgba(255, 255, 255, 0.92) !important;">Data Breaches (ISO 27001)</p>
             </div>
             <div class="stat-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 40px 20px; animation-delay: 0.4s;">
                 <div style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; color: #37B39C;">24/7</div>
-                <p style="font-weight: 600; opacity: 0.9;">Dedicated Local Support</p>
+                <p style="font-weight: 600; color: rgba(255, 255, 255, 0.92) !important;">Dedicated Local Support</p>
             </div>
         </div>
     </div>
