@@ -599,11 +599,16 @@
             padding: 60px 24px 80px; /* body padding-top handles header offset */
             background: radial-gradient(circle at top right, rgba(55, 179, 156, 0.08), transparent 40%),
                         radial-gradient(circle at bottom left, rgba(29, 90, 159, 0.05), transparent 40%);
-            overflow: hidden;
+            overflow: visible;
         }
         .hero-container {
             max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr;
             gap: 60px; align-items: center;
+        }
+        /* Hero visual column — anchors the absolutely-positioned floating cards */
+        .hero-visual {
+            position: relative;
+            min-height: 380px;
         }
         .badge {
             display: inline-block; padding: 8px 16px; border-radius: 50px;
@@ -730,9 +735,16 @@
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
         /* Bottom CTA */
-        .bottom-cta { background: linear-gradient(135deg, var(--brand-blue), var(--brand-blue-dark)); padding: 100px 0; color: #fff; }
+        .bottom-cta { background: linear-gradient(135deg, var(--brand-blue), var(--brand-blue-dark)); padding: 100px 0; color: #fff; text-align: center; }
         .bottom-cta h2 { font-size: 2.5rem; margin-bottom: 20px; color: #fff; }
-        .bottom-cta p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px; }
+        /* Explicitly override global p { color: var(--text-secondary) } so text is readable on dark bg */
+        .bottom-cta p { font-size: 1.2rem; color: rgba(255, 255, 255, 0.88) !important; margin-bottom: 40px; }
+
+        /* Testimonial text-on-dark fix: any <p> inside a dark-bg testimonial block is white */
+        .testimonial-section [style*="linear-gradient"] p,
+        .testimonial-section [style*="brand-blue"] p {
+            color: rgba(255, 255, 255, 0.92) !important;
+        }
 
         /* Footer */
         .main-footer { background: #0F172A !important; color: #94A3B8 !important; padding: 80px 0 30px !important; }
