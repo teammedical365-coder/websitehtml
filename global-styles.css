@@ -3251,8 +3251,11 @@ p, li {
 
 .bv-title {
     font-size: 1rem;
-    font-weight: 600;
-    opacity: 0.8;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.9;
     margin-bottom: 24px;
 }
 
@@ -3273,12 +3276,13 @@ p, li {
 .bv-stat-num {
     font-size: 1.8rem;
     font-weight: 800;
-    color: var(--brand-teal);
+    color: #5EEAD4; /* Bright Teal for high contrast */
 }
 
 .bv-stat-lbl {
     font-size: 0.78rem;
-    opacity: 0.8;
+    color: #fff;
+    opacity: 0.9;
     margin-top: 4px;
 }
 
@@ -3290,7 +3294,8 @@ p, li {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
-    opacity: 0.8;
+    color: #fff;
+    opacity: 0.95;
     margin-bottom: 6px;
 }
 
