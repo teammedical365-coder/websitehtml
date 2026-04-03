@@ -2170,10 +2170,10 @@ p, li {
     --mf-bg3: #06111d;
     --mf-teal: #37B39C;
     --mf-blue: #2D7DD2;
-    --mf-border: rgba(255, 255, 255, 0.08);
-    --mf-text: rgba(255, 255, 255, 0.65);
-    --mf-text-dim: rgba(255, 255, 255, 0.35);
-    --mf-text-hi: rgba(255, 255, 255, 0.92);
+    --mf-border: rgba(255, 255, 255, 0.15);
+    --mf-text: rgba(255, 255, 255, 0.85); /* Increased from 0.65 for better accessibility */
+    --mf-text-dim: rgba(255, 255, 255, 0.6); /* Increased from 0.35 for visibility */
+    --mf-text-hi: rgba(255, 255, 255, 0.98); /* Crisper white */
     --mf-link-h: #37B39C;
     font-family: 'Figtree', 'DM Sans', 'Plus Jakarta Sans', system-ui, sans-serif;
     color: var(--mf-text);
