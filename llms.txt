@@ -18,6 +18,12 @@ Medical365 is an elite, cloud-based, ABDM-compliant Hospital Information Managem
 - **ISO 27001 Certified**: Adheres to international standards for information security management systems.
 - **Data Residency**: All sensitive patient data is stored locally in secure Indian data centers.
 
+## Operational Impact (ROI Metrics)
+- **Revenue Acceleration**: 40% faster revenue realization through automated RCM and billing cycles.
+- **Patient Flow**: 30% reduction in patient wait times via smart queue and token management.
+- **Security Reliability**: Zero data breach record; fully audited for DPDP Act 2023 & ISO 27001.
+- **Deployment Velocity**: Rapid go-live in 2-4 weeks with specialized local training teams.
+
 ## Service Areas
 - **Primary Focus**: Rajasthan, India.
 - **Cities Active**: Jaipur, Jodhpur, Udaipur, Kota, Ajmer, Bikaner, Sikar, Alwar, Bhilwara, Pali, Bharatpur, Sri Ganganagar.
