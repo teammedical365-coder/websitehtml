@@ -3,923 +3,388 @@
 <head>
     <link rel="canonical" href="https://medical365.in/book-demo" />
     <link rel="stylesheet" href="global-styles.css?v=3.0">
+    <link rel="stylesheet" href="redesign.css?v=1.0">
     <link rel="icon" type="image/jpeg" href="https://medical365.in/logo/medical365fav.jpg">
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Free Demo - Medical365</title>
-    <meta name="description" content="Discover Medical365's Book a Free Demo - Medical365 solutions. Streamline your healthcare operations, enhance patient care, and improve efficiency with our advanced cloud-based hospital management system and EHR platform.">
-    <meta name="keywords" content="Book a Free Demo - Medical365, Medical365, Healthcare Software, Hospital Management System, Clinic Management, EHR, EMR, Healthcare IT, Cloud Healthcare">
-    <meta name="author" content="Medical365">
-    <meta property="og:title" content="Book a Free Demo - Medical365">
-    <meta property="og:description" content="Discover Medical365's Book a Free Demo - Medical365 solutions. Streamline your healthcare operations, enhance patient care, and improve efficiency with our advanced cloud-based hospital management system and EHR platform.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://medical365.in/medical365logo1.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Book a Free Demo - Medical365">
-    <meta name="twitter:description" content="Discover Medical365's Book a Free Demo - Medical365 solutions. Streamline your healthcare operations, enhance patient care, and improve efficiency with our advanced cloud-based hospital management system and EHR platform.">
+    <title>Book a Demo - Medical365</title>
+    <meta name="description" content="Book a personalized demo of Medical365, the leading hospital management system.">
+    
+    <style>
+        :root {
+            --form-bg: #ffffff;
+            --input-border: #e2e8f0;
+            --input-focus: #1A56DB;
+            --text-placeholder: #94a3b8;
+            --btn-blue: #1A56DB;
+            --btn-blue-hover: #1e40af;
+        }
+
+        .book-demo-page {
+            background: linear-gradient(135deg, #f8faff 0%, #eef2ff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+        }
+
+        .demo-container {
+            max-width: 700px;
+            width: 100%;
+            background: var(--form-bg);
+            border-radius: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 48px;
+        }
+
+        .demo-form-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .demo-form-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .demo-form-header p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-row-full {
+            grid-column: 1 / -1;
+        }
+
+        .form-row-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .form-row-split {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: #1e293b;
+            transition: all 0.2s;
+        }
+
+        .form-control::placeholder {
+            color: var(--text-placeholder);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--input-focus);
+            box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.1);
+        }
+
+        textarea.form-control {
+            resize: none;
+        }
+
+        .privacy-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 0.875rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        .privacy-check input {
+            margin-top: 4px;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--btn-blue);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-submit:hover {
+            background: var(--btn-blue-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(26, 86, 219, 0.25);
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            animation: modalScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes modalScale {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .check-icon {
+            width: 64px;
+            height: 64px;
+            background: #ecfdf5;
+            color: #059669;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .modal-content h2 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .modal-content p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .loading-dots:after {
+            content: ' .';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { color: rgba(0,0,0,0); text-shadow: .2em 0 0 rgba(0,0,0,0), .4em 0 0 rgba(0,0,0,0); }
+            40% { color: #fff; text-shadow: .2em 0 0 rgba(0,0,0,0), .4em 0 0 rgba(0,0,0,0); }
+            60% { text-shadow: .2em 0 0 #fff, .4em 0 0 rgba(0,0,0,0); }
+            80%, 100% { text-shadow: .2em 0 0 #fff, .4em 0 0 #fff; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+    <header class="main-header redesign-nav" id="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/medical365logo1.png" alt="Medical365 Logo">
+            </a>
+            <div class="header-cta">
+                <a href="/" class="btn-secondary" style="background:#f1f5f9; color:#475569; padding: 8px 16px; border-radius:6px; font-weight:600;">Back to Home</a>
+            </div>
+        </div>
+    </header>
 
-<header class="main-header" id="main-header">
-    <div class="header-container">
-        <a href="https://medical365.in/" class="logo" aria-label="Medical365 Home">
-            <img loading="lazy" src="https://medical365.in/medical365logo1.png" alt="Medical365" class="logo-img">
-        </a>
-
-        <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-label="Open navigation menu">
-            <span class="bar top-bar"></span>
-            <span class="bar mid-bar"></span>
-            <span class="bar bot-bar"></span>
-        </button>
-
-        <nav class="main-nav" id="main-nav">
-            <div class="mobile-menu-header">
-                <img loading="lazy" src="https://medical365.in/medical365logo1.png" alt="Medical365" class="logo-img-mobile">
+    <main class="book-demo-page">
+        <div class="demo-container">
+            <div class="demo-form-header">
+                <h1>Book a Demo</h1>
+                <p>Personalized walkthrough for your healthcare facility</p>
             </div>
 
-            <div class="nav-body">
-                <ul class="nav-links">
-                <li><a href="https://medical365.in/" class="nav-item">Home</a></li>
+            <form id="book-demo-form" action="https://formspree.io/f/teammedical365@gmail.com" method="POST">
+                <div class="form-grid">
+                    <!-- Row 1 -->
+                    <div class="form-row-full">
+                        <div class="form-group">
+                            <label for="name">Full Name*</label>
+                            <input type="text" id="name" name="Full Name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="form-row-split">
+                        <div class="form-group">
+                            <label for="phone">Phone Number*</label>
+                            <input type="tel" id="phone" name="Phone" class="form-control" placeholder="e.g. +91 9876543210" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="Email" class="form-control" placeholder="you@hospital.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="form-row-split">
+                        <div class="form-group">
+                            <label for="state">State*</label>
+                            <select id="state" name="State" class="form-control" required>
+                                <option value="" disabled selected>-- Select State --</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City*</label>
+                            <select id="city" name="City" class="form-control" required>
+                                <option value="" disabled selected>-- Select City --</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Jodhpur">Jodhpur</option>
+                                <option value="Udaipur">Udaipur</option>
+                                <option value="Kota">Kota</option>
+                                <option value="Ajmer">Ajmer</option>
+                                <option value="Other">Other City</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="form-row-split">
+                        <div class="form-group">
+                            <label for="beds">No. of Beds*</label>
+                            <select id="beds" name="No. of Beds" class="form-control" required>
+                                <option value="" disabled selected>-- Select No. of Beds --</option>
+                                <option value="1-10">1-10 Beds</option>
+                                <option value="11-50">11-50 Beds</option>
+                                <option value="51-200">51-200 Beds</option>
+                                <option value="200+">200+ Beds</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hospital">Hospital Name*</label>
+                            <input type="text" id="hospital" name="Hospital Name" class="form-control" placeholder="Enter hospital/clinic name" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 5 -->
+                    <div class="form-row-full">
+                        <div class="form-group">
+                            <label for="challenges">What challenges are you looking to solve?*</label>
+                            <textarea id="challenges" name="Challenges" class="form-control" style="height: 120px;" placeholder="Describe your requirements or current pain points..." required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Footer Checkbox -->
+                    <div class="form-row-full">
+                        <label class="privacy-check">
+                            <input type="checkbox" required>
+                            <span>I agree to Bharuwa Solutions' Privacy Policy and Terms & Conditions.</span>
+                        </label>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-row-full">
+                        <button type="submit" class="btn-submit" id="submit-btn">
+                            Book a Demo
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content">
+            <div class="check-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h2>Thank you!</h2>
+            <p>Our team will connect with you soon.<br>Redirecting you to Home <span class="loading-dots"></span></p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('book-demo-form');
+        const modal = document.getElementById('success-modal');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // UI feedback
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending<span class="loading-dots"></span>';
+
+            const formData = new FormData(form);
+            const dataObj = Object.fromEntries(formData.entries());
+            
+            // In a production environment, uncomment the following block to use Formspree
+            /*
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
                 
-                <li class="has-mega-menu">
-                    <button class="nav-item solutions-toggle" aria-expanded="false" aria-controls="mega-menu-content">
-                        Solutions 
-                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    
-                    <div class="mega-menu" id="mega-menu-content">
-                        <div class="mega-menu-inner">
-                            <div class="mega-sidebar" role="tablist" aria-orientation="vertical">
-                                <button class="tab-btn active" role="tab" aria-selected="true" data-target="clinics">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                    Clinics
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="hospitals">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
-                                    Hospitals
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="specialty-care">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                                    Specialty Care
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="patients">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                    Patients & Families
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="hospital-chain">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                                    Hospital Chain
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="hospital-cfo">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="7" y1="10" x2="17" y2="10"></line><line x1="7" y1="14" x2="17" y2="14"></line></svg>
-                                    Hospital CFO
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="hospital-it">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                                    Hospital IT Manager
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="marketing-managers">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
-                                    Marketing Managers
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="backoffice-hr">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                    Backoffice & HR
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="government">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"></path><path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3"></path><path d="M19 21v-7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v7"></path></svg>
-                                    Government
-                                </button>
-                            </div>
+                if (!response.ok) throw new Error('Submission failed');
+            } catch (err) {
+                console.error(err);
+            }
+            */
 
-                            <div class="mega-content">
-                                <div class="tab-pane active" id="clinics" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Clinic Solutions</h2>
-                                        <p class="tab-desc">Comprehensive tools to streamline your daily clinic operations.</p>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="clinics"><span>Clinics Overview</span></a></li>
-                                        <li><a href="outpatient"><span>Outpatient</span></a></li>
-                                        <li><a href="telemedicine"><span>Telemedicine</span></a></li>
-                                        <li><a href="clinical-assessment-forms"><span>Clinical Assessment Forms</span></a></li>
-                                        <li><a href="emr"><span>EMR</span></a></li>
-                                        <li><a href="queue-token-management"><span>Queue & Token Management</span></a></li>
-                                        <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a></li>
-                                        <li><a href="communication-management"><span>Communication Management</span></a></li>
-                                        <li><a href="speech-to-text"><span>Speech to Text</span></a></li>
-                                        <li><a href="medical-camp"><span>Medical Camp</span></a></li>
-                                        <li><a href="diabetes-care-management"><span>Diabetes Care Management</span></a></li>
-                                        <li><a href="doctor-mobile-app"><span>Doctor Mobile App</span></a></li>
-                                        <li><a href="revenue-cycle-management"><span>Revenue Cycle Management</span></a></li>
-                                        <li><a href="vaccine-management"><span>Vaccine Management</span></a></li>
-                                    </ul>
-                                </div>
+            // Display success modal immediately for best UX
+            modal.style.display = 'flex';
 
-                                <div class="tab-pane" id="hospitals" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Hospital Management</h2>
-                                        <p class="tab-desc">Enterprise-grade solutions for mid to large scale hospitals.</p>
-                                    </div>
-                                    <ul class="sub-menu-list three-columns">
-                                        <li><a href="hospitals"><span>Hospitals Overview</span></a></li>
-                                        <li><a href="outpatient"><span>Outpatient</span></a></li>
-                                        <li><a href="telemedicine"><span>Telemedicine</span></a></li>
-                                        <li><a href="queue-token-management"><span>Queue & Token Management</span></a></li>
-                                        <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a></li>
-                                        <li><a href="emr"><span>EMR</span></a></li>
-                                        <li><a href="clinical-assessment-forms"><span>Clinical Assessment Forms</span></a></li>
-                                        <li><a href="inpatient"><span>Inpatient</span></a></li>
-                                        <li><a href="operation-theater-management"><span>Operation Theater Management</span></a></li>
-                                        <li><a href="nursing-management-system"><span>Nursing Management System</span></a></li>
-                                        <li><a href="vaccine-management"><span>Vaccine Management</span></a></li>
-                                        <li><a href="virtual-opd"><span>Virtual OPD</span></a></li>
-                                        <li><a href="revenue-cycle-management"><span>Revenue Cycle Management</span></a></li>
-                                        <li><a href="lims"><span>LIMS</span></a></li>
-                                        <li><a href="ris-pacs"><span>RIS & PACS</span></a></li>
-                                        <li><a href="pharmacy"><span>Pharmacy</span></a></li>
-                                        <li><a href="blood-bank"><span>Blood Bank</span></a></li>
-                                        <li><a href="communication-management"><span>Communication Management</span></a></li>
-                                        <li><a href="speech-to-text"><span>Speech to Text</span></a></li>
-                                        <li><a href="medical-camp"><span>Medical Camp</span></a></li>
-                                        <li><a href="doctor-mobile-app"><span>Doctor Mobile App</span></a></li>
-                                        <li><a href="crm"><span>CRM</span></a></li>
-                                        <li><a href="hospital-bed-management"><span>Bed Management</span></a></li>
-                                        <li><a href="canteen-management"><span>Canteen Management</span></a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="tab-pane" id="specialty-care" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Specialty Care EHR</h2>
-                                        <p class="tab-desc">Purpose-built EHR modules and tracking features designed specifically for each clinical specialty.</p>
-                                    </div>
-                                    
-                                    <div class="specialty-scroll-area">
-                                        <div class="specialty-grid">
-                                            
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Cardiology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="ecg-ekg-integration">ECG / EKG Integration</a></li>
-                                                    <li><a href="echocardiography-reports">Echocardiography Reports</a></li>
-                                                    <li><a href="stress-test-management">Stress Test Management</a></li>
-                                                    <li><a href="cardiac-risk-scoring">Cardiac Risk Scoring</a></li>
-                                                    <li><a href="angiography-reports">Angiography Reports</a></li>
-                                                    <li><a href="pacemaker-tracking">Pacemaker Tracking</a></li>
-                                                    <li><a href="lipid-profile-tracking">Lipid Profile Tracking</a></li>
-                                                    <li><a href="cardiac-history-templates">Cardiac History Templates</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Neurology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="eeg-reports">EEG Reports</a></li>
-                                                    <li><a href="mri-ct-integration">MRI / CT Scan Integration</a></li>
-                                                    <li><a href="seizure-tracking">Seizure Tracking</a></li>
-                                                    <li><a href="cognitive-assessment">Cognitive Assessment Tools</a></li>
-                                                    <li><a href="stroke-management">Stroke Management Templates</a></li>
-                                                    <li><a href="neurological-exam-forms">Neurological Exam Forms</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Pediatrics <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="growth-charts">Growth Charts (BMI)</a></li>
-                                                    <li><a href="vaccination-tracking">Vaccination Tracking</a></li>
-                                                    <li><a href="pediatric-dosage-calculator">Pediatric Dosage Calculator</a></li>
-                                                    <li><a href="developmental-milestones">Developmental Milestones</a></li>
-                                                    <li><a href="neonatal-records">Neonatal Records</a></li>
-                                                    <li><a href="parent-communication">Parent Communication Tools</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Orthopedics <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="xray-imaging-integration">X-ray & Imaging Integration</a></li>
-                                                    <li><a href="fracture-management">Fracture Management</a></li>
-                                                    <li><a href="joint-mobility-tracking">Joint Mobility Tracking</a></li>
-                                                    <li><a href="implant-records">Implant Records</a></li>
-                                                    <li><a href="physiotherapy-notes">Physiotherapy Notes</a></li>
-                                                    <li><a href="surgery-planning">Surgery Planning Tools</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Ophthalmology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="vision-refraction-charts">Vision & Refraction Charts</a></li>
-                                                    <li><a href="retina-imaging-integration">Retina Imaging Integration</a></li>
-                                                    <li><a href="eye-pressure-tracking">Eye Pressure (IOP) Tracking</a></li>
-                                                    <li><a href="optical-prescription-mgt">Optical Prescription Mgt</a></li>
-                                                    <li><a href="lasik-surgery-records">LASIK / Surgery Records</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Dental <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="dental-tooth-chart">Tooth Chart (Odontogram)</a></li>
-                                                    <li><a href="dental-imaging">Dental Imaging</a></li>
-                                                    <li><a href="dental-treatment-planning">Treatment Planning</a></li>
-                                                    <li><a href="dental-procedure-history">Procedure History</a></li>
-                                                    <li><a href="dental-insurance-billing">Insurance Billing</a></li>
-                                                    <li><a href="#">Appointment Scheduling</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Dermatology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="skin-image-tracking">Skin Image Tracking</a></li>
-                                                    <li><a href="dermatology-photos">Before/After Photo Storage</a></li>
-                                                    <li><a href="dermatology-treatment-plans">Treatment Plans</a></li>
-                                                    <li><a href="cosmetic-procedure-records">Cosmetic Procedure Records</a></li>
-                                                    <li><a href="allergy-tracking">Allergy Tracking</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Oncology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="cancer-staging">Cancer Staging</a></li>
-                                                    <li><a href="chemotherapy-plans">Chemotherapy Plans</a></li>
-                                                    <li><a href="radiation-therapy-records">Radiation Therapy Records</a></li>
-                                                    <li><a href="tumor-tracking">Tumor Tracking</a></li>
-                                                    <li><a href="oncology-reports">Oncology Reports</a></li>
-                                                    <li><a href="clinical-trial-management">Clinical Trial Management</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Gynecology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="pregnancy-tracking">Pregnancy Tracking</a></li>
-                                                    <li><a href="antenatal-care-records">Antenatal Care Records</a></li>
-                                                    <li><a href="ultrasound-reports">Ultrasound Reports</a></li>
-                                                    <li><a href="delivery-records">Delivery Records</a></li>
-                                                    <li><a href="fertility-treatment-tracking">Fertility Treatment Tracking</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Psychiatry <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="mental-health-assessments">Mental Health Assessments</a></li>
-                                                    <li><a href="therapy-session-notes">Therapy Session Notes</a></li>
-                                                    <li><a href="medication-tracking">Medication Tracking</a></li>
-                                                    <li><a href="behavioral-history">Behavioral History</a></li>
-                                                    <li><a href="confidential-records">Confidential Records Handling</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">General Practice <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="patient-history">Patient History</a></li>
-                                                    <li><a href="diagnosis-treatment">Diagnosis & Treatment</a></li>
-                                                    <li><a href="e-prescriptions">e-Prescriptions</a></li>
-                                                    <li><a href="lab-integration">Lab Integration</a></li>
-                                                    <li><a href="billing-reports">Billing & Reports</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Core Platform <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="patient-registration">Patient Registration</a></li>
-                                                    <li><a href="#">Appointment Scheduling</a></li>
-                                                    <li><a href="emr-ehr-system">EMR/EHR System</a></li>
-                                                    <li><a href="billing-invoicing">Billing & Invoicing</a></li>
-                                                    <li><a href="notifications-system">SMS / WhatsApp Notifications</a></li>
-                                                    <li><a href="cloud-security">Data Security & Cloud Access</a></li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="patients" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Patients and their Families</h2>
-                                    </div>
-                                    <ul class="sub-menu-list">
-                                        <li><a href="online-scheduling"><span>Online Scheduling</span></a></li>
-                                        <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a></li>
-                                        <li><a href="communication-management"><span>Communication Management</span></a></li>
-                                        <li><a href="patient-mobile-app"><span>Patient Mobile App</span></a></li>
-                                        <li><a href="patient-portal"><span>Patient Portal</span></a></li>
-                                        <li><a href="diabetes-patient-care"><span>Diabetes Patient Care</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="hospital-chain" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Hospital Chain Management</h2>
-                                    </div>
-                                    <ul class="sub-menu-list">
-                                        <li><a href="centralised-management"><span>Centralised Management</span></a></li>
-                                        <li><a href="multi-facility-sync"><span>Multi-Facility Sync</span></a></li>
-                                        <li><a href="unified-reporting"><span>Unified Reporting</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="hospital-cfo" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Hospital CFO</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="revenue-cycle-management"><span>Revenue Cycle Management</span></a></li>
-                                        <li><a href="accounts-payable"><span>Accounts Payable</span></a></li>
-                                        <li><a href="accounts-receivable"><span>Accounts Receivable</span></a></li>
-                                        <li><a href="ledger"><span>Ledger</span></a></li>
-                                        <li><a href="banking-payment-gateway"><span>Banking & Payment Gateway</span></a></li>
-                                        <li><a href="financial-reporting"><span>Financial Reporting & Dashboards</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="hospital-it" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Hospital IT Manager</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="cloud-solution"><span>Cloud Solution & Migration</span></a></li>
-                                        <li><a href="implementation"><span>Implementation</span></a></li>
-                                        <li><a href="data-migration"><span>Data Migration, Backup & Recovery</span></a></li>
-                                        <li><a href="configurations"><span>Configurations & Customisation</span></a></li>
-                                        <li><a href="data-security"><span>Data Security & Compliance</span></a></li>
-                                        <li><a href="geofencing"><span>Geofencing</span></a></li>
-                                        <li><a href="service-requests"><span>Service Requests</span></a></li>
-                                        <li><a href="on-prem-solution"><span>On-prem Solution</span></a></li>
-                                        <li><a href="rpa"><span>Robotic Process Automation</span></a></li>
-                                        <li><a href="digital-marketing"><span>Digital Marketing Services</span></a></li>
-                                        <li><a href="health-hire"><span>Health Hire</span></a></li>
-                                        <li><a href="free-webpage"><span>Ezovion Free Webpage</span></a></li>
-                                        <li><a href="offline-data-entry"><span>Offline Data Entry</span></a></li>
-                                        <li><a href="templates"><span>Templates</span></a></li>
-                                        <li><a href="compliance-security"><span>Compliance</span></a></li>
-                                        <li><a href="fhir-hl7"><span>FHIR HL7 Compliant</span></a></li>
-                                        <li><a href="multilingual-hims"><span>Multilingual HIMS</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="marketing-managers" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Marketing Managers</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="patient-demographics"><span>Patient Demographics & Insights</span></a></li>
-                                        <li><a href="appointment-trends"><span>Appointment Trends & Analysis</span></a></li>
-                                        <li><a href="referral-management"><span>Referral Management</span></a></li>
-                                        <li><a href="feedback-surveys"><span>Feedback & Satisfaction Surveys</span></a></li>
-                                        <li><a href="royalty-program"><span>Royalty Program</span></a></li>
-                                        <li><a href="direct-communication"><span>Direct Communication Channels</span></a></li>
-                                        <li><a href="campaign-performance"><span>Campaign Performance Tracking</span></a></li>
-                                        <li><a href="crm"><span>CRM</span></a></li>
-                                        <li><a href="digital-marketing"><span>Digital Marketing Services</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="backoffice-hr" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Backoffice & HR Managers</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="finance-accounting"><span>Finance and Accounting</span></a></li>
-                                        <li><a href="hrms"><span>Human Resources (HRMS)</span></a></li>
-                                        <li><a href="patient-relations"><span>Marketing and Patient Relations</span></a></li>
-                                        <li><a href="supply-chain"><span>Supply Chain Management</span></a></li>
-                                        <li><a href="asset-management"><span>Asset Management</span></a></li>
-                                        <li><a href="revenue-cycle-management"><span>Revenue Cycle Management</span></a></li>
-                                        <li><a href="supplier-management"><span>Supplier Management</span></a></li>
-                                        <li><a href="inventory-assets"><span>Inventory & Assets</span></a></li>
-                                        <li><a href="crm"><span>CRM</span></a></li>
-                                        <li><a href="hospital-bed-management"><span>Bed Management Software</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="government" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Government</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="population-health"><span>Integrated Population Health</span></a></li>
-                                        <li><a href="government-ops"><span>Multi-Facility Operations</span></a></li>
-                                        <li><a href="resource-management"><span>Resource Management</span></a></li>
-                                        <li><a href="health-surveillance"><span>Real-Time Health Surveillance</span></a></li>
-                                        <li><a href="financial-management"><span>Financial Management</span></a></li>
-                                        <li><a href="abha"><span>Compliance with ABHA</span></a></li>
-                                        <li><a href="pm-yojana"><span>Pradhan Mantri Yojana Support</span></a></li>
-                                        <li><a href="reporting-analytics"><span>Reporting and Analytics</span></a></li>
-                                        <li><a href="vaccine-management"><span>Vaccine Management</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li><a href="about" class="nav-item">About Us</a></li>
-                <li><a href="blogs" class="nav-item">Insights & Blogs</a></li>
-            </ul>
-</div>
-            <div class="mobile-cta-wrapper">
-                <a href="book-demo" class="btn-primary">Book a Free Demo</a>
-            </div>
-        </nav>
-
-        <div class="header-cta">
-            <a href="book-demo" class="btn-primary">Book Demo</a>
-        </div>
-    </div>
-</header>
-
-<section class="page-hero">
-    <div class="page-hero-inner">
-        <div class="badge fade-in-up">📅 Free, No-Commitment Demo</div>
-        <h1 class="fade-in-up" style="animation-delay:0.1s;">
-            See Medical365 <span class="text-gradient">In Action</span>
-        </h1>
-        <p class="fade-in-up" style="animation-delay:0.2s;">
-            Get a personalized walkthrough of the platform tailored to your facility type. Our specialists will show you exactly how Medical365 can transform your operations.
-        </p>
-    </div>
-</section>
-
-<section class="demo-section">
-    <div class="container">
-        <div class="demo-grid">
-            <!-- Form -->
-            <div class="demo-form-card fade-in-right">
-                <div id="form-wrapper">
-                    <h2 class="form-title">Request Your Free Demo</h2>
-                    <p class="form-subtitle">Fill in your details and we'll get back to you within 24 hours.</p>
-                    <form id="demo-form" novalidate>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first-name">First Name *</label>
-                                <input type="text" id="first-name" placeholder="Dr. Rahul" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="last-name">Last Name *</label>
-                                <input type="text" id="last-name" placeholder="Sharma" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Work Email *</label>
-                            <input type="email" id="email" placeholder="you@hospital.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" placeholder="+91 98765 43210" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="facility-name">Facility / Organization Name *</label>
-                            <input type="text" id="facility-name" placeholder="City General Hospital" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="facility-type">Facility Type *</label>
-                                <select id="facility-type" required>
-                                    <option value="" disabled selected>Select type</option>
-                                    <option>Clinic / Polyclinic</option>
-                                    <option>Multi-Specialty Hospital</option>
-                                    <option>Specialty Hospital</option>
-                                    <option>Hospital Chain</option>
-                                    <option>Pharmacy</option>
-                                    <option>Diagnostic Lab</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="bed-count">No. of Beds / Doctors</label>
-                                <select id="bed-count">
-                                    <option value="" disabled selected>Select range</option>
-                                    <option>1–10 Doctors</option>
-                                    <option>11–50 Beds</option>
-                                    <option>51–200 Beds</option>
-                                    <option>201–500 Beds</option>
-                                    <option>500+ Beds</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">What are your main challenges? (Optional)</label>
-                            <textarea id="message" placeholder="e.g. We struggle with appointment scheduling and patient billing..."></textarea>
-                        </div>
-                        <button type="submit" class="form-submit">Schedule My Free Demo →</button>
-                        <p class="form-note">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                            Your data is 100% secure. We never share your information.
-                        </p>
-                    </form>
-                </div>
-                <div class="success-msg" id="success-msg">
-                    <div class="check-circle">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    </div>
-                    <h2>Demo Booked Successfully!</h2>
-                    <p>Thank you! One of our specialists will contact you within 24 hours to confirm your demo schedule.</p>
-                </div>
-            </div>
-
-            <!-- Info side -->
-            <div class="demo-info fade-in-left">
-                <div class="info-block">
-                    <h2>What happens next?</h2>
-                    <div class="demo-steps">
-                        <div class="step">
-                            <div class="step-num">1</div>
-                            <div class="step-text">
-                                <h4>We'll reach out</h4>
-                                <p>A dedicated specialist contacts you within 24 hours to schedule your session.</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">2</div>
-                            <div class="step-text">
-                                <h4>Tailored walkthrough</h4>
-                                <p>We show you the modules most relevant to your facility type and challenges.</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">3</div>
-                            <div class="step-text">
-                                <h4>Your questions answered</h4>
-                                <p>Get live answers from our clinical and technical team during the 45-minute session.</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">4</div>
-                            <div class="step-text">
-                                <h4>Custom proposal</h4>
-                                <p>Receive a tailored quote and implementation plan for your facility.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <blockquote>The demo was incredibly eye-opening. In just 45 minutes I could see exactly how Medical365 would cut our administrative load in half. We went live in 3 weeks.</blockquote>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👨‍⚕️</div>
-                        <div class="author-info">
-                            <strong>Dr. Priya Nair</strong>
-                            <span>Medical Director, Apollo Multispecialty, Bangalore</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <h2>The demo includes</h2>
-                    <div class="features-list">
-                        <div class="feature-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Live product walkthrough (45 min)</div>
-                        <div class="feature-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Q&A with our clinical team</div>
-                        <div class="feature-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> ROI & cost-benefit analysis</div>
-                        <div class="feature-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Implementation timeline overview</div>
-                        <div class="feature-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> No obligation, completely free</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-    
-
-<!-- ═══════════════════════════════════════════════════════════════
-     MEDICAL365 MEGA FOOTER — v2.0
-     Includes: Brand, Nav, All 57 SEO pages, Locations, Services,
-               Contact, Map embed, Social links, Compliance badges
-═══════════════════════════════════════════════════════════════ -->
-<footer id="mega-footer" role="contentinfo">
-
-  <!-- ── TOP CTA BAR ── -->
-  <div class="mf-cta-bar">
-    <div class="mf-cta-inner">
-      <div class="mf-cta-text">
-        <p class="mf-cta-label">Ready to modernise your hospital?</p>
-        <p class="mf-cta-headline">Get a Free Demo — On-Site or Online, Anywhere in Rajasthan</p>
-      </div>
-      <div class="mf-cta-actions">
-        <a href="https://medical365.in/demo" class="mf-btn-demo">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Book a Free Demo
-        </a>
-        <a href="tel:+917791910007" class="mf-btn-call">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
-          +91 77919 10007
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── MAIN FOOTER BODY ── -->
-  <div class="mf-body">
-    <div class="mf-container">
-
-      <!-- ROW 1: Brand + Quick Links + Services + Contact ── -->
-      <div class="mf-row mf-row-top">
-
-        <!-- Brand -->
-        <div class="mf-brand">
-          <a href="https://medical365.in/" aria-label="Medical365 Home">
-            <img loading="lazy" src="https://medical365.in/medical365logo1.png" alt="Medical365" class="mf-logo" width="160" height="38">
-          </a>
-          <p class="mf-tagline">Empowering healthcare providers with modern, cloud-based management solutions.</p>
-          <a href="book-demo" class="mf-demo-pill">Book a Demo</a>
-          <!-- Social Links -->
-          <div class="mf-social" role="list" aria-label="Social media links">
-            <a href="https://www.linkedin.com/company/medical365" class="mf-social-link" aria-label="LinkedIn" role="listitem" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://twitter.com/medical365in" class="mf-social-link" aria-label="Twitter / X" role="listitem" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/medical365in" class="mf-social-link" aria-label="Facebook" role="listitem" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@medical365" class="mf-social-link" aria-label="YouTube" role="listitem" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/medical365in" class="mf-social-link" aria-label="Instagram" role="listitem" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-          </div>
-          <!-- Compliance badges -->
-          <div class="mf-badges" role="list" aria-label="Compliance certifications">
-            <span class="mf-badge" role="listitem">✓ ABDM</span>
-            <span class="mf-badge" role="listitem">✓ DPDP 2023</span>
-            <span class="mf-badge" role="listitem">✓ EHR India</span>
-            <span class="mf-badge" role="listitem">✓ ISO 27001</span>
-            <span class="mf-badge" role="listitem">✓ NABH Ready</span>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="mf-col">
-          <h2 class="mf-col-title">Quick Links</h2>
-          <ul class="mf-link-col">
-            <li><a href="https://medical365.in/">Home</a></li>
-            <li><a href="about">About Us</a></li>
-            <li><a href="blogs">Blog & Resources</a></li>
-            <li><a href="contact">Contact Us</a></li>
-            <li><a href="book-demo">Book a Demo</a></li>
-            <li><a href="privacy-policy">Privacy Policy</a></li>
-            <li><a href="terms-of-service">Terms of Service</a></li>
-            <li><a href="compliance-security">Compliance</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div class="mf-col mf-col-services">
-          <h2 class="mf-col-title">Services</h2>
-          <ul class="mf-services-grid"><li><a href="clinic-management-system-jaipur"><span class="mf-srv-dot"></span>Clinics (OPD)</a></li><li><a href="inpatient-management-software-udaipur"><span class="mf-srv-dot"></span>Hospitals (IPD)</a></li><li><a href="emr-software-hospitals-bikaner"><span class="mf-srv-dot"></span>Specialty Care & EMR</a></li><li><a href="pharmacy-management-software-raja-park"><span class="mf-srv-dot"></span>Pharmacy Management</a></li><li><a href="lims-laboratory-information-management-jaipur"><span class="mf-srv-dot"></span>Lab & Diagnostics (LIMS)</a></li><li><a href="telemedicine-platform-clinics-mansarovar"><span class="mf-srv-dot"></span>Telemedicine Platform</a></li><li><a href="hospital-revenue-cycle-management-rajasthan"><span class="mf-srv-dot"></span>Revenue Cycle Management</a></li><li><a href="patient-portal-software-vidyadhar-nagar"><span class="mf-srv-dot"></span>Patient Portal & App</a></li><li><a href="hospital-hrms-jaipur"><span class="mf-srv-dot"></span>Hospital HRMS</a></li><li><a href="blood-bank-software-udaipur"><span class="mf-srv-dot"></span>Blood Bank Software</a></li><li><a href="operation-theater-management-alwar"><span class="mf-srv-dot"></span>Operation Theater (OT)</a></li><li><a href="nursing-management-system-sikar"><span class="mf-srv-dot"></span>Nursing Management</a></li><li><a href="healthcare-crm-software-udaipur"><span class="mf-srv-dot"></span>Healthcare CRM</a></li><li><a href="abha-compliance-software-hospitals-kota"><span class="mf-srv-dot"></span>ABHA / ABDM Compliance</a></li><li><a href="healthcare-cloud-migration-services-jaipur"><span class="mf-srv-dot"></span>Cloud Migration & IT</a></li><li><a href="healthcare-digital-marketing-services-rajasthan"><span class="mf-srv-dot"></span>Digital Marketing for Hospitals</a></li></ul>
-        </div>
-
-        <!-- Contact -->
-        <div class="mf-col mf-col-contact">
-          <h2 class="mf-col-title">Contact Details</h2>
-          <div class="mf-contact-block">
-            <div class="mf-contact-item">
-              <svg class="mf-contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-              <div>
-                <span class="mf-contact-label">Address</span>
-                <address class="mf-contact-val">Bhamashah Techno Hub, Sansthan Path, Jhalana Gram,<br>Malviya Nagar, Jaipur, Rajasthan 302017</address>
-              </div>
-            </div>
-            <div class="mf-contact-item">
-              <svg class="mf-contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
-              <div>
-                <span class="mf-contact-label">Mobile</span>
-                <a href="tel:+917791910007" class="mf-contact-val mf-phone">+91 77919 10007</a>
-              </div>
-            </div>
-            <div class="mf-contact-item">
-              <svg class="mf-contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <div>
-                <span class="mf-contact-label">Email</span>
-                <a href="mailto:info@medical365.in" class="mf-contact-val">info@medical365.in</a>
-              </div>
-            </div>
-            <div class="mf-contact-item">
-              <svg class="mf-contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <div>
-                <span class="mf-contact-label">Support Hours</span>
-                <span class="mf-contact-val">Mon–Sat, 9:00 AM – 6:00 PM IST</span>
-              </div>
-            </div>
-            <!-- Google Map embed -->
-            <div class="mf-map-wrap">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1!2d75.8069!3d26.8639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5a7f7a7f7a7%3A0x7a7a7a7a7a7a7a7a!2sBhamashah%20Techno%20Hub%2C%20Malviya%20Nagar%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                width="100%" height="160" style="border:0;border-radius:10px;display:block;"
-                allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Medical365 Office Location — Bhamashah Techno Hub, Jaipur"
-                aria-label="Google Maps showing Medical365 office in Malviya Nagar, Jaipur">
-              </iframe>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /mf-row-top -->
-
-      <!-- ── DIVIDER ── -->
-      <div class="mf-divider" role="separator"></div>
-
-      <!-- ROW 2: Locations We Serve ── -->
-      <div class="mf-row mf-row-loc">
-        <div class="mf-section-head">
-          <h2 class="mf-col-title">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#37B39C;vertical-align:middle;margin-right:6px;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            Locations We Serve
-          </h2>
-          <span class="mf-section-sub">Hospital &amp; Clinic Software across Rajasthan</span>
-        </div>
-        <ul class="mf-loc-grid">
-          <li><a href="clinic-management-system-jaipur"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Jaipur</a></li>
-          <li><a href="outpatient-software-solutions-jodhpur"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Jodhpur</a></li>
-          <li><a href="inpatient-management-software-udaipur"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Udaipur</a></li>
-          <li><a href="healthcare-kiosk-providers-kota"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Kota</a></li>
-          <li><a href="virtual-opd-software-ajmer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Ajmer</a></li>
-          <li><a href="emr-software-hospitals-bikaner"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Bikaner</a></li>
-          <li><a href="medical-camp-management-software-bhilwara"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Bhilwara</a></li>
-          <li><a href="operation-theater-management-alwar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Alwar</a></li>
-          <li><a href="nursing-management-system-sikar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Sikar</a></li>
-          <li><a href="hospital-management-software-pali"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Pali</a></li>
-          <li><a href="vaccine-management-system-bharatpur"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Bharatpur</a></li>
-          <li><a href="clinic-management-system-sri-ganganagar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Sri Ganganagar</a></li>
-        </ul>
-      </div>
-
-      <!-- ── DIVIDER ── -->
-      <div class="mf-divider" role="separator"></div>
-
-      <!-- ROW 3: All 57 pages by category ── -->
-      <div class="mf-row mf-row-pages">
-        <div class="mf-section-head">
-          <h2 class="mf-col-title">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#37B39C" stroke-width="2.5" aria-hidden="true" style="vertical-align:middle;margin-right:6px;"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-            All Resources &amp; Guides
-          </h2>
-          <span class="mf-section-sub">57 in-depth guides covering every healthcare software category</span>
-        </div>
-        <div class="mf-all-cats">
-
-          <div class="mf-cat-block">
-            <h4 class="mf-cat-title">Hospital & Clinic Management</h4>
-            <div class="mf-link-cols">
-              <ul class="mf-link-col">
-                <li><a href="hospital-management-software-jaipur">Top HMS Rajasthan</a></li>
-                <li><a href="clinic-management-system-jaipur">Clinic System Jaipur</a></li>
-                <li><a href="outpatient-software-solutions-jodhpur">Outpatient Jodhpur</a></li>
-                <li><a href="inpatient-management-software-udaipur">Inpatient Udaipur</a></li>
-              </ul>
-              <ul class="mf-link-col">
-                <li><a href="telemedicine-platform-mansarovar-jaipur">Telemedicine Mansarovar</a></li>
-                <li><a href="hospital-queue-token-management-vaishali-nagar-jaipur">Queue Mgt Vaishali</a></li>
-                <li><a href="healthcare-kiosk-providers-kota">Kiosk Providers Kota</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="mf-cat-block">
-            <h4 class="mf-cat-title">Clinical & Medical Ops</h4>
-            <div class="mf-link-cols">
-              <ul class="mf-link-col">
-                <li><a href="emr-software-bikaner">EMR Bikaner</a></li>
-                <li><a href="clinical-assessment-form-software-c-scheme-jaipur">Assessments C-Scheme</a></li>
-                <li><a href="operation-theater-management-alwar">OT Mgt Alwar</a></li>
-              </ul>
-              <ul class="mf-link-col">
-                <li><a href="nursing-management-system-sikar">Nursing Sikar</a></li>
-                <li><a href="lims-laboratory-information-management-jaipur">LIMS Jaipur</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Other categories simplified similarly -->
-          <div class="mf-cat-block">
-            <h4 class="mf-cat-title">Patient Experience</h4>
-            <div class="mf-link-cols">
-              <ul class="mf-link-col">
-                <li><a href="hospital-online-scheduling-software-udaipur">Scheduling Udaipur</a></li>
-                <li><a href="patient-portal-software-vidyadhar-nagar-jaipur">Portal Vidyadhar</a></li>
-              </ul>
-              <ul class="mf-link-col">
-                <li><a href="patient-mobile-app-developers-rajasthan">Patient App Raj.</a></li>
-                <li><a href="healthcare-feedback-satisfaction-surveys-alwar">Surveys Alwar</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="mf-cat-block">
-            <h4 class="mf-cat-title">IT & Infrastructure</h4>
-            <div class="mf-link-cols">
-              <ul class="mf-link-col">
-                <li><a href="hospital-it-cloud-migration-jaipur">Cloud Jaipur</a></li>
-                <li><a href="hospital-data-backup-recovery-kota">Backup Kota</a></li>
-              </ul>
-              <ul class="mf-link-col">
-                <li><a href="fhir-hl7-compliant-software-jaipur">FHIR/HL7 Raj.</a></li>
-                <li><a href="medical-robotic-process-automation-jodhpur">RPA Jodhpur</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="mf-cat-block">
-            <h4 class="mf-cat-title">HR & Operations</h4>
-            <div class="mf-link-cols">
-              <ul class="mf-link-col">
-                <li><a href="hospital-hrms-jaipur">HRMS Jaipur</a></li>
-                <li><a href="healthcare-crm-udaipur">CRM Udaipur</a></li>
-              </ul>
-              <ul class="mf-link-col">
-                <li><a href="hospital-bed-management-software-bapu-nagar-jaipur">Bed Mgt Jaipur</a></li>
-                <li><a href="medical-asset-inventory-management-jodhpur">Assets Jodhpur</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="mf-cat-block" style="grid-column: span 1;">
-            <h4 class="mf-cat-title">Govt & Public Health</h4>
-            <div class="mf-link-cols">
-              <ul class="mf-link-col">
-                <li><a href="integrated-population-healthcare-management-jaipur">Public Health Raj.</a></li>
-                <li><a href="abha-compliance-software-kota">ABHA Compliance</a></li>
-              </ul>
-              <ul class="mf-link-col">
-                <li><a href="vaccine-management-system-bharatpur">Vaccine Mgt.</a></li>
-                <li><a href="multi-facility-hospital-software-jaipur">Multi-Facility</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </div><!-- /mf-all-cats -->
-      </div><!-- /mf-row-pages -->
-
-      <!-- ── DIVIDER ── -->
-      <div class="mf-divider" role="separator"></div>
-
-      <!-- ROW 4: Bottom bar ── -->
-      <div class="mf-bottom">
-        <div class="mf-bottom-left">
-          <p class="mf-copy">© 2026 Medical365 — Bhamashah Techno Hub, Malviya Nagar, Jaipur, Rajasthan 302017. All rights reserved.</p>
-          <p class="mf-copy mf-copy-sm">CIN: U72900RJ2022PTC080000 &nbsp;|&nbsp; GST: 08AAAAA0000A1Z5 &nbsp;|&nbsp; Made in India 🇮🇳</p>
-        </div>
-        <div class="mf-bottom-right">
-          <div class="mf-compliance-badges" role="list" aria-label="Compliance certifications">
-            <span class="mf-cbadge" role="listitem">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-              ABDM Compliant
-            </span>
-            <span class="mf-cbadge" role="listitem">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-              DPDP Act 2023
-            </span>
-            <span class="mf-cbadge" role="listitem">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-              EHR Standards
-            </span>
-            <span class="mf-cbadge" role="listitem">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-              ISO 27001
-            </span>
-            <span class="mf-cbadge" role="listitem">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              NABH Ready
-            </span>
-          </div>
-          <div class="mf-legal-links" role="list" aria-label="Legal links">
-            <a href="privacy-policy" role="listitem">Privacy Policy</a>
-            <span aria-hidden="true">·</span>
-            <a href="terms-of-service" role="listitem">Terms</a>
-            <span aria-hidden="true">·</span>
-            <a href="sitemap.xml" role="listitem">Sitemap</a>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /mf-container -->
-  </div><!-- /mf-body -->
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/917791910007?text=Hi%20Medical365%2C%20I%27d%20like%20to%20book%20a%20free%20demo"
-     class="mf-wa-fab" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
-</footer>
-
-<script src="global-scripts.js?v=3.0"></script>
-
+            // Automatic 5-second redirect as requested
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
-
-
