@@ -142,7 +142,7 @@ button {
 }
 
 .section-padding {
-    padding: 120px 0;
+    padding: clamp(60px, 10vh, 100px) 0;
 }
 
 .section-title {
