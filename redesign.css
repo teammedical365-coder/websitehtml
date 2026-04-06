@@ -266,6 +266,17 @@
     text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
 
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.security-content .section-title {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+}
+
 .security-visual-img {
     width: 100%;
     transform: scale(1.1);
@@ -450,9 +461,20 @@
 
 @media (max-width: 1024px) {
     .bento-grid-redesign { grid-template-columns: repeat(2, 1fr); }
-    .security-dark-card, .tab-content-redesign { grid-template-columns: 1fr; }
-    .security-dark-card { padding: 40px 24px; gap: 40px; text-align: center; }
-    .security-visual { order: -1; }
+    .security-dark-card, .tab-content-redesign { display: block !important; width: 100% !important; margin: 0 auto !important; }
+    .security-dark-card { padding: 40px 24px; text-align: center; overflow: hidden; }
+    .security-visual { margin-bottom: 30px; width: 100% !important; }
+    .security-content { text-align: center; width: 100% !important; }
+    
+    .compliance-grid { 
+        grid-template-columns: 1fr !important; 
+        gap: 15px !important; 
+        margin-top: 30px;
+        text-align: left;
+        max-width: 320px;
+        margin-inline: auto;
+    }
+    
     .impact-grid { grid-template-columns: 1fr; gap: 40px; }
     .s-timeline-container { padding: 60px 0; }
     .s-svg-path { display: none; }
@@ -478,6 +500,43 @@
 @media (max-width: 480px) {
     .hero-buttons { flex-direction: column; width: 100%; }
     .btn-lg { width: 100%; padding: 14px 20px; font-size: 1rem; }
-    .section-title { margin-bottom: 16px; }
+    .section-title { margin-bottom: 12px; font-size: 1.85rem !important; }
     .bento-card { padding: 24px; }
+    
+    .security-dark-card { 
+        padding: 40px 16px !important; 
+        width: calc(100% - 32px) !important;
+        margin: 0 auto !important;
+        border-radius: 12px;
+    }
+
+    .security-content p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        width: 100% !important;
+        margin-bottom: 24px !important;
+        white-space: normal !important;
+    }
+    
+    /* Force logo and header to fit mobile viewport */
+    .logo-img { max-width: 180px !important; }
+    .header-container { 
+        padding: 0 16px !important;
+        max-width: 100vw !important;
+        overflow: hidden !important;
+    }
+    
+    /* Prevent any element from causing horizontal scroll */
+    html, body {
+        overflow-x: hidden !important;
+        position: relative;
+        max-width: 100vw;
+        width: 100% !important;
+    }
+    
+    .container {
+        max-width: 100vw !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
 }

@@ -19,5 +19,13 @@ Disallow: /temp/
 Disallow: /superadmin
 Disallow: /superadmin.html
 
+# Block SEO Generated Pages & Templates
+Disallow: /templates
+Disallow: /templates.html
+Disallow: /free-webpage
+Disallow: /free-webpage.html
+Disallow: /seo_template
+Disallow: /seo_template.html
+
 # Standardized Link to Sitemap
 Sitemap: https://medical365.in/sitemap.xml
