@@ -99,6 +99,13 @@ button {
 }
 
 /* Global Helpers */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 40px);
+    width: 100%;
+}
+
 .nav-item, .tab-btn, .tab-pane a, .btn-primary, .btn-secondary {
     min-height: 48px;
     display: inline-flex;
