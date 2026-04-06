@@ -420,12 +420,13 @@ p, li {
         max-width: 95vw;
         background-color: #ffffff;
         border-radius: 16px;
-        box-shadow: var(--shadow-lg), 0 0 0 1px var(--border-light);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(226, 232, 240, 0.8);
         opacity: 0;
         visibility: hidden;
         transition: all var(--transition-smooth);
         pointer-events: none;
         overflow: hidden;
+        z-index: 1001; /* High z-index to avoid overlap */
     }
 
     .has-mega-menu:hover .mega-menu {
@@ -456,6 +457,8 @@ p, li {
     flex-direction: column;
     gap: 4px;
     overflow-y: auto;
+    position: relative;
+    z-index: 10;
 }
 
 .mega-sidebar::-webkit-scrollbar {

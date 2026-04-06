@@ -1,17 +1,15 @@
 RewriteEngine On
 
-# ==============================================================================
-# CANONICAL IDENTITY — Hard Gravity Rules (must be FIRST)
-# Goal: Anchor ALL authority to https://medical365.in (no www, always HTTPS)
-# ==============================================================================
+# 1. Force HTTPS and Strip WWW (Hard Anchor)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://medical365.in/$1 [L,R=301]
 
-# Rule A: Force HTTPS (HTTP → HTTPS), path preserved
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# 2. Redirect /index and /index.html to the root domain
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html|\.php)?\ HTTP/
+RewriteRule ^index(\.html|\.php)?$ https://medical365.in/ [L,R=301]
 
-# Rule B: Strip www (www.medical365.in → medical365.in), path preserved
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
 
 # ==============================================================================
 # END CANONICAL IDENTITY
