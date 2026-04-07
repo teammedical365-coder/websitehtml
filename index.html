@@ -1338,6 +1338,196 @@
      Includes: Brand, Nav, All 57 SEO pages, Locations, Services,
                Contact, Map embed, Social links, Compliance badges
 ═══════════════════════════════════════════════════════════════ -->
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             SECTION: MEDICAL365 CORTEX (AI HEALTHCARE BRAIN)
+             Features: Glassmorphism, Antigravity Bobbing, Glowing UI
+        ═══════════════════════════════════════════════════════════════ -->
+        <style>
+            .cortex-section {
+                background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+                padding: 140px 20px;
+                position: relative;
+                overflow: hidden;
+            }
+            .cortex-section::after {
+                content: '';
+                position: absolute;
+                top: 50%; left: 50%;
+                width: 600px; height: 600px;
+                background: radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%);
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+            }
+            .cortex-container { max-width: 1300px; margin: 0 auto; }
+            .cortex-header { text-align: center; margin-bottom: 80px; }
+            
+            .cortex-badge {
+                display: inline-block;
+                padding: 8px 24px;
+                border-radius: 100px;
+                background: rgba(34, 211, 238, 0.08);
+                border: 1px solid rgba(34, 211, 238, 0.3);
+                color: #22d3ee;
+                font-weight: 700;
+                font-size: 13px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+                box-shadow: 0 0 20px rgba(34, 211, 238, 0.1);
+            }
+            
+            .cortex-headline {
+                font-size: clamp(2.5rem, 6vw, 4rem);
+                font-weight: 800;
+                color: #fff;
+                line-height: 1.1;
+                margin-bottom: 24px;
+                letter-spacing: -1px;
+            }
+            .cortex-gradient-text {
+                background: linear-gradient(90deg, #22d3ee, #0ea5e9, #818cf8);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 0 10px 30px rgba(34, 211, 238, 0.2);
+            }
+            
+            .cortex-sub {
+                max-width: 800px;
+                margin: 0 auto;
+                font-size: 1.25rem;
+                color: #94a3b8;
+                line-height: 1.6;
+            }
+
+            .cortex-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+                gap: 30px;
+                padding: 20px;
+            }
+
+            .cortex-card {
+                background: rgba(15, 23, 42, 0.5);
+                backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 28px;
+                padding: 45px;
+                position: relative;
+                transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+                animation: float-bob var(--float-duration, 5s) ease-in-out infinite;
+                animation-delay: var(--float-delay, 0s);
+            }
+            
+            .cortex-card:hover {
+                transform: translateY(-20px) scale(1.02);
+                border-color: rgba(34, 211, 238, 0.4);
+                background: rgba(15, 23, 42, 0.7);
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(34, 211, 238, 0.1);
+            }
+
+            @keyframes float-bob {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-15px); }
+            }
+
+            .cortex-icon-wrap {
+                width: 65px; height: 65px;
+                background: rgba(34, 211, 238, 0.1);
+                border-radius: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                color: #22d3ee;
+            }
+
+            .cortex-card-title {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #fff;
+                margin-bottom: 18px;
+            }
+
+            .cortex-card-text {
+                color: #94a3b8;
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+
+            @media (max-width: 768px) {
+                .cortex-grid { grid-template-columns: 1fr; }
+                .cortex-headline { font-size: 2.5rem; }
+            }
+        </style>
+
+        <section class="cortex-section">
+            <div class="cortex-container">
+                <div class="cortex-header">
+                    <div class="cortex-badge">Powered by Artificial Intelligence</div>
+                    <h2 class="cortex-headline">Medical365 Cortex: <br><span class="cortex-gradient-text">The AI-Native Healthcare Brain</span></h2>
+                    <p class="cortex-sub">Moving beyond digitisation. Experience India’s first fully autonomous hospital ecosystem where Artificial Intelligence doesn't just assist—it anticipates.</p>
+                </div>
+
+                <div class="cortex-grid">
+                    <!-- Card 1 -->
+                    <div class="cortex-card" style="--float-duration: 5s; --float-delay: 0s;">
+                        <div class="cortex-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                        </div>
+                        <h3 class="cortex-card-title">Ambient AI Clinical Scribe</h3>
+                        <p class="cortex-card-text">Zero-click EMR. Our ambient AI listens to the natural conversation between doctor and patient, automatically generating perfect, structured notes and prescriptions in real-time.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="cortex-card" style="--float-duration: 5.5s; --float-delay: 0.5s;">
+                        <div class="cortex-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.54-2.44 2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 2.54-2.44 2.5 2.5 0 0 1 2.46-5.06z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.54-2.44 2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 0-2.54-2.44 2.5 2.5 0 0 0-2.46-5.06z"></path></svg>
+                        </div>
+                        <h3 class="cortex-card-title">Predictive Clinical Copilot</h3>
+                        <p class="cortex-card-text">Cross-references patient history, lab results, and real-time vitals to predict clinical risks like sepsis or readmission up to 48 hours before symptoms appear.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="cortex-card" style="--float-duration: 6s; --float-delay: 1.2s;">
+                        <div class="cortex-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </div>
+                        <h3 class="cortex-card-title">Computer Vision Diagnostics</h3>
+                        <p class="cortex-card-text">Integrated directly into PACS. AI vision models instantly scan X-rays and MRIs, automatically highlighting anomalies and acting as a second set of eyes for radiologists.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="cortex-card" style="--float-duration: 5.2s; --float-delay: 0.3s;">
+                        <div class="cortex-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        </div>
+                        <h3 class="cortex-card-title">Autonomous Revenue Cycle</h3>
+                        <p class="cortex-card-text">Zero-touch billing. Machine Learning auto-generates billing codes from doctor notes and predicts TPA rejections before submission, guaranteeing a 99.9% first-pass approval rate.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="cortex-card" style="--float-duration: 5.8s; --float-delay: 0.8s;">
+                        <div class="cortex-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        </div>
+                        <h3 class="cortex-card-title">Dynamic Resource Forecasting</h3>
+                        <p class="cortex-card-text">Analyzes weather, disease trends, and hospital data to predict OPD footfall, manage bed allocation, and autonomously order pharmacy inventory before stocks run out.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="cortex-card" style="--float-duration: 6.2s; --float-delay: 1.5s;">
+                        <div class="cortex-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                        <h3 class="cortex-card-title">AI Digital Front Door</h3>
+                        <p class="cortex-card-text">An intelligent WhatsApp/App chatbot that acts as a virtual triage. It asks patients dynamic questions, categorizes urgency, and routes them to the correct specialist.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer id="mega-footer" role="contentinfo">
 
             <!-- ── TOP CTA BAR ── -->
@@ -1940,8 +2130,8 @@
                             ctx.lineTo(this.x - this.vx * 1.6, this.y - this.vy * 1.6); // Exact stretch
                             ctx.stroke();
                         } else {
-                            ctx.beginPath(); ctx.arc(this.x, this.y, 1.4, 0, Math.PI * 2);
-                            ctx.fillStyle = `rgba(180, 190, 210, 0.4)`; ctx.fill(); // Rest state
+                            ctx.beginPath(); ctx.arc(this.x, this.y, 1.2, 0, Math.PI * 2);
+                            ctx.fillStyle = `rgba(180, 190, 210, 0.22)`; ctx.fill(); // Subtle rest state for dark themes
                         }
                     }
                 }
