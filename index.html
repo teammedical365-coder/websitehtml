@@ -1837,42 +1837,41 @@
         </footer>
 
 
-        <!-- Medical365 Antigravity Particle Effect -->
+        <!-- Medical365 Google Antigravity Intensity Effect -->
         <canvas id="medical365-particle-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;"></canvas>
-
         <script>
             (function() {
                 const canvas = document.getElementById('medical365-particle-canvas');
                 const ctx = canvas.getContext('2d');
                 let width, height;
                 const particles = [];
-                const mouse = { x: -1000, y: -1000, radius: 160 };
+                const mouse = { x: -2000, y: -2000, radius: 210 };
 
                 const config = {
-                    gridSpacing: 45,
-                    repulsion: 1.5,
-                    elasticity: 0.08,
-                    friction: 0.88,
-                    lineDist: 100,
-                    baseColor: '14, 165, 233' // Medical Blue
+                    gridSpacing: 38,
+                    repulsion: 14.0,
+                    elasticity: 0.06,
+                    friction: 0.86,
+                    colors: ['#0ea5e9', '#38bdf8', '#0284c7', '#7dd3fc']
                 };
 
-                class GridParticle {
+                class AntigravityParticle {
                     constructor(x, y) {
-                        this.homeX = x; this.homeY = y;
-                        this.x = x; this.y = y;
+                        this.homeX = x + (Math.random() - 0.5) * 12;
+                        this.homeY = y + (Math.random() - 0.5) * 12;
+                        this.x = this.homeX; this.y = this.homeY;
                         this.vx = 0; this.vy = 0;
-                        this.size = 1.2;
+                        this.color = config.colors[Math.floor(Math.random() * config.colors.length)];
                     }
                     update() {
                         let dx = mouse.x - this.x;
                         let dy = mouse.y - this.y;
                         let dist = Math.sqrt(dx * dx + dy * dy);
                         if (dist < mouse.radius) {
-                            let force = (mouse.radius - dist) / mouse.radius;
+                            let force = Math.pow((mouse.radius - dist) / mouse.radius, 1.6);
                             let angle = Math.atan2(dy, dx);
-                            this.vx -= Math.cos(angle) * force * config.repulsion * 6;
-                            this.vy -= Math.sin(angle) * force * config.repulsion * 6;
+                            this.vx -= Math.cos(angle) * force * config.repulsion;
+                            this.vy -= Math.sin(angle) * force * config.repulsion;
                         }
                         this.vx += (this.homeX - this.x) * config.elasticity;
                         this.vy += (this.homeY - this.y) * config.elasticity;
@@ -1880,43 +1879,32 @@
                         this.x += this.vx; this.y += this.vy;
                     }
                     draw() {
-                        ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                        ctx.fillStyle = `rgba(${config.baseColor}, ${Math.abs(this.vx) > 1 ? 0.8 : 0.25})`;
-                        ctx.fill();
-                    }
-                }
-
-                function initGrid() {
-                    particles.length = 0;
-                    for (let x = 0; x < width + config.gridSpacing; x += config.gridSpacing) {
-                        for (let y = 0; y < height + config.gridSpacing; y += config.gridSpacing) {
-                            particles.push(new GridParticle(x, y));
+                        let speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+                        if (speed > 1.2) {
+                            ctx.beginPath(); ctx.lineWidth = 2.2; ctx.lineCap = 'round';
+                            ctx.strokeStyle = this.color;
+                            ctx.moveTo(this.x, this.y);
+                            ctx.lineTo(this.x - this.vx * 1.8, this.y - this.vy * 1.8);
+                            ctx.stroke();
+                        } else {
+                            ctx.beginPath(); ctx.arc(this.x, this.y, 1.2, 0, Math.PI * 2);
+                            ctx.fillStyle = `rgba(148, 163, 184, 0.35)`; ctx.fill();
                         }
                     }
                 }
 
-                function drawLines() {
-                    ctx.lineWidth = 0.4;
-                    for (let i = 0; i < particles.length; i++) {
-                        let p1 = particles[i];
-                        if (Math.abs(p1.x - mouse.x) < config.lineDist && Math.abs(p1.y - mouse.y) < config.lineDist) {
-                            for (let j = i + 1; j < particles.length; j++) {
-                                let p2 = particles[j];
-                                let dx = p1.x - p2.x; let dy = p1.y - p2.y;
-                                let dist = Math.sqrt(dx * dx + dy * dy);
-                                if (dist < config.gridSpacing * 1.4) {
-                                    ctx.strokeStyle = `rgba(${config.baseColor}, ${(1 - dist/(config.gridSpacing*1.4)) * 0.15})`;
-                                    ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
-                                }
-                            }
+                function init() {
+                    particles.length = 0;
+                    for (let x = -config.gridSpacing; x < width + config.gridSpacing; x += config.gridSpacing) {
+                        for (let y = -config.gridSpacing; y < height + config.gridSpacing; y += config.gridSpacing) {
+                            particles.push(new AntigravityParticle(x, y));
                         }
                     }
                 }
 
                 function resize() {
                     width = window.innerWidth; height = window.innerHeight;
-                    canvas.width = width; canvas.height = height;
-                    initGrid();
+                    canvas.width = width; canvas.height = height; init();
                 }
 
                 window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
@@ -1924,13 +1912,11 @@
 
                 function animate() {
                     ctx.clearRect(0, 0, width, height);
-                    drawLines();
                     particles.forEach(p => { p.update(); p.draw(); });
                     requestAnimationFrame(animate);
                 }
 
-                resize();
-                animate();
+                resize(); animate();
             })();
         </script>
 
