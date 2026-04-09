@@ -4888,3 +4888,32 @@ p, li {
 .mb-100 { margin-bottom: clamp(30px, 5vh, 60px) !important; }
 .pb-100 { padding-bottom: clamp(30px, 5vh, 60px) !important; }
 .pt-100 { padding-top: clamp(30px, 5vh, 60px) !important; }
+
+/* ==========================================================================
+   LOGO & BRANDING (TIGHT ALIGNMENT)
+   ========================================================================== */
+.logo, .logo-mobile-wrapper, .footer-logo-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important; /* Standard gap for desktop */
+    text-decoration: none !important;
+}
+
+.logo-mobile-wrapper {
+    gap: 2px !important; /* Tighter gap for mobile as requested */
+}
+
+.logo img, .logo-mobile-wrapper img, .footer-logo-wrapper img {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.logo span, .logo-mobile-wrapper span, .footer-logo-wrapper span {
+    margin: 0 !important;
+    padding: 0 !important;
+    letter-spacing: -1px !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+}
