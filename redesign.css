@@ -4,16 +4,27 @@
 */
 
 :root {
-    --redesign-blue: #1A56DB;
-    --redesign-teal: #0D9488;
+    --redesign-blue: #1D4E9E; /* Core SaaS Navy */
+    --redesign-teal: #37B39C; /* Core SaaS Teal */
     --redesign-offwhite: #F8FAFC;
     --redesign-bg-alt: #F1F5F9;
     --redesign-glass-bg: rgba(255, 255, 255, 0.7);
     --redesign-glass-border: rgba(255, 255, 255, 0.4);
     --redesign-glass-blur: blur(12px);
-    --redesign-radius-lg: 24px;
-    --redesign-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
-    --brand-blue: #1A56DB; /* Ensure compatibility */
+    --redesign-radius-lg: 12px; /* Professional sharp SaaS radius */
+    --redesign-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* Softer diffuse shadow */
+    --brand-blue: #1D4E9E;
+}
+
+/* Global Section Mobile Overrides */
+@media (max-width: 768px) {
+    section[style*="padding: 120px 0"], 
+    section[style*="padding: 100px 0"] {
+        padding: 60px 0 !important;
+    }
+    .cortex-section {
+        padding: 80px 20px !important;
+    }
 }
 
 /* Layout Utilities */
@@ -114,7 +125,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 80px;
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .pain-sticky-left {
@@ -163,8 +174,10 @@
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
+    height: 100%; /* Force equal heights in grids */
 }
 
 .bento-card:hover {
@@ -212,7 +225,7 @@
 /* TRUST SECTION & CAROUSEL */
 .trust-section {
     background: var(--redesign-offwhite);
-    padding: 120px 0;
+    padding: 80px 0;
     overflow: hidden;
 }
 
@@ -239,6 +252,8 @@
     box-shadow: var(--redesign-shadow);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: auto; /* Fixes equal height bug inside carousels */
     gap: 20px;
 }
 
@@ -275,7 +290,7 @@
 
 /* LOGO MARQUEE */
 .marquee-container {
-    padding: 60px 0;
+    padding: 40px 0;
     background: #fff;
     overflow: hidden;
 }
@@ -336,7 +351,7 @@
 
 /* S-SHAPE TIMELINE */
 .s-timeline-container {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .s-path-wrap {
@@ -397,7 +412,7 @@
 
 /* AUDIENCE TABS */
 .audience-section {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .tabs-nav {
@@ -455,7 +470,7 @@
 /* IMPACT + CTA FOOTER PRELUDE */
 .impact-cta-prelude {
     background: linear-gradient(135deg, #1A56DB 0%, #0D9488 100%);
-    padding: 120px 0;
+    padding: 80px 0;
     color: #fff !important;
     text-align: center;
     position: relative;
@@ -508,7 +523,7 @@
     .hero-container { grid-template-columns: 1fr; gap: 40px; }
     .hero- visual-3d { margin-top: 40px; }
     .hero-subtitle { margin-inline: auto; }
-    .pain-points-split { padding: 60px 0; gap: 40px; }
+    .pain-points-split { padding: 40px 0; gap: 40px; }
 }
 
 @media (max-width: 1024px) {
@@ -528,7 +543,7 @@
     }
     
     .impact-grid { grid-template-columns: 1fr; gap: 40px; }
-    .s-timeline-container { padding: 60px 0; }
+    .s-timeline-container { padding: 40px 0; }
     .s-svg-path { display: none; }
     .step-nodes { gap: 60px; }
     .step-node, .step-node:nth-child(even) { flex-direction: column; text-align: center; gap: 20px; }
@@ -537,16 +552,19 @@
 
 @media (max-width: 768px) {
     .pain-sticky-left { position: static; min-width: 100%; text-align: center; }
-    .pain-scroll-right { min-width: 100%; }
+    .pain-scroll-right { min-width: 100%; gap: 20px; }
     .overlapping-card { padding: 24px; }
     .testimonial-card { min-width: 85vw; padding: 30px 24px; }
     .hero-title br { display: none; }
-    .bento-grid-redesign { grid-template-columns: 1fr; }
-    .bento-hero, .bento-medium { grid-column: span 1; }
+    .bento-grid-redesign { grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+    .bento-hero, .bento-medium, .bento-small { grid-column: span 1; }
     .logo-cloud { padding: 30px 0; }
     .logos { gap: 30px; }
     .marquee-inner span { font-size: 1.1rem; }
-    .impact-cta-prelude { padding: 60px 0; }
+    .impact-cta-prelude { padding: 40px 0 !important; }
+    .audience-section { padding: 40px 0 !important; }
+    .trust-section { padding: 40px 0 !important; }
+    .s-timeline-container { padding: 40px 0 !important; }
 }
 
 @media (max-width: 480px) {
@@ -602,3 +620,5 @@
         padding-right: 16px !important;
     }
 }
+
+@media (max-width: 768px) { section, .container, .hero-redesign, .faq-section, .trust-section, .audience-section, .impact-cta-prelude, .cortex-section, .pain-points-split { padding-top: 40px !important; padding-bottom: 40px !important; } .bento-grid-redesign, .cortex-grid { gap: 16px !important; padding: 0 !important; } .section-title { font-size: 1.8rem !important; line-height: 1.2 !important; margin-bottom: 12px !important; } .section-subtitle { font-size: 1rem !important; margin-bottom: 24px !important; } .badge { font-size: 0.8rem !important; padding: 6px 12px !important; margin-bottom: 16px !important; } h3 { font-size: 1.3rem !important; } }
