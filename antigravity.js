@@ -1,45 +1,37 @@
 /**
- * ═══════════════════════════════════════════════════════════════
- * ANTIGRAVITY ENGINE v1.2
- * Smooth, weightless UI micro-interactions for Medical365
- * ═══════════════════════════════════════════════════════════════
+ * MEDICAL365 ANTIGRAVITY ENGINE v1.0
+ * Smooth, weightless floating effects for premium UI elements.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Target main UI elements for the interactive parallax-tilt effect
-    const floatElements = document.querySelectorAll('.overlapping-card, .btn-primary, .stat-card, .step-card, .badge, .pain-visual img, .hero-visual-3d img');
+    // Select prime candidates for the antigravity effect
+    const floatTargets = [
+        '.feature-card',
+        '.value-card',
+        '.solution-card',
+        '.stat-item',
+        '.hero-card',
+        '.info-block',
+        '.contact-card',
+        '.pricing-card',
+        '.badge'
+    ];
 
-    floatElements.forEach(el => {
-        // Ensure transition is smooth
-        el.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease';
-
-        el.addEventListener('mousemove', (e) => {
-            const rect = el.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+    floatTargets.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach((el, index) => {
+            // Apply the activation class
+            el.classList.add('antigravity-float');
             
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
+            // Apply a staggered delay so they don't all move in perfect sync (looks more natural)
+            const delay = (index % 5) * 0.4;
+            el.style.animationDelay = `${delay}s`;
             
-            // Subtle rotation based on mouse position (max 8 degrees)
-            const rotateX = ((y - centerY) / centerY) * -8;
-            const rotateY = ((x - centerX) / centerX) * 8;
-
-            // Apply interactive float + tilt
-            el.style.transform = `translateY(-15px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
-            el.style.zIndex = '100';
-            
-            // Stop the CSS animation while interacting
-            el.style.animationPlayState = 'paused';
-        });
-
-        el.addEventListener('mouseleave', () => {
-            // Restore original state and resume bobbing
-            el.style.transform = '';
-            el.style.zIndex = '';
-            el.style.animationPlayState = 'running';
+            // Optional: Randomize the duration slightly for organic feel
+            const duration = 4 + Math.random() * 2;
+            el.style.animationDuration = `${duration}s`;
         });
     });
 
-    console.log('Antigravity Engine engaged: Floating elements synchronized.');
+    console.log('Antigravity Engine Initialized: Weightless mode active.');
 });
