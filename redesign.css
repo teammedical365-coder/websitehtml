@@ -851,39 +851,6 @@
 
 @media (max-width: 768px) { section, .container, .hero-redesign, .faq-section, .trust-section, .audience-section, .impact-cta-prelude, .cortex-section, .pain-points-split { padding-top: 40px !important; padding-bottom: 40px !important; } .bento-grid-redesign, .cortex-grid { gap: 16px !important; padding: 0 !important; } .section-title { font-size: 1.8rem !important; line-height: 1.2 !important; margin-bottom: 12px !important; } .section-subtitle { font-size: 1rem !important; margin-bottom: 24px !important; } .badge { font-size: 0.8rem !important; padding: 6px 12px !important; margin-bottom: 16px !important; } h3 { font-size: 1.3rem !important; } }
 
-/* 
-   ═══════════════════════════════════════════════════════════════
-   ANTIGRAVITY EFFECT
-   Smooth, weightless bobbing for premium SaaS aesthetic
-   ═══════════════════════════════════════════════════════════════ 
-*/
-
-@keyframes antigravity-bob {
-    0%, 100% { transform: translateY(0) rotate(0); }
-    33% { transform: translateY(-15px) rotate(1deg); }
-    66% { transform: translateY(-5px) rotate(-1deg); }
-}
-
-.antigravity-float {
-    animation: antigravity-bob 7s ease-in-out infinite;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-    will-change: transform;
-}
-
-.antigravity-float:hover {
-    transform: translateY(-18px) scale(1.02) !important;
-    animation-play-state: paused;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12) !important;
-}
-
-/* Staggered floating for lists/grids */
-.overlapping-card:nth-child(even),
-.step-card:nth-child(even),
-.stat-card:nth-child(even) {
-    animation-delay: 1.5s;
-}
-
-/* Base application to main UI elements as requested */
 .btn-primary, 
 .btn-secondary,
 .btn-lg,
@@ -894,7 +861,6 @@
 .step-card,
 .stat-card,
 .pain-visual img {
-    animation: antigravity-bob 6s ease-in-out infinite;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
 }
 

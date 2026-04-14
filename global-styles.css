@@ -5072,22 +5072,6 @@ p, li {
     .hero-card-header {
         justify-content: center;
     }
-}
-
-/* ==========================================================================
-   ANTIGRAVITY ANIMATION ENGINE
-   ========================================================================== */
-@keyframes antigravity-float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    33% { transform: translateY(-8px) rotate(0.5deg); }
-    66% { transform: translateY(-4px) rotate(-0.5deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
-}
-
-.antigravity-float {
-    animation: antigravity-float 5s ease-in-out infinite !important;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease !important;
-}
 
 .antigravity-float:hover {
     transform: translateY(-15px) scale(1.03) rotate(0deg) !important;
