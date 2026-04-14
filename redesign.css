@@ -314,8 +314,44 @@
 }
 
 .pain-sticky-left .section-subtitle {
-    margin-bottom: 40px !important; /* Audit fix: ensure space before button */
+    margin-bottom: 32px !important;
     text-align: left;
+}
+
+/* Benefit Badges to fill white space */
+.benefit-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.benefit-badge {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(29, 78, 158, 0.08);
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brand-blue);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.benefit-badge:hover {
+    transform: translateY(-3px);
+    background: rgba(29, 78, 158, 0.05);
+    border-color: rgba(29, 78, 158, 0.15);
+}
+
+.benefit-badge svg {
+    color: var(--brand-teal);
+    width: 16px;
+    height: 16px;
 }
 
 .pain-sticky-left .btn-primary {
