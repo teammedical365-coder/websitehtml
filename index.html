@@ -61,6 +61,12 @@
         .stat-card div[style*="color: #37B39C"] {
             color: #37B39C !important;
         }
+
+        /* Audit Hotfixes — Stabilising Mobile & Mega Menu */
+        .mega-menu { background-color: #ffffff !important; }
+        .header-container { overflow: hidden !important; }
+        .br-desktop { display: block; }
+        @media (max-width: 768px) { .br-desktop { display: inline; } }
     </style>
     <script src="global-scripts.js?v=4.0" defer></script>
 </head>
@@ -697,7 +703,7 @@
             <div class="hero-content">
                 <div class="badge fade-in-up">🌟 India's #1 Healthcare Operating System</div>
                 <h1 class="hero-title fade-in-up" style="animation-delay: 0.1s;">
-                    Empowering India's Hospitals with <br>
+                    Empowering India's Hospitals with <span class="br-desktop"></span>
                     <span class="text-gradient">Next-Gen Digital Workflows</span>
                 </h1>
                 <p class="hero-subtitle fade-in-up" style="animation-delay: 0.2s;">
