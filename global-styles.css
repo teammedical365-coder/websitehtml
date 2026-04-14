@@ -4186,13 +4186,14 @@ p, li {
     background: linear-gradient(135deg, var(--brand-blue), var(--brand-blue-dark));
     border-radius: 16px;
     padding: 28px;
-    color: #fff;
+    color: #ffffff !important;
 }
 
 .office-map h4 {
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 16px;
+    color: #ffffff !important;
 }
 
 .office-item {
@@ -4210,8 +4211,9 @@ p, li {
 
 .office-item p {
     font-size: 0.9rem;
-    opacity: 0.9;
+    opacity: 1;
     line-height: 1.5;
+    color: #ffffff !important;
 }
 
 .office-item strong {
@@ -4267,7 +4269,7 @@ p, li {
     border: 1.5px solid var(--border-light);
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     cursor: pointer;
     transition: all var(--transition-fast);
     background: #fff;
