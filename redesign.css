@@ -98,25 +98,133 @@
 
 /* HERO SECTION REDESIGN */
 .hero-redesign {
-    padding-top: 140px;
-    padding-bottom: 80px;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    position: relative;
     overflow: hidden;
+    background: radial-gradient(circle at top right, rgba(55, 179, 156, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at bottom left, rgba(29, 78, 158, 0.08) 0%, transparent 40%);
 }
 
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 580px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.hero-trust-metrics {
+    display: flex;
+    gap: 32px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 32px;
+}
+
+.ht-metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.ht-num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--brand-blue);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.ht-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* 3D Visual & Floating Cards */
 .hero-visual-3d {
     position: relative;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-float-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hfc-1 { top: 10%; left: -5%; }
+.hfc-2 { bottom: 15%; right: -5%; }
+
+.hfc-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-blue);
+    color: #fff;
+}
+
+.hfc-text .hfc-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.hfc-text .hfc-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
 }
 
 .floating-mockup {
     animation: float-redesign 6s ease-in-out infinite;
     width: 100%;
-    filter: drop-shadow(0 30px 50px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.12));
+    z-index: 1;
 }
 
 @keyframes float-redesign {
     0%, 100% { transform: translateY(0) rotate(-1deg); }
-    50% { transform: translateY(-20px) rotate(1deg); }
+    50% { transform: translateY(-25px) rotate(1.5deg); }
 }
 
 /* PAIN POINTS - Sticky Split */
