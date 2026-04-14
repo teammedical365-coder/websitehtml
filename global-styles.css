@@ -336,10 +336,11 @@ p, li {
     left: 0;
     width: 100%;
     background-color: var(--bg-white);
+    /* Glassmorphism fallback for browsers with support, but maintaining opacity for contrast */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(226, 232, 240, 0.6);
-    z-index: 1000;
+    z-index: 10000 !important; /* Audit fix: ensuring header stays on top */
     transition: all var(--transition-smooth);
 }
 
@@ -357,6 +358,12 @@ p, li {
     justify-content: space-between;
     height: 88px;
     transition: height var(--transition-smooth);
+    position: relative;
+    /* Audit fix: prevent horizontal overflow on smaller screens */
+    overflow: visible; 
+}
+@media (max-width: 768px) {
+    .header-container { overflow: hidden !important; }
 }
 
 .main-header.scrolled .header-container {
@@ -376,6 +383,13 @@ p, li {
 @media (max-width: 480px) {
     .header-container {
         padding: 0 16px;
+    }
+    /* Audit fix: Shrink logo font size on extreme mobile to avoid pushing content */
+    .logo span {
+        font-size: 20px !important;
+    }
+    .logo-img {
+        height: 24px !important;
     }
 }
 
@@ -450,7 +464,7 @@ p, li {
         transform: translateX(-50%) translateY(10px) scale(0.98);
         width: 1100px;
         max-width: 95vw;
-        background-color: #ffffff;
+        background-color: #ffffff !important; /* Audit fix: force solid background */
         border-radius: 16px;
         box-shadow: var(--shadow-lg), 0 0 0 1px var(--border-light);
         opacity: 0;
@@ -458,6 +472,7 @@ p, li {
         transition: all var(--transition-smooth);
         pointer-events: none;
         overflow: hidden;
+        z-index: 11000 !important; /* Audit fix: standardise layering */
     }
 
     .has-mega-menu:hover .mega-menu {

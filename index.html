@@ -38,11 +38,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Primary Stylesheet (Minified) -->
-    <link rel="stylesheet" href="global-styles.min.css?v=4.2">
+    <!-- Primary Stylesheet (Unminified for latest updates) -->
+    <link rel="stylesheet" href="global-styles.css?v=4.3">
     <link rel="stylesheet" href="redesign.css?v=1.0">
     <style>
-        /* Critical UI Overrides to bypass caching and ensure contrast */
+        /* Essential Section-Specific Overrides */
         .roi-section p {
             color: #ffffff !important;
             opacity: 0.95 !important;
@@ -62,16 +62,6 @@
             color: #37B39C !important;
         }
 
-        /* Audit Hotfixes — Stabilising Mobile & Mega Menu */
-        .mega-menu { 
-            background-color: #ffffff !important; 
-            z-index: 11000 !important;
-        }
-        .main-header { z-index: 10000 !important; }
-        .header-container { overflow: visible !important; }
-        @media (max-width: 768px) { 
-            .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .header-container { overflow: hidden !important; } } 
-        }
         .br-desktop { display: block; }
         @media (max-width: 768px) { .br-desktop { display: inline; } }
     </style>

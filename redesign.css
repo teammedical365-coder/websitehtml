@@ -133,6 +133,18 @@
     top: 150px;
     flex: 1;
     min-width: 400px;
+    display: flex; /* Force vertical flow to prevent overlap issues */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pain-sticky-left .section-subtitle {
+    margin-bottom: 40px !important; /* Audit fix: ensure space before button */
+    text-align: left;
+}
+
+.pain-sticky-left .btn-primary {
+    margin-top: 10px; /* Slight extra clearance if needed */
 }
 
 .pain-scroll-right {
@@ -551,7 +563,12 @@
 }
 
 @media (max-width: 768px) {
-    .pain-sticky-left { position: static; min-width: 100%; text-align: center; }
+    .pain-sticky-left { 
+        position: static; 
+        min-width: 100%; 
+        text-align: center; 
+        align-items: center; /* Center flex items on mobile */
+    }
     .pain-scroll-right { min-width: 100%; gap: 20px; }
     .overlapping-card { padding: 24px; }
     .testimonial-card { min-width: 85vw; padding: 30px 24px; }
