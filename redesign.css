@@ -455,6 +455,13 @@
 .carousel-container {
     padding: 40px 0;
     width: 100%;
+    overflow-x: auto; /* Allow manual swiping */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide scrollbar for clean UI */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for clean UI in WebKit */
 }
 
 .testimonial-carousel {
@@ -479,6 +486,7 @@
     height: auto; 
     gap: 20px;
     transition: all 0.3s ease;
+    scroll-snap-align: center;
 }
 
 .quote-icon {
