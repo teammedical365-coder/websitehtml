@@ -812,6 +812,14 @@
         margin-bottom: 40px !important;
     }
     .big-stat-number { font-size: 2.5rem !important; }
+
+    .floating-info-card {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 16px !important;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+        transform: none !important;
+    }
 }
 
 @media (max-width: 480px) {
