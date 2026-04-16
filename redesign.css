@@ -508,7 +508,7 @@
 
 @keyframes scroll-testimonial {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-480px * 3)); }
+    100% { transform: translateX(-50%); }
 }
 
 /* LOGO MARQUEE */
