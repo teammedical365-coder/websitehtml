@@ -468,7 +468,7 @@
 }
 
 .testimonial-card {
-    min-width: 450px;
+    min-width: calc(33.333% - 20px); /* Show exactly 3 cards on desktop (with gap adjustment) */
     background: #fff;
     padding: 40px;
     border-radius: var(--redesign-radius-lg);
@@ -476,8 +476,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto; /* Fixes equal height bug inside carousels */
+    height: auto; 
     gap: 20px;
+    transition: all 0.3s ease;
 }
 
 .quote-icon {
@@ -782,7 +783,10 @@
     }
     .pain-scroll-right { min-width: 100%; gap: 20px; }
     .overlapping-card { padding: 24px; }
-    .testimonial-card { min-width: 85vw; padding: 30px 24px; }
+    .testimonial-card { 
+        min-width: calc(100vw - 64px); /* Show one card at a time on mobile */
+        padding: 30px 24px; 
+    }
     .hero-title br { display: none; }
     .bento-grid-redesign { grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
     .bento-hero, .bento-medium, .bento-small { grid-column: span 1; }
