@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURATION ---
-    const PHP_ENDPOINT = "send-mail.php";
+    const API_ENDPOINT = "/api/send-mail";
     const TARGET_EMAIL = "TEAMMEDICAL365@GMAIL.COM";
 
     // --- FORM SELECTORS ---
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
             form.addEventListener('submit', function(e) {
                 handleFormSubmit(e, formId);
             });
-            // Update form action for standard fallback
-            form.action = PHP_ENDPOINT;
+            // Update form action for standard fallback (though Vercel won't run PHP)
+            form.action = API_ENDPOINT;
             form.method = "POST";
         }
     });
@@ -55,15 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
             </span>
         `;
 
-        // Prepare Data
+        // Prepare Data as JSON
         const formData = new FormData(form);
+        const jsonData = Object.fromEntries(formData.entries());
 
         try {
-            // Submit to local PHP
-            const response = await fetch(PHP_ENDPOINT, {
+            // Submit to Vercel API
+            const response = await fetch(API_ENDPOINT, {
                 method: 'POST',
-                body: formData,
+                body: JSON.stringify(jsonData),
                 headers: {
+                    'Content-Type': 'application/json',
                     'X-Requested-With': 'XMLHttpRequest'
                 }
             });
@@ -78,8 +80,12 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('Medical365 Submission Error:', error);
             
-            // FALLBACK: Standard post
-            form.submit();
+            // FALLBACK: Standard post (Vercel will at least see the POST)
+            // Note: Without PHP, this fallback will just show the API output or 405
+            // But we keep it for now.
+            alert("Submission failed. Please try again or contact us directly.");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
         }
     }
 
