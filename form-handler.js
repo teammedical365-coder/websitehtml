@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         try {
             // 4. Submit to Formspree
-            const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+            const response = await fetch(`https://www.formspree.io/f/${FORMSPREE_ID}`, {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // FALLBACK: If AJAX fails, perform a standard POST submission
             // This ensures the lead is delivered even in restricted environments
-            form.action = `https://formspree.io/f/${FORMSPREE_ID}`;
+            form.action = `https://www.formspree.io/f/${FORMSPREE_ID}`;
             form.method = "POST";
             form.submit();
         }
