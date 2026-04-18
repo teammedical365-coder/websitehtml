@@ -646,29 +646,29 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="first-name">First Name *</label>
-                                    <input type="text" id="first-name" placeholder="Dr. Rahul" required>
+                                    <input type="text" id="first-name" name="first_name" placeholder="Dr. Rahul" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="last-name">Last Name *</label>
-                                    <input type="text" id="last-name" placeholder="Sharma" required>
+                                    <input type="text" id="last-name" name="last_name" placeholder="Sharma" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="email">Work Email *</label>
-                                <input type="email" id="email" placeholder="you@hospital.com" required>
+                                <input type="email" id="email" name="email" placeholder="you@hospital.com" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+                                <input type="tel" id="phone" name="phone_number" placeholder="+91 98765 43210" required>
                             </div>
                             <div class="form-group">
                                 <label for="facility-name">Facility / Organization Name *</label>
-                                <input type="text" id="facility-name" placeholder="City General Hospital" required>
+                                <input type="text" id="facility-name" name="organization_name" placeholder="City General Hospital" required>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="facility-type">Facility Type *</label>
-                                    <select id="facility-type" required>
+                                    <select id="facility-type" name="facility_type" required>
                                         <option value="" disabled selected>Select type</option>
                                         <option>Clinic / Polyclinic</option>
                                         <option>Multi-Specialty Hospital</option>
@@ -681,7 +681,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="bed-count">No. of Beds / Doctors</label>
-                                    <select id="bed-count">
+                                    <select id="bed-count" name="bed_count">
                                         <option value="" disabled selected>Select range</option>
                                         <option>1–10 Doctors</option>
                                         <option>11–50 Beds</option>
@@ -693,7 +693,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="message">What are your main challenges? (Optional)</label>
-                                <textarea id="message"
+                                <textarea id="message" name="challenges"
                                     placeholder="e.g. We struggle with appointment scheduling and patient billing..."></textarea>
                             </div>
                             <button type="submit" class="form-submit">Schedule My Free Demo →</button>
@@ -1298,6 +1298,7 @@
     </footer>
 
     <script src="global-scripts.js?v=3.0"></script>
+    <script src="form-handler.js?v=1.0"></script>
 
 
     
