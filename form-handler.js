@@ -1,14 +1,19 @@
 /**
- * Medical365 - Universal Form Handler
+ * Medical365 - Universal Form Handler v2.0
  * Centralizes all form submissions to TEAMMEDICAL365@GMAIL.COM using Formspree.
- * This script handles validation, submission animation, and success/error UI states.
+ * Redirects to thank-you.html on success.
  */
 
 document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURATION ---
-    // User needs to update this with their Formspree ID to connect to TEAMMEDICAL365@GMAIL.COM
-    const FORMSPREE_ID = "xovqpwyk"; // Placeholder - User should replace with their production ID
+    // IMPORTANT: Get your free ID at formspree.io and replace 'xovqpwyk' below
+    // to connect submissions to TEAMMEDICAL365@GMAIL.COM
+    const FORMSPREE_ID = "xovqpwyk"; 
     const TARGET_EMAIL = "TEAMMEDICAL365@GMAIL.COM";
+
+    if (window.location.protocol === 'file:') {
+        console.warn("Medical365: Forms may not submit correctly when opened directly as a file. Please use a local server or upload to hosting.");
+    }
 
     // --- FORM SELECTORS ---
     const forms = {
@@ -25,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             form.addEventListener('submit', function(e) {
                 handleFormSubmit(e, formId);
             });
-            console.log(`Form handler initialized for: ${formId}`);
+            console.log(`Medical365: Form handler active for ${formId}`);
         }
     });
 
@@ -37,10 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const form = event.target;
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
-        const wrapper = document.getElementById('form-wrapper');
-        const successMsg = document.getElementById('success-msg');
 
-        // 1. Basic Validation
+        // 1. Browser validation check
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
@@ -51,53 +54,45 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.innerHTML = `
             <span style="display:flex; align-items:center; justify-content:center; gap:10px;">
                 <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="animation: spin 1s linear infinite;">
-                    <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
-                    <path d="M4 12a8 8 0 018-8"></path>
+                    <circle cx="12" cy="12" r="10" stroke-opacity="0.25" stroke="currentColor"></circle>
+                    <path d="M4 12a8 8 0 018-8" stroke="currentColor"></path>
                 </svg>
-                Sending...
+                Processing...
             </span>
         `;
 
         // 3. Prepare Data
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
         
-        // Add metadata
-        data['_subject'] = `New Lead from Medical365: ${formId}`;
-        data['_replyto'] = data['email'] || data['Work Email'];
-        data['Form ID'] = formId;
-        data['Submission URL'] = window.location.href;
+        // Add metadata for better tracking in the inbox
+        formData.append('_subject', `New Lead: ${formId === 'demo-form' ? 'Demo Request' : 'Contact Message'}`);
+        formData.append('submission_url', window.location.href);
 
         try {
             // 4. Submit to Formspree
-            // Using FORMSPREE_ID is the professional way to mask the email and prevent spam
             const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
                 method: 'POST',
-                body: JSON.stringify(data),
+                body: formData,
                 headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+                    'Accept': 'application/json'
                 }
             });
 
             if (response.ok) {
-                // 5. SUCCESS: Transition UI
-                if (wrapper) wrapper.style.display = 'none';
-                if (successMsg) {
-                    successMsg.style.display = 'flex';
-                    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
+                // 5. SUCCESS: Redirect to Thank You page
+                window.location.href = 'thank-you.html';
             } else {
-                throw new Error('Server responded with an error');
+                throw new Error('Server error');
             }
 
         } catch (error) {
-            console.error('Submission Error:', error);
-            alert('Sorry, there was an issue sending your request. Please try again or contact us directly at ' + TARGET_EMAIL);
+            console.error('Medical365 Submission Error:', error);
             
-            // Revert Button
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
+            // FALLBACK: If AJAX fails, perform a standard POST submission
+            // This ensures the lead is delivered even in restricted environments
+            form.action = `https://formspree.io/f/${FORMSPREE_ID}`;
+            form.method = "POST";
+            form.submit();
         }
     }
 
@@ -111,22 +106,22 @@ document.addEventListener('DOMContentLoaded', function() {
         if (chips.length && topicInput) {
             chips.forEach(chip => {
                 chip.addEventListener('click', function() {
-                    // Remove selected from all
                     chips.forEach(c => c.classList.remove('selected'));
-                    // Add to clicked
                     this.classList.add('selected');
-                    // Update hidden input
                     topicInput.value = this.getAttribute('data-value');
                 });
             });
         }
     }
 
-    // Add spinner animation style
-    const styleIdx = document.createElement('style');
-    styleIdx.innerHTML = `
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .animate-spin { animation: spin 1s linear infinite; }
-    `;
-    document.head.appendChild(styleIdx);
+    // Global Spinner Style
+    if (!document.getElementById('medical365-form-styles')) {
+        const style = document.createElement('style');
+        style.id = 'medical365-form-styles';
+        style.innerHTML = `
+            @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+            .animate-spin { animation: spin 1s linear infinite; }
+        `;
+        document.head.appendChild(style);
+    }
 });
