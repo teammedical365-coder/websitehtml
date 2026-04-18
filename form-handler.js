@@ -1,19 +1,12 @@
 /**
- * Medical365 - Universal Form Handler v2.0
- * Centralizes all form submissions to TEAMMEDICAL365@GMAIL.COM using Formspree.
- * Redirects to thank-you.html on success.
+ * Medical365 - Universal Form Handler v3.0 (PHP Version)
+ * Centralizes all form submissions to TEAMMEDICAL365@GMAIL.COM using local PHP.
  */
 
 document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURATION ---
-    // IMPORTANT: Get your free ID at formspree.io and replace 'xovqpwyk' below
-    // to connect submissions to TEAMMEDICAL365@GMAIL.COM
-    const FORMSPREE_ID = "xovqpwyk"; 
+    const PHP_ENDPOINT = "send-mail.php";
     const TARGET_EMAIL = "TEAMMEDICAL365@GMAIL.COM";
-
-    if (window.location.protocol === 'file:') {
-        console.warn("Medical365: Forms may not submit correctly when opened directly as a file. Please use a local server or upload to hosting.");
-    }
 
     // --- FORM SELECTORS ---
     const forms = {
@@ -30,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
             form.addEventListener('submit', function(e) {
                 handleFormSubmit(e, formId);
             });
-            console.log(`Medical365: Form handler active for ${formId}`);
+            // Update form action for standard fallback
+            form.action = PHP_ENDPOINT;
+            form.method = "POST";
         }
     });
 
@@ -43,17 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
 
-        // 1. Browser validation check
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
         }
 
-        // 2. UI State: Submitting
+        // UI State: Submitting
         submitBtn.disabled = true;
         submitBtn.innerHTML = `
             <span style="display:flex; align-items:center; justify-content:center; gap:10px;">
-                <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="animation: spin 1s linear infinite;">
+                <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                     <circle cx="12" cy="12" r="10" stroke-opacity="0.25" stroke="currentColor"></circle>
                     <path d="M4 12a8 8 0 018-8" stroke="currentColor"></path>
                 </svg>
@@ -61,25 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
             </span>
         `;
 
-        // 3. Prepare Data
+        // Prepare Data
         const formData = new FormData(form);
-        
-        // Add metadata for better tracking in the inbox
-        formData.append('_subject', `New Lead: ${formId === 'demo-form' ? 'Demo Request' : 'Contact Message'}`);
-        formData.append('submission_url', window.location.href);
 
         try {
-            // 4. Submit to Formspree
-            const response = await fetch(`https://www.formspree.io/f/${FORMSPREE_ID}`, {
+            // Submit to local PHP
+            const response = await fetch(PHP_ENDPOINT, {
                 method: 'POST',
                 body: formData,
                 headers: {
-                    'Accept': 'application/json'
+                    'X-Requested-With': 'XMLHttpRequest'
                 }
             });
 
             if (response.ok) {
-                // 5. SUCCESS: Redirect to Thank You page
+                // SUCCESS: Redirect to Thank You page
                 window.location.href = 'thank-you.html';
             } else {
                 throw new Error('Server error');
@@ -88,10 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('Medical365 Submission Error:', error);
             
-            // FALLBACK: If AJAX fails, perform a standard POST submission
-            // This ensures the lead is delivered even in restricted environments
-            form.action = `https://www.formspree.io/f/${FORMSPREE_ID}`;
-            form.method = "POST";
+            // FALLBACK: Standard post
             form.submit();
         }
     }
