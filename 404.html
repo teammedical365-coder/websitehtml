@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,6 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="global-styles.css">
+  <link rel="stylesheet" href="redesign.css">
 
   <style>
     :root {
@@ -29,13 +31,21 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-dark);
+      background-color: #0B162C;
       color: var(--text-light);
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .error-layout {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px;
       position: relative;
-      display: block;
-      position: relative;
+      overflow: hidden;
     }
 
     /* Background Effects matching the "Cortex" section */
@@ -851,32 +861,29 @@
             </div>
         </div>
     </header>
-  <svg class="decor-cross" style="top: 15%; left: 10%; width: 60px;" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19 10.5h-5.5V5h-3v5.5H5v3h5.5V19h3v-5.5H19v-3z" />
-  </svg>
-  <svg class="decor-cross" style="bottom: 15%; right: 10%; width: 100px; animation-delay: -3s;" viewBox="0 0 24 24"
-    fill="currentColor">
-    <path d="M19 10.5h-5.5V5h-3v5.5H5v3h5.5V19h3v-5.5H19v-3z" />
-  </svg>
+  <div class="error-layout">
+    <svg class="decor-cross" style="top: 15%; left: 10%; width: 60px;" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 10.5h-5.5V5h-3v5.5H5v3h5.5V19h3v-5.5H19v-3z" />
+    </svg>
+    <svg class="decor-cross" style="bottom: 15%; right: 10%; width: 100px; animation-delay: -3s;" viewBox="0 0 24 24"
+      fill="currentColor">
+      <path d="M19 10.5h-5.5V5h-3v5.5H5v3h5.5V19h3v-5.5H19v-3z" />
+    </svg>
 
-  <main class="container">
-    <a href="/" class="logo">
-      <img src="medical365fav.jpg" alt="MEDICAL365 Icon" onerror="this.style.display='none'">
-      <span class="logo-text"><span class="text-blue">MEDICAL</span><span class="text-teal">365</span></span>
-    </a>
+    <main class="container">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-message">
+        Looks like this link flatlined. The page you are looking for might have been removed, had its name changed, or is
+        temporarily unavailable.
+      </p>
 
-    <div class="error-code">404</div>
-    <h1 class="error-title">Page Not Found</h1>
-    <p class="error-message">
-      Looks like this link flatlined. The page you are looking for might have been removed, had its name changed, or is
-      temporarily unavailable.
-    </p>
-
-    <div class="btn-group">
-      <a href="/" class="btn btn-primary">Return to Homepage</a>
-      <a href="https://medical365.in/contact" class="btn btn-outline">Contact Support</a>
-    </div>
-  </main>
+      <div class="btn-group">
+        <a href="/" class="btn btn-primary">Return to Homepage</a>
+        <a href="contact" class="btn btn-outline">Contact Support</a>
+      </div>
+    </main>
+  </div>
 <footer id="mega-footer" role="contentinfo">
 
         <!-- ── TOP CTA BAR ── -->
