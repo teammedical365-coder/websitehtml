@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
-    <link rel="canonical" href="https://medical365.in/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
+    <link rel="canonical" href="https://medical365.in/">
+
+    <!-- High-Performance Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Phase 1: Critical CSS -->
+    <style>
+        :root {
+            --brand-blue: #1A56DB; --brand-teal: #0D9488; --text-primary: #1E293B; --bg-main: #F8FAFC;
+        }
+        body { font-family: 'Inter', sans-serif; margin: 0; padding-top: 88px; background: var(--bg-main); color: var(--text-primary); }
+        .main-header { position: fixed; top: 0; width: 100%; background: #fff; z-index: 10000; border-bottom: 1px solid rgba(226, 232, 240, 0.6); }
+        .header-container { max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 88px; }
+        .hero-section { padding: 80px 24px; background: radial-gradient(circle at top right, rgba(55, 179, 156, 0.08), transparent 40%); }
+        .btn-primary { background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)); color: #fff; padding: 12px 28px; border-radius: 10px; font-weight: 600; text-decoration: none; display: inline-block; }
+    </style>
+
+    <!-- Deferred Styles -->
+    <link rel="preload" href="global-styles.css?v=4.3" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="redesign.css?v=1.0" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="global-styles.css?v=4.3">
+        <link rel="stylesheet" href="redesign.css?v=1.0">
+    </noscript>
+
     <title>Medical365 - Premium Healthcare Solutions</title>
     <meta name="description"
         content="Discover Medical365's Premium Healthcare Solutions solutions. Streamline your healthcare operations, enhance patient care, and improve efficiency with our advanced cloud-based hospital management system and EHR platform.">
@@ -75,7 +100,7 @@
     <header class="main-header" id="main-header">
         <div class="header-container">
             <a style="display: flex; align-items: center; text-decoration: none;" href="/" class="logo"
-                aria-label="Medical365 Home"><img style="height: 30px; display: block;" loading="lazy"
+                aria-label="Medical365 Home"><img style="height: 30px; width: 30px; display: block;" fetchpriority="high"
                     src="medical365fav.jpg" alt="MEDICAL365" class="logo-img"><span
                     style="font-weight: 800; font-size: 30px; margin-left: 4px; font-family: 'Plus Jakarta Sans', sans-serif, Arial; display: flex; align-items: center; letter-spacing: -0.5px; line-height: 1;"><span
                         style="color: #1D4E9E;">MEDICAL</span><span style="color: #37B39C;">365</span></span></a>
