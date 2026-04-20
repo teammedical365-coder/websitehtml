@@ -413,19 +413,35 @@
     }
     
     .cta-group {
-        justify-content: center;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    
+    .btn-v2-primary, .btn-v2-secondary {
+        width: 100%;
+        padding: 16px 24px;
     }
     
     .trust-stats {
-        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        padding-top: 24px;
     }
     
     .anti-gravity-scene {
-        height: 400px;
+        height: 350px;
+        margin-top: 40px;
     }
     
     .float-card {
-        transform: scale(0.85);
+        transform: scale(0.75) !important;
+    }
+    
+    .hero-v2 {
+        padding: 100px 0 40px !important;
     }
 }
 
@@ -510,6 +526,17 @@
     transition: transform 0.4s ease;
 }
 
+@media (max-width: 768px) {
+    .overlapping-card {
+        padding: 24px;
+    }
+    
+    .pain-points-split {
+        gap: 30px;
+        padding: 40px 0;
+    }
+}
+
 .overlapping-card:hover {
     transform: translateY(-5px) scale(1.02) !important;
 }
@@ -541,6 +568,16 @@
 .bento-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 30px 60px -12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .bento-card {
+        padding: 24px;
+    }
+    
+    .bento-card h3 {
+        font-size: 1.15rem;
+    }
 }
 
 .bento-hero {
@@ -979,9 +1016,19 @@
     }
 
     .security-text h2 {
-        font-size: 1.75rem !important;
+        font-size: 1.6rem !important;
         line-height: 1.2 !important;
         word-break: break-word;
+    }
+    
+    .hero-v2 .headline {
+        font-size: 2.25rem !important;
+        margin-bottom: 16px;
+    }
+    
+    .hero-v2 .subheadline {
+        font-size: 1rem !important;
+        margin-bottom: 30px;
     }
     
     .solution-grid {
@@ -991,7 +1038,7 @@
     /* Force logo and header to fit mobile viewport */
     .logo-img { max-width: 180px !important; }
     .header-container { 
-        padding: 0 16px !important;
+        padding: 0 20px !important;
         max-width: 100vw !important;
         overflow: hidden !important;
     }
@@ -1006,8 +1053,8 @@
     
     .container {
         max-width: 100vw !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 
     .stats-grid-redesign { 
