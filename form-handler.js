@@ -1,12 +1,12 @@
 /**
- * Medical365 - Universal Form Handler v3.0 (PHP Version)
- * Centralizes all form submissions to TEAMMEDICAL365@GMAIL.COM using local PHP.
+ * Medical365 - AJAX Form Handler for Web3Forms
+ * Migrated from legacy PHP to serverless Web3Forms API.
  */
 
 document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURATION ---
-    const API_ENDPOINT = "/api/send-mail";
-    const TARGET_EMAIL = "TEAMMEDICAL365@GMAIL.COM";
+    const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+    const THANK_YOU_PAGE = "thank-you.html";
 
     // --- FORM SELECTORS ---
     const forms = {
@@ -15,35 +15,35 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // --- INITIALIZATION ---
+    // Handle Topic Chips in Contact Form (Keep original functionality)
     initTopicChips();
 
+    // Attach AJAX handlers to both forms
     Object.keys(forms).forEach(formId => {
         const form = forms[formId];
         if (form) {
             form.addEventListener('submit', function(e) {
-                handleFormSubmit(e, formId);
+                handleFormSubmit(e);
             });
-            // Update form action for standard fallback (though Vercel won't run PHP)
-            form.action = API_ENDPOINT;
-            form.method = "POST";
         }
     });
 
     /**
-     * Main Submission Handler
+     * AJAX Submission Handler
      */
-    async function handleFormSubmit(event, formId) {
+    async function handleFormSubmit(event) {
         event.preventDefault();
         const form = event.target;
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
 
+        // Basic validation check
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
         }
 
-        // UI State: Submitting
+        // 1. UI State: Disable button and show loading state
         submitBtn.disabled = true;
         submitBtn.innerHTML = `
             <span style="display:flex; align-items:center; justify-content:center; gap:10px;">
@@ -51,46 +51,52 @@ document.addEventListener('DOMContentLoaded', function() {
                     <circle cx="12" cy="12" r="10" stroke-opacity="0.25" stroke="currentColor"></circle>
                     <path d="M4 12a8 8 0 018-8" stroke="currentColor"></path>
                 </svg>
-                Processing...
+                Sending...
             </span>
         `;
 
-        // Prepare Data as JSON
+        // 2. Prepare Data
         const formData = new FormData(form);
-        const jsonData = Object.fromEntries(formData.entries());
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
         try {
-            // Submit to Vercel API
-            const response = await fetch(API_ENDPOINT, {
-                method: 'POST',
-                body: JSON.stringify(jsonData),
+            // 3. Submit to Web3Forms
+            const response = await fetch(WEB3FORMS_ENDPOINT, {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: json,
             });
 
-            if (response.ok) {
-                // SUCCESS: Redirect to Thank You page
-                window.location.href = 'thank-you.html';
-            } else {
-                throw new Error('Server error');
-            }
+            const result = await response.json();
 
+            if (response.status === 200) {
+                // 4. Success: Redirect to thank you page
+                window.location.href = THANK_YOU_PAGE;
+            } else {
+                // Handle API error response
+                console.error("Web3Forms Error:", result);
+                alert(result.message || "Something went wrong. Please try again.");
+                resetButton();
+            }
         } catch (error) {
-            console.error('Medical365 Submission Error:', error);
-            
-            // FALLBACK: Standard post (Vercel will at least see the POST)
-            // Note: Without PHP, this fallback will just show the API output or 405
-            // But we keep it for now.
-            alert("Submission failed. Please try again or contact us directly.");
+            // 5. Network / Fetch error
+            console.error("Connection Error:", error);
+            alert("Could not connect to the form server. Please check your internet or try again later.");
+            resetButton();
+        }
+
+        function resetButton() {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnText;
         }
     }
 
     /**
-     * Handle Topic Chips in Contact Form
+     * Logic for interactive topic selection chips
      */
     function initTopicChips() {
         const chips = document.querySelectorAll('.topic-chips .chip');
@@ -107,10 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Global Spinner Style
-    if (!document.getElementById('medical365-form-styles')) {
+    /**
+     * Inject necessary CSS for the loading spinner
+     */
+    if (!document.getElementById('medical365-form-handler-styles')) {
         const style = document.createElement('style');
-        style.id = 'medical365-form-styles';
+        style.id = 'medical365-form-handler-styles';
         style.innerHTML = `
             @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
             .animate-spin { animation: spin 1s linear infinite; }
