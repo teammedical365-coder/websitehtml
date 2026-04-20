@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="global-styles.css?v=4.3">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="canonical" href="https://medical365.in/{{slug}}">
+
+  <!-- Critical CSS for Phase 1 Performance -->
+  <style>
+    :root {
+      --brand-blue: #1A56DB; --brand-blue-dark: #1E429F; --brand-teal: #0D9488;
+      --text-primary: #1E293B; --text-secondary: #475569; --bg-white: #FFFFFF;
+      --bg-main: #F8FAFC; --shadow-md: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+      --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    body { font-family: 'Inter', system-ui, sans-serif; margin: 0; padding-top: 88px; background: var(--bg-main); color: var(--text-primary); }
+    .main-header { position: fixed; top: 0; width: 100%; background: var(--bg-white); z-index: 10000; border-bottom: 1px solid rgba(226, 232, 240, 0.6); }
+    .header-container { max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 88px; }
+    .hero-section { padding: 60px 24px 80px; background: radial-gradient(circle at top right, rgba(55, 179, 156, 0.08), transparent 40%); }
+    .hero-title { font-size: clamp(2.25rem, 10vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
+    .btn-primary { background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)); color: #fff; padding: 12px 28px; border-radius: 10px; font-weight: 600; display: inline-block; text-decoration: none; }
+  </style>
+
+  <!-- Deferred Global Styles -->
+  <link rel="preload" href="global-styles.css?v=4.3" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="global-styles.css?v=4.3"></noscript>
+
   <title>{{meta_title}}</title>
   <meta name="description" content="{{meta_description}}">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Medical365">
   <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
-  <link rel="canonical" href="https://medical365.in/{{slug}}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{meta_title}}">
@@ -109,7 +132,12 @@
 
 <header class="main-header" id="main-header">
     <div class="header-container">
-        <a style="display: flex; align-items: center; gap: 5px; text-decoration: none;" href="/" class="logo" aria-label="Medical365 Home"><img style="height: 30px; display: block;" loading="lazy" src="medical365fav.jpg" alt="MEDICAL365" class="logo-img"><span style="font-weight: 800; font-size: 30px; font-family: 'Plus Jakarta Sans', sans-serif, Arial; display: flex; align-items: center; letter-spacing: -1px; line-height: 1;"><span style="color: #1D4E9E;">MEDICAL</span><span style="color: #37B39C;">365</span></span></a>
+        <a style="display: flex; align-items: center; gap: 5px; text-decoration: none;" href="/" class="logo" aria-label="Medical365 Home">
+            <img style="height: 30px; width: 30px; display: block;" fetchpriority="high" src="medical365fav.jpg" alt="MEDICAL365" class="logo-img">
+            <span style="font-weight: 800; font-size: 30px; font-family: 'Plus Jakarta Sans', sans-serif, Arial; display: flex; align-items: center; letter-spacing: -1px; line-height: 1;">
+                <span style="color: #1D4E9E;">MEDICAL</span><span style="color: #37B39C;">365</span>
+            </span>
+        </a>
 
         <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-label="Open navigation menu">
             <span class="bar top-bar"></span>
@@ -600,7 +628,7 @@
         <div class="pain-grid">
           <div class="pain-card reveal reveal-delay-1">
             <div class="pain-icon red">🔴</div>
-            <h2>Unmanageable OPD Queues</h2>
+            <h3>Unmanageable OPD Queues</h3>
             <p>Long wait times and manual token systems frustrate patients and staff alike, reducing throughput and satisfaction scores in busy {{location}} clinics.</p>
             <div class="pain-solution">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
@@ -609,7 +637,7 @@
           </div>
           <div class="pain-card reveal reveal-delay-2">
             <div class="pain-icon amber">🟡</div>
-            <h2>Offline &amp; Unstable Connectivity</h2>
+            <h3>Offline &amp; Unstable Connectivity</h3>
             <p>Internet outages shouldn't stop your hospital operations. Many facilities in {{location}} lose critical data when connectivity drops during peak hours.</p>
             <div class="pain-solution">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
@@ -618,7 +646,7 @@
           </div>
           <div class="pain-card reveal reveal-delay-3">
             <div class="pain-icon blue">🔵</div>
-            <h2>Complex GST &amp; Billing Errors</h2>
+            <h3>Complex GST &amp; Billing Errors</h3>
             <p>Manual billing and GST reconciliation lead to revenue leakage and compliance risk for hospitals and clinics across {{location}} every financial year.</p>
             <div class="pain-solution">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
@@ -643,37 +671,37 @@
         <div class="features-grid">
           <div class="feature-card reveal reveal-delay-1">
             <div class="feat-icon">🩺</div>
-            <h2>Electronic Medical Records (EMR)</h2>
+            <h3>Electronic Medical Records (EMR)</h3>
             <p>SOAP-format digital records with speech-to-text, templates, and instant retrieval. Full patient history at a glance.</p>
             <span class="feat-tag">Core Module</span>
           </div>
           <div class="feature-card reveal reveal-delay-2">
             <div class="feat-icon">💰</div>
-            <h2>Revenue Cycle Management (RCM)</h2>
+            <h3>Revenue Cycle Management (RCM)</h3>
             <p>End-to-end billing, insurance claims, GST invoicing, and revenue analytics. Reduce revenue leakage by up to 35%.</p>
             <span class="feat-tag">Finance</span>
           </div>
           <div class="feature-card reveal reveal-delay-3">
             <div class="feat-icon">📹</div>
-            <h2>Telemedicine Platform</h2>
+            <h3>Telemedicine Platform</h3>
             <p>HD video consultations, e-prescriptions, and digital follow-ups. Expand your reach beyond {{location}} effortlessly.</p>
             <span class="feat-tag">Virtual Care</span>
           </div>
           <div class="feature-card reveal reveal-delay-1">
             <div class="feat-icon">👥</div>
-            <h2>Patient Portal &amp; App</h2>
+            <h3>Patient Portal &amp; App</h3>
             <p>Self-scheduling, reports access, prescription refills, and direct messaging — all in one branded patient app.</p>
             <span class="feat-tag">Engagement</span>
           </div>
           <div class="feature-card reveal reveal-delay-2">
             <div class="feat-icon">💊</div>
-            <h2>Pharmacy Management</h2>
+            <h3>Pharmacy Management</h3>
             <p>Inventory tracking, expiry alerts, auto-reorder, and direct integration with EMR for seamless e-prescriptions.</p>
             <span class="feat-tag">Operations</span>
           </div>
           <div class="feature-card reveal reveal-delay-3">
             <div class="feat-icon">🔬</div>
-            <h2>Lab &amp; Diagnostics (LIMS)</h2>
+            <h3>Lab &amp; Diagnostics (LIMS)</h3>
             <p>Lab order management, result entry, auto-reporting, and PACS integration for radiology. NABL-template ready.</p>
             <span class="feat-tag">Diagnostics</span>
           </div>
@@ -1116,7 +1144,7 @@
 
 </footer>
 
-<script src="global-scripts.js?v=3.0"></script>
+<script src="global-scripts.js?v=3.0" defer></script>
 
 
     
