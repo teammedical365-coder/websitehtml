@@ -1,8 +1,10 @@
 RewriteEngine On
 
 # 1. Force HTTPS and Strip WWW (Hard Anchor)
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^www\.medical365\.in [NC]
+RewriteRule ^(.*)$ https://medical365.in/$1 [L,R=301]
+
+RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://medical365.in/$1 [L,R=301]
 
 # 2. Redirect /index and /index.html to the root domain
