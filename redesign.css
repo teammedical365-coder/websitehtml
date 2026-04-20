@@ -160,9 +160,9 @@
 
 .hero-v2-container {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-    gap: 80px;
+    gap: 60px;
     position: relative;
     z-index: 2;
 }
@@ -171,25 +171,28 @@
 .badge-pill {
     display: inline-flex;
     align-items: center;
-    padding: 8px 16px;
-    background: rgba(14, 165, 233, 0.05);
-    border: 1px solid rgba(14, 165, 233, 0.1);
-    backdrop-filter: blur(4px);
+    padding: 10px 20px;
+    background: rgba(14, 165, 233, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 100px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--redesign-blue);
-    margin-bottom: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.1);
 }
 
 .hero-v2 .headline {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
     font-weight: 800;
     color: var(--h-primary);
-    letter-spacing: -0.03em;
-    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    margin-bottom: 28px;
+    max-width: 700px;
 }
 
 .hero-v2 .headline .text-gradient {
@@ -215,30 +218,37 @@
 }
 
 .btn-v2-primary {
-    background: var(--redesign-blue);
+    background: linear-gradient(135deg, var(--redesign-blue), #306eb5);
     color: #fff;
-    padding: 16px 32px;
-    border-radius: 8px;
+    padding: 18px 36px;
+    border-radius: 12px;
     font-weight: 700;
     text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(29, 78, 158, 0.15);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 25px rgba(29, 78, 158, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-v2-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(29, 78, 158, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(29, 78, 158, 0.3);
+    filter: brightness(1.1);
 }
 
 .btn-v2-secondary {
-    background: transparent;
+    background: #fff;
     color: var(--h-primary);
-    padding: 16px 32px;
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.1);
+    padding: 18px 36px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, 0.15);
     font-weight: 700;
     text-decoration: none;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-v2-secondary:hover {
