@@ -6,7 +6,7 @@
     <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Medical365</title>
+    <title>Request Received - Medical365</title>
     <meta name="robots" content="noindex, follow">
     <style>
         :root {
@@ -14,17 +14,20 @@
             --secondary: #37B39C;
             --text-main: #0f172a;
             --text-muted: #475569;
-            --glass: rgba(255, 255, 255, 0.8);
-            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --accent-glow: radial-gradient(circle, rgba(55, 179, 156, 0.15) 0%, transparent 70%);
         }
 
         body {
             margin: 0;
             font-family: 'Plus Jakarta Sans', sans-serif, Arial;
-            background: #f8fafc;
+            background: #fdfefe;
             overflow-x: hidden;
+            color: var(--text-main);
         }
 
+        /* Atmospheric Background */
         .thank-you-view {
             min-height: 100vh;
             display: flex;
@@ -33,165 +36,141 @@
             padding: 40px 24px;
             position: relative;
             background: 
-                radial-gradient(circle at 0% 0%, rgba(29, 78, 158, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 100% 100%, rgba(55, 179, 156, 0.08) 0%, transparent 40%);
+                radial-gradient(circle at 10% 10%, rgba(29, 78, 158, 0.05) 0%, transparent 30%),
+                radial-gradient(circle at 90% 90%, rgba(55, 179, 156, 0.05) 0%, transparent 30%);
         }
 
-        /* Abstract shapes for background depth */
-        .bg-shape {
+        .bg-glow {
             position: absolute;
+            width: 800px;
+            height: 800px;
+            background: var(--accent-glow);
             z-index: -1;
-            filter: blur(80px);
-            border-radius: 50%;
-            opacity: 0.4;
+            filter: blur(100px);
+            animation: pulse 10s infinite alternate;
         }
-        .shape-1 { width: 400px; height: 400px; background: var(--primary); top: -100px; right: -100px; animation: float 20s infinite alternate; }
-        .shape-2 { width: 300px; height: 300px; background: var(--secondary); bottom: -50px; left: -50px; animation: float 15s infinite alternate-reverse; }
 
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(40px, 40px) scale(1.1); }
+        @keyframes pulse {
+            from { opacity: 0.5; transform: scale(1); }
+            to { opacity: 0.8; transform: scale(1.1); }
         }
 
         .thank-you-card {
-            max-width: 580px;
+            max-width: 640px;
             width: 100%;
             text-align: center;
             background: var(--glass);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 80px 48px;
-            border-radius: 48px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            padding: 80px 60px;
+            border-radius: 40px;
+            border: 1px solid var(--glass-border);
             box-shadow: 
-                0 40px 100px -20px rgba(15,23,42,0.12),
-                0 0 0 1px var(--glass-border) inset;
-            animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                0 40px 100px -20px rgba(15,23,42,0.1),
+                0 0 0 1px rgba(255,255,255,0.8) inset;
+            animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
         }
 
-        @keyframes slideUpFade {
-            from { transform: translateY(30px); opacity: 0; }
+        @keyframes slideIn {
+            from { transform: translateY(40px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
 
-        .success-icon-wrap {
-            position: relative;
-            width: 120px;
-            height: 120px;
+        /* Premium Success Mark */
+        .success-animation {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border-radius: 35px;
             margin: 0 auto 40px;
-        }
-
-        .success-icon {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            color: #fff;
-            border-radius: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 24px 48px -12px rgba(55, 179, 156, 0.4);
-            transform: rotate(-5deg);
-            animation: iconPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            color: #fff;
+            transform: rotate(-10deg);
+            box-shadow: 0 20px 40px rgba(55, 179, 156, 0.3);
+            animation: popIcon 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        .success-icon svg {
-            width: 56px;
-            height: 56px;
-            transform: rotate(5deg);
-        }
+        .success-animation svg { width: 50px; height: 50px; transform: rotate(10deg); }
 
-        @keyframes iconPop {
-            from { transform: scale(0.5) rotate(15deg); opacity: 0; }
-            to { transform: scale(1) rotate(-5deg); opacity: 1; }
-        }
-
-        .confetti-dot {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            border-radius: 4px;
-            animation: confettiPop 0.8s ease-out forwards;
-            opacity: 0;
-        }
-
-        @keyframes confettiPop {
-            0% { transform: translate(0,0) rotate(0deg); opacity: 1; }
-            100% { transform: translate(var(--tx), var(--ty)) rotate(var(--tr)); opacity: 0; }
+        @keyframes popIcon {
+            0% { transform: scale(0.5) rotate(0deg); opacity: 0; }
+            100% { transform: scale(1) rotate(-10deg); opacity: 1; }
         }
 
         .thank-you-card h1 {
-            font-size: 3.5rem;
-            color: var(--text-main);
-            margin-bottom: 16px;
+            font-size: 3rem;
             font-weight: 800;
-            letter-spacing: -2px;
-            line-height: 1;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .thank-you-card p {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
+            line-height: 1.7;
             color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 48px;
+            margin-bottom: 40px;
         }
 
+        /* Buttons Mapping the Pro UI */
         .button-group {
             display: flex;
             gap: 16px;
             justify-content: center;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
         }
 
-        .btn-premium {
-            padding: 18px 36px;
-            border-radius: 20px;
+        .btn-action {
+            padding: 16px 32px;
+            border-radius: 16px;
             font-weight: 700;
-            font-size: 1.1rem;
             text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-home {
-            background: var(--text-main);
-            color: #fff;
-            box-shadow: 0 20px 40px -10px rgba(15,23,42,0.3);
-        }
-
-        .btn-home:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 25px 50px -12px rgba(15,23,42,0.4);
-        }
-
-        .btn-wa {
-            background: #fff;
-            color: #25D366;
-            border: 1px solid #e2e8f0;
-        }
-
-        .btn-wa:hover {
-            background: #f8fafc;
-            border-color: #25D366;
-            transform: translateY(-4px);
-        }
-
-        .redirect-notice {
-            font-size: 0.95rem;
-            color: var(--text-muted);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-weight: 500;
+            gap: 12px;
+            font-size: 1rem;
         }
 
-        .countdown-circle {
-            width: 24px;
-            height: 24px;
+        .btn-primary-action {
+            background: var(--text-main);
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(15,23,42,0.2);
+        }
+
+        .btn-primary-action:hover { transform: translateY(-4px); box-shadow: 0 20px 35px rgba(15,23,42,0.3); }
+
+        .btn-secondary-action {
+            background: #fff;
+            color: #25D366;
+            border: 1.5px solid #e2e8f0;
+        }
+
+        .btn-secondary-action:hover { border-color: #25D366; transform: translateY(-4px); }
+
+        /* Auto-Redirect Bar */
+        .redirect-wrapper {
+            background: #f8fafc;
+            padding: 12px 24px;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .loader-ring {
+            width: 18px;
+            height: 18px;
             border: 2px solid #e2e8f0;
-            border-top-color: var(--primary);
+            border-top-color: var(--secondary);
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -199,84 +178,55 @@
         @keyframes spin { to { transform: rotate(360deg); } }
 
         @media (max-width: 640px) {
-            .thank-you-card { padding: 60px 24px; border-radius: 40px; }
-            .thank-you-card h1 { font-size: 2.75rem; }
+            .thank-you-card { padding: 48px 30px; }
+            .thank-you-card h1 { font-size: 2.25rem; }
             .button-group { flex-direction: column; }
-            .btn-premium { width: 100%; justify-content: center; }
+            .btn-action { justify-content: center; width: 100%; }
         }
     </style>
 </head>
 <body>
-    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
-
-    <div class="bg-shape shape-1"></div>
-    <div class="bg-shape shape-2"></div>
+    <div class="bg-glow"></div>
 
     <main class="thank-you-view">
         <div class="thank-you-card">
-            <div class="success-icon-wrap" id="icon-wrap">
-                <div class="success-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                </div>
+            <div class="success-animation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
             </div>
 
-            <h1>Success!</h1>
-            <p>Your request has been received. Our team at <strong>TEAMMEDICAL365@GMAIL.COM</strong> will be in touch shortly.</p>
-            
+            <h1>All Set!</h1>
+            <p>We've received your request and our clinical team is already on it. We'll reach out to your registered email or phone within 24 hours.</p>
+
             <div class="button-group">
-                <a href="/" class="btn-premium btn-home">
-                    <span>Back to Home</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <a href="/" class="btn-action btn-primary-action">
+                    Return Home 
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="https://wa.me/917791910007" class="btn-premium btn-wa">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    WhatsApp Support
+                <a href="https://wa.me/917791910007" class="btn-action btn-secondary-action">
+                    WhatsApp Us
                 </a>
             </div>
 
-            <div class="redirect-notice">
-                <div class="countdown-circle"></div>
-                <span>Redirecting to home in <span id="countdown">6</span> seconds...</span>
+            <div class="redirect-wrapper">
+                <div class="loader-ring"></div>
+                <span>Taking you back home in <span id="timer">6</span>s</span>
             </div>
         </div>
     </main>
 
     <script>
-        // 1. Confetti Effect
-        function createConfetti() {
-            const wrap = document.getElementById('icon-wrap');
-            const colors = ['#1D4E9E', '#37B39C', '#FFD700', '#FF6B6B'];
-            
-            for(let i=0; i<16; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'confetti-dot';
-                dot.style.background = colors[Math.floor(Math.random() * colors.length)];
-                dot.style.left = '50%';
-                dot.style.top = '50%';
-                dot.style.setProperty('--tx', `${(Math.random()-0.5) * 200}px`);
-                dot.style.setProperty('--ty', `${(Math.random()-0.5) * 200}px`);
-                dot.style.setProperty('--tr', `${Math.random() * 360}deg`);
-                wrap.appendChild(dot);
-            }
-        }
-
-        // 2. Countdown and Redirect
-        let timeLeft = 6;
-        const countdownEl = document.getElementById('countdown');
-        
-        const timer = setInterval(() => {
-            timeLeft--;
-            countdownEl.textContent = timeLeft;
-            if(timeLeft <= 0) {
-                clearInterval(timer);
+        let counter = 6;
+        const timerObj = document.getElementById('timer');
+        const interval = setInterval(() => {
+            counter--;
+            timerObj.innerText = counter;
+            if(counter <= 0) {
+                clearInterval(interval);
                 window.location.href = '/';
             }
         }, 1000);
-
-        // Run animations
-        window.onload = createConfetti;
     </script>
 </body>
 </html>

@@ -19,12 +19,149 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Us - Medical365">
     <meta name="twitter:description" content="Discover Medical365's Contact Us - Medical365 solutions. Streamline your healthcare operations, enhance patient care, and improve efficiency with our advanced cloud-based hospital management system and EHR platform.">
-    <style>
-    /* Audit Hotfixes — Stabilising Mobile & Mega Menu */
-    .mega-menu { background-color: #ffffff !important; z-index: 11000 !important; }
-    .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .header-container { overflow: hidden !important; } }
-    .br-desktop { display: block; }
-    @media (max-width: 768px) { .br-desktop { display: inline; } }
+        <style>
+        /* Premium SaaS Variables & Tokens */
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-blur: blur(16px);
+            --glass-shadow: 0 12px 40px rgba(31, 38, 135, 0.08);
+            --input-bg: rgba(248, 250, 252, 0.8);
+            --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        body {
+            background-color: #fcfdfe;
+            background-image: 
+                radial-gradient(circle at 100% 0%, rgba(29, 78, 158, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(55, 179, 156, 0.03) 0%, transparent 50%);
+        }
+
+        /* Hero Refinement */
+        .page-hero { padding: 120px 0 60px; }
+        .text-gradient { background: linear-gradient(135deg, #1D4E9E, #37B39C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .badge { display: inline-block; background: rgba(29, 78, 158, 0.1); color: #1D4E9E; padding: 8px 20px; border-radius: 100px; font-size: 0.875rem; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(29, 78, 158, 0.2); }
+
+        /* Contact Grid */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; margin-top: 40px; }
+        @media (max-width: 1024px) { .contact-grid { grid-template-columns: 1fr; } }
+
+        /* Left Info Cards */
+        .contact-card {
+            background: #fff;
+            padding: 24px;
+            border-radius: 20px;
+            border: 1px solid #f0f4f8;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s var(--transition-bounce);
+        }
+
+        .contact-card:hover { transform: translateY(-5px); border-color: #37B39C; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(55, 179, 156, 0.1);
+            color: #37B39C;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-card-text h4 { font-size: 1.1rem; margin-bottom: 4px; color: #1a202c; font-weight: 700; }
+        .contact-card-text p { font-size: 0.9rem; color: #4a5568; margin-bottom: 8px; line-height: 1.4; }
+        .contact-card-text a { font-weight: 700; color: #1D4E9E; text-decoration: none; font-size: 1rem; }
+
+        /* Office Map Fix */
+        .office-map { background: #f8fafc; padding: 24px; border-radius: 20px; margin: 30px 0; border: 1px solid #e2e8f0; }
+        .office-item { display: flex; gap: 12px; margin-top: 12px; }
+        .office-item p { font-size: 0.9rem; color: #4a5568; }
+
+        /* Form Card - Glassmorphism */
+        .contact-form-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 48px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .form-title { font-size: 2rem; font-weight: 800; color: #1a202c; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .form-subtitle { color: #4a5568; margin-bottom: 30px; }
+
+        /* Topic Chips */
+        .chip-label { font-size: 0.9rem; font-weight: 700; color: #1a202c; display: block; margin-bottom: 16px; }
+        .topic-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+        .chip {
+            padding: 10px 20px;
+            background: #fff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4a5568;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chip.selected { background: linear-gradient(135deg, #1D4E9E, #37B39C); color: #fff; border-color: transparent; transform: scale(1.05); box-shadow: 0 4px 12px rgba(29, 78, 158, 0.2); }
+        .chip:hover:not(.selected) { border-color: #1D4E9E; color: #1D4E9E; }
+
+        /* Inputs */
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; font-weight: 600; font-size: 0.875rem; margin-bottom: 8px; color: #1a202c; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: var(--input-bg);
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            transition: all 0.3s var(--transition-bounce);
+            outline: none;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            background: #fff;
+            border-color: #37B39C;
+            box-shadow: 0 0 0 4px rgba(55, 179, 156, 0.1);
+        }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #1D4E9E, #37B39C);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s var(--transition-bounce);
+            box-shadow: 0 10px 25px -5px rgba(29, 78, 158, 0.3);
+        }
+
+        .form-submit:hover { transform: translateY(-3px); box-shadow: 0 20px 35px -10px rgba(29, 78, 158, 0.4); }
+
+        /* FAQ */
+        .faq-section { padding: 100px 0; background: #fff; }
+        .faq-item { background: #f8fafc; padding: 24px; border-radius: 16px; margin-bottom: 12px; border: 1px solid transparent; transition: all 0.3s ease; }
+        .faq-item:hover { border-color: #e2e8f0; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+        .faq-item h4 { font-weight: 700; color: #1D4E9E; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+
+        .fade-in-up { animation: fadeInUp 0.8s ease backwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Mega Menu Fix */
+        .mega-menu { background-color: #ffffff !important; z-index: 11000 !important; }
+        .main-header { z-index: 10000 !important; } 
     </style>
 </head>
 <body>
@@ -439,7 +576,7 @@
 
 <!-- HERO -->
 <section class="page-hero">
-    <div class="page-hero-inner" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; text-align: left; max-width: 1400px; margin: 0 auto; padding: 120px 24px;">
+    <div class="page-hero-inner">
         <div class="hero-left">
             <div class="badge fade-in-up">💬 We're Here to Help</div>
             <h1 class="fade-in-up" style="animation-delay:0.1s;">Get in <span class="text-gradient">Touch</span></h1>
@@ -1089,4 +1226,5 @@
     
 </body>
 </html>
+
 
