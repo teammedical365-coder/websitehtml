@@ -116,7 +116,7 @@
 
         .testimonial-card { background: linear-gradient(135deg, #1D4E9E, #0a2d6b); padding: 40px; border-radius: 32px; color: #fff; margin: 40px 0; }
         
-        .fade-in-up, .fade-in-left, .fade-in-right { opacity: 0; animation-duration: 0.8s; animation-timing-function: ease; animation-fill-mode: forwards; }
+        .fade-in-up, .fade-in-left, .fade-in-right { opacity: 1 !important; animation-duration: 0.8s; animation-timing-function: ease; animation-fill-mode: both; }
         .fade-in-up { animation-name: fadeInUp; }
         .fade-in-left { animation-name: fadeInLeft; }
         .fade-in-right { animation-name: fadeInRight; }
@@ -132,7 +132,8 @@
 
 <body>
 
-    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+    <div style="background: red; color: white; padding: 20px; text-align: center; position: relative; z-index: 100000;">DIAGNOSTIC: If you see this red bar, the body is rendering.</div>
+<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
 
     <header class="main-header" id="main-header">
         <div class="header-container">

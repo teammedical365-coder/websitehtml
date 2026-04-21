@@ -158,7 +158,7 @@
         .faq-item:hover { border-color: #e2e8f0; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
         .faq-item h4 { font-weight: 700; color: #1D4E9E; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
 
-        .fade-in-up, .fade-in-left, .fade-in-right { opacity: 0; animation-duration: 0.8s; animation-timing-function: ease; animation-fill-mode: forwards; }
+        .fade-in-up, .fade-in-left, .fade-in-right { opacity: 1 !important; animation-duration: 0.8s; animation-timing-function: ease; animation-fill-mode: both; }
         .fade-in-up { animation-name: fadeInUp; }
         .fade-in-left { animation-name: fadeInLeft; }
         .fade-in-right { animation-name: fadeInRight; }
@@ -173,6 +173,7 @@
     </style>
 </head>
 <body>
+<div style="background: red; color: white; padding: 20px; text-align: center; position: relative; z-index: 100000;">DIAGNOSTIC: If you see this red bar, the body is rendering.</div>
 <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
 
 <header class="main-header" id="main-header">
