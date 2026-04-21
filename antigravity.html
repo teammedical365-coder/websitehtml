@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Physics - Medical365 Design System</title>
+    <link rel="stylesheet" href="global-styles.css?v=5.0">
+    <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
+    <style>
+        .antigravity-demo-section {
+            padding: 120px 0;
+            background: radial-gradient(circle at 10% 10%, #f1f5f9 0%, transparent 40%);
+            min-height: 100vh;
+        }
+        
+        .demo-heading {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+        
+        .ag-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .ag-icon {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .showcase-block {
+            margin-top: 100px;
+            padding: 60px;
+            background: #fff;
+            border-radius: 40px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        .example-group {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            align-items: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="antigravity-demo-section">
+        <div class="container">
+            <div class="demo-heading">
+                <h1 class="section-title">Antigravity Physics</h1>
+                <p class="section-subtitle">Experience the weightless healthcare infrastructure of Medical365. <br>Move your cursor to interact with our ecosystem.</p>
+            </div>
+
+            <div class="ag-grid">
+                <!-- Card 1 -->
+                <div class="interactive-tilt smooth-float" style="padding: 50px; background: white; border-radius: 32px;">
+                    <div>
+                        <span class="ag-icon">🧪</span>
+                        <h3>LIMS Integration</h3>
+                        <p>Effortless synchronization between diagnostics and clinical charts.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="interactive-tilt smooth-float" style="padding: 50px; background: white; border-radius: 32px;">
+                    <div>
+                        <span class="ag-icon">🧠</span>
+                        <h3>AI Diagnostics</h3>
+                        <p>Advanced predictive modeling for preemptive care delivery.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="interactive-tilt smooth-float" style="padding: 50px; background: white; border-radius: 32px;">
+                    <div>
+                        <span class="ag-icon">🛡️</span>
+                        <h3>DPDP Ready</h3>
+                        <p>Stay compliant with India's most stringent data privacy laws.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="interactive-tilt smooth-float" style="padding: 50px; background: white; border-radius: 32px;">
+                    <div>
+                        <span class="ag-icon">📱</span>
+                        <h3>Patient Portal</h3>
+                        <p>Seamless access to personal health records for all patients.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-block">
+                <h3>Utility System in Action</h3>
+                <p>Add <code>.smooth-float</code> and <code>.interactive-tilt</code> to any element.</p>
+                
+                <div class="example-group">
+                    <!-- Example 1: Button -->
+                    <a href="#" class="btn-primary smooth-float">Floating Button</a>
+
+                    <!-- Example 2: Image -->
+                    <img src="medical365fav.jpg" class="interactive-tilt smooth-float" style="width: 100px; border-radius: 20px;" alt="Logo Example">
+
+                    <!-- Example 3: Card -->
+                    <div class="interactive-tilt" style="padding: 30px; background: #f8fafc; border-radius: 24px; width: 260px; border: 1px solid #e2e8f0;">
+                        <h4>3D Tilt Only</h4>
+                        <p>This card reacts to your mouse without bobbing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="global-scripts.js"></script>
+</body>
+</html>
