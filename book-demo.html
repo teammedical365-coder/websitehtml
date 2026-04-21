@@ -116,8 +116,14 @@
 
         .testimonial-card { background: linear-gradient(135deg, #1D4E9E, #0a2d6b); padding: 40px; border-radius: 32px; color: #fff; margin: 40px 0; }
         
-        .fade-in-up { animation: fadeInUp 0.8s ease backwards; }
+        .fade-in-up, .fade-in-left, .fade-in-right { opacity: 0; animation-duration: 0.8s; animation-timing-function: ease; animation-fill-mode: forwards; }
+        .fade-in-up { animation-name: fadeInUp; }
+        .fade-in-left { animation-name: fadeInLeft; }
+        .fade-in-right { animation-name: fadeInRight; }
+
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes fadeInRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
 
         .mega-menu { background-color: #ffffff !important; z-index: 11000 !important; }
         .main-header { z-index: 10000 !important; } 
