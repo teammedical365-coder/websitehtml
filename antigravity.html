@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://medical365.in/antigravity" />
+    <link rel="stylesheet" href="global-styles.css?v=3.0">
+    <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Experience - Medical365</title>
+    <style>
+        /* Antigravity Specific Styles */
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-blur: blur(16px);
+            --glass-shadow: 0 40px 100px -20px rgba(31, 38, 135, 0.15);
+        }
+
+        .experience-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px;
+            position: relative;
+            background: radial-gradient(circle at 0% 0%, rgba(29, 78, 158, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, rgba(55, 179, 156, 0.05) 0%, transparent 50%);
+            overflow: hidden;
+        }
+
+        .antigravity-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 2000px;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 32px;
+            box-shadow: var(--glass-shadow);
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+            cursor: default;
+        }
+
+        @keyframes float-bob {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(3deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .el-1 { width: 320px; top: 10%; left: 5%; animation: float-bob 12s ease-in-out infinite; }
+        .el-2 { width: 380px; bottom: 15%; left: 10%; animation: float-bob 15s ease-in-out infinite 1s; }
+        .el-3 { width: 340px; top: 15%; right: 5%; animation: float-bob 13s ease-in-out infinite 0.5s; }
+        .el-4 { width: 300px; bottom: 10%; right: 15%; animation: float-bob 14s ease-in-out infinite 2s; }
+
+        .el-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, #1D4E9E, #37B39C);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1.5rem; margin-bottom: 20px;
+        }
+
+        .el-title { font-size: 1.25rem; font-weight: 800; color: #1a202c; margin-bottom: 12px; }
+        .el-content { font-size: 0.95rem; color: #4a5568; line-height: 1.6; }
+
+        .experience-header {
+            position: absolute;
+            top: 60px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .experience-header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #1D4E9E, #37B39C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .experience-header p {
+            font-size: 1.25rem;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .antigravity-wrapper { height: 1000px; flex-direction: column; }
+            .floating-element { position: relative; width: 100% !important; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; margin-bottom: 24px; animation: none !important; }
+            .experience-header { position: relative; top: 0; margin-bottom: 40px; }
+            .experience-section { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <a style="display: flex; align-items: center; gap: 5px; text-decoration: none;" href="/" class="logo" aria-label="Medical365 Home">
+                <img style="height: 30px; display: block;" src="medical365fav.jpg" alt="MEDICAL365" class="logo-img">
+                <span style="font-weight: 800; font-size: 30px; font-family: 'Plus Jakarta Sans', sans-serif, Arial; display: flex; align-items: center; letter-spacing: -1px; line-height: 1;">
+                    <span style="color: #1D4E9E;">MEDICAL</span><span style="color: #37B39C;">365</span>
+                </span>
+            </a>
+            <div class="header-cta">
+                <a href="book-demo" class="btn-primary" style="background: linear-gradient(135deg, #1D4E9E, #37B39C); color: #fff; padding: 10px 24px; border-radius: 10px; text-decoration: none; font-weight: 600;">Book Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="experience-section">
+        <div class="experience-header">
+            <h1>Antigravity Physics</h1>
+            <p>Experience the weightless healthcare infrastructure of Medical365. Move your cursor to interact with our ecosystem.</p>
+        </div>
+
+        <div class="antigravity-wrapper" id="scene">
+            <div class="floating-element el-1" data-depth="0.05">
+                <div class="el-icon">🧪</div>
+                <div class="el-title">LIMS Integration</div>
+                <div class="el-content">Fully automated laboratory reports delivered instantly to patients and clinicians.</div>
+            </div>
+
+            <div class="floating-element el-2" data-depth="0.08">
+                <div class="el-icon">🔒</div>
+                <div class="el-title">DPDP Ready</div>
+                <div class="el-content">Your data is secured by enterprise-grade encryption and regional compliance.</div>
+            </div>
+
+            <div class="floating-element el-3" data-depth="0.04">
+                <div class="el-icon">🤖</div>
+                <div class="el-title">AI Diagnostics</div>
+                <div class="el-content">Augmenting doctor decisions with high-fidelity predictive clinical models.</div>
+            </div>
+
+            <div class="floating-element el-4" data-depth="0.06">
+                <div class="el-icon">📱</div>
+                <div class="el-title">Patient Portal</div>
+                <div class="el-content">Everything from appointments to medication history in a pocket-sized experience.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background: #f8fafc; padding: 60px 24px; text-align: center; border-top: 1px solid #e2e8f0;">
+        <p style="color: #64748b; font-size: 0.9rem;">© 2026 Medical365. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const scene = document.getElementById('scene');
+        const elements = document.querySelectorAll('.floating-element');
+
+        window.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) - 0.5;
+            const y = (e.clientY / window.innerHeight) - 0.5;
+
+            elements.forEach(el => {
+                const depth = el.getAttribute('data-depth');
+                const moveX = x * (window.innerWidth * depth);
+                const moveY = y * (window.innerHeight * depth);
+                
+                el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+
+            // Subtle container rotation
+            scene.style.transform = `perspective(2000px) rotateX(${y * -10}deg) rotateY(${x * 10}deg)`;
+        });
+    </script>
+</body>
+</html>
