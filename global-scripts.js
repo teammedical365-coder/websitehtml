@@ -466,34 +466,5 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             });
-        });
     }
-
-
-            /* --- ANTIGRAVITY ENGINE v1.0 --- */
-    const initSaaSTilt = () => {
-        const tiltElements = document.querySelectorAll('.interactive-tilt');
-        tiltElements.forEach(el => {
-            el.addEventListener('mousemove', (e) => {
-                const rect = el.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const sensitivity = 15; 
-                const rotateX = ((y - centerY) / centerY) * -sensitivity;
-                const rotateY = ((x - centerX) / centerX) * sensitivity;
-
-                el.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
-                el.style.boxShadow = (rotateY * -1) + 'px ' + (rotateX * 1 + 25) + 'px 50px -15px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
-            });
-            el.addEventListener('mouseleave', () => {
-                el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-                el.style.boxShadow = '';
-            });
-        });
-    };
-    initSaaSTilt();
-
-1
-
+});
