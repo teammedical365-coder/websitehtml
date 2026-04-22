@@ -1185,6 +1185,108 @@
                 font-size: 2.5rem;
             }
         }
+
+        /* Privacy and Protection Section */
+        .privacy-redesign-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .privacy-card-redesign {
+            background: #f0f7ff;
+            border-radius: 50px;
+            padding: 60px 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            border: 1px solid rgba(29, 78, 158, 0.05);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .privacy-card-redesign::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(29, 78, 158, 0.03), transparent);
+            pointer-events: none;
+        }
+
+        .privacy-card-redesign .left-part { 
+            flex: 1.2; 
+        }
+
+        .privacy-card-redesign .right-part { 
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .privacy-card-redesign h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 800;
+            color: #1e3a8a;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            font-family: inherit;
+        }
+
+        .privacy-pill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .privacy-pill {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .privacy-pill:hover {
+            transform: translateX(12px) scale(1.02);
+            background: #1d4ed8;
+        }
+
+        .privacy-lock-container {
+            margin-bottom: 30px;
+        }
+
+        .privacy-lock-svg {
+            width: 80px;
+            height: 80px;
+            fill: #1e3a8a;
+        }
+
+        @media (max-width: 992px) {
+            .privacy-card-redesign {
+                flex-direction: column;
+                padding: 40px;
+                text-align: center;
+            }
+            .privacy-pill-list {
+                align-items: center;
+            }
+            .privacy-pill {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
     </style>
 
     <section class="cortex-section">
@@ -1589,6 +1691,68 @@
             <div class="security-visual fade-in-left" style="animation-delay: 0.3s;">
                 <img src="img/redesign/secure_cloud_isometric.png" alt="Data Security"
                     class="security-visual" loading="lazy" style="width: 100%; border-radius: 20px; box-shadow: 0 40px 80px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2);">
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy-redesign-section">
+        <div class="container">
+            <div class="privacy-card-redesign fade-in-up">
+                <div class="left-part">
+                    <h2>Manage your practice securely with built in layers of privacy and protection</h2>
+                    <a href="https://medical365.in/book-demo" class="btn-primary" style="padding: 16px 36px; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px;">
+                        Book A Demo 
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <div class="right-part">
+                    <div class="privacy-lock-container">
+                        <svg class="privacy-lock-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V7a3 3 0 0 1 3-3z"/>
+                        </svg>
+                    </div>
+                    <div class="privacy-pill-list">
+                        <div class="privacy-pill">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Patient data that ONLY you own
+                        </div>
+                        <div class="privacy-pill">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            Signed NDA barring data sharing
+                        </div>
+                        <div class="privacy-pill">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                            FHIR compliant data storage
+                        </div>
+                        <div class="privacy-pill">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Control over messages to patients
+                        </div>
+                        <div class="privacy-pill">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
+                            NHA Approved & ABDM Compliant
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
