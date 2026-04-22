@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="Book a Free Demo - Medical365">
     <meta name="twitter:description"
         content="Discover Medical365's Book a Free Demo - Medical365 solutions. Streamline your healthcare operations, enhance patient care, and improve efficiency with our advanced cloud-based hospital management system and EHR platform.">
-        <style>
+    <style>
         /* Premium SaaS Variables & Tokens */
         :root {
             --glass-bg: rgba(255, 255, 255, 0.7);
@@ -37,23 +37,58 @@
 
         body {
             background-color: #fcfdfe;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 0% 0%, rgba(29, 78, 158, 0.03) 0%, transparent 50%),
                 radial-gradient(circle at 100% 100%, rgba(55, 179, 156, 0.03) 0%, transparent 50%);
         }
 
         /* Hero Refinement */
-        .page-hero { padding: 140px 0 80px; text-align: center; }
-        .text-gradient { background: linear-gradient(135deg, #1D4E9E, #37B39C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .badge { display: inline-block; background: rgba(55, 179, 156, 0.1); color: #37B39C; padding: 8px 20px; border-radius: 100px; font-size: 0.875rem; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(55, 179, 156, 0.2); }
+        .page-hero {
+            padding: 140px 0 80px;
+            text-align: center;
+        }
 
-        .demo-section { padding-bottom: 120px; }
-        .demo-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+        .text-gradient {
+            background: linear-gradient(135deg, #1D4E9E, #37B39C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(55, 179, 156, 0.1);
+            color: #37B39C;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid rgba(55, 179, 156, 0.2);
+        }
+
+        .demo-section {
+            padding-bottom: 120px;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
 
         @media (max-width: 1024px) {
-            .demo-grid { grid-template-columns: 1fr; }
-            .demo-info { order: 2; }
-            .demo-form-card { order: 1; }
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .demo-info {
+                order: 2;
+            }
+
+            .demo-form-card {
+                order: 1;
+            }
         }
 
         /* Form Card - Glassmorphism */
@@ -67,12 +102,33 @@
             box-shadow: var(--glass-shadow);
         }
 
-        .form-title { font-size: 2rem; font-weight: 800; color: #1a202c; margin-bottom: 12px; }
-        .form-subtitle { color: #4a5568; margin-bottom: 40px; }
+        .form-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 12px;
+        }
 
-        .form-group { margin-bottom: 24px; }
-        .form-group label { display: block; font-weight: 600; font-size: 0.875rem; margin-bottom: 8px; color: #1a202c; }
-        .form-group input, .form-group select, .form-group textarea {
+        .form-subtitle {
+            color: #4a5568;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+            color: #1a202c;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             background: var(--input-bg);
             border: 1.5px solid #e2e8f0;
@@ -83,14 +139,25 @@
             outline: none;
         }
 
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
             background: #fff;
             border-color: #37B39C;
             box-shadow: 0 0 0 4px rgba(55, 179, 156, 0.1);
         }
 
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
 
         .form-submit {
             width: 100%;
@@ -106,27 +173,118 @@
             box-shadow: 0 10px 25px -5px rgba(29, 78, 158, 0.3);
         }
 
-        .form-submit:hover { transform: translateY(-3px); box-shadow: 0 20px 35px -10px rgba(29, 78, 158, 0.4); }
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 35px -10px rgba(29, 78, 158, 0.4);
+        }
 
-        .h-captcha { margin: 20px 0; display: flex; justify-content: center; }
+        .h-captcha {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
 
-        .step { display: flex; gap: 24px; margin-bottom: 32px; background: #fff; padding: 24px; border-radius: 20px; border: 1px solid #f0f4f8; transition: all 0.3s ease; }
-        .step:hover { transform: translateX(10px); border-color: #37B39C; }
-        .step-num { width: 44px; height: 44px; background: rgba(29, 78, 158, 0.1); color: #1D4E9E; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+        .step {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 32px;
+            background: #fff;
+            padding: 24px;
+            border-radius: 20px;
+            border: 1px solid #f0f4f8;
+            transition: all 0.3s ease;
+        }
 
-        .testimonial-card { background: linear-gradient(135deg, #1D4E9E, #0a2d6b); padding: 40px; border-radius: 32px; color: #fff; margin: 40px 0; }
-        
-        .fade-in-up, .fade-in-left, .fade-in-right { opacity: 1 !important; animation-duration: 0.8s; animation-timing-function: ease; animation-fill-mode: both; }
-        .fade-in-up { animation-name: fadeInUp; }
-        .fade-in-left { animation-name: fadeInLeft; }
-        .fade-in-right { animation-name: fadeInRight; }
+        .step:hover {
+            transform: translateX(10px);
+            border-color: #37B39C;
+        }
 
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes fadeInRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(29, 78, 158, 0.1);
+            color: #1D4E9E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+        }
 
-        .mega-menu { background-color: #ffffff !important; z-index: 11000 !important; }
-        .main-header { z-index: 10000 !important; } 
+        .testimonial-card {
+            background: linear-gradient(135deg, #1D4E9E, #0a2d6b);
+            padding: 40px;
+            border-radius: 32px;
+            color: #fff;
+            margin: 40px 0;
+        }
+
+        .fade-in-up,
+        .fade-in-left,
+        .fade-in-right {
+            opacity: 1 !important;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+            animation-fill-mode: both;
+        }
+
+        .fade-in-up {
+            animation-name: fadeInUp;
+        }
+
+        .fade-in-left {
+            animation-name: fadeInLeft;
+        }
+
+        .fade-in-right {
+            animation-name: fadeInRight;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .mega-menu {
+            background-color: #ffffff !important;
+            z-index: 11000 !important;
+        }
+
+        .main-header {
+            z-index: 10000 !important;
+        }
     </style>
 </head>
 
@@ -150,7 +308,9 @@
 
             <nav class="main-nav" id="main-nav">
                 <div class="mobile-menu-header">
-                    <div class="logo-mobile-wrapper"><img loading="lazy" src="medical365fav.jpg" alt="MEDICAL365" class="logo-img-mobile"><span><span style="color: #1D4E9E;">MEDICAL</span><span style="color: #37B39C;">365</span></span></div>
+                    <div class="logo-mobile-wrapper"><img loading="lazy" src="medical365fav.jpg" alt="MEDICAL365"
+                            class="logo-img-mobile"><span><span style="color: #1D4E9E;">MEDICAL</span><span
+                                style="color: #37B39C;">365</span></span></div>
                 </div>
 
                 <div class="nav-body">
@@ -749,7 +909,8 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="first-name">First Name *</label>
-                                    <input type="text" id="first-name" name="first_name" placeholder="Dr. Rahul" required>
+                                    <input type="text" id="first-name" name="first_name" placeholder="Dr. Rahul"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="last-name">Last Name *</label>
@@ -766,7 +927,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="facility-name">Facility / Organization Name *</label>
-                                <input type="text" id="facility-name" name="organization_name" placeholder="City General Hospital" required>
+                                <input type="text" id="facility-name" name="organization_name"
+                                    placeholder="City General Hospital" required>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
@@ -942,7 +1104,9 @@
                     <!-- Brand -->
                     <div class="mf-brand">
                         <a href="https://medical365.in/" aria-label="Medical365 Home">
-                            <div class="footer-logo-wrapper" style="margin-bottom: 20px;"><span style="font-weight: 900; font-size: 32px; font-family: 'Plus Jakarta Sans', sans-serif; color: #fff; letter-spacing: -0.5px; text-transform: uppercase;">MEDICAL365</span></div>
+                            <div class="footer-logo-wrapper" style="margin-bottom: 20px;"><span
+                                    style="font-weight: 900; font-size: 32px; font-family: 'Plus Jakarta Sans', sans-serif; color: #fff; letter-spacing: -0.5px; text-transform: uppercase;">MEDICAL365</span>
+                            </div>
                         </a>
                         <p class="mf-tagline">Empowering healthcare providers with modern, cloud-based management
                             solutions.</p>
@@ -1087,7 +1251,8 @@
                                 </svg>
                                 <div>
                                     <span class="mf-contact-label">Email</span>
-                                    <a href="mailto:TEAMMEDICAL365@GMAIL.COM" class="mf-contact-val">TEAMMEDICAL365@GMAIL.COM</a>
+                                    <a href="mailto:TEAMMEDICAL365@GMAIL.COM"
+                                        class="mf-contact-val">TEAMMEDICAL365@GMAIL.COM</a>
                                 </div>
                             </div>
                             <div class="mf-contact-item">
@@ -1386,8 +1551,7 @@
     <script src="form-handler.js?v=1.0"></script>
 
 
-    
+
 </body>
 
 </html>
-
