@@ -708,8 +708,8 @@
 .marquee-inner span {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-muted);
-    opacity: 0.4;
+    color: #334155; /* Darker Slate for contrast */
+    opacity: 0.9;
     white-space: nowrap;
 }
 
