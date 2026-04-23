@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p style="margin: 0; font-size: 14px; color: #475569; line-height: 1.6; font-family: 'Inter', sans-serif;">We use cookies to enhance your experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies in accordance with our <a href="privacy-policy" style="color: #37B39C; text-decoration: underline; font-weight: 600;">Privacy Policy</a>.</p>
                 </div>
                 <div class="cookie-actions" style="display: flex; gap: 12px;">
-                    <button id="cookie-reject" style="padding: 11px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; color: #334155; background: #F1F5F9; border: none; cursor: pointer; transition: all 0.2s;">Reject</button>
+                    <button id="cookie-reject" style="padding: 11px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; color: #64748B; background: #F1F5F9; border: none; cursor: pointer; transition: all 0.2s;">Reject</button>
                     <button id="cookie-accept" style="padding: 11px 26px; border-radius: 10px; font-size: 14px; font-weight: 600; color: #fff; background: linear-gradient(135deg, #1D5A9F 0%, #37B39C 100%); border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(55, 179, 156, 0.35); transition: all 0.2s;">Accept All</button>
                 </div>
             </div>
