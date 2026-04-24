@@ -1,25 +1,21 @@
 RewriteEngine On
 
-# 1. Force HTTPS and Strip WWW (Hard Anchor)
-RewriteCond %{HTTP_HOST} ^www\.medical365\.in [NC]
-RewriteRule ^(.*)$ https://medical365.in/$1 [L,R=301]
+# 1. Force HTTPS and Force WWW
+RewriteCond %{HTTP_HOST} ^medical365\.in [NC]
+RewriteRule ^(.*)$ https://www.medical365.in/$1 [L,R=301]
 
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://medical365.in/$1 [L,R=301]
+RewriteRule ^(.*)$ https://www.medical365.in/$1 [L,R=301]
 
 # 2. Redirect /index and /index.html to the root domain
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html|\.php)?\ HTTP/
-RewriteRule ^index(\.html|\.php)?$ https://medical365.in/ [L,R=301]
+RewriteRule ^index(\.html|\.php)?$ https://www.medical365.in/ [L,R=301]
 
 
 
 # ==============================================================================
 # END CANONICAL IDENTITY
 # ==============================================================================
-
-# 1. Redirect /index and /index.html to the root domain
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html|\.php)?\ HTTP/
-RewriteRule ^index(\.html|\.php)?$ https://medical365.in/ [L,R=301]
 
 # 2. Redirect external .html requests to the clean, extensionless URL
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html
