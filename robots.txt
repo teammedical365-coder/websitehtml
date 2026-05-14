@@ -1,0 +1,31 @@
+# ==============================================================================
+# MEDICAL365 ROBOTS.TXT — v3.0
+# Optimized for Google, Bing, and AI Crawlers
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /global-styles.css
+Allow: /global-scripts.js
+Allow: /logo/
+Allow: /images/
+
+# Block Sensitive & System Directories
+Disallow: /admin/
+Disallow: /config/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /superadmin
+Disallow: /superadmin.html
+
+# Block SEO Generated Pages & Templates
+Disallow: /templates
+Disallow: /templates.html
+Disallow: /free-webpage
+Disallow: /free-webpage.html
+Disallow: /seo_template
+Disallow: /seo_template.html
+
+# Standardized Link to Sitemap
+Sitemap: https://medical365.in/sitemap.xml

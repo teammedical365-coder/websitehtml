@@ -1,0 +1,12 @@
+clinics.html | mobile-toggle:Y | main-nav:Y | mobile-overlay:Y | main-header:Y
+about.html | mobile-toggle:Y | main-nav:Y | mobile-overlay:Y | main-header:Y
+book-demo.html | mobile-toggle:Y | main-nav:Y | mobile-overlay:Y | main-header:Y
+contact.html | mobile-toggle:Y | main-nav:Y | mobile-overlay:Y | main-header:Y
+emr.html | mobile-toggle:Y | main-nav:Y | mobile-overlay:Y | main-header:Y
+index.html | mobile-toggle:Y | main-nav:Y | mobile-overlay:Y | main-header:Y
+
+--- Summary ---
+Total HTML: 221
+Missing JS: 0
+Missing CSS: 0
+Has <style>: 0
