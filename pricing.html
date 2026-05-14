@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager & Analytics (Copied from index.html) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W5H82GQ7');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMGG2LX0RF"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-RMGG2LX0RF');</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
+    <link rel="canonical" href="https://www.medical365.in/pricing">
+
+    <title>Pricing Plans | Medical365 - Affordable HMS & EMR Software</title>
+    <meta name="description" content="Transparent pricing for Medical365's cloud-based hospital management system. Plans starting at ₹999/month. Professional and Enterprise solutions for all medical facilities.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="global-styles.css?v=4.3">
+    <link rel="stylesheet" href="redesign.css?v=1.0">
+    
+    <style>
+        .pricing-hero {
+            padding: 120px 24px 60px;
+            background: radial-gradient(circle at top right, rgba(55, 179, 156, 0.1), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(26, 86, 219, 0.05), transparent 40%);
+            text-align: center;
+        }
+        
+        .pricing-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--brand-blue);
+        }
+
+        .comparison-section {
+            padding: 100px 24px;
+            background: #fff;
+        }
+
+        .comparison-table-wrapper {
+            max-width: 1000px;
+            margin: 50px auto 0;
+            overflow-x: auto;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-light);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        th {
+            background: var(--bg-main);
+            font-weight: 700;
+            color: var(--brand-blue);
+        }
+
+        tr:hover {
+            background: rgba(55, 179, 156, 0.02);
+        }
+
+        .check-icon { color: var(--brand-teal); font-weight: bold; }
+        .cross-icon { color: #CBD5E1; }
+
+        .faq-page-section {
+            padding: 100px 24px;
+            background: var(--bg-main);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-pricing-item {
+            background: #fff;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-light);
+        }
+
+        .faq-pricing-item h4 {
+            color: var(--brand-blue);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5H82GQ7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header (Simplified version of main header) -->
+    <header class="main-header">
+        <div class="header-container">
+            <a style="display: flex; align-items: center; text-decoration: none;" href="index.html" class="logo">
+                <img src="medical365fav.jpg" alt="MEDICAL365" class="logo-img">
+                <span class="logo-text"><span>MEDICAL</span><span style="color: #37B39C;">365</span></span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="about" class="nav-item">About</a></li>
+                    <li><a href="blogs" class="nav-item">Insights</a></li>
+                    <li><a href="contact" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="https://www.medical365.in/book-demo" class="btn-primary">Book Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="badge">Simple & Transparent</div>
+            <h1>Plans Built for <span class="text-gradient">Every Scale</span></h1>
+            <p style="max-width: 600px; margin: 0 auto 40px; color: var(--text-muted);">From solo practitioners to multi-specialty hospitals, Medical365 provides the tools you need to deliver world-class care.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Grid (Reused Logic) -->
+    <section class="pricing-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="pricing-header">
+                <div class="pricing-toggle-wrap">
+                    <span>Monthly</span>
+                    <div class="toggle-switch" id="pricing-toggle" role="switch" aria-checked="false" aria-label="Monthly/Yearly Toggle"></div>
+                    <span>Yearly <small style="color: var(--brand-teal); font-weight: 700;">(Save ~20%)</small></span>
+                </div>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Starter</h3>
+                    <p class="plan-ideal">Private Clinics</p>
+                    <div class="plan-price">
+                        <span class="price-amount" data-monthly="₹999" data-yearly="₹9,999">₹999</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="check-icon">✓</span> 2 Doctors & 2 Staff</li>
+                        <li><span class="check-icon">✓</span> 1 Admin Control</li>
+                        <li><span class="check-icon">✓</span> 2 Departments</li>
+                        <li><span class="check-icon">✓</span> EMR & Billing</li>
+                    </ul>
+                    <a href="https://www.medical365.in/book-demo" class="btn-secondary">Get Started</a>
+                </div>
+
+                <!-- Professional -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3 class="plan-name">Professional</h3>
+                    <p class="plan-ideal">Polyclinics & Small Hospitals</p>
+                    <div class="plan-price">
+                        <span class="price-amount" data-monthly="₹2,999" data-yearly="₹24,999">₹2,999</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="check-icon">✓</span> Up to 5 Doctors</li>
+                        <li><span class="check-icon">✓</span> 10 Staff Members</li>
+                        <li><span class="check-icon">✓</span> 5 Departments</li>
+                        <li><span class="check-icon">✓</span> Advanced Analytics</li>
+                    </ul>
+                    <a href="https://www.medical365.in/book-demo" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Enterprise</h3>
+                    <p class="plan-ideal">Large Hospitals</p>
+                    <div class="plan-price">
+                        <span class="price-amount">Custom</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="check-icon">✓</span> Unlimited Capacity</li>
+                        <li><span class="check-icon">✓</span> Dedicated Hosting</li>
+                        <li><span class="check-icon">✓</span> API & Local SEO</li>
+                        <li><span class="check-icon">✓</span> 24/7 Priority Support</li>
+                    </ul>
+                    <a href="https://www.medical365.in/contact" class="btn-secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px;">Detailed <span class="text-gradient">Feature Comparison</span></h2>
+            <div class="comparison-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Starter</th>
+                            <th>Professional</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Doctor Profiles</td><td>2</td><td>5</td><td>Unlimited</td></tr>
+                        <tr><td>Staff Accounts</td><td>2</td><td>10</td><td>Unlimited</td></tr>
+                        <tr><td>Cloud EMR</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+                        <tr><td>ABDM Integration</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+                        <tr><td>Inventory Management</td><td><span class="cross-icon">✕</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+                        <tr><td>Pharmacy & LIMS</td><td><span class="cross-icon">✕</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+                        <tr><td>Custom API Access</td><td><span class="cross-icon">✕</span></td><td><span class="cross-icon">✕</span></td><td><span class="check-icon">✓</span></td></tr>
+                        <tr><td>Dedicated Support</td><td>Email</td><td>Priority</td><td>24/7 Account Mgr</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-page-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Pricing <span class="text-gradient">FAQs</span></h2>
+            <div class="faq-container">
+                <div class="faq-pricing-item">
+                    <h4>Can I upgrade my plan later?</h4>
+                    <p>Yes, you can upgrade your plan at any time. The difference in pricing will be calculated pro-rata for the remaining period.</p>
+                </div>
+                <div class="faq-pricing-item">
+                    <h4>Are there any setup fees?</h4>
+                    <p>We provide free online onboarding. For on-site deployment and training in specific locations, a one-time implementation fee may apply based on the facility size.</p>
+                </div>
+                <div class="faq-pricing-item">
+                    <h4>Is my data safe if I cancel?</h4>
+                    <p>Absolutely. You own your data. If you decide to leave, we provide a full data export in standard formats (CSV/Excel) as per our data portability policy.</p>
+                </div>
+                <div class="faq-pricing-item">
+                    <h4>What payment methods do you accept?</h4>
+                    <p>We accept all major credit/debit cards, Net Banking, and UPI payments through our secure payment gateway.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bottom-cta" style="background: var(--brand-blue); color: #fff; padding: 80px 24px; text-align: center;">
+        <div class="container">
+            <h2 style="margin-bottom: 20px; color: #fff;">Still Have Questions?</h2>
+            <p style="margin-bottom: 40px; opacity: 0.9;">Our healthcare technology consultants are ready to help you choose the right plan.</p>
+            <a href="tel:+917791910007" class="btn-primary" style="background: #fff; color: var(--brand-blue);">Talk to an Expert</a>
+        </div>
+    </section>
+
+    <!-- Footer Script -->
+    <script src="global-scripts.js?v=4.0"></script>
+</body>
+</html>
