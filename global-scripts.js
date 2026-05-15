@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var pricingToggle = document.getElementById('pricing-toggle');
     if (pricingToggle) {
         var priceAmounts = document.querySelectorAll('.price-amount');
-        var periods = [document.getElementById('period-starter'), document.getElementById('period-professional')];
+        var periods = document.querySelectorAll('.price-period');
 
         pricingToggle.addEventListener('click', function () {
             var isYearly = pricingToggle.classList.toggle('active');
