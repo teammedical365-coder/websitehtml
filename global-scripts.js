@@ -308,20 +308,11 @@ document.addEventListener('DOMContentLoaded', function () {
             revObs.observe(el);
         });
     } else {
-        /* fallback for browsers without IntersectionObserver */
+        /* fallback */
         document.querySelectorAll('.reveal, .fade-in, .fade-in-up, .fade-in-right, .fade-in-left').forEach(function (el) {
             el.classList.add('active', 'is-visible');
         });
     }
-
-    // Fallback: Reveal all elements after 3 seconds if IntersectionObserver fails or script is slow
-    setTimeout(function() {
-        document.querySelectorAll('.reveal, .fade-in, .fade-in-up, .fade-in-right, .fade-in-left').forEach(function (el) {
-            if (!el.classList.contains('is-visible') && !el.classList.contains('active')) {
-                el.classList.add('is-visible', 'active');
-            }
-        });
-    }, 3000);
 
     /* ── Header Scroll Transition ── */
     var header = document.getElementById('main-header');
