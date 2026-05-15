@@ -316,7 +316,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .footer-badges { display:flex; gap:8px; flex-wrap:wrap; }
     .fbadge { font-size:0.7rem; font-weight:600; color:rgba(255,255,255,0.5); border:1px solid rgba(255,255,255,0.12); padding:3px 10px; border-radius:100px; }
 
-    /* ── Reveal animation ── */
+    /* ── animation ── */
     .reveal { opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease; }
     .reveal.visible { opacity:1; transform:none; }
 
@@ -2568,7 +2568,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Category sections (default view) -->
   <div id="category-view">
 
-    <section class="cat-section reveal" id="cat-clinical-operations" aria-labelledby="cat-title-clinical-operations">
+    <section class="cat-section" id="cat-clinical-operations" aria-labelledby="cat-title-clinical-operations">
       <div class="cat-section-header">
         <div class="cat-section-icon" style="background:#DC262615;" aria-hidden="true">🩺</div>
         <h2 class="cat-section-title" id="cat-title-clinical-operations">Clinical Operations</h2>
@@ -2876,7 +2876,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section class="cat-section reveal" id="cat-finance-and-revenue" aria-labelledby="cat-title-finance-and-revenue">
+    <section class="cat-section" id="cat-finance-and-revenue" aria-labelledby="cat-title-finance-and-revenue">
       <div class="cat-section-header">
         <div class="cat-section-icon" style="background:#05966915;" aria-hidden="true">💰</div>
         <h2 class="cat-section-title" id="cat-title-finance-and-revenue">Finance & Revenue</h2>
@@ -3049,7 +3049,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section class="cat-section reveal" id="cat-government-and-public-health" aria-labelledby="cat-title-government-and-public-health">
+    <section class="cat-section" id="cat-government-and-public-health" aria-labelledby="cat-title-government-and-public-health">
       <div class="cat-section-header">
         <div class="cat-section-icon" style="background:#6D28D915;" aria-hidden="true">🏛️</div>
         <h2 class="cat-section-title" id="cat-title-government-and-public-health">Government & Public Health</h2>
@@ -3222,7 +3222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section class="cat-section reveal" id="cat-hr-and-administration" aria-labelledby="cat-title-hr-and-administration">
+    <section class="cat-section" id="cat-hr-and-administration" aria-labelledby="cat-title-hr-and-administration">
       <div class="cat-section-header">
         <div class="cat-section-icon" style="background:#EA580C15;" aria-hidden="true">👥</div>
         <h2 class="cat-section-title" id="cat-title-hr-and-administration">HR & Administration</h2>
@@ -3422,7 +3422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section class="cat-section reveal" id="cat-hospital-management" aria-labelledby="cat-title-hospital-management">
+    <section class="cat-section" id="cat-hospital-management" aria-labelledby="cat-title-hospital-management">
       <div class="cat-section-header">
         <div class="cat-section-icon" style="background:#1D5A9F15;" aria-hidden="true">🏥</div>
         <h2 class="cat-section-title" id="cat-title-hospital-management">Hospital Management</h2>
@@ -3866,7 +3866,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section class="cat-section reveal" id="cat-it-and-infrastructure" aria-labelledby="cat-title-it-and-infrastructure">
+    <section class="cat-section" id="cat-it-and-infrastructure" aria-labelledby="cat-title-it-and-infrastructure">
       <div class="cat-section-header">
         <div class="cat-section-icon" style="background:#0891B215;" aria-hidden="true">☁️</div>
         <h2 class="cat-section-title" id="cat-title-it-and-infrastructure">IT & Infrastructure</h2>
@@ -4066,7 +4066,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <section class="cat-section reveal" id="cat-patient-experience" aria-labelledby="cat-title-patient-experience">
+    <section class="cat-section" id="cat-patient-experience" aria-labelledby="cat-title-patient-experience">
       <div class="cat-section-header">
         <div class="cat-section-icon" style="background:#7C3AED15;" aria-hidden="true">👤</div>
         <h2 class="cat-section-title" id="cat-title-patient-experience">Patient Experience</h2>
@@ -4312,7 +4312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
 
-  // ── Scroll reveal ──
+  // ── Scroll ──
   if ('IntersectionObserver' in window) {
     var obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
