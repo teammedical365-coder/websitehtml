@@ -37,14 +37,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .header-container { max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 88px; }
         .hero-section { padding: 80px 24px; background: radial-gradient(circle at top right, rgba(55, 179, 156, 0.08), transparent 40%); }
         .btn-primary { background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)); color: #fff; padding: 12px 28px; border-radius: 10px; font-weight: 600; text-decoration: none; display: inline-block; }
+        /* Force Hero Visibility */
+        .hero-v2 .headline, .hero-v2 .subheadline, .hero-v2 .cta-group, .hero-v2 .badge-pill, .hero-v2 .trust-stats, .hero-v2 .hero-right {
+            opacity: 1 !important;
+            transform: none !important;
+            visibility: visible !important;
+        }
     </style>
 
     <!-- Deferred Styles -->
-    <link rel="preload" href="global-styles.css?v=4.3" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="redesign.css?v=1.0" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="global-styles.css?v=4.6" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="redesign.css?v=1.1" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="global-styles.css?v=4.3">
-        <link rel="stylesheet" href="redesign.css?v=1.0">
+        <link rel="stylesheet" href="global-styles.css?v=4.6">
+        <link rel="stylesheet" href="redesign.css?v=1.1">
     </noscript>
 
     <title>Medical365 | ABDM Compliant Hospital Management Software</title>
@@ -78,8 +84,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Primary Stylesheet (Unminified for latest updates) -->
-    <link rel="stylesheet" href="global-styles.css?v=4.3">
-    <link rel="stylesheet" href="redesign.css?v=1.0">
+    <link rel="stylesheet" href="global-styles.css?v=4.6">
+    <link rel="stylesheet" href="redesign.css?v=1.1">
     <style>
         /* Essential Section-Specific Overrides */
         .roi-section p {
@@ -851,7 +857,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="#platform" class="btn-v2-secondary">Platform Tour</a>
                 </div>
                 
-                <div class="trust-stats fade-in-up" style="animation-delay: 0.4s;">
+                <div class="trust-stats" style="animation-delay: 0.4s;">
                     <div class="stat-item">
                         <span class="stat-num">500+</span>
                         <span class="stat-label">Hospitals</span>
@@ -867,7 +873,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             
-            <div class="hero-right fade-in-up" style="animation-delay: 0.5s;">
+            <div class="hero-right" style="animation-delay: 0.5s;">
                 <div class="anti-gravity-scene">
                     <img src="img/redesign/medical365_dashboard_v2.png" alt="Medical365 Dashboard" 
                          class="dashboard-center">
