@@ -56,6 +56,9 @@ pages.forEach(page => {
     content = content.replace(/{{meta_description}}/g, desc);
     content = content.replace(/{{location}}/g, location);
     content = content.replace(/{{feature}}/g, feature);
+    if (page.unique_content) {
+        content = content.replace(/{{unique_content}}/g, page.unique_content);
+    }
 
     // Write file
     fs.writeFileSync(filePath, content);
