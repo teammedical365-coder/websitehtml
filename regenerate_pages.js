@@ -56,6 +56,7 @@ pages.forEach(page => {
     content = content.replace(/{{meta_description}}/g, desc);
     content = content.replace(/{{location}}/g, location);
     content = content.replace(/{{feature}}/g, feature);
+    content = content.replace(/{{url_slug}}/g, page.url_slug);
     if (page.unique_content) {
         content = content.replace(/{{unique_content}}/g, page.unique_content);
     }

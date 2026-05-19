@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const publicHtml = 'c:\\Users\\USER\\Downloads\\public_html';
+const publicHtml = __dirname;
 const sitemapPath = path.join(publicHtml, 'sitemap.xml');
 const seoPagesJsonPath = path.join(publicHtml, 'seo_pages.json');
 
@@ -31,7 +31,7 @@ console.log(`Original sitemap had ${urls.length} URLs.`);
 
 const filteredUrls = urls.filter(urlBlock => {
     // Extract loc
-    const locMatch = urlBlock.match(/<loc>https:\/\/medical365\.in\/(.*?)<\/loc>/);
+    const locMatch = urlBlock.match(/<loc>https:\/\/(?:www\.)?medical365\.in\/(.*?)<\/loc>/);
     if (!locMatch) return true;
     
     const slug = locMatch[1].replace(/\/$/, '');

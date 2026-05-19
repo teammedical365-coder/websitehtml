@@ -4,7 +4,7 @@ const path = require('path');
 const dirPath = __dirname;
 const htmlFiles = fs.readdirSync(dirPath).filter(f => f.endsWith('.html'));
 
-const baseUrl = "https://medical365.in";
+const baseUrl = "https://www.medical365.in";
 const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
 const getPriority = (filePath) => {
