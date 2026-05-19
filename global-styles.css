@@ -5298,3 +5298,15 @@ p, li {
     }
 }
 
+/* ── Fail-safe Fallback for JS / Animation Load Failures ── */
+:not(.js-ready) .reveal,
+:not(.js-ready) .fade-in,
+:not(.js-ready) .fade-in-up,
+:not(.js-ready) .fade-in-right,
+:not(.js-ready) .fade-in-left {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+

@@ -1,6 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    /* Confirm successful script load to prevent fallback */
+    window.__animationsInitialized = true;
+    document.documentElement.classList.add('js-ready');
+
     /* ── sticky header + body padding sync ── */
     var header = document.getElementById('main-header');
     var ticking = false;
