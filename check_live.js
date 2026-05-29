@@ -4,7 +4,7 @@ const urls = [
     "https://www.medical365.in/lims-laboratory-information-management-jaipur",
     "https://www.medical365.in/clinic-management-system-vaishali-nagar",
     "https://www.medical365.in/hospital-management-software-tonk-road",
-    "https://www.medical365.in/insurance-claim-processing-software-bhilwara"
+    "https://www.medical365.in/revenue-cycle-management-bhilwara"
 ];
 
 function checkUrl(url) {

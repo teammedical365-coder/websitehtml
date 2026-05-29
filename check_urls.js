@@ -17,21 +17,21 @@ const urls = [
     "https://www.medical365.in/accounts-payable-software-hospitals-tonk-road",
     "https://www.medical365.in/hospital-financial-reporting-dashboard-jhotwara",
     "https://www.medical365.in/medical-payment-gateway-integration-jaipur",
-    "https://www.medical365.in/insurance-claim-processing-software-bhilwara",
-    "https://www.medical365.in/hospital-hr-management-software-bikaner",
+    "https://www.medical365.in/revenue-cycle-management-bhilwara",
+    "https://www.medical365.in/hospital-hrms-bikaner",
     "https://www.medical365.in/blood-bank-software-udaipur",
-    "https://www.medical365.in/icu-management-system-hospitals-jaipur",
-    "https://www.medical365.in/ambulance-tracking-software-alwar",
+    "https://www.medical365.in/hospital-bed-management-software-jaipur",
+    "https://www.medical365.in/hospital-queue-token-management-alwar",
     "https://www.medical365.in/canteen-management-software-hospitals-sikar",
-    "https://www.medical365.in/biomedical-waste-tracking-software-bharatpur",
+    "https://www.medical365.in/medical-asset-inventory-management-bharatpur",
     "https://www.medical365.in/nursing-management-system-pali",
-    "https://www.medical365.in/patient-engagement-platform-rajasthan",
-    "https://www.medical365.in/medical-imaging-software-jodhpur",
-    "https://www.medical365.in/smart-opd-queue-management-jaipur",
-    "https://www.medical365.in/healthcare-analytics-dashboard-kota",
-    "https://www.medical365.in/digital-health-record-migration-ajmer",
-    "https://www.medical365.in/mobile-healthcare-clinic-software-bikaner",
-    "https://www.medical365.in/tpa-management-system-hospitals-udaipur"
+    "https://www.medical365.in/patient-mobile-app-developers-rajasthan",
+    "https://www.medical365.in/clinic-management-system-jodhpur",
+    "https://www.medical365.in/hospital-queue-token-management-jaipur",
+    "https://www.medical365.in/integrated-population-healthcare-management-kota",
+    "https://www.medical365.in/hospital-it-cloud-migration-ajmer",
+    "https://www.medical365.in/multi-facility-hospital-software-bikaner",
+    "https://www.medical365.in/revenue-cycle-management-udaipur"
 ];
 
 urls.forEach(url => {

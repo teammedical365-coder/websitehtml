@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+function initGlobalScripts() {
 
     /* Confirm successful script load to prevent fallback */
     window.__animationsInitialized = true;
@@ -465,6 +465,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             '</ul>';
                     }
                 }
+            });
         });
     }
 
@@ -491,4 +492,10 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGlobalScripts);
+} else {
+    initGlobalScripts();
+}
