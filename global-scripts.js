@@ -1,5 +1,6 @@
-
 function initGlobalScripts() {
+    if (window.__globalScriptsInitialized) return;
+    window.__globalScriptsInitialized = true;
 
     /* Confirm successful script load to prevent fallback */
     window.__animationsInitialized = true;
