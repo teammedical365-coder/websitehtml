@@ -155,6 +155,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
     <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
+    <style>
+    /* Audit Hotfixes — Stabilising Mobile & Mega Menu */
+    .mega-menu { background-color: #ffffff !important; }
+    .header-container { overflow: hidden !important; }
+    .br-desktop { display: block; }
+    @media (max-width: 768px) { .br-desktop { display: inline; } }
+    </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -750,12 +757,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, var(--brand-blue), var(--brand-blue-dark)); border-radius: 24px; padding: 60px; color: #fff; text-align: center; position: relative; overflow: hidden; box-shadow: var(--shadow-lg);">
                 <div style="font-size: 6rem; opacity: 0.15; position: absolute; top: 20px; left: 40px; font-family: serif; line-height: 1;">"</div>
                 <div style="color: var(--brand-teal); font-size: 1.25rem; margin-bottom: 24px;">★★★★★</div>
-                <p style="font-size: 1.5rem; line-height: 1.6; font-weight: 500; margin-bottom: 40px; font-style: italic; color: rgba(255,255,255,0.95);">"Medical365 transformed how our hospital operates. The local deployment team understood our exact needs in {{location}}, and the ABHA integration was flawless from day one."</p>
+                <p style="font-size: 1.5rem; line-height: 1.6; font-weight: 500; margin-bottom: 40px; font-style: italic; color: rgba(255,255,255,0.95);">"{{testimonial_quote}}"</p>
                 <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
-                    <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👩‍⚕️</div>
+                    <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">{{testimonial_avatar_initials}}</div>
                     <div style="text-align: left;">
-                        <strong style="display: block; font-size: 1.1rem;">Medical Director</strong>
-                        <span style="opacity: 0.7; font-size: 0.9rem;">Leading Medical Facility in {{location}}</span>
+                        <strong style="display: block; font-size: 1.1rem;">{{testimonial_name}}</strong>
+                        <span style="opacity: 0.7; font-size: 0.9rem;">{{testimonial_role}}</span>
                     </div>
                 </div>
             </div>
@@ -773,16 +780,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="faq-grid" style="max-width: 900px; margin: 0 auto;">
                 <div class="faq-item">
-                    <h4>Is your software fully compliant with Indian healthcare laws? <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></span></h4>
-                    <p>Yes, Medical365 acts as a highly secure, ABDM-compliant vault for patient data. We strictly adhere to the DPDP Act 2023 and the EHR Standards designated by the MoHFW in India.</p>
+                    <h4>{{faq1_question}} <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></span></h4>
+                    <p>{{faq1_answer}}</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Do you provide on-site deployment and training in {{location}}? <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></span></h4>
-                    <p>Absolutely. While our platform is completely cloud-based, our specialized regional deployment teams will visit your facility in {{location}} to assist with onboarding, data migration, and on-the-ground staff training.</p>
+                    <h4>{{faq2_question}} <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></span></h4>
+                    <p>{{faq2_answer}}</p>
                 </div>
                 <div class="faq-item">
-                    <h4>What if our internet connection drops mid-consultation? <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></span></h4>
-                    <p>You can continue providing uninterrupted care. Our offline-first sync engine caches data locally and pushes it to the master servers automatically the moment your internet connection is restored.</p>
+                    <h4>{{faq3_question}} <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></span></h4>
+                    <p>{{faq3_answer}}</p>
                 </div>
             </div>
         </div>
@@ -798,6 +805,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="hero-buttons justify-center">
                 <a href="book-demo.html?location={{location}}" class="btn-primary" style="padding: 18px 40px; font-size: 1.1rem;">Get Started for Free →</a>
             </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         RELATED REGIONAL CIRCLES (SEO Interlinking)
+    ══════════════════════════════════════════════════ -->
+    <section class="related-circles-section" style="padding: 60px 0; background: #fff; border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; color: var(--brand-blue);">Explore Neighboring Healthcare Solutions</h3>
+            {{related_links_menu}}
         </div>
     </section>
 
