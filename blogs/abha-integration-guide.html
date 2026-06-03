@@ -135,411 +135,623 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
 
 <header class="main-header" id="main-header">
-    <div class="header-container">
-        <a style="display: flex; align-items: center; gap: 5px; text-decoration: none;" href="//" class="logo" aria-label="Medical365 Home"><img style="height: 30px; display: block;" loading="lazy" src="/medical365fav.jpg" alt="MEDICAL365" class="logo-img"><span style="font-weight: 800; font-size: 30px; font-family: 'Plus Jakarta Sans', sans-serif, Arial; display: flex; align-items: center; letter-spacing: -1px; line-height: 1;"><span style="color: #1D4E9E;">MEDICAL</span><span style="color: #37B39C;">365</span></span></a>
+        <div class="header-container">
+            <a style="display: flex; align-items: center; text-decoration: none;" href="/" class="logo"
+                aria-label="Medical365 Home"><img fetchpriority="high"
+                    src="/medical365fav.jpg" alt="MEDICAL365" class="logo-img"><span
+                    class="logo-text"><span>MEDICAL</span><span style="color: #37B39C;">365</span></span></a>
 
-        <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-label="Open navigation menu">
-            <span class="bar top-bar"></span>
-            <span class="bar mid-bar"></span>
-            <span class="bar bot-bar"></span>
-        </button>
+            <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-label="Open navigation menu">
+                <span class="bar top-bar"></span>
+                <span class="bar mid-bar"></span>
+                <span class="bar bot-bar"></span>
+            </button>
 
-        <nav class="main-nav" id="main-nav">
-            <div class="mobile-menu-header">
-                <div class="logo-mobile-wrapper"><img loading="lazy" src="/medical365fav.jpg" alt="MEDICAL365" class="logo-img-mobile"><span><span style="color: #1D4E9E;">MEDICAL</span><span style="color: #37B39C;">365</span></span></div>
-            </div>
+            <nav class="main-nav" id="main-nav">
+                <div class="mobile-menu-header">
+                    <div class="logo-mobile-wrapper">
+                        <img loading="lazy" src="/medical365fav.jpg" alt="MEDICAL365" class="logo-img-mobile">
+                        <span class="logo-text"><span>MEDICAL</span><span style="color: #37B39C;">365</span></span>
+                    </div>
+                </div>
 
-            <div class="nav-body">
-                <ul class="nav-links">
-                <li><a href="https://www.medical365.in/" class="nav-item">Home</a></li>
-                
-                <li class="has-mega-menu">
-                    <button class="nav-item solutions-toggle" aria-expanded="false" aria-controls="mega-menu-content">
-                        Solutions 
-                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </button>
-                    
-                    <div class="mega-menu" id="mega-menu-content">
-                        <div class="mega-menu-inner">
-                            <div class="mega-sidebar" role="tablist" aria-orientation="vertical">
-                                <button class="tab-btn active" role="tab" aria-selected="true" data-target="clinics">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                    Clinics
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="hospitals">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
-                                    Hospitals
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="specialty-care">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                                    Specialty Care
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="patients">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                    Patients & Families
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="hospital-chain">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                                    Hospital Chain
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="hospital-cfo">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="7" y1="10" x2="17" y2="10"></line><line x1="7" y1="14" x2="17" y2="14"></line></svg>
-                                    Hospital CFO
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="hospital-it">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                                    Hospital IT Manager
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="marketing-managers">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
-                                    Marketing Managers
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="backoffice-hr">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                    Backoffice & HR
-                                </button>
-                                <button class="tab-btn" role="tab" aria-selected="false" data-target="government">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"></path><path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3"></path><path d="M19 21v-7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v7"></path></svg>
-                                    Government
-                                </button>
-                            </div>
+                <div class="nav-body">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-item">Home</a></li>
+                        <li><a href="pricing.html" class="nav-item">Pricing</a></li>
 
-                            <div class="mega-content">
-                                <div class="tab-pane active" id="clinics" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Clinic Solutions</h2>
-                                        <p class="tab-desc">Comprehensive tools to streamline your daily clinic operations.</p>
+                        <li class="has-mega-menu">
+                            <button class="nav-item solutions-toggle" aria-expanded="false"
+                                aria-controls="mega-menu-content">
+                                Solutions
+                                <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+
+                            <div class="mega-menu" id="mega-menu-content">
+                                <div class="mega-menu-inner">
+                                    <div class="mega-sidebar" role="tablist" aria-orientation="vertical">
+                                        <button class="tab-btn active" role="tab" aria-selected="true"
+                                            data-target="clinics">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                            </svg>
+                                            Clinics
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false"
+                                            data-target="hospitals">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                                <path d="M9 22v-4h6v4"></path>
+                                                <path d="M8 6h.01"></path>
+                                                <path d="M16 6h.01"></path>
+                                                <path d="M12 6h.01"></path>
+                                                <path d="M12 10h.01"></path>
+                                                <path d="M12 14h.01"></path>
+                                                <path d="M16 10h.01"></path>
+                                                <path d="M16 14h.01"></path>
+                                                <path d="M8 10h.01"></path>
+                                                <path d="M8 14h.01"></path>
+                                            </svg>
+                                            Hospitals
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false"
+                                            data-target="specialty-care">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                            </svg>
+                                            Specialty Care
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false" data-target="patients">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="9" cy="7" r="4"></circle>
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                            </svg>
+                                            Patients & Families
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false"
+                                            data-target="hospital-chain">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+                                                </path>
+                                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+                                                </path>
+                                            </svg>
+                                            Hospital Chain
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false"
+                                            data-target="hospital-cfo">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                                <line x1="7" y1="10" x2="17" y2="10"></line>
+                                                <line x1="7" y1="14" x2="17" y2="14"></line>
+                                            </svg>
+                                            Hospital CFO
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false"
+                                            data-target="hospital-it">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                            </svg>
+                                            Hospital IT Manager
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false"
+                                            data-target="marketing-managers">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path
+                                                    d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                                                </path>
+                                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                            </svg>
+                                            Marketing Managers
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false"
+                                            data-target="backoffice-hr">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="9" cy="7" r="4"></circle>
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                            </svg>
+                                            Backoffice & HR
+                                        </button>
+                                        <button class="tab-btn" role="tab" aria-selected="false"
+                                            data-target="government">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M3 21h18"></path>
+                                                <path
+                                                    d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3">
+                                                </path>
+                                                <path d="M19 21v-7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v7"></path>
+                                            </svg>
+                                            Government
+                                        </button>
                                     </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="/clinics"><span>Clinics Overview</span></a></li>
-                                        <li><a href="outpatient"><span>Outpatient</span></a></li>
-                                        <li><a href="telemedicine"><span>Telemedicine</span></a></li>
-                                        <li><a href="clinical-assessment-forms"><span>Clinical Assessment Forms</span></a></li>
-                                        <li><a href="/emr"><span>EMR</span></a></li>
-                                        <li><a href="queue-token-management"><span>Queue & Token Management</span></a></li>
-                                        <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a></li>
-                                        <li><a href="communication-management"><span>Communication Management</span></a></li>
-                                        <li><a href="speech-to-text"><span>Speech to Text</span></a></li>
-                                        <li><a href="medical-camp"><span>Medical Camp</span></a></li>
-                                        <li><a href="diabetes-care-management"><span>Diabetes Care Management</span></a></li>
-                                        <li><a href="doctor-mobile-app"><span>Doctor Mobile App</span></a></li>
-                                        <li><a href="revenue-cycle-management"><span>Revenue Cycle Management</span></a></li>
-                                        <li><a href="vaccine-management"><span>Vaccine Management</span></a></li>
-                                    </ul>
-                                </div>
 
-                                <div class="tab-pane" id="hospitals" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Hospital Management</h2>
-                                        <p class="tab-desc">Enterprise-grade solutions for mid to large scale hospitals.</p>
-                                    </div>
-                                    <ul class="sub-menu-list three-columns">
-                                        <li><a href="hospitals"><span>Hospitals Overview</span></a></li>
-                                        <li><a href="outpatient"><span>Outpatient</span></a></li>
-                                        <li><a href="telemedicine"><span>Telemedicine</span></a></li>
-                                        <li><a href="queue-token-management"><span>Queue & Token Management</span></a></li>
-                                        <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a></li>
-                                        <li><a href="/emr"><span>EMR</span></a></li>
-                                        <li><a href="clinical-assessment-forms"><span>Clinical Assessment Forms</span></a></li>
-                                        <li><a href="inpatient"><span>Inpatient</span></a></li>
-                                        <li><a href="operation-theater-management"><span>Operation Theater Management</span></a></li>
-                                        <li><a href="nursing-management-system"><span>Nursing Management System</span></a></li>
-                                        <li><a href="vaccine-management"><span>Vaccine Management</span></a></li>
-                                        <li><a href="virtual-opd"><span>Virtual OPD</span></a></li>
-                                        <li><a href="revenue-cycle-management"><span>Revenue Cycle Management</span></a></li>
-                                        <li><a href="/lims"><span>LIMS</span></a></li>
-                                        <li><a href="ris-pacs"><span>RIS & PACS</span></a></li>
-                                        <li><a href="pharmacy"><span>Pharmacy</span></a></li>
-                                        <li><a href="/blood-bank"><span>Blood Bank</span></a></li>
-                                        <li><a href="communication-management"><span>Communication Management</span></a></li>
-                                        <li><a href="speech-to-text"><span>Speech to Text</span></a></li>
-                                        <li><a href="medical-camp"><span>Medical Camp</span></a></li>
-                                        <li><a href="doctor-mobile-app"><span>Doctor Mobile App</span></a></li>
-                                        <li><a href="/crm"><span>CRM</span></a></li>
-                                        <li><a href="hospital-bed-management"><span>Bed Management</span></a></li>
-                                        <li><a href="canteen-management"><span>Canteen Management</span></a></li>
-                                    </ul>
-                                </div>
+                                    <div class="mega-content">
+                                        <div class="tab-pane active" id="clinics" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Clinic Solutions</h2>
+                                                <p class="tab-desc">Comprehensive tools to streamline your daily
+                                                    clinic operations.</p>
+                                            </div>
+                                            <ul class="sub-menu-list two-columns">
+                                                <li><a href="clinics"><span>Clinics Overview</span></a></li>
+                                                <li><a href="outpatient"><span>Outpatient</span></a></li>
+                                                <li><a href="telemedicine"><span>Telemedicine</span></a></li>
+                                                <li><a href="clinical-assessment-forms"><span>Clinical Assessment
+                                                            Forms</span></a></li>
+                                                <li><a href="emr"><span>EMR</span></a></li>
+                                                <li><a href="queue-token-management"><span>Queue & Token
+                                                            Management</span></a></li>
+                                                <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a>
+                                                </li>
+                                                <li><a href="communication-management"><span>Communication
+                                                            Management</span></a></li>
+                                                <li><a href="speech-to-text"><span>Speech to Text</span></a></li>
+                                                <li><a href="medical-camp"><span>Medical Camp</span></a></li>
+                                                <li><a href="diabetes-care-management"><span>Diabetes Care
+                                                            Management</span></a></li>
+                                                <li><a href="doctor-mobile-app"><span>Doctor Mobile App</span></a>
+                                                </li>
+                                                <li><a href="revenue-cycle-management"><span>Revenue Cycle
+                                                            Management</span></a></li>
+                                                <li><a href="vaccine-management"><span>Vaccine Management</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-                                <div class="tab-pane" id="specialty-care" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Specialty Care EHR</h2>
-                                        <p class="tab-desc">Purpose-built EHR modules and tracking features designed specifically for each clinical specialty.</p>
-                                    </div>
-                                    
-                                    <div class="specialty-scroll-area">
-                                        <div class="specialty-grid">
-                                            
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Cardiology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="ecg-ekg-integration">ECG / EKG Integration</a></li>
-                                                    <li><a href="echocardiography-reports">Echocardiography Reports</a></li>
-                                                    <li><a href="stress-test-management">Stress Test Management</a></li>
-                                                    <li><a href="/cardiac-risk-scoring">Cardiac Risk Scoring</a></li>
-                                                    <li><a href="angiography-reports">Angiography Reports</a></li>
-                                                    <li><a href="pacemaker-tracking">Pacemaker Tracking</a></li>
-                                                    <li><a href="lipid-profile-tracking">Lipid Profile Tracking</a></li>
-                                                    <li><a href="cardiac-history-templates">Cardiac History Templates</a></li>
-                                                </ul>
+                                        <div class="tab-pane" id="hospitals" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Hospital Management</h2>
+                                                <p class="tab-desc">Enterprise-grade solutions for mid to large
+                                                    scale hospitals.</p>
+                                            </div>
+                                            <ul class="sub-menu-list three-columns">
+                                                <li><a href="hospitals"><span>Hospitals Overview</span></a></li>
+                                                <li><a href="outpatient"><span>Outpatient</span></a></li>
+                                                <li><a href="telemedicine"><span>Telemedicine</span></a></li>
+                                                <li><a href="queue-token-management"><span>Queue & Token
+                                                            Management</span></a></li>
+                                                <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a>
+                                                </li>
+                                                <li><a href="emr"><span>EMR</span></a></li>
+                                                <li><a href="clinical-assessment-forms"><span>Clinical Assessment
+                                                            Forms</span></a></li>
+                                                <li><a href="inpatient"><span>Inpatient</span></a></li>
+                                                <li><a href="operation-theater-management"><span>Operation Theater
+                                                            Management</span></a></li>
+                                                <li><a href="nursing-management-system"><span>Nursing Management
+                                                            System</span></a></li>
+                                                <li><a href="vaccine-management"><span>Vaccine Management</span></a>
+                                                </li>
+                                                <li><a href="virtual-opd"><span>Virtual OPD</span></a></li>
+                                                <li><a href="revenue-cycle-management"><span>Revenue Cycle
+                                                            Management</span></a></li>
+                                                <li><a href="lims"><span>LIMS</span></a></li>
+                                                <li><a href="ris-pacs"><span>RIS & PACS</span></a></li>
+                                                <li><a href="pharmacy"><span>Pharmacy</span></a></li>
+                                                <li><a href="blood-bank"><span>Blood Bank</span></a></li>
+                                                <li><a href="communication-management"><span>Communication
+                                                            Management</span></a></li>
+                                                <li><a href="speech-to-text"><span>Speech to Text</span></a></li>
+                                                <li><a href="medical-camp"><span>Medical Camp</span></a></li>
+                                                <li><a href="doctor-mobile-app"><span>Doctor Mobile App</span></a>
+                                                </li>
+                                                <li><a href="crm"><span>CRM</span></a></li>
+                                                <li><a href="hospital-bed-management"><span>Bed
+                                                            Management</span></a></li>
+                                                <li><a href="canteen-management"><span>Canteen Management</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tab-pane" id="specialty-care" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Specialty Care EHR</h2>
+                                                <p class="tab-desc">Purpose-built EHR modules and tracking features
+                                                    designed specifically for each clinical specialty.</p>
                                             </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Neurology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="eeg-reports">EEG Reports</a></li>
-                                                    <li><a href="mri-ct-integration">MRI / CT Scan Integration</a></li>
-                                                    <li><a href="seizure-tracking">Seizure Tracking</a></li>
-                                                    <li><a href="cognitive-assessment">Cognitive Assessment Tools</a></li>
-                                                    <li><a href="stroke-management">Stroke Management Templates</a></li>
-                                                    <li><a href="/neurological-exam-forms">Neurological Exam Forms</a></li>
-                                                </ul>
-                                            </div>
+                                            <div class="specialty-scroll-area">
+                                                <div class="specialty-grid">
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Pediatrics <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="growth-charts">Growth Charts (BMI)</a></li>
-                                                    <li><a href="vaccination-tracking">Vaccination Tracking</a></li>
-                                                    <li><a href="pediatric-dosage-calculator">Pediatric Dosage Calculator</a></li>
-                                                    <li><a href="developmental-milestones">Developmental Milestones</a></li>
-                                                    <li><a href="neonatal-records">Neonatal Records</a></li>
-                                                    <li><a href="parent-communication">Parent Communication Tools</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Cardiology
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="ecg-ekg-integration">ECG / EKG
+                                                                    Integration</a></li>
+                                                            <li><a href="echocardiography-reports">Echocardiography
+                                                                    Reports</a></li>
+                                                            <li><a href="stress-test-management">Stress Test
+                                                                    Management</a></li>
+                                                            <li><a href="cardiac-risk-scoring">Cardiac Risk
+                                                                    Scoring</a></li>
+                                                            <li><a href="angiography-reports">Angiography
+                                                                    Reports</a></li>
+                                                            <li><a href="pacemaker-tracking">Pacemaker Tracking</a>
+                                                            </li>
+                                                            <li><a href="lipid-profile-tracking">Lipid Profile
+                                                                    Tracking</a></li>
+                                                            <li><a href="cardiac-history-templates">Cardiac History
+                                                                    Templates</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Orthopedics <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="xray-imaging-integration">X-ray & Imaging Integration</a></li>
-                                                    <li><a href="fracture-management">Fracture Management</a></li>
-                                                    <li><a href="joint-mobility-tracking">Joint Mobility Tracking</a></li>
-                                                    <li><a href="implant-records">Implant Records</a></li>
-                                                    <li><a href="physiotherapy-notes">Physiotherapy Notes</a></li>
-                                                    <li><a href="surgery-planning">Surgery Planning Tools</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Neurology
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="eeg-reports">EEG Reports</a></li>
+                                                            <li><a href="mri-ct-integration">MRI / CT Scan
+                                                                    Integration</a></li>
+                                                            <li><a href="seizure-tracking">Seizure Tracking</a></li>
+                                                            <li><a href="cognitive-assessment">Cognitive Assessment
+                                                                    Tools</a></li>
+                                                            <li><a href="stroke-management">Stroke Management
+                                                                    Templates</a></li>
+                                                            <li><a href="neurological-exam-forms">Neurological Exam
+                                                                    Forms</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Ophthalmology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="vision-refraction-charts">Vision & Refraction Charts</a></li>
-                                                    <li><a href="retina-imaging-integration">Retina Imaging Integration</a></li>
-                                                    <li><a href="eye-pressure-tracking">Eye Pressure (IOP) Tracking</a></li>
-                                                    <li><a href="optical-prescription-mgt">Optical Prescription Mgt</a></li>
-                                                    <li><a href="/lasik-surgery-records">LASIK / Surgery Records</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Pediatrics
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="growth-charts">Growth Charts (BMI)</a></li>
+                                                            <li><a href="vaccination-tracking">Vaccination
+                                                                    Tracking</a></li>
+                                                            <li><a href="pediatric-dosage-calculator">Pediatric
+                                                                    Dosage Calculator</a></li>
+                                                            <li><a href="developmental-milestones">Developmental
+                                                                    Milestones</a></li>
+                                                            <li><a href="neonatal-records">Neonatal Records</a></li>
+                                                            <li><a href="parent-communication">Parent Communication
+                                                                    Tools</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Dental <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="dental-tooth-chart">Tooth Chart (Odontogram)</a></li>
-                                                    <li><a href="dental-imaging">Dental Imaging</a></li>
-                                                    <li><a href="dental-treatment-planning">Treatment Planning</a></li>
-                                                    <li><a href="dental-procedure-history">Procedure History</a></li>
-                                                    <li><a href="dental-insurance-billing">Insurance Billing</a></li>
-                                                    <li><a href="#">Appointment Scheduling</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Orthopedics
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="xray-imaging-integration">X-ray & Imaging
+                                                                    Integration</a></li>
+                                                            <li><a href="fracture-management">Fracture
+                                                                    Management</a></li>
+                                                            <li><a href="joint-mobility-tracking">Joint Mobility
+                                                                    Tracking</a></li>
+                                                            <li><a href="implant-records">Implant Records</a></li>
+                                                            <li><a href="physiotherapy-notes">Physiotherapy
+                                                                    Notes</a></li>
+                                                            <li><a href="surgery-planning">Surgery Planning
+                                                                    Tools</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Dermatology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="skin-image-tracking">Skin Image Tracking</a></li>
-                                                    <li><a href="dermatology-photos">Before/After Photo Storage</a></li>
-                                                    <li><a href="dermatology-treatment-plans">Treatment Plans</a></li>
-                                                    <li><a href="cosmetic-procedure-records">Cosmetic Procedure Records</a></li>
-                                                    <li><a href="allergy-tracking">Allergy Tracking</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Ophthalmology
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="vision-refraction-charts">Vision &
+                                                                    Refraction Charts</a></li>
+                                                            <li><a href="retina-imaging-integration">Retina Imaging
+                                                                    Integration</a></li>
+                                                            <li><a href="eye-pressure-tracking">Eye Pressure (IOP)
+                                                                    Tracking</a></li>
+                                                            <li><a href="optical-prescription-mgt">Optical
+                                                                    Prescription Mgt</a></li>
+                                                            <li><a href="lasik-surgery-records">LASIK / Surgery
+                                                                    Records</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Oncology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="cancer-staging">Cancer Staging</a></li>
-                                                    <li><a href="chemotherapy-plans">Chemotherapy Plans</a></li>
-                                                    <li><a href="radiation-therapy-records">Radiation Therapy Records</a></li>
-                                                    <li><a href="tumor-tracking">Tumor Tracking</a></li>
-                                                    <li><a href="oncology-reports">Oncology Reports</a></li>
-                                                    <li><a href="clinical-trial-management">Clinical Trial Management</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Dental <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="dental-tooth-chart">Tooth Chart
+                                                                    (Odontogram)</a></li>
+                                                            <li><a href="dental-imaging">Dental Imaging</a></li>
+                                                            <li><a href="dental-treatment-planning">Treatment
+                                                                    Planning</a></li>
+                                                            <li><a href="dental-procedure-history">Procedure
+                                                                    History</a></li>
+                                                            <li><a href="dental-insurance-billing">Insurance
+                                                                    Billing</a></li>
+                                                            <li><a href="#">Appointment Scheduling</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Gynecology <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="pregnancy-tracking">Pregnancy Tracking</a></li>
-                                                    <li><a href="antenatal-care-records">Antenatal Care Records</a></li>
-                                                    <li><a href="ultrasound-reports">Ultrasound Reports</a></li>
-                                                    <li><a href="/delivery-records">Delivery Records</a></li>
-                                                    <li><a href="fertility-treatment-tracking">Fertility Treatment Tracking</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Dermatology
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="skin-image-tracking">Skin Image
+                                                                    Tracking</a></li>
+                                                            <li><a href="dermatology-photos">Before/After Photo
+                                                                    Storage</a></li>
+                                                            <li><a href="dermatology-treatment-plans">Treatment
+                                                                    Plans</a></li>
+                                                            <li><a href="cosmetic-procedure-records">Cosmetic
+                                                                    Procedure Records</a></li>
+                                                            <li><a href="allergy-tracking">Allergy Tracking</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Psychiatry <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="mental-health-assessments">Mental Health Assessments</a></li>
-                                                    <li><a href="therapy-session-notes">Therapy Session Notes</a></li>
-                                                    <li><a href="medication-tracking">Medication Tracking</a></li>
-                                                    <li><a href="behavioral-history">Behavioral History</a></li>
-                                                    <li><a href="confidential-records">Confidential Records Handling</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Oncology
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="cancer-staging">Cancer Staging</a></li>
+                                                            <li><a href="chemotherapy-plans">Chemotherapy Plans</a>
+                                                            </li>
+                                                            <li><a href="radiation-therapy-records">Radiation
+                                                                    Therapy Records</a></li>
+                                                            <li><a href="tumor-tracking">Tumor Tracking</a></li>
+                                                            <li><a href="oncology-reports">Oncology Reports</a></li>
+                                                            <li><a href="clinical-trial-management">Clinical Trial
+                                                                    Management</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">General Practice <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="patient-history">Patient History</a></li>
-                                                    <li><a href="diagnosis-treatment">Diagnosis & Treatment</a></li>
-                                                    <li><a href="e-prescriptions">e-Prescriptions</a></li>
-                                                    <li><a href="lab-integration">Lab Integration</a></li>
-                                                    <li><a href="billing-reports">Billing & Reports</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Gynecology
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="pregnancy-tracking">Pregnancy Tracking</a>
+                                                            </li>
+                                                            <li><a href="antenatal-care-records">Antenatal Care
+                                                                    Records</a></li>
+                                                            <li><a href="ultrasound-reports">Ultrasound Reports</a>
+                                                            </li>
+                                                            <li><a href="delivery-records">Delivery Records</a></li>
+                                                            <li><a href="fertility-treatment-tracking">Fertility
+                                                                    Treatment Tracking</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="mega-category">
-                                                <a href="#" class="category-title">Core Platform <span>→</span></a>
-                                                <ul class="category-links">
-                                                    <li><a href="patient-registration">Patient Registration</a></li>
-                                                    <li><a href="#">Appointment Scheduling</a></li>
-                                                    <li><a href="emr-ehr-system">EMR/EHR System</a></li>
-                                                    <li><a href="/billing-invoicing">Billing & Invoicing</a></li>
-                                                    <li><a href="notifications-system">SMS / WhatsApp Notifications</a></li>
-                                                    <li><a href="cloud-security">Data Security & Cloud Access</a></li>
-                                                </ul>
-                                            </div>
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Psychiatry
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="mental-health-assessments">Mental Health
+                                                                    Assessments</a></li>
+                                                            <li><a href="therapy-session-notes">Therapy Session
+                                                                    Notes</a></li>
+                                                            <li><a href="medication-tracking">Medication
+                                                                    Tracking</a></li>
+                                                            <li><a href="behavioral-history">Behavioral History</a>
+                                                            </li>
+                                                            <li><a href="confidential-records">Confidential Records
+                                                                    Handling</a></li>
+                                                        </ul>
+                                                    </div>
 
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">General Practice
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="patient-history">Patient History</a></li>
+                                                            <li><a href="diagnosis-treatment">Diagnosis &
+                                                                    Treatment</a></li>
+                                                            <li><a href="e-prescriptions">e-Prescriptions</a></li>
+                                                            <li><a href="lab-integration">Lab Integration</a></li>
+                                                            <li><a href="billing-reports">Billing & Reports</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="mega-category">
+                                                        <a href="#" class="category-title">Core Platform
+                                                            <span>→</span></a>
+                                                        <ul class="category-links">
+                                                            <li><a href="patient-registration">Patient
+                                                                    Registration</a></li>
+                                                            <li><a href="#">Appointment Scheduling</a></li>
+                                                            <li><a href="emr-ehr-system">EMR/EHR System</a></li>
+                                                            <li><a href="billing-invoicing">Billing & Invoicing</a>
+                                                            </li>
+                                                            <li><a href="notifications-system">SMS / WhatsApp
+                                                                    Notifications</a></li>
+                                                            <li><a href="cloud-security">Data Security & Cloud
+                                                                    Access</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="patients" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Patients and their Families</h2>
+                                            </div>
+                                            <ul class="sub-menu-list">
+                                                <li><a href="online-scheduling"><span>Online Scheduling</span></a>
+                                                </li>
+                                                <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a>
+                                                </li>
+                                                <li><a href="communication-management"><span>Communication
+                                                            Management</span></a></li>
+                                                <li><a href="patient-mobile-app"><span>Patient Mobile App</span></a>
+                                                </li>
+                                                <li><a href="patient-portal"><span>Patient Portal</span></a></li>
+                                                <li><a href="diabetes-patient-care"><span>Diabetes Patient
+                                                            Care</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="hospital-chain" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Hospital Chain Management</h2>
+                                            </div>
+                                            <ul class="sub-menu-list">
+                                                <li><a href="centralised-management"><span>Centralised
+                                                            Management</span></a></li>
+                                                <li><a href="multi-facility-sync"><span>Multi-Facility
+                                                            Sync</span></a></li>
+                                                <li><a href="unified-reporting"><span>Unified Reporting</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="hospital-cfo" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Hospital CFO</h2>
+                                            </div>
+                                            <ul class="sub-menu-list two-columns">
+                                                <li><a href="revenue-cycle-management"><span>Revenue Cycle
+                                                            Management</span></a></li>
+                                                <li><a href="accounts-payable"><span>Accounts Payable</span></a>
+                                                </li>
+                                                <li><a href="accounts-receivable"><span>Accounts
+                                                            Receivable</span></a></li>
+                                                <li><a href="ledger"><span>Ledger</span></a></li>
+                                                <li><a href="banking-payment-gateway"><span>Banking & Payment
+                                                            Gateway</span></a></li>
+                                                <li><a href="financial-reporting"><span>Financial Reporting &
+                                                            Dashboards</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="hospital-it" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Hospital IT Manager</h2>
+                                            </div>
+                                            <ul class="sub-menu-list two-columns">
+                                                <li><a href="cloud-solution"><span>Cloud Solution &
+                                                            Migration</span></a></li>
+                                                <li><a href="implementation"><span>Implementation</span></a></li>
+                                                <li><a href="data-migration"><span>Data Migration, Backup &
+                                                            Recovery</span></a></li>
+                                                <li><a href="configurations"><span>Configurations &
+                                                            Customisation</span></a></li>
+                                                <li><a href="data-security"><span>Data Security &
+                                                            Compliance</span></a></li>
+                                                <li><a href="geofencing"><span>Geofencing</span></a></li>
+                                                <li><a href="service-requests"><span>Service Requests</span></a>
+                                                </li>
+                                                <li><a href="on-prem-solution"><span>On-prem Solution</span></a>
+                                                </li>
+                                                <li><a href="rpa"><span>Robotic Process Automation</span></a></li>
+                                                <li><a href="digital-marketing"><span>Digital Marketing
+                                                            Services</span></a></li>
+                                                <li><a href="health-hire"><span>Health Hire</span></a></li>
+                                                </li>
+                                                <li><a href="offline-data-entry"><span>Offline Data Entry</span></a>
+                                                </li>
+                                                <li><a href="compliance-security"><span>Compliance</span></a></li>
+                                                <li><a href="fhir-hl7"><span>FHIR HL7 Compliant</span></a></li>
+                                                <li><a href="multilingual-hims"><span>Multilingual HIMS</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="marketing-managers" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Marketing Managers</h2>
+                                            </div>
+                                            <ul class="sub-menu-list two-columns">
+                                                <li><a href="patient-demographics"><span>Patient Demographics &
+                                                            Insights</span></a></li>
+                                                <li><a href="appointment-trends"><span>Appointment Trends &
+                                                            Analysis</span></a></li>
+                                                <li><a href="referral-management"><span>Referral
+                                                            Management</span></a></li>
+                                                <li><a href="feedback-surveys"><span>Feedback & Satisfaction
+                                                            Surveys</span></a></li>
+                                                <li><a href="royalty-program"><span>Royalty Program</span></a></li>
+                                                <li><a href="direct-communication"><span>Direct Communication
+                                                            Channels</span></a></li>
+                                                <li><a href="campaign-performance"><span>Campaign Performance
+                                                            Tracking</span></a></li>
+                                                <li><a href="crm"><span>CRM</span></a></li>
+                                                <li><a href="digital-marketing"><span>Digital Marketing
+                                                            Services</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="backoffice-hr" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Backoffice & HR Managers</h2>
+                                            </div>
+                                            <ul class="sub-menu-list two-columns">
+                                                <li><a href="finance-accounting"><span>Finance and
+                                                            Accounting</span></a></li>
+                                                <li><a href="hrms"><span>Human Resources (HRMS)</span></a></li>
+                                                <li><a href="patient-relations"><span>Marketing and Patient
+                                                            Relations</span></a></li>
+                                                <li><a href="supply-chain"><span>Supply Chain Management</span></a>
+                                                </li>
+                                                <li><a href="asset-management"><span>Asset Management</span></a>
+                                                </li>
+                                                <li><a href="revenue-cycle-management"><span>Revenue Cycle
+                                                            Management</span></a></li>
+                                                <li><a href="supplier-management"><span>Supplier
+                                                            Management</span></a></li>
+                                                <li><a href="inventory-assets"><span>Inventory & Assets</span></a>
+                                                </li>
+                                                <li><a href="crm"><span>CRM</span></a></li>
+                                                <li><a href="hospital-bed-management"><span>Bed Management
+                                                            Software</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="government" role="tabpanel">
+                                            <div class="pane-header">
+                                                <h2 class="tab-title">Government</h2>
+                                            </div>
+                                            <ul class="sub-menu-list two-columns">
+                                                <li><a href="population-health"><span>Integrated Population
+                                                            Health</span></a></li>
+                                                <li><a href="government-ops"><span>Multi-Facility
+                                                            Operations</span></a></li>
+                                                <li><a href="resource-management"><span>Resource
+                                                            Management</span></a></li>
+                                                <li><a href="health-surveillance"><span>Real-Time Health
+                                                            Surveillance</span></a></li>
+                                                <li><a href="financial-management"><span>Financial
+                                                            Management</span></a></li>
+                                                <li><a href="abha"><span>Compliance with ABHA</span></a></li>
+                                                <li><a href="pm-yojana"><span>Pradhan Mantri Yojana
+                                                            Support</span></a></li>
+                                                <li><a href="reporting-analytics"><span>Reporting and
+                                                            Analytics</span></a></li>
+                                                <li><a href="vaccine-management"><span>Vaccine Management</span></a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="patients" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Patients and their Families</h2>
-                                    </div>
-                                    <ul class="sub-menu-list">
-                                        <li><a href="online-scheduling"><span>Online Scheduling</span></a></li>
-                                        <li><a href="healthcare-kiosk"><span>Healthcare Kiosk</span></a></li>
-                                        <li><a href="communication-management"><span>Communication Management</span></a></li>
-                                        <li><a href="patient-mobile-app"><span>Patient Mobile App</span></a></li>
-                                        <li><a href="patient-portal"><span>Patient Portal</span></a></li>
-                                        <li><a href="diabetes-patient-care"><span>Diabetes Patient Care</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="hospital-chain" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Hospital Chain Management</h2>
-                                    </div>
-                                    <ul class="sub-menu-list">
-                                        <li><a href="centralised-management"><span>Centralised Management</span></a></li>
-                                        <li><a href="multi-facility-sync"><span>Multi-Facility Sync</span></a></li>
-                                        <li><a href="unified-reporting"><span>Unified Reporting</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="hospital-cfo" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Hospital CFO</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="revenue-cycle-management"><span>Revenue Cycle Management</span></a></li>
-                                        <li><a href="accounts-payable"><span>Accounts Payable</span></a></li>
-                                        <li><a href="accounts-receivable"><span>Accounts Receivable</span></a></li>
-                                        <li><a href="/ledger"><span>Ledger</span></a></li>
-                                        <li><a href="banking-payment-gateway"><span>Banking & Payment Gateway</span></a></li>
-                                        <li><a href="financial-reporting"><span>Financial Reporting & Dashboards</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="hospital-it" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Hospital IT Manager</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="cloud-solution"><span>Cloud Solution & Migration</span></a></li>
-                                        <li><a href="implementation"><span>Implementation</span></a></li>
-                                        <li><a href="data-migration"><span>Data Migration, Backup & Recovery</span></a></li>
-                                        <li><a href="configurations"><span>Configurations & Customisation</span></a></li>
-                                        <li><a href="data-security"><span>Data Security & Compliance</span></a></li>
-                                        <li><a href="/geofencing"><span>Geofencing</span></a></li>
-                                        <li><a href="service-requests"><span>Service Requests</span></a></li>
-                                        <li><a href="on-prem-solution"><span>On-prem Solution</span></a></li>
-                                        <li><a href="rpa"><span>Robotic Process Automation</span></a></li>
-                                        <li><a href="digital-marketing"><span>Digital Marketing Services</span></a></li>
-                                        <li><a href="health-hire"><span>Health Hire</span></a></li>
-                                        <li><a href="offline-data-entry"><span>Offline Data Entry</span></a></li>
-                                        <li><a href="compliance-security"><span>Compliance</span></a></li>
-                                        <li><a href="fhir-hl7"><span>FHIR HL7 Compliant</span></a></li>
-                                        <li><a href="multilingual-hims"><span>Multilingual HIMS</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="marketing-managers" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Marketing Managers</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="patient-demographics"><span>Patient Demographics & Insights</span></a></li>
-                                        <li><a href="appointment-trends"><span>Appointment Trends & Analysis</span></a></li>
-                                        <li><a href="referral-management"><span>Referral Management</span></a></li>
-                                        <li><a href="/feedback-surveys"><span>Feedback & Satisfaction Surveys</span></a></li>
-                                        <li><a href="royalty-program"><span>Royalty Program</span></a></li>
-                                        <li><a href="direct-communication"><span>Direct Communication Channels</span></a></li>
-                                        <li><a href="campaign-performance"><span>Campaign Performance Tracking</span></a></li>
-                                        <li><a href="/crm"><span>CRM</span></a></li>
-                                        <li><a href="digital-marketing"><span>Digital Marketing Services</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="backoffice-hr" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Backoffice & HR Managers</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="finance-accounting"><span>Finance and Accounting</span></a></li>
-                                        <li><a href="hrms"><span>Human Resources (HRMS)</span></a></li>
-                                        <li><a href="patient-relations"><span>Marketing and Patient Relations</span></a></li>
-                                        <li><a href="supply-chain"><span>Supply Chain Management</span></a></li>
-                                        <li><a href="asset-management"><span>Asset Management</span></a></li>
-                                        <li><a href="revenue-cycle-management"><span>Revenue Cycle Management</span></a></li>
-                                        <li><a href="supplier-management"><span>Supplier Management</span></a></li>
-                                        <li><a href="inventory-assets"><span>Inventory & Assets</span></a></li>
-                                        <li><a href="/crm"><span>CRM</span></a></li>
-                                        <li><a href="hospital-bed-management"><span>Bed Management Software</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" id="government" role="tabpanel">
-                                    <div class="pane-header">
-                                        <h2 class="tab-title">Government</h2>
-                                    </div>
-                                    <ul class="sub-menu-list two-columns">
-                                        <li><a href="population-health"><span>Integrated Population Health</span></a></li>
-                                        <li><a href="government-ops"><span>Multi-Facility Operations</span></a></li>
-                                        <li><a href="resource-management"><span>Resource Management</span></a></li>
-                                        <li><a href="health-surveillance"><span>Real-Time Health Surveillance</span></a></li>
-                                        <li><a href="financial-management"><span>Financial Management</span></a></li>
-                                        <li><a href="abha"><span>Compliance with ABHA</span></a></li>
-                                        <li><a href="pm-yojana"><span>Pradhan Mantri Yojana Support</span></a></li>
-                                        <li><a href="reporting-analytics"><span>Reporting and Analytics</span></a></li>
-                                        <li><a href="vaccine-management"><span>Vaccine Management</span></a></li>
-                                    </ul>
-                                </div>
                             </div>
-                        </div>
-                    </div>
-                </li>
+                        </li>
 
-                <li><a href="about" class="nav-item">About Us</a></li>
-                <li><a href="/blogs" class="nav-item">Insights & Blogs</a></li>
-            </ul>
-</div>
-            <div class="mobile-cta-wrapper">
-                <a href="https://www.medical365.in/book-demo" aria-label="Book a free Medical365 demo for your hospital" class="btn-primary">Book a Free Demo</a>
+                        <li><a href="about" class="nav-item">About Us</a></li>
+                        <li><a href="blogs" class="nav-item">Insights & Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-cta-wrapper">
+                    <a href="https://www.medical365.in/book-demo" class="btn-primary">Book a Free Demo</a>
+                </div>
+            </nav>
+
+            <div class="header-cta">
+                <a href="https://www.medical365.in/book-demo" class="btn-primary">Book Demo</a>
             </div>
-        </nav>
-
-        <div class="header-cta">
-            <a href="https://www.medical365.in/book-demo" aria-label="Book a free Medical365 demo for your hospital" class="btn-primary">Book Free Healthcare Software Demo</a>
         </div>
-    </div>
-</header>
+    </header>
 <main id="main">
 
 <article style="max-width:800px;margin:0 auto;padding:40px 20px;">
@@ -669,7 +881,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p class="mf-cta-headline">Get a Free Demo — On-Site or Online, Anywhere in Rajasthan</p>
                 </div>
                 <div class="mf-cta-actions">
-                    <a href="https://www.medical365.in/book-demo" aria-label="Book a free Medical365 demo for your hospital" class="mf-btn-demo">
+                    <a href="https://www.medical365.in/book-demo" class="mf-btn-demo">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.2" aria-hidden="true">
                             <rect x="3" y="4" width="18" height="18" rx="2" />
@@ -677,7 +889,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </svg>
                         Book a Free Demo
                     </a>
-                    <a href="tel:+917791910007" aria-label="Call Medical365 at +91 77919 10007" class="mf-btn-call">
+                    <a href="tel:+917791910007" class="mf-btn-call">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.2" aria-hidden="true">
                             <path
@@ -703,11 +915,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </a>
                         <p class="mf-tagline">Empowering healthcare providers with modern, cloud-based management
                             solutions.</p>
-                        <a href="https://www.medical365.in/book-demo" aria-label="Book a free Medical365 demo for your hospital" class="mf-demo-pill">Book a Demo</a>
+                        <a href="https://www.medical365.in/book-demo" class="mf-demo-pill">Book a Demo</a>
                         <!-- Social Links -->
                         <div class="mf-social" role="list" aria-label="Social media links">
                             <a href="https://www.linkedin.com/in/medical-hms-612628405/" class="mf-social-link"
-                                aria-label="LinkedIn" role="listitem" target="_blank" rel="noopener noreferrer">
+                                aria-label="LinkedIn" role="listitem" target="_blank" rel="noopener">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path
                                         d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
@@ -715,27 +927,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </svg>
                             </a>
                             <a href="https://x.com/medical_365" class="mf-social-link" aria-label="Twitter / X"
-                                role="listitem" target="_blank" rel="noopener noreferrer">
+                                role="listitem" target="_blank" rel="noopener">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path
                                         d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                                 </svg>
                             </a>
                             <a href="https://www.facebook.com/medical365HMS/" class="mf-social-link" aria-label="Facebook"
-                                role="listitem" target="_blank" rel="noopener noreferrer">
+                                role="listitem" target="_blank" rel="noopener">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
                                 </svg>
                             </a>
                             <a href="https://www.youtube.com/@Medical365-HMS" class="mf-social-link" aria-label="YouTube"
-                                role="listitem" target="_blank" rel="noopener noreferrer">
+                                role="listitem" target="_blank" rel="noopener">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path
                                         d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
                                 </svg>
                             </a>
                             <a href="https://www.instagram.com/medical365_hms/" class="mf-social-link"
-                                aria-label="Instagram" role="listitem" target="_blank" rel="noopener noreferrer">
+                                aria-label="Instagram" role="listitem" target="_blank" rel="noopener">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" aria-hidden="true">
                                     <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -760,9 +972,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <ul class="mf-link-col">
                             <li><a href="https://www.medical365.in/">Home</a></li>
                             <li><a href="about">About Us</a></li>
-                            <li><a href="/blogs">Blog & Resources</a></li>
+                            <li><a href="blogs">Blog & Resources</a></li>
                             <li><a href="contact">Contact Us</a></li>
-                            <li><a href="https://www.medical365.in/book-demo" aria-label="Book a free Medical365 demo for your hospital">Book a Demo</a></li>
+                            <li><a href="https://www.medical365.in/book-demo">Book a Demo</a></li>
                             <li><a href="privacy-policy">Privacy Policy</a></li>
                             <li><a href="terms-of-service">Terms of Service</a></li>
                             <li><a href="compliance-security">Compliance</a></li>
@@ -831,7 +1043,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </svg>
                                 <div>
                                     <span class="mf-contact-label">Mobile</span>
-                                    <a href="tel:+917791910007" aria-label="Call Medical365 at +91 77919 10007" class="mf-contact-val mf-phone">+91 77919 10007</a>
+                                    <a href="tel:+917791910007" class="mf-contact-val mf-phone">+91 77919 10007</a>
                                 </div>
                             </div>
                             <div class="mf-contact-item">
@@ -1128,7 +1340,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- WhatsApp Floating Button -->
         <a href="https://wa.me/917791910007?text=Hi%20Medical365%2C%20I%27d%20like%20to%20book%20a%20free%20demo"
-            class="mf-wa-fab" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+            class="mf-wa-fab" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
                 <path
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
