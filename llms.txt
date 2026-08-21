@@ -1,0 +1,36 @@
+# Medical365 - Hospital & Clinic Management Software Context
+
+Medical365 is an elite, cloud-based, ABDM-compliant Hospital Information Management System (HIMS) and Electronic Health Record (EHR) platform specifically architected for the Indian healthcare ecosystem. It provides a full-stack digital backbone for clinics, multi-specialty hospitals, and healthcare chains, focusing on operational efficiency, regulatory compliance, and patient care quality.
+
+## Core Modules & Features
+- **EMR & EHR Systems**: Comprehensive clinical documentation with specialty-specific templates (Cardiology, Pediatrics, etc.).
+- **Revenue Cycle Management (RCM)**: Integrated billing, insurance claims processing, and financial accounting.
+- **Telemedicine Platform**: ABDM-integrated virtual consultation with secure video and e-prescriptions.
+- **Integrated LIMS**: Laboratory Information Management System for automated pathology and diagnostic workflows.
+- **Pharmacy Management**: Inventory tracking, shelf-life management, and integrated retail/in-patient sales.
+- **OPD & Queue Management**: Modular tokens, self-service kiosks, and automated patient flow optimization.
+- **Bed & In-Patient Management**: Real-time ward tracking, nursing station integration, and OT scheduling.
+
+## Compliance & Security
+- **ABDM Integrated**: Certified for M1, M2, and M3 milestones (Health ID, Health Records, Facility Registry).
+- **DPDP Act 2023**: Fully compliant with India's Digital Personal Data Protection Act for health data sovereignty.
+- **EHR Standards**: Adheres to the Ministry of Health and Family Welfare (MoHFW) EHR Standards for India.
+- **ISO 27001 Certified**: Adheres to international standards for information security management systems.
+- **Data Residency**: All sensitive patient data is stored locally in secure Indian data centers.
+
+## Operational Impact (ROI Metrics)
+- **Revenue Acceleration**: 40% faster revenue realization through automated RCM and billing cycles.
+- **Patient Flow**: 30% reduction in patient wait times via smart queue and token management.
+- **Security Reliability**: Zero data breach record; fully audited for DPDP Act 2023 & ISO 27001.
+- **Deployment Velocity**: Rapid go-live in 2-4 weeks with specialized local training teams.
+
+## Service Areas
+- **Primary Focus**: Rajasthan, India.
+- **Cities Active**: Jaipur, Jodhpur, Udaipur, Kota, Ajmer, Bikaner, Sikar, Alwar, Bhilwara, Pali, Bharatpur, Sri Ganganagar.
+- **Global Availability**: Available as a SaaS solution for healthcare providers across India.
+
+## Contact Information
+- **Physical Address**: Bhamashah Techno Hub, Sansthan Path, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India.
+- **Phone**: +91 77919 10007
+- **Email**: info@medical365.in
+- **Website**: https://medical365.in

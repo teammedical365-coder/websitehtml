@@ -1,0 +1,11 @@
+﻿operation-theater-management-alwar.html exists
+nursing-management-system-sikar.html exists
+blood-bank-software-udaipur.html exists
+patient-portal-software-vidyadhar-nagar.html exists
+patient-portal-software-vidyadhar-nagar-jaipur.html exists
+telemedicine-platform-clinics-mansarovar.html exists
+telemedicine-platform-mansarovar-jaipur.html exists
+hospital-management-software-jaipur.html exists
+clinic-management-system-jaipur.html exists
+emr-software-hospitals-bikaner.html exists
+emr-software-bikaner.html exists
