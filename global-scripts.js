@@ -352,8 +352,8 @@ function initGlobalScripts() {
     function loadMegaFooter() {
         if (document.getElementById('mega-footer')) return; // already present
 
-        var footerUrlAbs = '/components/footer.html';
-        var footerUrlRel = 'components/footer.html';
+        var footerUrlAbs = '/components/footer.html?v=1787376411211';
+        var footerUrlRel = 'components/footer.html?v=1787376411211';
 
         function insertFooterHtml(html) {
             if (!html || document.getElementById('mega-footer')) return;
