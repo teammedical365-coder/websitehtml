@@ -661,57 +661,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          HERO SECTION
     ══════════════════════════════════════════════════ -->
     
+
+<section class="hero-section">
+
 <style>
-.breadcrumb-bar {
-    background: #F9FAFB;
-    border-bottom: 1px solid #E5E7EB;
-    padding: 12px 0;
+.breadcrumb-wrapper {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 10;
 }
-.seo-breadcrumbs {
-    display: flex;
+.seo-breadcrumbs.glass-pill {
+    display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
     font-size: 0.85rem;
-    color: #6B7280;
+    color: #4B5563;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(55, 179, 156, 0.05);
 }
-.seo-breadcrumbs a {
-    color: #37B39C;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-.seo-breadcrumbs a:hover {
+.seo-breadcrumbs.glass-pill a {
     color: #1A56DB;
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
 }
-.seo-breadcrumbs span.separator {
+.seo-breadcrumbs.glass-pill a:hover {
+    color: #37B39C;
+}
+.seo-breadcrumbs.glass-pill span.separator {
     color: #9CA3AF;
     font-size: 0.8rem;
+    margin: 0 4px;
 }
-.seo-breadcrumbs span.current {
-    color: #4B5563;
-    font-weight: 600;
+.seo-breadcrumbs.glass-pill span.current {
+    color: #111827;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1A56DB, #37B39C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 768px) {
+    .breadcrumb-wrapper {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    .seo-breadcrumbs.glass-pill {
+        border-radius: 12px;
+        justify-content: center;
+        padding: 10px 16px;
+    }
 }
 </style>
-<div class="breadcrumb-bar">
+<div class="breadcrumb-wrapper">
   <div class="container">
-    <div class="seo-breadcrumbs" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span class="separator">/</span>
+    <div class="seo-breadcrumbs glass-pill" aria-label="Breadcrumb">
+        <a href="/"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right:6px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+        <span class="separator"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
         <a href="#">Solutions</a>
-        <span class="separator">/</span>
+        <span class="separator"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
         <a href="lims-laboratory-information-management.html">Lims Laboratory Information Management</a>
-        <span class="separator">/</span>
+        <span class="separator"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
         <a href="#">Gujarat</a>
-        <span class="separator">/</span>
+        <span class="separator"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
         <span class="current" aria-current="page">Rajkot</span>
     </div>
   </div>
 </div>
 
-<section class="hero-section">
         <div class="container hero-container">
             <div class="hero-text">
 
