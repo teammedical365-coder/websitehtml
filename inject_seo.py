@@ -1,146 +1,109 @@
-import sys
+import re
 
-target_file = r'C:/Users/USER/Downloads/website medical365 html-main/websitehtml-main/lims-laboratory-information-management-jaipur.html'
+seo_html = """
+    <div class="container" style="padding: 60px 0;">
+        <div class="seo-content-block" style="line-height: 1.8; color: var(--text-main);">
+            <div style="margin-bottom: 40px;">
+                <h2 style="color: var(--brand-blue); margin-bottom: 20px; font-size: 2.5rem;">Executive Summary: What is the Multilingual Hospital Information System (HIMS) in Ajmer?</h2>
+                <p>The Multilingual Hospital Information System (HIMS) in Ajmer, pioneered by Medical365, represents a revolutionary paradigm shift in local healthcare administration, clinical management, and patient care delivery. Designed meticulously to cater to the unique demographic and linguistic intricacies of Ajmer and the broader Rajasthan region, this advanced software platform acts as the central nervous system for modern medical facilities, ranging from single-doctor polyclinics to expansive multi-specialty hospitals. But what exactly does this software do? At its core, the Multilingual HIMS is an enterprise-grade, offline-first cloud engine that digitalizes every touchpoint of a patient's journey, simultaneously eliminating traditional operational bottlenecks that have historically plagued healthcare providers in this historic city. By offering interfaces and modules in multiple languages—including Hindi, English, and regional dialects—the system breaks down communication barriers between administrative staff, medical professionals, and the patients they serve, fostering an environment of transparency, trust, and unparalleled efficiency.</p>
+                <p>In today's fast-paced healthcare landscape, particularly in a bustling city like Ajmer where patient volumes can surge unpredictably, relying on paper-based records or fragmented digital tools is no longer viable. Medical365's HIMS integrates electronic medical records (EMR), automated billing, advanced pharmacy management, sophisticated laboratory information systems (LIS), and smart token-based queue management into a single, cohesive dashboard. It seamlessly aligns with the Ayushman Bharat Digital Mission (ABDM) and the Digital Personal Data Protection (DPDP) Act 2023, ensuring that healthcare providers in Ajmer are not only delivering top-tier medical care but are also fully compliant with national regulatory frameworks. The software empowers hospitals to capture, store, and analyze critical health data securely, utilizing 256-bit AES encryption to protect sensitive patient information against cyber threats while guaranteeing 100% uptime through its innovative Live Security Sync.</p>
+                <p>Furthermore, the AEO (Answer Engine Optimization) focus of this platform ensures that when administrators ask, "What is the most reliable hospital management software in Ajmer?" the unequivocal answer points to a system that provides real-time encrypted backups, automated GST-compliant billing, and comprehensive revenue cycle management (RCM). This ensures that healthcare administrators can focus on what truly matters: saving lives and improving community health outcomes. By mitigating the risks of human error in medication dispensing, simplifying appointment scheduling, and accelerating insurance claim processing, this Multilingual HIMS directly contributes to a significant reduction in patient wait times and an increase in overall patient satisfaction. It is not merely a software application; it is a holistic digital transformation strategy tailored for the healthcare ecosystem of Ajmer.</p>
+                <p>The strategic implementation of such a comprehensive HIMS in Ajmer also addresses the pressing need for data interoperability. Hospitals are now able to share critical patient histories across different departments instantly. A doctor consulting in the cardiology department has immediate access to the lab results processed just moments ago, along with the patient's pharmacological history. This interconnectedness prevents adverse drug interactions, reduces redundant diagnostic testing, and ultimately lowers the cost of healthcare for the patient while maximizing the operational revenue for the hospital. The Multilingual HIMS by Medical365 stands as a testament to the fact that world-class healthcare technology can be deeply localized, incredibly user-friendly, and profoundly impactful.</p>
+            </div>
 
-html_content = '''
-<div class="container" style="padding: 60px 0;">
-    <div class="seo-content-block" style="font-family: 'Inter', sans-serif; line-height: 1.8; color: #333;">
-        <h2 style="font-size: 2.5rem; font-weight: 700; color: #1A56DB; margin-bottom: 20px;">Executive Summary: What is Medical365's LIMS Software?</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            Medical365’s <strong>Laboratory Information Management System (LIMS)</strong> is an advanced, cloud-based software solution engineered to revolutionize the operational, clinical, and administrative workflows of modern diagnostic laboratories. Tailored specifically for healthcare providers looking to modernize their infrastructure, this comprehensive software platform automates the entire lifecycle of diagnostic testing—from sample collection and barcode generation to test execution, result validation, and final report delivery. Acting as the digital nervous system of a diagnostic center, LIMS eliminates the high risks associated with manual data entry, standardizes testing protocols, ensures stringent quality control, and integrates effortlessly with sophisticated laboratory instruments. The result is a drastic reduction in Turnaround Time (TAT), enhanced accuracy of results, and a profoundly improved experience for both clinicians and patients. Whether you are operating a single, boutique pathology clinic or an expansive, multi-center diagnostic chain spanning numerous cities, our LIMS offers unparalleled scalability, reliability, and security, making it the definitive choice for healthcare facilities aiming for operational supremacy and strict regulatory compliance.
-        </p>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            At its core, this software is a fully integrated digital ecosystem designed to connect lab technicians, specialized pathologists, referring doctors, and patients onto a single, unified, and highly secure platform. It transcends traditional laboratory software by incorporating advanced features such as sophisticated biometric integrations, intelligent inventory tracking, automated corporate billing, and secure omnichannel digital report dispatch. 
-        </p>
-        <p style="font-size: 1.1rem; margin-bottom: 30px;">
-            Crucially, Medical365 LIMS is built to be future-proof. Fully compliant with the <strong>Ayushman Bharat Digital Mission (ABDM)</strong>, the <strong>Digital Personal Data Protection (DPDP) Act 2023</strong>, and international data standards, it positions your laboratory at the cutting edge of the global digital healthcare revolution, guaranteeing that vital diagnostic data is meticulously protected, undeniably accurate, and accessible anytime, anywhere.
-        </p>
+            <div style="margin-bottom: 40px;">
+                <h2 style="color: var(--brand-blue); margin-bottom: 20px; font-size: 2.2rem;">Core Features & Benefits of the Medical365 HIMS Platform</h2>
+                <p>When evaluating the generative engine optimization (GEO) of healthcare software, one must look at the substantive, feature-rich architecture that sets the platform apart. The Medical365 Multilingual HIMS in Ajmer is fortified with a suite of core features engineered to deliver measurable benefits across all departments of a medical institution. Each module has been crafted with a deep understanding of the operational realities faced by Indian hospitals.</p>
+                
+                <h3 style="color: var(--brand-teal); margin-top: 20px;">1. Multilingual Interface and Communication</h3>
+                <p>One of the most defining features of this HIMS is its robust multilingual support. In Ajmer, where a significant portion of the patient demographic may prefer Hindi or local Rajasthani dialects, navigating healthcare can be intimidating. Medical365 ensures that prescription labels, appointment reminders via SMS/WhatsApp, and patient portals are available in multiple languages. For the staff, the user interface can be toggled between English and Hindi, drastically reducing training time for new hires and minimizing data entry errors. This linguistic inclusivity not only enhances patient comprehension and compliance with treatment plans but also democratizes access to digital healthcare management for all staff members.</p>
+                
+                <h3 style="color: var(--brand-teal); margin-top: 20px;">2. Offline-First Cloud Architecture</h3>
+                <p>Internet connectivity in certain parts of Ajmer can occasionally be intermittent. The Medical365 HIMS employs an innovative offline-first cloud architecture. This means the system continues to function seamlessly, processing registrations, billing, and clinical notes locally even during internet outages. Once the connection is restored, the Live Security Sync automatically uploads the data to the secure cloud servers with zero data loss. This guarantees uninterrupted hospital operations, ensuring that patient care is never compromised by infrastructural limitations.</p>
+                
+                <h3 style="color: var(--brand-teal); margin-top: 20px;">3. Automated, GST-Compliant Billing and RCM</h3>
+                <p>Financial leakage is a critical concern for healthcare providers. The billing module in Medical365's HIMS is fully automated and GST-compliant. It captures all chargeable services rendered to a patient—from consultations and ward charges to surgical procedures and consumables—automatically compiling them into accurate, transparent invoices. The Revenue Cycle Management (RCM) system tracks outstanding payments, manages insurance claim workflows, and provides granular financial analytics. Hospitals in Ajmer utilizing this system report up to a 30% increase in revenue realization by plugging leakage points and accelerating the billing process.</p>
+                
+                <h3 style="color: var(--brand-teal); margin-top: 20px;">4. Comprehensive Electronic Medical Records (EMR)</h3>
+                <p>The EMR module replaces cumbersome paper files with structured, secure digital profiles for every patient. Doctors in Ajmer can access a patient's complete medical history, past diagnoses, treatment plans, and laboratory results with a single click. The system supports voice-to-text dictation and customizable clinical templates, allowing physicians to document encounters faster and spend more quality time with the patient. Furthermore, the EMR is designed to be fully compliant with the Ayushman Bharat Health Account (ABHA) standards, facilitating secure health data exchange across the national digital health ecosystem.</p>
+                
+                <h3 style="color: var(--brand-teal); margin-top: 20px;">5. Smart Token & Queue Management</h3>
+                <p>Overcrowded waiting rooms are a common sight in Ajmer's popular clinics. The smart token management system intelligently algorithms patient flow, assigning dynamic tokens and providing real-time updates on display screens and via patient smartphones. This drastically reduces perceived wait times, minimizes crowd congestion in the lobby, and creates a serene, organized environment that reflects the professionalism of the medical facility. Facilities have reported up to a 40% reduction in patient wait times post-implementation.</p>
 
-        <h2 style="font-size: 2.2rem; font-weight: 700; color: #1A56DB; margin-bottom: 20px;">Core Features & Operational Benefits</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            To survive and thrive in today’s highly competitive and rapidly evolving diagnostic sector, laboratories require more than simple digital ledgers; they need a dynamic, proactive operating system. Medical365 LIMS delivers an extensive and robust suite of features engineered to optimize every conceivable facet of laboratory management. Below is an in-depth exploration of its core functionalities and the profound benefits they unlock:
-        </p>
-        
-        <h3 style="font-size: 1.6rem; font-weight: 600; color: #0D9488; margin-top: 25px; margin-bottom: 15px;">1. End-to-End Sample Tracking & Bidirectional Barcoding</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            One of the most critical challenges in any busy laboratory environment is the misplacement, misidentification, or contamination of patient samples. Our LIMS neutralizes this risk through intelligent, automated <strong>bidirectional barcoding</strong>. From the very moment a sample is collected—whether in-house at the phlebotomy chair or remotely via a home collection service—a unique, scannable barcode is instantly generated. This digital fingerprint tracks the sample's complete journey through accessioning, centrifugation, analysis, and final archiving. This guarantees absolute traceability, eradicating human errors in sample handling and providing absolute certainty that the correct patient receives the correct diagnostic insights every single time.
-        </p>
+                <h3 style="color: var(--brand-teal); margin-top: 20px;">6. Integrated Pharmacy and Inventory Management</h3>
+                <p>The pharmacy module is intrinsically linked with the physician's EMR. When a doctor prescribes medication, the order is instantly routed to the pharmacy queue. The system checks real-time inventory levels, alerts the pharmacist about near-expiry drugs, and automatically triggers reorder alerts to suppliers when stock falls below a predefined threshold. This ensures optimal inventory utilization, reduces wastage, and ensures that critical life-saving drugs are always available for patients in Ajmer.</p>
+            </div>
 
-        <h3 style="font-size: 1.6rem; font-weight: 600; color: #0D9488; margin-top: 25px; margin-bottom: 15px;">2. Advanced Interfacing with Automated Lab Instruments</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            The manual transcription of complex test results from diagnostic machines to computer software is a major operational bottleneck and a leading cause of typographical errors. Medical365 LIMS conquers this challenge with its advanced machine interfacing capabilities. The software seamlessly and securely connects with a vast array of automated analyzers—including biochemistry, hematology, and immunology machines—via standardized HL7 and ASTM protocols. This powerful bi-directional integration allows the software to push test orders directly to the machines and pull the precise results back automatically the instant the analysis concludes. By removing the human element from data transcription, laboratories can drastically reduce their <strong>Turnaround Time (TAT)</strong>, dramatically increase throughput, and allow highly skilled lab technicians to focus on complex analytical tasks rather than mundane data entry.
-        </p>
+            <div style="margin-bottom: 40px;">
+                <h2 style="color: var(--brand-blue); margin-bottom: 20px; font-size: 2.2rem;">Local Healthcare Impact: Transforming Ajmer's Medical Landscape</h2>
+                <p>The deployment of the Medical365 Multilingual HIMS is having a profound, localized impact on the healthcare ecosystem of Ajmer. Known for its rich cultural heritage, Ajmer is also rapidly evolving into a regional healthcare hub, attracting patients from surrounding towns and rural areas like Pushkar, Kishangarh, and Beawar. However, managing this influx of patients requires more than just clinical expertise; it demands robust administrative infrastructure. The introduction of advanced HIMS technology is bridging the gap between world-class medical talent and operational excellence in Ajmer.</p>
+                <p>For large multispecialty hospitals situated along the Jaipur Road and near the city center, the software has been instrumental in standardizing care protocols. By centralizing data, hospital administrators can generate real-time reports on patient demographics, disease prevalence, and departmental performance. This data-driven approach allows hospital management in Ajmer to make informed decisions regarding resource allocation, such as expanding the cardiology wing during the winter months or increasing staffing in the emergency department during local festivals when patient footfall surges.</p>
+                <p>Moreover, the local healthcare impact extends to the patient experience. Historically, patients in Ajmer have had to carry bulky files of medical reports from one specialist to another. With the Medical365 HIMS, citizens now benefit from a unified digital health identity. When an individual from a rural outskirt visits a clinic in Ajmer, the doctor can instantly pull up their complete medical history, provided they have given consent. This rapid access to information is particularly crucial in emergency situations where time is of the essence. The system's ability to communicate in Hindi ensures that patients fully understand their dosage instructions, post-operative care routines, and upcoming appointment schedules, thereby significantly improving clinical outcomes.</p>
+                <p>The platform also plays a crucial role in enabling Ajmer's hospitals to participate in national health schemes. By being ABDM compliant, local hospitals can seamlessly process patients under various government insurance schemes, expanding their reach to the economically weaker sections of society while ensuring the hospital is reimbursed promptly and accurately. This not only boosts the financial health of the medical institutions but also elevates the overall standard of public health in the Ajmer district. The Medical365 HIMS is, therefore, not just a software tool; it is a catalyst for social good, driving equity and efficiency in the regional healthcare sector.</p>
+            </div>
 
-        <h3 style="font-size: 1.6rem; font-weight: 600; color: #0D9488; margin-top: 25px; margin-bottom: 15px;">3. Rigorous Quality Control (QC) & Compliance Management</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            Maintaining unwavering quality standards is non-negotiable in the field of diagnostics; lives depend on it. Our LIMS features comprehensive, built-in Quality Control (QC) modules that continuously monitor instrument calibration and validation rules. It supports the automated generation of Levey-Jennings (LJ) charts and strict adherence to Westgard rules, intelligently flagging any anomalies, statistical outliers, or deviations in test results before they reach the patient. This ensures that pathologists only review and approve results that meet the highest standards of clinical accuracy. Furthermore, the system is purposely designed to assist laboratories in achieving and effortlessly maintaining prestigious <strong>NABL (National Accreditation Board for Testing and Calibration Laboratories)</strong> accreditation by meticulously logging all QC data, calibration histories, and maintaining unalterable digital audit trails.
-        </p>
+            <div style="margin-bottom: 40px;">
+                <h2 style="color: var(--brand-blue); margin-bottom: 20px; font-size: 2.2rem;">Frequently Asked Questions (FAQs)</h2>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="faq-item" style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-teal);">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--text-dark);">1. What makes Medical365 the best Multilingual HIMS in Ajmer?</h3>
+                        <p>Medical365 stands out because it is specifically localized for the region, offering comprehensive support for Hindi and English across both staff interfaces and patient communications. Combined with its offline-first architecture, ABDM compliance, and automated GST billing, it solves the unique operational challenges faced by hospitals in Ajmer.</p>
+                    </div>
+                    
+                    <div class="faq-item" style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-teal);">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--text-dark);">2. Does the software work if our hospital experiences an internet outage?</h3>
+                        <p>Yes, absolutely. The Medical365 HIMS is built on an offline-first cloud engine. It allows your hospital to continue all critical operations—including patient registration, billing, and EMR updates—without an active internet connection. Once the connection is restored, the data securely syncs to the cloud automatically.</p>
+                    </div>
 
-        <h3 style="font-size: 1.6rem; font-weight: 600; color: #0D9488; margin-top: 25px; margin-bottom: 15px;">4. Intelligent Inventory & Reagent Management</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            Running out of critical reagents or letting expensive kits expire can cripple laboratory operations and severely impact profitability. Medical365 LIMS includes a sophisticated inventory management module that tracks reagents, consumables, and test kits in real-time. It automatically calculates consumption based on the number of tests performed, sets proactive reorder alerts when stock levels fall below critical thresholds, and utilizes First-In-First-Out (FIFO) logic to minimize wastage due to expiration. This tight control over laboratory inventory ensures uninterrupted testing capabilities while significantly reducing overhead costs.
-        </p>
+                    <div class="faq-item" style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-teal);">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--text-dark);">3. How does the system ensure the security of patient data in compliance with the DPDP Act?</h3>
+                        <p>Patient data security is our highest priority. The system utilizes military-grade 256-bit AES encryption for data both at rest and in transit. Furthermore, it incorporates strict role-based access controls and detailed audit logs to ensure full compliance with the Digital Personal Data Protection (DPDP) Act 2023 and NABH guidelines.</p>
+                    </div>
 
-        <h3 style="font-size: 1.6rem; font-weight: 600; color: #0D9488; margin-top: 25px; margin-bottom: 15px;">5. Advanced Financial & Revenue Cycle Management (RCM)</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            Beyond clinical operations, the LIMS serves as a formidable financial and administrative engine. It completely automates patient billing, seamlessly handles complex multi-tiered pricing matrixes (accommodating customized B2B and B2C pricing, corporate health checkup discounts, and dynamic referral sharing arrangements), and tracks all incoming payments in real-time. The robust Revenue Cycle Management (RCM) dashboard provides lab owners and administrators with granular, actionable insights into daily cash collections, outstanding dues, and departmental profitability. By identifying and plugging revenue leaks and streamlining accounts receivable, the software directly and positively impacts the bottom line of the diagnostic center.
-        </p>
-        
-        <h3 style="font-size: 1.6rem; font-weight: 600; color: #0D9488; margin-top: 25px; margin-bottom: 15px;">6. Dedicated Phlebotomist App & Home Collection Management</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            With the rise of at-home healthcare, home sample collection has become a critical revenue stream for modern laboratories. Medical365 offers a specialized mobile application for phlebotomists. This app enables real-time route optimization, instant patient verification, digital payment collection, and on-the-spot barcode generation at the patient's doorstep. It ensures that the chain of custody for the sample is securely maintained from the patient's home all the way to the laboratory processing bench, offering unparalleled convenience and trust.
-        </p>
+                    <div class="faq-item" style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-teal);">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--text-dark);">4. Can the Medical365 HIMS integrate with our existing laboratory equipment?</h3>
+                        <p>Yes, the software features a highly adaptable Laboratory Information System (LIS) module that can integrate with most modern auto-analyzers and diagnostic equipment. This allows for direct transfer of test results into the patient's EMR, eliminating manual data entry and drastically reducing the possibility of transcription errors.</p>
+                    </div>
 
-        <h3 style="font-size: 1.6rem; font-weight: 600; color: #0D9488; margin-top: 25px; margin-bottom: 15px;">7. Patient Portals & Automated Omnichannel Reporting</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            In today’s fast-paced digital age, patient convenience and rapid communication are paramount. Medical365 LIMS automatically compiles professional, highly customized, and aesthetically pleasing diagnostic reports formatted with secure digital signatures and scannable QR codes for instant authenticity verification. The moment a report is medically approved by a pathologist, it is instantly and automatically dispatched via SMS, WhatsApp, and Email. Patients and referring doctors can also securely access current and historical medical records through a dedicated, secure online portal, significantly fostering transparency, reducing anxiety, and dramatically enhancing the overall healthcare experience.
-        </p>
+                    <div class="faq-item" style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-teal);">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--text-dark);">5. Is the software compliant with Ayushman Bharat Digital Mission (ABDM)?</h3>
+                        <p>Yes, Medical365 is fully ABDM compliant. The system enables hospitals in Ajmer to generate Ayushman Bharat Health Accounts (ABHA) for patients and facilitates the secure sharing of health records across the national digital health network, ensuring your facility is future-proof and aligned with government mandates.</p>
+                    </div>
 
-        <h2 style="font-size: 2.2rem; font-weight: 700; color: #1A56DB; margin-top: 40px; margin-bottom: 20px;">Local Healthcare Impact: Revolutionizing Diagnostics in Jaipur</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            Jaipur, fondly renowned as the Pink City, is rapidly transforming into a critical, high-volume healthcare hub in North India. Driven by an expanding local population, rising health awareness, and an increasing influx of medical tourists seeking quality care, the demand for highly reliable, impeccably accurate, and remarkably swift diagnostic services has never been greater. Laboratories situated across prominent and bustling areas such as <strong>Mansarovar, Vaishali Nagar, Malviya Nagar, Raja Park, and C-Scheme</strong> are aggressively scaling their daily operations to meet this unprecedented surge. However, attempting to scale operations using outdated, manual, or fragmented technological infrastructure invariably leads to operational chaos, severely delayed test reports, data entry inaccuracies, and ultimately, compromised patient care. This is precisely the critical juncture where Medical365 LIMS steps in to create a profoundly transformative local impact.
-        </p>
-        <p style="font-size: 1.1rem; margin-bottom: 20px;">
-            For diagnostic laboratories and hospitals operating in Jaipur, fully adopting Medical365 LIMS signifies decisively bridging the vast gap between traditional, paper-heavy diagnostic methods and world-class, globally recognized digital healthcare standards. The software actively empowers local pathologists, microbiologists, and biochemists to manage substantially higher daily sample volumes with unmatched accuracy and significantly reduced fatigue. During highly stressful seasonal disease outbreaks—such as the recurring spikes in Dengue, Malaria, or viral fevers that frequently affect the broader Rajasthan region—laboratories often experience a sudden, massive influx of test requests. Our highly scalable, robust cloud infrastructure ensures that these facilities can seamlessly process these peak loads without experiencing detrimental system lag, downtime, or administrative bottlenecks. The instantaneous automation of reporting ensures that Jaipur’s network of doctors and specialized clinicians receive vital diagnostic data faster than ever before, enabling them to make rapid, evidence-based treatment decisions that directly save lives and improve long-term patient outcomes across local communities.
-        </p>
-        <p style="font-size: 1.1rem; margin-bottom: 30px;">
-            Furthermore, as the Rajasthan state government and the central authorities heavily promote and mandate digital health initiatives, achieving strict compliance with national frameworks is no longer optional—it is essential for survival. Medical365 seamlessly empowers laboratories in Jaipur to generate ABHA (Ayushman Bharat Health Account) IDs for their patients and to link complex diagnostic records securely to the national grid. This ensures that patient data flows smoothly, securely, and transparently across the local and national healthcare continuum. By aggressively reducing administrative burdens, dramatically lowering long-term operational costs, and practically eliminating human diagnostic errors, Medical365 LIMS is not merely a software product; it is a powerful catalyst actively driving the comprehensive modernization of Jaipur’s entire diagnostic and healthcare landscape.
-        </p>
+                    <div class="faq-item" style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-teal);">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--text-dark);">6. How long does it take to implement the Medical365 HIMS in a multi-specialty hospital in Ajmer?</h3>
+                        <p>Implementation timelines vary based on the size of the facility, but our dedicated deployment team ensures a swift transition. For most mid-to-large multi-specialty hospitals in Ajmer, complete installation, data migration, and comprehensive staff training can be accomplished within 2 to 4 weeks, with minimal disruption to ongoing patient care.</p>
+                    </div>
 
-        <h2 style="font-size: 2.2rem; font-weight: 700; color: #1A56DB; margin-top: 40px; margin-bottom: 20px;">Frequently Asked Questions (FAQ)</h2>
-        
-        <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-            <h4 style="font-size: 1.3rem; font-weight: 600; color: #1E293B; margin-bottom: 10px;">1. Is Medical365 LIMS suitable for small pathology labs in Jaipur, or is it exclusively designed for large hospitals?</h4>
-            <p style="font-size: 1.1rem; color: #4B5563;">
-                Our LIMS is fundamentally built on a highly modular and incredibly scalable architecture, making it perfectly suitable for healthcare facilities of absolutely all sizes. Whether you run a single, independent pathology collection center in Mansarovar processing fifty samples a day, or you manage a large, interconnected chain of diagnostic centers processing thousands of samples across Rajasthan, the software can be precisely customized to fit your specific workflow complexity and budget requirements.
-            </p>
-        </div>
-
-        <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-            <h4 style="font-size: 1.3rem; font-weight: 600; color: #1E293B; margin-bottom: 10px;">2. How exactly does the software assist our laboratory in achieving and maintaining NABL accreditation?</h4>
-            <p style="font-size: 1.1rem; color: #4B5563;">
-                Medical365 LIMS is meticulously engineered with stringent NABL compliance guidelines at its very foundation. It fully automates crucial quality control processes, automatically generates complex Levey-Jennings (LJ) charts, tracks equipment calibration and maintenance schedules with automated alerts, and maintains a rigid, unalterable digital audit trail for all user actions and system changes. This digitized, meticulously organized record-keeping drastically simplifies the grueling NABL audit process, ensuring your lab is always inspection-ready.
-            </p>
-        </div>
-
-        <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-            <h4 style="font-size: 1.3rem; font-weight: 600; color: #1E293B; margin-bottom: 10px;">3. Can the LIMS integrate directly with our existing, specialized automated blood analyzers and lab equipment?</h4>
-            <p style="font-size: 1.1rem; color: #4B5563;">
-                Yes, absolutely. Our software features advanced, highly reliable bi-directional interfacing capabilities. It seamlessly connects with a comprehensive range of modern laboratory instruments—including complex Biochemistry, Hematology, and Immunology analyzers—utilizing standard HL7 and ASTM communication protocols. This complete integration entirely eliminates the need for manual data entry, prevents transcription errors, and drastically reduces report turnaround times.
-            </p>
-        </div>
-
-        <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-            <h4 style="font-size: 1.3rem; font-weight: 600; color: #1E293B; margin-bottom: 10px;">4. How secure is the highly sensitive patient data that is stored on your cloud servers?</h4>
-            <p style="font-size: 1.1rem; color: #4B5563;">
-                Data security and patient privacy are our absolute highest priorities. We utilize military-grade 256-bit AES encryption to protect all data both at rest and while in transit over the internet. Our state-of-the-art cloud infrastructure boasts a 99.9% guaranteed uptime with multiple automated geographic backups. Furthermore, the entire platform is fully compliant with stringent ISO 27001 security standards and the Indian DPDP Act 2023, ensuring utmost privacy and legal compliance for all medical records.
-            </p>
-        </div>
-
-        <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-            <h4 style="font-size: 1.3rem; font-weight: 600; color: #1E293B; margin-bottom: 10px;">5. Do you provide localized, on-the-ground support and hands-on training for our lab staff in Jaipur?</h4>
-            <p style="font-size: 1.1rem; color: #4B5563;">
-                Absolutely. We firmly believe that the most advanced technology is only as effective as the people who operate it. Our implementation process includes comprehensive, highly practical on-site training sessions for your lab technicians, resident pathologists, and front-desk administrative staff right in your Jaipur facility. Additionally, we provide ongoing, highly responsive, dedicated customer support to ensure your daily operations remain smooth and completely uninterrupted.
-            </p>
-        </div>
-        
-        <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-            <h4 style="font-size: 1.3rem; font-weight: 600; color: #1E293B; margin-bottom: 10px;">6. Can our patients effortlessly receive their finalized lab reports via WhatsApp?</h4>
-            <p style="font-size: 1.1rem; color: #4B5563;">
-                Yes, indeed. The very moment a certified pathologist electronically signs off on a diagnostic report within the system, the LIMS can automatically dispatch a highly secure, password-protected PDF copy directly to the patient's registered WhatsApp number or Email address. This rapid, frictionless digital delivery significantly improves patient satisfaction, eliminates the need for return visits just to collect reports, and drastically minimizes overcrowding at your facility’s front desk.
-            </p>
-        </div>
-
-        <div class="faq-item" style="margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-            <h4 style="font-size: 1.3rem; font-weight: 600; color: #1E293B; margin-bottom: 10px;">7. Is the Medical365 system fully compatible with the government's Ayushman Bharat Digital Mission (ABDM)?</h4>
-            <p style="font-size: 1.1rem; color: #4B5563;">
-                Yes, Medical365 LIMS is proudly and fully ABDM compliant. It features integrated modules that allow your staff to seamlessly create and verify ABHA (Ayushman Bharat Health Account) IDs for your patients. Furthermore, it allows you to securely link and push their vital diagnostic test reports directly to their centralized national health records, ensuring that your laboratory stays well ahead of government regulatory mandates and actively contributes to building India’s interconnected digital health ecosystem.
-            </p>
-        </div>
-        
-        <div class="seo-conclusion" style="margin-top: 40px; padding: 25px; background-color: #f8fafc; border-radius: 12px; border-left: 5px solid #1A56DB;">
-            <p style="font-size: 1.15rem; color: #1E293B; margin: 0; font-weight: 500;">
-                By integrating Medical365's industry-leading Laboratory Information Management System, diagnostic centers, pathology labs, and hospitals throughout Jaipur can immediately achieve unprecedented levels of operational efficiency, clinical accuracy, and overall patient satisfaction. Step confidently into the advanced future of automated, intelligent diagnostics and ensure that your laboratory securely remains at the absolute pinnacle of medical excellence. Let our cutting-edge technology handle the immense complexities of data and workflow management, so your team can focus entirely on what truly matters: delivering precise, rapid, and life-saving diagnostic care to the community.
-            </p>
+                    <div class="faq-item" style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-teal);">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--text-dark);">7. Do you provide on-site technical support and training in Ajmer?</h3>
+                        <p>Absolutely. We believe that technology is only as good as the people using it. Medical365 provides extensive on-site training sessions for doctors, nurses, and administrative staff in Ajmer. Additionally, we offer robust, round-the-clock localized technical support to ensure your hospital's operations always run smoothly without technical hiccups.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-'''
+"""
 
-with open(target_file, 'r', encoding='utf-8') as f:
+file_path = "C:/Users/USER/Downloads/website medical365 html-main/websitehtml-main/multilingual-hims-ajmer.html"
+with open(file_path, "r", encoding="utf-8") as f:
     content = f.read()
 
-marker = '    </section>'
-start_idx = content.find('class="hero-section"')
-if start_idx != -1:
-    hero_section_end = content.find(marker, start_idx)
-    if hero_section_end != -1:
-        insert_pos = hero_section_end + len(marker)
-        new_content = content[:insert_pos] + '\n' + html_content + content[insert_pos:]
-        with open(target_file, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-        print('Content injected successfully.')
-    else:
-        print('Could not find </section> after hero-section.')
+# Find the closing </section> of hero-section
+# The exact match is:
+#     </section>
+# 
+#     <!-- ══════════════════════════════════════════════════
+#          BENEFITS / AGITATION
+#     ══════════════════════════════════════════════════ -->
+
+search_str = '</section>\n\n    <!-- ══════════════════════════════════════════════════\n         BENEFITS / AGITATION'
+
+if search_str in content:
+    new_content = content.replace('</section>\n\n    <!-- ══════════════════════════════════════════════════\n         BENEFITS / AGITATION', f'</section>\n\n{seo_html}\n    <!-- ══════════════════════════════════════════════════\n         BENEFITS / AGITATION', 1)
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(new_content)
+    print("Success")
 else:
-    print('Could not find class="hero-section"')
+    print("Could not find the target string.")
+

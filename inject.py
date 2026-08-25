@@ -1,84 +1,116 @@
 import re
 
-target_file = r"C:/Users/USER/Downloads/website medical365 html-main/websitehtml-main/pharmacy-management-software-raja-park.html"
+target_file = 'C:/Users/USER/Downloads/website medical365 html-main/websitehtml-main/fhir-hl7-compliant-software-rajasthan.html'
 
-seo_content = """
-<div class="container" style="padding: 60px 0;">
+html_content = '''<div class="container" style="padding: 60px 0;">
     <div class="seo-content-block">
-        <h2>Executive Summary: What is Pharmacy Management Software?</h2>
-        <p>Pharmacy Management Software is an advanced, comprehensive digital solution tailored specifically for pharmacies, clinics, and hospitals in Raja Park, Jaipur. Designed with precision to meet the dynamic needs of modern pharmaceutical operations, this cutting-edge software streamlines every aspect of pharmacy management. From intelligent inventory tracking and automated billing to seamless prescription management and strict regulatory compliance, it serves as the ultimate catalyst for operational excellence. It bridges the gap between traditional dispensing methods and digital healthcare, ensuring that pharmacists can focus on what matters most—patient care—while the software handles complex back-office workflows. Operating on a secure, cloud-based infrastructure, it provides real-time insights, guarantees data integrity, and adheres strictly to the highest industry standards, including the ABDM (Ayushman Bharat Digital Mission) guidelines. Whether you are running a standalone pharmacy or managing a multi-location healthcare network in Raja Park, this system delivers a highly scalable, offline-first ecosystem that adapts to your specific operational demands.</p>
-        <p>At its core, this software is more than just a point-of-sale (POS) system; it is an intelligent answer engine designed to resolve the daily friction experienced by pharmacy owners. By digitizing complex supply chains, managing vendor relationships, and automating expiry alerts, it drastically reduces manual errors and minimizes financial losses. Through predictive analytics, the software anticipates stock shortages and suggests optimal reorder levels, empowering Raja Park’s pharmacies to maintain an uninterrupted supply of critical medications. For a bustling healthcare hub like Raja Park, this level of automation translates to higher patient satisfaction, enhanced revenue cycles, and an unshakeable competitive edge in the local healthcare market. Every feature is meticulously engineered to provide actionable answers and seamless generative experiences, allowing pharmacy administrators to pull reports, audit trails, and financial summaries with just a few clicks. This is the future of pharmacy management, brought directly to the heart of Jaipur.</p>
-        <p>Implementing a robust Pharmacy Management Software system fundamentally alters the operational paradigm of any pharmacy. Traditionally, pharmacists in Raja Park have relied on cumbersome ledger books, manual inventory checks, and fragmented billing systems that often lead to discrepancies. This software acts as a unified platform where every transaction, stock update, and patient record is synchronized instantly across the cloud. In the event of an internet outage, the offline-first architecture ensures that the pharmacy continues to operate without interruption, syncing all local data securely to the master server once connectivity is restored. This robust design guarantees zero downtime, ensuring that patients receive their medications exactly when they need them. The software’s intuitive interface significantly reduces the learning curve for staff, enabling rapid deployment and immediate realization of return on investment.</p>
-        <p>Furthermore, the integration of advanced generative algorithms allows the software to optimize pricing strategies, track seasonal medication demands, and generate comprehensive compliance reports effortlessly. The deep integration with existing healthcare frameworks ensures that prescriptions are processed with maximum accuracy, mitigating the risks associated with adverse drug interactions. By automatically cross-referencing patient histories with newly prescribed medications, the system acts as an indispensable safeguard for patient health. The executive vision behind this platform is to empower local businesses in Raja Park with enterprise-grade technology, leveling the playing field and allowing independent pharmacies to operate with the same efficiency as large corporate chains.</p>
+        <h2 style="font-size: 2.5rem; color: #1a365d; margin-bottom: 24px;">Executive Summary: What is FHIR & HL7 Compliant Software?</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            In the rapidly evolving landscape of digital healthcare, <strong>FHIR (Fast Healthcare Interoperability Resources) and HL7 (Health Level Seven) Compliant Software</strong> represents the pinnacle of medical data exchange and interoperability. At its core, this software is a standardized, highly secure framework designed to facilitate the seamless transfer, retrieval, and management of electronic health records (EHR) and administrative data across diverse healthcare systems. For hospitals, clinics, and diagnostic centers, utilizing FHIR and HL7 compliant systems means breaking down data silos, ensuring that patient information moves fluidly and securely between different departments, external laboratories, and even entirely different healthcare institutions.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            Specifically tailored for the Indian healthcare ecosystem, particularly in states like Rajasthan, this software forms the backbone of the Ayushman Bharat Digital Mission (ABDM). By adhering to these global standards, healthcare providers ensure they are not only meeting current regulatory mandates but are also future-proofing their IT infrastructure. This compliance guarantees that patient identities, medical histories, diagnostic reports, and billing information are synchronized in real-time, significantly reducing manual data entry errors, enhancing clinical decision-making, and ultimately improving patient outcomes. Whether it is a small rural clinic in Rajasthan or a multi-specialty hospital in Jaipur, FHIR and HL7 compliant software ensures that every piece of medical data is treated with the highest levels of privacy, accuracy, and interoperability.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            The transition to such advanced interoperability frameworks is no longer just a technological upgrade; it is a strategic imperative. As patients become more mobile and healthcare delivery becomes increasingly decentralized, the ability to instantly and securely share clinical summaries, immunization records, and medication histories across different platforms is critical. HL7 compliance ensures that the structure and semantics of the data are universally understood, while FHIR provides the modern web-based APIs (Application Programming Interfaces) that make this data exchange as simple and secure as online banking. Together, they create a cohesive, patient-centric digital health environment that empowers both providers and patients.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 40px;">
+            Furthermore, in the context of the Digital Personal Data Protection (DPDP) Act 2023, utilizing software that natively supports these standards is essential for maintaining strict data governance, consent management, and audit trails. Medical365's solution brings this enterprise-grade capability to healthcare providers across Rajasthan, ensuring they can participate fully in the national digital health grid while maintaining complete control and security over their institutional data.
+        </p>
 
-        <h2>Core Features & Benefits</h2>
-        <h3>Intelligent Inventory Management</h3>
-        <p>One of the standout features of our Pharmacy Management Software is its intelligent inventory management module. Pharmacies in Raja Park deal with thousands of SKUs daily, and keeping track of stock levels manually is virtually impossible. This software provides real-time visibility into inventory, categorizing medications by batch, supplier, and expiry date. The automated alert system notifies staff well in advance of approaching expiration dates, drastically reducing wastage and ensuring regulatory compliance. Moreover, the dynamic stock replenishment feature analyzes historical sales data to suggest the exact quantities required for reordering, preventing both overstocking and stockouts. This not only optimizes shelf space but also frees up significant capital that would otherwise be tied up in stagnant inventory.</p>
-        <p>The system's advanced barcoding and batch-tracking capabilities make the receiving and auditing of new stock an effortless process. Staff can simply scan incoming shipments, and the software instantly updates the central database, verifying quantities against purchase orders. This granular level of tracking is essential for maintaining accurate financial records and simplifying the auditing process. By automating these traditionally labor-intensive tasks, pharmacies can reallocate their workforce to more value-added activities, such as patient counseling and expanding clinical services. The direct benefit is a leaner, more agile operation that responds swiftly to the changing demands of the Raja Park community.</p>
+        <h2 style="font-size: 2.2rem; color: #1a365d; margin-bottom: 24px;">Core Features & Benefits of FHIR HL7 Compliance</h2>
+        
+        <h3 style="font-size: 1.5rem; color: #2b6cb0; margin-bottom: 16px;">1. Unprecedented Data Interoperability</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            The primary benefit of adopting FHIR and HL7 standards is the elimination of fragmented care. Historically, patient data has been trapped within proprietary systems, making it difficult for a specialist to access records generated by a general practitioner. With HL7 standards, data formatting is standardized, and with FHIR, this data is exposed via secure, RESTful APIs. This means a laboratory system can automatically and instantly push test results into the central Electronic Medical Record (EMR) system, attaching them to the correct patient profile without any manual intervention. This real-time synchronization drastically reduces waiting times for diagnoses and accelerates treatment planning.
+        </p>
 
-        <h3>Seamless Billing and Point of Sale (POS)</h3>
-        <p>The POS interface is designed for maximum speed and accuracy, ensuring that the checkout process is as smooth as possible for patients. In a high-traffic area like Raja Park, minimizing wait times is crucial for customer retention. The billing module supports multi-currency transactions, various payment gateways, and seamless integration with digital wallets, reflecting the modern consumer's payment preferences. It automatically calculates complex discount structures, applies loyalty points, and handles insurance claims in real-time, removing the burden of manual calculations from the pharmacist. This not only speeds up the transaction but also eliminates the possibility of human error in pricing.</p>
-        <p>Beyond simple transaction processing, the billing system is deeply integrated with the inventory and CRM modules. Every sale instantly updates stock levels and patient purchase histories, providing a 360-degree view of the customer's journey. The system effortlessly generates GST-compliant invoices and can handle complex tax calculations with ease. For pharmacies managing corporate accounts or wholesale distribution, the software offers specialized billing modes that accommodate bulk pricing and extended credit terms. This flexibility ensures that the software can scale to meet the diverse financial requirements of any pharmacy operation, driving revenue growth and improving cash flow management.</p>
+        <h3 style="font-size: 1.5rem; color: #2b6cb0; margin-bottom: 16px;">2. Ayushman Bharat Digital Mission (ABDM) Readiness</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            In India, ABDM is revolutionizing healthcare delivery by creating a unified national digital health ecosystem. A foundational requirement for participating in ABDM is the ability to generate, store, and share health records using standardized formats. Medical365's FHIR and HL7 compliant software ensures that hospitals in Rajasthan can seamlessly integrate with the ABDM grid. This enables the creation of Ayushman Bharat Health Accounts (ABHA), allowing patients to link their health records digitally. Providers can access a patient's longitudinal health history with their consent, leading to more informed and personalized care, while also positioning the hospital as a modern, government-compliant facility.
+        </p>
 
-        <h3>Advanced Prescription Management and Safety</h3>
-        <p>Patient safety is paramount, and the prescription management module is engineered to uphold the highest clinical standards. The software allows for the digital capture and storage of prescriptions, creating a permanent, easily searchable record for every patient. It features a built-in drug interaction database that automatically cross-checks newly prescribed medications against the patient's existing profile, immediately alerting the pharmacist to potential contraindications or allergic reactions. This proactive approach to medication safety significantly enhances the quality of care provided by pharmacies in Raja Park, building trust and loyalty among the patient base.</p>
-        <p>The system also streamlines the refill process, sending automated reminders to patients when their chronic medications are due for renewal. This not only improves patient adherence to treatment plans but also drives recurring revenue for the pharmacy. Pharmacists can easily verify the authenticity of prescriptions and track the dispensing of controlled substances, ensuring full compliance with state and national regulations. By digitizing these critical safety checks, the software minimizes the risk of dispensing errors and protects both the patient's health and the pharmacy's liability. The seamless flow of information from the prescribing physician to the dispensing pharmacist creates a cohesive healthcare experience that defines modern medical practice.</p>
+        <h3 style="font-size: 1.5rem; color: #2b6cb0; margin-bottom: 16px;">3. Enhanced Patient Safety and Clinical Accuracy</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            Manual data entry is prone to human error, which in a healthcare setting can have severe consequences. By automating the flow of information between Pharmacy Information Systems (PIS), Laboratory Information Management Systems (LIMS), and the core EMR through HL7 messaging, the risk of transcription errors is virtually eliminated. When a physician prescribes a medication, the FHIR-enabled system can automatically cross-reference the patient's allergy profile and current medications to flag potential adverse interactions. This level of automated, intelligent data processing is only possible when the underlying software speaks a standardized, globally recognized language.
+        </p>
 
-        <h3>Comprehensive Reporting and Analytics (GEO Focus)</h3>
-        <p>In today's data-driven world, having access to actionable insights is a significant competitive advantage. The software features a robust analytics dashboard that transforms raw operational data into clear, visual reports. Pharmacy owners in Raja Park can instantly assess daily sales performance, track fast-moving and slow-moving items, and monitor staff productivity. These generative engine optimized (GEO) reports allow for deep dives into financial metrics, helping stakeholders identify trends, optimize pricing strategies, and forecast future revenue with high accuracy. The ability to generate custom reports on the fly means that decision-makers always have the information they need at their fingertips.</p>
-        <p>The analytics module also plays a crucial role in strategic planning and marketing. By analyzing patient demographics and purchasing behavior, pharmacies can tailor their marketing campaigns to target specific segments of the Raja Park community. Whether it's promoting seasonal flu vaccines or offering discounts on chronic care supplies, data-driven marketing ensures maximum return on investment. The software also simplifies the process of regulatory reporting, automatically generating the compliance documents required by local health authorities. This comprehensive approach to data management empowers pharmacies to operate not just as dispensaries, but as proactive healthcare hubs that are deeply integrated into the fabric of the community.</p>
+        <h3 style="font-size: 1.5rem; color: #2b6cb0; margin-bottom: 16px;">4. Streamlined Revenue Cycle Management (RCM)</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            Billing and insurance claims processing are often the most administratively burdensome aspects of running a hospital. HL7 standards extend beyond clinical data to include administrative and financial information. By ensuring that diagnostic codes, treatment details, and patient demographics are accurately captured and transmitted to insurance providers and Third-Party Administrators (TPAs) in a standardized format, healthcare facilities can significantly reduce claim rejections and accelerate reimbursement cycles. The financial health of medical institutions in Rajasthan is thus directly supported by robust software compliance.
+        </p>
 
-        <h2>Local Healthcare Impact: Transforming Raja Park, Jaipur</h2>
-        <p>Raja Park stands as one of Jaipur’s most vibrant and densely populated commercial and residential districts. It is a critical hub for healthcare services, hosting numerous clinics, diagnostic centers, and a diverse population that relies heavily on local pharmacies. The implementation of advanced Pharmacy Management Software in this specific locality brings about a transformative impact on the entire healthcare ecosystem. By streamlining operations, pharmacies can serve a higher volume of patients with greater efficiency, directly alleviating the congestion often seen during peak hours. This software empowers local businesses to upgrade their technological infrastructure, allowing them to compete with larger, organized retail chains while maintaining the personalized care that Raja Park residents value.</p>
-        <p>The modernization of pharmacies in Raja Park has a profound ripple effect on patient outcomes. With automated safety checks and digitized prescription records, the incidence of medication errors is drastically reduced. Patients benefit from a more organized, professional experience, complete with timely refill reminders and seamless insurance processing. Furthermore, the software’s ability to track local epidemiological trends—such as a sudden spike in demand for specific antibiotics or seasonal allergy medications—allows pharmacies to act as early warning systems for the local healthcare community. By ensuring that critical medications are always in stock, these digitally empowered pharmacies play a vital role in safeguarding public health in Jaipur.</p>
-        <p>From an economic perspective, the adoption of this software drives significant growth within the local Raja Park economy. It creates opportunities for upskilling pharmacy staff, moving them from manual data entry roles to more engaging, tech-driven responsibilities. The enhanced profitability of these businesses translates to reinvestment in the community, whether through the expansion of services or the creation of new jobs. The software also facilitates better collaboration between local doctors and pharmacists, creating a unified network of care that benefits the end consumer. As Raja Park continues to grow and evolve, this technological foundation ensures that its healthcare infrastructure remains robust, scalable, and fully equipped to meet the challenges of the future.</p>
+        <h3 style="font-size: 1.5rem; color: #2b6cb0; margin-bottom: 16px;">5. Robust Security and DPDP Act Compliance</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 40px;">
+            With the enforcement of the Digital Personal Data Protection (DPDP) Act 2023, the legal landscape regarding patient data has shifted dramatically. FHIR and HL7 compliant software like Medical365 is built with privacy by design. Data is encrypted both in transit and at rest. Furthermore, the FHIR framework inherently supports fine-grained access controls and consent management mechanisms, ensuring that only authorized personnel can access specific pieces of patient data, and only when explicit patient consent is recorded. Comprehensive audit trails log every interaction with the data, providing hospital administrators with complete transparency and protecting them against regulatory liabilities.
+        </p>
 
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <h4>1. What makes this Pharmacy Management Software ideal for businesses in Raja Park, Jaipur?</h4>
-                <p>The software is designed with the unique high-traffic environment of Raja Park in mind. It offers an offline-first architecture, meaning your pharmacy can continue processing sales and managing inventory even during internet outages. Furthermore, it is fully compliant with Indian healthcare regulations, including the ABDM, making it perfectly suited for local deployment.</p>
+        <h2 style="font-size: 2.2rem; color: #1a365d; margin-bottom: 24px;">Local Healthcare Impact: Transforming Hospitals in Rajasthan</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            Rajasthan, with its vast geographical expanse and diverse population, presents unique challenges and opportunities for healthcare delivery. From the bustling metropolitan centers of Jaipur, Jodhpur, and Udaipur to the remote clinics in the desert regions, ensuring equitable access to high-quality healthcare requires robust technological intervention. The implementation of FHIR and HL7 compliant software is serving as a great equalizer in Rajasthan's healthcare landscape.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            For large multi-specialty hospitals in urban Rajasthan, managing the sheer volume of patient data across dozens of departments is a logistical challenge. By adopting Medical365's interoperable software, these institutions have been able to centralize their operations. A patient undergoing surgery in Jaipur can have their pre-op lab results, radiology imaging, and anesthesiology notes perfectly synchronized through HL7 interfaces, ensuring the surgical team has a complete, real-time picture of the patient's health. This efficiency not only saves critical time but also optimizes resource allocation, allowing hospitals to treat more patients effectively.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+            In rural and semi-urban areas of Rajasthan, the impact is equally profound, particularly concerning telemedicine and referrals. When a primary care clinic in a remote district identifies a complex case requiring specialist intervention in a major city, FHIR compliance allows the seamless transfer of the patient's complete digital dossier to the referral hospital. The specialist can review the case history, lab results, and initial diagnoses before the patient even arrives, facilitating immediate and targeted care. Furthermore, Medical365's offline-first capabilities ensure that even in areas with intermittent internet connectivity, data capture continues uninterrupted, syncing securely to the central cloud servers once connectivity is restored.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin-bottom: 40px;">
+            The state government of Rajasthan has also been proactive in pushing for digital health integration. Hospitals utilizing software that natively supports ABDM standards are better positioned to participate in state-sponsored health insurance schemes like the Chiranjeevi Yojana. Standardized data exchange streamlines the approval processes for these schemes, ensuring that marginalized populations receive timely care without being marginalized by administrative delays. By embracing FHIR and HL7 compliant systems, healthcare providers in Rajasthan are not just upgrading their IT; they are actively participating in a statewide mission to make healthcare more accessible, transparent, and efficient for every citizen.
+        </p>
+
+        <div style="background: #f8fafc; border-radius: 12px; padding: 40px; margin-top: 40px; border: 1px solid #e2e8f0;">
+            <h2 style="font-size: 2rem; color: #1a365d; margin-bottom: 30px; text-align: center;">Frequently Asked Questions (FAQ)</h2>
+            
+            <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 1.25rem; color: #2b6cb0; margin-bottom: 10px; font-weight: 700;">1. What exactly does it mean for software to be FHIR and HL7 compliant?</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #4a5568;">Compliance means the software strictly follows international standards set by Health Level Seven International (HL7) for the transfer of clinical and administrative data. FHIR (Fast Healthcare Interoperability Resources) is the latest standard utilizing modern web technologies to allow different healthcare systems to communicate and share patient records seamlessly and securely.</p>
             </div>
-            <div class="faq-item">
-                <h4>2. How does the software handle inventory and stock expiration?</h4>
-                <p>It utilizes intelligent inventory tracking that automatically categorizes medications by batch and expiry date. The system sends proactive alerts well before items expire, allowing you to prioritize their sale or return them to suppliers, thereby minimizing financial losses and ensuring safety.</p>
+
+            <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 1.25rem; color: #2b6cb0; margin-bottom: 10px; font-weight: 700;">2. Why is this compliance mandatory for hospitals in Rajasthan?</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #4a5568;">While historically recommended, it is becoming practically mandatory due to the rollout of the Ayushman Bharat Digital Mission (ABDM). To integrate with the national digital health grid, create ABHA IDs, and ensure compliance with the upcoming Digital Personal Data Protection (DPDP) Act, hospitals must use standardized, interoperable software frameworks.</p>
             </div>
-            <div class="faq-item">
-                <h4>3. Can the software integrate with existing accounting and GST systems?</h4>
-                <p>Yes, the software features seamless integration with standard accounting practices and automatically generates GST-compliant invoices. It handles complex tax calculations and provides comprehensive financial reports that can be easily exported for your accounting team.</p>
+
+            <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 1.25rem; color: #2b6cb0; margin-bottom: 10px; font-weight: 700;">3. Will transitioning to FHIR compliant software disrupt our current hospital operations?</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #4a5568;">No, Medical365 is designed for smooth transitions. Our specialized regional deployment teams in Rajasthan handle the end-to-end data migration from your legacy systems, ensure all LIMS/PACS integrations are tested, and provide comprehensive on-site training to staff to ensure zero operational downtime.</p>
             </div>
-            <div class="faq-item">
-                <h4>4. Is the patient data secure and compliant with the DPDP Act 2023?</h4>
-                <p>Absolutely. The platform employs enterprise-grade 256-bit AES encryption for all data, both in transit and at rest. It is fully compliant with the Digital Personal Data Protection (DPDP) Act 2023, ensuring that all patient information is handled with the utmost security and privacy.</p>
+
+            <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 1.25rem; color: #2b6cb0; margin-bottom: 10px; font-weight: 700;">4. How does HL7 compliance improve diagnostic and lab integrations?</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #4a5568;">HL7 provides a universal language for lab machines and software to communicate. When a blood test is processed, the machine uses HL7 messaging to send the results directly into the patient's Electronic Medical Record in real-time, eliminating manual entry errors and speeding up the diagnostic process.</p>
             </div>
-            <div class="faq-item">
-                <h4>5. Does the software provide alerts for adverse drug interactions?</h4>
-                <p>Yes, the prescription management module includes a built-in clinical database that cross-references newly prescribed medications against the patient’s existing profile. It instantly alerts the pharmacist to any potential contraindications or allergic reactions, significantly enhancing patient safety.</p>
+
+            <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 1.25rem; color: #2b6cb0; margin-bottom: 10px; font-weight: 700;">5. Is patient data secure when it is being shared across different systems?</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #4a5568;">Absolutely. FHIR standards inherently utilize advanced encryption protocols (like TLS) for data transmission. Furthermore, data sharing is strictly governed by patient consent mechanisms. Information is only accessed by authorized personnel following explicit patient approval, ensuring full compliance with Indian privacy laws.</p>
             </div>
-            <div class="faq-item">
-                <h4>6. How difficult is it to migrate data from our old system to this new software?</h4>
-                <p>Migration is handled by our specialized regional deployment teams. We provide comprehensive data migration services to ensure that all your existing inventory, patient records, and financial data are seamlessly and securely transferred to the new platform with zero downtime.</p>
+
+            <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 1.25rem; color: #2b6cb0; margin-bottom: 10px; font-weight: 700;">6. Can a small clinic in Rajasthan afford enterprise-grade compliant software?</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #4a5568;">Yes, Medical365 offers scalable, cloud-based solutions. This means small clinics do not need to invest in expensive on-premise servers or IT teams. You access world-class, compliant infrastructure through a simple subscription model, allowing clinics of all sizes to modernize affordably.</p>
             </div>
-            <div class="faq-item">
-                <h4>7. Will we receive on-site training for our staff in Jaipur?</h4>
-                <p>Yes, we offer comprehensive on-site deployment and training for your staff directly at your facility in Raja Park. Our goal is to ensure that your team is fully comfortable with the software, reducing the learning curve and maximizing operational efficiency from day one.</p>
+
+            <div style="margin-bottom: 0;">
+                <h4 style="font-size: 1.25rem; color: #2b6cb0; margin-bottom: 10px; font-weight: 700;">7. How does this technology help with medical billing and insurance claims?</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #4a5568;">Compliant software standardizes all clinical coding (such as ICD-10 and SNOMED CT) and securely transmits this data directly to insurance providers or the state government portals (like Chiranjeevi Yojana). This automation reduces claim rejections, accelerates approvals, and significantly improves the hospital's Revenue Cycle Management.</p>
             </div>
         </div>
     </div>
-</div>
-"""
+</div>'''
 
-with open(target_file, "r", encoding="utf-8") as f:
+with open(target_file, 'r', encoding='utf-8') as f:
     content = f.read()
 
-# Find </section> after <section class="hero-section">
-# <section class="hero-section"> starts at line 791 and ends at 852.
-match = re.search(r'(<section class="hero-section">.*?</section>)', content, flags=re.DOTALL)
+pattern = r'(<section class="hero-section">.*?</section>)'
+match = re.search(pattern, content, re.DOTALL)
 if match:
-    hero_block = match.group(1)
-    new_content = content.replace(hero_block, hero_block + "\n" + seo_content)
-    with open(target_file, "w", encoding="utf-8") as f:
+    hero_section_end = match.end()
+    new_content = content[:hero_section_end] + '\n' + html_content + content[hero_section_end:]
+    
+    with open(target_file, 'w', encoding='utf-8') as f:
         f.write(new_content)
-    print("Injection successful.")
+    print("Successfully injected the SEO content.")
 else:
     print("Could not find hero-section.")
