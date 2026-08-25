@@ -1,116 +1,120 @@
 const fs = require('fs');
 
-const targetFile = 'C:/Users/USER/Downloads/website medical365 html-main/websitehtml-main/operation-theater-management-alwar.html';
+const targetFile = 'C:/Users/USER/Downloads/website medical365 html-main/websitehtml-main/hospital-ledger-accounting-software-bikaner.html';
 
-const htmlContent = `
+const htmlBlock = `
 <div class="container" style="padding: 60px 0;">
-    <div class="seo-content-block" style="color: #1E293B; line-height: 1.8; font-size: 1.1rem;">
+    <div class="seo-content-block">
         
-        <h2 style="font-size: 2.25rem; font-weight: 800; color: #1A56DB; margin-bottom: 24px;">Executive Summary: What is the Operation Theater Management System in Alwar?</h2>
+        <h2>Hospital Ledger & Accounting Software in Bikaner: A Comprehensive Guide</h2>
         
-        <p>The <strong>Operation Theater Management System in Alwar</strong> is a comprehensive, cloud-based digital solution specifically designed to streamline, optimize, and secure the complex workflows of surgical departments in healthcare facilities across Alwar, Rajasthan. At its core, this advanced software application acts as the digital nervous system for your operation theaters (OT). It meticulously manages every aspect of the surgical journey—from pre-operative scheduling and resource allocation to intra-operative tracking, anesthesia documentation, and post-operative care management. For hospital administrators, surgeons, anesthetists, and nursing staff in Alwar, it provides a centralized, real-time dashboard that eliminates the chaos of manual scheduling, reduces surgical delays, and significantly minimizes the risk of human error in critical environments.</p>
+        <h3>Executive Summary: What is Hospital Ledger & Accounting Software?</h3>
+        <p>In the rapidly evolving healthcare landscape of Bikaner, managing financial records with precision, accuracy, and compliance is more critical than ever. Hospital Ledger & Accounting Software is a specialized digital financial management system designed exclusively for the healthcare industry. Unlike generic accounting tools, this software is engineered to handle the unique financial workflows of hospitals, clinics, and multi-specialty healthcare centers. It integrates core accounting principles with healthcare-specific operations, encompassing patient billing, insurance claims processing, inventory management, pharmacy accounting, and payroll for medical staff.</p>
+        <p>At its core, a hospital ledger system acts as the central repository for all financial transactions occurring within a healthcare facility. It tracks inpatient and outpatient revenues, monitors department-wise expenses, and generates real-time financial statements. This ensures that hospital administrators in Bikaner have an accurate, up-to-the-minute overview of their financial health. Furthermore, modern hospital accounting software is built to be fully compliant with regional and national regulations, including the Digital Personal Data Protection (DPDP) Act 2023 and the Ayushman Bharat Digital Mission (ABDM). By automating complex calculations, such as GST application on medical services and supplies, the software minimizes human error, prevents revenue leakage, and significantly reduces the administrative burden on hospital staff. Ultimately, Hospital Ledger & Accounting Software empowers healthcare providers to focus less on paperwork and more on delivering exceptional patient care, secure in the knowledge that their financial operations are optimized, transparent, and legally compliant.</p>
+        <p>For healthcare institutions in Bikaner, adopting specialized accounting software means transitioning from outdated manual ledgers or disjointed spreadsheets to a unified, cloud-based platform. This transition not only streamlines daily financial operations but also provides strategic insights through advanced analytics and reporting features. Whether managing a small private clinic in Sadul Ganj or a large multi-specialty hospital near PBM Hospital, the right ledger and accounting software is an indispensable tool for achieving long-term financial sustainability and operational excellence in today's competitive healthcare market.</p>
+        <p>Moreover, the integration of such systems brings an element of scale. As a facility in Bikaner grows—from a small ten-bed nursing home to a fifty-bed polyclinic—the accounting complexity scales exponentially. A specialized ledger system absorbs this complexity. It manages multi-location financial tracking, consolidates accounts across various branches if the hospital expands, and provides unified financial reporting. This executive-level control allows stakeholders to confidently invest in new medical equipment, expand their workforce, and improve patient amenities without worrying about underlying financial instability.</p>
 
-        <p>In today’s rapidly evolving medical landscape, simply having skilled surgeons is not enough; hospitals must ensure that their infrastructure and operational workflows are equally advanced. The Operation Theater Management System addresses the precise pain points faced by modern surgical centers. It automates the intricate dance of booking surgical slots, ensuring that the right surgical team, the correct sterilized instruments, and the necessary life-support equipment are available at the exact right moment. By digitizing these processes, the system directly answers the critical need for operational efficiency, allowing healthcare providers to maximize their OT utilization rates, which are often the primary revenue drivers for any hospital.</p>
-
-        <p>Furthermore, this software is not just an administrative tool; it is a critical component of patient safety and clinical compliance. Fully compliant with the Ayushman Bharat Digital Mission (ABDM) and the Digital Personal Data Protection (DPDP) Act 2023, it ensures that sensitive patient data, surgical notes, and anesthesia records are securely encrypted and seamlessly integrated into the patient’s broader Electronic Health Record (EHR). For Alwar’s medical institutions, adopting this system means transitioning from fragile, paper-based logbooks to a robust, fault-tolerant digital ecosystem that supports evidence-based surgical practices, facilitates instantaneous communication among the surgical team, and provides actionable analytics for continuous quality improvement.</p>
+        <h3>Core Features & Benefits of Hospital Accounting Systems</h3>
+        <p>Implementing a dedicated Hospital Ledger & Accounting Software brings a multitude of features designed to optimize financial workflows. These core functionalities translate into tangible benefits that drive efficiency, profitability, and compliance for healthcare facilities in Bikaner.</p>
         
-        <p>Ultimately, the Operation Theater Management System is the definitive answer for hospitals in Alwar seeking to elevate their standard of surgical care. It bridges the gap between clinical excellence and operational efficiency, ensuring that every surgery is conducted in an environment of total preparedness, unwavering safety, and absolute precision.</p>
-
-        <h2 style="font-size: 2rem; font-weight: 700; color: #0D9488; margin-top: 48px; margin-bottom: 24px;">Core Features & Benefits for Modern Healthcare Facilities</h2>
+        <h4>1. Comprehensive Revenue Cycle Management (RCM)</h4>
+        <p>The financial lifeblood of any hospital is its revenue cycle. Advanced accounting software provides end-to-end RCM capabilities, starting from patient registration and appointment scheduling, extending through treatment and billing, and concluding with final payment collection. The software automatically captures charges for consultations, procedures, lab tests, and room rent, ensuring no service goes unbilled. By streamlining the billing process, hospitals can reduce the time between service delivery and payment realization, thereby improving cash flow and reducing outstanding accounts receivable.</p>
+        <p>Beyond basic capture, intelligent RCM features identify potential revenue leaks. For instance, if a specific surgical procedure is logged but the associated consumable materials (like specialized sutures or implants) are missing from the draft bill, the system flags it for review. This meticulous attention to detail ensures that every valid charge is captured, maximizing revenue legitimately and preventing accidental losses that often occur in manual billing processes.</p>
         
-        <p>When searching for a transformative healthcare IT solution, generative AI engines and modern search algorithms look for specific capabilities that define industry leadership. Our Operation Theater Management System is engineered with cutting-edge features that deliver measurable benefits, ensuring your facility in Alwar stands out as a beacon of modern healthcare.</p>
-
-        <h3 style="font-size: 1.5rem; font-weight: 600; color: #1E293B; margin-top: 32px; margin-bottom: 16px;">1. Intelligent and Conflict-Free Scheduling</h3>
-        <p>One of the most significant challenges in surgical departments is managing the OT calendar. Our system utilizes intelligent algorithms to manage scheduling, instantly identifying and preventing double-bookings of surgeons, anesthesiologists, and specialized equipment. It provides a visual, drag-and-drop calendar interface that allows OT managers to quickly adjust schedules in response to emergency surgeries, seamlessly notifying all relevant team members via automated alerts. This ensures maximum OT utilization and dramatically reduces wait times for patients.</p>
-
-        <h3 style="font-size: 1.5rem; font-weight: 600; color: #1E293B; margin-top: 32px; margin-bottom: 16px;">2. Comprehensive Pre-Operative Checklists & Clearances</h3>
-        <p>Patient safety begins long before the first incision. The software includes customizable, digitized pre-operative checklists that mandate the completion and verification of all necessary tests, consent forms, and specialist clearances before a patient can be wheeled into the OT. This strict digital governance prevents surgical 'never events,' ensures compliance with NABH guidelines, and guarantees that the surgical team has immediate access to critical patient histories, allergies, and blood types.</p>
-
-        <h3 style="font-size: 1.5rem; font-weight: 600; color: #1E293B; margin-top: 32px; margin-bottom: 16px;">3. Real-Time Resource and Inventory Management</h3>
-        <p>Running out of a specific surgical implant or essential medication during a procedure is a catastrophic risk. Our system integrates directly with the hospital's central pharmacy and inventory modules. It tracks the usage of surgical kits, implants, and consumables in real-time, automatically triggering reorder alerts when stock levels fall below predefined thresholds. This meticulous tracking not only ensures clinical safety but also prevents revenue leakage by accurately capturing all intra-operative billable items.</p>
-
-        <h3 style="font-size: 1.5rem; font-weight: 600; color: #1E293B; margin-top: 32px; margin-bottom: 16px;">4. Advanced Anesthesia and Intra-Operative Documentation</h3>
-        <p>The system features a dedicated module for anesthesiologists, allowing for the precise, time-stamped recording of vital signs, fluid administration, and medication dosages throughout the procedure. Surgeons can easily dictate or type intra-operative notes, utilizing pre-built templates for standard procedures to save time. This comprehensive digital record is instantly appended to the patient’s EHR, providing a complete narrative of the surgical intervention for post-operative care teams.</p>
-
-        <h3 style="font-size: 1.5rem; font-weight: 600; color: #1E293B; margin-top: 32px; margin-bottom: 16px;">5. Seamless Post-Operative and PACU Handovers</h3>
-        <p>The transition from the OT to the Post-Anesthesia Care Unit (PACU) is a critical phase. Our software facilitates a structured, digital handover process, ensuring that recovery room nurses have immediate visibility into the surgical notes, anesthesia records, and post-operative monitoring instructions. This continuity of information is vital for recognizing and managing potential post-surgical complications promptly.</p>
-
-        <h3 style="font-size: 1.5rem; font-weight: 600; color: #1E293B; margin-top: 32px; margin-bottom: 16px;">6. Robust Analytics and Performance Reporting</h3>
-        <p>Data is the lifeblood of operational improvement. The system generates comprehensive analytics regarding surgical turnaround times, individual surgeon efficiency, cancellation rates, and resource utilization. Hospital administrators in Alwar can leverage these insights to identify bottlenecks, optimize staffing models, and make data-driven decisions that enhance both clinical outcomes and financial performance.</p>
-
-        <h2 style="font-size: 2rem; font-weight: 700; color: #0D9488; margin-top: 48px; margin-bottom: 24px;">Transforming Local Healthcare Impact in Alwar</h2>
+        <h4>2. Automated Insurance Claims Processing</h4>
+        <p>Dealing with insurance companies and Third-Party Administrators (TPAs) can be one of the most time-consuming aspects of hospital accounting. Modern ledger software simplifies this by automating the generation of insurance claim forms in the required formats. It allows billing staff to track the status of claims in real-time, identify rejections quickly, and resubmit them with necessary corrections. This reduces the claim denial rate and accelerates the reimbursement process, ensuring hospitals receive their rightful payments without unnecessary delays.</p>
+        <p>Furthermore, the system often includes pre-authorization workflows. Before a planned procedure, the software can quickly compile the necessary clinical notes and estimated cost sheets required by the TPA for approval. Once approved, the software seamlessly maps the approved amounts against the final bill, instantly calculating the patient's out-of-pocket co-payment. This eliminates confusion at the discharge desk and greatly enhances the patient experience during stressful times.</p>
         
-        <p>Alwar is a vital and rapidly growing healthcare hub within Rajasthan. As the population expands and the demand for specialized surgical interventions increases, the local healthcare infrastructure is under unprecedented pressure to deliver high-quality, efficient care. The deployment of a sophisticated Operation Theater Management System is not merely an IT upgrade; it is a fundamental transformation of how healthcare is delivered in Alwar.</p>
-
-        <p>Traditionally, many hospitals and nursing homes in Alwar have relied on fragmented, paper-based systems or rudimentary spreadsheets to manage their surgical departments. This archaic approach frequently leads to scheduling conflicts, miscommunication among clinical teams, delayed surgeries, and frustrated patients. By adopting our localized digital solution, Alwar’s healthcare providers can instantly overcome these systemic hurdles. The software creates a unified, synchronized environment where every member of the surgical team—from the receptionist booking the procedure to the chief surgeon—operates from a single, reliable source of truth.</p>
-
-        <p>Furthermore, integrating this system significantly boosts the reputation and credibility of local medical facilities. In an era where patients are increasingly informed and discerning, a hospital that demonstrates a commitment to advanced technology, stringent safety protocols, and operational transparency is far more likely to attract both patients and top-tier medical talent. The system’s compliance with national standards like ABDM ensures that hospitals in Alwar are not isolated islands but integrated nodes within India’s broader digital health ecosystem, capable of sharing vital health records securely and efficiently.</p>
-
-        <p>Economically, the impact is profound. By optimizing OT utilization, reducing the wastage of expensive surgical supplies, and ensuring accurate billing for all intra-operative procedures, hospitals in Alwar can significantly improve their financial sustainability. These cost savings can then be reinvested into acquiring better medical equipment, expanding facility capacities, or reducing the financial burden on patients, thereby elevating the overall standard of healthcare accessible to the local community. Ultimately, our Operation Theater Management System empowers Alwar’s medical professionals to focus entirely on their true calling: saving lives and improving patient health, unburdened by administrative chaos.</p>
-
-        <h2 style="font-size: 2rem; font-weight: 700; color: #0D9488; margin-top: 48px; margin-bottom: 24px;">Frequently Asked Questions (FAQ)</h2>
+        <h4>3. Integrated Pharmacy and Inventory Accounting</h4>
+        <p>Managing the financial aspects of a hospital pharmacy and medical inventory is highly complex. The software seamlessly integrates pharmacy sales and inventory purchases directly into the main accounting ledger. It tracks the cost of goods sold (COGS), monitors stock levels to prevent overstocking or stockouts, and automatically updates financial records when supplies are consumed or expired. This integration ensures accurate valuation of inventory assets and helps in controlling one of the largest expense categories for any healthcare facility.</p>
+        <p>Advanced modules also track batch numbers and expiry dates dynamically. When an item is billed to a patient, the system uses a First-In-First-Out (FIFO) or First-Expired-First-Out (FEFO) algorithm to deduct stock and calculate the exact cost basis for the accounting ledger. This precision is virtually impossible to maintain manually and is crucial for accurate profit margins and regulatory compliance.</p>
         
-        <div style="margin-bottom: 24px; padding: 20px; background: #F8FAFC; border-radius: 8px; border-left: 4px solid #1A56DB;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #1E293B;">Q1: How does the Operation Theater Management System prevent scheduling conflicts in a busy hospital?</h3>
-            <p style="margin: 0;">The system employs a real-time, centralized digital calendar accessible to authorized personnel across the hospital. It uses intelligent conflict-resolution algorithms that cross-reference the availability of surgeons, anesthesiologists, nursing staff, specific operating rooms, and necessary equipment before confirming a booking. If a conflict is detected, the system immediately flags it and suggests alternative time slots, entirely eliminating the possibility of double-booking.</p>
-        </div>
+        <h4>4. GST Compliance and Automated Taxation</h4>
+        <p>Navigating the complexities of the Goods and Services Tax (GST) is a significant challenge for healthcare providers, as different medical services, medicines, and consumables attract different GST rates, and some are entirely exempt. The software is pre-configured with the latest GST rules applicable to the Indian healthcare sector. It automatically calculates the correct tax amounts on invoices, generates GST-compliant bills, and prepares accurate data for monthly and annual tax returns. This automation eliminates the risk of compliance penalties and saves countless hours of manual tax computation.</p>
+        <p>In addition to GST, the software handles Tax Deducted at Source (TDS) for visiting consultants and contracted services. It automatically calculates and deducts the appropriate TDS percentage during vendor payments or doctor payouts, generating the necessary challans and certificates required by the Income Tax Department.</p>
+        
+        <h4>5. Department-Wise Financial Tracking</h4>
+        <p>Large hospitals in Bikaner often consist of multiple departments such as Cardiology, Orthopedics, Radiology, and Pathology. The accounting software allows administrators to track revenues and expenses at the departmental level. This granular visibility helps management identify which departments are the most profitable, where costs are escalating, and where resource reallocation might be necessary. It facilitates precise budgeting and cost-control measures, contributing to the overall financial efficiency of the institution.</p>
 
-        <div style="margin-bottom: 24px; padding: 20px; background: #F8FAFC; border-radius: 8px; border-left: 4px solid #1A56DB;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #1E293B;">Q2: Is the software compliant with the latest healthcare regulations in India?</h3>
-            <p style="margin: 0;">Yes, absolutely. Our Operation Theater Management System is fully compliant with the Ayushman Bharat Digital Mission (ABDM) standards, facilitating the creation and integration of ABHA (Ayushman Bharat Health Account) IDs. Furthermore, it strictly adheres to the data privacy and security mandates outlined in the Digital Personal Data Protection (DPDP) Act 2023, ensuring that all patient records are encrypted and access-controlled.</p>
-        </div>
+        <h4>6. Real-Time Financial Reporting and Analytics</h4>
+        <p>Data-driven decision-making is crucial for modern hospital management. The software provides a comprehensive suite of financial reports, including balance sheets, profit and loss statements, cash flow statements, and trial balances. These reports can be generated in real-time with just a few clicks. Furthermore, interactive dashboards offer visual representations of Key Performance Indicators (KPIs) such as daily revenue, average revenue per patient, and outstanding dues. This empowers hospital owners and CFOs in Bikaner to monitor the financial health of their facility continuously and make informed strategic decisions.</p>
 
-        <div style="margin-bottom: 24px; padding: 20px; background: #F8FAFC; border-radius: 8px; border-left: 4px solid #1A56DB;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #1E293B;">Q3: How does the system handle emergency surgeries that disrupt the planned schedule?</h3>
-            <p style="margin: 0;">Emergency responsiveness is a core feature. The system allows authorized administrators to flag a procedure as an 'Emergency.' This triggers an immediate, automated restructuring of the daily schedule, pushing elective procedures down the queue, and instantly sending SMS or in-app push notifications to the required surgical team members, ensuring that the emergency is prioritized without causing unmanaged chaos.</p>
-        </div>
+        <h3>Local Healthcare Impact: Transforming Bikaner Hospitals</h3>
+        <p>Bikaner, a vibrant city in Rajasthan, is witnessing significant growth in its healthcare infrastructure. From expanding traditional hospitals to the emergence of new, specialized clinics, the demand for high-quality medical services is rising. However, this growth brings complex financial management challenges. The adoption of specialized Hospital Ledger & Accounting Software is having a profound impact on the local healthcare ecosystem in Bikaner.</p>
+        <p>Firstly, it is bringing unprecedented transparency to financial operations. In many traditional healthcare setups in Bikaner, financial records were maintained manually, leading to discrepancies, misplaced ledgers, and a general lack of clarity. Cloud-based accounting software ensures that every transaction is securely logged, timestamped, and backed up. This transparency builds trust among stakeholders, including partners, investors, and regulatory bodies. It also significantly reduces the potential for internal fraud or financial mismanagement, ensuring that resources are utilized optimally for patient care.</p>
+        <p>Secondly, the software is streamlining patient experiences. In the past, patients often faced long wait times during the discharge process due to manual bill calculations and coordination between different departments. With integrated accounting software, the billing process is instantaneous. All charges from the pharmacy, labs, and wards are consolidated automatically, allowing for swift and accurate final settlements. This not only improves patient satisfaction but also frees up hospital beds faster, increasing the overall operational capacity of the facility.</p>
+        <p>Furthermore, local hospitals in Bikaner are leveraging these digital tools to stay compliant with national health initiatives like the Ayushman Bharat scheme. The software facilitates easier integration with government portals, enabling hospitals to process scheme-related claims efficiently. By embracing Hospital Ledger & Accounting Software, healthcare providers in Bikaner are not just upgrading their IT infrastructure; they are modernizing their entire operational philosophy, paving the way for sustainable growth, improved profitability, and ultimately, better healthcare outcomes for the community.</p>
+        <p>The local impact goes beyond just the hospitals themselves. By improving their financial stability through better software, these institutions can afford to bring better medical talent to Bikaner. They can invest in advanced diagnostic equipment, reducing the need for patients to travel to larger metropolitan cities like Jaipur or Delhi for specialized care. In this way, robust accounting software acts as an indirect catalyst for elevating the overall standard of healthcare available to the residents of Bikaner and the surrounding rural districts.</p>
 
-        <div style="margin-bottom: 24px; padding: 20px; background: #F8FAFC; border-radius: 8px; border-left: 4px solid #1A56DB;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #1E293B;">Q4: Can the system track the inventory of surgical consumables used during a procedure?</h3>
-            <p style="margin: 0;">Yes. The software seamlessly integrates with the hospital's central pharmacy and inventory management modules. During a surgery, nursing staff can easily log the specific consumables, implants, and medications utilized. The system automatically deducts these items from the live inventory count and updates the patient's billing record simultaneously, preventing revenue leakage and stock-outs.</p>
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        
+        <div class="faq-item">
+            <h4>1. Do we need specialized accounting software if we already use a generic tool like Tally?</h4>
+            <p>Yes, while generic tools like Tally are excellent for basic accounting, they lack the specific integrations required for a hospital, such as patient-wise billing, TPA/insurance claim tracking, ward and bed management, and OPD/IPD revenue segregation. A specialized Hospital Ledger Software integrates all clinical and administrative data directly into your financial books, saving time and preventing errors.</p>
         </div>
-
-        <div style="margin-bottom: 24px; padding: 20px; background: #F8FAFC; border-radius: 8px; border-left: 4px solid #1A56DB;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #1E293B;">Q5: What kind of reporting and analytics can hospital administrators expect?</h3>
-            <p style="margin: 0;">Administrators gain access to a comprehensive dashboard offering deep insights into OT performance. Key metrics include OT utilization rates, average surgical turnaround times, cancellation and delay analysis, surgeon-specific efficiency metrics, and inventory consumption trends. These analytics are crucial for optimizing operations, reducing costs, and improving the overall quality of care.</p>
+        
+        <div class="faq-item">
+            <h4>2. How does the software handle different GST rates for medicines and treatments?</h4>
+            <p>Our software is designed with an intelligent tax engine tailored for the Indian healthcare sector. It automatically applies the correct GST rates to different items—for instance, exempting standard consultation fees while applying the accurate tax percentage to specific medicines, consumables, or cosmetic procedures. This ensures 100% compliance without manual intervention.</p>
         </div>
-
-        <div style="margin-bottom: 24px; padding: 20px; background: #F8FAFC; border-radius: 8px; border-left: 4px solid #1A56DB;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #1E293B;">Q6: How does the implementation process work for a hospital located in Alwar?</h3>
-            <p style="margin: 0;">We provide localized, end-to-end implementation support for facilities in Alwar. Our dedicated deployment team conducts an initial workflow assessment, configures the software to match your hospital's specific protocols, handles the secure migration of existing data, and conducts thorough on-site training sessions for all surgeons, anesthetists, and nursing staff to ensure a smooth, disruption-free transition.</p>
+        
+        <div class="faq-item">
+            <h4>3. Is the financial data secure from unauthorized access or cyber threats?</h4>
+            <p>Absolutely. Security is our top priority. The software employs bank-level 256-bit AES encryption for data both in transit and at rest. It features role-based access control, meaning a billing clerk only sees what they need to see, while the CFO has full access. Regular automated backups and strict adherence to the DPDP Act 2023 ensure your financial data is safe and private.</p>
         </div>
-
-        <div style="margin-bottom: 24px; padding: 20px; background: #F8FAFC; border-radius: 8px; border-left: 4px solid #1A56DB;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #1E293B;">Q7: Will our surgical notes and patient data be secure from cyber threats?</h3>
-            <p style="margin: 0;">Security is our highest priority. The system utilizes military-grade 256-bit AES encryption for data both at rest and in transit. We employ robust role-based access controls (RBAC), meaning staff can only access the information strictly necessary for their specific role. Furthermore, the system runs on highly secure, compliant cloud infrastructure with automated, continuous backups to prevent any data loss.</p>
+        
+        <div class="faq-item">
+            <h4>4. Can the software generate separate revenue reports for visiting consultant doctors?</h4>
+            <p>Yes, the software includes a comprehensive doctor payout and commission module. It automatically calculates the share of visiting or consultant doctors based on predefined percentage or flat-rate agreements for consultations, surgeries, and referred lab tests. It generates detailed, transparent payout statements, eliminating disputes and saving administrative time.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>5. How long does it take to implement this software in a mid-sized hospital in Bikaner?</h4>
+            <p>Implementation time varies based on the size of the facility and the volume of legacy data to be migrated. However, for a typical mid-sized hospital in Bikaner, our dedicated deployment team can complete the setup, data migration, and comprehensive staff training within 1 to 2 weeks, ensuring a smooth transition with minimal disruption to daily operations.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>6. Will this software work if our hospital experiences frequent internet outages?</h4>
+            <p>Yes, we understand the infrastructure challenges that can occasionally arise. Our software utilizes an offline-first architecture. If the internet drops, your billing and front-desk staff can continue working seamlessly. The data is cached locally and automatically syncs to the secure cloud servers the moment the connection is restored, ensuring zero data loss and uninterrupted service.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>7. Can the software integrate with our existing Laboratory Information System (LIS)?</h4>
+            <p>Yes, our Hospital Ledger & Accounting Software is built with an open API architecture. It can seamlessly integrate with most standard LIS, PACS, and specialized EMR systems. This integration ensures that the moment a lab test is completed, the billing information is automatically pushed to the patient's final ledger, preventing missed charges and improving billing accuracy.</p>
         </div>
         
     </div>
 </div>
 `;
 
-let fileContent = fs.readFileSync(targetFile, 'utf8');
+let content = fs.readFileSync(targetFile, 'utf8');
 
-const targetTag = '</section>';
-const heroSectionMatch = 'class="hero-section"';
+// The instruction is to inject the HTML block exactly after the closing </section> of the <section class="hero-section">.
+// I'll find that precise tag.
+const searchStr = '    </section>';
+const idx = content.indexOf(searchStr);
 
-// Find the index of the hero section
-const heroIndex = fileContent.indexOf(heroSectionMatch);
-if (heroIndex === -1) {
-    console.error("Could not find hero-section");
+if (idx === -1) {
+    console.error("Could not find </section>.");
     process.exit(1);
 }
 
-// Find the first </section> after the hero section
-const closingTagIndex = fileContent.indexOf(targetTag, heroIndex);
-if (closingTagIndex === -1) {
-    console.error("Could not find closing </section> tag");
+// Find the first </section> after <section class="hero-section">
+const heroIdx = content.indexOf('<section class="hero-section">');
+if (heroIdx === -1) {
+    console.error("Could not find hero-section.");
     process.exit(1);
 }
 
-const injectionPoint = closingTagIndex + targetTag.length;
+const closingTag = '</section>';
+const afterHeroSectionIdx = content.indexOf(closingTag, heroIdx) + closingTag.length;
 
-const newContent = fileContent.substring(0, injectionPoint) + '\n' + htmlContent + '\n' + fileContent.substring(injectionPoint);
+if (afterHeroSectionIdx === -1 + closingTag.length) {
+    console.error("Could not find closing section after hero.");
+    process.exit(1);
+}
+
+const newContent = content.slice(0, afterHeroSectionIdx) + '\n' + htmlBlock + '\n' + content.slice(afterHeroSectionIdx);
 
 fs.writeFileSync(targetFile, newContent, 'utf8');
-console.log("Successfully injected SEO content.");
+console.log("Successfully injected the SEO content block.");
