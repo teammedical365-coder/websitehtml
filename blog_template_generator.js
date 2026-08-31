@@ -1656,7 +1656,7 @@ module.exports = `<!DOCTYPE html>
                                 </svg>
                                 <div>
                                     <span class="mf-contact-label">Email</span>
-                                    <a href="mailto:TEAMMEDICAL365@GMAIL.COM" class="mf-contact-val">TEAMMEDICAL365@GMAIL.COM</a>
+                                    <a href="mailto:support@medical365.in" class="mf-contact-val">support@medical365.in</a>
                                 </div>
                             </div>
                             <div class="mf-contact-item">
