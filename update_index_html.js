@@ -38,7 +38,7 @@ const orgSchema = `
   "logo": "https://www.medical365.in/medical365logo1.png",
   "description": "India's #1 ABDM compliant Hospital Management Software for hospitals, clinics and multi-specialty facilities.",
   "telephone": "+91-77919-10007",
-  "email": "teammedical365@gmail.com",
+  "email": "support@medical365.in",
   "foundingDate": "2020",
   "address": {
     "@type": "PostalAddress",
