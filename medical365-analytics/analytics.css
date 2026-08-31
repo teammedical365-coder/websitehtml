@@ -1,0 +1,911 @@
+/* ==========================================================================
+   Medical365 Analytics Platform V6 - Final Enterprise Intelligence Product
+   Prefix: m365-analytics-
+   ========================================================================== */
+
+:root {
+  /* Light Theme */
+  --m365-analytics-bg: #f8fafc;
+  --m365-analytics-surface: #ffffff;
+  --m365-analytics-surface-hover: #f1f5f9;
+  --m365-analytics-border: #e2e8f0;
+  --m365-analytics-border-hover: #cbd5e1;
+  --m365-analytics-text-primary: #0f172a;
+  --m365-analytics-text-secondary: #475569;
+  --m365-analytics-text-muted: #94a3b8;
+  
+  --m365-analytics-primary: #0f172a;
+  --m365-analytics-primary-hover: #1e293b;
+  --m365-analytics-primary-light: #f1f5f9;
+  
+  --m365-analytics-brand: #0ea5e9;
+  --m365-analytics-brand-hover: #0284c7;
+  --m365-analytics-brand-light: rgba(14, 165, 233, 0.08);
+  
+  --m365-analytics-success: #10b981;
+  --m365-analytics-success-bg: rgba(16, 185, 129, 0.1);
+  --m365-analytics-warning: #f59e0b;
+  --m365-analytics-warning-bg: rgba(245, 158, 11, 0.1);
+  --m365-analytics-danger: #ef4444;
+  --m365-analytics-danger-bg: rgba(239, 68, 68, 0.1);
+  --m365-analytics-info: #6366f1;
+  --m365-analytics-info-bg: rgba(99, 102, 241, 0.1);
+  
+  --m365-analytics-sidebar-bg: #ffffff;
+  --m365-analytics-sidebar-border: #e2e8f0;
+  
+  --m365-analytics-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --m365-analytics-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  --m365-analytics-shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+  --m365-analytics-shadow-float: 0 0 0 1px rgba(15, 23, 42, 0.06), 0 20px 40px rgba(15, 23, 42, 0.12);
+  
+  --m365-analytics-radius-sm: 6px;
+  --m365-analytics-radius-md: 10px;
+  --m365-analytics-radius-lg: 14px;
+  --m365-analytics-radius-full: 9999px;
+  
+  --m365-analytics-font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --m365-analytics-transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  --m365-analytics-bg: #090d16;
+  --m365-analytics-surface: #111827;
+  --m365-analytics-surface-hover: #1e293b;
+  --m365-analytics-border: #1f293d;
+  --m365-analytics-border-hover: #334155;
+  --m365-analytics-text-primary: #f8fafc;
+  --m365-analytics-text-secondary: #94a3b8;
+  --m365-analytics-text-muted: #64748b;
+  
+  --m365-analytics-primary: #f8fafc;
+  --m365-analytics-primary-hover: #e2e8f0;
+  --m365-analytics-primary-light: #1e293b;
+  
+  --m365-analytics-brand: #38bdf8;
+  --m365-analytics-brand-hover: #0ea5e9;
+  --m365-analytics-brand-light: rgba(56, 189, 248, 0.12);
+  
+  --m365-analytics-sidebar-bg: #0c1222;
+  --m365-analytics-sidebar-border: #1f293d;
+  
+  --m365-analytics-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --m365-analytics-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --m365-analytics-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+  --m365-analytics-shadow-float: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 24px 48px rgba(0, 0, 0, 0.9);
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.m365-analytics-body {
+  font-family: var(--m365-analytics-font);
+  background-color: var(--m365-analytics-bg);
+  color: var(--m365-analytics-text-primary);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea { font-family: inherit; }
+
+/* Main Layout */
+.m365-analytics-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.m365-analytics-sidebar {
+  width: 250px;
+  background-color: var(--m365-analytics-sidebar-bg);
+  border-right: 1px solid var(--m365-analytics-sidebar-border);
+  display: flex;
+  flex-direction: column;
+  transition: var(--m365-analytics-transition);
+  z-index: 40;
+}
+
+.m365-analytics-sidebar-collapsed {
+  width: 68px;
+}
+
+.m365-analytics-brand {
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 1px solid var(--m365-analytics-sidebar-border);
+}
+
+.m365-analytics-brand h2 {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--m365-analytics-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.m365-analytics-brand h2 svg {
+  color: var(--m365-analytics-brand);
+  width: 18px;
+  height: 18px;
+}
+
+.m365-analytics-brand span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--m365-analytics-text-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.m365-analytics-sidebar-collapsed .m365-analytics-brand span,
+.m365-analytics-sidebar-collapsed .m365-analytics-brand h2 span {
+  display: none;
+}
+
+.m365-analytics-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 8px;
+}
+
+.m365-analytics-nav::-webkit-scrollbar { width: 4px; }
+.m365-analytics-nav::-webkit-scrollbar-thumb { background: var(--m365-analytics-border); border-radius: 4px; }
+
+.m365-analytics-nav-group {
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--m365-analytics-surface-hover);
+  padding-bottom: 10px;
+}
+.m365-analytics-nav-group:last-child { border-bottom: none; }
+
+.m365-analytics-nav-label {
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--m365-analytics-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.m365-analytics-sidebar-collapsed .m365-analytics-nav-label { opacity: 0; }
+
+.m365-analytics-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 10px;
+  border-radius: var(--m365-analytics-radius-sm);
+  color: var(--m365-analytics-text-secondary);
+  font-weight: 500;
+  font-size: 12px;
+  transition: var(--m365-analytics-transition);
+  margin-bottom: 1px;
+  position: relative;
+}
+
+.m365-analytics-sidebar-collapsed .m365-analytics-nav-item span { display: none; }
+
+.m365-analytics-nav-item:hover {
+  background-color: var(--m365-analytics-surface-hover);
+  color: var(--m365-analytics-text-primary);
+}
+
+.m365-analytics-nav-item.active {
+  background-color: var(--m365-analytics-brand-light);
+  color: var(--m365-analytics-brand);
+  font-weight: 600;
+}
+
+.m365-analytics-nav-item svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.m365-analytics-nav-badge {
+  margin-left: auto;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: var(--m365-analytics-radius-full);
+  background: var(--m365-analytics-danger-bg);
+  color: var(--m365-analytics-danger);
+}
+
+/* Main Workspace */
+.m365-analytics-main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header */
+.m365-analytics-header {
+  height: 52px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--m365-analytics-surface);
+  border-bottom: 1px solid var(--m365-analytics-border);
+  z-index: 30;
+}
+
+.m365-analytics-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.m365-analytics-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.m365-analytics-breadcrumbs span { color: var(--m365-analytics-text-muted); }
+.m365-analytics-breadcrumbs strong { color: var(--m365-analytics-text-primary); }
+
+.m365-analytics-health-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: var(--m365-analytics-radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--m365-analytics-transition);
+}
+.m365-analytics-health-pill.healthy { background: var(--m365-analytics-success-bg); color: var(--m365-analytics-success); border-color: rgba(16, 185, 129, 0.2); }
+.m365-analytics-health-pill.warning { background: var(--m365-analytics-warning-bg); color: var(--m365-analytics-warning); border-color: rgba(245, 158, 11, 0.2); }
+
+.m365-analytics-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--m365-analytics-success);
+  border-radius: 50%;
+  animation: m365-pulse-anim 2s infinite;
+}
+
+@keyframes m365-pulse-anim {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.m365-analytics-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Global Persistent Filter Bar */
+.m365-analytics-global-filter-bar {
+  background: var(--m365-analytics-surface);
+  border-bottom: 1px solid var(--m365-analytics-border);
+  padding: 6px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  z-index: 20;
+}
+
+.m365-analytics-filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.m365-analytics-filter-chips {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.m365-analytics-chip {
+  background: var(--m365-analytics-brand-light);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  color: var(--m365-analytics-brand);
+  padding: 2px 7px;
+  border-radius: var(--m365-analytics-radius-full);
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.m365-analytics-chip button {
+  color: var(--m365-analytics-brand);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Buttons & Selects */
+.m365-analytics-select {
+  appearance: none;
+  background: var(--m365-analytics-surface);
+  border: 1px solid var(--m365-analytics-border);
+  color: var(--m365-analytics-text-primary);
+  padding: 4px 22px 4px 7px;
+  border-radius: var(--m365-analytics-radius-sm);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  transition: var(--m365-analytics-transition);
+}
+
+.m365-analytics-select:hover {
+  border-color: var(--m365-analytics-border-hover);
+}
+
+.m365-analytics-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--m365-analytics-surface);
+  border: 1px solid var(--m365-analytics-border);
+  color: var(--m365-analytics-text-primary);
+  padding: 4px 10px;
+  border-radius: var(--m365-analytics-radius-sm);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--m365-analytics-transition);
+}
+
+.m365-analytics-btn:hover {
+  background: var(--m365-analytics-surface-hover);
+  border-color: var(--m365-analytics-border-hover);
+}
+
+.m365-analytics-btn-primary {
+  background: var(--m365-analytics-primary);
+  color: var(--m365-analytics-bg);
+  border-color: var(--m365-analytics-primary);
+}
+
+.m365-analytics-btn-primary:hover {
+  background: var(--m365-analytics-primary-hover);
+  color: var(--m365-analytics-bg);
+}
+
+.m365-analytics-btn-brand {
+  background: var(--m365-analytics-brand);
+  color: #ffffff;
+  border-color: var(--m365-analytics-brand);
+}
+
+.m365-analytics-btn-brand:hover {
+  background: var(--m365-analytics-brand-hover);
+}
+
+.m365-analytics-icon-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--m365-analytics-radius-sm);
+  color: var(--m365-analytics-text-secondary);
+  border: 1px solid var(--m365-analytics-border);
+  background: var(--m365-analytics-surface);
+  transition: var(--m365-analytics-transition);
+}
+
+.m365-analytics-icon-btn:hover {
+  background-color: var(--m365-analytics-surface-hover);
+  color: var(--m365-analytics-text-primary);
+}
+
+/* Scrollable Main Area */
+.m365-analytics-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.m365-analytics-content::-webkit-scrollbar { width: 5px; }
+.m365-analytics-content::-webkit-scrollbar-thumb { background: var(--m365-analytics-border); border-radius: 4px; }
+
+/* View Container */
+.m365-analytics-view {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+  animation: m365-fade 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.m365-analytics-view.active {
+  display: flex;
+}
+
+@keyframes m365-fade {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page Header */
+.m365-analytics-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.m365-analytics-page-title {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--m365-analytics-text-primary);
+}
+
+.m365-analytics-page-desc {
+  font-size: 11px;
+  color: var(--m365-analytics-text-secondary);
+  margin-top: 1px;
+}
+
+/* Grids */
+.m365-analytics-grid { display: grid; gap: 12px; }
+.m365-analytics-grid-8 { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+.m365-analytics-grid-6 { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.m365-analytics-grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.m365-analytics-grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.m365-analytics-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+.m365-analytics-grid-sidebar { grid-template-columns: 2.5fr 1fr; gap: 12px; }
+
+/* Cards */
+.m365-analytics-card {
+  background: var(--m365-analytics-surface);
+  border: 1px solid var(--m365-analytics-border);
+  border-radius: var(--m365-analytics-radius-md);
+  padding: 14px;
+  box-shadow: var(--m365-analytics-shadow-sm);
+  transition: var(--m365-analytics-transition);
+  position: relative;
+}
+
+.m365-analytics-card-hover:hover {
+  box-shadow: var(--m365-analytics-shadow-md);
+  border-color: var(--m365-analytics-border-hover);
+  cursor: pointer;
+}
+
+.m365-analytics-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.m365-analytics-card-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--m365-analytics-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.m365-analytics-card-title svg {
+  width: 13px;
+  height: 13px;
+  color: var(--m365-analytics-text-muted);
+}
+
+.m365-analytics-kpi-val {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--m365-analytics-text-primary);
+}
+
+.m365-analytics-kpi-sub {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+  font-size: 10px;
+}
+
+.m365-analytics-trend-up {
+  color: var(--m365-analytics-success);
+  font-weight: 700;
+}
+
+.m365-analytics-trend-down {
+  color: var(--m365-analytics-danger);
+  font-weight: 700;
+}
+
+/* Chart Container Fix */
+.m365-analytics-chart-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  min-height: 240px;
+}
+
+.m365-analytics-chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Signal Graph Component */
+.m365-analytics-signal-graph {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.m365-analytics-signal-node {
+  background: var(--m365-analytics-surface);
+  border: 1px solid var(--m365-analytics-border);
+  border-radius: var(--m365-analytics-radius-sm);
+  padding: 8px 10px;
+  min-width: 140px;
+  cursor: pointer;
+  transition: var(--m365-analytics-transition);
+}
+
+.m365-analytics-signal-node:hover {
+  border-color: var(--m365-analytics-brand);
+  transform: translateY(-2px);
+}
+
+/* Executive Story Carousel */
+.m365-analytics-story-card {
+  background: linear-gradient(135deg, var(--m365-analytics-brand-light), transparent 70%);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  border-radius: var(--m365-analytics-radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.m365-analytics-story-slide {
+  display: none;
+  animation: m365-fade 0.25s ease;
+}
+.m365-analytics-story-slide.active { display: block; }
+
+/* Tables */
+.m365-analytics-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--m365-analytics-border);
+  border-radius: var(--m365-analytics-radius-md);
+  background: var(--m365-analytics-surface);
+}
+
+.m365-analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 11px;
+}
+
+.m365-analytics-table th {
+  padding: 8px 10px;
+  background: var(--m365-analytics-bg);
+  border-bottom: 1px solid var(--m365-analytics-border);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--m365-analytics-text-muted);
+}
+
+.m365-analytics-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--m365-analytics-border);
+  color: var(--m365-analytics-text-primary);
+  vertical-align: middle;
+}
+
+.m365-analytics-table tr:last-child td { border-bottom: none; }
+.m365-analytics-table tr:hover td { background: var(--m365-analytics-surface-hover); }
+
+/* Badges */
+.m365-analytics-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 6px;
+  border-radius: var(--m365-analytics-radius-full);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.m365-analytics-badge.high { background: var(--m365-analytics-success-bg); color: var(--m365-analytics-success); }
+.m365-analytics-badge.med { background: var(--m365-analytics-warning-bg); color: var(--m365-analytics-warning); }
+.m365-analytics-badge.low { background: var(--m365-analytics-danger-bg); color: var(--m365-analytics-danger); }
+.m365-analytics-badge.neutral { background: var(--m365-analytics-surface-hover); color: var(--m365-analytics-text-secondary); border: 1px solid var(--m365-analytics-border); }
+
+/* Modals & Drawers */
+.m365-analytics-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.m365-analytics-drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.m365-analytics-drawer {
+  width: 100%;
+  max-width: 520px;
+  background: var(--m365-analytics-surface);
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--m365-analytics-shadow-float);
+}
+
+.m365-analytics-drawer-overlay.open .m365-analytics-drawer {
+  transform: translateX(0);
+}
+
+.m365-analytics-drawer-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--m365-analytics-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m365-analytics-drawer-content {
+  padding: 18px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.m365-analytics-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 150;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.m365-analytics-modal-overlay.open {
+  display: flex;
+}
+
+.m365-analytics-modal {
+  width: 100%;
+  max-width: 500px;
+  background: var(--m365-analytics-surface);
+  border-radius: var(--m365-analytics-radius-lg);
+  box-shadow: var(--m365-analytics-shadow-float);
+  border: 1px solid var(--m365-analytics-border);
+  overflow: hidden;
+  animation: m365-modal-anim 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes m365-modal-anim {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.m365-analytics-modal-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--m365-analytics-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m365-analytics-modal-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.m365-analytics-modal-footer {
+  padding: 10px 18px;
+  border-top: 1px solid var(--m365-analytics-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  background: var(--m365-analytics-bg);
+}
+
+.m365-analytics-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.m365-analytics-input-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--m365-analytics-text-secondary);
+}
+
+.m365-analytics-input {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: var(--m365-analytics-radius-sm);
+  border: 1px solid var(--m365-analytics-border);
+  background: var(--m365-analytics-surface);
+  color: var(--m365-analytics-text-primary);
+  font-size: 12px;
+  outline: none;
+}
+
+.m365-analytics-input:focus {
+  border-color: var(--m365-analytics-brand);
+}
+
+/* Command Palette */
+.m365-analytics-palette-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+.m365-analytics-palette {
+  width: 100%;
+  max-width: 560px;
+  background: var(--m365-analytics-surface);
+  border-radius: var(--m365-analytics-radius-lg);
+  box-shadow: var(--m365-analytics-shadow-float);
+  border: 1px solid var(--m365-analytics-border);
+  overflow: hidden;
+}
+
+.m365-analytics-palette-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid var(--m365-analytics-border);
+  background: transparent;
+  color: var(--m365-analytics-text-primary);
+  outline: none;
+}
+
+.m365-analytics-palette-results {
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.m365-analytics-palette-item {
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--m365-analytics-text-secondary);
+}
+
+.m365-analytics-palette-item:hover {
+  background: var(--m365-analytics-surface-hover);
+  color: var(--m365-analytics-text-primary);
+}
+
+/* Toast */
+.m365-analytics-toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 300;
+}
+
+.m365-analytics-toast {
+  background: var(--m365-analytics-surface);
+  border: 1px solid var(--m365-analytics-border);
+  box-shadow: var(--m365-analytics-shadow-lg);
+  padding: 8px 14px;
+  border-radius: var(--m365-analytics-radius-md);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  animation: m365-toast-anim 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes m365-toast-anim {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Skeletons */
+.m365-analytics-skeleton {
+  background: linear-gradient(90deg, var(--m365-analytics-border) 25%, var(--m365-analytics-bg) 50%, var(--m365-analytics-border) 75%);
+  background-size: 200% 100%;
+  animation: m365-loading-anim 1.5s infinite;
+  border-radius: 4px;
+}
+@keyframes m365-loading-anim {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .m365-analytics-grid-sidebar { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .m365-analytics-sidebar {
+    position: fixed;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+  .m365-analytics-sidebar.open { transform: translateX(0); }
+  .m365-analytics-header { padding: 0 12px; }
+  .m365-analytics-global-filter-bar { padding: 6px 12px; }
+  .m365-analytics-content { padding: 12px; }
+  .m365-analytics-grid-8, .m365-analytics-grid-6, .m365-analytics-grid-4, .m365-analytics-grid-3, .m365-analytics-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
