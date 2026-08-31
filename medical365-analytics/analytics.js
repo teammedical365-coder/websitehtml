@@ -702,6 +702,127 @@ function renderHealthDonut(overallScore) {
     }
 }
 
+let realtimeMinuteChartInstance = null;
+
+window.refreshRealtimeView = async function() {
+    try {
+        const rt = await analyticsService.getRealtime();
+        
+        // 1. Update KPI Values
+        const users30m = document.getElementById('m365-rt-users-30m');
+        if (users30m) users30m.innerText = rt.activeUsers || 0;
+
+        const users5m = document.getElementById('m365-rt-users-5m');
+        if (users5m) users5m.innerText = rt.activeUsers5min || 0;
+
+        const eventCountEl = document.getElementById('m365-rt-event-count');
+        if (eventCountEl) eventCountEl.innerText = rt.eventCount || 0;
+
+        const lastSynced = document.getElementById('m365-realtime-last-synced');
+        if (lastSynced) lastSynced.innerText = `Updated ${new Date().toLocaleTimeString()}`;
+
+        // 2. Render Minute Chart
+        renderRealtimeMinuteChart(rt.minuteTimeline || []);
+
+        // 3. Render Realtime Pages Table
+        const pagesTable = document.querySelector('#m365-realtime-pages-table tbody');
+        if (pagesTable) {
+            if (rt.topPages && rt.topPages.length > 0) {
+                pagesTable.innerHTML = rt.topPages.map(p => `
+                    <tr>
+                        <td><code>${p.title}</code></td>
+                        <td style="text-align:right; font-weight:700; color:var(--m365-analytics-brand);">${p.views}</td>
+                    </tr>
+                `).join('');
+            } else {
+                pagesTable.innerHTML = `<tr><td colspan="2" style="text-align:center; color:var(--m365-analytics-text-muted); padding:20px;">No active visitors in the last 30 minutes</td></tr>`;
+            }
+        }
+
+        // 4. Render Realtime Locations
+        const locContainer = document.getElementById('m365-realtime-locations-container');
+        if (locContainer) {
+            if (rt.topLocations && rt.topLocations.length > 0) {
+                locContainer.innerHTML = rt.topLocations.map(l => `
+                    <div style="display:flex; justify-content:space-between; align-items:center; background:var(--m365-analytics-surface-hover); padding:6px 10px; border-radius:6px;">
+                        <span>📍 <strong>${l.city}</strong>, ${l.country}</span>
+                        <span class="m365-analytics-badge high">${l.users} active</span>
+                    </div>
+                `).join('');
+            } else {
+                locContainer.innerHTML = `<div style="font-size:11px; color:var(--m365-analytics-text-muted); text-align:center; padding:15px;">Waiting for active user locations...</div>`;
+            }
+        }
+
+        // 5. Render Realtime Events
+        const eventsContainer = document.getElementById('m365-realtime-events-container');
+        if (eventsContainer) {
+            if (rt.topEvents && rt.topEvents.length > 0) {
+                eventsContainer.innerHTML = rt.topEvents.map(e => `
+                    <div style="display:flex; justify-content:space-between; align-items:center; background:var(--m365-analytics-surface-hover); padding:6px 10px; border-radius:6px;">
+                        <span>⚡ <code>${e.eventName}</code></span>
+                        <span style="font-weight:700; color:var(--m365-analytics-brand);">${e.count}</span>
+                    </div>
+                `).join('');
+            } else {
+                eventsContainer.innerHTML = `<div style="font-size:11px; color:var(--m365-analytics-text-muted); text-align:center; padding:15px;">Waiting for realtime event stream...</div>`;
+            }
+        }
+
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    } catch (e) {
+        console.error("Error refreshing realtime view:", e);
+    }
+};
+
+function renderRealtimeMinuteChart(minuteTimeline) {
+    const canvas = document.getElementById('m365-realtime-minute-chart');
+    if (!canvas || typeof Chart === 'undefined') return;
+
+    // Generate 30 minutes slots (from -29m to 0m)
+    const labels = [];
+    const data = [];
+    for (let i = 29; i >= 0; i--) {
+        labels.push(`-${i}m`);
+        const found = minuteTimeline.find(m => m.minutesAgo === i);
+        data.push(found ? found.users : 0);
+    }
+
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    const gridColor = isDark ? 'rgba(31, 41, 61, 0.6)' : 'rgba(226, 232, 240, 0.7)';
+
+    try {
+        if (realtimeMinuteChartInstance) {
+            realtimeMinuteChartInstance.destroy();
+            realtimeMinuteChartInstance = null;
+        }
+
+        realtimeMinuteChartInstance = new Chart(canvas, {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Active Users',
+                    data,
+                    backgroundColor: '#10b981',
+                    borderRadius: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { size: 9 }, maxTicksLimit: 10 } },
+                    y: { grid: { color: gridColor }, beginAtZero: true, ticks: { stepSize: 1 } }
+                }
+            }
+        });
+    } catch (err) {
+        console.warn("Realtime chart error:", err);
+    }
+}
+
 // ==========================================
 // 6. Filter Controls & Chips Management
 // ==========================================
@@ -1340,9 +1461,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateBreadcrumbs(viewId);
                 updateUrlState();
 
-                // If switching to overview, re-render chart to ensure proper layout sizing
+                // If switching to overview or realtime, re-render chart
                 if (viewId === 'overview') {
                     setTimeout(renderTrafficChart, 50);
+                } else if (viewId === 'realtime') {
+                    setTimeout(refreshRealtimeView, 50);
                 }
 
                 if (window.innerWidth <= 768 && sidebar) {
@@ -1392,6 +1515,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 9. Auto-poll Real-time Active Users every 10 seconds
     setInterval(updateRealtimeActiveUsers, 10000);
+
+    // 10. Auto-poll Realtime View every 5 seconds when active
+    setInterval(() => {
+        if (appState.view === 'realtime') {
+            refreshRealtimeView();
+        }
+    }, 5000);
 });
 
 function updateBreadcrumbs(viewId) {

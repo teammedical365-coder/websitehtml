@@ -23,22 +23,107 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// 1. Real-Time Active Users API (Last 30 mins)
+// 1. Comprehensive GA4 Real-Time Overview API (Matching GA4 Realtime Console)
 app.get("/api/analytics/realtime", async (req, res) => {
   try {
     if (!PROPERTY_ID) {
       return res.status(500).json({ error: "GA4_PROPERTY_ID is not configured" });
     }
 
-    const [response] = await analyticsClient.runRealtimeReport({
+    // 1.1 Total Active Users in last 30 mins
+    const [totalResponse] = await analyticsClient.runRealtimeReport({
       property: `properties/${PROPERTY_ID}`,
-      metrics: [{ name: "activeUsers" }]
+      metrics: [{ name: "activeUsers" }, { name: "eventCount" }]
     });
 
-    const activeUsers = Number(response.rows?.[0]?.metricValues?.[0]?.value || 0);
+    const activeUsers = Number(totalResponse.rows?.[0]?.metricValues?.[0]?.value || 0);
+    const eventCount = Number(totalResponse.rows?.[0]?.metricValues?.[1]?.value || 0);
+
+    // 1.2 Per-Minute Activity (0 to 29 minutes ago)
+    let minuteTimeline = [];
+    let activeUsers5min = 0;
+    try {
+      const [minuteResponse] = await analyticsClient.runRealtimeReport({
+        property: `properties/${PROPERTY_ID}`,
+        dimensions: [{ name: "minutesAgo" }],
+        metrics: [{ name: "activeUsers" }],
+        orderBys: [{ dimension: { dimensionName: "minutesAgo" }, desc: true }]
+      });
+
+      minuteTimeline = (minuteResponse.rows || []).map(r => {
+        const mins = Number(r.dimensionValues?.[0]?.value || 0);
+        const users = Number(r.metricValues?.[0]?.value || 0);
+        if (mins <= 5) activeUsers5min += users;
+        return { minutesAgo: mins, label: `-${mins}m`, users };
+      });
+    } catch (minErr) {
+      console.warn("Realtime minute timeline query:", minErr.message);
+    }
+
+    // 1.3 Realtime Top Pages
+    let topPages = [];
+    try {
+      const [pagesResponse] = await analyticsClient.runRealtimeReport({
+        property: `properties/${PROPERTY_ID}`,
+        dimensions: [{ name: "unifiedScreenName" }],
+        metrics: [{ name: "screenPageViews" }, { name: "activeUsers" }],
+        limit: 10
+      });
+
+      topPages = (pagesResponse.rows || []).map(r => ({
+        title: r.dimensionValues?.[0]?.value || "/",
+        views: Number(r.metricValues?.[0]?.value || 0),
+        users: Number(r.metricValues?.[1]?.value || 0)
+      }));
+    } catch (pagesErr) {
+      console.warn("Realtime pages query:", pagesErr.message);
+    }
+
+    // 1.4 Realtime Top Events
+    let topEvents = [];
+    try {
+      const [eventsResponse] = await analyticsClient.runRealtimeReport({
+        property: `properties/${PROPERTY_ID}`,
+        dimensions: [{ name: "eventName" }],
+        metrics: [{ name: "eventCount" }],
+        limit: 10
+      });
+
+      topEvents = (eventsResponse.rows || []).map(r => ({
+        eventName: r.dimensionValues?.[0]?.value || "page_view",
+        count: Number(r.metricValues?.[0]?.value || 0)
+      }));
+    } catch (eventsErr) {
+      console.warn("Realtime events query:", eventsErr.message);
+    }
+
+    // 1.5 Realtime Top Cities & Countries
+    let topLocations = [];
+    try {
+      const [locResponse] = await analyticsClient.runRealtimeReport({
+        property: `properties/${PROPERTY_ID}`,
+        dimensions: [{ name: "city" }, { name: "country" }],
+        metrics: [{ name: "activeUsers" }],
+        limit: 10
+      });
+
+      topLocations = (locResponse.rows || []).map(r => ({
+        city: r.dimensionValues?.[0]?.value || "(not set)",
+        country: r.dimensionValues?.[1]?.value || "India",
+        users: Number(r.metricValues?.[0]?.value || 0)
+      }));
+    } catch (locErr) {
+      console.warn("Realtime location query:", locErr.message);
+    }
 
     res.json({
       activeUsers,
+      activeUsers5min,
+      eventCount,
+      minuteTimeline,
+      topPages,
+      topEvents,
+      topLocations,
       timestamp: new Date().toISOString()
     });
   } catch (error) {
@@ -140,7 +225,6 @@ app.get("/api/analytics/overview", async (req, res) => {
 
       timeline = (trendResponse.rows || []).map(row => {
         const d = row.dimensionValues?.[0]?.value || "";
-        // Format YYYYMMDD to "D Mon"
         const formattedDate = d.length === 8 
           ? `${d.substring(6, 8)}/${d.substring(4, 6)}`
           : d;

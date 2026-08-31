@@ -1121,6 +1121,10 @@ input, select, textarea { font-family: inherit; }
                     <a href="#" data-view="overview" class="m365-analytics-nav-item active">
                         <i data-lucide="layout-dashboard"></i> <span>Overview</span>
                     </a>
+                    <a href="#" data-view="realtime" class="m365-analytics-nav-item">
+                        <i data-lucide="radio"></i> <span>Realtime Overview</span>
+                        <span class="m365-analytics-nav-badge" style="background:rgba(16,185,129,0.15); color:#10b981; font-weight:800;">LIVE</span>
+                    </a>
                     <a href="#" data-view="traffic" class="m365-analytics-nav-item">
                         <i data-lucide="trending-up"></i> <span>Traffic &amp; Flow</span>
                     </a>
@@ -1463,6 +1467,105 @@ input, select, textarea { font-family: inherit; }
                                 <div style="display:flex; justify-content:space-between;"><span>Traffic Authority</span> <strong id="m365-scorecard-traffic">91 (Top 10%)</strong></div>
                                 <div style="display:flex; justify-content:space-between;"><span>SEO Visibility</span> <strong id="m365-scorecard-seo">88 (High)</strong></div>
                                 <div style="display:flex; justify-content:space-between;"><span>Conversion Health</span> <strong id="m365-scorecard-cvr" style="color:var(--m365-analytics-success);">84 (Good)</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- VIEW: REALTIME OVERVIEW (Matching GA4 Realtime Console) -->
+                <div id="view-realtime" class="m365-analytics-view">
+                    <div class="m365-analytics-page-header">
+                        <div>
+                            <h2 class="m365-analytics-page-title" style="display:flex; align-items:center; gap:8px;">
+                                <div class="m365-analytics-pulse" style="background:#10b981;"></div> Realtime Overview
+                            </h2>
+                            <p class="m365-analytics-page-desc">Live activity on medical365.in from the last 30 minutes (GA4 Realtime Stream).</p>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <span id="m365-realtime-last-synced" style="font-size:10px; color:var(--m365-analytics-text-muted);">Syncing live...</span>
+                            <button class="m365-analytics-btn m365-analytics-btn-brand" onclick="refreshRealtimeView()">
+                                <i data-lucide="refresh-cw" style="width:12px; height:12px;"></i> Refresh Live
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Realtime Top Cards Grid -->
+                    <div class="m365-analytics-grid m365-analytics-grid-4">
+                        <div class="m365-analytics-card" style="border-left:4px solid #10b981;">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">ACTIVE USERS IN LAST 30 MINS</div>
+                            <div id="m365-rt-users-30m" class="m365-analytics-kpi-val" style="color:#10b981; font-size:32px; margin:4px 0;">0</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-secondary); display:flex; align-items:center; gap:4px;">
+                                <div class="m365-analytics-pulse" style="width:5px; height:5px; background:#10b981;"></div> Users on site right now
+                            </div>
+                        </div>
+
+                        <div class="m365-analytics-card" style="border-left:4px solid var(--m365-analytics-brand);">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">ACTIVE USERS IN LAST 5 MINS</div>
+                            <div id="m365-rt-users-5m" class="m365-analytics-kpi-val" style="color:var(--m365-analytics-brand); font-size:32px; margin:4px 0;">0</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-secondary);">Immediate live sessions</div>
+                        </div>
+
+                        <div class="m365-analytics-card">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">REALTIME EVENT COUNT</div>
+                            <div id="m365-rt-event-count" class="m365-analytics-kpi-val" style="font-size:32px; margin:4px 0;">0</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted);">Pageviews, clicks, scrolls</div>
+                        </div>
+
+                        <div class="m365-analytics-card">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">REALTIME STREAM STATUS</div>
+                            <div class="m365-analytics-kpi-val" style="font-size:14px; margin:8px 0; color:#10b981; display:flex; align-items:center; gap:6px;">
+                                <i data-lucide="check-circle" style="width:16px; height:16px;"></i> GA4 Stream Active
+                            </div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted);">Property: 534358709</div>
+                        </div>
+                    </div>
+
+                    <!-- Realtime Minute Timeline Chart & Realtime Pages Grid -->
+                    <div class="m365-analytics-grid m365-analytics-grid-2">
+                        <!-- Minute by Minute Activity -->
+                        <div class="m365-analytics-card">
+                            <div class="m365-analytics-card-header">
+                                <span class="m365-analytics-card-title"><i data-lucide="bar-chart-2"></i> Users per Minute (0 to 30 mins ago)</span>
+                                <span class="m365-analytics-badge high">Live Stream</span>
+                            </div>
+                            <div class="m365-analytics-chart-container" style="height:180px; min-height:180px;">
+                                <canvas id="m365-realtime-minute-chart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Realtime Active Pages -->
+                        <div class="m365-analytics-card">
+                            <div class="m365-analytics-card-header">
+                                <span class="m365-analytics-card-title"><i data-lucide="file-text"></i> Views by Page Title &amp; Screen</span>
+                            </div>
+                            <div class="m365-analytics-table-wrap" style="max-height:180px; overflow-y:auto;">
+                                <table class="m365-analytics-table" id="m365-realtime-pages-table">
+                                    <thead><tr><th>Page Title / Screen</th><th style="text-align:right;">Views</th></tr></thead>
+                                    <tbody>
+                                        <tr><td colspan="2" style="text-align:center; color:var(--m365-analytics-text-muted); padding:20px;">No active visitors in the last 30 minutes</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Realtime Locations & Events Grid -->
+                    <div class="m365-analytics-grid m365-analytics-grid-2">
+                        <!-- Realtime Locations -->
+                        <div class="m365-analytics-card">
+                            <div class="m365-analytics-card-header">
+                                <span class="m365-analytics-card-title"><i data-lucide="map-pin"></i> Active Users by City / Location</span>
+                            </div>
+                            <div id="m365-realtime-locations-container" style="display:flex; flex-direction:column; gap:8px;">
+                                <div style="font-size:11px; color:var(--m365-analytics-text-muted); text-align:center; padding:15px;">Waiting for active user locations...</div>
+                            </div>
+                        </div>
+
+                        <!-- Realtime Events -->
+                        <div class="m365-analytics-card">
+                            <div class="m365-analytics-card-header">
+                                <span class="m365-analytics-card-title"><i data-lucide="activity"></i> Event Count by Event Name</span>
+                            </div>
+                            <div id="m365-realtime-events-container" style="display:flex; flex-direction:column; gap:8px;">
+                                <div style="font-size:11px; color:var(--m365-analytics-text-muted); text-align:center; padding:15px;">Waiting for realtime event stream...</div>
                             </div>
                         </div>
                     </div>
@@ -2523,6 +2626,127 @@ function renderHealthDonut(overallScore) {
     }
 }
 
+let realtimeMinuteChartInstance = null;
+
+window.refreshRealtimeView = async function() {
+    try {
+        const rt = await analyticsService.getRealtime();
+        
+        // 1. Update KPI Values
+        const users30m = document.getElementById('m365-rt-users-30m');
+        if (users30m) users30m.innerText = rt.activeUsers || 0;
+
+        const users5m = document.getElementById('m365-rt-users-5m');
+        if (users5m) users5m.innerText = rt.activeUsers5min || 0;
+
+        const eventCountEl = document.getElementById('m365-rt-event-count');
+        if (eventCountEl) eventCountEl.innerText = rt.eventCount || 0;
+
+        const lastSynced = document.getElementById('m365-realtime-last-synced');
+        if (lastSynced) lastSynced.innerText = `Updated ${new Date().toLocaleTimeString()}`;
+
+        // 2. Render Minute Chart
+        renderRealtimeMinuteChart(rt.minuteTimeline || []);
+
+        // 3. Render Realtime Pages Table
+        const pagesTable = document.querySelector('#m365-realtime-pages-table tbody');
+        if (pagesTable) {
+            if (rt.topPages && rt.topPages.length > 0) {
+                pagesTable.innerHTML = rt.topPages.map(p => `
+                    <tr>
+                        <td><code>${p.title}</code></td>
+                        <td style="text-align:right; font-weight:700; color:var(--m365-analytics-brand);">${p.views}</td>
+                    </tr>
+                `).join('');
+            } else {
+                pagesTable.innerHTML = `<tr><td colspan="2" style="text-align:center; color:var(--m365-analytics-text-muted); padding:20px;">No active visitors in the last 30 minutes</td></tr>`;
+            }
+        }
+
+        // 4. Render Realtime Locations
+        const locContainer = document.getElementById('m365-realtime-locations-container');
+        if (locContainer) {
+            if (rt.topLocations && rt.topLocations.length > 0) {
+                locContainer.innerHTML = rt.topLocations.map(l => `
+                    <div style="display:flex; justify-content:space-between; align-items:center; background:var(--m365-analytics-surface-hover); padding:6px 10px; border-radius:6px;">
+                        <span>📍 <strong>${l.city}</strong>, ${l.country}</span>
+                        <span class="m365-analytics-badge high">${l.users} active</span>
+                    </div>
+                `).join('');
+            } else {
+                locContainer.innerHTML = `<div style="font-size:11px; color:var(--m365-analytics-text-muted); text-align:center; padding:15px;">Waiting for active user locations...</div>`;
+            }
+        }
+
+        // 5. Render Realtime Events
+        const eventsContainer = document.getElementById('m365-realtime-events-container');
+        if (eventsContainer) {
+            if (rt.topEvents && rt.topEvents.length > 0) {
+                eventsContainer.innerHTML = rt.topEvents.map(e => `
+                    <div style="display:flex; justify-content:space-between; align-items:center; background:var(--m365-analytics-surface-hover); padding:6px 10px; border-radius:6px;">
+                        <span>⚡ <code>${e.eventName}</code></span>
+                        <span style="font-weight:700; color:var(--m365-analytics-brand);">${e.count}</span>
+                    </div>
+                `).join('');
+            } else {
+                eventsContainer.innerHTML = `<div style="font-size:11px; color:var(--m365-analytics-text-muted); text-align:center; padding:15px;">Waiting for realtime event stream...</div>`;
+            }
+        }
+
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    } catch (e) {
+        console.error("Error refreshing realtime view:", e);
+    }
+};
+
+function renderRealtimeMinuteChart(minuteTimeline) {
+    const canvas = document.getElementById('m365-realtime-minute-chart');
+    if (!canvas || typeof Chart === 'undefined') return;
+
+    // Generate 30 minutes slots (from -29m to 0m)
+    const labels = [];
+    const data = [];
+    for (let i = 29; i >= 0; i--) {
+        labels.push(`-${i}m`);
+        const found = minuteTimeline.find(m => m.minutesAgo === i);
+        data.push(found ? found.users : 0);
+    }
+
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    const gridColor = isDark ? 'rgba(31, 41, 61, 0.6)' : 'rgba(226, 232, 240, 0.7)';
+
+    try {
+        if (realtimeMinuteChartInstance) {
+            realtimeMinuteChartInstance.destroy();
+            realtimeMinuteChartInstance = null;
+        }
+
+        realtimeMinuteChartInstance = new Chart(canvas, {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Active Users',
+                    data,
+                    backgroundColor: '#10b981',
+                    borderRadius: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { size: 9 }, maxTicksLimit: 10 } },
+                    y: { grid: { color: gridColor }, beginAtZero: true, ticks: { stepSize: 1 } }
+                }
+            }
+        });
+    } catch (err) {
+        console.warn("Realtime chart error:", err);
+    }
+}
+
 // ==========================================
 // 6. Filter Controls & Chips Management
 // ==========================================
@@ -3161,9 +3385,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateBreadcrumbs(viewId);
                 updateUrlState();
 
-                // If switching to overview, re-render chart to ensure proper layout sizing
+                // If switching to overview or realtime, re-render chart
                 if (viewId === 'overview') {
                     setTimeout(renderTrafficChart, 50);
+                } else if (viewId === 'realtime') {
+                    setTimeout(refreshRealtimeView, 50);
                 }
 
                 if (window.innerWidth <= 768 && sidebar) {
@@ -3213,6 +3439,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 9. Auto-poll Real-time Active Users every 10 seconds
     setInterval(updateRealtimeActiveUsers, 10000);
+
+    // 10. Auto-poll Realtime View every 5 seconds when active
+    setInterval(() => {
+        if (appState.view === 'realtime') {
+            refreshRealtimeView();
+        }
+    }, 5000);
 });
 
 function updateBreadcrumbs(viewId) {
