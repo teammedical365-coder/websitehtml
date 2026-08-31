@@ -23,7 +23,7 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// Real-Time Active Users API (Last 30 minutes active visitors)
+// 1. Real-Time Active Users API (Last 30 mins)
 app.get("/api/analytics/realtime", async (req, res) => {
   try {
     if (!PROPERTY_ID) {
@@ -50,7 +50,7 @@ app.get("/api/analytics/realtime", async (req, res) => {
   }
 });
 
-// Historical & Filtered Analytics Overview API
+// 2. Comprehensive Historical & Filtered Analytics Overview API
 app.get("/api/analytics/overview", async (req, res) => {
   try {
     if (!PROPERTY_ID) {
@@ -105,32 +105,130 @@ app.get("/api/analytics/overview", async (req, res) => {
       }
     }
 
-    const [response] = await analyticsClient.runReport({
+    // 1. Overall Aggregated Totals
+    const [overviewResponse] = await analyticsClient.runReport({
       property: `properties/${PROPERTY_ID}`,
-      dateRanges: [
-        {
-          startDate: start,
-          endDate: end
-        }
-      ],
+      dateRanges: [{ startDate: start, endDate: end }],
       metrics: [
         { name: "activeUsers" },
         { name: "sessions" },
         { name: "screenPageViews" },
-        { name: "averageSessionDuration" }
+        { name: "averageSessionDuration" },
+        { name: "eventCount" },
+        { name: "newUsers" }
       ]
     });
 
-    const values = response.rows?.[0]?.metricValues || [];
+    const values = overviewResponse.rows?.[0]?.metricValues || [];
+    const visitors = Number(values[0]?.value || 0);
+    const sessions = Number(values[1]?.value || 0);
+    const pageViews = Number(values[2]?.value || 0);
+    const averageSessionDuration = Number(values[3]?.value || 0);
+    const eventCount = Number(values[4]?.value || 0);
+    const newUsers = Number(values[5]?.value || 0);
+
+    // 2. Real Daily Timeline for Chart.js Line Chart
+    let timeline = [];
+    try {
+      const [trendResponse] = await analyticsClient.runReport({
+        property: `properties/${PROPERTY_ID}`,
+        dateRanges: [{ startDate: start, endDate: end }],
+        dimensions: [{ name: "date" }],
+        metrics: [{ name: "activeUsers" }],
+        orderBys: [{ dimension: { dimensionName: "date" }, desc: false }]
+      });
+
+      timeline = (trendResponse.rows || []).map(row => {
+        const d = row.dimensionValues?.[0]?.value || "";
+        // Format YYYYMMDD to "D Mon"
+        const formattedDate = d.length === 8 
+          ? `${d.substring(6, 8)}/${d.substring(4, 6)}`
+          : d;
+        return {
+          date: formattedDate,
+          rawDate: d,
+          users: Number(row.metricValues?.[0]?.value || 0)
+        };
+      });
+    } catch (trendErr) {
+      console.warn("Could not fetch daily trend:", trendErr.message);
+    }
+
+    // 3. Top Pages
+    let topPages = [];
+    try {
+      const [pagesResponse] = await analyticsClient.runReport({
+        property: `properties/${PROPERTY_ID}`,
+        dateRanges: [{ startDate: start, endDate: end }],
+        dimensions: [{ name: "pageTitle" }, { name: "pagePath" }],
+        metrics: [{ name: "screenPageViews" }, { name: "activeUsers" }, { name: "bounceRate" }],
+        limit: 10
+      });
+
+      topPages = (pagesResponse.rows || []).map(row => ({
+        title: row.dimensionValues?.[0]?.value || "Untitled",
+        path: row.dimensionValues?.[1]?.value || "/",
+        views: Number(row.metricValues?.[0]?.value || 0),
+        users: Number(row.metricValues?.[1]?.value || 0),
+        bounceRate: ((Number(row.metricValues?.[2]?.value || 0)) * 100).toFixed(1) + "%"
+      }));
+    } catch (pagesErr) {
+      console.warn("Could not fetch top pages:", pagesErr.message);
+    }
+
+    // 4. Top Traffic Sources
+    let topSources = [];
+    try {
+      const [sourcesResponse] = await analyticsClient.runReport({
+        property: `properties/${PROPERTY_ID}`,
+        dateRanges: [{ startDate: start, endDate: end }],
+        dimensions: [{ name: "sessionSourceMedium" }],
+        metrics: [{ name: "sessions" }, { name: "activeUsers" }],
+        limit: 10
+      });
+
+      topSources = (sourcesResponse.rows || []).map(row => ({
+        sourceMedium: row.dimensionValues?.[0]?.value || "(direct) / (none)",
+        sessions: Number(row.metricValues?.[0]?.value || 0),
+        users: Number(row.metricValues?.[1]?.value || 0)
+      }));
+    } catch (sourcesErr) {
+      console.warn("Could not fetch top sources:", sourcesErr.message);
+    }
+
+    // 5. Top Cities
+    let topCities = [];
+    try {
+      const [citiesResponse] = await analyticsClient.runReport({
+        property: `properties/${PROPERTY_ID}`,
+        dateRanges: [{ startDate: start, endDate: end }],
+        dimensions: [{ name: "city" }],
+        metrics: [{ name: "activeUsers" }],
+        limit: 10
+      });
+
+      topCities = (citiesResponse.rows || []).map(row => ({
+        city: row.dimensionValues?.[0]?.value || "(not set)",
+        users: Number(row.metricValues?.[0]?.value || 0)
+      }));
+    } catch (citiesErr) {
+      console.warn("Could not fetch top cities:", citiesErr.message);
+    }
 
     res.json({
       range: range || "custom",
       startDate: start,
       endDate: end,
-      visitors: Number(values[0]?.value || 0),
-      sessions: Number(values[1]?.value || 0),
-      pageViews: Number(values[2]?.value || 0),
-      averageSessionDuration: Number(values[3]?.value || 0)
+      visitors,
+      sessions,
+      pageViews,
+      averageSessionDuration,
+      eventCount,
+      newUsers,
+      timeline,
+      topPages,
+      topSources,
+      topCities
     });
 
   } catch (error) {

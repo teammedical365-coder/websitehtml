@@ -19,9 +19,10 @@ const appState = {
     campaign: 'all',
     segment: 'all',
     role: 'Administrator',
-    dataMode: 'demo', // 'demo' | 'live'
+    dataMode: 'live', // Default to Live GA4 mode
     theme: localStorage.getItem('m365_theme') || 'light',
     currentStorySlide: 1,
+    liveData: null,
     savedViews: JSON.parse(localStorage.getItem('m365_saved_views')) || [
         { name: 'Organic Mobile', state: { dateRange: '30d', source: 'organic', device: 'mobile', country: 'all', page: 'all' } },
         { name: 'High Intent Hospital Leads', state: { dateRange: '30d', source: 'all', device: 'desktop', country: 'all', page: '/pricing' } },
@@ -317,6 +318,10 @@ const apiDataAdapter = {
                 cvr,
                 revenuePerLead: '₹4,820',
                 pipelineRevenue,
+                timeline: ga4Data.timeline || [],
+                topPages: ga4Data.topPages || [],
+                topSources: ga4Data.topSources || [],
+                topCities: ga4Data.topCities || [],
                 scorecard: {
                     overall: 92,
                     traffic: 94,
@@ -461,6 +466,12 @@ window.refreshDashboard = async function() {
         updateElementText('m365-kpi-cvr', data.cvr);
         updateElementText('m365-kpi-revenue', data.revenuePerLead);
 
+        // Render real GA4 top pages & sources in live mode
+        if (appState.dataMode === 'live') {
+            if (data.topPages && data.topPages.length > 0) renderLiveTopPages(data.topPages);
+            if (data.topSources && data.topSources.length > 0) renderLiveTopSources(data.topSources);
+        }
+
         // 2. Update Executive Story Slides with Dynamic Metrics
         const slide1Desc = document.querySelector('#m365-story-slide-1 p');
         if (slide1Desc) {
@@ -489,6 +500,35 @@ window.refreshDashboard = async function() {
         console.error('Error in refreshDashboard:', err);
     }
 };
+
+function renderLiveTopPages(pages) {
+    const tbody = document.querySelector('#view-pages tbody');
+    if (!tbody) return;
+    tbody.innerHTML = pages.map(p => `
+        <tr>
+            <td><code>${p.path}</code></td>
+            <td><strong>${p.title}</strong></td>
+            <td>${p.views.toLocaleString()}</td>
+            <td>${p.users.toLocaleString()} users</td>
+            <td>${Math.max(1, Math.round(p.users * 0.026))}</td>
+            <td><span class="m365-analytics-badge ${parseFloat(p.bounceRate) < 50 ? 'high' : 'med'}">${p.bounceRate}</span></td>
+            <td>${p.bounceRate}</td>
+            <td><button class="m365-analytics-btn" style="padding:2px 8px; font-size:10px;" onclick="openDrawer('page', {url:'${p.path}', name:'${p.title}'})">Deep Dive</button></td>
+        </tr>
+    `).join('');
+}
+
+function renderLiveTopSources(sources) {
+    const container = document.querySelector('#view-traffic .m365-analytics-grid-3');
+    if (!container) return;
+    container.innerHTML = sources.slice(0, 3).map((s, idx) => `
+        <div style="background:var(--m365-analytics-surface-hover); padding:12px; border-radius:6px; border:1px solid var(--m365-analytics-border);">
+            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-brand);">SOURCE #${idx+1} (${s.sourceMedium.toUpperCase()})</div>
+            <div style="font-size:12px; font-weight:600; margin:4px 0;">${s.sourceMedium}</div>
+            <div style="font-size:11px; color:var(--m365-analytics-success); font-weight:700;">${s.sessions.toLocaleString()} Sessions · ${s.users.toLocaleString()} Users</div>
+        </div>
+    `).join('');
+}
 
 function updateElementText(id, text) {
     const el = document.getElementById(id);
@@ -523,14 +563,29 @@ function renderTrafficChart() {
     const canvas = document.getElementById('m365-traffic-chart-v6');
     if (!canvas) return;
 
-    const chartData = analyticsEngine.generateChartData();
+    let labels = [];
+    let actualData = [];
+    let forecastData = [];
+
+    if (appState.dataMode === 'live' && appState.liveData?.timeline?.length > 0) {
+        labels = appState.liveData.timeline.map(t => t.date);
+        actualData = appState.liveData.timeline.map(t => t.users);
+        const lastVal = actualData[actualData.length - 1] || 0;
+        forecastData = actualData.map((_, i) => i >= actualData.length - 2 ? Math.round(lastVal * 1.1) : null);
+    } else {
+        const chartData = analyticsEngine.generateChartData();
+        labels = chartData.labels;
+        actualData = chartData.actualData;
+        forecastData = chartData.forecastData;
+    }
+
     const isDark = document.body.getAttribute('data-theme') === 'dark';
     const gridColor = isDark ? 'rgba(31, 41, 61, 0.6)' : 'rgba(226, 232, 240, 0.7)';
     const textColor = isDark ? '#94a3b8' : '#64748b';
 
     // Verify Chart.js is loaded
     if (typeof Chart === 'undefined') {
-        renderSvgChartFallback(canvas, chartData);
+        renderSvgChartFallback(canvas, { labels, actualData });
         return;
     }
 
@@ -546,11 +601,11 @@ function renderTrafficChart() {
         trafficChartInstance = new Chart(canvas, {
             type: 'line',
             data: {
-                labels: chartData.labels,
+                labels: labels,
                 datasets: [
                     {
-                        label: 'Current Period (Visitors)',
-                        data: chartData.actualData,
+                        label: appState.dataMode === 'live' ? 'GA4 Active Users (Live)' : 'Current Period (Visitors)',
+                        data: actualData,
                         borderColor: '#0ea5e9',
                         backgroundColor: 'rgba(14, 165, 233, 0.08)',
                         borderWidth: 2.5,
@@ -561,7 +616,7 @@ function renderTrafficChart() {
                     },
                     {
                         label: '30-Day Forecast (Dotted)',
-                        data: chartData.forecastData,
+                        data: forecastData,
                         borderColor: '#10b981',
                         borderDash: [4, 4],
                         borderWidth: 2,
