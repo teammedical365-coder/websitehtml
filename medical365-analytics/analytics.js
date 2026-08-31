@@ -254,9 +254,24 @@ const analyticsEngine = {
 // 2.1 Live GA4 Data Adapter & Analytics Service
 // ==========================================
 const apiDataAdapter = {
-    async getOverview() {
+    async getRealtime() {
         try {
-            const response = await fetch("http://localhost:3000/api/analytics/overview");
+            const response = await fetch("http://localhost:3000/api/analytics/realtime");
+            if (!response.ok) return { activeUsers: 0 };
+            return await response.json();
+        } catch (e) {
+            return { activeUsers: 0 };
+        }
+    },
+
+    async getOverview(dateRange = appState.dateRange, customStart = appState.customStartDate, customEnd = appState.customEndDate) {
+        try {
+            let url = `http://localhost:3000/api/analytics/overview?range=${encodeURIComponent(dateRange)}`;
+            if (dateRange === 'custom' && customStart && customEnd) {
+                url += `&startDate=${encodeURIComponent(customStart)}&endDate=${encodeURIComponent(customEnd)}`;
+            }
+
+            const response = await fetch(url);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -280,8 +295,19 @@ const apiDataAdapter = {
                 ? '₹' + (totalPipelineRupees / 100000).toFixed(1) + 'L'
                 : '₹' + totalPipelineRupees.toLocaleString();
 
+            const dateLabels = {
+                'today': 'Today (Live GA4)',
+                'yesterday': 'Yesterday (Live GA4)',
+                '7d': 'Last 7 Days (Live GA4)',
+                '30d': 'Last 30 Days (Live GA4)',
+                '90d': 'Last 90 Days (Historical GA4)',
+                'this-month': 'This Month (Live GA4)',
+                'this-year': 'This Year / All Time (Historical GA4)',
+                'custom': `${customStart} to ${customEnd} (Historical GA4)`
+            };
+
             return {
-                dateLabel: 'Last 7 Days (Live GA4)',
+                dateLabel: dateLabels[dateRange] || `${dateRange} (Live GA4)`,
                 visitors,
                 sessions,
                 pageViews,
@@ -315,8 +341,25 @@ const analyticsService = {
             return await apiDataAdapter.getOverview();
         }
         return analyticsEngine.calculateMetrics();
+    },
+    async getRealtime() {
+        if (appState.dataMode === 'live') {
+            return await apiDataAdapter.getRealtime();
+        }
+        return { activeUsers: 14 };
     }
 };
+
+async function updateRealtimeActiveUsers() {
+    const badge = document.getElementById('m365-realtime-users-badge');
+    if (!badge) return;
+
+    const rt = await analyticsService.getRealtime();
+    const isLive = appState.dataMode === 'live';
+    const color = isLive ? '#10b981' : '#0ea5e9';
+    badge.className = isLive ? 'm365-analytics-health-pill healthy' : 'm365-analytics-health-pill';
+    badge.innerHTML = `<div class="m365-analytics-pulse" style="background:${color};"></div><span><strong>${rt.activeUsers}</strong> Active Users Now (${isLive ? 'GA4 Realtime' : 'Demo'})</span>`;
+}
 
 // ==========================================
 // 3. Central State Update Dispatcher
@@ -437,6 +480,9 @@ window.refreshDashboard = async function() {
             const projectedVisitors = Math.round(data.visitors * 1.085);
             forecastText.innerText = `Projected: ${projectedVisitors.toLocaleString()} Visitors`;
         }
+
+        // 6. Update Real-Time Active Users Badge
+        updateRealtimeActiveUsers();
 
         logDebug('Dashboard refreshed successfully');
     } catch (err) {
@@ -1288,6 +1334,9 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTasks();
     renderFavorites();
     refreshDashboard();
+
+    // 9. Auto-poll Real-time Active Users every 10 seconds
+    setInterval(updateRealtimeActiveUsers, 10000);
 });
 
 function updateBreadcrumbs(viewId) {
@@ -1297,3 +1346,4 @@ function updateBreadcrumbs(viewId) {
         el.innerText = title;
     }
 }
+

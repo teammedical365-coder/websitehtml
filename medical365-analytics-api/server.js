@@ -23,6 +23,34 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+// Real-Time Active Users API (Last 30 minutes active visitors)
+app.get("/api/analytics/realtime", async (req, res) => {
+  try {
+    if (!PROPERTY_ID) {
+      return res.status(500).json({ error: "GA4_PROPERTY_ID is not configured" });
+    }
+
+    const [response] = await analyticsClient.runRealtimeReport({
+      property: `properties/${PROPERTY_ID}`,
+      metrics: [{ name: "activeUsers" }]
+    });
+
+    const activeUsers = Number(response.rows?.[0]?.metricValues?.[0]?.value || 0);
+
+    res.json({
+      activeUsers,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error("GA4 Realtime API Error:", error);
+    res.status(500).json({
+      error: "Unable to retrieve real-time data",
+      message: error.message
+    });
+  }
+});
+
+// Historical & Filtered Analytics Overview API
 app.get("/api/analytics/overview", async (req, res) => {
   try {
     if (!PROPERTY_ID) {
@@ -31,12 +59,58 @@ app.get("/api/analytics/overview", async (req, res) => {
       });
     }
 
+    const { range, startDate, endDate } = req.query;
+
+    let start = "30daysAgo";
+    let end = "today";
+
+    if (startDate && endDate) {
+      start = startDate;
+      end = endDate;
+    } else if (range) {
+      switch (range) {
+        case "today":
+          start = "today";
+          end = "today";
+          break;
+        case "yesterday":
+          start = "yesterday";
+          end = "yesterday";
+          break;
+        case "7d":
+          start = "7daysAgo";
+          end = "today";
+          break;
+        case "30d":
+          start = "30daysAgo";
+          end = "today";
+          break;
+        case "90d":
+          start = "90daysAgo";
+          end = "today";
+          break;
+        case "this-month":
+          start = "startOfThisMonth";
+          end = "today";
+          break;
+        case "this-year":
+        case "365d":
+        case "all":
+          start = "365daysAgo";
+          end = "today";
+          break;
+        default:
+          start = "30daysAgo";
+          end = "today";
+      }
+    }
+
     const [response] = await analyticsClient.runReport({
       property: `properties/${PROPERTY_ID}`,
       dateRanges: [
         {
-          startDate: "7daysAgo",
-          endDate: "today"
+          startDate: start,
+          endDate: end
         }
       ],
       metrics: [
@@ -50,6 +124,9 @@ app.get("/api/analytics/overview", async (req, res) => {
     const values = response.rows?.[0]?.metricValues || [];
 
     res.json({
+      range: range || "custom",
+      startDate: start,
+      endDate: end,
       visitors: Number(values[0]?.value || 0),
       sessions: Number(values[1]?.value || 0),
       pageViews: Number(values[2]?.value || 0),
