@@ -1041,6 +1041,7 @@ window.handleSeoFilter = function(key, val) {
     appState.seoFilters[key] = val;
     appState.seoFilters.page = 1;
     renderSeoView();
+        refreshLeadsView();
 };
 
 window.handleSeoSearch = function(query) {
@@ -2442,6 +2443,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(refreshRealtimeView, 50);
                 } else if (viewId === 'seo' || viewId === 'competitors') {
                     setTimeout(renderSeoView, 50);
+                } else if (viewId === 'leads') {
+                    setTimeout(refreshLeadsView, 50);
                 }
 
                 if (window.innerWidth <= 768 && sidebar) {
@@ -2507,4 +2510,376 @@ function updateBreadcrumbs(viewId) {
         el.innerText = title;
     }
 }
+
+
+
+// ==========================================
+// 2.6 Leads & Inbound Inquiries Engine (WhatsApp, Calls, Demos, Contact Forms)
+// ==========================================
+const leadsEngine = {
+    cachedLeads: [],
+    leadsFilter: {
+        search: '',
+        type: 'all', // 'all' | 'book_demo' | 'whatsapp' | 'call' | 'contact_form'
+        status: 'all' // 'all' | 'New' | 'Contacted' | 'Demo Scheduled' | 'Closed'
+    },
+
+    async fetchLeads() {
+        try {
+            const response = await fetch('http://localhost:3000/api/leads');
+            if (response.ok) {
+                const data = await response.json();
+                this.cachedLeads = data.leads || [];
+                return data;
+            }
+        } catch (e) {
+            console.warn("Could not fetch leads from server, using local store:", e);
+        }
+
+        // Fallback to localStorage or mock leads
+        const local = JSON.parse(localStorage.getItem('m365_captured_leads') || '[]');
+        if (local.length > 0) {
+            this.cachedLeads = local;
+        } else {
+            this.cachedLeads = [
+                {
+                    id: 'lead_1725178491001',
+                    type: 'book_demo',
+                    name: 'Dr. Arvind Rathore',
+                    email: 'rathore.hospital@gmail.com',
+                    phone: '+91 98290 12345',
+                    organization: 'Rathore Multispeciality Hospital',
+                    facilityType: 'Multi-Specialty Hospital',
+                    bedCount: '51–200 Beds',
+                    message: 'Need ABDM integration & bed allocation module demo for 75-bed hospital in Jaipur.',
+                    sourcePage: '/book-demo',
+                    referrer: 'google / organic',
+                    status: 'Demo Scheduled',
+                    timestamp: new Date(Date.now() - 3600000 * 4).toISOString()
+                },
+                {
+                    id: 'lead_1725178491002',
+                    type: 'whatsapp',
+                    name: 'WhatsApp Inquiry',
+                    email: '—',
+                    phone: '+91 77919 10007',
+                    organization: 'Apex City Clinic',
+                    facilityType: 'Clinic / Polyclinic',
+                    bedCount: '1–10 Doctors',
+                    message: 'Hi Medical365, I would like to book a free demo and check pricing plans for our clinic.',
+                    sourcePage: '/pricing',
+                    referrer: 'google / organic',
+                    status: 'Contacted',
+                    timestamp: new Date(Date.now() - 3600000 * 8).toISOString()
+                },
+                {
+                    id: 'lead_1725178491003',
+                    type: 'call',
+                    name: 'Direct Phone Call',
+                    email: '—',
+                    phone: '+91 77919 10007',
+                    organization: 'Shree Krishna Diagnostic Lab',
+                    facilityType: 'Diagnostic Lab',
+                    bedCount: '1–10 Doctors',
+                    message: 'Inbound phone call initiated via mobile floating call button.',
+                    sourcePage: '/hospital-bed-management',
+                    referrer: '(direct) / (none)',
+                    status: 'New',
+                    timestamp: new Date(Date.now() - 3600000 * 14).toISOString()
+                },
+                {
+                    id: 'lead_1725178491004',
+                    type: 'contact_form',
+                    name: 'Vikram Singhal',
+                    email: 'vikram@singhalhealthcare.org',
+                    phone: '+91 94140 88765',
+                    organization: 'Singhal Healthcare Group',
+                    facilityType: 'Hospital Chain',
+                    bedCount: '201–500 Beds',
+                    message: 'Looking for multi-branch HIMS software with central inventory & pharmacy management.',
+                    sourcePage: '/contact',
+                    referrer: 'google / organic',
+                    status: 'New',
+                    timestamp: new Date(Date.now() - 3600000 * 22).toISOString()
+                }
+            ];
+        }
+
+        const whatsappClicks = this.cachedLeads.filter(l => l.type === 'whatsapp').length;
+        const callClicks = this.cachedLeads.filter(l => l.type === 'call').length;
+        const demoRequests = this.cachedLeads.filter(l => l.type === 'book_demo').length;
+        const contactForms = this.cachedLeads.filter(l => l.type === 'contact_form').length;
+
+        return {
+            totalLeads: this.cachedLeads.length,
+            stats: { whatsappClicks, callClicks, demoRequests, contactForms },
+            leads: this.cachedLeads
+        };
+    },
+
+    getFilteredLeads() {
+        const query = (this.leadsFilter.search || '').toLowerCase().trim();
+        return this.cachedLeads.filter(lead => {
+            if (query) {
+                const matchName = (lead.name || '').toLowerCase().includes(query);
+                const matchPhone = (lead.phone || '').toLowerCase().includes(query);
+                const matchOrg = (lead.organization || '').toLowerCase().includes(query);
+                const matchPage = (lead.sourcePage || '').toLowerCase().includes(query);
+                const matchMsg = (lead.message || '').toLowerCase().includes(query);
+                if (!matchName && !matchPhone && !matchOrg && !matchPage && !matchMsg) return false;
+            }
+            if (this.leadsFilter.type !== 'all' && lead.type !== this.leadsFilter.type) return false;
+            if (this.leadsFilter.status !== 'all' && lead.status !== this.leadsFilter.status) return false;
+            return true;
+        });
+    }
+};
+
+let leadsDistributionChartInstance = null;
+
+window.refreshLeadsView = async function() {
+    try {
+        const data = await leadsEngine.fetchLeads();
+        const stats = data.stats || { whatsappClicks: 0, callClicks: 0, demoRequests: 0, contactForms: 0 };
+        const filtered = leadsEngine.getFilteredLeads();
+
+        // 1. Update Top 4 KPI Metrics
+        const kpiWa = document.getElementById('m365-lead-kpi-whatsapp');
+        if (kpiWa) kpiWa.innerText = (stats.whatsappClicks || 0).toLocaleString();
+
+        const kpiCalls = document.getElementById('m365-lead-kpi-calls');
+        if (kpiCalls) kpiCalls.innerText = (stats.callClicks || 0).toLocaleString();
+
+        const kpiDemos = document.getElementById('m365-lead-kpi-demos');
+        if (kpiDemos) kpiDemos.innerText = (stats.demoRequests || 0).toLocaleString();
+
+        const kpiContact = document.getElementById('m365-lead-kpi-contact');
+        if (kpiContact) kpiContact.innerText = (stats.contactForms || 0).toLocaleString();
+
+        const countBadge = document.getElementById('m365-leads-count-badge');
+        if (countBadge) countBadge.innerText = `${filtered.length} Leads`;
+
+        const navBadge = document.getElementById('m365-nav-badge-leads');
+        if (navBadge) navBadge.innerText = `${data.totalLeads || filtered.length} LIVE`;
+
+        // 2. Render Inbound Chart (WhatsApp vs Calls vs Demos vs Contact)
+        renderLeadsDistributionChart(stats);
+
+        // 3. Render Inbound Leads Table
+        const tbody = document.getElementById('m365-leads-table-body');
+        if (tbody) {
+            if (filtered.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:30px; color:var(--m365-analytics-text-muted);">No inbound leads match current filters.</td></tr>';
+            } else {
+                tbody.innerHTML = filtered.map(lead => {
+                    let typeBadge = '';
+                    if (lead.type === 'whatsapp') {
+                        typeBadge = '<span class="m365-analytics-badge high" style="background:rgba(16,185,129,0.12); color:#10b981;"><i data-lucide="message-circle" style="width:10px; height:10px; display:inline-block; vertical-align:middle;"></i> WhatsApp</span>';
+                    } else if (lead.type === 'call') {
+                        typeBadge = '<span class="m365-analytics-badge high" style="background:rgba(14,165,233,0.12); color:var(--m365-analytics-brand);"><i data-lucide="phone-call" style="width:10px; height:10px; display:inline-block; vertical-align:middle;"></i> Phone Call</span>';
+                    } else if (lead.type === 'book_demo') {
+                        typeBadge = '<span class="m365-analytics-badge med" style="background:rgba(139,92,246,0.12); color:#8b5cf6;"><i data-lucide="calendar-check" style="width:10px; height:10px; display:inline-block; vertical-align:middle;"></i> Book Demo</span>';
+                    } else {
+                        typeBadge = '<span class="m365-analytics-badge neutral"><i data-lucide="mail" style="width:10px; height:10px; display:inline-block; vertical-align:middle;"></i> Contact Us</span>';
+                    }
+
+                    const d = new Date(lead.timestamp);
+                    const formattedDate = !isNaN(d.getTime()) 
+                        ? `${d.getDate()} ${d.toLocaleString('en', {month:'short'})}, ${d.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`
+                        : lead.timestamp;
+
+                    const cleanPhone = (lead.phone || '').replace(/[^\d+]/g, '');
+
+                    return `
+                        <tr>
+                            <td><span style="font-size:11px; color:var(--m365-analytics-text-muted);">${formattedDate}</span></td>
+                            <td>${typeBadge}</td>
+                            <td>
+                                <strong>${lead.name}</strong>
+                                <div style="font-size:10px; color:var(--m365-analytics-brand);">
+                                    <a href="tel:${cleanPhone}" style="color:inherit; text-decoration:none;">📞 ${lead.phone}</a>
+                                </div>
+                            </td>
+                            <td>
+                                <strong>${lead.organization}</strong>
+                                <div style="font-size:10px; color:var(--m365-analytics-text-muted);">${lead.facilityType} ${lead.bedCount ? '(' + lead.bedCount + ')' : ''}</div>
+                            </td>
+                            <td><code>${lead.sourcePage}</code></td>
+                            <td>
+                                <div style="max-width:240px; font-size:11px; line-height:1.4; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${lead.message}">
+                                    ${lead.message}
+                                </div>
+                            </td>
+                            <td>
+                                <select class="m365-analytics-select" style="padding:2px 8px; font-size:10px;" onchange="updateLeadStatus('${lead.id}', this.value)">
+                                    <option ${lead.status === 'New' ? 'selected' : ''}>New</option>
+                                    <option ${lead.status === 'Contacted' ? 'selected' : ''}>Contacted</option>
+                                    <option ${lead.status === 'Demo Scheduled' ? 'selected' : ''}>Demo Scheduled</option>
+                                    <option ${lead.status === 'Closed' ? 'selected' : ''}>Closed</option>
+                                </select>
+                            </td>
+                            <td style="text-align:right; white-space:nowrap;">
+                                <a href="https://wa.me/${cleanPhone.replace('+', '')}?text=Hi%20${encodeURIComponent(lead.name)}%2C%20thank%20you%20for%20contacting%20Medical365!" target="_blank" rel="noopener" class="m365-analytics-btn" style="padding:2px 6px; font-size:10px; background:rgba(16,185,129,0.1); color:#10b981; border-color:rgba(16,185,129,0.25);">Chat</a>
+                                <a href="tel:${cleanPhone}" class="m365-analytics-btn m365-analytics-btn-brand" style="padding:2px 6px; font-size:10px;">Call</a>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+            }
+        }
+
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    } catch (e) {
+        console.error("Error in refreshLeadsView:", e);
+    }
+};
+
+function renderLeadsDistributionChart(stats) {
+    const canvas = document.getElementById('m365-leads-distribution-chart');
+    if (!canvas || typeof Chart === 'undefined') return;
+
+    try {
+        if (leadsDistributionChartInstance) {
+            leadsDistributionChartInstance.destroy();
+            leadsDistributionChartInstance = null;
+        }
+
+        const data = [
+            stats.whatsappClicks || 0,
+            stats.callClicks || 0,
+            stats.demoRequests || 0,
+            stats.contactForms || 0
+        ];
+
+        leadsDistributionChartInstance = new Chart(canvas, {
+            type: 'doughnut',
+            data: {
+                labels: ['WhatsApp Inbound', 'Phone Calls', 'Demo Bookings', 'Contact Forms'],
+                datasets: [{
+                    data: data.every(v => v === 0) ? [1, 1, 1, 1] : data,
+                    backgroundColor: ['#10b981', '#0ea5e9', '#8b5cf6', '#f59e0b'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'right',
+                        labels: { boxWidth: 10, font: { size: 10 } }
+                    }
+                },
+                cutout: '68%'
+            }
+        });
+    } catch (err) {
+        console.warn("Leads chart rendering error:", err);
+    }
+}
+
+window.handleLeadsSearch = function(query) {
+    leadsEngine.leadsFilter.search = query;
+    refreshLeadsView();
+};
+
+window.handleLeadsFilter = function(key, val) {
+    leadsEngine.leadsFilter[key] = val;
+    refreshLeadsView();
+};
+
+window.updateLeadStatus = async function(leadId, newStatus) {
+    try {
+        await fetch(`http://localhost:3000/api/leads/${leadId}/status`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: newStatus })
+        });
+    } catch (e) {}
+
+    const lead = leadsEngine.cachedLeads.find(l => l.id === leadId);
+    if (lead) lead.status = newStatus;
+    showToast(`Lead status updated to: "${newStatus}"`, 'success');
+};
+
+window.openManualLeadModal = function() {
+    const modal = document.getElementById('m365-manual-lead-modal-overlay');
+    if (modal) modal.classList.add('open');
+};
+
+window.submitManualLead = async function() {
+    const type = document.getElementById('m365-manual-lead-type')?.value || 'book_demo';
+    const name = document.getElementById('m365-manual-lead-name')?.value || 'Prospect';
+    const phone = document.getElementById('m365-manual-lead-phone')?.value || '—';
+    const org = document.getElementById('m365-manual-lead-org')?.value || 'Healthcare Facility';
+    const facilityType = document.getElementById('m365-manual-lead-factype')?.value || 'Hospital';
+    const message = document.getElementById('m365-manual-lead-notes')?.value || 'Offline logged lead';
+
+    const payload = {
+        type,
+        name,
+        email: '—',
+        phone,
+        organization: org,
+        facilityType,
+        bedCount: '—',
+        message,
+        sourcePage: '/direct-inbound',
+        referrer: 'Direct Call / Offline'
+    };
+
+    try {
+        await fetch('http://localhost:3000/api/leads/record', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+    } catch (e) {}
+
+    leadsEngine.cachedLeads.unshift({
+        id: 'lead_' + Date.now(),
+        ...payload,
+        status: 'New',
+        timestamp: new Date().toISOString()
+    });
+
+    closeModals();
+    refreshLeadsView();
+    showToast(`Inbound lead recorded for "${name}"`, 'success');
+};
+
+window.exportLeadsCsv = function() {
+    const list = leadsEngine.getFilteredLeads();
+    if (list.length === 0) {
+        showToast('No leads to export', 'warning');
+        return;
+    }
+
+    const headers = ['ID', 'Date', 'Type', 'Name', 'Phone', 'Email', 'Organization', 'Facility Type', 'Source Page', 'Referrer', 'Message', 'Status'];
+    const rows = list.map(l => [
+        `"${l.id}"`,
+        `"${l.timestamp}"`,
+        `"${l.type}"`,
+        `"${(l.name || '').replace(/"/g, '""')}"`,
+        `"${l.phone}"`,
+        `"${l.email}"`,
+        `"${(l.organization || '').replace(/"/g, '""')}"`,
+        `"${l.facilityType}"`,
+        `"${l.sourcePage}"`,
+        `"${l.referrer}"`,
+        `"${(l.message || '').replace(/"/g, '""')}"`,
+        `"${l.status}"`
+    ]);
+
+    const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement('a');
+    link.setAttribute('href', encodedUri);
+    link.setAttribute('download', `medical365-leads-${Date.now()}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast(`Exported ${list.length} inbound leads`, 'success');
+};
 

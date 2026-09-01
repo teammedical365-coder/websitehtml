@@ -493,6 +493,198 @@ function initGlobalScripts() {
             });
         });
     }
+
+    /* ── Real-Time Inbound Event & Lead Tracking (WhatsApp, Phone Call, Forms) ── */
+    function initLeadTracking() {
+        // 1. WhatsApp Click Tracking
+        document.addEventListener('click', function (e) {
+            var target = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"], .mf-wa-fab, [data-track="whatsapp"]');
+            if (target) {
+                var pageUrl = window.location.pathname || '/';
+                
+                // Fire GA4 Event
+                if (typeof gtag === 'function') {
+                    gtag('event', 'whatsapp_click', {
+                        event_category: 'Inbound Conversion',
+                        event_label: pageUrl,
+                        page_location: window.location.href,
+                        value: 1
+                    });
+                }
+
+                // Send Telemetry to Analytics Backend
+                try {
+                    fetch('http://localhost:3000/api/leads/track', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            eventType: 'whatsapp',
+                            sourcePage: pageUrl,
+                            phone: '+91 77919 10007',
+                            message: 'Visitor clicked WhatsApp button on ' + pageUrl
+                        })
+                    }).catch(function () {});
+                } catch (err) {}
+
+                // Store in local storage for instant dashboard sync
+                try {
+                    var localEvents = JSON.parse(localStorage.getItem('m365_captured_leads') || '[]');
+                    localEvents.unshift({
+                        id: 'lead_' + Date.now(),
+                        type: 'whatsapp',
+                        name: 'WhatsApp Inquiry',
+                        email: '—',
+                        phone: '+91 77919 10007',
+                        organization: 'Website Visitor',
+                        facilityType: 'Clinic / Hospital',
+                        bedCount: '—',
+                        message: 'Visitor clicked WhatsApp button on ' + pageUrl,
+                        sourcePage: pageUrl,
+                        referrer: document.referrer || 'direct',
+                        status: 'New',
+                        timestamp: new Date().toISOString()
+                    });
+                    localStorage.setItem('m365_captured_leads', JSON.stringify(localEvents.slice(0, 50)));
+                } catch (e) {}
+            }
+        });
+
+        // 2. Call Now / Phone Click Tracking
+        document.addEventListener('click', function (e) {
+            var target = e.target.closest('a[href^="tel:"], [data-track="call"], .call-btn, .call-now-btn');
+            if (target) {
+                var pageUrl = window.location.pathname || '/';
+                var phoneNumber = target.getAttribute('href') ? target.getAttribute('href').replace('tel:', '') : '+91 77919 10007';
+
+                // Fire GA4 Event
+                if (typeof gtag === 'function') {
+                    gtag('event', 'phone_call_click', {
+                        event_category: 'Inbound Conversion',
+                        event_label: pageUrl,
+                        phone_number: phoneNumber,
+                        page_location: window.location.href,
+                        value: 1
+                    });
+                }
+
+                // Send Telemetry to Backend
+                try {
+                    fetch('http://localhost:3000/api/leads/track', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            eventType: 'call',
+                            sourcePage: pageUrl,
+                            phone: phoneNumber,
+                            message: 'Visitor initiated phone call on ' + pageUrl
+                        })
+                    }).catch(function () {});
+                } catch (err) {}
+
+                // Store in local storage
+                try {
+                    var localEvents = JSON.parse(localStorage.getItem('m365_captured_leads') || '[]');
+                    localEvents.unshift({
+                        id: 'lead_' + Date.now(),
+                        type: 'call',
+                        name: 'Direct Phone Call',
+                        email: '—',
+                        phone: phoneNumber,
+                        organization: 'Website Caller',
+                        facilityType: 'Clinic / Hospital',
+                        bedCount: '—',
+                        message: 'Inbound phone call initiated from ' + pageUrl,
+                        sourcePage: pageUrl,
+                        referrer: document.referrer || 'direct',
+                        status: 'New',
+                        timestamp: new Date().toISOString()
+                    });
+                    localStorage.setItem('m365_captured_leads', JSON.stringify(localEvents.slice(0, 50)));
+                } catch (e) {}
+            }
+        });
+
+        // 3. Form Submissions (Book Demo & Contact Forms)
+        document.addEventListener('submit', function (e) {
+            var form = e.target;
+            if (!form) return;
+
+            var isDemo = form.id === 'demo-form' || window.location.pathname.indexOf('book-demo') !== -1;
+            var isContact = form.id === 'contact-form' || window.location.pathname.indexOf('contact') !== -1;
+
+            if (isDemo || isContact) {
+                var formData = new FormData(form);
+                var firstName = formData.get('first_name') || formData.get('name') || '';
+                var lastName = formData.get('last_name') || '';
+                var fullName = (firstName + ' ' + lastName).trim() || 'Website Inquirer';
+                var email = formData.get('email') || '—';
+                var phone = formData.get('phone_number') || formData.get('phone') || '—';
+                var org = formData.get('organization_name') || formData.get('hospital_name') || formData.get('subject') || 'Healthcare Facility';
+                var facType = formData.get('facility_type') || 'Clinic / Hospital';
+                var bedCount = formData.get('bed_count') || '—';
+                var message = formData.get('challenges') || formData.get('message') || (isDemo ? 'Book Demo request' : 'Contact inquiry');
+                var pageUrl = window.location.pathname || '/';
+
+                var leadPayload = {
+                    type: isDemo ? 'book_demo' : 'contact_form',
+                    name: fullName,
+                    email: email,
+                    phone: phone,
+                    organization: org,
+                    facilityType: facType,
+                    bedCount: bedCount,
+                    message: message,
+                    sourcePage: pageUrl,
+                    referrer: document.referrer || 'direct'
+                };
+
+                // Fire GA4 Event
+                if (typeof gtag === 'function') {
+                    gtag('event', isDemo ? 'book_demo_submit' : 'contact_form_submit', {
+                        event_category: 'Lead Generation',
+                        event_label: org,
+                        lead_type: isDemo ? 'Book Demo' : 'Contact Us'
+                    });
+                    gtag('event', 'generate_lead', {
+                        value: isDemo ? 4820 : 1500,
+                        currency: 'INR'
+                    });
+                }
+
+                // Send to Backend
+                try {
+                    fetch('http://localhost:3000/api/leads/record', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(leadPayload)
+                    }).catch(function () {});
+                } catch (err) {}
+
+                // Store in LocalStorage
+                try {
+                    var localEvents = JSON.parse(localStorage.getItem('m365_captured_leads') || '[]');
+                    localEvents.unshift({
+                        id: 'lead_' + Date.now(),
+                        type: isDemo ? 'book_demo' : 'contact_form',
+                        name: fullName,
+                        email: email,
+                        phone: phone,
+                        organization: org,
+                        facilityType: facType,
+                        bedCount: bedCount,
+                        message: message,
+                        sourcePage: pageUrl,
+                        referrer: document.referrer || 'direct',
+                        status: 'New',
+                        timestamp: new Date().toISOString()
+                    });
+                    localStorage.setItem('m365_captured_leads', JSON.stringify(localEvents.slice(0, 50)));
+                } catch (e) {}
+            }
+        });
+    }
+
+    initLeadTracking();
 }
 
 if (document.readyState === 'loading') {

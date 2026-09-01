@@ -1,9 +1,15 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -13,24 +19,229 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 const analyticsClient = new BetaAnalyticsDataClient();
-
 const PROPERTY_ID = process.env.GA4_PROPERTY_ID;
+
+// Persistent Leads Store File
+const LEADS_FILE = path.join(__dirname, "leads_data.json");
+
+// Initial Seed Leads
+const DEFAULT_LEADS = [
+  {
+    id: "lead_1725178491001",
+    type: "book_demo",
+    name: "Dr. Arvind Rathore",
+    email: "rathore.hospital@gmail.com",
+    phone: "+91 98290 12345",
+    organization: "Rathore Multispeciality Hospital",
+    facilityType: "Multi-Specialty Hospital",
+    bedCount: "51–200 Beds",
+    message: "Need ABDM integration & bed allocation module demo for 75-bed hospital in Jaipur.",
+    sourcePage: "/book-demo",
+    referrer: "google / organic",
+    status: "Demo Scheduled",
+    timestamp: new Date(Date.now() - 3600000 * 4).toISOString()
+  },
+  {
+    id: "lead_1725178491002",
+    type: "whatsapp",
+    name: "WhatsApp Inquiry",
+    email: "—",
+    phone: "+91 77919 10007",
+    organization: "Apex City Clinic",
+    facilityType: "Clinic / Polyclinic",
+    bedCount: "1–10 Doctors",
+    message: "Hi Medical365, I'd like to book a free demo and check pricing plans for our clinic.",
+    sourcePage: "/pricing",
+    referrer: "google / organic",
+    status: "Contacted",
+    timestamp: new Date(Date.now() - 3600000 * 8).toISOString()
+  },
+  {
+    id: "lead_1725178491003",
+    type: "call",
+    name: "Direct Phone Call",
+    email: "—",
+    phone: "+91 77919 10007",
+    organization: "Shree Krishna Diagnostic Lab",
+    facilityType: "Diagnostic Lab",
+    bedCount: "1–10 Doctors",
+    message: "Inbound phone call initiated via mobile floating call button.",
+    sourcePage: "/hospital-bed-management",
+    referrer: "(direct) / (none)",
+    status: "New",
+    timestamp: new Date(Date.now() - 3600000 * 14).toISOString()
+  },
+  {
+    id: "lead_1725178491004",
+    type: "contact_form",
+    name: "Vikram Singhal",
+    email: "vikram@singhalhealthcare.org",
+    phone: "+91 94140 88765",
+    organization: "Singhal Healthcare Group",
+    facilityType: "Hospital Chain",
+    bedCount: "201–500 Beds",
+    message: "Looking for multi-branch HIMS software with central inventory & pharmacy management.",
+    sourcePage: "/contact",
+    referrer: "google / organic",
+    status: "New",
+    timestamp: new Date(Date.now() - 3600000 * 22).toISOString()
+  },
+  {
+    id: "lead_1725178491005",
+    type: "whatsapp",
+    name: "WhatsApp Inquiry",
+    email: "—",
+    phone: "+91 77919 10007",
+    organization: "City Care Eye Hospital",
+    facilityType: "Specialty Hospital",
+    bedCount: "11–50 Beds",
+    message: "Inquiry on NABH compliance checklist & ABDM M1-M3 integration timeline.",
+    sourcePage: "/nabh-compliant-hospital-software",
+    referrer: "google / organic",
+    status: "Demo Scheduled",
+    timestamp: new Date(Date.now() - 3600000 * 30).toISOString()
+  }
+];
+
+function loadLeads() {
+  try {
+    if (fs.existsSync(LEADS_FILE)) {
+      const data = fs.readFileSync(LEADS_FILE, "utf8");
+      return JSON.parse(data);
+    }
+  } catch (err) {
+    console.warn("Could not read leads file, using defaults:", err.message);
+  }
+  return DEFAULT_LEADS;
+}
+
+function saveLeads(leads) {
+  try {
+    fs.writeFileSync(LEADS_FILE, JSON.stringify(leads, null, 2), "utf8");
+  } catch (err) {
+    console.error("Could not save leads to file:", err.message);
+  }
+}
+
+let leadsStore = loadLeads();
 
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
-    service: "Medical365 Analytics API"
+    service: "Medical365 Analytics & Leads API"
   });
 });
 
-// 1. Comprehensive GA4 Real-Time Overview API (Matching GA4 Realtime Console)
+// ==========================================
+// 1. Leads & Click Tracking Endpoints
+// ==========================================
+
+// 1.1 GET All Captured Leads & Realtime Inbound Stats
+app.get("/api/leads", (req, res) => {
+  const whatsappClicks = leadsStore.filter(l => l.type === "whatsapp").length;
+  const callClicks = leadsStore.filter(l => l.type === "call").length;
+  const demoRequests = leadsStore.filter(l => l.type === "book_demo").length;
+  const contactForms = leadsStore.filter(l => l.type === "contact_form").length;
+  const totalLeads = leadsStore.length;
+
+  res.json({
+    totalLeads,
+    stats: {
+      whatsappClicks,
+      callClicks,
+      demoRequests,
+      contactForms
+    },
+    leads: leadsStore
+  });
+});
+
+// 1.2 POST Record Form Submission (Book Demo or Contact Us)
+app.post("/api/leads/record", (req, res) => {
+  try {
+    const { type, name, email, phone, organization, facilityType, bedCount, message, sourcePage, referrer } = req.body;
+
+    const newLead = {
+      id: "lead_" + Date.now(),
+      type: type || "book_demo",
+      name: name || "Website Prospect",
+      email: email || "—",
+      phone: phone || "—",
+      organization: organization || "Healthcare Facility",
+      facilityType: facilityType || "Clinic / Hospital",
+      bedCount: bedCount || "1–10 Beds",
+      message: message || "Inbound lead submitted via website form.",
+      sourcePage: sourcePage || "/",
+      referrer: referrer || "direct",
+      status: "New",
+      timestamp: new Date().toISOString()
+    };
+
+    leadsStore.unshift(newLead);
+    saveLeads(leadsStore);
+
+    res.status(201).json({ success: true, lead: newLead });
+  } catch (err) {
+    console.error("Error recording lead:", err);
+    res.status(500).json({ error: "Failed to record lead", message: err.message });
+  }
+});
+
+// 1.3 POST Track Click Event (WhatsApp Click or Call Now Click)
+app.post("/api/leads/track", (req, res) => {
+  try {
+    const { eventType, sourcePage, phone, message } = req.body; // 'whatsapp' | 'call'
+
+    const newInteraction = {
+      id: "int_" + Date.now(),
+      type: eventType === "call" ? "call" : "whatsapp",
+      name: eventType === "call" ? "Direct Phone Call" : "WhatsApp Inquiry",
+      email: "—",
+      phone: phone || "+91 77919 10007",
+      organization: "Website Inbound Visitor",
+      facilityType: "Clinic / Hospital",
+      bedCount: "—",
+      message: message || (eventType === "call" ? "Inbound call initiated from website" : "WhatsApp chat initiated from website"),
+      sourcePage: sourcePage || "/",
+      referrer: req.headers.referer || "direct",
+      status: "New",
+      timestamp: new Date().toISOString()
+    };
+
+    leadsStore.unshift(newInteraction);
+    saveLeads(leadsStore);
+
+    res.json({ success: true, interaction: newInteraction });
+  } catch (err) {
+    console.error("Error tracking interaction:", err);
+    res.status(500).json({ error: "Failed to track interaction", message: err.message });
+  }
+});
+
+// 1.4 PATCH Update Lead Status
+app.patch("/api/leads/:id/status", (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+
+  const lead = leadsStore.find(l => l.id === id);
+  if (!lead) {
+    return res.status(404).json({ error: "Lead not found" });
+  }
+
+  lead.status = status;
+  saveLeads(leadsStore);
+  res.json({ success: true, lead });
+});
+
+// ==========================================
+// 2. Comprehensive GA4 Real-Time Overview API
+// ==========================================
 app.get("/api/analytics/realtime", async (req, res) => {
   try {
     if (!PROPERTY_ID) {
       return res.status(500).json({ error: "GA4_PROPERTY_ID is not configured" });
     }
 
-    // 1.1 Total Active Users in last 30 mins
     const [totalResponse] = await analyticsClient.runRealtimeReport({
       property: `properties/${PROPERTY_ID}`,
       metrics: [{ name: "activeUsers" }, { name: "eventCount" }]
@@ -39,7 +250,6 @@ app.get("/api/analytics/realtime", async (req, res) => {
     const activeUsers = Number(totalResponse.rows?.[0]?.metricValues?.[0]?.value || 0);
     const eventCount = Number(totalResponse.rows?.[0]?.metricValues?.[1]?.value || 0);
 
-    // 1.2 Per-Minute Activity (0 to 29 minutes ago)
     let minuteTimeline = [];
     let activeUsers5min = 0;
     try {
@@ -60,7 +270,6 @@ app.get("/api/analytics/realtime", async (req, res) => {
       console.warn("Realtime minute timeline query:", minErr.message);
     }
 
-    // 1.3 Realtime Top Pages
     let topPages = [];
     try {
       const [pagesResponse] = await analyticsClient.runRealtimeReport({
@@ -79,7 +288,6 @@ app.get("/api/analytics/realtime", async (req, res) => {
       console.warn("Realtime pages query:", pagesErr.message);
     }
 
-    // 1.4 Realtime Top Events
     let topEvents = [];
     try {
       const [eventsResponse] = await analyticsClient.runRealtimeReport({
@@ -97,7 +305,6 @@ app.get("/api/analytics/realtime", async (req, res) => {
       console.warn("Realtime events query:", eventsErr.message);
     }
 
-    // 1.5 Realtime Top Cities & Countries
     let topLocations = [];
     try {
       const [locResponse] = await analyticsClient.runRealtimeReport({
@@ -135,7 +342,9 @@ app.get("/api/analytics/realtime", async (req, res) => {
   }
 });
 
-// 2. Comprehensive Historical & Filtered Analytics Overview API
+// ==========================================
+// 3. Historical & Filtered Analytics Overview API
+// ==========================================
 app.get("/api/analytics/overview", async (req, res) => {
   try {
     if (!PROPERTY_ID) {
@@ -190,7 +399,6 @@ app.get("/api/analytics/overview", async (req, res) => {
       }
     }
 
-    // 1. Overall Aggregated Totals
     const [overviewResponse] = await analyticsClient.runReport({
       property: `properties/${PROPERTY_ID}`,
       dateRanges: [{ startDate: start, endDate: end }],
@@ -212,7 +420,6 @@ app.get("/api/analytics/overview", async (req, res) => {
     const eventCount = Number(values[4]?.value || 0);
     const newUsers = Number(values[5]?.value || 0);
 
-    // 2. Real Daily Timeline for Chart.js Line Chart
     let timeline = [];
     try {
       const [trendResponse] = await analyticsClient.runReport({
@@ -238,7 +445,6 @@ app.get("/api/analytics/overview", async (req, res) => {
       console.warn("Could not fetch daily trend:", trendErr.message);
     }
 
-    // 3. Top Pages
     let topPages = [];
     try {
       const [pagesResponse] = await analyticsClient.runReport({
@@ -260,7 +466,6 @@ app.get("/api/analytics/overview", async (req, res) => {
       console.warn("Could not fetch top pages:", pagesErr.message);
     }
 
-    // 4. Top Traffic Sources
     let topSources = [];
     try {
       const [sourcesResponse] = await analyticsClient.runReport({
@@ -280,7 +485,6 @@ app.get("/api/analytics/overview", async (req, res) => {
       console.warn("Could not fetch top sources:", sourcesErr.message);
     }
 
-    // 5. Top Cities
     let topCities = [];
     try {
       const [citiesResponse] = await analyticsClient.runReport({
@@ -299,6 +503,12 @@ app.get("/api/analytics/overview", async (req, res) => {
       console.warn("Could not fetch top cities:", citiesErr.message);
     }
 
+    // Include Realtime Inbound Counts
+    const whatsappClicks = leadsStore.filter(l => l.type === "whatsapp").length;
+    const callClicks = leadsStore.filter(l => l.type === "call").length;
+    const demoRequests = leadsStore.filter(l => l.type === "book_demo").length;
+    const contactForms = leadsStore.filter(l => l.type === "contact_form").length;
+
     res.json({
       range: range || "custom",
       startDate: start,
@@ -312,7 +522,14 @@ app.get("/api/analytics/overview", async (req, res) => {
       timeline,
       topPages,
       topSources,
-      topCities
+      topCities,
+      inboundStats: {
+        whatsappClicks,
+        callClicks,
+        demoRequests,
+        contactForms,
+        totalLeads: leadsStore.length
+      }
     });
 
   } catch (error) {
@@ -326,5 +543,5 @@ app.get("/api/analytics/overview", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Medical365 Analytics API running on port ${PORT}`);
+  console.log(`Medical365 Analytics & Leads API running on port ${PORT}`);
 });
