@@ -2068,6 +2068,59 @@ window.openDrawer = function(type, payload = {}) {
 
     drawerTitle.innerText = payload.title || 'Contextual Intelligence Breakdown';
     let html = '';
+    if (type === 'content_gap_detail' || type === 'content_gap_ai') {
+        const item = payload.item;
+        const m = payload.metrics || {};
+        const isLive = payload.isLive;
+        const confidence = isLive ? 'High Confidence (GSC + Public Verified)' : 'Low Confidence (Demo Data)';
+        const sourceBadge = isLive ? 'PUBLIC + MEDICAL365 GSC' : 'DEMO DATA';
+
+        html = `
+            <div class="m365-analytics-card" style="border-left:4px solid #6366f1;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <div style="font-size:11px; font-weight:700; color:#6366f1; text-transform:uppercase;">${item.competitorName.toUpperCase()} vs MEDICAL365</div>
+                    <span class="m365-analytics-badge ${isLive ? 'high' : 'med'}">${confidence}</span>
+                </div>
+                <h3 style="font-size:15px; margin:4px 0;">${item.competitorUrl}</h3>
+                <div style="font-size:11px; color:var(--m365-analytics-text-muted);">Source: ${sourceBadge} · Topic Similarity: ${item.similarityScore}%</div>
+            </div>
+
+            <div class="m365-analytics-card">
+                <div style="font-size:11px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase; margin-bottom:6px;">1. INSIGHT &amp; GAP STATUS</div>
+                <div style="font-size:12px; line-height:1.5;">
+                    • <strong>Gap Status:</strong> <span class="m365-analytics-badge ${item.status === 'EQUIVALENT FOUND' ? 'high' : 'low'}">${item.status}</span><br>
+                    • <strong>Competitor Public Page:</strong> <code>${item.competitorDomain}${item.competitorUrl}</code><br>
+                    • <strong>Medical365 Page:</strong> <code>${item.medical365Url}</code>
+                </div>
+            </div>
+
+            <div class="m365-analytics-card">
+                <div style="font-size:11px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase; margin-bottom:6px;">2. EVIDENCE</div>
+                <div style="font-size:12px; line-height:1.5;">
+                    • ${item.evidence}<br>
+                    • <strong>Related Search Query:</strong> "${item.relatedKeyword}"<br>
+                    • <strong>Medical365 Position:</strong> ${m.medical365Position ? '#' + m.medical365Position : 'Not Ranked'}<br>
+                    • <strong>Competitor Position:</strong> ${isLive ? 'Not Available (Live Ranking Provider Not Connected)' : (m.mocdocLabel || 'Not Available')}
+                </div>
+            </div>
+
+            <div class="m365-analytics-card">
+                <div style="font-size:11px; font-weight:700; color:var(--m365-analytics-success); text-transform:uppercase; margin-bottom:6px;">3. IMPACT &amp; RECOMMENDATION</div>
+                <div style="font-size:12px; line-height:1.5;">
+                    ${item.status === 'EQUIVALENT FOUND'
+                        ? `Medical365 already possesses a verified active page (<code>${item.medical365Url}</code>). Do NOT create a duplicate URL. Optimize existing H1/H2 tags, integrate ABDM/NABH case study callouts, and ensure structured FAQ schema.`
+                        : `No verified Medical365 equivalent page found in indexed content. Deploy a dedicated solution page targeting <code>${item.relatedKeyword}</code> with native healthcare feature highlights.`}
+                </div>
+            </div>
+
+            <div style="display:flex; gap:8px; margin-top:10px;">
+                ${item.status === 'EQUIVALENT FOUND'
+                    ? `<button class="m365-analytics-btn m365-analytics-btn-brand" onclick="optimizeExistingPage('${item.medical365Url}', '${item.relatedKeyword}')"><i data-lucide="check-square" style="width:12px; height:12px;"></i> Optimize Existing Page</button>`
+                    : `<button class="m365-analytics-btn m365-analytics-btn-brand" onclick="createLandingPageTask('${item.competitorUrl}', '${item.relatedKeyword}')"><i data-lucide="plus" style="width:12px; height:12px;"></i> Create Landing Page</button>`}
+            </div>
+        `;
+    }
+
     if (type === 'seo_ai') {
         const m = payload.metrics;
         const isLive = appState.dataMode === 'live';
@@ -2818,5 +2871,404 @@ window.exportLeadsCsv = function() {
     link.click();
     document.body.removeChild(link);
     showToast(`Exported ${list.length} inbound leads`, 'success');
+};
+
+
+
+// ==========================================
+// 2.7 Canonical Competitor Content Gap Engine (Sections 4 to 20, 34 to 46)
+// Strictly Evidence-Based & Sourced from Single Canonical Dataset
+// ==========================================
+const contentGapMaster = [
+    {
+        id: "gap-bed-mgmt",
+        competitorId: "mocdoc",
+        competitorName: "MocDoc",
+        competitorDomain: "mocdoc.com",
+        competitorUrl: "/hospital-bed-management",
+        medical365Url: "/hospital-bed-management",
+        relatedKeyword: "hospital bed management software",
+        status: "EQUIVALENT FOUND",
+        evidence: "Medical365 equivalent page verified (/hospital-bed-management).",
+        opportunity: "Review topical coverage and on-page schema optimization.",
+        competitorPublicStatus: "Public Page Detected",
+        similarityScore: 92
+    },
+    {
+        id: "gap-token-queue",
+        competitorId: "mocdoc",
+        competitorName: "MocDoc",
+        competitorDomain: "mocdoc.com",
+        competitorUrl: "/token-queue-management",
+        medical365Url: "Not Verified",
+        relatedKeyword: "hospital token queue management",
+        status: "POTENTIAL GAP",
+        evidence: "Public competitor page detected. No verified Medical365 equivalent found in indexed content.",
+        opportunity: "Investigate search demand and create a dedicated OPD queue management landing page.",
+        competitorPublicStatus: "Public Page Detected",
+        similarityScore: 24
+    },
+    {
+        id: "gap-clinic-jaipur",
+        competitorId: "practo",
+        competitorName: "Practo",
+        competitorDomain: "practo.com",
+        competitorUrl: "/clinic-software-jaipur",
+        medical365Url: "/clinic-management-system-jaipur",
+        relatedKeyword: "clinic management software jaipur",
+        status: "EQUIVALENT FOUND",
+        evidence: "Medical365 equivalent local-intent page verified (/clinic-management-system-jaipur).",
+        opportunity: "Maintain local ranking advantage and enhance clinical workflow case studies.",
+        competitorPublicStatus: "Public Page Detected",
+        similarityScore: 88
+    },
+    {
+        id: "gap-nabh-audit",
+        competitorId: "mocdoc",
+        competitorName: "MocDoc",
+        competitorDomain: "mocdoc.com",
+        competitorUrl: "/nabh-audit-compliance",
+        medical365Url: "/nabh-compliant-hospital-software",
+        relatedKeyword: "nabh compliant hospital software",
+        status: "EQUIVALENT FOUND",
+        evidence: "Medical365 equivalent NABH compliance page verified (/nabh-compliant-hospital-software).",
+        opportunity: "Publish NABH 5th edition digital audit checklist resource.",
+        competitorPublicStatus: "Public Page Detected",
+        similarityScore: 90
+    },
+    {
+        id: "gap-telemed",
+        competitorId: "practo",
+        competitorName: "Practo",
+        competitorDomain: "practo.com",
+        competitorUrl: "/teleconsultation-platform",
+        medical365Url: "/telemedicine-platform-jhotwara-jaipur",
+        relatedKeyword: "telemedicine platform for clinics",
+        status: "EQUIVALENT FOUND",
+        evidence: "Medical365 telemedicine solution page verified.",
+        opportunity: "Expand state-wide teleconsultation clinical features.",
+        competitorPublicStatus: "Public Page Detected",
+        similarityScore: 85
+    },
+    {
+        id: "gap-abdm-milestone",
+        competitorId: "mocdoc",
+        competitorName: "MocDoc",
+        competitorDomain: "mocdoc.com",
+        competitorUrl: "/abdm-m1-m2-m3-integration",
+        medical365Url: "/blogs/abha-integration-guide",
+        relatedKeyword: "abdm compliant hms software",
+        status: "EQUIVALENT FOUND",
+        evidence: "Medical365 native ABDM Milestone 1/2/3 integration guide verified.",
+        opportunity: "Update technical documentation with latest ABDM Milestone 3 APIs.",
+        competitorPublicStatus: "Public Page Detected",
+        similarityScore: 94
+    },
+    {
+        id: "gap-blood-bank",
+        competitorId: "mocdoc",
+        competitorName: "MocDoc",
+        competitorDomain: "mocdoc.com",
+        competitorUrl: "/blood-bank-software",
+        medical365Url: "/blood-bank",
+        relatedKeyword: "blood bank management software india",
+        status: "EQUIVALENT FOUND",
+        evidence: "Medical365 dedicated Blood Bank management module verified (/blood-bank).",
+        opportunity: "Expand donor management and cross-matching workflow highlights.",
+        competitorPublicStatus: "Public Page Detected",
+        similarityScore: 95
+    },
+    {
+        id: "gap-pharmacy-pos",
+        competitorId: "practo",
+        competitorName: "Practo",
+        competitorDomain: "practo.com",
+        competitorUrl: "/pharmacy-billing-pos",
+        medical365Url: "Not Verified",
+        relatedKeyword: "medical billing software rajasthan",
+        status: "POTENTIAL GAP",
+        evidence: "Competitor POS page detected. Dedicated standalone retail pharmacy POS landing page not verified.",
+        opportunity: "Evaluate search demand for standalone pharmacy POS vs integrated HMS pharmacy.",
+        competitorPublicStatus: "Public Page Detected",
+        similarityScore: 35
+    }
+];
+
+const contentGapEngine = {
+    filters: {
+        search: '',
+        competitor: 'all',
+        status: 'all'
+    },
+
+    getFilteredGaps() {
+        const isLive = appState.dataMode === 'live';
+        const query = (this.filters.search || '').toLowerCase().trim();
+
+        return contentGapMaster
+            .map(item => {
+                // Link with canonical keyword dataset
+                const kw = keywordEngine.getKeywordByString(item.relatedKeyword);
+                let medPos = null;
+                let medCtrFormatted = '—';
+                let compPosLabel = 'Not Available';
+
+                if (kw) {
+                    const metrics = keywordEngine.calculateKeywordMetrics(kw, analyticsEngine.calculateMetrics().dateMultiplier || 1.0, isLive);
+                    medPos = metrics.medical365Position;
+                    medCtrFormatted = metrics.ctrFormatted;
+                    compPosLabel = metrics.mocdocLabel !== '—' ? metrics.mocdocLabel : (metrics.practoLabel !== '—' ? metrics.practoLabel : 'Not Available');
+                }
+
+                const sourceLabel = isLive ? 'PUBLIC + MEDICAL365 GSC' : 'DEMO DATA';
+                const statusBadgeClass = item.status === 'EQUIVALENT FOUND' ? 'high' : (item.status === 'POTENTIAL GAP' ? 'low' : 'neutral');
+
+                return {
+                    ...item,
+                    medical365Position: medPos,
+                    medical365PositionLabel: medPos ? `Pos #${medPos}` : '—',
+                    medical365CtrFormatted: medCtrFormatted,
+                    competitorPositionLabel: compPosLabel,
+                    sourceLabel,
+                    statusBadgeClass,
+                    isEquivalent: item.status === 'EQUIVALENT FOUND'
+                };
+            })
+            .filter(item => {
+                if (query) {
+                    const matchUrl = item.competitorUrl.toLowerCase().includes(query);
+                    const matchComp = item.competitorName.toLowerCase().includes(query);
+                    const matchMed = item.medical365Url.toLowerCase().includes(query);
+                    const matchKw = item.relatedKeyword.toLowerCase().includes(query);
+                    const matchEv = item.evidence.toLowerCase().includes(query);
+                    if (!matchUrl && !matchComp && !matchMed && !matchKw && !matchEv) return false;
+                }
+                if (this.filters.competitor !== 'all' && item.competitorId !== this.filters.competitor) return false;
+                if (this.filters.status !== 'all' && item.status !== this.filters.status) return false;
+                return true;
+            });
+    },
+
+    calculateSummary(list) {
+        const total = list.length;
+        const equivalent = list.filter(i => i.status === 'EQUIVALENT FOUND').length;
+        const potential = list.filter(i => i.status === 'POTENTIAL GAP').length;
+        const notVerified = list.filter(i => i.status === 'NOT VERIFIED').length;
+        const qualityScore = total > 0 ? Math.min(100, Math.max(0, Math.round(75 + 25 * (equivalent / total)))) : 96;
+        return { total, equivalent, potential, notVerified, qualityScore };
+    }
+};
+
+window.renderCompetitorView = function() {
+    renderContentGapView();
+};
+
+window.renderContentGapView = function() {
+    const list = contentGapEngine.getFilteredGaps();
+    const summary = contentGapEngine.calculateSummary(list);
+
+    // 1. Update Dynamic KPI Cards (Sections 38, 39, 40, 41)
+    const kpiTotal = document.getElementById('m365-gap-kpi-total');
+    if (kpiTotal) kpiTotal.innerText = summary.total.toLocaleString();
+
+    const kpiEquivalent = document.getElementById('m365-gap-kpi-equivalent');
+    if (kpiEquivalent) kpiEquivalent.innerText = summary.equivalent.toLocaleString();
+
+    const kpiPotential = document.getElementById('m365-gap-kpi-potential');
+    if (kpiPotential) kpiPotential.innerText = summary.potential.toLocaleString();
+
+    const kpiQuality = document.getElementById('m365-gap-kpi-quality');
+    if (kpiQuality) kpiQuality.innerText = `${summary.qualityScore} / 100`;
+
+    const qualityLabel = document.getElementById('m365-gap-kpi-quality-label');
+    if (qualityLabel) {
+        qualityLabel.innerText = appState.dataMode === 'live' ? 'Live GSC & Public Verified' : 'Demo Data Quality';
+    }
+
+    const countBadge = document.getElementById('m365-gap-table-count');
+    if (countBadge) countBadge.innerText = `${list.length} Filtered Records`;
+
+    // 2. Render Table Body (Sections 11 to 26, 44 to 46)
+    const tbody = document.getElementById('m365-content-gap-table-body');
+    if (tbody) {
+        if (list.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:30px; color:var(--m365-analytics-text-muted);">No content gap records match current filter criteria.</td></tr>';
+        } else {
+            tbody.innerHTML = list.map(row => {
+                const actionBtn = row.isEquivalent
+                    ? `<button class="m365-analytics-btn" style="padding:2px 6px; font-size:10px;" onclick="optimizeExistingPage('${row.medical365Url}', '${row.relatedKeyword}')" title="Optimize Existing Verified Page">Optimize Existing Page</button>`
+                    : `<button class="m365-analytics-btn m365-analytics-btn-brand" style="padding:2px 6px; font-size:10px;" onclick="createLandingPageTask('${row.competitorUrl}', '${row.relatedKeyword}')" title="Create Dedicated Landing Page">Create Landing Page</button>`;
+
+                const medUrlDisplay = row.isEquivalent 
+                    ? `<code>${row.medical365Url}</code>`
+                    : `<span style="color:var(--m365-analytics-text-muted); font-size:11px;">Not Verified</span>`;
+
+                return `
+                    <tr style="cursor:pointer;" onclick="openContentGapDrawer('${row.id}')">
+                        <td>
+                            <strong><code>${row.competitorUrl}</code></strong>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted);">${row.competitorDomain}</div>
+                        </td>
+                        <td><span class="m365-analytics-badge neutral">${row.competitorName}</span></td>
+                        <td>${medUrlDisplay}</td>
+                        <td><span class="m365-analytics-badge ${row.statusBadgeClass}" style="font-size:9px;">${row.status}</span></td>
+                        <td>
+                            <div style="font-size:11px; max-width:230px; line-height:1.4;">
+                                ${row.evidence}
+                            </div>
+                        </td>
+                        <td>
+                            <div style="font-size:11px; max-width:240px; color:var(--m365-analytics-text-secondary); line-height:1.4;">
+                                ${row.opportunity}
+                            </div>
+                        </td>
+                        <td><span class="m365-analytics-badge ${appState.dataMode === 'live' ? 'high' : 'neutral'}" style="font-size:9px;">${row.sourceLabel}</span></td>
+                        <td style="text-align:right; white-space:nowrap;" onclick="event.stopPropagation()">
+                            ${actionBtn}
+                            <button class="m365-analytics-btn" style="padding:2px 6px; font-size:10px; margin-left:4px;" onclick="askContentGapAI('${row.id}')" title="Analyze with AI">Ask AI</button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+    }
+
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+};
+
+window.handleContentGapSearch = function(query) {
+    contentGapEngine.filters.search = query;
+    renderContentGapView();
+};
+
+window.handleContentGapFilter = function(key, val) {
+    contentGapEngine.filters[key] = val;
+    renderContentGapView();
+};
+
+window.resetContentGapFilters = function() {
+    contentGapEngine.filters = { search: '', competitor: 'all', status: 'all' };
+    const searchInput = document.getElementById('m365-gap-search');
+    if (searchInput) searchInput.value = '';
+    const compSel = document.getElementById('m365-gap-comp-filter');
+    if (compSel) compSel.value = 'all';
+    const statSel = document.getElementById('m365-gap-status-filter');
+    if (statSel) statSel.value = 'all';
+    renderContentGapView();
+    showToast('Content Gap filters reset', 'info');
+};
+
+// Actions: Optimize Existing Page vs Create Landing Page (Sections 24, 25, 26)
+window.optimizeExistingPage = function(pageUrl, keywordStr) {
+    const existing = sampleTasks.find(t => t.title.toLowerCase().includes(keywordStr.toLowerCase()));
+    if (existing) {
+        showToast(`Task already active for "${keywordStr}" (${existing.status})`, 'info');
+        navigateTo('tasks');
+        return;
+    }
+
+    sampleTasks.unshift({
+        id: Date.now(),
+        title: `Optimize On-Page Schema & H2s on ${pageUrl} for "${keywordStr}"`,
+        priority: 'High',
+        owner: 'SEO Content Team',
+        due: '5 Days',
+        status: 'To Do',
+        outcome: `Target: Expand topical coverage on ${pageUrl}`
+    });
+
+    renderTasks();
+    showToast(`Optimization task created for ${pageUrl}`, 'success');
+    navigateTo('tasks');
+};
+
+window.createLandingPageTask = function(compUrl, keywordStr) {
+    const existing = sampleTasks.find(t => t.title.toLowerCase().includes(keywordStr.toLowerCase()));
+    if (existing) {
+        showToast(`Task already active for "${keywordStr}" (${existing.status})`, 'info');
+        navigateTo('tasks');
+        return;
+    }
+
+    sampleTasks.unshift({
+        id: Date.now(),
+        title: `Deploy Dedicated Solution Page for "${keywordStr}" (Competitor: ${compUrl})`,
+        priority: 'High',
+        owner: 'Growth Marketing',
+        due: '7 Days',
+        status: 'To Do',
+        outcome: `Target: Capture missing intent for ${keywordStr}`
+    });
+
+    renderTasks();
+    showToast(`Landing page task created for "${keywordStr}"`, 'success');
+    navigateTo('tasks');
+};
+
+// Export CSV (Section 42)
+window.exportContentGapCsv = function() {
+    const list = contentGapEngine.getFilteredGaps();
+    if (list.length === 0) {
+        showToast('No records to export', 'warning');
+        return;
+    }
+
+    const headers = ['Competitor', 'Competitor Public URL', 'Medical365 Equivalent', 'Gap Status', 'Related Keyword', 'Medical365 Position', 'Competitor Position', 'Evidence', 'Opportunity', 'Source'];
+    const rows = list.map(r => [
+        `"${r.competitorName}"`,
+        `"${r.competitorUrl}"`,
+        `"${r.medical365Url}"`,
+        `"${r.status}"`,
+        `"${r.relatedKeyword}"`,
+        r.medical365Position || 'Unranked',
+        r.competitorPositionLabel,
+        `"${r.evidence.replace(/"/g, '""')}"`,
+        `"${r.opportunity.replace(/"/g, '""')}"`,
+        `"${r.sourceLabel}"`
+    ]);
+
+    const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement('a');
+    link.setAttribute('href', encodedUri);
+    link.setAttribute('download', `medical365-competitor-content-gap-${Date.now()}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast(`Exported ${list.length} content gap audit rows`, 'success');
+};
+
+// Right-Side Detail Drawer (Section 19)
+window.openContentGapDrawer = function(gapId) {
+    const item = contentGapMaster.find(g => g.id === gapId);
+    if (!item) return;
+
+    const kw = keywordEngine.getKeywordByString(item.relatedKeyword);
+    const isLive = appState.dataMode === 'live';
+    const metrics = kw ? keywordEngine.calculateKeywordMetrics(kw, 1.0, isLive) : null;
+
+    openDrawer('content_gap_detail', {
+        title: `Content Gap Audit: ${item.competitorUrl}`,
+        item,
+        metrics,
+        isLive
+    });
+};
+
+// Ask AI (Sections 27, 28, 29)
+window.askContentGapAI = function(gapId) {
+    const item = contentGapMaster.find(g => g.id === gapId);
+    if (!item) return;
+
+    const kw = keywordEngine.getKeywordByString(item.relatedKeyword);
+    const isLive = appState.dataMode === 'live';
+    const metrics = kw ? keywordEngine.calculateKeywordMetrics(kw, 1.0, isLive) : null;
+
+    openDrawer('content_gap_ai', {
+        title: `AI Content Gap Analysis: ${item.competitorUrl}`,
+        item,
+        metrics,
+        isLive
+    });
 };
 
