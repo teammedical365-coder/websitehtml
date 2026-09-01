@@ -3054,7 +3054,7 @@ const contentGapEngine = {
         const equivalent = list.filter(i => i.status === 'EQUIVALENT FOUND').length;
         const potential = list.filter(i => i.status === 'POTENTIAL GAP').length;
         const notVerified = list.filter(i => i.status === 'NOT VERIFIED').length;
-        const qualityScore = total > 0 ? Math.min(100, Math.max(0, Math.round(75 + 25 * (equivalent / total)))) : 96;
+        const qualityScore = total > 0 ? Math.round(((equivalent * 1.0 + (total - potential) * 0.5) / total) * 100) : 96;
         return { total, equivalent, potential, notVerified, qualityScore };
     }
 };
