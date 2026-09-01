@@ -3557,13 +3557,15 @@ const apiDataAdapter = {
             const sessions = Number(ga4Data.sessions) || 0;
             const pageViews = Number(ga4Data.pageViews) || 0;
 
-            const leads = Math.max(1, Math.round(visitors * 0.026));
-            const demos = Math.max(0, Math.round(leads * 0.266));
+            // Actual Inbound Leads & Conversions from Live Telemetry
+            const inboundStats = ga4Data.inboundStats || { whatsappClicks: 0, callClicks: 0, demoRequests: 0, contactForms: 0, totalLeads: 0 };
+            const leads = Number(inboundStats.totalLeads) || 0;
+            const demos = Number(inboundStats.demoRequests) || 0;
             const cvr = visitors > 0 ? ((leads / visitors) * 100).toFixed(2) + '%' : '0.00%';
             const totalPipelineRupees = leads * 4820;
-            const pipelineRevenue = totalPipelineRupees >= 100000
-                ? '₹' + (totalPipelineRupees / 100000).toFixed(1) + 'L'
-                : '₹' + totalPipelineRupees.toLocaleString();
+            const pipelineRevenue = totalPipelineRupees > 0
+                ? (totalPipelineRupees >= 100000 ? '₹' + (totalPipelineRupees / 100000).toFixed(1) + 'L' : '₹' + totalPipelineRupees.toLocaleString())
+                : '₹0';
 
             const dateLabels = {
                 'today': 'Today (Live GA4)',
@@ -4875,74 +4877,9 @@ const leadsEngine = {
             console.warn("Could not fetch leads from server, using local store:", e);
         }
 
-        // Fallback to localStorage or mock leads
+        // Fallback to localStorage (strictly real captured leads from visitor browser)
         const local = JSON.parse(localStorage.getItem('m365_captured_leads') || '[]');
-        if (local.length > 0) {
-            this.cachedLeads = local;
-        } else {
-            this.cachedLeads = [
-                {
-                    id: 'lead_1725178491001',
-                    type: 'book_demo',
-                    name: 'Dr. Arvind Rathore',
-                    email: 'rathore.hospital@gmail.com',
-                    phone: '+91 98290 12345',
-                    organization: 'Rathore Multispeciality Hospital',
-                    facilityType: 'Multi-Specialty Hospital',
-                    bedCount: '51–200 Beds',
-                    message: 'Need ABDM integration & bed allocation module demo for 75-bed hospital in Jaipur.',
-                    sourcePage: '/book-demo',
-                    referrer: 'google / organic',
-                    status: 'Demo Scheduled',
-                    timestamp: new Date(Date.now() - 3600000 * 4).toISOString()
-                },
-                {
-                    id: 'lead_1725178491002',
-                    type: 'whatsapp',
-                    name: 'WhatsApp Inquiry',
-                    email: '—',
-                    phone: '+91 77919 10007',
-                    organization: 'Apex City Clinic',
-                    facilityType: 'Clinic / Polyclinic',
-                    bedCount: '1–10 Doctors',
-                    message: 'Hi Medical365, I would like to book a free demo and check pricing plans for our clinic.',
-                    sourcePage: '/pricing',
-                    referrer: 'google / organic',
-                    status: 'Contacted',
-                    timestamp: new Date(Date.now() - 3600000 * 8).toISOString()
-                },
-                {
-                    id: 'lead_1725178491003',
-                    type: 'call',
-                    name: 'Direct Phone Call',
-                    email: '—',
-                    phone: '+91 77919 10007',
-                    organization: 'Shree Krishna Diagnostic Lab',
-                    facilityType: 'Diagnostic Lab',
-                    bedCount: '1–10 Doctors',
-                    message: 'Inbound phone call initiated via mobile floating call button.',
-                    sourcePage: '/hospital-bed-management',
-                    referrer: '(direct) / (none)',
-                    status: 'New',
-                    timestamp: new Date(Date.now() - 3600000 * 14).toISOString()
-                },
-                {
-                    id: 'lead_1725178491004',
-                    type: 'contact_form',
-                    name: 'Vikram Singhal',
-                    email: 'vikram@singhalhealthcare.org',
-                    phone: '+91 94140 88765',
-                    organization: 'Singhal Healthcare Group',
-                    facilityType: 'Hospital Chain',
-                    bedCount: '201–500 Beds',
-                    message: 'Looking for multi-branch HIMS software with central inventory & pharmacy management.',
-                    sourcePage: '/contact',
-                    referrer: 'google / organic',
-                    status: 'New',
-                    timestamp: new Date(Date.now() - 3600000 * 22).toISOString()
-                }
-            ];
-        }
+        this.cachedLeads = local;
 
         const whatsappClicks = this.cachedLeads.filter(l => l.type === 'whatsapp').length;
         const callClicks = this.cachedLeads.filter(l => l.type === 'call').length;
@@ -5008,7 +4945,7 @@ window.refreshLeadsView = async function() {
         const tbody = document.getElementById('m365-leads-table-body');
         if (tbody) {
             if (filtered.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:30px; color:var(--m365-analytics-text-muted);">No inbound leads match current filters.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:40px 20px; color:var(--m365-analytics-text-muted);"><div style="font-size:26px; margin-bottom:8px;">📥</div><strong style="font-size:13px; color:var(--m365-analytics-text-primary);">No Inbound Leads Recorded Yet</strong><div style="font-size:11px; margin-top:4px;">When visitors click WhatsApp, Call Now, or submit Book Demo / Contact forms on medical365.in, their live inquiries will appear here automatically.</div></td></tr>';
             } else {
                 tbody.innerHTML = filtered.map(lead => {
                     let typeBadge = '';

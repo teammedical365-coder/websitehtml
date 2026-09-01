@@ -24,95 +24,17 @@ const PROPERTY_ID = process.env.GA4_PROPERTY_ID;
 // Persistent Leads Store File
 const LEADS_FILE = path.join(__dirname, "leads_data.json");
 
-// Initial Seed Leads
-const DEFAULT_LEADS = [
-  {
-    id: "lead_1725178491001",
-    type: "book_demo",
-    name: "Dr. Arvind Rathore",
-    email: "rathore.hospital@gmail.com",
-    phone: "+91 98290 12345",
-    organization: "Rathore Multispeciality Hospital",
-    facilityType: "Multi-Specialty Hospital",
-    bedCount: "51–200 Beds",
-    message: "Need ABDM integration & bed allocation module demo for 75-bed hospital in Jaipur.",
-    sourcePage: "/book-demo",
-    referrer: "google / organic",
-    status: "Demo Scheduled",
-    timestamp: new Date(Date.now() - 3600000 * 4).toISOString()
-  },
-  {
-    id: "lead_1725178491002",
-    type: "whatsapp",
-    name: "WhatsApp Inquiry",
-    email: "—",
-    phone: "+91 77919 10007",
-    organization: "Apex City Clinic",
-    facilityType: "Clinic / Polyclinic",
-    bedCount: "1–10 Doctors",
-    message: "Hi Medical365, I'd like to book a free demo and check pricing plans for our clinic.",
-    sourcePage: "/pricing",
-    referrer: "google / organic",
-    status: "Contacted",
-    timestamp: new Date(Date.now() - 3600000 * 8).toISOString()
-  },
-  {
-    id: "lead_1725178491003",
-    type: "call",
-    name: "Direct Phone Call",
-    email: "—",
-    phone: "+91 77919 10007",
-    organization: "Shree Krishna Diagnostic Lab",
-    facilityType: "Diagnostic Lab",
-    bedCount: "1–10 Doctors",
-    message: "Inbound phone call initiated via mobile floating call button.",
-    sourcePage: "/hospital-bed-management",
-    referrer: "(direct) / (none)",
-    status: "New",
-    timestamp: new Date(Date.now() - 3600000 * 14).toISOString()
-  },
-  {
-    id: "lead_1725178491004",
-    type: "contact_form",
-    name: "Vikram Singhal",
-    email: "vikram@singhalhealthcare.org",
-    phone: "+91 94140 88765",
-    organization: "Singhal Healthcare Group",
-    facilityType: "Hospital Chain",
-    bedCount: "201–500 Beds",
-    message: "Looking for multi-branch HIMS software with central inventory & pharmacy management.",
-    sourcePage: "/contact",
-    referrer: "google / organic",
-    status: "New",
-    timestamp: new Date(Date.now() - 3600000 * 22).toISOString()
-  },
-  {
-    id: "lead_1725178491005",
-    type: "whatsapp",
-    name: "WhatsApp Inquiry",
-    email: "—",
-    phone: "+91 77919 10007",
-    organization: "City Care Eye Hospital",
-    facilityType: "Specialty Hospital",
-    bedCount: "11–50 Beds",
-    message: "Inquiry on NABH compliance checklist & ABDM M1-M3 integration timeline.",
-    sourcePage: "/nabh-compliant-hospital-software",
-    referrer: "google / organic",
-    status: "Demo Scheduled",
-    timestamp: new Date(Date.now() - 3600000 * 30).toISOString()
-  }
-];
-
 function loadLeads() {
   try {
     if (fs.existsSync(LEADS_FILE)) {
       const data = fs.readFileSync(LEADS_FILE, "utf8");
-      return JSON.parse(data);
+      const parsed = JSON.parse(data);
+      if (Array.isArray(parsed)) return parsed;
     }
   } catch (err) {
-    console.warn("Could not read leads file, using defaults:", err.message);
+    console.warn("Could not read leads file:", err.message);
   }
-  return DEFAULT_LEADS;
+  return [];
 }
 
 function saveLeads(leads) {
