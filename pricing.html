@@ -1791,6 +1791,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 if (periodMulti) periodMulti.textContent = ' / Year';
                 if (worthMulti) worthMulti.style.display = 'inline-block';
                 if (subMulti) subMulti.textContent = '₹2,500/month (billed annually)';
+
+                // Show 50% OFF badges only on Annual Plan
+                var offerBadges = document.querySelectorAll('#full-pricing .pricing-card .badge-offer');
+                offerBadges.forEach(function(b) {
+                    if (b.textContent.includes('OFF')) b.style.display = 'inline-block';
+                });
             } else {
                 btnMonthly.classList.add('active');
                 btnMonthly.setAttribute('aria-selected', 'true');
@@ -1811,6 +1817,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 if (periodMulti) periodMulti.textContent = ' / Month';
                 if (worthMulti) worthMulti.style.display = 'none';
                 if (subMulti) subMulti.textContent = 'Flexible monthly billing';
+
+                // Hide 50% OFF badges on Monthly Plan
+                var offerBadges = document.querySelectorAll('#full-pricing .pricing-card .badge-offer');
+                offerBadges.forEach(function(b) {
+                    if (b.textContent.includes('OFF')) b.style.display = 'none';
+                });
             }
         }
 
