@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "total_sitemap_urls": 1966,
+    "total_html_files": 1989,
+    "unmatched_sitemap_urls_count": 4,
+    "unlisted_html_files_count": 27
+  },
+  "unmatched_sitemap_urls": [
+    {
+      "sitemap_url": "https://www.medical365.in/book-demo?location=Malviya%20Nagar,%20Jaipur",
+      "classification": "ERRONEOUS_PARAMETER_URL",
+      "reason": "URL contains query parameter (?location=...) pointing to /book-demo. Sitemaps should only declare canonical clean URLs.",
+      "recommendation": "Remove parameterized URLs from sitemap.xml in Phase 2; /book-demo canonical already handles intent."
+    },
+    {
+      "sitemap_url": "https://www.medical365.in/book-demo?location=Jagatpura,%20Jaipur",
+      "classification": "ERRONEOUS_PARAMETER_URL",
+      "reason": "URL contains query parameter (?location=...) pointing to /book-demo. Sitemaps should only declare canonical clean URLs.",
+      "recommendation": "Remove parameterized URLs from sitemap.xml in Phase 2; /book-demo canonical already handles intent."
+    },
+    {
+      "sitemap_url": "https://www.medical365.in/book-demo?location=Tonk%20Road,%20Jaipur",
+      "classification": "ERRONEOUS_PARAMETER_URL",
+      "reason": "URL contains query parameter (?location=...) pointing to /book-demo. Sitemaps should only declare canonical clean URLs.",
+      "recommendation": "Remove parameterized URLs from sitemap.xml in Phase 2; /book-demo canonical already handles intent."
+    },
+    {
+      "sitemap_url": "https://www.medical365.in/book-demo?location=Jhotwara,%20Jaipur",
+      "classification": "ERRONEOUS_PARAMETER_URL",
+      "reason": "URL contains query parameter (?location=...) pointing to /book-demo. Sitemaps should only declare canonical clean URLs.",
+      "recommendation": "Remove parameterized URLs from sitemap.xml in Phase 2; /book-demo canonical already handles intent."
+    }
+  ],
+  "unlisted_html_files": [
+    {
+      "file_path": "404.html",
+      "inferred_url": "https://www.medical365.in/404",
+      "classification": "UTILITY_PAGE",
+      "recommended_action": "Correctly excluded from sitemap (Error page)."
+    },
+    {
+      "file_path": "blogs/abha-integration-guide.html",
+      "inferred_url": "https://www.medical365.in/blogs/abha-integration-guide",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/ai-hospital-management-india.html",
+      "inferred_url": "https://www.medical365.in/blogs/ai-hospital-management-india",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/best-dental-software-india.html",
+      "inferred_url": "https://www.medical365.in/blogs/best-dental-software-india",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/cloud-vs-onpremise-hms.html",
+      "inferred_url": "https://www.medical365.in/blogs/cloud-vs-onpremise-hms",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/digitize-clinic-30-days.html",
+      "inferred_url": "https://www.medical365.in/blogs/digitize-clinic-30-days",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/dpdp-act-2023-hospitals.html",
+      "inferred_url": "https://www.medical365.in/blogs/dpdp-act-2023-hospitals",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/emr-vs-ehr-india.html",
+      "inferred_url": "https://www.medical365.in/blogs/emr-vs-ehr-india",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/hospital-billing-software-india.html",
+      "inferred_url": "https://www.medical365.in/blogs/hospital-billing-software-india",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/hospital-hrms-india.html",
+      "inferred_url": "https://www.medical365.in/blogs/hospital-hrms-india",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/hospital-pharmacy-software.html",
+      "inferred_url": "https://www.medical365.in/blogs/hospital-pharmacy-software",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/hospital-software-rajasthan.html",
+      "inferred_url": "https://www.medical365.in/blogs/hospital-software-rajasthan",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/lims-vs-manual-lab.html",
+      "inferred_url": "https://www.medical365.in/blogs/lims-vs-manual-lab",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/medical365-vs-practo.html",
+      "inferred_url": "https://www.medical365.in/blogs/medical365-vs-practo",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/nabh-compliance-guide.html",
+      "inferred_url": "https://www.medical365.in/blogs/nabh-compliance-guide",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/opd-queue-management.html",
+      "inferred_url": "https://www.medical365.in/blogs/opd-queue-management",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "blogs/telemedicine-india-guide.html",
+      "inferred_url": "https://www.medical365.in/blogs/telemedicine-india-guide",
+      "classification": "INDEXABLE_AND_SHOULD_BE_IN_SITEMAP",
+      "recommended_action": "High quality editorial guide. Add to sitemap.xml in Phase 2."
+    },
+    {
+      "file_path": "components/footer.html",
+      "inferred_url": "https://www.medical365.in/components/footer",
+      "classification": "UTILITY_PAGE",
+      "recommended_action": "Partial HTML component. Correctly excluded."
+    },
+    {
+      "file_path": "googleffaff865656e63b1.html",
+      "inferred_url": "https://www.medical365.in/googleffaff865656e63b1",
+      "classification": "UTILITY_PAGE",
+      "recommended_action": "Google verification token file. Correctly excluded."
+    },
+    {
+      "file_path": "landingpages_sitemap.html",
+      "inferred_url": "https://www.medical365.in/landingpages_sitemap",
+      "classification": "LEGACY_TEMPLATE",
+      "recommended_action": "Developer template or HTML sitemap. Disallowed in robots.txt."
+    },
+    {
+      "file_path": "medical365-analytics/index.html",
+      "inferred_url": "https://www.medical365.in/medical365-analytics/",
+      "classification": "INTENTIONALLY_EXCLUDED",
+      "recommended_action": "Internal analytics app. Correctly excluded."
+    },
+    {
+      "file_path": "seo_content.html",
+      "inferred_url": "https://www.medical365.in/seo_content",
+      "classification": "LEGACY_TEMPLATE",
+      "recommended_action": "Developer template or HTML sitemap. Disallowed in robots.txt."
+    },
+    {
+      "file_path": "seo_template.html",
+      "inferred_url": "https://www.medical365.in/seo_template",
+      "classification": "LEGACY_TEMPLATE",
+      "recommended_action": "Developer template or HTML sitemap. Disallowed in robots.txt."
+    },
+    {
+      "file_path": "sitemap.html",
+      "inferred_url": "https://www.medical365.in/sitemap",
+      "classification": "LEGACY_TEMPLATE",
+      "recommended_action": "Developer template or HTML sitemap. Disallowed in robots.txt."
+    },
+    {
+      "file_path": "template.html",
+      "inferred_url": "https://www.medical365.in/template",
+      "classification": "LEGACY_TEMPLATE",
+      "recommended_action": "Developer template or HTML sitemap. Disallowed in robots.txt."
+    },
+    {
+      "file_path": "templates.html",
+      "inferred_url": "https://www.medical365.in/templates",
+      "classification": "LEGACY_TEMPLATE",
+      "recommended_action": "Developer template or HTML sitemap. Disallowed in robots.txt."
+    },
+    {
+      "file_path": "thank-you.html",
+      "inferred_url": "https://www.medical365.in/thank-you",
+      "classification": "NOINDEX",
+      "recommended_action": "Correctly excluded (Conversion thank you page)."
+    }
+  ]
+}

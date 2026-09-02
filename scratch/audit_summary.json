@@ -1,0 +1,35 @@
+{
+  "audit_status": "COMPLETE",
+  "modifications_made": false,
+  "html_files_audited": 1989,
+  "sitemap_urls": 1966,
+  "matched_sitemap_urls": 1962,
+  "indexable_urls": 1985,
+  "noindex_urls": 1,
+  "robots_blocked_urls": 3,
+  "canonical_issues": 7,
+  "cannibalization": {
+    "critical": 222,
+    "moderate": 4,
+    "clean": 1763
+  },
+  "internal_links": {
+    "total_extracted": 695464,
+    "orphans": 12
+  },
+  "schema": {
+    "valid_blocks": 11433,
+    "warnings": 0,
+    "errors": 0,
+    "high_risk_claims": 3483
+  },
+  "conversion": {
+    "commercial_pages_without_cta": 0,
+    "pages_with_tracking_evidence": 1986
+  },
+  "cw_v": {
+    "field_metrics_available": false,
+    "static_readiness_standard": "LCP <= 2.5s, INP <= 200ms, CLS <= 0.1"
+  },
+  "phase_1_ready": true
+}

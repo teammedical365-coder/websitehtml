@@ -1,0 +1,200 @@
+[
+  {
+    "target_url": "/hims-software",
+    "actual_file": "multilingual-hims.html",
+    "notes": "Target file hims-software.html does not exist; analyzed active alternative multilingual-hims.html",
+    "title": "Multilingual HIMS | Medical365",
+    "description": "Discover Medical365",
+    "h1": [
+      "Modern Multilingual HIMS"
+    ],
+    "h2s": [
+      "Clinic Solutions",
+      "Hospital Management",
+      "Specialty Care EHR",
+      "Patients and their Families",
+      "Hospital Chain Management"
+    ],
+    "canonical": "https://www.medical365.in/multilingual-hims",
+    "indexability": "INDEXABLE",
+    "link_equity": {
+      "total_incoming": 0,
+      "contextual_body_links": 0,
+      "template_links": 0,
+      "contextual_link_ratio": 0
+    },
+    "conversion_hooks": {
+      "whatsapp": true,
+      "phone": true,
+      "demo_form": true,
+      "contact_form": false
+    },
+    "schema_risks": "Contains hardcoded AggregateRating",
+    "recommended_phase1_priority": "P0-A"
+  },
+  {
+    "target_url": "/hospital-bed-management",
+    "actual_file": "hospital-bed-management.html",
+    "notes": "",
+    "title": "Hospital Bed Management - Medical365",
+    "description": "Discover Medical365",
+    "h1": [
+      "Real-Time Visibility of Every Hospital Bed"
+    ],
+    "h2s": [
+      "Clinic Solutions",
+      "Hospital Management",
+      "Specialty Care EHR",
+      "Patients and their Families",
+      "Hospital Chain Management"
+    ],
+    "canonical": "https://www.medical365.in/hospital-bed-management",
+    "indexability": "INDEXABLE",
+    "link_equity": {
+      "total_incoming": 3933,
+      "contextual_body_links": 3933,
+      "template_links": 0,
+      "contextual_link_ratio": 1
+    },
+    "conversion_hooks": {
+      "whatsapp": true,
+      "phone": true,
+      "demo_form": true,
+      "contact_form": false
+    },
+    "schema_risks": "Contains hardcoded AggregateRating",
+    "recommended_phase1_priority": "P1"
+  },
+  {
+    "target_url": "/blogs/abha-integration-guide",
+    "actual_file": "blogs/abha-integration-guide.html",
+    "notes": "",
+    "title": "ABHA Integration Guide for Hospitals — How to Get ABDM Compliant 2026 | Medical365",
+    "description": "Complete ABHA integration guide for Indian hospitals 2026. Step-by-step ABDM compliance, ABHA ID generation, and how Medical365 makes it seamless. Free guide.",
+    "h1": [
+      "ABHA Integration Guide for Hospitals — How to Get ABDM Compliant in 2026"
+    ],
+    "h2s": [
+      "Clinic Solutions",
+      "Hospital Management",
+      "Specialty Care EHR",
+      "Patients and their Families",
+      "Hospital Chain Management"
+    ],
+    "canonical": "https://www.medical365.in/blogs/abha-integration-guide",
+    "indexability": "INDEXABLE",
+    "link_equity": {
+      "total_incoming": 25,
+      "contextual_body_links": 13,
+      "template_links": 12,
+      "contextual_link_ratio": 0.52
+    },
+    "conversion_hooks": {
+      "whatsapp": true,
+      "phone": true,
+      "demo_form": true,
+      "contact_form": false
+    },
+    "schema_risks": "CLEAN",
+    "recommended_phase1_priority": "P1"
+  },
+  {
+    "target_url": "/nabh-compliant-hospital-software",
+    "actual_file": "best-nabh-hospital-management-software-jaipur.html",
+    "notes": "Target file nabh-compliant-hospital-software.html does not exist; analyzed active alternative best-nabh-hospital-management-software-jaipur.html",
+    "title": "Best NABH Compliant Hospital Management Software in Jaipur | 2026 Guide",
+    "description": "The definitive 2026 guide to the best NABH compliant hospital management software in Jaipur. Explore modules for ROM, CQI, and HIC with local support in Mansarovar, C-Scheme & Vaishali Nagar.",
+    "h1": [
+      "Best NABH Compliant Hospital Management Software in Jaipur: The Definitive Guide"
+    ],
+    "h2s": [
+      "Clinic Solutions",
+      "Hospital Management",
+      "Specialty Care EHR",
+      "Patients and their Families",
+      "Hospital Chain Management"
+    ],
+    "canonical": "https://www.medical365.in/best-nabh-hospital-management-software-jaipur",
+    "indexability": "INDEXABLE",
+    "link_equity": {
+      "total_incoming": 0,
+      "contextual_body_links": 0,
+      "template_links": 0,
+      "contextual_link_ratio": 0
+    },
+    "conversion_hooks": {
+      "whatsapp": true,
+      "phone": true,
+      "demo_form": true,
+      "contact_form": false
+    },
+    "schema_risks": "Contains hardcoded AggregateRating",
+    "recommended_phase1_priority": "P0-A"
+  },
+  {
+    "target_url": "/blood-bank",
+    "actual_file": "blood-bank.html",
+    "notes": "",
+    "title": "Blood Bank Software India | NABH &amp; ABDM Ready | Medical365",
+    "description": "Medical365 Blood Bank Software: Complete blood inventory management, cross-matching &amp; NABH compliance for Indian hospitals. Trusted by 500+ facilities. Book demo today.",
+    "h1": [
+      "Life-Saving Precision in Every Transfusion — ABDM &amp; NABH Compliant"
+    ],
+    "h2s": [
+      "Clinic Solutions",
+      "Hospital Management",
+      "Specialty Care EHR",
+      "Patients and their Families",
+      "Hospital Chain Management"
+    ],
+    "canonical": "https://www.medical365.in/blood-bank",
+    "indexability": "INDEXABLE",
+    "link_equity": {
+      "total_incoming": 1983,
+      "contextual_body_links": 1983,
+      "template_links": 0,
+      "contextual_link_ratio": 1
+    },
+    "conversion_hooks": {
+      "whatsapp": true,
+      "phone": true,
+      "demo_form": true,
+      "contact_form": false
+    },
+    "schema_risks": "Contains hardcoded AggregateRating",
+    "recommended_phase1_priority": "P1"
+  },
+  {
+    "target_url": "/pricing",
+    "actual_file": "pricing.html",
+    "notes": "",
+    "title": "Pricing Plans - Medical365",
+    "description": "View all pricing plans for Medical365 SaaS platform. Simple, transparent pricing for Indian healthcare providers.",
+    "h1": [
+      "Simple, Transparent Pricing for Indian Healthcare"
+    ],
+    "h2s": [
+      "Clinic Solutions",
+      "Hospital Management",
+      "Specialty Care EHR",
+      "Patients and their Families",
+      "Hospital Chain Management"
+    ],
+    "canonical": "https://www.medical365.in/pricing",
+    "indexability": "INDEXABLE",
+    "link_equity": {
+      "total_incoming": 1984,
+      "contextual_body_links": 1,
+      "template_links": 1983,
+      "contextual_link_ratio": 0.0005
+    },
+    "conversion_hooks": {
+      "whatsapp": true,
+      "phone": true,
+      "demo_form": true,
+      "contact_form": false
+    },
+    "schema_risks": "CLEAN",
+    "recommended_phase1_priority": "P1"
+  }
+]

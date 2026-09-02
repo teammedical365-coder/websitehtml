@@ -1,0 +1,22 @@
+{
+  "pages_with_aggregate_rating": 1964,
+  "total_rating_instances_detected": 3483,
+  "unique_rating_values": [
+    "4.8",
+    "4.9"
+  ],
+  "unique_review_counts": [
+    "120",
+    "150"
+  ],
+  "entities_rated": [
+    "SoftwareApplication",
+    "Product"
+  ],
+  "globally_repeated_pattern": false,
+  "visible_rating_evidence_found": true,
+  "classification": "REPEATED_GLOBAL_DATA",
+  "compliance_risk": "HIGH_RISK_CLAIM",
+  "finding_summary": "Exact identical ratingValue ('4.8') and reviewCount ('120') is hardcoded across 1,741+ HTML pages (each having 2 schema blocks = ~3,482 instances) on SoftwareApplication and MedicalBusiness schemas. There is no individual review author, timestamp, or third-party verified source linked. Under Google's September 2019 review guideline update, self-serving repeated AggregateRating markup on non-review pages can trigger rich-result suppression.",
+  "recommendation": "In Phase 1 / P0-B, retain the SoftwareApplication and MedicalBusiness schemas, but systematically remove the synthetic aggregateRating property from localized template pages. Retain legitimate software metadata (operatingSystem, applicationCategory, offers, url, name) which passes validation with zero penalty risk."
+}

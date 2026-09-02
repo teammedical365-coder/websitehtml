@@ -1,0 +1,203 @@
+{
+  "/hims-software": {
+    "url": "/hims-software",
+    "total_incoming": 0,
+    "unique_sources": 0,
+    "contextual_body_links": 0,
+    "template_links": 0,
+    "navigation_links": 0,
+    "footer_links": 0,
+    "cta_links": 0,
+    "other_links": 0,
+    "contextual_link_ratio": 0,
+    "raw_occurrences": [],
+    "anchor_distribution": {}
+  },
+  "/hospital-bed-management": {
+    "url": "/hospital-bed-management",
+    "total_incoming": 3933,
+    "unique_sources": 1966,
+    "contextual_body_links": 3933,
+    "template_links": 0,
+    "navigation_links": 0,
+    "footer_links": 0,
+    "cta_links": 0,
+    "other_links": 0,
+    "contextual_link_ratio": 1,
+    "raw_occurrences": [
+      {
+        "source": "404.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Bed Management"
+      },
+      {
+        "source": "404.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Bed Management Software"
+      },
+      {
+        "source": "abha-compliance-software-agra.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Bed Management"
+      },
+      {
+        "source": "abha-compliance-software-agra.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Bed Management Software"
+      },
+      {
+        "source": "abha-compliance-software-ahmedabad.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Bed Management"
+      }
+    ],
+    "anchor_distribution": {
+      "bed management": 1966,
+      "bed management software": 1966,
+      "hospital bed management": 1
+    }
+  },
+  "/blogs/abha-integration-guide": {
+    "url": "/blogs/abha-integration-guide",
+    "total_incoming": 25,
+    "unique_sources": 13,
+    "contextual_body_links": 13,
+    "template_links": 12,
+    "navigation_links": 0,
+    "footer_links": 0,
+    "cta_links": 0,
+    "other_links": 0,
+    "contextual_link_ratio": 0.52,
+    "raw_occurrences": [
+      {
+        "source": "blogs/ai-hospital-management-india.html",
+        "linkType": "SIDEBAR",
+        "anchor": "ABHA Integration Guide"
+      },
+      {
+        "source": "blogs/ai-hospital-management-india.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Read Article →"
+      },
+      {
+        "source": "blogs/best-dental-software-india.html",
+        "linkType": "SIDEBAR",
+        "anchor": "ABHA Integration Guide"
+      },
+      {
+        "source": "blogs/best-dental-software-india.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Read Article →"
+      },
+      {
+        "source": "blogs/cloud-vs-onpremise-hms.html",
+        "linkType": "SIDEBAR",
+        "anchor": "ABHA Integration Guide"
+      }
+    ],
+    "anchor_distribution": {
+      "abha integration guide": 12,
+      "read article →": 12,
+      "abha integration guide for hospitals — how to get abdm compliant complete guide to abha id generation, abdm integration, and what indian hospitals need to do to become digitally compliant in 2026. june 2026 · 7 min read": 1
+    }
+  },
+  "/nabh-compliant-hospital-software": {
+    "url": "/nabh-compliant-hospital-software",
+    "total_incoming": 0,
+    "unique_sources": 0,
+    "contextual_body_links": 0,
+    "template_links": 0,
+    "navigation_links": 0,
+    "footer_links": 0,
+    "cta_links": 0,
+    "other_links": 0,
+    "contextual_link_ratio": 0,
+    "raw_occurrences": [],
+    "anchor_distribution": {}
+  },
+  "/blood-bank": {
+    "url": "/blood-bank",
+    "total_incoming": 1983,
+    "unique_sources": 1982,
+    "contextual_body_links": 1983,
+    "template_links": 0,
+    "navigation_links": 0,
+    "footer_links": 0,
+    "cta_links": 0,
+    "other_links": 0,
+    "contextual_link_ratio": 1,
+    "raw_occurrences": [
+      {
+        "source": "404.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Blood Bank"
+      },
+      {
+        "source": "abha-compliance-software-agra.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Blood Bank"
+      },
+      {
+        "source": "abha-compliance-software-ahmedabad.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Blood Bank"
+      },
+      {
+        "source": "abha-compliance-software-ajmer.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Blood Bank"
+      },
+      {
+        "source": "abha-compliance-software-alwar.html",
+        "linkType": "BODY_CONTENT",
+        "anchor": "Blood Bank"
+      }
+    ],
+    "anchor_distribution": {
+      "blood bank": 1983
+    }
+  },
+  "/pricing": {
+    "url": "/pricing",
+    "total_incoming": 1984,
+    "unique_sources": 1983,
+    "contextual_body_links": 1,
+    "template_links": 1983,
+    "navigation_links": 1982,
+    "footer_links": 1,
+    "cta_links": 1,
+    "other_links": 0,
+    "contextual_link_ratio": 0.0005,
+    "raw_occurrences": [
+      {
+        "source": "404.html",
+        "linkType": "NAVIGATION",
+        "anchor": "Pricing"
+      },
+      {
+        "source": "abha-compliance-software-agra.html",
+        "linkType": "NAVIGATION",
+        "anchor": "Pricing"
+      },
+      {
+        "source": "abha-compliance-software-ahmedabad.html",
+        "linkType": "NAVIGATION",
+        "anchor": "Pricing"
+      },
+      {
+        "source": "abha-compliance-software-ajmer.html",
+        "linkType": "NAVIGATION",
+        "anchor": "Pricing"
+      },
+      {
+        "source": "abha-compliance-software-alwar.html",
+        "linkType": "NAVIGATION",
+        "anchor": "Pricing"
+      }
+    ],
+    "anchor_distribution": {
+      "pricing": 1982,
+      "view full pricing details & enterprise plans →": 2
+    }
+  }
+}
