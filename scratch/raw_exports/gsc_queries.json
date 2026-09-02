@@ -1,0 +1,653 @@
+[
+  {
+    "query": "medical365",
+    "clicks": 35,
+    "impressions": 141,
+    "ctr": "24.82%",
+    "position": 3.91
+  },
+  {
+    "query": "365 medical",
+    "clicks": 5,
+    "impressions": 107,
+    "ctr": "4.67%",
+    "position": 4.02
+  },
+  {
+    "query": "med 365",
+    "clicks": 2,
+    "impressions": 31,
+    "ctr": "6.45%",
+    "position": 8.97
+  },
+  {
+    "query": "365 medical billing services",
+    "clicks": 2,
+    "impressions": 2,
+    "ctr": "100.00%",
+    "position": 3
+  },
+  {
+    "query": "nabh compliance",
+    "clicks": 1,
+    "impressions": 35,
+    "ctr": "2.86%",
+    "position": 16.17
+  },
+  {
+    "query": "hrms hospital",
+    "clicks": 1,
+    "impressions": 25,
+    "ctr": "4.00%",
+    "position": 8.52
+  },
+  {
+    "query": "abha integration",
+    "clicks": 1,
+    "impressions": 10,
+    "ctr": "10.00%",
+    "position": 15.8
+  },
+  {
+    "query": "healthcare kiosk",
+    "clicks": 1,
+    "impressions": 8,
+    "ctr": "12.50%",
+    "position": 44.38
+  },
+  {
+    "query": "nhcx",
+    "clicks": 1,
+    "impressions": 3,
+    "ctr": "33.33%",
+    "position": 9.33
+  },
+  {
+    "query": "operating theatre analytics software",
+    "clicks": 0,
+    "impressions": 705,
+    "ctr": "0.00%",
+    "position": 86.94
+  },
+  {
+    "query": "hospital billing software",
+    "clicks": 0,
+    "impressions": 217,
+    "ctr": "0.00%",
+    "position": 74.59
+  },
+  {
+    "query": "medical marketing crm",
+    "clicks": 0,
+    "impressions": 172,
+    "ctr": "0.00%",
+    "position": 57.82
+  },
+  {
+    "query": "hospital theatre timer program",
+    "clicks": 0,
+    "impressions": 164,
+    "ctr": "0.00%",
+    "position": 84.91
+  },
+  {
+    "query": "india healthcare revenue cycle management market",
+    "clicks": 0,
+    "impressions": 114,
+    "ctr": "0.00%",
+    "position": 76.05
+  },
+  {
+    "query": "emr for clinics",
+    "clicks": 0,
+    "impressions": 109,
+    "ctr": "0.00%",
+    "position": 87.16
+  },
+  {
+    "query": "crm software for specialty care clinics",
+    "clicks": 0,
+    "impressions": 107,
+    "ctr": "0.00%",
+    "position": 39
+  },
+  {
+    "query": "emr for opd",
+    "clicks": 0,
+    "impressions": 100,
+    "ctr": "0.00%",
+    "position": 61.3
+  },
+  {
+    "query": "crm for specialized surgeries",
+    "clicks": 0,
+    "impressions": 99,
+    "ctr": "0.00%",
+    "position": 35.02
+  },
+  {
+    "query": "medical referral management",
+    "clicks": 0,
+    "impressions": 96,
+    "ctr": "0.00%",
+    "position": 65.3
+  },
+  {
+    "query": "crm for surgical services",
+    "clicks": 0,
+    "impressions": 93,
+    "ctr": "0.00%",
+    "position": 60.45
+  },
+  {
+    "query": "hrms for hospitals",
+    "clicks": 0,
+    "impressions": 88,
+    "ctr": "0.00%",
+    "position": 55.5
+  },
+  {
+    "query": "patient referral management system",
+    "clicks": 0,
+    "impressions": 88,
+    "ctr": "0.00%",
+    "position": 78.56
+  },
+  {
+    "query": "crm for internal medicine",
+    "clicks": 0,
+    "impressions": 86,
+    "ctr": "0.00%",
+    "position": 67.9
+  },
+  {
+    "query": "india ehr emr market",
+    "clicks": 0,
+    "impressions": 85,
+    "ctr": "0.00%",
+    "position": 59.55
+  },
+  {
+    "query": "crm for obstetrics & gynecology",
+    "clicks": 0,
+    "impressions": 85,
+    "ctr": "0.00%",
+    "position": 67.64
+  },
+  {
+    "query": "healthcare supply chain software",
+    "clicks": 0,
+    "impressions": 84,
+    "ctr": "0.00%",
+    "position": 54.55
+  },
+  {
+    "query": "patient intake software for general surgeons",
+    "clicks": 0,
+    "impressions": 83,
+    "ctr": "0.00%",
+    "position": 74.86
+  },
+  {
+    "query": "key components of abha",
+    "clicks": 0,
+    "impressions": 82,
+    "ctr": "0.00%",
+    "position": 37.8
+  },
+  {
+    "query": "crm for specialty care",
+    "clicks": 0,
+    "impressions": 82,
+    "ctr": "0.00%",
+    "position": 40.41
+  },
+  {
+    "query": "medical crm",
+    "clicks": 0,
+    "impressions": 82,
+    "ctr": "0.00%",
+    "position": 58.21
+  },
+  {
+    "query": "medical referral management software",
+    "clicks": 0,
+    "impressions": 82,
+    "ctr": "0.00%",
+    "position": 68.6
+  },
+  {
+    "query": "mobile patient intake software",
+    "clicks": 0,
+    "impressions": 81,
+    "ctr": "0.00%",
+    "position": 83.94
+  },
+  {
+    "query": "neurology patient intake software",
+    "clicks": 0,
+    "impressions": 80,
+    "ctr": "0.00%",
+    "position": 68.97
+  },
+  {
+    "query": "india integrated operating room management systems market",
+    "clicks": 0,
+    "impressions": 80,
+    "ctr": "0.00%",
+    "position": 73.53
+  },
+  {
+    "query": "clinic billing software",
+    "clicks": 0,
+    "impressions": 79,
+    "ctr": "0.00%",
+    "position": 81.34
+  },
+  {
+    "query": "nursing management system",
+    "clicks": 0,
+    "impressions": 78,
+    "ctr": "0.00%",
+    "position": 11.08
+  },
+  {
+    "query": "dermatologist patient intake software",
+    "clicks": 0,
+    "impressions": 77,
+    "ctr": "0.00%",
+    "position": 80.22
+  },
+  {
+    "query": "fertility clinic crm",
+    "clicks": 0,
+    "impressions": 76,
+    "ctr": "0.00%",
+    "position": 80.87
+  },
+  {
+    "query": "patient registration software",
+    "clicks": 0,
+    "impressions": 75,
+    "ctr": "0.00%",
+    "position": 53.41
+  },
+  {
+    "query": "doctor emr solution",
+    "clicks": 0,
+    "impressions": 74,
+    "ctr": "0.00%",
+    "position": 51.05
+  },
+  {
+    "query": "healthcare referral management",
+    "clicks": 0,
+    "impressions": 74,
+    "ctr": "0.00%",
+    "position": 73.18
+  },
+  {
+    "query": "patient feedback software for hospitals",
+    "clicks": 0,
+    "impressions": 74,
+    "ctr": "0.00%",
+    "position": 85.11
+  },
+  {
+    "query": "crm for rehabilitation services",
+    "clicks": 0,
+    "impressions": 73,
+    "ctr": "0.00%",
+    "position": 69.08
+  },
+  {
+    "query": "iop tracking",
+    "clicks": 0,
+    "impressions": 71,
+    "ctr": "0.00%",
+    "position": 8.55
+  },
+  {
+    "query": "mental health crm",
+    "clicks": 0,
+    "impressions": 71,
+    "ctr": "0.00%",
+    "position": 69.46
+  },
+  {
+    "query": "patient intake software for neurology clinics",
+    "clicks": 0,
+    "impressions": 71,
+    "ctr": "0.00%",
+    "position": 76.07
+  },
+  {
+    "query": "hospital data migration services",
+    "clicks": 0,
+    "impressions": 71,
+    "ctr": "0.00%",
+    "position": 77
+  },
+  {
+    "query": "nabh compliance software",
+    "clicks": 0,
+    "impressions": 70,
+    "ctr": "0.00%",
+    "position": 69.29
+  },
+  {
+    "query": "medical accounting software",
+    "clicks": 0,
+    "impressions": 68,
+    "ctr": "0.00%",
+    "position": 69.41
+  },
+  {
+    "query": "get cosmetic clinic emr",
+    "clicks": 0,
+    "impressions": 66,
+    "ctr": "0.00%",
+    "position": 29.33
+  },
+  {
+    "query": "patient portal",
+    "clicks": 0,
+    "impressions": 65,
+    "ctr": "0.00%",
+    "position": 41.55
+  },
+  {
+    "query": "crm software for emergency rooms",
+    "clicks": 0,
+    "impressions": 64,
+    "ctr": "0.00%",
+    "position": 51.31
+  },
+  {
+    "query": "india revenue cycle management market",
+    "clicks": 0,
+    "impressions": 63,
+    "ctr": "0.00%",
+    "position": 76.32
+  },
+  {
+    "query": "patient services",
+    "clicks": 0,
+    "impressions": 62,
+    "ctr": "0.00%",
+    "position": 54.31
+  },
+  {
+    "query": "emr hospital",
+    "clicks": 0,
+    "impressions": 62,
+    "ctr": "0.00%",
+    "position": 54.76
+  },
+  {
+    "query": "cloud based cosmetic surgery ehr",
+    "clicks": 0,
+    "impressions": 61,
+    "ctr": "0.00%",
+    "position": 48.34
+  },
+  {
+    "query": "cosmetic surgery electronic medical records software",
+    "clicks": 0,
+    "impressions": 60,
+    "ctr": "0.00%",
+    "position": 54.78
+  },
+  {
+    "query": "ris pacs software",
+    "clicks": 0,
+    "impressions": 60,
+    "ctr": "0.00%",
+    "position": 68.03
+  },
+  {
+    "query": "emr software for small dental clinic",
+    "clicks": 0,
+    "impressions": 60,
+    "ctr": "0.00%",
+    "position": 74.42
+  },
+  {
+    "query": "hr software for hospitals",
+    "clicks": 0,
+    "impressions": 60,
+    "ctr": "0.00%",
+    "position": 88.87
+  },
+  {
+    "query": "get dermatology emrs",
+    "clicks": 0,
+    "impressions": 59,
+    "ctr": "0.00%",
+    "position": 52.85
+  },
+  {
+    "query": "patient intake software for psychiatric hospitals",
+    "clicks": 0,
+    "impressions": 59,
+    "ctr": "0.00%",
+    "position": 74.12
+  },
+  {
+    "query": "healthcare retail billing software",
+    "clicks": 0,
+    "impressions": 59,
+    "ctr": "0.00%",
+    "position": 76.95
+  },
+  {
+    "query": "crm for neurology",
+    "clicks": 0,
+    "impressions": 58,
+    "ctr": "0.00%",
+    "position": 68.6
+  },
+  {
+    "query": "hospital management software",
+    "clicks": 0,
+    "impressions": 56,
+    "ctr": "0.00%",
+    "position": 77.93
+  },
+  {
+    "query": "emr software for clinics",
+    "clicks": 0,
+    "impressions": 56,
+    "ctr": "0.00%",
+    "position": 87.62
+  },
+  {
+    "query": "dermatology emrs",
+    "clicks": 0,
+    "impressions": 55,
+    "ctr": "0.00%",
+    "position": 56.44
+  },
+  {
+    "query": "dermatology emr software",
+    "clicks": 0,
+    "impressions": 53,
+    "ctr": "0.00%",
+    "position": 60.79
+  },
+  {
+    "query": "cosmetic surgery ehr software",
+    "clicks": 0,
+    "impressions": 52,
+    "ctr": "0.00%",
+    "position": 59.87
+  },
+  {
+    "query": "revenue cycle management software",
+    "clicks": 0,
+    "impressions": 52,
+    "ctr": "0.00%",
+    "position": 68.65
+  },
+  {
+    "query": "emr medical software dermatology",
+    "clicks": 0,
+    "impressions": 50,
+    "ctr": "0.00%",
+    "position": 56.5
+  },
+  {
+    "query": "emr software companies for dermatology",
+    "clicks": 0,
+    "impressions": 50,
+    "ctr": "0.00%",
+    "position": 63.6
+  },
+  {
+    "query": "fertility emr",
+    "clicks": 0,
+    "impressions": 49,
+    "ctr": "0.00%",
+    "position": 50.98
+  },
+  {
+    "query": "hrms medicover",
+    "clicks": 0,
+    "impressions": 49,
+    "ctr": "0.00%",
+    "position": 51.29
+  },
+  {
+    "query": "medical billing software in india",
+    "clicks": 0,
+    "impressions": 49,
+    "ctr": "0.00%",
+    "position": 67.53
+  },
+  {
+    "query": "crm software for neurology clinics",
+    "clicks": 0,
+    "impressions": 49,
+    "ctr": "0.00%",
+    "position": 68.76
+  },
+  {
+    "query": "crm for oncology",
+    "clicks": 0,
+    "impressions": 49,
+    "ctr": "0.00%",
+    "position": 95.04
+  },
+  {
+    "query": "book cosmasol live demo",
+    "clicks": 0,
+    "impressions": 48,
+    "ctr": "0.00%",
+    "position": 9.08
+  },
+  {
+    "query": "dermatology ehr software",
+    "clicks": 0,
+    "impressions": 47,
+    "ctr": "0.00%",
+    "position": 73.11
+  },
+  {
+    "query": "dermatology clinic software",
+    "clicks": 0,
+    "impressions": 46,
+    "ctr": "0.00%",
+    "position": 79.33
+  },
+  {
+    "query": "crm for cardiology",
+    "clicks": 0,
+    "impressions": 45,
+    "ctr": "0.00%",
+    "position": 69.71
+  },
+  {
+    "query": "crm software for endocrinologists",
+    "clicks": 0,
+    "impressions": 45,
+    "ctr": "0.00%",
+    "position": 75.47
+  },
+  {
+    "query": "hrms for healthcare",
+    "clicks": 0,
+    "impressions": 45,
+    "ctr": "0.00%",
+    "position": 77.04
+  },
+  {
+    "query": "dermatology billing software",
+    "clicks": 0,
+    "impressions": 45,
+    "ctr": "0.00%",
+    "position": 81.18
+  },
+  {
+    "query": "dermatology emr systems",
+    "clicks": 0,
+    "impressions": 44,
+    "ctr": "0.00%",
+    "position": 60.2
+  },
+  {
+    "query": "dermatology scheduling software",
+    "clicks": 0,
+    "impressions": 44,
+    "ctr": "0.00%",
+    "position": 72.95
+  },
+  {
+    "query": "lims hospital jaipur",
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": "0.00%",
+    "position": 6.67
+  },
+  {
+    "query": "patient mobile app",
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": "0.00%",
+    "position": 17.7
+  },
+  {
+    "query": "dental software",
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": "0.00%",
+    "position": 24.28
+  },
+  {
+    "query": "cosmetic clinic patient management",
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": "0.00%",
+    "position": 74.91
+  },
+  {
+    "query": "dermatology software",
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": "0.00%",
+    "position": 83.3
+  },
+  {
+    "query": "hrms medical",
+    "clicks": 0,
+    "impressions": 42,
+    "ctr": "0.00%",
+    "position": 17.88
+  },
+  {
+    "query": "abdm integration checklist",
+    "clicks": 0,
+    "impressions": 42,
+    "ctr": "0.00%",
+    "position": 18.79
+  }
+]

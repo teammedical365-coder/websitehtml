@@ -1,0 +1,1136 @@
+[
+  {
+    "pair_id": "PAIR-001",
+    "urls": [
+      "https://www.medical365.in/fhir-hl7-compliant-software-bapu-nagar-jaipur",
+      "https://www.medical365.in/fhir-hl7-compliant-software-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-003",
+    "urls": [
+      "https://www.medical365.in/fhir-hl7-compliant-software-jagatpura-jaipur",
+      "https://www.medical365.in/fhir-hl7-compliant-software-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-004",
+    "urls": [
+      "https://www.medical365.in/fhir-hl7-compliant-software-jhotwara-jaipur",
+      "https://www.medical365.in/fhir-hl7-compliant-software-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-005",
+    "urls": [
+      "https://www.medical365.in/fhir-hl7-compliant-software-malviya-nagar-jaipur",
+      "https://www.medical365.in/fhir-hl7-compliant-software-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-006",
+    "urls": [
+      "https://www.medical365.in/fhir-hl7-compliant-software-mansarovar-jaipur",
+      "https://www.medical365.in/fhir-hl7-compliant-software-mansarovar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-007",
+    "urls": [
+      "https://www.medical365.in/fhir-hl7-compliant-software-raja-park-jaipur",
+      "https://www.medical365.in/fhir-hl7-compliant-software-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-009",
+    "urls": [
+      "https://www.medical365.in/fhir-hl7-compliant-software-vaishali-nagar-jaipur",
+      "https://www.medical365.in/fhir-hl7-compliant-software-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-010",
+    "urls": [
+      "https://www.medical365.in/fhir-hl7-compliant-software-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/fhir-hl7-compliant-software-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-013",
+    "urls": [
+      "https://www.medical365.in/healthcare-crm-jagatpura-jaipur",
+      "https://www.medical365.in/healthcare-crm-jagatpura"
+    ],
+    "imps": "2 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-016",
+    "urls": [
+      "https://www.medical365.in/healthcare-crm-mansarovar-jaipur",
+      "https://www.medical365.in/healthcare-crm-mansarovar"
+    ],
+    "imps": "9 vs 7",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-018",
+    "urls": [
+      "https://www.medical365.in/healthcare-crm-tonk-road-jaipur",
+      "https://www.medical365.in/healthcare-crm-tonk-road"
+    ],
+    "imps": "8 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-019",
+    "urls": [
+      "https://www.medical365.in/healthcare-crm-vaishali-nagar-jaipur",
+      "https://www.medical365.in/healthcare-crm-vaishali-nagar"
+    ],
+    "imps": "4 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-021",
+    "urls": [
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-bapu-nagar-jaipur",
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-024",
+    "urls": [
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-jhotwara-jaipur",
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-025",
+    "urls": [
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-malviya-nagar-jaipur",
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-026",
+    "urls": [
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-mansarovar-jaipur",
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-mansarovar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-029",
+    "urls": [
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-vaishali-nagar-jaipur",
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-030",
+    "urls": [
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-031",
+    "urls": [
+      "https://www.medical365.in/healthcare-kiosk-providers-bapu-nagar-jaipur",
+      "https://www.medical365.in/healthcare-kiosk-providers-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-032",
+    "urls": [
+      "https://www.medical365.in/healthcare-kiosk-providers-c-scheme-jaipur",
+      "https://www.medical365.in/healthcare-kiosk-providers-c-scheme"
+    ],
+    "imps": "1 vs 2",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-036",
+    "urls": [
+      "https://www.medical365.in/healthcare-kiosk-providers-mansarovar-jaipur",
+      "https://www.medical365.in/healthcare-kiosk-providers-mansarovar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-037",
+    "urls": [
+      "https://www.medical365.in/healthcare-kiosk-providers-raja-park-jaipur",
+      "https://www.medical365.in/healthcare-kiosk-providers-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-038",
+    "urls": [
+      "https://www.medical365.in/healthcare-kiosk-providers-tonk-road-jaipur",
+      "https://www.medical365.in/healthcare-kiosk-providers-tonk-road"
+    ],
+    "imps": "1 vs 3",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-039",
+    "urls": [
+      "https://www.medical365.in/healthcare-kiosk-providers-vaishali-nagar-jaipur",
+      "https://www.medical365.in/healthcare-kiosk-providers-vaishali-nagar"
+    ],
+    "imps": "1 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-040",
+    "urls": [
+      "https://www.medical365.in/healthcare-kiosk-providers-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/healthcare-kiosk-providers-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-041",
+    "urls": [
+      "https://www.medical365.in/hospital-data-backup-recovery-bapu-nagar-jaipur",
+      "https://www.medical365.in/hospital-data-backup-recovery-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-042",
+    "urls": [
+      "https://www.medical365.in/hospital-data-backup-recovery-c-scheme-jaipur",
+      "https://www.medical365.in/hospital-data-backup-recovery-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-043",
+    "urls": [
+      "https://www.medical365.in/hospital-data-backup-recovery-jagatpura-jaipur",
+      "https://www.medical365.in/hospital-data-backup-recovery-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-045",
+    "urls": [
+      "https://www.medical365.in/hospital-data-backup-recovery-malviya-nagar-jaipur",
+      "https://www.medical365.in/hospital-data-backup-recovery-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-048",
+    "urls": [
+      "https://www.medical365.in/hospital-data-backup-recovery-tonk-road-jaipur",
+      "https://www.medical365.in/hospital-data-backup-recovery-tonk-road"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-049",
+    "urls": [
+      "https://www.medical365.in/hospital-data-backup-recovery-vaishali-nagar-jaipur",
+      "https://www.medical365.in/hospital-data-backup-recovery-vaishali-nagar"
+    ],
+    "imps": "1 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-050",
+    "urls": [
+      "https://www.medical365.in/hospital-data-backup-recovery-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/hospital-data-backup-recovery-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-052",
+    "urls": [
+      "https://www.medical365.in/hospital-hrms-c-scheme-jaipur",
+      "https://www.medical365.in/hospital-hrms-c-scheme"
+    ],
+    "imps": "4 vs 6",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-054",
+    "urls": [
+      "https://www.medical365.in/hospital-hrms-jhotwara-jaipur",
+      "https://www.medical365.in/hospital-hrms-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-055",
+    "urls": [
+      "https://www.medical365.in/hospital-hrms-malviya-nagar-jaipur",
+      "https://www.medical365.in/hospital-hrms-malviya-nagar"
+    ],
+    "imps": "1 vs 7",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-056",
+    "urls": [
+      "https://www.medical365.in/hospital-hrms-mansarovar-jaipur",
+      "https://www.medical365.in/hospital-hrms-mansarovar"
+    ],
+    "imps": "1 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-058",
+    "urls": [
+      "https://www.medical365.in/hospital-hrms-tonk-road-jaipur",
+      "https://www.medical365.in/hospital-hrms-tonk-road"
+    ],
+    "imps": "1 vs 3",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-059",
+    "urls": [
+      "https://www.medical365.in/hospital-hrms-vaishali-nagar-jaipur",
+      "https://www.medical365.in/hospital-hrms-vaishali-nagar"
+    ],
+    "imps": "1 vs 7",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-060",
+    "urls": [
+      "https://www.medical365.in/hospital-hrms-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/hospital-hrms-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-061",
+    "urls": [
+      "https://www.medical365.in/hospital-it-cloud-migration-bapu-nagar-jaipur",
+      "https://www.medical365.in/hospital-it-cloud-migration-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-062",
+    "urls": [
+      "https://www.medical365.in/hospital-it-cloud-migration-c-scheme-jaipur",
+      "https://www.medical365.in/hospital-it-cloud-migration-c-scheme"
+    ],
+    "imps": "1 vs 2",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-063",
+    "urls": [
+      "https://www.medical365.in/hospital-it-cloud-migration-jagatpura-jaipur",
+      "https://www.medical365.in/hospital-it-cloud-migration-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-064",
+    "urls": [
+      "https://www.medical365.in/hospital-it-cloud-migration-jhotwara-jaipur",
+      "https://www.medical365.in/hospital-it-cloud-migration-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-072",
+    "urls": [
+      "https://www.medical365.in/hospital-online-scheduling-software-c-scheme-jaipur",
+      "https://www.medical365.in/hospital-online-scheduling-software-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-073",
+    "urls": [
+      "https://www.medical365.in/hospital-online-scheduling-software-jagatpura-jaipur",
+      "https://www.medical365.in/hospital-online-scheduling-software-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-074",
+    "urls": [
+      "https://www.medical365.in/hospital-online-scheduling-software-jhotwara-jaipur",
+      "https://www.medical365.in/hospital-online-scheduling-software-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-075",
+    "urls": [
+      "https://www.medical365.in/hospital-online-scheduling-software-malviya-nagar-jaipur",
+      "https://www.medical365.in/hospital-online-scheduling-software-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-076",
+    "urls": [
+      "https://www.medical365.in/hospital-online-scheduling-software-mansarovar-jaipur",
+      "https://www.medical365.in/hospital-online-scheduling-software-mansarovar"
+    ],
+    "imps": "1 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-077",
+    "urls": [
+      "https://www.medical365.in/hospital-online-scheduling-software-raja-park-jaipur",
+      "https://www.medical365.in/hospital-online-scheduling-software-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-079",
+    "urls": [
+      "https://www.medical365.in/hospital-online-scheduling-software-vaishali-nagar-jaipur",
+      "https://www.medical365.in/hospital-online-scheduling-software-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-080",
+    "urls": [
+      "https://www.medical365.in/hospital-online-scheduling-software-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/hospital-online-scheduling-software-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-081",
+    "urls": [
+      "https://www.medical365.in/hospital-queue-token-management-bapu-nagar-jaipur",
+      "https://www.medical365.in/hospital-queue-token-management-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-087",
+    "urls": [
+      "https://www.medical365.in/hospital-queue-token-management-raja-park-jaipur",
+      "https://www.medical365.in/hospital-queue-token-management-raja-park"
+    ],
+    "imps": "1 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-088",
+    "urls": [
+      "https://www.medical365.in/hospital-queue-token-management-tonk-road-jaipur",
+      "https://www.medical365.in/hospital-queue-token-management-tonk-road"
+    ],
+    "imps": "1 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-090",
+    "urls": [
+      "https://www.medical365.in/hospital-queue-token-management-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/hospital-queue-token-management-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-091",
+    "urls": [
+      "https://www.medical365.in/inpatient-management-software-bapu-nagar-jaipur",
+      "https://www.medical365.in/inpatient-management-software-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-092",
+    "urls": [
+      "https://www.medical365.in/inpatient-management-software-c-scheme-jaipur",
+      "https://www.medical365.in/inpatient-management-software-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-093",
+    "urls": [
+      "https://www.medical365.in/inpatient-management-software-jagatpura-jaipur",
+      "https://www.medical365.in/inpatient-management-software-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-095",
+    "urls": [
+      "https://www.medical365.in/inpatient-management-software-malviya-nagar-jaipur",
+      "https://www.medical365.in/inpatient-management-software-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-098",
+    "urls": [
+      "https://www.medical365.in/inpatient-management-software-tonk-road-jaipur",
+      "https://www.medical365.in/inpatient-management-software-tonk-road"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-099",
+    "urls": [
+      "https://www.medical365.in/inpatient-management-software-vaishali-nagar-jaipur",
+      "https://www.medical365.in/inpatient-management-software-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-100",
+    "urls": [
+      "https://www.medical365.in/inpatient-management-software-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/inpatient-management-software-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-104",
+    "urls": [
+      "https://www.medical365.in/integrated-population-healthcare-management-jhotwara-jaipur",
+      "https://www.medical365.in/integrated-population-healthcare-management-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-107",
+    "urls": [
+      "https://www.medical365.in/integrated-population-healthcare-management-raja-park-jaipur",
+      "https://www.medical365.in/integrated-population-healthcare-management-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-109",
+    "urls": [
+      "https://www.medical365.in/integrated-population-healthcare-management-vaishali-nagar-jaipur",
+      "https://www.medical365.in/integrated-population-healthcare-management-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-110",
+    "urls": [
+      "https://www.medical365.in/integrated-population-healthcare-management-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/integrated-population-healthcare-management-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-112",
+    "urls": [
+      "https://www.medical365.in/medical-asset-inventory-management-c-scheme-jaipur",
+      "https://www.medical365.in/medical-asset-inventory-management-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-113",
+    "urls": [
+      "https://www.medical365.in/medical-asset-inventory-management-jagatpura-jaipur",
+      "https://www.medical365.in/medical-asset-inventory-management-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-114",
+    "urls": [
+      "https://www.medical365.in/medical-asset-inventory-management-jhotwara-jaipur",
+      "https://www.medical365.in/medical-asset-inventory-management-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-115",
+    "urls": [
+      "https://www.medical365.in/medical-asset-inventory-management-malviya-nagar-jaipur",
+      "https://www.medical365.in/medical-asset-inventory-management-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-117",
+    "urls": [
+      "https://www.medical365.in/medical-asset-inventory-management-raja-park-jaipur",
+      "https://www.medical365.in/medical-asset-inventory-management-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-120",
+    "urls": [
+      "https://www.medical365.in/medical-asset-inventory-management-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/medical-asset-inventory-management-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-121",
+    "urls": [
+      "https://www.medical365.in/medical-camp-management-software-bapu-nagar-jaipur",
+      "https://www.medical365.in/medical-camp-management-software-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-122",
+    "urls": [
+      "https://www.medical365.in/medical-camp-management-software-c-scheme-jaipur",
+      "https://www.medical365.in/medical-camp-management-software-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-123",
+    "urls": [
+      "https://www.medical365.in/medical-camp-management-software-jagatpura-jaipur",
+      "https://www.medical365.in/medical-camp-management-software-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-124",
+    "urls": [
+      "https://www.medical365.in/medical-camp-management-software-jhotwara-jaipur",
+      "https://www.medical365.in/medical-camp-management-software-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-126",
+    "urls": [
+      "https://www.medical365.in/medical-camp-management-software-mansarovar-jaipur",
+      "https://www.medical365.in/medical-camp-management-software-mansarovar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-127",
+    "urls": [
+      "https://www.medical365.in/medical-camp-management-software-raja-park-jaipur",
+      "https://www.medical365.in/medical-camp-management-software-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-129",
+    "urls": [
+      "https://www.medical365.in/medical-camp-management-software-vaishali-nagar-jaipur",
+      "https://www.medical365.in/medical-camp-management-software-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-130",
+    "urls": [
+      "https://www.medical365.in/medical-camp-management-software-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/medical-camp-management-software-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-131",
+    "urls": [
+      "https://www.medical365.in/medical-robotic-process-automation-bapu-nagar-jaipur",
+      "https://www.medical365.in/medical-robotic-process-automation-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-132",
+    "urls": [
+      "https://www.medical365.in/medical-robotic-process-automation-c-scheme-jaipur",
+      "https://www.medical365.in/medical-robotic-process-automation-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-134",
+    "urls": [
+      "https://www.medical365.in/medical-robotic-process-automation-jhotwara-jaipur",
+      "https://www.medical365.in/medical-robotic-process-automation-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-135",
+    "urls": [
+      "https://www.medical365.in/medical-robotic-process-automation-malviya-nagar-jaipur",
+      "https://www.medical365.in/medical-robotic-process-automation-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-139",
+    "urls": [
+      "https://www.medical365.in/medical-robotic-process-automation-vaishali-nagar-jaipur",
+      "https://www.medical365.in/medical-robotic-process-automation-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-140",
+    "urls": [
+      "https://www.medical365.in/medical-robotic-process-automation-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/medical-robotic-process-automation-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-141",
+    "urls": [
+      "https://www.medical365.in/multi-facility-hospital-software-bapu-nagar-jaipur",
+      "https://www.medical365.in/multi-facility-hospital-software-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-142",
+    "urls": [
+      "https://www.medical365.in/multi-facility-hospital-software-c-scheme-jaipur",
+      "https://www.medical365.in/multi-facility-hospital-software-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-143",
+    "urls": [
+      "https://www.medical365.in/multi-facility-hospital-software-jagatpura-jaipur",
+      "https://www.medical365.in/multi-facility-hospital-software-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-144",
+    "urls": [
+      "https://www.medical365.in/multi-facility-hospital-software-jhotwara-jaipur",
+      "https://www.medical365.in/multi-facility-hospital-software-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-145",
+    "urls": [
+      "https://www.medical365.in/multi-facility-hospital-software-malviya-nagar-jaipur",
+      "https://www.medical365.in/multi-facility-hospital-software-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-147",
+    "urls": [
+      "https://www.medical365.in/multi-facility-hospital-software-raja-park-jaipur",
+      "https://www.medical365.in/multi-facility-hospital-software-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-149",
+    "urls": [
+      "https://www.medical365.in/multi-facility-hospital-software-vaishali-nagar-jaipur",
+      "https://www.medical365.in/multi-facility-hospital-software-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-150",
+    "urls": [
+      "https://www.medical365.in/multi-facility-hospital-software-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/multi-facility-hospital-software-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-152",
+    "urls": [
+      "https://www.medical365.in/nursing-management-system-c-scheme-jaipur",
+      "https://www.medical365.in/nursing-management-system-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-154",
+    "urls": [
+      "https://www.medical365.in/nursing-management-system-jhotwara-jaipur",
+      "https://www.medical365.in/nursing-management-system-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-155",
+    "urls": [
+      "https://www.medical365.in/nursing-management-system-malviya-nagar-jaipur",
+      "https://www.medical365.in/nursing-management-system-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-157",
+    "urls": [
+      "https://www.medical365.in/nursing-management-system-raja-park-jaipur",
+      "https://www.medical365.in/nursing-management-system-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-158",
+    "urls": [
+      "https://www.medical365.in/nursing-management-system-tonk-road-jaipur",
+      "https://www.medical365.in/nursing-management-system-tonk-road"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-160",
+    "urls": [
+      "https://www.medical365.in/nursing-management-system-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/nursing-management-system-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-165",
+    "urls": [
+      "https://www.medical365.in/operation-theater-management-malviya-nagar-jaipur",
+      "https://www.medical365.in/operation-theater-management-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-167",
+    "urls": [
+      "https://www.medical365.in/operation-theater-management-raja-park-jaipur",
+      "https://www.medical365.in/operation-theater-management-raja-park"
+    ],
+    "imps": "1 vs 5",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-169",
+    "urls": [
+      "https://www.medical365.in/operation-theater-management-vaishali-nagar-jaipur",
+      "https://www.medical365.in/operation-theater-management-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-170",
+    "urls": [
+      "https://www.medical365.in/operation-theater-management-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/operation-theater-management-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-172",
+    "urls": [
+      "https://www.medical365.in/outpatient-software-solutions-c-scheme-jaipur",
+      "https://www.medical365.in/outpatient-software-solutions-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-174",
+    "urls": [
+      "https://www.medical365.in/outpatient-software-solutions-jhotwara-jaipur",
+      "https://www.medical365.in/outpatient-software-solutions-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-175",
+    "urls": [
+      "https://www.medical365.in/outpatient-software-solutions-malviya-nagar-jaipur",
+      "https://www.medical365.in/outpatient-software-solutions-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-176",
+    "urls": [
+      "https://www.medical365.in/outpatient-software-solutions-mansarovar-jaipur",
+      "https://www.medical365.in/outpatient-software-solutions-mansarovar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-178",
+    "urls": [
+      "https://www.medical365.in/outpatient-software-solutions-tonk-road-jaipur",
+      "https://www.medical365.in/outpatient-software-solutions-tonk-road"
+    ],
+    "imps": "1 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-179",
+    "urls": [
+      "https://www.medical365.in/outpatient-software-solutions-vaishali-nagar-jaipur",
+      "https://www.medical365.in/outpatient-software-solutions-vaishali-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-183",
+    "urls": [
+      "https://www.medical365.in/patient-portal-software-jagatpura-jaipur",
+      "https://www.medical365.in/patient-portal-software-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-184",
+    "urls": [
+      "https://www.medical365.in/patient-portal-software-jhotwara-jaipur",
+      "https://www.medical365.in/patient-portal-software-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-186",
+    "urls": [
+      "https://www.medical365.in/patient-portal-software-mansarovar-jaipur",
+      "https://www.medical365.in/patient-portal-software-mansarovar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-187",
+    "urls": [
+      "https://www.medical365.in/patient-portal-software-raja-park-jaipur",
+      "https://www.medical365.in/patient-portal-software-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-191",
+    "urls": [
+      "https://www.medical365.in/revenue-cycle-management-bapu-nagar-jaipur",
+      "https://www.medical365.in/revenue-cycle-management-bapu-nagar"
+    ],
+    "imps": "1 vs 2",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-203",
+    "urls": [
+      "https://www.medical365.in/telemedicine-platform-jagatpura-jaipur",
+      "https://www.medical365.in/telemedicine-platform-jagatpura"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-205",
+    "urls": [
+      "https://www.medical365.in/telemedicine-platform-malviya-nagar-jaipur",
+      "https://www.medical365.in/telemedicine-platform-malviya-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-207",
+    "urls": [
+      "https://www.medical365.in/telemedicine-platform-raja-park-jaipur",
+      "https://www.medical365.in/telemedicine-platform-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-210",
+    "urls": [
+      "https://www.medical365.in/telemedicine-platform-vidyadhar-nagar-jaipur",
+      "https://www.medical365.in/telemedicine-platform-vidyadhar-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-211",
+    "urls": [
+      "https://www.medical365.in/vaccine-management-system-bapu-nagar-jaipur",
+      "https://www.medical365.in/vaccine-management-system-bapu-nagar"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-212",
+    "urls": [
+      "https://www.medical365.in/vaccine-management-system-c-scheme-jaipur",
+      "https://www.medical365.in/vaccine-management-system-c-scheme"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-214",
+    "urls": [
+      "https://www.medical365.in/vaccine-management-system-jhotwara-jaipur",
+      "https://www.medical365.in/vaccine-management-system-jhotwara"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-215",
+    "urls": [
+      "https://www.medical365.in/vaccine-management-system-malviya-nagar-jaipur",
+      "https://www.medical365.in/vaccine-management-system-malviya-nagar"
+    ],
+    "imps": "2 vs 2",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-216",
+    "urls": [
+      "https://www.medical365.in/vaccine-management-system-mansarovar-jaipur",
+      "https://www.medical365.in/vaccine-management-system-mansarovar"
+    ],
+    "imps": "1 vs 1",
+    "reason": "Active search competition; requires query-level attribution"
+  },
+  {
+    "pair_id": "PAIR-217",
+    "urls": [
+      "https://www.medical365.in/vaccine-management-system-raja-park-jaipur",
+      "https://www.medical365.in/vaccine-management-system-raja-park"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  },
+  {
+    "pair_id": "PAIR-218",
+    "urls": [
+      "https://www.medical365.in/vaccine-management-system-tonk-road-jaipur",
+      "https://www.medical365.in/vaccine-management-system-tonk-road"
+    ],
+    "imps": "0 vs 0",
+    "reason": "Awaiting Google crawl processing from Discovered queue"
+  }
+]

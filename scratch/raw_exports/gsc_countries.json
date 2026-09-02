@@ -1,0 +1,72 @@
+[
+  {
+    "country": "India",
+    "clicks": 164,
+    "impressions": 17838,
+    "ctr": "0.92%",
+    "position": 47.13
+  },
+  {
+    "country": "United States",
+    "clicks": 2,
+    "impressions": 2837,
+    "ctr": "0.07%",
+    "position": 24.68
+  },
+  {
+    "country": "Pakistan",
+    "clicks": 2,
+    "impressions": 68,
+    "ctr": "2.94%",
+    "position": 20.01
+  },
+  {
+    "country": "Iran",
+    "clicks": 2,
+    "impressions": 5,
+    "ctr": "40.00%",
+    "position": 4.2
+  },
+  {
+    "country": "Egypt",
+    "clicks": 1,
+    "impressions": 15,
+    "ctr": "6.67%",
+    "position": 20
+  },
+  {
+    "country": "Mauritius",
+    "clicks": 1,
+    "impressions": 2,
+    "ctr": "50.00%",
+    "position": 3
+  },
+  {
+    "country": "Kenya",
+    "clicks": 1,
+    "impressions": 2,
+    "ctr": "50.00%",
+    "position": 6.5
+  },
+  {
+    "country": "Australia",
+    "clicks": 0,
+    "impressions": 922,
+    "ctr": "0.00%",
+    "position": 83.87
+  },
+  {
+    "country": "United Arab Emirates",
+    "clicks": 0,
+    "impressions": 393,
+    "ctr": "0.00%",
+    "position": 53.49
+  },
+  {
+    "country": "United Kingdom",
+    "clicks": 0,
+    "impressions": 178,
+    "ctr": "0.00%",
+    "position": 48.53
+  }
+]

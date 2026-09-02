@@ -1,0 +1,848 @@
+[
+  {
+    "pair_id": "PAIR-002",
+    "file": "fhir-hl7-compliant-software-c-scheme-jaipur.html",
+    "old_canonical": "https://www.medical365.in/fhir-hl7-compliant-software-c-scheme-jaipur",
+    "new_canonical": "https://www.medical365.in/fhir-hl7-compliant-software-c-scheme",
+    "winner_file": "fhir-hl7-compliant-software-c-scheme.html",
+    "sha_before": "79a4fe202da1c50b60dad3ab9b1b2d8336e09ade82ba0fb62f738ac3b101df2b",
+    "sha_after": "aa6a0b5a40268473a6e28a05824f0de76b07b3736713ff6c4206b101c49b7b95"
+  },
+  {
+    "pair_id": "PAIR-008",
+    "file": "fhir-hl7-compliant-software-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/fhir-hl7-compliant-software-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/fhir-hl7-compliant-software-tonk-road",
+    "winner_file": "fhir-hl7-compliant-software-tonk-road.html",
+    "sha_before": "44f6934ce6a300fbfd67cd696628f91e0188cb1c01d0e897050b4db24b99cb38",
+    "sha_after": "cd0e24d4aef4574be91ca0df3c3c1ed937caae8be5b5d0ab8bc99912b6e7c624"
+  },
+  {
+    "pair_id": "PAIR-011",
+    "file": "healthcare-crm-bapu-nagar.html",
+    "old_canonical": "https://www.medical365.in/healthcare-crm-bapu-nagar",
+    "new_canonical": "https://www.medical365.in/healthcare-crm-bapu-nagar-jaipur",
+    "winner_file": "healthcare-crm-bapu-nagar-jaipur.html",
+    "sha_before": "c5aa248a367d04968b3c2d855e5ce384a857566a38538a7811a69a6efa723fb8",
+    "sha_after": "89ad2db0d1a780aba479ed884c581d9d1824445cc7b8ab6895ec4a950697a20c"
+  },
+  {
+    "pair_id": "PAIR-012",
+    "file": "healthcare-crm-c-scheme-jaipur.html",
+    "old_canonical": "https://www.medical365.in/healthcare-crm-c-scheme-jaipur",
+    "new_canonical": "https://www.medical365.in/healthcare-crm-c-scheme",
+    "winner_file": "healthcare-crm-c-scheme.html",
+    "sha_before": "ac4e9bb6b59f926e00f8afdefdae8d5abbe86b4f9e0bf9d287513c2aa3b617b2",
+    "sha_after": "752483523c8da7292c9559ce9ef5c89c630541280fe1708574d4450b5bdba15c"
+  },
+  {
+    "pair_id": "PAIR-014",
+    "file": "healthcare-crm-jhotwara.html",
+    "old_canonical": "https://www.medical365.in/healthcare-crm-jhotwara",
+    "new_canonical": "https://www.medical365.in/healthcare-crm-jhotwara-jaipur",
+    "winner_file": "healthcare-crm-jhotwara-jaipur.html",
+    "sha_before": "56d84b006fed31dca0d61267a69e73073f39b0bccf13bd708a33d0d87670e4dc",
+    "sha_after": "a0cbd7a26614ee97577313d7bad8b6d4dc11bc03d286a14d31f47005a1fe1048"
+  },
+  {
+    "pair_id": "PAIR-015",
+    "file": "healthcare-crm-malviya-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/healthcare-crm-malviya-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/healthcare-crm-malviya-nagar",
+    "winner_file": "healthcare-crm-malviya-nagar.html",
+    "sha_before": "313b8bf8e808ea966286275e2fce5e47f0e9c1ed93c7dc3bfb7dc098fa22f191",
+    "sha_after": "37583823d725f638906f2ba76aca151ac4cb3c1218e458681f9ad66367e8fbf3"
+  },
+  {
+    "pair_id": "PAIR-017",
+    "file": "healthcare-crm-raja-park-jaipur.html",
+    "old_canonical": "https://www.medical365.in/healthcare-crm-raja-park-jaipur",
+    "new_canonical": "https://www.medical365.in/healthcare-crm-raja-park",
+    "winner_file": "healthcare-crm-raja-park.html",
+    "sha_before": "2794d60fee1d5ab3a5e7d81ba6a3678590bfd6674c021abfb3be83140400322c",
+    "sha_after": "4b71ba0a19e5730290797e8e973fded5cf222b3095ea3da642d200ee08d52c28"
+  },
+  {
+    "pair_id": "PAIR-020",
+    "file": "healthcare-crm-vidyadhar-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/healthcare-crm-vidyadhar-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/healthcare-crm-vidyadhar-nagar",
+    "winner_file": "healthcare-crm-vidyadhar-nagar.html",
+    "sha_before": "a97fa0067e3a6332035eb54ef28f98df0728fbff090b6d6d0407d82081037b47",
+    "sha_after": "78f85dba9ca10be1d009d97f006cba4783603e24a8e29deda85c90d151e9fe39"
+  },
+  {
+    "pair_id": "PAIR-022",
+    "file": "healthcare-feedback-satisfaction-surveys-c-scheme-jaipur.html",
+    "old_canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-c-scheme-jaipur",
+    "new_canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-c-scheme",
+    "winner_file": "healthcare-feedback-satisfaction-surveys-c-scheme.html",
+    "sha_before": "e5cac1b260a2f0c13e069e344ce50666a418913caba1ecfe64051caf0bbc676d",
+    "sha_after": "aa930bd9d4c6a68179623eefe974118c48088c15c3bfc675a186f709f584e744"
+  },
+  {
+    "pair_id": "PAIR-023",
+    "file": "healthcare-feedback-satisfaction-surveys-jagatpura.html",
+    "old_canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-jagatpura",
+    "new_canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-jagatpura-jaipur",
+    "winner_file": "healthcare-feedback-satisfaction-surveys-jagatpura-jaipur.html",
+    "sha_before": "6fc6ee80da7189780cdd40b4b6a12069b0c98a6d480d7beb16aba6ca55bd932b",
+    "sha_after": "c1f4f54ccbe731f368b6e6e109254460428a19326c9e9c3c448f04fcc152534c"
+  },
+  {
+    "pair_id": "PAIR-027",
+    "file": "healthcare-feedback-satisfaction-surveys-raja-park-jaipur.html",
+    "old_canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-raja-park-jaipur",
+    "new_canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-raja-park",
+    "winner_file": "healthcare-feedback-satisfaction-surveys-raja-park.html",
+    "sha_before": "f168e8a5833a21fd7ac7128540e293e5975dbee217c3f3eba0c0d35848ac3435",
+    "sha_after": "942cc91ce0ec9de60fd1bc15843908c1ec19b3877ffefc32d82d715e45a53749"
+  },
+  {
+    "pair_id": "PAIR-028",
+    "file": "healthcare-feedback-satisfaction-surveys-tonk-road.html",
+    "old_canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-tonk-road",
+    "new_canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-tonk-road-jaipur",
+    "winner_file": "healthcare-feedback-satisfaction-surveys-tonk-road-jaipur.html",
+    "sha_before": "3c1e9b50b57d000f96e0745a070b3bd2580ac1140e58c1b58bb6c42d84794252",
+    "sha_after": "4e0f2bc9a7441078bb1e1be80827f0797b79234bfe2022370259666a336b3e53"
+  },
+  {
+    "pair_id": "PAIR-033",
+    "file": "healthcare-kiosk-providers-jagatpura.html",
+    "old_canonical": "https://www.medical365.in/healthcare-kiosk-providers-jagatpura",
+    "new_canonical": "https://www.medical365.in/healthcare-kiosk-providers-jagatpura-jaipur",
+    "winner_file": "healthcare-kiosk-providers-jagatpura-jaipur.html",
+    "sha_before": "6d9933ac640a4cf97413482b6ab7a4f0416c84f060e6873ed3f0dd48bca9fd69",
+    "sha_after": "0368a632ed1c9e5ebaab3f63b12f813bffed84684cfb4f4f795c9c618ca65de4"
+  },
+  {
+    "pair_id": "PAIR-034",
+    "file": "healthcare-kiosk-providers-jhotwara.html",
+    "old_canonical": "https://www.medical365.in/healthcare-kiosk-providers-jhotwara",
+    "new_canonical": "https://www.medical365.in/healthcare-kiosk-providers-jhotwara-jaipur",
+    "winner_file": "healthcare-kiosk-providers-jhotwara-jaipur.html",
+    "sha_before": "52c2e982145306e3ce47abb24bd0358abf4be660cb3ac8d5ed929172e122c58e",
+    "sha_after": "7358fa25fc3b7ca0477410e95472adffdca58ac444e9588b458d27a2e0d979d5"
+  },
+  {
+    "pair_id": "PAIR-035",
+    "file": "healthcare-kiosk-providers-malviya-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/healthcare-kiosk-providers-malviya-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/healthcare-kiosk-providers-malviya-nagar",
+    "winner_file": "healthcare-kiosk-providers-malviya-nagar.html",
+    "sha_before": "59b51c7fb1e17c675f331d9c9e0b899d486028e6baa08bdabde3ee5b23e812dc",
+    "sha_after": "13ee5ac183300cea0d63046ca0881c3328273ae6f37fb670cc496a6146dea1e1"
+  },
+  {
+    "pair_id": "PAIR-044",
+    "file": "hospital-data-backup-recovery-jhotwara-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-data-backup-recovery-jhotwara-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-data-backup-recovery-jhotwara",
+    "winner_file": "hospital-data-backup-recovery-jhotwara.html",
+    "sha_before": "1b1da28d70a632d4aa4adf332d9708c2442956072d7b37117e01bd633da938a8",
+    "sha_after": "998bd4a11fd4c995a6403339c1c20dea5c8bb0601d44947742b657219a3d6cee"
+  },
+  {
+    "pair_id": "PAIR-046",
+    "file": "hospital-data-backup-recovery-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-data-backup-recovery-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-data-backup-recovery-mansarovar",
+    "winner_file": "hospital-data-backup-recovery-mansarovar.html",
+    "sha_before": "e598f8d7e811d3a4a40d7776c7cba84bad670fe3c4bffdbda2b4745e76ea31d1",
+    "sha_after": "bf4edf25a4b7c133ecfc1e14e21271c0eb87d1231618ea623f5efcd28d2c37dc"
+  },
+  {
+    "pair_id": "PAIR-047",
+    "file": "hospital-data-backup-recovery-raja-park-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-data-backup-recovery-raja-park-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-data-backup-recovery-raja-park",
+    "winner_file": "hospital-data-backup-recovery-raja-park.html",
+    "sha_before": "6181559d78b3b40b104ac0707fdfabf68043e9381996f65b413db8531edaf4a1",
+    "sha_after": "f09bb9bafdedd0353dbf3c3dc4f8864ca5555f2cbccca6a256d1b1c87bf75999"
+  },
+  {
+    "pair_id": "PAIR-051",
+    "file": "hospital-hrms-bapu-nagar.html",
+    "old_canonical": "https://www.medical365.in/hospital-hrms-bapu-nagar",
+    "new_canonical": "https://www.medical365.in/hospital-hrms-bapu-nagar-jaipur",
+    "winner_file": "hospital-hrms-bapu-nagar-jaipur.html",
+    "sha_before": "49d5e153c985064fef5f893c6113e961dc92b01cccddfb27524ef63d3bccc655",
+    "sha_after": "64976298d2736a0b87aed998384daeb1dc4bb879b266042ad95d5c619f5acd8f"
+  },
+  {
+    "pair_id": "PAIR-053",
+    "file": "hospital-hrms-jagatpura-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-hrms-jagatpura-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-hrms-jagatpura",
+    "winner_file": "hospital-hrms-jagatpura.html",
+    "sha_before": "fd0826c5f9e810bdcfa2234f27175428ae7aa3754ba671c6f07fb43254816b8f",
+    "sha_after": "f8b5bab846619847fa894fe403a86be33cadbd8c2aa98ff75949a6fc3a5a3f6d"
+  },
+  {
+    "pair_id": "PAIR-057",
+    "file": "hospital-hrms-raja-park-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-hrms-raja-park-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-hrms-raja-park",
+    "winner_file": "hospital-hrms-raja-park.html",
+    "sha_before": "c28179353c9f7328181ca5864d01922fc5e8d0bb91641e44c93b0c24aee76874",
+    "sha_after": "afe98d0d2eaf676f7047ce83f8f3c926313b0664820e772dae30d753878b972a"
+  },
+  {
+    "pair_id": "PAIR-065",
+    "file": "hospital-it-cloud-migration-malviya-nagar.html",
+    "old_canonical": "https://www.medical365.in/hospital-it-cloud-migration-malviya-nagar",
+    "new_canonical": "https://www.medical365.in/hospital-it-cloud-migration-malviya-nagar-jaipur",
+    "winner_file": "hospital-it-cloud-migration-malviya-nagar-jaipur.html",
+    "sha_before": "52a1792be60e1d0484926522f20ad3b6f302660b5121a3a937d4a5f6b824c9da",
+    "sha_after": "b187adeaf78bd24d16ccff4744ef15cdcec2bdd818dcdfb73cef7038e84eae85"
+  },
+  {
+    "pair_id": "PAIR-066",
+    "file": "hospital-it-cloud-migration-mansarovar.html",
+    "old_canonical": "https://www.medical365.in/hospital-it-cloud-migration-mansarovar",
+    "new_canonical": "https://www.medical365.in/hospital-it-cloud-migration-mansarovar-jaipur",
+    "winner_file": "hospital-it-cloud-migration-mansarovar-jaipur.html",
+    "sha_before": "0e8c83c19a73db497e71836b3890f69ee9eb9239e2b69815534e0a7c508a0761",
+    "sha_after": "fcc70e2801d82d6a37351d727434c649b689c8203660df94f14363529a515738"
+  },
+  {
+    "pair_id": "PAIR-067",
+    "file": "hospital-it-cloud-migration-raja-park-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-it-cloud-migration-raja-park-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-it-cloud-migration-raja-park",
+    "winner_file": "hospital-it-cloud-migration-raja-park.html",
+    "sha_before": "e3da9592abe5719f6e09374519719b6ff65e48eaee12ae5c80a20ed930b2cf70",
+    "sha_after": "94d2f45a5d376d15e06419bb60a05dad9f1fed233133bcf2185b61ab0443ca1b"
+  },
+  {
+    "pair_id": "PAIR-068",
+    "file": "hospital-it-cloud-migration-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-it-cloud-migration-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-it-cloud-migration-tonk-road",
+    "winner_file": "hospital-it-cloud-migration-tonk-road.html",
+    "sha_before": "71a5831471b2f5114daf79cf82aed7bbb8a0f8bab46d56edf305b3c0ed3d5a26",
+    "sha_after": "bdd5e2c032b52d38dd3d77fcfed683a29a8a9b90ba5380a4ea20289f7195a5a1"
+  },
+  {
+    "pair_id": "PAIR-069",
+    "file": "hospital-it-cloud-migration-vaishali-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-it-cloud-migration-vaishali-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-it-cloud-migration-vaishali-nagar",
+    "winner_file": "hospital-it-cloud-migration-vaishali-nagar.html",
+    "sha_before": "7aa1573ededa710c1095f07d7cda47434f11a8ba033a29af322e34a92ff9476f",
+    "sha_after": "86dadf7e97e0d1dd5fd304ae094ee53c6041a6db41aa1d308c9c9b721b4229eb"
+  },
+  {
+    "pair_id": "PAIR-070",
+    "file": "hospital-it-cloud-migration-vidyadhar-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-it-cloud-migration-vidyadhar-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-it-cloud-migration-vidyadhar-nagar",
+    "winner_file": "hospital-it-cloud-migration-vidyadhar-nagar.html",
+    "sha_before": "e4b7740dce77ef625ea00648b77646d98a1e458cdc5bb4f7a5c044c42cb64f87",
+    "sha_after": "291947f66e2041466f7c248a6021f895132245dfbf761b4e66fcba2061484782"
+  },
+  {
+    "pair_id": "PAIR-071",
+    "file": "hospital-online-scheduling-software-bapu-nagar.html",
+    "old_canonical": "https://www.medical365.in/hospital-online-scheduling-software-bapu-nagar",
+    "new_canonical": "https://www.medical365.in/hospital-online-scheduling-software-bapu-nagar-jaipur",
+    "winner_file": "hospital-online-scheduling-software-bapu-nagar-jaipur.html",
+    "sha_before": "a833ea1f57045e2eb296c83b2e901897c871aff8cb04d7b6c243d2ab9cc9e912",
+    "sha_after": "0ddc3fbc1b3935a0c2740689b733a5d1479751543d8b6e8d0a3316133fed4d25"
+  },
+  {
+    "pair_id": "PAIR-078",
+    "file": "hospital-online-scheduling-software-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-online-scheduling-software-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-online-scheduling-software-tonk-road",
+    "winner_file": "hospital-online-scheduling-software-tonk-road.html",
+    "sha_before": "ae617a44f5cc3185be80905448f84a0ce4b69bef68b08793ecd20e49067cb153",
+    "sha_after": "52436a7e4ca03f07df10d0d7085226f18cebc1c52274467dfef25fc11b6958c1"
+  },
+  {
+    "pair_id": "PAIR-082",
+    "file": "hospital-queue-token-management-c-scheme-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-queue-token-management-c-scheme-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-queue-token-management-c-scheme",
+    "winner_file": "hospital-queue-token-management-c-scheme.html",
+    "sha_before": "40da3d15165b77b0beb89fb75bd0154662462a05c8ecef686e55ba72b5ac41ab",
+    "sha_after": "87bbb0c6f3aca18815dac4b8a05c3d05e3d214dda084f89ef8dd65c2d0b5374c"
+  },
+  {
+    "pair_id": "PAIR-083",
+    "file": "hospital-queue-token-management-jagatpura-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-queue-token-management-jagatpura-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-queue-token-management-jagatpura",
+    "winner_file": "hospital-queue-token-management-jagatpura.html",
+    "sha_before": "ff946efa37fde107895a366bf84246ade81e465cc3da5aeb15ef9c348c95f72d",
+    "sha_after": "c1b5c8e59f3803e62aa6a674939a17bfceb7b9a114f1dde910f97fe400c419e6"
+  },
+  {
+    "pair_id": "PAIR-084",
+    "file": "hospital-queue-token-management-jhotwara.html",
+    "old_canonical": "https://www.medical365.in/hospital-queue-token-management-jhotwara",
+    "new_canonical": "https://www.medical365.in/hospital-queue-token-management-jhotwara-jaipur",
+    "winner_file": "hospital-queue-token-management-jhotwara-jaipur.html",
+    "sha_before": "9d6ac755b61a36f027dbf5195db993a625506e19102b11fd6ea007ae97060cd8",
+    "sha_after": "4877e6e1b6168e12b5907d383e070c0136e47836f8be38172f976d9f768d68e1"
+  },
+  {
+    "pair_id": "PAIR-085",
+    "file": "hospital-queue-token-management-malviya-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-queue-token-management-malviya-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-queue-token-management-malviya-nagar",
+    "winner_file": "hospital-queue-token-management-malviya-nagar.html",
+    "sha_before": "5abb651d9241f61c2a934f7f50ff6b1992e4beb32e8832bafec4c98fa0fc2535",
+    "sha_after": "d0c0f1908b491d95626ae8b81513284b3aa19c72e94df8179754caf340044952"
+  },
+  {
+    "pair_id": "PAIR-086",
+    "file": "hospital-queue-token-management-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/hospital-queue-token-management-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/hospital-queue-token-management-mansarovar",
+    "winner_file": "hospital-queue-token-management-mansarovar.html",
+    "sha_before": "0e53779c72d89e6be94434e5527de3a09fa5429e5e3de0175f7f662cdac204eb",
+    "sha_after": "24c062385bbd0ff454bafff7d72bb98f32db5a6cca9f1c1873a6c58b6d605b40"
+  },
+  {
+    "pair_id": "PAIR-089",
+    "file": "hospital-queue-token-management-vaishali-nagar.html",
+    "old_canonical": "https://www.medical365.in/hospital-queue-token-management-vaishali-nagar",
+    "new_canonical": "https://www.medical365.in/hospital-queue-token-management-vaishali-nagar-jaipur",
+    "winner_file": "hospital-queue-token-management-vaishali-nagar-jaipur.html",
+    "sha_before": "9c8c2f960aa681fe04232ef3ebeda8b2e3893b482bc6603255387c757099d6c6",
+    "sha_after": "ab139e3c408ea83abd50003215e188b0af3423f48c09e6ed4d35f9671cf688ac"
+  },
+  {
+    "pair_id": "PAIR-094",
+    "file": "inpatient-management-software-jhotwara.html",
+    "old_canonical": "https://www.medical365.in/inpatient-management-software-jhotwara",
+    "new_canonical": "https://www.medical365.in/inpatient-management-software-jhotwara-jaipur",
+    "winner_file": "inpatient-management-software-jhotwara-jaipur.html",
+    "sha_before": "ea3cecd1ffaaf00e886514e3dc2a1d92fb09b9b0b8d8eaab1d27514c958b120c",
+    "sha_after": "9945f82270ae796b2f63f7488372e8e5eedc051a734a303b562048384d7b4f5f"
+  },
+  {
+    "pair_id": "PAIR-096",
+    "file": "inpatient-management-software-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/inpatient-management-software-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/inpatient-management-software-mansarovar",
+    "winner_file": "inpatient-management-software-mansarovar.html",
+    "sha_before": "7a47284a0d25acf1dc7d82684e0e0de7157de1a984d5a9f763bf25a802e34cad",
+    "sha_after": "c22502ae7e7354f43fa857c6747adb77514a0cb89c644f3a32822995c07b01e8"
+  },
+  {
+    "pair_id": "PAIR-097",
+    "file": "inpatient-management-software-raja-park.html",
+    "old_canonical": "https://www.medical365.in/inpatient-management-software-raja-park",
+    "new_canonical": "https://www.medical365.in/inpatient-management-software-raja-park-jaipur",
+    "winner_file": "inpatient-management-software-raja-park-jaipur.html",
+    "sha_before": "79809ed949b050fe5581f57f46ae397a472a17c941cd4b168caa0fa93130848f",
+    "sha_after": "b7b02b0a9290de45f488b987581fe64c6db9ac4c4173a174d6dec8157e165bd0"
+  },
+  {
+    "pair_id": "PAIR-101",
+    "file": "integrated-population-healthcare-management-bapu-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/integrated-population-healthcare-management-bapu-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/integrated-population-healthcare-management-bapu-nagar",
+    "winner_file": "integrated-population-healthcare-management-bapu-nagar.html",
+    "sha_before": "53f0701fa56895bec14b03874f797c6448598df3fd5e205e242b5826a27715ae",
+    "sha_after": "fe2c0b96b24b0608773b60f404314696801de2ed55726c53ec9b69764acf98b1"
+  },
+  {
+    "pair_id": "PAIR-102",
+    "file": "integrated-population-healthcare-management-c-scheme.html",
+    "old_canonical": "https://www.medical365.in/integrated-population-healthcare-management-c-scheme",
+    "new_canonical": "https://www.medical365.in/integrated-population-healthcare-management-c-scheme-jaipur",
+    "winner_file": "integrated-population-healthcare-management-c-scheme-jaipur.html",
+    "sha_before": "b3464392ad609790b92cd54fdd02fb8033ac691e848adf499a77d03e45b2e37d",
+    "sha_after": "58c463f3fea692dd46694b38ab2b8605a6ad33b3317c454cb4526052f8eb5f9e"
+  },
+  {
+    "pair_id": "PAIR-103",
+    "file": "integrated-population-healthcare-management-jagatpura-jaipur.html",
+    "old_canonical": "https://www.medical365.in/integrated-population-healthcare-management-jagatpura-jaipur",
+    "new_canonical": "https://www.medical365.in/integrated-population-healthcare-management-jagatpura",
+    "winner_file": "integrated-population-healthcare-management-jagatpura.html",
+    "sha_before": "a7eebde5d50cee9bd273e925f20448b7cba72c6aa943697c4c1119509dfa6e81",
+    "sha_after": "8b467ddfe26f65017ac71c74a6607fde7929337e4723ab7b3d09d5e6b0eca07a"
+  },
+  {
+    "pair_id": "PAIR-105",
+    "file": "integrated-population-healthcare-management-malviya-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/integrated-population-healthcare-management-malviya-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/integrated-population-healthcare-management-malviya-nagar",
+    "winner_file": "integrated-population-healthcare-management-malviya-nagar.html",
+    "sha_before": "c04625546cf6b8ef63aefafbf311cfc2bba771e18ec6b6717664cdd364008ea8",
+    "sha_after": "caf3440a75656ab1a3ee23a7352473ea1e3d03b097ee130f5b05d6b38fbde242"
+  },
+  {
+    "pair_id": "PAIR-106",
+    "file": "integrated-population-healthcare-management-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/integrated-population-healthcare-management-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/integrated-population-healthcare-management-mansarovar",
+    "winner_file": "integrated-population-healthcare-management-mansarovar.html",
+    "sha_before": "49eb213680fb8b08390b786503f40c5a0bfc424504c837338013d7adc5544d85",
+    "sha_after": "4dfc1c4ca78d85729d1b64db3ef3716299971ac2e9e7a88ae749e599160f72e8"
+  },
+  {
+    "pair_id": "PAIR-108",
+    "file": "integrated-population-healthcare-management-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/integrated-population-healthcare-management-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/integrated-population-healthcare-management-tonk-road",
+    "winner_file": "integrated-population-healthcare-management-tonk-road.html",
+    "sha_before": "7d54cd2ab88d25d6d3adc6abbee95313e15d3b96d6066847c1a1decd811c2c2a",
+    "sha_after": "824d94370a41bc1b56d95d35f5737590336c2b9ff99a2ec9be886b7f6c57d09b"
+  },
+  {
+    "pair_id": "PAIR-111",
+    "file": "medical-asset-inventory-management-bapu-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-asset-inventory-management-bapu-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-asset-inventory-management-bapu-nagar",
+    "winner_file": "medical-asset-inventory-management-bapu-nagar.html",
+    "sha_before": "6009e260108f841affa9d8eff2240a2a9ee6f2f7391400257dd6dce66ce8d7a2",
+    "sha_after": "26da34075f48d4c60552251ab2de37b73fc9bde06e3c56151c2d2803cd2eb6b5"
+  },
+  {
+    "pair_id": "PAIR-116",
+    "file": "medical-asset-inventory-management-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-asset-inventory-management-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-asset-inventory-management-mansarovar",
+    "winner_file": "medical-asset-inventory-management-mansarovar.html",
+    "sha_before": "3024c017ced285da630ff7233cedd11952e0b5b5060b2275553fddf0156d1e82",
+    "sha_after": "a85743086a3558b4079893464ee699938ed1a053df9d4d04cb99a422f11fd18e"
+  },
+  {
+    "pair_id": "PAIR-118",
+    "file": "medical-asset-inventory-management-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-asset-inventory-management-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-asset-inventory-management-tonk-road",
+    "winner_file": "medical-asset-inventory-management-tonk-road.html",
+    "sha_before": "ccae82840997938b41a69c435a8b0664b0c1994a118ef306417d2e96e6ca032b",
+    "sha_after": "b79bcb598642be6b3a2902f971ca328452c6361c2d4c5e041adf4b0ae15e56f0"
+  },
+  {
+    "pair_id": "PAIR-119",
+    "file": "medical-asset-inventory-management-vaishali-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-asset-inventory-management-vaishali-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-asset-inventory-management-vaishali-nagar",
+    "winner_file": "medical-asset-inventory-management-vaishali-nagar.html",
+    "sha_before": "c7c09da2cf341db98a68018333d20c4defa9e52a6390cedd5155ece1614be25f",
+    "sha_after": "e6acf637a7edb7b77811042766600ff8bf2ff6e007934dc36593af5da002ddcc"
+  },
+  {
+    "pair_id": "PAIR-125",
+    "file": "medical-camp-management-software-malviya-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-camp-management-software-malviya-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-camp-management-software-malviya-nagar",
+    "winner_file": "medical-camp-management-software-malviya-nagar.html",
+    "sha_before": "630c3774e2139974a6b5615c1de53906c9b37f86a467f02a9a1d4cbead371ea4",
+    "sha_after": "dde2f6291fd62a2706da567dcdd4015b0b1d456a5bb0e7778b974732383c0022"
+  },
+  {
+    "pair_id": "PAIR-128",
+    "file": "medical-camp-management-software-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-camp-management-software-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-camp-management-software-tonk-road",
+    "winner_file": "medical-camp-management-software-tonk-road.html",
+    "sha_before": "d87589b57df7a2497e8c7614e696f0557676624158085d59931099984b122c60",
+    "sha_after": "6d81bc47e1f6b27c4b893e89ed8113f85c62e82c87ac76a0120f70db5aebc236"
+  },
+  {
+    "pair_id": "PAIR-133",
+    "file": "medical-robotic-process-automation-jagatpura-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-robotic-process-automation-jagatpura-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-robotic-process-automation-jagatpura",
+    "winner_file": "medical-robotic-process-automation-jagatpura.html",
+    "sha_before": "df949c17a109a389b5bfaa92d81e070ccb15492d4cc5680de0d2e1d1f46b292d",
+    "sha_after": "7c1446237f030b2b75727c086d435a43bcef85ae80e5ef4f9d2ab54296ed8952"
+  },
+  {
+    "pair_id": "PAIR-136",
+    "file": "medical-robotic-process-automation-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-robotic-process-automation-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-robotic-process-automation-mansarovar",
+    "winner_file": "medical-robotic-process-automation-mansarovar.html",
+    "sha_before": "c1214eff4082d11e45707f370e00b3c97125d2caf240a6e364f151cd182f8d85",
+    "sha_after": "c51e0ac242963fb95b659535cbe86f01e0333ca1ba214732433c66cf41544e60"
+  },
+  {
+    "pair_id": "PAIR-137",
+    "file": "medical-robotic-process-automation-raja-park-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-robotic-process-automation-raja-park-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-robotic-process-automation-raja-park",
+    "winner_file": "medical-robotic-process-automation-raja-park.html",
+    "sha_before": "47de135256627974c9fff79ac58aced6c562cc25ee92081faa47c4e65c87f56a",
+    "sha_after": "2fafe1a4ea080fff15588de22b14cfaeb4f73893488c02fa390bb520026cfa0e"
+  },
+  {
+    "pair_id": "PAIR-138",
+    "file": "medical-robotic-process-automation-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/medical-robotic-process-automation-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/medical-robotic-process-automation-tonk-road",
+    "winner_file": "medical-robotic-process-automation-tonk-road.html",
+    "sha_before": "5fbb0beab010820d07663d4ff8df2a5f27a3ac45a7d613a2bb9c35eebdc93f75",
+    "sha_after": "dd0c300aa2dd22f0050e64d35e6d09617d050418f8493b0a2b90bb3a63b06985"
+  },
+  {
+    "pair_id": "PAIR-146",
+    "file": "multi-facility-hospital-software-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/multi-facility-hospital-software-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/multi-facility-hospital-software-mansarovar",
+    "winner_file": "multi-facility-hospital-software-mansarovar.html",
+    "sha_before": "22491955b1091aba2f9c69229aa5ca77c149fb17e0e5f982d8f378fb559677c4",
+    "sha_after": "4da755c86f172eeaa4c9e49f5ddd394c2f6214ae0ed0524c5f2001ad0b261bc1"
+  },
+  {
+    "pair_id": "PAIR-148",
+    "file": "multi-facility-hospital-software-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/multi-facility-hospital-software-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/multi-facility-hospital-software-tonk-road",
+    "winner_file": "multi-facility-hospital-software-tonk-road.html",
+    "sha_before": "4c935d75d9ae3519f045d087889d3d63bfdd42eaa4c17d3e7ba1607c60e33547",
+    "sha_after": "0629d35a2b8b6daa35bf33a02da4325e1f55ca4489e3e93dad25a07fb0b29a2c"
+  },
+  {
+    "pair_id": "PAIR-151",
+    "file": "nursing-management-system-bapu-nagar.html",
+    "old_canonical": "https://www.medical365.in/nursing-management-system-bapu-nagar",
+    "new_canonical": "https://www.medical365.in/nursing-management-system-bapu-nagar-jaipur",
+    "winner_file": "nursing-management-system-bapu-nagar-jaipur.html",
+    "sha_before": "18570ec9a7ebdffb45fbacca0cc41c81045a6b167d76161e5154adf2a98ec1a1",
+    "sha_after": "e7ead0470672f1a64105619a4f89c91f8b2da0f48e0720e44a4c8ffe29a50c50"
+  },
+  {
+    "pair_id": "PAIR-153",
+    "file": "nursing-management-system-jagatpura.html",
+    "old_canonical": "https://www.medical365.in/nursing-management-system-jagatpura",
+    "new_canonical": "https://www.medical365.in/nursing-management-system-jagatpura-jaipur",
+    "winner_file": "nursing-management-system-jagatpura-jaipur.html",
+    "sha_before": "b86e24ab331d43917445cc13c168c5beae27a4d3e67ea562a1f4c19bac6592e7",
+    "sha_after": "cce0a7cc8e3a50fe612aba6870d4fa9e3f094457200b3f0db323f6483c1faf57"
+  },
+  {
+    "pair_id": "PAIR-156",
+    "file": "nursing-management-system-mansarovar.html",
+    "old_canonical": "https://www.medical365.in/nursing-management-system-mansarovar",
+    "new_canonical": "https://www.medical365.in/nursing-management-system-mansarovar-jaipur",
+    "winner_file": "nursing-management-system-mansarovar-jaipur.html",
+    "sha_before": "889319aacfee74385204254c1f983b7a0730fb13ec15144602077d5b3b63cf80",
+    "sha_after": "eb051f8499521e8a31f05a6d34bbe1349d5924436f7e1c86b8dad738b3083fa4"
+  },
+  {
+    "pair_id": "PAIR-159",
+    "file": "nursing-management-system-vaishali-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/nursing-management-system-vaishali-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/nursing-management-system-vaishali-nagar",
+    "winner_file": "nursing-management-system-vaishali-nagar.html",
+    "sha_before": "9e3ffc0d3e4875201102699b1d729ea16b9026b6cffd4227d466d57758dacac0",
+    "sha_after": "58dbbb4bfed5d0fe8f2c069daefbd195a6eadbdcd861254559499adbeb752dda"
+  },
+  {
+    "pair_id": "PAIR-161",
+    "file": "operation-theater-management-bapu-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/operation-theater-management-bapu-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/operation-theater-management-bapu-nagar",
+    "winner_file": "operation-theater-management-bapu-nagar.html",
+    "sha_before": "95b43e48641d2b6e567933510c9b69283ed2f8b8e4c7e1f3ac287f451f73d3ee",
+    "sha_after": "0f040bd9d3a4506c6255a325a04adb218be3f251f10285b5a8a7d5168e2b4fb5"
+  },
+  {
+    "pair_id": "PAIR-162",
+    "file": "operation-theater-management-c-scheme-jaipur.html",
+    "old_canonical": "https://www.medical365.in/operation-theater-management-c-scheme-jaipur",
+    "new_canonical": "https://www.medical365.in/operation-theater-management-c-scheme",
+    "winner_file": "operation-theater-management-c-scheme.html",
+    "sha_before": "f343a120f315a1621c565619a109d193cc7af65f407758dfcb206e3f8c4c5123",
+    "sha_after": "599e1e65715eef14a3789f7d315ac42022ce7f508c4e85ae16cda7a5541fcfd9"
+  },
+  {
+    "pair_id": "PAIR-163",
+    "file": "operation-theater-management-jagatpura-jaipur.html",
+    "old_canonical": "https://www.medical365.in/operation-theater-management-jagatpura-jaipur",
+    "new_canonical": "https://www.medical365.in/operation-theater-management-jagatpura",
+    "winner_file": "operation-theater-management-jagatpura.html",
+    "sha_before": "a2ab77ee94a8a9137f7ea1d264c25f6103863f062df41b5c58f1b4b9688dfb30",
+    "sha_after": "f4242bd924e3ca08fb80a95987a7378b3daa4066ea083b8770895bb556eb78af"
+  },
+  {
+    "pair_id": "PAIR-164",
+    "file": "operation-theater-management-jhotwara-jaipur.html",
+    "old_canonical": "https://www.medical365.in/operation-theater-management-jhotwara-jaipur",
+    "new_canonical": "https://www.medical365.in/operation-theater-management-jhotwara",
+    "winner_file": "operation-theater-management-jhotwara.html",
+    "sha_before": "4fd08681b7df984a57eff820cc88c0cdcb08affebb122498fe348e79fca88c7a",
+    "sha_after": "c5525eb89b7620347700c3e3165e30cb8dbe143f0f95b166cc0275bd29d97796"
+  },
+  {
+    "pair_id": "PAIR-166",
+    "file": "operation-theater-management-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/operation-theater-management-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/operation-theater-management-mansarovar",
+    "winner_file": "operation-theater-management-mansarovar.html",
+    "sha_before": "0328c0c961a9c6da7731cf009ecb530a3580247cea896ce9f6211b52a514d7f0",
+    "sha_after": "f76686cdb750a8b00b0bda2d5d4e5d98d1d1dcf77203c15c85747af8e016af4e"
+  },
+  {
+    "pair_id": "PAIR-168",
+    "file": "operation-theater-management-tonk-road-jaipur.html",
+    "old_canonical": "https://www.medical365.in/operation-theater-management-tonk-road-jaipur",
+    "new_canonical": "https://www.medical365.in/operation-theater-management-tonk-road",
+    "winner_file": "operation-theater-management-tonk-road.html",
+    "sha_before": "bf1f99ac52eea3017fd2923dfe928e5b37266f001794222d3bfa6deeae0491d9",
+    "sha_after": "9bfd03ce6bb14f18dd4ee345ae08c400cbe81e1841195d390f6bdb5cb44428bd"
+  },
+  {
+    "pair_id": "PAIR-171",
+    "file": "outpatient-software-solutions-bapu-nagar.html",
+    "old_canonical": "https://www.medical365.in/outpatient-software-solutions-bapu-nagar",
+    "new_canonical": "https://www.medical365.in/outpatient-software-solutions-bapu-nagar-jaipur",
+    "winner_file": "outpatient-software-solutions-bapu-nagar-jaipur.html",
+    "sha_before": "889ce1446c2c9d549281d2fb3656d5d961b16163be3a2921d4b6baa9960a8d29",
+    "sha_after": "9eee81d26541d809598c563cc1a9b5e3793266794cc2fe038993deec56ed12c2"
+  },
+  {
+    "pair_id": "PAIR-173",
+    "file": "outpatient-software-solutions-jagatpura.html",
+    "old_canonical": "https://www.medical365.in/outpatient-software-solutions-jagatpura",
+    "new_canonical": "https://www.medical365.in/outpatient-software-solutions-jagatpura-jaipur",
+    "winner_file": "outpatient-software-solutions-jagatpura-jaipur.html",
+    "sha_before": "691cb5af8a321e60c48a5c364c7f3020eb1247c4f7572c208e37559b339dba82",
+    "sha_after": "f725a0e5fbd2c564a98f74b13213f47e283004d63f4538a3f4c73df2a0d678d5"
+  },
+  {
+    "pair_id": "PAIR-177",
+    "file": "outpatient-software-solutions-raja-park-jaipur.html",
+    "old_canonical": "https://www.medical365.in/outpatient-software-solutions-raja-park-jaipur",
+    "new_canonical": "https://www.medical365.in/outpatient-software-solutions-raja-park",
+    "winner_file": "outpatient-software-solutions-raja-park.html",
+    "sha_before": "953125ee74a2790d38860448f7448fae1f226cab16f6d82dc7488af0095e3c88",
+    "sha_after": "67be0b71dbba6bb08c429ace5f0e884cd179b29260e606d4fbf702bca1e86899"
+  },
+  {
+    "pair_id": "PAIR-180",
+    "file": "outpatient-software-solutions-vidyadhar-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/outpatient-software-solutions-vidyadhar-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/outpatient-software-solutions-vidyadhar-nagar",
+    "winner_file": "outpatient-software-solutions-vidyadhar-nagar.html",
+    "sha_before": "5f269ad89a5310a8126e893a857447f4a387dc6dbb0e2bb3df4a0b193ad9a7e6",
+    "sha_after": "43c4693db56034e6a7f3e6ae5f97f840d5dccfdb536192109b0a9226237aa663"
+  },
+  {
+    "pair_id": "PAIR-181",
+    "file": "patient-portal-software-bapu-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/patient-portal-software-bapu-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/patient-portal-software-bapu-nagar",
+    "winner_file": "patient-portal-software-bapu-nagar.html",
+    "sha_before": "aa8c1e116eec8f72e1e5d32c77ecc7900b84cc015300861d558b4eb18a5dfb58",
+    "sha_after": "f0231d1fd43decd334619274023a8547f31521cf5bdcdcd4437e6669eb2bacb3"
+  },
+  {
+    "pair_id": "PAIR-182",
+    "file": "patient-portal-software-c-scheme-jaipur.html",
+    "old_canonical": "https://www.medical365.in/patient-portal-software-c-scheme-jaipur",
+    "new_canonical": "https://www.medical365.in/patient-portal-software-c-scheme",
+    "winner_file": "patient-portal-software-c-scheme.html",
+    "sha_before": "f8302b65c745c7bb85dc33bc5f678cc24dfe6dc64a52a415536c0e9ec9c74485",
+    "sha_after": "465aae3c5f227477341114c41e1d6219820520dbb1a911f13e118b434e2affa6"
+  },
+  {
+    "pair_id": "PAIR-185",
+    "file": "patient-portal-software-malviya-nagar.html",
+    "old_canonical": "https://www.medical365.in/patient-portal-software-malviya-nagar",
+    "new_canonical": "https://www.medical365.in/patient-portal-software-malviya-nagar-jaipur",
+    "winner_file": "patient-portal-software-malviya-nagar-jaipur.html",
+    "sha_before": "f066896b091898372788992535ecb63fbc1c46642133ec344a6eae67691acef9",
+    "sha_after": "6109c73c2ced6b7bb21d117705e898b6cd9c56268cf68bd8fb635280e9c8fabb"
+  },
+  {
+    "pair_id": "PAIR-188",
+    "file": "patient-portal-software-tonk-road.html",
+    "old_canonical": "https://www.medical365.in/patient-portal-software-tonk-road",
+    "new_canonical": "https://www.medical365.in/patient-portal-software-tonk-road-jaipur",
+    "winner_file": "patient-portal-software-tonk-road-jaipur.html",
+    "sha_before": "d1da934586bd39da9e8292e7be67868ff7149d2e08d0cc64873c03791b58db19",
+    "sha_after": "9ee3bf5ddb09b355fc37f2ba29d0856afa07b341c0ce6547717b8340b6ad775b"
+  },
+  {
+    "pair_id": "PAIR-189",
+    "file": "patient-portal-software-vaishali-nagar.html",
+    "old_canonical": "https://www.medical365.in/patient-portal-software-vaishali-nagar",
+    "new_canonical": "https://www.medical365.in/patient-portal-software-vaishali-nagar-jaipur",
+    "winner_file": "patient-portal-software-vaishali-nagar-jaipur.html",
+    "sha_before": "fae51338d63db5a9c198bcee1514f4255957efe52fab461e67c6c724a00ac6f7",
+    "sha_after": "e0b1debc67575713238247ca84f858d62751a59158a295637bb1ae8596d8c211"
+  },
+  {
+    "pair_id": "PAIR-190",
+    "file": "patient-portal-software-vidyadhar-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/patient-portal-software-vidyadhar-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/patient-portal-software-vidyadhar-nagar",
+    "winner_file": "patient-portal-software-vidyadhar-nagar.html",
+    "sha_before": "af0e48d7edcdd6e741d14fbf8cc5f30a307dc2fda478ec57c33bae73f0b49614",
+    "sha_after": "e17490d97498d1f9fabc8b8ed443fc26abedd7f84803c732825be616acf56206"
+  },
+  {
+    "pair_id": "PAIR-192",
+    "file": "revenue-cycle-management-c-scheme-jaipur.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-c-scheme-jaipur",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-c-scheme",
+    "winner_file": "revenue-cycle-management-c-scheme.html",
+    "sha_before": "9f691bc229d79e02d7423161c470c87fdaf98043ff656365a8a71f643fc134a6",
+    "sha_after": "4a494e79eef23c435948d228a47a9d760fb6e9edec5f76f6ce0122cefdce13b9"
+  },
+  {
+    "pair_id": "PAIR-193",
+    "file": "revenue-cycle-management-jagatpura-jaipur.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-jagatpura-jaipur",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-jagatpura",
+    "winner_file": "revenue-cycle-management-jagatpura.html",
+    "sha_before": "39386ae8222016e9da282e6712dbe8a307bacce149876776ea28176ee4d33801",
+    "sha_after": "e2f60be906fe63a41bc8c54acef6871a341ce84a6fb27a8190eadb03f5ff25e0"
+  },
+  {
+    "pair_id": "PAIR-194",
+    "file": "revenue-cycle-management-jhotwara.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-jhotwara",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-jhotwara-jaipur",
+    "winner_file": "revenue-cycle-management-jhotwara-jaipur.html",
+    "sha_before": "518267d3e59a71f2b445f1a5f975531dc2c71b6aa8a6729509ed0ae61cfbc471",
+    "sha_after": "c3e7fec90ebb93b9f921387c8f827fae73036e6fec116e6830a8d09ce0b9cb0d"
+  },
+  {
+    "pair_id": "PAIR-195",
+    "file": "revenue-cycle-management-malviya-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-malviya-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-malviya-nagar",
+    "winner_file": "revenue-cycle-management-malviya-nagar.html",
+    "sha_before": "33091d526dd22cca69e138fd707d662c4d806b8c7ed42cc84a973e0dece2aa91",
+    "sha_after": "8f867eac6b0eab4fed7d0a5d5510ecf801c9095ca849775d616b9460cbc40f81"
+  },
+  {
+    "pair_id": "PAIR-196",
+    "file": "revenue-cycle-management-mansarovar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-mansarovar-jaipur",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-mansarovar",
+    "winner_file": "revenue-cycle-management-mansarovar.html",
+    "sha_before": "f3386e68e4b015b726a8e592ae796fc78513e767b5ab9a09fd758e788717ba86",
+    "sha_after": "7481b832b835ed29391eb923f8b0a4c316e9b26242a986c325581649231c14d0"
+  },
+  {
+    "pair_id": "PAIR-197",
+    "file": "revenue-cycle-management-raja-park-jaipur.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-raja-park-jaipur",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-raja-park",
+    "winner_file": "revenue-cycle-management-raja-park.html",
+    "sha_before": "26f414a5e5724a62fc3d98e0f9eed951a1f78e7d18016ac5cdbdd09b67d39bd3",
+    "sha_after": "de791d4c9964250bbcc2743a58e81a25eca9c5fcb4cf4d50f3ae57fc3def16f0"
+  },
+  {
+    "pair_id": "PAIR-198",
+    "file": "revenue-cycle-management-tonk-road.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-tonk-road",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-tonk-road-jaipur",
+    "winner_file": "revenue-cycle-management-tonk-road-jaipur.html",
+    "sha_before": "1463a9038450cda04f145cf53b1627c4bb5141db3155f1efd5cdb4a7806c20a2",
+    "sha_after": "56a9dd6f7425db8d4c132fff5f2823a4bd545461295ef537a4f162ec7faa49e0"
+  },
+  {
+    "pair_id": "PAIR-199",
+    "file": "revenue-cycle-management-vaishali-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-vaishali-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-vaishali-nagar",
+    "winner_file": "revenue-cycle-management-vaishali-nagar.html",
+    "sha_before": "4503b244f6b60292731a97dc28c3627d48791c09988ca62e273fec1e94b6b13e",
+    "sha_after": "57dc5a5b2b44a69728d3440a69091a53092098e3e2bc56f276ee46b81fc6665f"
+  },
+  {
+    "pair_id": "PAIR-200",
+    "file": "revenue-cycle-management-vidyadhar-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/revenue-cycle-management-vidyadhar-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/revenue-cycle-management-vidyadhar-nagar",
+    "winner_file": "revenue-cycle-management-vidyadhar-nagar.html",
+    "sha_before": "77432d2a75af159dfab6eea92cbfcba1e70363b7d8dc3b8cc57f9c61b4d3d9ef",
+    "sha_after": "cf371c5affeaa4d4e67db884ed3eaed6aae3d5f78fd94e2e79abf5ad7b7fd019"
+  },
+  {
+    "pair_id": "PAIR-201",
+    "file": "telemedicine-platform-bapu-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/telemedicine-platform-bapu-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/telemedicine-platform-bapu-nagar",
+    "winner_file": "telemedicine-platform-bapu-nagar.html",
+    "sha_before": "7ad60ee0baa7530af57a75b85f0dcd702a7661517af3496064f1f79fefbf61d4",
+    "sha_after": "f0ee71b7f38a35ca0ed74cab7e294edd7b45ca66003582deb468684d28c0c33d"
+  },
+  {
+    "pair_id": "PAIR-202",
+    "file": "telemedicine-platform-c-scheme-jaipur.html",
+    "old_canonical": "https://www.medical365.in/telemedicine-platform-c-scheme-jaipur",
+    "new_canonical": "https://www.medical365.in/telemedicine-platform-c-scheme",
+    "winner_file": "telemedicine-platform-c-scheme.html",
+    "sha_before": "c5730724e2b72c09443a73119a757e88051b666c708113800d7c6f76c819fa9f",
+    "sha_after": "fa9f136f4750ac413165b585341284e6672b711103eb278b68f937b68fb6b139"
+  },
+  {
+    "pair_id": "PAIR-204",
+    "file": "telemedicine-platform-jhotwara-jaipur.html",
+    "old_canonical": "https://www.medical365.in/telemedicine-platform-jhotwara-jaipur",
+    "new_canonical": "https://www.medical365.in/telemedicine-platform-jhotwara",
+    "winner_file": "telemedicine-platform-jhotwara.html",
+    "sha_before": "c651c099ebd22a27c7c97ce0738002a751dad4a607e4315cc5d8bb1a7057154d",
+    "sha_after": "d8ee6cf647dba82d23181caa72e6af1f1fbcbb7a9926760efa28b82af2d9cbfb"
+  },
+  {
+    "pair_id": "PAIR-206",
+    "file": "telemedicine-platform-mansarovar.html",
+    "old_canonical": "https://www.medical365.in/telemedicine-platform-mansarovar",
+    "new_canonical": "https://www.medical365.in/telemedicine-platform-mansarovar-jaipur",
+    "winner_file": "telemedicine-platform-mansarovar-jaipur.html",
+    "sha_before": "2e2657683d24fa1dd065ff97afe829506345c443ef10dce7ea5d8039ef50f708",
+    "sha_after": "3553342d7a96f0ae4d4df8039903bcdfefc0f03d85f32405f1599eeadf5c2e64"
+  },
+  {
+    "pair_id": "PAIR-208",
+    "file": "telemedicine-platform-tonk-road.html",
+    "old_canonical": "https://www.medical365.in/telemedicine-platform-tonk-road",
+    "new_canonical": "https://www.medical365.in/telemedicine-platform-tonk-road-jaipur",
+    "winner_file": "telemedicine-platform-tonk-road-jaipur.html",
+    "sha_before": "0929900c234b7f9d364a42d7d36a74c1617c12d6358b4cfe5879c794fba8ab22",
+    "sha_after": "23041765587ed75e26985749c127871f19069273ea52d8e98861334a7e3efab5"
+  },
+  {
+    "pair_id": "PAIR-209",
+    "file": "telemedicine-platform-vaishali-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/telemedicine-platform-vaishali-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/telemedicine-platform-vaishali-nagar",
+    "winner_file": "telemedicine-platform-vaishali-nagar.html",
+    "sha_before": "c4c4356f15c9fb3f41c80104ebd5de60642bfae24daebbdd7823c19512396819",
+    "sha_after": "2900e3f8362e603528c3c3f1ccdd9a1c868029636be1c97074c614cb0cbe2555"
+  },
+  {
+    "pair_id": "PAIR-213",
+    "file": "vaccine-management-system-jagatpura-jaipur.html",
+    "old_canonical": "https://www.medical365.in/vaccine-management-system-jagatpura-jaipur",
+    "new_canonical": "https://www.medical365.in/vaccine-management-system-jagatpura",
+    "winner_file": "vaccine-management-system-jagatpura.html",
+    "sha_before": "982d72e38d1a5d69900013d3113fa5d00b180e6f83ad752a5d0481dec0dc018d",
+    "sha_after": "b58483ec380fee7f92311ccc41864c74bb7e02185f5c4ba25aa62e1bb7169eae"
+  },
+  {
+    "pair_id": "PAIR-219",
+    "file": "vaccine-management-system-vaishali-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/vaccine-management-system-vaishali-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/vaccine-management-system-vaishali-nagar",
+    "winner_file": "vaccine-management-system-vaishali-nagar.html",
+    "sha_before": "c2283f334adf39163c35cbb0172681b993b712badf9bc9a902f8482fe1e10c02",
+    "sha_after": "0d57cc517c0f6a54517e276b42a44085104de3a3c7b66fdc56ae9d8aeab733d5"
+  },
+  {
+    "pair_id": "PAIR-220",
+    "file": "vaccine-management-system-vidyadhar-nagar-jaipur.html",
+    "old_canonical": "https://www.medical365.in/vaccine-management-system-vidyadhar-nagar-jaipur",
+    "new_canonical": "https://www.medical365.in/vaccine-management-system-vidyadhar-nagar",
+    "winner_file": "vaccine-management-system-vidyadhar-nagar.html",
+    "sha_before": "59d7084befd26365cbe10a36cdff01d0c7d9e6c687b2868c8f4eeb04ac6c31b8",
+    "sha_after": "63ffad0fe7b7282ca4cbd820a5741763d6a8c65e8fea04802461926437093e59"
+  }
+]

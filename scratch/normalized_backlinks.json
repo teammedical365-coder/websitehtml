@@ -1,0 +1,5 @@
+{
+  "status": "UNAVAILABLE",
+  "source": "External backlink export not supplied in current audit iteration",
+  "default_policy": "Do not fabricate backlinks. Treat backlink signal as neutral / data gap."
+}

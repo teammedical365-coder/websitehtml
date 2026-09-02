@@ -1,0 +1,23 @@
+{
+  "total_pairs_reconciled": 220,
+  "classification_breakdown": {
+    "KEEP": 0,
+    "CANONICALIZE": 94,
+    "REDIRECT": 0,
+    "MERGE/REWRITE": 0,
+    "NEEDS_DATA": 126
+  },
+  "confidence_breakdown": {
+    "HIGH": 212,
+    "MEDIUM": 8,
+    "LOW": 0
+  },
+  "sum_check": true,
+  "production_files_modified": 0,
+  "git_staged": false,
+  "git_commit": false,
+  "git_push": false,
+  "deployment": false,
+  "read_only_integrity": "PASS",
+  "status": "HUMAN_REVIEW_HOLD"
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "pair_id": "PAIR-011",
+    "topic": "healthcare",
+    "locality": "Crm Bapu Nagar, Jaipur",
+    "imps_a": 13,
+    "imps_b": 2,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-013",
+    "topic": "healthcare",
+    "locality": "Crm Jagatpura, Jaipur",
+    "imps_a": 2,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-014",
+    "topic": "healthcare",
+    "locality": "Crm Jhotwara, Jaipur",
+    "imps_a": 16,
+    "imps_b": 2,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-016",
+    "topic": "healthcare",
+    "locality": "Crm Mansarovar, Jaipur",
+    "imps_a": 9,
+    "imps_b": 7,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-018",
+    "topic": "healthcare",
+    "locality": "Crm Tonk Road, Jaipur",
+    "imps_a": 8,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-019",
+    "topic": "healthcare",
+    "locality": "Crm Vaishali Nagar, Jaipur",
+    "imps_a": 4,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-032",
+    "topic": "healthcare",
+    "locality": "Kiosk Providers C Scheme, Jaipur",
+    "imps_a": 1,
+    "imps_b": 2,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-038",
+    "topic": "healthcare",
+    "locality": "Kiosk Providers Tonk Road, Jaipur",
+    "imps_a": 1,
+    "imps_b": 3,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-039",
+    "topic": "healthcare",
+    "locality": "Kiosk Providers Vaishali Nagar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-049",
+    "topic": "hospital",
+    "locality": "Data Backup Recovery Vaishali Nagar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-052",
+    "topic": "hospital",
+    "locality": "Hrms C Scheme, Jaipur",
+    "imps_a": 4,
+    "imps_b": 6,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-055",
+    "topic": "hospital",
+    "locality": "Hrms Malviya Nagar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 7,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-056",
+    "topic": "hospital",
+    "locality": "Hrms Mansarovar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-058",
+    "topic": "hospital",
+    "locality": "Hrms Tonk Road, Jaipur",
+    "imps_a": 1,
+    "imps_b": 3,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-059",
+    "topic": "hospital",
+    "locality": "Hrms Vaishali Nagar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 7,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-062",
+    "topic": "hospital",
+    "locality": "It Cloud Migration C Scheme, Jaipur",
+    "imps_a": 1,
+    "imps_b": 2,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-076",
+    "topic": "hospital",
+    "locality": "Online Scheduling Software Mansarovar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-087",
+    "topic": "hospital",
+    "locality": "Queue Token Management Raja Park, Jaipur",
+    "imps_a": 1,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-088",
+    "topic": "hospital",
+    "locality": "Queue Token Management Tonk Road, Jaipur",
+    "imps_a": 1,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-153",
+    "topic": "nursing",
+    "locality": "Management System Jagatpura, Jaipur",
+    "imps_a": 15,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-167",
+    "topic": "operation",
+    "locality": "Theater Management Raja Park, Jaipur",
+    "imps_a": 1,
+    "imps_b": 5,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-178",
+    "topic": "outpatient",
+    "locality": "Software Solutions Tonk Road, Jaipur",
+    "imps_a": 1,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-190",
+    "topic": "patient",
+    "locality": "Portal Software Vidyadhar Nagar, Jaipur",
+    "imps_a": 10,
+    "imps_b": 30,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-191",
+    "topic": "revenue",
+    "locality": "Cycle Management Bapu Nagar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 2,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-192",
+    "topic": "revenue",
+    "locality": "Cycle Management C Scheme, Jaipur",
+    "imps_a": 4,
+    "imps_b": 27,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-193",
+    "topic": "revenue",
+    "locality": "Cycle Management Jagatpura, Jaipur",
+    "imps_a": 2,
+    "imps_b": 13,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-195",
+    "topic": "revenue",
+    "locality": "Cycle Management Malviya Nagar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 15,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-206",
+    "topic": "telemedicine",
+    "locality": "Platform Mansarovar, Jaipur",
+    "imps_a": 38,
+    "imps_b": 2,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-215",
+    "topic": "vaccine",
+    "locality": "Management System Malviya Nagar, Jaipur",
+    "imps_a": 2,
+    "imps_b": 2,
+    "risk": "Cannibalization overlap active on production"
+  },
+  {
+    "pair_id": "PAIR-216",
+    "topic": "vaccine",
+    "locality": "Management System Mansarovar, Jaipur",
+    "imps_a": 1,
+    "imps_b": 1,
+    "risk": "Cannibalization overlap active on production"
+  }
+]

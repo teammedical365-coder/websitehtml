@@ -1,0 +1,1672 @@
+[
+  {
+    "url": "/404",
+    "status": 200,
+    "canonical": "",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/abha-compliance-software-delhi",
+    "status": 200,
+    "canonical": "https://www.medical365.in/abha-compliance-software-delhi",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/abha-compliance-software-mansarovar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/abha-compliance-software-mansarovar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/abha-compliance-software-vaishali-nagar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/abha-compliance-software-vaishali-nagar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/billing-invoicing",
+    "status": 200,
+    "canonical": "https://www.medical365.in/billing-invoicing",
+    "json_ld_blocks": 5,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/clinic-management-system-bengaluru",
+    "status": 200,
+    "canonical": "https://www.medical365.in/clinic-management-system-bengaluru",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/clinic-management-system-jhotwara-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/clinic-management-system-jhotwara-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/clinic-management-system-raja-park-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/clinic-management-system-raja-park-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/clinical-assessment-form-software-ajmer",
+    "status": 200,
+    "canonical": "https://www.medical365.in/clinical-assessment-form-software-ajmer",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/clinical-assessment-form-software-indore",
+    "status": 200,
+    "canonical": "https://www.medical365.in/clinical-assessment-form-software-indore",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/clinical-assessment-form-software-nashik",
+    "status": 200,
+    "canonical": "https://www.medical365.in/clinical-assessment-form-software-nashik",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/clinical-assessment-form-software-visakhapatnam",
+    "status": 200,
+    "canonical": "https://www.medical365.in/clinical-assessment-form-software-visakhapatnam",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/dental-imaging",
+    "status": 200,
+    "canonical": "https://www.medical365.in/dental-imaging",
+    "json_ld_blocks": 5,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/echocardiography-reports",
+    "status": 200,
+    "canonical": "https://www.medical365.in/echocardiography-reports",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/emr-software-coimbatore",
+    "status": 200,
+    "canonical": "https://www.medical365.in/emr-software-coimbatore",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/emr-software-malviya-nagar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/emr-software-malviya-nagar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/emr-software-vadodara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/emr-software-vadodara",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/fhir-hl7-compliant-software-bhilwara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/fhir-hl7-compliant-software-bhilwara",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/fhir-hl7-compliant-software-jodhpur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/fhir-hl7-compliant-software-jodhpur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/fhir-hl7-compliant-software-rajasthan",
+    "status": 200,
+    "canonical": "https://www.medical365.in/fhir-hl7-compliant-software-rajasthan",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/financial-reporting",
+    "status": 200,
+    "canonical": "https://www.medical365.in/financial-reporting",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-crm-bhilwara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-crm-bhilwara",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-crm-jodhpur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-crm-jodhpur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-crm-rajkot",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-crm-rajkot",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-feedback-satisfaction-surveys-alwar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-alwar",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-feedback-satisfaction-surveys-jagatpura-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-jagatpura-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-feedback-satisfaction-surveys-pali",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys-pali",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-feedback-satisfaction-surveys",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-feedback-satisfaction-surveys",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-kiosk-providers-delhi",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-kiosk-providers-delhi",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-kiosk-providers-mansarovar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-kiosk-providers-mansarovar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/healthcare-kiosk-providers-vaishali-nagar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/healthcare-kiosk-providers-vaishali-nagar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-bed-management-software-c-scheme",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-bed-management-software-c-scheme",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-bed-management-software-lucknow",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-bed-management-software-lucknow",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-bed-management-software-tonk-road-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-bed-management-software-tonk-road-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-data-backup-recovery-bhilwara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-data-backup-recovery-bhilwara",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-data-backup-recovery-jodhpur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-data-backup-recovery-jodhpur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-data-backup-recovery-rajkot",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-data-backup-recovery-rajkot",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-hrms-alwar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-hrms-alwar",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-hrms-jagatpura-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-hrms-jagatpura-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-hrms-pali",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-hrms-pali",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-hrms",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-hrms",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-it-cloud-migration-delhi",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-it-cloud-migration-delhi",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-it-cloud-migration-mansarovar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-it-cloud-migration-mansarovar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-it-cloud-migration-vaishali-nagar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-it-cloud-migration-vaishali-nagar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-management-software-chandigarh",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-management-software-chandigarh",
+    "json_ld_blocks": 6,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-management-software-malviya-nagar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-management-software-malviya-nagar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-management-software-vadodara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-management-software-vadodara",
+    "json_ld_blocks": 6,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-online-scheduling-software-c-scheme",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-online-scheduling-software-c-scheme",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-online-scheduling-software-lucknow",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-online-scheduling-software-lucknow",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-online-scheduling-software-tonk-road-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-online-scheduling-software-tonk-road-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-queue-token-management-bhopal",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-queue-token-management-bhopal",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-queue-token-management-kanpur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-queue-token-management-kanpur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-queue-token-management-ranchi",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-queue-token-management-ranchi",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/hospital-software-tonk-road",
+    "status": 200,
+    "canonical": "https://www.medical365.in/hospital-software-tonk-road",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/inpatient-management-software-c-scheme",
+    "status": 200,
+    "canonical": "https://www.medical365.in/inpatient-management-software-c-scheme",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/inpatient-management-software-lucknow",
+    "status": 200,
+    "canonical": "https://www.medical365.in/inpatient-management-software-lucknow",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/inpatient-management-software-tonk-road-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/inpatient-management-software-tonk-road-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/integrated-population-healthcare-management-bhilwara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/integrated-population-healthcare-management-bhilwara",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/integrated-population-healthcare-management-jodhpur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/integrated-population-healthcare-management-jodhpur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/integrated-population-healthcare-management-rajasthan",
+    "status": 200,
+    "canonical": "https://www.medical365.in/integrated-population-healthcare-management-rajasthan",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/landingpages_sitemap",
+    "status": 200,
+    "canonical": "https://www.medical365.in/landingpages_sitemap",
+    "json_ld_blocks": 1,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/lims-laboratory-information-management-coimbatore",
+    "status": 200,
+    "canonical": "https://www.medical365.in/lims-laboratory-information-management-coimbatore",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/lims-laboratory-information-management-malviya-nagar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/lims-laboratory-information-management-malviya-nagar",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/lims-laboratory-information-management-vadodara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/lims-laboratory-information-management-vadodara",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-asset-inventory-management-bhubaneswar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-asset-inventory-management-bhubaneswar",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-asset-inventory-management-kochi",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-asset-inventory-management-kochi",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-asset-inventory-management-sikar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-asset-inventory-management-sikar",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-camp-management-software-bengaluru",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-camp-management-software-bengaluru",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-camp-management-software-jhotwara-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-camp-management-software-jhotwara-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-camp-management-software-raja-park-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-camp-management-software-raja-park-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-robotic-process-automation-agra",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-robotic-process-automation-agra",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-robotic-process-automation-guwahati",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-robotic-process-automation-guwahati",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-robotic-process-automation-mumbai",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-robotic-process-automation-mumbai",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/medical-robotic-process-automation-vidyadhar-nagar-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/medical-robotic-process-automation-vidyadhar-nagar-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/multi-facility-hospital-software-bikaner",
+    "status": 200,
+    "canonical": "https://www.medical365.in/multi-facility-hospital-software-bikaner",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/multi-facility-hospital-software-kolkata",
+    "status": 200,
+    "canonical": "https://www.medical365.in/multi-facility-hospital-software-kolkata",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/multi-facility-hospital-software-sri-ganganagar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/multi-facility-hospital-software-sri-ganganagar",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/nursing-management-system-ajmer",
+    "status": 200,
+    "canonical": "https://www.medical365.in/nursing-management-system-ajmer",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/nursing-management-system-indore",
+    "status": 200,
+    "canonical": "https://www.medical365.in/nursing-management-system-indore",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/nursing-management-system-nashik",
+    "status": 200,
+    "canonical": "https://www.medical365.in/nursing-management-system-nashik",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/nursing-management-system-visakhapatnam",
+    "status": 200,
+    "canonical": "https://www.medical365.in/nursing-management-system-visakhapatnam",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/operation-theater-management-bikaner",
+    "status": 200,
+    "canonical": "https://www.medical365.in/operation-theater-management-bikaner",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/operation-theater-management-kolkata",
+    "status": 200,
+    "canonical": "https://www.medical365.in/operation-theater-management-kolkata",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/operation-theater-management-sri-ganganagar",
+    "status": 200,
+    "canonical": "https://www.medical365.in/operation-theater-management-sri-ganganagar",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/outpatient-software-solutions-bengaluru",
+    "status": 200,
+    "canonical": "https://www.medical365.in/outpatient-software-solutions-bengaluru",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/outpatient-software-solutions-jhotwara-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/outpatient-software-solutions-jhotwara-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/outpatient-software-solutions-raja-park-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/outpatient-software-solutions-raja-park-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/paediatric-ehr",
+    "status": 200,
+    "canonical": "https://www.medical365.in/paediatric-ehr",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/patient-portal-software-c-scheme",
+    "status": 200,
+    "canonical": "https://www.medical365.in/patient-portal-software-c-scheme",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/patient-portal-software-lucknow",
+    "status": 200,
+    "canonical": "https://www.medical365.in/patient-portal-software-lucknow",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/patient-portal-software-tonk-road-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/patient-portal-software-tonk-road-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/pradhan-mantri-yojana-support-software-ajmer",
+    "status": 200,
+    "canonical": "https://www.medical365.in/pradhan-mantri-yojana-support-software-ajmer",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/revenue-cycle-management-bhopal",
+    "status": 200,
+    "canonical": "https://www.medical365.in/revenue-cycle-management-bhopal",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/revenue-cycle-management-kanpur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/revenue-cycle-management-kanpur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/revenue-cycle-management-ranchi",
+    "status": 200,
+    "canonical": "https://www.medical365.in/revenue-cycle-management-ranchi",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/seo_template",
+    "status": 200,
+    "canonical": "https://www.medical365.in/{{url_slug}}",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/telemedicine-platform-bhilwara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/telemedicine-platform-bhilwara",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/telemedicine-platform-jhotwara",
+    "status": 200,
+    "canonical": "https://www.medical365.in/telemedicine-platform-jhotwara",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/telemedicine-platform-raja-park",
+    "status": 200,
+    "canonical": "https://www.medical365.in/telemedicine-platform-raja-park",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/thank-you",
+    "status": 200,
+    "canonical": "https://www.medical365.in/thank-you",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/vaccine-management-system-c-scheme",
+    "status": 200,
+    "canonical": "https://www.medical365.in/vaccine-management-system-c-scheme",
+    "json_ld_blocks": 2,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/vaccine-management-system-lucknow",
+    "status": 200,
+    "canonical": "https://www.medical365.in/vaccine-management-system-lucknow",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "url": "/vaccine-management-system-tonk-road-jaipur",
+    "status": 200,
+    "canonical": "https://www.medical365.in/vaccine-management-system-tonk-road-jaipur",
+    "json_ld_blocks": 4,
+    "json_ld_errors": 0,
+    "aggregate_rating_count": 0,
+    "synthetic_review_count": 0,
+    "legitimate_schemas": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "validation_status": "PASS"
+  }
+]

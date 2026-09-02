@@ -1,0 +1,20 @@
+{
+  "execution_timestamp": "2026-09-02T07:31:51.733Z",
+  "git_head": "9c86b17e13fe96581973e1e1ba448f7ebfc4c64f",
+  "raw_exports_manifest": {
+    "gsc_countries.json": "1319a326462d713152f35fbffdadd01f26ab73f1ac6e5c9e91affbae0384ff96",
+    "gsc_devices.json": "d9817be1fe318c75480fdf460232872184555f2368896fafad63dfec8fdc662a",
+    "gsc_indexing_reasons.csv": "eaff870fdc63ab7f22d61c9ca7bf35337f2847e6ebc9208368250294d7c71393",
+    "gsc_indexing_reasons.json": "23370f23a20a7f694dcf958db1b40ec79d2bd441c25bc6a9804c96efe78331b0",
+    "gsc_indexing_totals.json": "96b8868654e1a9c2f49e7f80976b68c1215172140bc5dc28880b939f83a4329c",
+    "gsc_performance.csv": "45ae15f868e927a53ea1c01e90db8b96ad30e021957d38133172b07fc7664701",
+    "gsc_performance.json": "3474f3d6dae141d59ed19733c1e2b799f966efd79f92a2cc83e518bec28967bb",
+    "gsc_queries.csv": "bacedb4365c10a43278e50858c980d64f5d961f68408183eba9057f68653fd50",
+    "gsc_queries.json": "eaef1af965bccda2b64dd83a36ccc61a7db52b1ce4948b58eef375e88277d353"
+  },
+  "normalized_manifest": {
+    "scratch/normalized_gsc_performance.json": "310ca0195b141ae9a46d5d9a05471087337d12c09031a0686aadc68dcdff8120",
+    "scratch/normalized_inspection_canonical.json": "5354acaba3a76933a9561b62532db88d6dcdef3a0606e2c1405c8be31195e258",
+    "scratch/normalized_backlinks.json": "03560a9d30d2a705d4e3ba54b6012f1b86d7fb71fd95d279ae09c62d45b222e0"
+  }
+}

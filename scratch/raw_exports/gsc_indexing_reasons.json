@@ -1,0 +1,56 @@
+[
+  {
+    "reason": "Discovered - currently not indexed",
+    "source": "Google systems",
+    "status": "Passed",
+    "pages": 933
+  },
+  {
+    "reason": "Page with redirect",
+    "source": "Website",
+    "status": "Failed",
+    "pages": 36
+  },
+  {
+    "reason": "Alternate page with proper canonical tag",
+    "source": "Website",
+    "status": "Failed",
+    "pages": 26
+  },
+  {
+    "reason": "Crawled - currently not indexed",
+    "source": "Google systems",
+    "status": "Failed",
+    "pages": 20
+  },
+  {
+    "reason": "Not found (404)",
+    "source": "Website",
+    "status": "Started",
+    "pages": 16
+  },
+  {
+    "reason": "Excluded by noindex tag",
+    "source": "Website",
+    "status": "Passed",
+    "pages": 12
+  },
+  {
+    "reason": "Duplicate, Google chose different canonical than user",
+    "source": "Google systems",
+    "status": "Started",
+    "pages": 3
+  },
+  {
+    "reason": "Blocked by robots.txt",
+    "source": "Website",
+    "status": "Not Started",
+    "pages": 2
+  },
+  {
+    "reason": "Duplicate without user-selected canonical",
+    "source": "Website",
+    "status": "Passed",
+    "pages": 0
+  }
+]
