@@ -628,386 +628,500 @@ function normalizeUrl(url) {
 // ==========================================
 const keywordMaster = [
     {
-        keyword: "hospital management system",
-        canonical: "hospital management system",
-        intent: "commercial",
-        targetUrl: "/hims-software",
-        relevanceScore: 15,
-        medical365: {
-            position: 13,
-            previousPosition: 18,
-            baseClicks: 421,
-            baseImpressions: 18421,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "medical365",
+        "canonical": "medical365",
+        "intent": "navigational",
+        "targetUrl": "/",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 3.91,
+            "previousPosition": 4.5,
+            "baseClicks": 35,
+            "baseImpressions": 141,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 4, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 8, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": null,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": null,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "hims software india",
-        canonical: "hims software india",
-        intent: "commercial",
-        targetUrl: "/hims-software",
-        relevanceScore: 15,
-        medical365: {
-            position: 11,
-            previousPosition: 15,
-            baseClicks: 312,
-            baseImpressions: 9840,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "365 medical",
+        "canonical": "365 medical",
+        "intent": "navigational",
+        "targetUrl": "/",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 4.02,
+            "previousPosition": 5,
+            "baseClicks": 5,
+            "baseImpressions": 107,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 3, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 9, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": null,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": null,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "clinic management software jaipur",
-        canonical: "clinic management software jaipur",
-        intent: "transactional",
-        targetUrl: "/clinic-management-system-jaipur",
-        relevanceScore: 15,
-        medical365: {
-            position: 3,
-            previousPosition: 5,
-            baseClicks: 184,
-            baseImpressions: 2450,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "nabh compliance",
+        "canonical": "nabh compliance",
+        "intent": "commercial",
+        "targetUrl": "/nabh-compliant-hospital-software",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 16.17,
+            "previousPosition": 22,
+            "baseClicks": 1,
+            "baseImpressions": 35,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 6, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 4, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 4,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 12,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "abdm compliant hms software",
-        canonical: "abdm compliant hms software",
-        intent: "commercial",
-        targetUrl: "/blogs/abha-integration-guide",
-        relevanceScore: 15,
-        medical365: {
-            position: 7,
-            previousPosition: 12,
-            baseClicks: 245,
-            baseImpressions: 5420,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "hrms hospital",
+        "canonical": "hrms hospital",
+        "intent": "commercial",
+        "targetUrl": "/blogs/hospital-hrms-india",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 8.52,
+            "previousPosition": 14,
+            "baseClicks": 1,
+            "baseImpressions": 25,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 11, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 14, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 6,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 18,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "emr software for clinics rajasthan",
-        canonical: "emr software for clinics rajasthan",
-        intent: "commercial",
-        targetUrl: "/emr-software-raja-park-jaipur",
-        relevanceScore: 14,
-        medical365: {
-            position: 4,
-            previousPosition: 9,
-            baseClicks: 198,
-            baseImpressions: 3820,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "abha integration",
+        "canonical": "abha integration",
+        "intent": "informational",
+        "targetUrl": "/blogs/abha-integration-guide",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 15.8,
+            "previousPosition": 20.5,
+            "baseClicks": 1,
+            "baseImpressions": 10,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 8, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 7, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 5,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 8,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "hospital bed management software",
-        canonical: "hospital bed management software",
-        intent: "commercial",
-        targetUrl: "/hospital-bed-management",
-        relevanceScore: 14,
-        medical365: {
-            position: 8,
-            previousPosition: 14,
-            baseClicks: 156,
-            baseImpressions: 4120,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "operating theatre analytics software",
+        "canonical": "operating theatre analytics software",
+        "intent": "commercial",
+        "targetUrl": "/operation-theater-management",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 86.94,
+            "previousPosition": 92,
+            "baseClicks": 0,
+            "baseImpressions": 705,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 5, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 12, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 3,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 28,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "nabh compliant hospital software",
-        canonical: "nabh compliant hospital software",
-        intent: "commercial",
-        targetUrl: "/nabh-compliant-hospital-software",
-        relevanceScore: 15,
-        medical365: {
-            position: 6,
-            previousPosition: 10,
-            baseClicks: 210,
-            baseImpressions: 4680,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "hospital billing software",
+        "canonical": "hospital billing software",
+        "intent": "commercial",
+        "targetUrl": "/blogs/hospital-billing-software-india",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 74.59,
+            "previousPosition": 81,
+            "baseClicks": 0,
+            "baseImpressions": 217,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 9, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 15, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 2,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 5,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "blood bank management software india",
-        canonical: "blood bank management software india",
-        intent: "commercial",
-        targetUrl: "/blood-bank",
-        relevanceScore: 14,
-        medical365: {
-            position: 9,
-            previousPosition: 13,
-            baseClicks: 124,
-            baseImpressions: 3150,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "nursing management system",
+        "canonical": "nursing management system",
+        "intent": "commercial",
+        "targetUrl": "/nursing-management-system",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 11.08,
+            "previousPosition": 15.5,
+            "baseClicks": 0,
+            "baseImpressions": 78,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 7, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 18, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 7,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 19,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "hospital hrms software jaipur",
-        canonical: "hospital hrms software jaipur",
-        intent: "transactional",
-        targetUrl: "/hospital-hrms-jaipur",
-        relevanceScore: 13,
-        medical365: {
-            position: 5,
-            previousPosition: 8,
-            baseClicks: 142,
-            baseImpressions: 2890,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "iop tracking",
+        "canonical": "iop tracking",
+        "intent": "commercial",
+        "targetUrl": "/eye-pressure-tracking",
+        "relevanceScore": 14,
+        "medical365": {
+            "position": 8.55,
+            "previousPosition": 11,
+            "baseClicks": 0,
+            "baseImpressions": 71,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 14, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 6, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 14,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 16,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "medical billing software rajasthan",
-        canonical: "medical billing software rajasthan",
-        intent: "transactional",
-        targetUrl: "/pricing",
-        relevanceScore: 14,
-        medical365: {
-            position: 12,
-            previousPosition: 16,
-            baseClicks: 178,
-            baseImpressions: 6240,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "lims hospital jaipur",
+        "canonical": "lims hospital jaipur",
+        "intent": "transactional",
+        "targetUrl": "/lims-laboratory-information-management-jaipur",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 6.67,
+            "previousPosition": 9,
+            "baseClicks": 0,
+            "baseImpressions": 43,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 5, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 4, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 10,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 8,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "abha card integration software",
-        canonical: "abha card integration software",
-        intent: "informational",
-        targetUrl: "/blogs/abha-integration-guide",
-        relevanceScore: 14,
-        medical365: {
-            position: 8,
-            previousPosition: 11,
-            baseClicks: 265,
-            baseImpressions: 7320,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "dental software",
+        "canonical": "dental software",
+        "intent": "commercial",
+        "targetUrl": "/blogs/best-dental-software-india",
+        "relevanceScore": 14,
+        "medical365": {
+            "position": 24.28,
+            "previousPosition": 32,
+            "baseClicks": 0,
+            "baseImpressions": 43,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 12, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 16, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 9,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 2,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "telemedicine platform for clinics",
-        canonical: "telemedicine platform for clinics",
-        intent: "commercial",
-        targetUrl: "/telemedicine-platform-jhotwara-jaipur",
-        relevanceScore: 13,
-        medical365: {
-            position: 16,
-            previousPosition: 19,
-            baseClicks: 112,
-            baseImpressions: 5890,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "abdm integration checklist",
+        "canonical": "abdm integration checklist",
+        "intent": "informational",
+        "targetUrl": "/blogs/abha-integration-guide",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 18.79,
+            "previousPosition": 26,
+            "baseClicks": 0,
+            "baseImpressions": 42,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 2, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 1, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 5,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 11,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "lims laboratory software india",
-        canonical: "lims laboratory software india",
-        intent: "commercial",
-        targetUrl: "/lims-software",
-        relevanceScore: 14,
-        medical365: {
-            position: 18,
-            previousPosition: 22,
-            baseClicks: 88,
-            baseImpressions: 4720,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "nabh compliant hospital software",
+        "canonical": "nabh compliant hospital software",
+        "intent": "commercial",
+        "targetUrl": "/nabh-compliant-hospital-software",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 25.12,
+            "previousPosition": 35,
+            "baseClicks": 0,
+            "baseImpressions": 40,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 6, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 5, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 3,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 15,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "cloud hospital management software",
-        canonical: "cloud hospital management software",
-        intent: "commercial",
-        targetUrl: "/hims-software",
-        relevanceScore: 15,
-        medical365: {
-            position: 14,
-            previousPosition: 17,
-            baseClicks: 195,
-            baseImpressions: 8120,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "best dental management software",
+        "canonical": "best dental management software",
+        "intent": "commercial",
+        "targetUrl": "/blogs/best-dental-software-india",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 12.81,
+            "previousPosition": 19,
+            "baseClicks": 0,
+            "baseImpressions": 26,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 4, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 10, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 8,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 3,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "canteen management software hospitals",
-        canonical: "canteen management software hospitals",
-        intent: "commercial",
-        targetUrl: "/canteen-management-software-hospitals-sikar",
-        relevanceScore: 12,
-        medical365: {
-            position: 6,
-            previousPosition: 8,
-            baseClicks: 94,
-            baseImpressions: 1980,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "is nabh mandatory for ayushman bharat",
+        "canonical": "is nabh mandatory for ayushman bharat",
+        "intent": "informational",
+        "targetUrl": "/blogs/nabh-compliance-guide",
+        "relevanceScore": 14,
+        "medical365": {
+            "position": 6.56,
+            "previousPosition": 8.5,
+            "baseClicks": 0,
+            "baseImpressions": 16,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 15, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: null, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 4,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 9,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "hospital inventory asset management",
-        canonical: "hospital inventory asset management",
-        intent: "commercial",
-        targetUrl: "/medical-asset-inventory-management-jodhpur",
-        relevanceScore: 13,
-        medical365: {
-            position: 10,
-            previousPosition: 15,
-            baseClicks: 132,
-            baseImpressions: 3640,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "clinic management system jaipur",
+        "canonical": "clinic management system jaipur",
+        "intent": "transactional",
+        "targetUrl": "/clinic-management-system-jaipur",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 20.24,
+            "previousPosition": 28,
+            "baseClicks": 0,
+            "baseImpressions": 140,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 8, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 13, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 7,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 4,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     },
     {
-        keyword: "patient appointment booking software jaipur",
-        canonical: "patient appointment booking software jaipur",
-        intent: "transactional",
-        targetUrl: "/book-demo",
-        relevanceScore: 14,
-        medical365: {
-            position: 4,
-            previousPosition: 6,
-            baseClicks: 220,
-            baseImpressions: 3950,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
+        "keyword": "hospital bed management system",
+        "canonical": "hospital bed management system",
+        "intent": "commercial",
+        "targetUrl": "/hospital-bed-management",
+        "relevanceScore": 15,
+        "medical365": {
+            "position": 30.35,
+            "previousPosition": 42,
+            "baseClicks": 1,
+            "baseImpressions": 115,
+            "sourceType": "LIVE",
+            "provider": "Google Search Console"
         },
-        competitors: {
-            mocdoc: { position: 9, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 2, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
-        }
-    },
-    {
-        keyword: "multi facility hospital software india",
-        canonical: "multi facility hospital software india",
-        intent: "commercial",
-        targetUrl: "/multi-facility-hospital-software-jaipur",
-        relevanceScore: 14,
-        medical365: {
-            position: 9,
-            previousPosition: 12,
-            baseClicks: 148,
-            baseImpressions: 4210,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
-        },
-        competitors: {
-            mocdoc: { position: 7, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 11, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
-        }
-    },
-    {
-        keyword: "hospital token queue management",
-        canonical: "hospital token queue management",
-        intent: "commercial",
-        targetUrl: "/features",
-        relevanceScore: 12,
-        medical365: {
-            position: null, // Test case: Missing gap
-            previousPosition: null,
-            baseClicks: 15,
-            baseImpressions: 890,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
-        },
-        competitors: {
-            mocdoc: { position: 3, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: 8, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
-        }
-    },
-    {
-        keyword: "ayushman bharat hospital software integration",
-        canonical: "ayushman bharat hospital software integration",
-        intent: "transactional",
-        targetUrl: "/pradhan-mantri-yojana-support-software-ajmer",
-        relevanceScore: 15,
-        medical365: {
-            position: 5,
-            previousPosition: 7,
-            baseClicks: 310,
-            baseImpressions: 6780,
-            sourceType: "LIVE",
-            provider: "Google Search Console"
-        },
-        competitors: {
-            mocdoc: { position: 10, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" },
-            practo: { position: null, sourceType: "PUBLIC", provider: "Public SERP Snapshot", checkedAt: "2026-08-30" }
+        "competitors": {
+            "mocdoc": {
+                "position": 5,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            },
+            "practo": {
+                "position": 22,
+                "sourceType": "PUBLIC",
+                "provider": "Public SERP Snapshot",
+                "checkedAt": "2026-08-30"
+            }
         }
     }
 ];
+
 
 // ==========================================
 // 2.4 Centralized Keyword & Competitor Calculation Engine
