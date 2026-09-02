@@ -1,0 +1,119 @@
+[
+  {
+    "url": "/",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 6,
+      "external_scripts": 3,
+      "google_fonts_usage": 10,
+      "estimated_dom_size_bytes": 184641
+    }
+  },
+  {
+    "url": "/hims-software",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 2,
+      "external_scripts": 3,
+      "google_fonts_usage": 3,
+      "estimated_dom_size_bytes": 107830
+    }
+  },
+  {
+    "url": "/nabh-compliant-hospital-software",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 2,
+      "external_scripts": 3,
+      "google_fonts_usage": 3,
+      "estimated_dom_size_bytes": 107830
+    }
+  },
+  {
+    "url": "/hospital-bed-management",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 2,
+      "external_scripts": 4,
+      "google_fonts_usage": 0,
+      "estimated_dom_size_bytes": 114304
+    }
+  },
+  {
+    "url": "/blogs/abha-integration-guide",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 2,
+      "external_scripts": 3,
+      "google_fonts_usage": 1,
+      "estimated_dom_size_bytes": 110766
+    }
+  },
+  {
+    "url": "/blood-bank",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 2,
+      "external_scripts": 4,
+      "google_fonts_usage": 1,
+      "estimated_dom_size_bytes": 116297
+    }
+  },
+  {
+    "url": "/pricing",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 2,
+      "external_scripts": 4,
+      "google_fonts_usage": 3,
+      "estimated_dom_size_bytes": 130749
+    }
+  },
+  {
+    "url": "/blogs/nabh-compliance-guide",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 2,
+      "external_scripts": 3,
+      "google_fonts_usage": 1,
+      "estimated_dom_size_bytes": 108997
+    }
+  },
+  {
+    "url": "/blogs/medical365-vs-practo",
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
+    "static_readiness": {
+      "images_without_dimensions": 2,
+      "external_scripts": 1,
+      "google_fonts_usage": 0,
+      "estimated_dom_size_bytes": 129492
+    }
+  }
+]

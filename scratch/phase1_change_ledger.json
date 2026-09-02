@@ -1,0 +1,369 @@
+[
+  {
+    "file": "hims-software.html",
+    "title": "HIMS Software India | Cloud Hospital Management System — Medical365",
+    "h1": "HIMS Software India: Complete Hospital Operations &amp; ABDM Management",
+    "canonical": "https://www.medical365.in/hims-software",
+    "schema_types": [
+      "SoftwareApplication",
+      "Organization",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "pricing",
+      "blood-bank",
+      "nabh-compliant-hospital-software",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "nabh-compliant-hospital-software.html",
+    "title": "NABH Compliant Hospital Software | 5th Edition Digital Ready — Medical365",
+    "h1": "NABH Compliant Hospital Software: Built for Digital Quality &amp; Audit Readiness",
+    "canonical": "https://www.medical365.in/nabh-compliant-hospital-software",
+    "schema_types": [
+      "SoftwareApplication",
+      "Organization",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "hims-software",
+      "pricing",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "hospital-bed-management.html",
+    "title": "Hospital Bed Management Software India | Live Ward Occupancy &amp; Transfers — Medical365",
+    "h1": "Hospital Bed Management Software: Real-Time Ward &amp; Occupancy Tracking",
+    "canonical": "https://www.medical365.in/hospital-bed-management",
+    "schema_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "pricing",
+      "hims-software",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "blogs/abha-integration-guide.html",
+    "title": "ABDM Compliant HMS Software &amp; ABHA Integration Guide 2026 | Medical365",
+    "h1": "ABDM Compliant HMS Software: Complete ABHA Integration Guide for Hospitals",
+    "canonical": "https://www.medical365.in/blogs/abha-integration-guide",
+    "schema_types": [
+      "BlogPosting",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "/hims-software",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "blood-bank.html",
+    "title": "Blood Bank Software India | Donor Lifecycle &amp; Inventory Tracking — Medical365",
+    "h1": "Blood Bank Software India: Complete Donor Lifecycle &amp; Component Management",
+    "canonical": "https://www.medical365.in/blood-bank",
+    "schema_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "pricing",
+      "hims-software",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "pricing.html",
+    "title": "Hospital Software Pricing Plans India (100% Transparent) — Medical365",
+    "h1": "Simple, Transparent Pricing for Indian Healthcare",
+    "canonical": "https://www.medical365.in/pricing",
+    "schema_types": [
+      "LocalBusiness",
+      "SoftwareApplication",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "hims-software",
+      "blood-bank",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "index.html",
+    "title": "Medical365 | #1 Hospital Management Software India | ABDM & NABH Compliant",
+    "h1": "Empowering India's Hospitals with \r\n                    Next-Gen Digital Workflows",
+    "canonical": "https://www.medical365.in/",
+    "schema_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage",
+      "WebSite"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "pricing",
+      "hims-software",
+      "nabh-compliant-hospital-software",
+      "blood-bank",
+      "hospital-bed-management",
+      "blood-bank-software-udaipur",
+      "hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "multilingual-hims.html",
+    "title": "Multilingual HIMS | Medical365",
+    "h1": "Modern Multilingual HIMS",
+    "canonical": "https://www.medical365.in/multilingual-hims",
+    "schema_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "hims-software",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "hospital-management-software-jaipur.html",
+    "title": "Hospital Management Software in Jaipur | Medical365",
+    "h1": "Hospital Management Software in Jaipur",
+    "canonical": "https://www.medical365.in/hospital-management-software-jaipur",
+    "schema_types": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage",
+      "LocalBusiness",
+      "SoftwareApplication",
+      "SoftwareApplication",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "hims-software",
+      "hospital-bed-management-software-jaipur",
+      "hospital-bed-management-software-bapu-nagar",
+      "hospital-bed-management-software-bapu-nagar-jaipur",
+      "hospital-bed-management-software-udaipur",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "hospital-management-software-delhi.html",
+    "title": "Hospital Management Software in Delhi | Medical365",
+    "h1": "Hospital Management Software in Delhi",
+    "canonical": "https://www.medical365.in/hospital-management-software-delhi",
+    "schema_types": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage",
+      "LocalBusiness",
+      "SoftwareApplication",
+      "SoftwareApplication",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "hims-software",
+      "hospital-bed-management-software-delhi",
+      "hospital-bed-management-software-bapu-nagar",
+      "hospital-bed-management-software-bapu-nagar-jaipur",
+      "hospital-bed-management-software-udaipur",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "hospital-management-software-ahmedabad.html",
+    "title": "Hospital Management Software in Ahmedabad | Medical365",
+    "h1": "Hospital Management Software in Ahmedabad",
+    "canonical": "https://www.medical365.in/hospital-management-software-ahmedabad",
+    "schema_types": [
+      "SoftwareApplication",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage",
+      "LocalBusiness",
+      "SoftwareApplication",
+      "SoftwareApplication",
+      "FAQPage"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "hims-software",
+      "hospital-bed-management-software-ahmedabad",
+      "hospital-bed-management-software-bapu-nagar",
+      "hospital-bed-management-software-bapu-nagar-jaipur",
+      "hospital-bed-management-software-udaipur",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  },
+  {
+    "file": "blogs/nabh-compliance-guide.html",
+    "title": "What is NABH Compliance? Complete Guide for Indian Hospitals 2026 | Medical365",
+    "h1": "What is NABH Compliance? Complete Guide for Indian Hospitals 2026",
+    "canonical": "https://www.medical365.in/blogs/nabh-compliance-guide",
+    "schema_types": [
+      "BlogPosting"
+    ],
+    "schema_status": "VALID",
+    "synthetic_rating_present": false,
+    "telemetry": {
+      "gtm": true,
+      "gtag": true,
+      "cta": true
+    },
+    "internal_links_connected": [
+      "/pricing",
+      "/blood-bank",
+      "hospital-bed-management",
+      "/nabh-compliant-hospital-software",
+      "/hims-software",
+      "/blood-bank-software-udaipur",
+      "/hospital-bed-management-software-bapu-nagar-jaipur"
+    ],
+    "validation_status": "PASS"
+  }
+]

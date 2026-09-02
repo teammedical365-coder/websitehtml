@@ -9811,23 +9811,75 @@
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.medical365.in/book-demo?location=Malviya%20Nagar,%20Jaipur</loc>
-        <lastmod>2026-08-22</lastmod>
-        <priority>0.51</priority>
+        <loc>https://www.medical365.in/hims-software</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
     </url>
     <url>
-        <loc>https://www.medical365.in/book-demo?location=Jagatpura,%20Jaipur</loc>
-        <lastmod>2026-08-22</lastmod>
-        <priority>0.51</priority>
+        <loc>https://www.medical365.in/nabh-compliant-hospital-software</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
     </url>
     <url>
-        <loc>https://www.medical365.in/book-demo?location=Tonk%20Road,%20Jaipur</loc>
-        <lastmod>2026-08-22</lastmod>
-        <priority>0.51</priority>
+        <loc>https://www.medical365.in/blogs/abha-integration-guide</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.medical365.in/book-demo?location=Jhotwara,%20Jaipur</loc>
-        <lastmod>2026-08-22</lastmod>
-        <priority>0.51</priority>
+        <loc>https://www.medical365.in/blogs/medical365-vs-practo</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.medical365.in/blogs/nabh-compliance-guide</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.medical365.in/blogs/dpdp-act-2023-hospitals</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.medical365.in/blogs/opd-queue-management</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.medical365.in/blogs/hospital-billing-software-india</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.medical365.in/blogs/cloud-vs-onpremise-hms</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.medical365.in/blogs/hospital-pharmacy-software</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.medical365.in/blogs/lims-vs-manual-lab</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://www.medical365.in/blogs/telemedicine-india-guide</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
     </url>
 </urlset>

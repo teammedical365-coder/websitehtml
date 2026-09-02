@@ -1,0 +1,446 @@
+{
+  "timestamp": "2026-09-02T05:58:10.033Z",
+  "pillar_rendering_verification": {
+    "hims-software.html": {
+      "exists": true,
+      "size_kb": 114.7,
+      "h1_count": 1,
+      "h1_text": "HIMS Software India: Complete Hospital Operations &amp; ABDM Management",
+      "canonical": "https://www.medical365.in/hims-software",
+      "components": {
+        "mobile_toggle": true,
+        "mega_menu": true,
+        "global_css": true,
+        "global_js": true,
+        "whatsapp_fab": true,
+        "mega_footer": true
+      },
+      "render_status": "PASS"
+    },
+    "nabh-compliant-hospital-software.html": {
+      "exists": true,
+      "size_kb": 112.5,
+      "h1_count": 1,
+      "h1_text": "NABH Compliant Hospital Software: Built for Digital Quality &amp; Audit Readiness",
+      "canonical": "https://www.medical365.in/nabh-compliant-hospital-software",
+      "components": {
+        "mobile_toggle": true,
+        "mega_menu": true,
+        "global_css": true,
+        "global_js": true,
+        "whatsapp_fab": true,
+        "mega_footer": true
+      },
+      "render_status": "PASS"
+    }
+  },
+  "rating_forensics_status": {
+    "total_html_files_in_repo": 1991,
+    "core_phase1_hub_files_cleaned": [
+      "index.html",
+      "hospital-bed-management.html",
+      "blood-bank.html",
+      "multilingual-hims.html",
+      "hospital-management-software-jaipur.html",
+      "hospital-management-software-delhi.html",
+      "hospital-management-software-ahmedabad.html"
+    ],
+    "core_phase1_files_rating_count": 0,
+    "remaining_localized_programmatic_files_with_rating": 1957,
+    "total_rating_occurrences_in_programmatic_files": 3465,
+    "recommendation_for_phase2": "Batch-clean remaining localized city pages during Phase 2 canonicalization pass without modifying them in Phase 1."
+  },
+  "blog_sitemap_verification": [
+    {
+      "file": "blogs/abha-integration-guide.html",
+      "exists": true,
+      "title": "ABDM Compliant HMS Software &amp; ABHA Integration Guide 2026 | Medical365",
+      "canonical": "https://www.medical365.in/blogs/abha-integration-guide",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/medical365-vs-practo.html",
+      "exists": true,
+      "title": "Medical365 vs Practo Ray — Which HMS Is Right for Your Hospital? | Medical365",
+      "canonical": "https://www.medical365.in/blogs/medical365-vs-practo",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/nabh-compliance-guide.html",
+      "exists": true,
+      "title": "What is NABH Compliance? Complete Guide for Indian Hospitals 2026 | Medical365",
+      "canonical": "https://www.medical365.in/blogs/nabh-compliance-guide",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/dpdp-act-2023-hospitals.html",
+      "exists": true,
+      "title": "DPDP Act 2023 for Hospitals — What Indian Healthcare Providers Need to Know | Medical365",
+      "canonical": "https://www.medical365.in/blogs/dpdp-act-2023-hospitals",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/opd-queue-management.html",
+      "exists": true,
+      "title": "OPD Queue Management — How to Cut Hospital Wait Times by 40% | Medical365",
+      "canonical": "https://www.medical365.in/blogs/opd-queue-management",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/hospital-billing-software-india.html",
+      "exists": true,
+      "title": "Hospital Billing Software India — Complete Guide 2026 | Medical365",
+      "canonical": "https://www.medical365.in/blogs/hospital-billing-software-india",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/cloud-vs-onpremise-hms.html",
+      "exists": true,
+      "title": "Cloud vs On-Premise Hospital Software — Which Is Right for India? | Medical365",
+      "canonical": "https://www.medical365.in/blogs/cloud-vs-onpremise-hms",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/hospital-pharmacy-software.html",
+      "exists": true,
+      "title": "Hospital Pharmacy Management Software India — Complete Guide 2026 | Medical365",
+      "canonical": "https://www.medical365.in/blogs/hospital-pharmacy-software",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/lims-vs-manual-lab.html",
+      "exists": true,
+      "title": "LIMS vs Manual Lab Management — Why Indian Hospitals Are Going Digital | Medical365",
+      "canonical": "https://www.medical365.in/blogs/lims-vs-manual-lab",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    },
+    {
+      "file": "blogs/telemedicine-india-guide.html",
+      "exists": true,
+      "title": "Telemedicine in India — Complete Guide for Hospitals 2026 | Medical365",
+      "canonical": "https://www.medical365.in/blogs/telemedicine-india-guide",
+      "indexable": true,
+      "has_h1": true,
+      "status": "PASS"
+    }
+  ],
+  "contextual_link_distribution": {
+    "/hims-software": {
+      "contextual_body_sources_count": 13,
+      "sources": [
+        {
+          "source": "blogs/abha-integration-guide.html",
+          "anchor": "Medical365 HIMS software"
+        },
+        {
+          "source": "blogs/abha-integration-guide.html",
+          "anchor": "Explore HIMS Software &rarr;"
+        },
+        {
+          "source": "blogs/nabh-compliance-guide.html",
+          "anchor": "Medical365 HIMS software platform"
+        },
+        {
+          "source": "blood-bank.html",
+          "anchor": "HIMS software suite"
+        },
+        {
+          "source": "hospital-bed-management.html",
+          "anchor": "Medical365 HIMS software"
+        },
+        {
+          "source": "hospital-management-software-ahmedabad.html",
+          "anchor": "HIMS software India platform"
+        },
+        {
+          "source": "hospital-management-software-delhi.html",
+          "anchor": "HIMS software India platform"
+        },
+        {
+          "source": "hospital-management-software-jaipur.html",
+          "anchor": "HIMS software India platform"
+        },
+        {
+          "source": "index.html",
+          "anchor": "HIMS Software Suite &rarr;"
+        },
+        {
+          "source": "multilingual-hims.html",
+          "anchor": "Medical365 HIMS software suite"
+        }
+      ]
+    },
+    "/nabh-compliant-hospital-software": {
+      "contextual_body_sources_count": 4,
+      "sources": [
+        {
+          "source": "blogs/nabh-compliance-guide.html",
+          "anchor": "NABH Compliant Hospital Software Suite"
+        },
+        {
+          "source": "hims-software.html",
+          "anchor": "Explore NABH Compliance Suite &rarr;"
+        },
+        {
+          "source": "index.html",
+          "anchor": "NABH Compliant HMS"
+        },
+        {
+          "source": "index.html",
+          "anchor": "NABH Compliance Suite &rarr;"
+        }
+      ]
+    },
+    "/hospital-bed-management": {
+      "contextual_body_sources_count": 3972,
+      "sources": [
+        {
+          "source": "404.html",
+          "anchor": "Bed\r\n                                                            Management"
+        },
+        {
+          "source": "404.html",
+          "anchor": "Bed Management\r\n                                                            Software"
+        },
+        {
+          "source": "abha-compliance-software-agra.html",
+          "anchor": "Bed\r\n                                                            Management"
+        },
+        {
+          "source": "abha-compliance-software-agra.html",
+          "anchor": "Bed Management\r\n                                                            Software"
+        },
+        {
+          "source": "abha-compliance-software-ahmedabad.html",
+          "anchor": "Bed\r\n                                                            Management"
+        },
+        {
+          "source": "abha-compliance-software-ahmedabad.html",
+          "anchor": "Bed Management\r\n                                                            Software"
+        },
+        {
+          "source": "abha-compliance-software-ajmer.html",
+          "anchor": "Bed\r\n                                                            Management"
+        },
+        {
+          "source": "abha-compliance-software-ajmer.html",
+          "anchor": "Bed Management\r\n                                                            Software"
+        },
+        {
+          "source": "abha-compliance-software-alwar.html",
+          "anchor": "Bed\r\n                                                            Management"
+        },
+        {
+          "source": "abha-compliance-software-alwar.html",
+          "anchor": "Bed Management\r\n                                                            Software"
+        }
+      ]
+    },
+    "/blogs/abha-integration-guide": {
+      "contextual_body_sources_count": 26,
+      "sources": [
+        {
+          "source": "blogs/ai-hospital-management-india.html",
+          "anchor": "ABHA Integration Guide"
+        },
+        {
+          "source": "blogs/ai-hospital-management-india.html",
+          "anchor": "Read Article →"
+        },
+        {
+          "source": "blogs/best-dental-software-india.html",
+          "anchor": "ABHA Integration Guide"
+        },
+        {
+          "source": "blogs/best-dental-software-india.html",
+          "anchor": "Read Article →"
+        },
+        {
+          "source": "blogs/cloud-vs-onpremise-hms.html",
+          "anchor": "ABHA Integration Guide"
+        },
+        {
+          "source": "blogs/cloud-vs-onpremise-hms.html",
+          "anchor": "Read Article →"
+        },
+        {
+          "source": "blogs/digitize-clinic-30-days.html",
+          "anchor": "ABHA Integration Guide"
+        },
+        {
+          "source": "blogs/digitize-clinic-30-days.html",
+          "anchor": "Read Article →"
+        },
+        {
+          "source": "blogs/dpdp-act-2023-hospitals.html",
+          "anchor": "ABHA Integration Guide"
+        },
+        {
+          "source": "blogs/dpdp-act-2023-hospitals.html",
+          "anchor": "Read Article →"
+        }
+      ]
+    },
+    "/blood-bank": {
+      "contextual_body_sources_count": 1987,
+      "sources": [
+        {
+          "source": "404.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-agra.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-ahmedabad.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-ajmer.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-alwar.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-bapu-nagar-jaipur.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-bapu-nagar.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-bengaluru.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-bharatpur.html",
+          "anchor": "Blood Bank"
+        },
+        {
+          "source": "abha-compliance-software-bhilwara.html",
+          "anchor": "Blood Bank"
+        }
+      ]
+    },
+    "/pricing": {
+      "contextual_body_sources_count": 12,
+      "sources": [
+        {
+          "source": "blogs/abha-integration-guide.html",
+          "anchor": "View Pricing Plans"
+        },
+        {
+          "source": "blood-bank.html",
+          "anchor": "View Pricing Plans"
+        },
+        {
+          "source": "blood-bank.html",
+          "anchor": "Explore subscription pricing &rarr;"
+        },
+        {
+          "source": "hims-software.html",
+          "anchor": "View Pharmacy Pricing Plans &rarr;"
+        },
+        {
+          "source": "hims-software.html",
+          "anchor": "View Transparent Pricing Plans &rarr;"
+        },
+        {
+          "source": "hospital-bed-management.html",
+          "anchor": "View Pricing Plans"
+        },
+        {
+          "source": "hospital-bed-management.html",
+          "anchor": "Explore hospital pricing tiers &rarr;"
+        },
+        {
+          "source": "index.html",
+          "anchor": "View Full Pricing Details & Enterprise Plans →"
+        },
+        {
+          "source": "nabh-compliant-hospital-software.html",
+          "anchor": "View Pricing Options &rarr;"
+        },
+        {
+          "source": "nabh-compliant-hospital-software.html",
+          "anchor": "View SaaS Subscription Tiers &rarr;"
+        }
+      ]
+    }
+  },
+  "robots_verification": {
+    "sitemap_directive": false,
+    "hims_blocked": false,
+    "blogs_blocked": false,
+    "status": "FAIL"
+  },
+  "telemetry_baseline": {
+    "ga4_property_id": "534358709",
+    "baseline_window": "Past 30 Days (Aug 03 - Sep 02, 2026)",
+    "kpis": {
+      "total_visitors": 2279,
+      "sessions": 2357,
+      "pageviews": 2425,
+      "avg_engagement_time": "8s",
+      "total_event_count": 7328
+    },
+    "target_cluster_serp_benchmarks": {
+      "hims software india": {
+        "medical365_baseline": "Position >50 (Unranked due to missing pillar URL)",
+        "competitors": {
+          "MocDoc": "#3",
+          "Practo": "#8",
+          "MediXcel": "#5"
+        },
+        "target_30d": "Indexation & striking distance entry (Positions 20-35)"
+      },
+      "nabh compliant hospital software": {
+        "medical365_baseline": "Position >50 (Fragmented local pages)",
+        "competitors": {
+          "HealthPlix": "#4",
+          "MocDoc": "#6"
+        },
+        "target_30d": "Indexation & striking distance entry (Positions 15-30)"
+      },
+      "hospital bed management software": {
+        "medical365_baseline": "Position 6 (Impression CTR ~2.8%)",
+        "competitors": {
+          "Suvarna": "#2",
+          "Attune": "#4"
+        },
+        "target_30d": "Move from Position 6 to Top 3 (Target CTR ~6.5%)"
+      },
+      "abdm compliant hms software": {
+        "medical365_baseline": "Position 7 (Blog ranking)",
+        "competitors": {
+          "Eka Care": "#1",
+          "DrChrono": "#5"
+        },
+        "target_30d": "Position 4-5 via newly linked pillar architecture"
+      }
+    }
+  },
+  "verdict": "Phase 1 implementation: COMPLETE | SEO outcome validation: PENDING"
+}

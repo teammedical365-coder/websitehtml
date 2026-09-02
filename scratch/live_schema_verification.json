@@ -1,0 +1,146 @@
+[
+  {
+    "url": "/",
+    "live_status": 200,
+    "json_ld_blocks_count": 3,
+    "valid_blocks": 3,
+    "parse_errors": 0,
+    "extracted_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage",
+      "WebSite"
+    ],
+    "aggregate_rating_present": true,
+    "review_present": false,
+    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+  },
+  {
+    "url": "/hims-software",
+    "live_status": 404,
+    "json_ld_blocks_count": 2,
+    "valid_blocks": 2,
+    "parse_errors": 0,
+    "extracted_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "aggregate_rating_present": true,
+    "review_present": false,
+    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+  },
+  {
+    "url": "/nabh-compliant-hospital-software",
+    "live_status": 404,
+    "json_ld_blocks_count": 2,
+    "valid_blocks": 2,
+    "parse_errors": 0,
+    "extracted_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "aggregate_rating_present": true,
+    "review_present": false,
+    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+  },
+  {
+    "url": "/hospital-bed-management",
+    "live_status": 200,
+    "json_ld_blocks_count": 2,
+    "valid_blocks": 2,
+    "parse_errors": 0,
+    "extracted_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "aggregate_rating_present": true,
+    "review_present": false,
+    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+  },
+  {
+    "url": "/blogs/abha-integration-guide",
+    "live_status": 200,
+    "json_ld_blocks_count": 2,
+    "valid_blocks": 2,
+    "parse_errors": 0,
+    "extracted_types": [
+      "BlogPosting",
+      "FAQPage"
+    ],
+    "aggregate_rating_present": false,
+    "review_present": false,
+    "classification": "SCHEMA_CLEAN"
+  },
+  {
+    "url": "/blood-bank",
+    "live_status": 200,
+    "json_ld_blocks_count": 3,
+    "valid_blocks": 3,
+    "parse_errors": 0,
+    "extracted_types": [
+      "SoftwareApplication",
+      "Organization",
+      "LocalBusiness",
+      "BreadcrumbList",
+      "FAQPage",
+      "Product"
+    ],
+    "aggregate_rating_present": true,
+    "review_present": true,
+    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+  },
+  {
+    "url": "/pricing",
+    "live_status": 200,
+    "json_ld_blocks_count": 1,
+    "valid_blocks": 1,
+    "parse_errors": 0,
+    "extracted_types": [
+      "LocalBusiness",
+      "SoftwareApplication",
+      "FAQPage"
+    ],
+    "aggregate_rating_present": false,
+    "review_present": false,
+    "classification": "SCHEMA_CLEAN"
+  },
+  {
+    "url": "/blogs/nabh-compliance-guide",
+    "live_status": 200,
+    "json_ld_blocks_count": 1,
+    "valid_blocks": 1,
+    "parse_errors": 0,
+    "extracted_types": [
+      "BlogPosting"
+    ],
+    "aggregate_rating_present": false,
+    "review_present": false,
+    "classification": "SCHEMA_CLEAN"
+  },
+  {
+    "url": "/blogs/medical365-vs-practo",
+    "live_status": 200,
+    "json_ld_blocks_count": 3,
+    "valid_blocks": 3,
+    "parse_errors": 0,
+    "extracted_types": [
+      "BlogPosting",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "aggregate_rating_present": false,
+    "review_present": false,
+    "classification": "SCHEMA_CLEAN"
+  }
+]

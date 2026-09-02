@@ -1,0 +1,51 @@
+{
+  "http_status": 200,
+  "content": "# ==============================================================================\n# MEDICAL365 ROBOTS.TXT — v3.0\n# Optimized for Google, Bing, and AI Crawlers\n# ==============================================================================\n\nUser-agent: *\nAllow: /\nAllow: /global-styles.css\nAllow: /global-scripts.js\nAllow: /logo/\nAllow: /images/\n\n# Block Sensitive & System Directories\nDisallow: /admin/\nDisallow: /config/\nDisallow: /cgi-bin/\nDisallow: /private/\nDisallow: /temp/\nDisallow: /superadmin\nDisallow: /superadmin.html\n\n# Block SEO Generated Pages & Templates\nDisallow: /templates\nDisallow: /templates.html\nDisallow: /free-webpage\nDisallow: /free-webpage.html\nDisallow: /seo_template\nDisallow: /seo_template.html\n\n# Standardized Link to Sitemap\nSitemap: https://medical365.in/sitemap.xml\n",
+  "sitemap_declarations": [
+    "https://medical365.in/sitemap.xml"
+  ],
+  "disallow_rules": [
+    "/admin/",
+    "/config/",
+    "/cgi-bin/",
+    "/private/",
+    "/temp/",
+    "/superadmin",
+    "/superadmin.html",
+    "/templates",
+    "/templates.html",
+    "/free-webpage",
+    "/free-webpage.html",
+    "/seo_template",
+    "/seo_template.html"
+  ],
+  "allow_rules": [
+    "/",
+    "/global-styles.css",
+    "/global-scripts.js",
+    "/logo/",
+    "/images/",
+    "/admin/",
+    "/config/",
+    "/cgi-bin/",
+    "/private/",
+    "/temp/",
+    "/superadmin",
+    "/superadmin.html",
+    "/templates",
+    "/templates.html",
+    "/free-webpage",
+    "/free-webpage.html",
+    "/seo_template",
+    "/seo_template.html"
+  ],
+  "target_urls_status": {
+    "/hims-software": "ALLOWED",
+    "/nabh-compliant-hospital-software": "ALLOWED",
+    "/hospital-bed-management": "ALLOWED",
+    "/pricing": "ALLOWED",
+    "/blood-bank": "ALLOWED",
+    "/blogs/": "ALLOWED"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ACT-01",
+    "severity": "P0",
+    "category": "DEPLOYMENT_SYNC",
+    "url": "https://www.medical365.in",
+    "finding": "Phase 1 code modifications currently reside in local working tree. The live production server still serves pre-Phase 1 build.",
+    "evidence": "Live /hims-software returns 404; live pricing.html has old title 'Pricing Plans - Medical365'.",
+    "recommended_action": "Stage, commit, and push Phase 1 working tree branch to origin/main when approved for deployment.",
+    "phase": "Phase 2 Preparation / Git Push",
+    "production_change_made": false
+  },
+  {
+    "id": "ACT-02",
+    "severity": "P1",
+    "category": "SCHEMA_RATING_CLEANUP",
+    "url": "https://www.medical365.in/*",
+    "finding": "1,737 programmatic localized city pages still host legacy AggregateRating boilerplate.",
+    "evidence": "Grep confirmed 1,737 HTML files containing ratingValue: 4.8 / reviewCount: 120.",
+    "recommended_action": "Batch-clean remaining localized city pages in Phase 2 during canonicalization consolidation.",
+    "phase": "Phase 2",
+    "production_change_made": false
+  },
+  {
+    "id": "ACT-03",
+    "severity": "P2",
+    "category": "ROBOTS_SITEMAP_HEADER",
+    "url": "https://www.medical365.in/robots.txt",
+    "finding": "robots.txt declares 'Sitemap: https://medical365.in/sitemap.xml' (non-www) instead of canonical 'https://www.medical365.in/sitemap.xml'.",
+    "evidence": "Line 31 in robots.txt: Sitemap: https://medical365.in/sitemap.xml",
+    "recommended_action": "Update robots.txt sitemap directive to canonical www URL in Phase 2.",
+    "phase": "Phase 2",
+    "production_change_made": false
+  }
+]
