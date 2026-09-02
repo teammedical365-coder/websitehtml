@@ -874,6 +874,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ══════════════════════════════════════════════════ -->
     <section class="pricing-section" id="full-pricing" style="padding-top: 0;">
         <div class="container">
+            <!-- Interactive Zero-Latency Plan Switcher -->
+            <div class="pricing-switcher-wrapper">
+                <div class="pricing-switcher" role="tablist" aria-label="Billing frequency toggle">
+                    <button type="button" class="switch-btn active" id="btn-annual" role="tab" aria-selected="true" aria-controls="full-pricing">
+                        Billed Annually <span class="discount-pill">Save 50%</span>
+                    </button>
+                    <button type="button" class="switch-btn" id="btn-monthly" role="tab" aria-selected="false" aria-controls="full-pricing">
+                        Billed Monthly
+                    </button>
+                </div>
+            </div>
+
             <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 
                 <!-- Plan 1 -->
