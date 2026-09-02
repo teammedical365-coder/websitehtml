@@ -1,143 +1,200 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="100%" height="100%" style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); border-radius: 16px; border: 1px solid #e2e8f0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="100%" height="100%" style="background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
     <defs>
-        <filter id="shadow" x="-5%" y="-10%" width="115%" height="130%">
-            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.06"/>
+        <filter id="cardShadow" x="-10%" y="-10%" width="125%" height="130%">
+            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.06"/>
         </filter>
-        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#b91c1c"/>
-            <stop offset="100%" stop-color="#1e293b"/>
+        <linearGradient id="brandBarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#1A56DB"/>
+            <stop offset="60%" stop-color="#b91c1c"/>
+            <stop offset="100%" stop-color="#0f172a"/>
         </linearGradient>
+        <linearGradient id="logoCrossGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#37B39C"/>
+            <stop offset="100%" stop-color="#1A56DB"/>
+        </linearGradient>
+        <pattern id="bgGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+            <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+        </pattern>
     </defs>
-    <!-- Background grid -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-        <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#f1f5f9" stroke-width="1"/>
-    </pattern>
-    <rect width="960" height="420" fill="url(#grid)"/>
 
-    <!-- Header Banner -->
-    <rect x="0" y="0" width="960" height="70" fill="url(#headerGrad)"/>
-    <text x="35" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#ffffff" letter-spacing="0.5">
-        MEDICAL365 CLINICAL WORKFLOW ARCHITECTURE
-    </text>
-    <text x="925" y="42" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">
-        ONCOLOGY EMR MODULE
-    </text>
+    <!-- Subtle Background Grid -->
+    <rect width="960" height="440" fill="url(#bgGrid)"/>
 
-    <!-- Subtitle -->
-    <text x="35" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#0f172a">
-        Oncology AJCC TNM Cancer Staging & Prognostic Workflow
-    </text>
-    <text x="35" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b">
-        Automated bidirectional data flow connecting diagnostic modalities, clinical reviews, and hospital EMR.
-    </text>
+    <!-- Top Header Bar with Medical365 Brand Logo -->
+    <rect x="0" y="0" width="960" height="74" fill="#0f172a"/>
+    <rect x="0" y="71" width="960" height="3" fill="url(#brandBarGrad)"/>
 
-    <!-- Workflow Nodes -->
+    <!-- Official Medical365 Logo Vector Mark -->
+    <g transform="translate(32, 18)">
+        <!-- Logo Shield / Cross Icon -->
+        <rect x="0" y="0" width="38" height="38" rx="10" fill="url(#logoCrossGrad)"/>
+        <path d="M 19 9 L 19 29 M 9 19 L 29 19" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- Brand Typography -->
+        <text x="48" y="22" font-size="18" font-weight="900" fill="#ffffff" letter-spacing="-0.3">MEDICAL<tspan fill="#37B39C">365</tspan></text>
+        <text x="49" y="34" font-size="8.5" font-weight="700" fill="#94a3b8" letter-spacing="1">HOSPITAL MANAGEMENT SYSTEM</text>
+    </g>
+
+    <!-- Top-Right Category Pill -->
+    <g transform="translate(720, 22)">
+        <rect width="208" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+        <circle cx="16" cy="15" r="5" fill="#37B39C"/>
+        <text x="30" y="19" font-size="10.5" font-weight="800" fill="#ffffff" letter-spacing="0.5">
+            ONCOLOGY CLINICAL PIPELINE
+        </text>
+    </g>
+
+    <!-- Diagram Title & Subtitle Banner -->
+    <g transform="translate(32, 104)">
+        <text x="0" y="20" font-size="18" font-weight="850" fill="#0f172a" letter-spacing="-0.3">
+            Oncology AJCC TNM Cancer Staging & Prognostic Workflow
+        </text>
+        <text x="0" y="42" font-size="12.5" font-weight="500" fill="#64748b">
+            Closed-loop bidirectional data flow integrating point-of-care clinical capture, diagnostic instruments, and EMR records.
+        </text>
+    </g>
+
+    <!-- 5-Node Interactive Workflow Flowchart -->
     
         <!-- Node 1: Multidisciplinary Tumor Board Intake -->
-        <g transform="translate(30, 175)">
-            <rect width="150" height="70" rx="12" fill="#ffffff" stroke="#b91c1c" stroke-width="2" filter="url(#shadow)"/>
-            <rect width="150" height="6" rx="3" fill="#b91c1c"/>
-            <text x="75" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#1e293b">
-                STEP 1
+        <g transform="translate(30, 185)">
+            <rect width="152" height="78" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <rect width="152" height="5" rx="2.5" fill="#b91c1c"/>
+            <rect x="10" y="12" width="52" height="18" rx="9" fill="#b91c1c15"/>
+            <text x="36" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9" font-weight="800" fill="#b91c1c" letter-spacing="0.5">
+                STEP 01
             </text>
-            <text x="75" y="50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#475569">
+            <text x="12" y="44" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="11" font-weight="750" fill="#0f172a">
                 Multidisciplinary Tumor
             </text>
-            <text x="75" y="62" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#64748b">
+            <text x="12" y="58" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="10" font-weight="600" fill="#475569">
                 Board Intake
             </text>
+            
         </g>
         
-        <!-- Arrow 1 -->
-        <g transform="translate(180, 210)">
-            <line x1="5" y1="0" x2="30" y2="0" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="4,2"/>
-            <polygon points="33,0 25,-5 25,5" fill="#b91c1c"/>
+        <!-- Connector 1 to 2 -->
+        <g transform="translate(182, 224)">
+            <line x1="4" y1="0" x2="28" y2="0" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5,3"/>
+            <polygon points="32,0 24,-5 24,5" fill="#b91c1c"/>
+            <circle cx="17" cy="0" r="3" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
         </g>
 
         <!-- Node 2: Histopathology & Biomarker Engine -->
-        <g transform="translate(215, 175)">
-            <rect width="150" height="70" rx="12" fill="#ffffff" stroke="#b91c1c" stroke-width="2" filter="url(#shadow)"/>
-            <rect width="150" height="6" rx="3" fill="#b91c1c"/>
-            <text x="75" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#1e293b">
-                STEP 2
+        <g transform="translate(216, 185)">
+            <rect width="152" height="78" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <rect width="152" height="5" rx="2.5" fill="#b91c1c"/>
+            <rect x="10" y="12" width="52" height="18" rx="9" fill="#b91c1c15"/>
+            <text x="36" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9" font-weight="800" fill="#b91c1c" letter-spacing="0.5">
+                STEP 02
             </text>
-            <text x="75" y="50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#475569">
+            <text x="12" y="44" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="11" font-weight="750" fill="#0f172a">
                 Histopathology &
             </text>
-            <text x="75" y="62" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#64748b">
+            <text x="12" y="58" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="10" font-weight="600" fill="#475569">
                 Biomarker Engine
             </text>
+            
         </g>
         
-        <!-- Arrow 2 -->
-        <g transform="translate(365, 210)">
-            <line x1="5" y1="0" x2="30" y2="0" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="4,2"/>
-            <polygon points="33,0 25,-5 25,5" fill="#b91c1c"/>
+        <!-- Connector 2 to 3 -->
+        <g transform="translate(368, 224)">
+            <line x1="4" y1="0" x2="28" y2="0" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5,3"/>
+            <polygon points="32,0 24,-5 24,5" fill="#b91c1c"/>
+            <circle cx="17" cy="0" r="3" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
         </g>
 
         <!-- Node 3: AJCC 8th Edition TNM Calculator -->
-        <g transform="translate(400, 175)">
-            <rect width="150" height="70" rx="12" fill="#ffffff" stroke="#b91c1c" stroke-width="2" filter="url(#shadow)"/>
-            <rect width="150" height="6" rx="3" fill="#b91c1c"/>
-            <text x="75" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#1e293b">
-                STEP 3
+        <g transform="translate(402, 185)">
+            <rect width="152" height="78" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <rect width="152" height="5" rx="2.5" fill="#b91c1c"/>
+            <rect x="10" y="12" width="52" height="18" rx="9" fill="#b91c1c15"/>
+            <text x="36" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9" font-weight="800" fill="#b91c1c" letter-spacing="0.5">
+                STEP 03
             </text>
-            <text x="75" y="50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#475569">
+            <text x="12" y="44" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="11" font-weight="750" fill="#0f172a">
                 AJCC 8th
             </text>
-            <text x="75" y="62" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#64748b">
-                Edition TNM Calculator
+            <text x="12" y="58" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="10" font-weight="600" fill="#475569">
+                Edition TNM
             </text>
+            <text x="12" y="70" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9.5" fill="#64748b">Calculator</text>
         </g>
         
-        <!-- Arrow 3 -->
-        <g transform="translate(550, 210)">
-            <line x1="5" y1="0" x2="30" y2="0" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="4,2"/>
-            <polygon points="33,0 25,-5 25,5" fill="#b91c1c"/>
+        <!-- Connector 3 to 4 -->
+        <g transform="translate(554, 224)">
+            <line x1="4" y1="0" x2="28" y2="0" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5,3"/>
+            <polygon points="32,0 24,-5 24,5" fill="#b91c1c"/>
+            <circle cx="17" cy="0" r="3" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
         </g>
 
         <!-- Node 4: Clinical / Pathological Stage Grouping -->
-        <g transform="translate(585, 175)">
-            <rect width="150" height="70" rx="12" fill="#ffffff" stroke="#b91c1c" stroke-width="2" filter="url(#shadow)"/>
-            <rect width="150" height="6" rx="3" fill="#b91c1c"/>
-            <text x="75" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#1e293b">
-                STEP 4
+        <g transform="translate(588, 185)">
+            <rect width="152" height="78" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <rect width="152" height="5" rx="2.5" fill="#b91c1c"/>
+            <rect x="10" y="12" width="52" height="18" rx="9" fill="#b91c1c15"/>
+            <text x="36" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9" font-weight="800" fill="#b91c1c" letter-spacing="0.5">
+                STEP 04
             </text>
-            <text x="75" y="50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#475569">
+            <text x="12" y="44" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="11" font-weight="750" fill="#0f172a">
                 Clinical /
             </text>
-            <text x="75" y="62" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#64748b">
-                Pathological Stage Grouping
+            <text x="12" y="58" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="10" font-weight="600" fill="#475569">
+                Pathological Stage
             </text>
+            <text x="12" y="70" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9.5" fill="#64748b">Grouping</text>
         </g>
         
-        <!-- Arrow 4 -->
-        <g transform="translate(735, 210)">
-            <line x1="5" y1="0" x2="30" y2="0" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="4,2"/>
-            <polygon points="33,0 25,-5 25,5" fill="#b91c1c"/>
+        <!-- Connector 4 to 5 -->
+        <g transform="translate(740, 224)">
+            <line x1="4" y1="0" x2="28" y2="0" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5,3"/>
+            <polygon points="32,0 24,-5 24,5" fill="#b91c1c"/>
+            <circle cx="17" cy="0" r="3" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
         </g>
 
         <!-- Node 5: Oncologist Treatment Protocol & EMR -->
-        <g transform="translate(770, 175)">
-            <rect width="150" height="70" rx="12" fill="#ffffff" stroke="#b91c1c" stroke-width="2" filter="url(#shadow)"/>
-            <rect width="150" height="6" rx="3" fill="#b91c1c"/>
-            <text x="75" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#1e293b">
-                STEP 5
+        <g transform="translate(774, 185)">
+            <rect width="152" height="78" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <rect width="152" height="5" rx="2.5" fill="#b91c1c"/>
+            <rect x="10" y="12" width="52" height="18" rx="9" fill="#b91c1c15"/>
+            <text x="36" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9" font-weight="800" fill="#b91c1c" letter-spacing="0.5">
+                STEP 05
             </text>
-            <text x="75" y="50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#475569">
+            <text x="12" y="44" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="11" font-weight="750" fill="#0f172a">
                 Oncologist Treatment
             </text>
-            <text x="75" y="62" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#64748b">
-                Protocol & EMR
+            <text x="12" y="58" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="10" font-weight="600" fill="#475569">
+                Protocol &
             </text>
+            <text x="12" y="70" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9.5" fill="#64748b">EMR</text>
         </g>
         
 
-    <!-- Footer Certification Badge -->
-    <rect x="35" y="345" width="890" height="45" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
-    <circle cx="55" cy="367" r="8" fill="#10b981"/>
-    <path d="M 52 367 L 55 370 L 60 364" fill="none" stroke="#ffffff" stroke-width="2"/>
-    <text x="75" y="371" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600" fill="#334155">
-        ABDM M1/M2/M3 Compliant • DPDP Act 2023 End-to-End Encryption • ISO 27001 Certified Health Cloud
-    </text>
+    <!-- Bottom Regulatory Trust Bar -->
+    <g transform="translate(32, 375)">
+        <rect width="896" height="42" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+        
+        <!-- Trust Badge 1: ABDM -->
+        <g transform="translate(24, 14)">
+            <circle cx="7" cy="7" r="6" fill="#059669"/>
+            <path d="M 4 7 L 6 9 L 10 5" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+            <text x="20" y="11" font-size="11" font-weight="750" fill="#1e293b">ABDM Milestone 1, 2, 3</text>
+            <text x="148" y="11" font-size="10" font-weight="500" fill="#64748b">| Full ABHA Linkage</text>
+        </g>
+
+        <!-- Trust Badge 2: DPDP Act -->
+        <g transform="translate(340, 14)">
+            <circle cx="7" cy="7" r="6" fill="#1A56DB"/>
+            <path d="M 4 7 L 6 9 L 10 5" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+            <text x="20" y="11" font-size="11" font-weight="750" fill="#1e293b">DPDP Act 2023</text>
+            <text x="105" y="11" font-size="10" font-weight="500" fill="#64748b">| AES-256 Encrypted</text>
+        </g>
+
+        <!-- Trust Badge 3: NABH -->
+        <g transform="translate(630, 14)">
+            <circle cx="7" cy="7" r="6" fill="#7c3aed"/>
+            <path d="M 4 7 L 6 9 L 10 5" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+            <text x="20" y="11" font-size="11" font-weight="750" fill="#1e293b">NABH 5th Edition</text>
+            <text x="125" y="11" font-size="10" font-weight="500" fill="#64748b">| Digital Audit-Proof</text>
+        </g>
+    </g>
 </svg>
