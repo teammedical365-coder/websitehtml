@@ -1,3 +1,28 @@
+
+/* ==========================================================================
+   Zero Android Touch Latency & Mobile Tap Optimization (Core Web Vitals INP)
+   ========================================================================== */
+html {
+    touch-action: manipulation;
+}
+
+button, 
+a, 
+input, 
+select, 
+textarea, 
+label,
+[role="button"], 
+[role="tab"],
+.btn, 
+.btn-pricing,
+.tab-btn, 
+.mobile-toggle,
+.solutions-toggle {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* ==========================================================================
            1. RESET & VARIABLES
            ========================================================================== */

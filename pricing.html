@@ -48,6 +48,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero-section { padding: 60px 24px 80px; background: radial-gradient(circle at top right, rgba(55, 179, 156, 0.08), transparent 40%); }
     .hero-title { font-size: clamp(2.25rem, 10vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
     .btn-primary { background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)); color: #fff; padding: 12px 28px; border-radius: 10px; font-weight: 600; display: inline-block; text-decoration: none; }
+  
+    /* Plan Switcher Styling & Zero-Latency Touch */
+    .pricing-switcher-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 40px;
+      padding: 0 16px;
+    }
+    .pricing-switcher {
+      display: inline-flex;
+      background: #e2e8f0;
+      padding: 6px;
+      border-radius: 9999px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+      position: relative;
+      touch-action: manipulation;
+    }
+    .switch-btn {
+      border: none;
+      background: transparent;
+      padding: 12px 28px;
+      border-radius: 9999px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #475569;
+      transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      outline: none;
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .switch-btn.active {
+      background: #1A56DB;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(26, 86, 219, 0.28);
+    }
+    .discount-pill {
+      background: #10b981;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .switch-btn.active .discount-pill {
+      background: #ffffff;
+      color: #047857;
+    }
+    .plan-price-sub {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 6px;
+      display: block;
+      font-weight: 500;
+    }
+    .btn-pricing {
+      touch-action: manipulation !important;
+      -webkit-tap-highlight-color: transparent !important;
+    }
+
   </style>
 
     <!-- Standard Styles (to guarantee loading) -->
@@ -814,8 +882,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h3 class="plan-name">Starter Plan</h3>
                     <p class="plan-desc">Optimized for individual Doctors & Clinics.</p>
                     <div class="plan-price-wrapper">
-                        <div class="plan-price"><span>₹</span>6,000<span> / Year</span></div>
-                        <span class="plan-worth">Worth: ₹12,000</span>
+                        <div class="plan-price"><span>₹</span><span id="price-starter">6,000</span><span id="period-starter"> / Year</span></div>
+                        <span class="plan-worth" id="worth-starter">Worth: ₹12,000</span>
+                        <span class="plan-price-sub" id="sub-starter">₹500/month (billed annually)</span>
                     </div>
                     <h4 class="feature-title">Operational Provision</h4>
                     <ul class="plan-features">
@@ -845,8 +914,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h3 class="plan-name">Clinic Basic</h3>
                     <p class="plan-desc">Optimized For Multi Doctors & Clinics.</p>
                     <div class="plan-price-wrapper">
-                        <div class="plan-price"><span>₹</span>15,000<span> / Year</span></div>
-                        <span class="plan-worth">Worth: ₹30,000</span>
+                        <div class="plan-price"><span>₹</span><span id="price-clinic">15,000</span><span id="period-clinic"> / Year</span></div>
+                        <span class="plan-worth" id="worth-clinic">Worth: ₹30,000</span>
+                        <span class="plan-price-sub" id="sub-clinic">₹1,250/month (billed annually)</span>
                     </div>
                     <h4 class="feature-title">Operational Provision</h4>
                     <ul class="plan-features">
@@ -875,8 +945,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h3 class="plan-name">Multi-Specialty Starter</h3>
                     <p class="plan-desc">Optimized For Multi-Specialty Hospitals And Diagnostic Centers.</p>
                     <div class="plan-price-wrapper">
-                        <div class="plan-price"><span>₹</span>30,000<span> / Year</span></div>
-                        <span class="plan-worth">Worth: ₹60,000</span>
+                        <div class="plan-price"><span>₹</span><span id="price-multi">30,000</span><span id="period-multi"> / Year</span></div>
+                        <span class="plan-worth" id="worth-multi">Worth: ₹60,000</span>
+                        <span class="plan-price-sub" id="sub-multi">₹2,500/month (billed annually)</span>
                     </div>
                     <h4 class="feature-title">Operational Provision</h4>
                     <ul class="plan-features">
@@ -1664,6 +1735,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="global-scripts.js?v=4.8"></script>
 
   <script src="global-scripts.js"></script>
+
+  <script>
+    // Zero-Latency Android Plan Switcher Engine
+    (function() {
+        var btnAnnual = document.getElementById('btn-annual');
+        var btnMonthly = document.getElementById('btn-monthly');
+        if (!btnAnnual || !btnMonthly) return;
+
+        var priceStarter = document.getElementById('price-starter');
+        var periodStarter = document.getElementById('period-starter');
+        var worthStarter = document.getElementById('worth-starter');
+        var subStarter = document.getElementById('sub-starter');
+
+        var priceClinic = document.getElementById('price-clinic');
+        var periodClinic = document.getElementById('period-clinic');
+        var worthClinic = document.getElementById('worth-clinic');
+        var subClinic = document.getElementById('sub-clinic');
+
+        var priceMulti = document.getElementById('price-multi');
+        var periodMulti = document.getElementById('period-multi');
+        var worthMulti = document.getElementById('worth-multi');
+        var subMulti = document.getElementById('sub-multi');
+
+        function switchBilling(mode) {
+            if (mode === 'annual') {
+                btnAnnual.classList.add('active');
+                btnAnnual.setAttribute('aria-selected', 'true');
+                btnMonthly.classList.remove('active');
+                btnMonthly.setAttribute('aria-selected', 'false');
+
+                if (priceStarter) priceStarter.textContent = '6,000';
+                if (periodStarter) periodStarter.textContent = ' / Year';
+                if (worthStarter) worthStarter.style.display = 'inline-block';
+                if (subStarter) subStarter.textContent = '₹500/month (billed annually)';
+
+                if (priceClinic) priceClinic.textContent = '15,000';
+                if (periodClinic) periodClinic.textContent = ' / Year';
+                if (worthClinic) worthClinic.style.display = 'inline-block';
+                if (subClinic) subClinic.textContent = '₹1,250/month (billed annually)';
+
+                if (priceMulti) priceMulti.textContent = '30,000';
+                if (periodMulti) periodMulti.textContent = ' / Year';
+                if (worthMulti) worthMulti.style.display = 'inline-block';
+                if (subMulti) subMulti.textContent = '₹2,500/month (billed annually)';
+            } else {
+                btnMonthly.classList.add('active');
+                btnMonthly.setAttribute('aria-selected', 'true');
+                btnAnnual.classList.remove('active');
+                btnAnnual.setAttribute('aria-selected', 'false');
+
+                if (priceStarter) priceStarter.textContent = '1,000';
+                if (periodStarter) periodStarter.textContent = ' / Month';
+                if (worthStarter) worthStarter.style.display = 'none';
+                if (subStarter) subStarter.textContent = 'Flexible monthly billing';
+
+                if (priceClinic) priceClinic.textContent = '2,500';
+                if (periodClinic) periodClinic.textContent = ' / Month';
+                if (worthClinic) worthClinic.style.display = 'none';
+                if (subClinic) subClinic.textContent = 'Flexible monthly billing';
+
+                if (priceMulti) priceMulti.textContent = '5,000';
+                if (periodMulti) periodMulti.textContent = ' / Month';
+                if (worthMulti) worthMulti.style.display = 'none';
+                if (subMulti) subMulti.textContent = 'Flexible monthly billing';
+            }
+        }
+
+        // Fast pointerdown event fires with 0ms latency on Android
+        btnAnnual.addEventListener('pointerdown', function() {
+            switchBilling('annual');
+        }, { passive: true });
+
+        btnMonthly.addEventListener('pointerdown', function() {
+            switchBilling('monthly');
+        }, { passive: true });
+
+        // Standard click listener for keyboard and screen-readers
+        btnAnnual.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchBilling('annual');
+        });
+
+        btnMonthly.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchBilling('monthly');
+        });
+    })();
+  </script>
+
 </body>
 </html>
 
