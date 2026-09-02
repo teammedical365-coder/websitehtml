@@ -1,5 +1,5 @@
 {
-  "audit_timestamp": "2026-09-02T06:11:53.397Z",
+  "audit_timestamp": "2026-09-02T06:16:08.312Z",
   "domain": "https://www.medical365.in",
   "phase": "1.5",
   "read_only": true,
@@ -11,8 +11,8 @@
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 465,
-      "content_length": 185304,
+      "response_time_ms": 580,
+      "content_length": 186566,
       "canonical_url": "https://www.medical365.in/",
       "robots_meta": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "x_robots_tag": "NONE",
@@ -25,38 +25,38 @@
     {
       "requested_url": "/hims-software",
       "final_url": "https://www.medical365.in/hims-software",
-      "status": 404,
+      "status": 200,
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 59,
-      "content_length": 107937,
-      "canonical_url": "MISSING",
+      "response_time_ms": 299,
+      "content_length": 116500,
+      "canonical_url": "https://www.medical365.in/hims-software",
       "robots_meta": "DEFAULT (INDEX, FOLLOW)",
       "x_robots_tag": "NONE",
-      "title": "404 - Page Not Found | Medical365",
+      "title": "HIMS Software India | Cloud Hospital Management System — Medical365",
       "h1_count": 1,
-      "h1_text": "Page Not Found",
-      "indexability": "INDEXABILITY_RISK",
-      "result": "NOT_YET_DEPLOYED_TO_PROD"
+      "h1_text": "HIMS Software India: Complete Hospital Operations &amp; ABDM Management",
+      "indexability": "INDEXABILITY_HEALTHY",
+      "result": "PASS"
     },
     {
       "requested_url": "/nabh-compliant-hospital-software",
       "final_url": "https://www.medical365.in/nabh-compliant-hospital-software",
-      "status": 404,
+      "status": 200,
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 54,
-      "content_length": 107937,
-      "canonical_url": "MISSING",
+      "response_time_ms": 70,
+      "content_length": 114229,
+      "canonical_url": "https://www.medical365.in/nabh-compliant-hospital-software",
       "robots_meta": "DEFAULT (INDEX, FOLLOW)",
       "x_robots_tag": "NONE",
-      "title": "404 - Page Not Found | Medical365",
+      "title": "NABH Compliant Hospital Software | 5th Edition Digital Ready — Medical365",
       "h1_count": 1,
-      "h1_text": "Page Not Found",
-      "indexability": "INDEXABILITY_RISK",
-      "result": "NOT_YET_DEPLOYED_TO_PROD"
+      "h1_text": "NABH Compliant Hospital Software: Built for Digital Quality &amp; Audit Readiness",
+      "indexability": "INDEXABILITY_HEALTHY",
+      "result": "PASS"
     },
     {
       "requested_url": "/hospital-bed-management",
@@ -65,14 +65,14 @@
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 392,
-      "content_length": 114681,
+      "response_time_ms": 352,
+      "content_length": 117816,
       "canonical_url": "https://www.medical365.in/hospital-bed-management",
       "robots_meta": "DEFAULT (INDEX, FOLLOW)",
       "x_robots_tag": "NONE",
-      "title": "Hospital Bed Management - Medical365",
+      "title": "Hospital Bed Management Software India | Live Ward Occupancy &amp; Transfers — Medical365",
       "h1_count": 1,
-      "h1_text": "Real-Time Visibility of Every Hospital Bed",
+      "h1_text": "Hospital Bed Management Software: Real-Time Ward &amp; Occupancy Tracking",
       "indexability": "INDEXABILITY_HEALTHY",
       "result": "PASS"
     },
@@ -83,14 +83,14 @@
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 366,
-      "content_length": 111169,
+      "response_time_ms": 309,
+      "content_length": 113358,
       "canonical_url": "https://www.medical365.in/blogs/abha-integration-guide",
       "robots_meta": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "x_robots_tag": "NONE",
-      "title": "ABHA Integration Guide for Hospitals — How to Get ABDM Compliant 2026 | Medical365",
+      "title": "ABDM Compliant HMS Software &amp; ABHA Integration Guide 2026 | Medical365",
       "h1_count": 1,
-      "h1_text": "ABHA Integration Guide for Hospitals — How to Get ABDM Compliant in 2026",
+      "h1_text": "ABDM Compliant HMS Software: Complete ABHA Integration Guide for Hospitals",
       "indexability": "INDEXABILITY_HEALTHY",
       "result": "PASS"
     },
@@ -101,14 +101,14 @@
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 356,
-      "content_length": 116668,
+      "response_time_ms": 310,
+      "content_length": 116922,
       "canonical_url": "https://www.medical365.in/blood-bank",
       "robots_meta": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "x_robots_tag": "NONE",
-      "title": "Blood Bank Software India | NABH &amp; ABDM Ready | Medical365",
+      "title": "Blood Bank Software India | Donor Lifecycle &amp; Inventory Tracking — Medical365",
       "h1_count": 1,
-      "h1_text": "Life-Saving Precision in Every Transfusion — ABDM &amp; NABH Compliant",
+      "h1_text": "Blood Bank Software India: Complete Donor Lifecycle &amp; Component Management",
       "indexability": "INDEXABILITY_HEALTHY",
       "result": "PASS"
     },
@@ -119,12 +119,12 @@
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 395,
-      "content_length": 132538,
+      "response_time_ms": 302,
+      "content_length": 136696,
       "canonical_url": "https://www.medical365.in/pricing",
       "robots_meta": "index, follow",
       "x_robots_tag": "NONE",
-      "title": "Pricing Plans - Medical365",
+      "title": "Hospital Software Pricing Plans India (100% Transparent) — Medical365",
       "h1_count": 1,
       "h1_text": "Simple, Transparent Pricing for Indian Healthcare",
       "indexability": "INDEXABILITY_HEALTHY",
@@ -137,8 +137,8 @@
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 392,
-      "content_length": 109374,
+      "response_time_ms": 298,
+      "content_length": 109700,
       "canonical_url": "https://www.medical365.in/blogs/nabh-compliance-guide",
       "robots_meta": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "x_robots_tag": "NONE",
@@ -155,7 +155,7 @@
       "redirect_chain": [],
       "content_type": "text/html; charset=utf-8",
       "https_status": "SECURE",
-      "response_time_ms": 336,
+      "response_time_ms": 290,
       "content_length": 131141,
       "canonical_url": "https://www.medical365.in/blogs/medical365-vs-practo",
       "robots_meta": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
@@ -178,16 +178,16 @@
     {
       "requested_url": "/hims-software",
       "final_url": "https://www.medical365.in/hims-software",
-      "canonical_url": "MISSING",
+      "canonical_url": "https://www.medical365.in/hims-software",
       "expected_canonical": "https://www.medical365.in/hims-software",
-      "classification": "MISSING_CANONICAL"
+      "classification": "CANONICAL_TO_EXPECTED_URL"
     },
     {
       "requested_url": "/nabh-compliant-hospital-software",
       "final_url": "https://www.medical365.in/nabh-compliant-hospital-software",
-      "canonical_url": "MISSING",
+      "canonical_url": "https://www.medical365.in/nabh-compliant-hospital-software",
       "expected_canonical": "https://www.medical365.in/nabh-compliant-hospital-software",
-      "classification": "MISSING_CANONICAL"
+      "classification": "CANONICAL_TO_EXPECTED_URL"
     },
     {
       "requested_url": "/hospital-bed-management",
@@ -284,15 +284,14 @@
     "status": "PASS"
   },
   "sitemap": {
-    "http_status": 408,
-    "valid_xml": false,
-    "total_sitemap_urls": 0,
-    "unique_urls": 0,
-    "clean_urls": 0,
+    "http_status": 200,
+    "valid_xml": true,
+    "total_sitemap_urls": 1974,
+    "unique_urls": 1974,
+    "clean_urls": 1974,
     "parameterized_urls": [],
     "duplicate_urls_count": 0,
-    "phase1_urls_present": [],
-    "phase1_urls_absent": [
+    "phase1_urls_present": [
       "/",
       "/hims-software",
       "/nabh-compliant-hospital-software",
@@ -302,7 +301,8 @@
       "/pricing",
       "/blogs/nabh-compliance-guide",
       "/blogs/medical365-vs-practo"
-    ]
+    ],
+    "phase1_urls_absent": []
   },
   "schema": [
     {
@@ -319,43 +319,41 @@
         "FAQPage",
         "WebSite"
       ],
-      "aggregate_rating_present": true,
+      "aggregate_rating_present": false,
       "review_present": false,
-      "classification": "LIVE_SCHEMA_RISK_REMAINS"
+      "classification": "SCHEMA_CLEAN"
     },
     {
       "url": "/hims-software",
-      "live_status": 404,
-      "json_ld_blocks_count": 2,
-      "valid_blocks": 2,
+      "live_status": 200,
+      "json_ld_blocks_count": 1,
+      "valid_blocks": 1,
       "parse_errors": 0,
       "extracted_types": [
         "SoftwareApplication",
         "Organization",
-        "LocalBusiness",
         "BreadcrumbList",
         "FAQPage"
       ],
-      "aggregate_rating_present": true,
+      "aggregate_rating_present": false,
       "review_present": false,
-      "classification": "LIVE_SCHEMA_RISK_REMAINS"
+      "classification": "SCHEMA_CLEAN"
     },
     {
       "url": "/nabh-compliant-hospital-software",
-      "live_status": 404,
-      "json_ld_blocks_count": 2,
-      "valid_blocks": 2,
+      "live_status": 200,
+      "json_ld_blocks_count": 1,
+      "valid_blocks": 1,
       "parse_errors": 0,
       "extracted_types": [
         "SoftwareApplication",
         "Organization",
-        "LocalBusiness",
         "BreadcrumbList",
         "FAQPage"
       ],
-      "aggregate_rating_present": true,
+      "aggregate_rating_present": false,
       "review_present": false,
-      "classification": "LIVE_SCHEMA_RISK_REMAINS"
+      "classification": "SCHEMA_CLEAN"
     },
     {
       "url": "/hospital-bed-management",
@@ -370,9 +368,9 @@
         "BreadcrumbList",
         "FAQPage"
       ],
-      "aggregate_rating_present": true,
+      "aggregate_rating_present": false,
       "review_present": false,
-      "classification": "LIVE_SCHEMA_RISK_REMAINS"
+      "classification": "SCHEMA_CLEAN"
     },
     {
       "url": "/blogs/abha-integration-guide",
@@ -391,20 +389,19 @@
     {
       "url": "/blood-bank",
       "live_status": 200,
-      "json_ld_blocks_count": 3,
-      "valid_blocks": 3,
+      "json_ld_blocks_count": 2,
+      "valid_blocks": 2,
       "parse_errors": 0,
       "extracted_types": [
         "SoftwareApplication",
         "Organization",
         "LocalBusiness",
         "BreadcrumbList",
-        "FAQPage",
-        "Product"
+        "FAQPage"
       ],
-      "aggregate_rating_present": true,
-      "review_present": true,
-      "classification": "LIVE_SCHEMA_RISK_REMAINS"
+      "aggregate_rating_present": false,
+      "review_present": false,
+      "classification": "SCHEMA_CLEAN"
     },
     {
       "url": "/pricing",
@@ -460,38 +457,38 @@
     {
       "url": "/hims-software",
       "local_file": "hims-software.html",
-      "live_status": 404,
-      "deployment_status": "LIVE_STALE (Local file exists, but live server returns 404 — unpushed)"
+      "live_status": 200,
+      "deployment_status": "DEPLOYED_MATCH"
     },
     {
       "url": "/nabh-compliant-hospital-software",
       "local_file": "nabh-compliant-hospital-software.html",
-      "live_status": 404,
-      "deployment_status": "LIVE_STALE (Local file exists, but live server returns 404 — unpushed)"
+      "live_status": 200,
+      "deployment_status": "DEPLOYED_MATCH"
     },
     {
       "url": "/hospital-bed-management",
       "local_file": "hospital-bed-management.html",
       "live_status": 200,
-      "deployment_status": "PARTIAL_DEPLOYMENT / LIVE_STALE (Live title: \"Hospital Bed Management - Medical365\", Local repo title: \"Hospital Bed Management Software India | Live Ward Occupancy &amp; Transfers — Medical365\")"
+      "deployment_status": "DEPLOYED_MATCH"
     },
     {
       "url": "/blogs/abha-integration-guide",
       "local_file": "blogs/abha-integration-guide.html",
       "live_status": 200,
-      "deployment_status": "PARTIAL_DEPLOYMENT / LIVE_STALE (Live title: \"ABHA Integration Guide for Hospitals — How to Get ABDM Compliant 2026 | Medical365\", Local repo title: \"ABDM Compliant HMS Software &amp; ABHA Integration Guide 2026 | Medical365\")"
+      "deployment_status": "DEPLOYED_MATCH"
     },
     {
       "url": "/blood-bank",
       "local_file": "blood-bank.html",
       "live_status": 200,
-      "deployment_status": "PARTIAL_DEPLOYMENT / LIVE_STALE (Live title: \"Blood Bank Software India | NABH &amp; ABDM Ready | Medical365\", Local repo title: \"Blood Bank Software India | Donor Lifecycle &amp; Inventory Tracking — Medical365\")"
+      "deployment_status": "DEPLOYED_MATCH"
     },
     {
       "url": "/pricing",
       "local_file": "pricing.html",
       "live_status": 200,
-      "deployment_status": "PARTIAL_DEPLOYMENT / LIVE_STALE (Live title: \"Pricing Plans - Medical365\", Local repo title: \"Hospital Software Pricing Plans India (100% Transparent) — Medical365\")"
+      "deployment_status": "DEPLOYED_MATCH"
     },
     {
       "url": "/blogs/nabh-compliance-guide",
@@ -517,7 +514,7 @@
         "images_without_dimensions": 6,
         "external_scripts": 3,
         "google_fonts_usage": 10,
-        "estimated_dom_size_bytes": 184641
+        "estimated_dom_size_bytes": 185903
       }
     },
     {
@@ -528,9 +525,9 @@
       "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
       "static_readiness": {
         "images_without_dimensions": 2,
-        "external_scripts": 3,
-        "google_fonts_usage": 3,
-        "estimated_dom_size_bytes": 107830
+        "external_scripts": 4,
+        "google_fonts_usage": 0,
+        "estimated_dom_size_bytes": 116363
       }
     },
     {
@@ -541,9 +538,9 @@
       "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
       "static_readiness": {
         "images_without_dimensions": 2,
-        "external_scripts": 3,
-        "google_fonts_usage": 3,
-        "estimated_dom_size_bytes": 107830
+        "external_scripts": 4,
+        "google_fonts_usage": 0,
+        "estimated_dom_size_bytes": 114100
       }
     },
     {
@@ -556,7 +553,7 @@
         "images_without_dimensions": 2,
         "external_scripts": 4,
         "google_fonts_usage": 0,
-        "estimated_dom_size_bytes": 114304
+        "estimated_dom_size_bytes": 117425
       }
     },
     {
@@ -569,7 +566,7 @@
         "images_without_dimensions": 2,
         "external_scripts": 3,
         "google_fonts_usage": 1,
-        "estimated_dom_size_bytes": 110766
+        "estimated_dom_size_bytes": 112965
       }
     },
     {
@@ -582,7 +579,7 @@
         "images_without_dimensions": 2,
         "external_scripts": 4,
         "google_fonts_usage": 1,
-        "estimated_dom_size_bytes": 116297
+        "estimated_dom_size_bytes": 116547
       }
     },
     {
@@ -595,7 +592,7 @@
         "images_without_dimensions": 2,
         "external_scripts": 4,
         "google_fonts_usage": 3,
-        "estimated_dom_size_bytes": 130749
+        "estimated_dom_size_bytes": 134891
       }
     },
     {
@@ -608,7 +605,7 @@
         "images_without_dimensions": 2,
         "external_scripts": 3,
         "google_fonts_usage": 1,
-        "estimated_dom_size_bytes": 108997
+        "estimated_dom_size_bytes": 109325
       }
     },
     {

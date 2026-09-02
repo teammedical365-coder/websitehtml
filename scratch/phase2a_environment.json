@@ -1,0 +1,13 @@
+{
+  "phase": "2A",
+  "mode": "READ_ONLY_DISCOVERY",
+  "repository": "C:\\Users\\USER\\Downloads\\website medical365 html-main\\websitehtml-main",
+  "production": "https://www.medical365.in",
+  "git_branch": "main",
+  "git_head": "ab45e1c4ebc6578bfb8d1467b1c904afe9eaad1b",
+  "phase1_commit_expected": "ab45e1c4",
+  "working_tree_clean": true,
+  "total_html_files": 1991,
+  "discovery_timestamp": "2026-09-02T06:22:58.455Z",
+  "status": "PASS"
+}

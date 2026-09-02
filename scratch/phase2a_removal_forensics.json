@@ -1,0 +1,19 @@
+{
+  "total_instances_removed": 3452,
+  "rating_values_removed": {
+    "4.8": 3452
+  },
+  "review_counts_removed": {
+    "500": 1520
+  },
+  "known_boilerplate_values": [
+    "4.8"
+  ],
+  "known_boilerplate_counts": [
+    "120",
+    "500"
+  ],
+  "nonstandard_removals_count": 0,
+  "nonstandard_removals": [],
+  "verdict": "100% of removed AggregateRating instances strictly matched the known unsupported 4.8 boilerplate. Zero nonstandard ratings were altered."
+}

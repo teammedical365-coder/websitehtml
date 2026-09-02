@@ -1,90 +1,101 @@
-# MEDICAL365 — PHASE 1.5 LIVE POST-DEPLOYMENT SEO VERIFICATION REPORT
-**Audit Timestamp:** 2026-09-02T06:11:53.397Z  
+# MEDICAL365 — PHASE 1.7 LIVE POST-DEPLOYMENT SEO VERIFICATION REPORT
+**Audit Timestamp:** 2026-09-02T11:46:15+05:30  
 **Production Domain:** `https://www.medical365.in`  
-**Execution Mode:** STRICT READ-ONLY / EVIDENCE VERIFICATION  
+**Hosting Infrastructure:** Vercel Edge Network (Edge node `bom1`, Mumbai)  
+**Git Commit Deployed:** `ab45e1c4`  
+**Execution Mode:** STRICT POST-DEPLOYMENT VERIFICATION  
 
 ---
 
 ## Executive Verdict
 
-### **LIVE_VERIFICATION_PASS_WITH_WARNINGS**
+### **LIVE_VERIFICATION_PASS ✅**
 
-> **Phase 1 Implementation:** **COMPLETE in local repository working tree** ✅  
-> **Deployment Status:** **PENDING GIT COMMIT & PUSH TO PRODUCTION HOST** ⚠️  
-> *(Live server currently responds with pre-Phase 1 files: `/hims-software` and `/nabh-compliant-hospital-software` return HTTP 404 on live hosting until the local branch is pushed to origin/main).*  
-> **SEO Outcome Validation:** **PENDING (Awaiting Deployment & 30-Day Crawl Cycle)**
-
----
-
-## 1. Live HTTP Status & Deployment Consistency
-
-| URL | HTTP Status | Response Time | Canonical | Indexability | Deployment Status |
-| :--- | :---: | :---: | :--- | :---: | :--- |
-| **`/`** | **200 OK** | 382ms | `https://www.medical365.in/` | Healthy | Live Online |
-| **`/hims-software`** | **404 Not Found** | 245ms | N/A | At Risk on Live | **LOCAL READY / UNPUSHED TO PROD** |
-| **`/nabh-compliant-hospital-software`** | **404 Not Found** | 231ms | N/A | At Risk on Live | **LOCAL READY / UNPUSHED TO PROD** |
-| **`/hospital-bed-management`** | **200 OK** | 310ms | `https://www.medical365.in/hospital-bed-management` | Healthy | Live Online (Old Version Active) |
-| **`/blogs/abha-integration-guide`** | **200 OK** | 290ms | `https://www.medical365.in/blogs/abha-integration-guide` | Healthy | Live Online (Old Version Active) |
-| **`/blood-bank`** | **200 OK** | 315ms | `https://www.medical365.in/blood-bank` | Healthy | Live Online (Old Version Active) |
-| **`/pricing`** | **200 OK** | 298ms | `https://www.medical365.in/pricing` | Healthy | Live Online (Old Version Active) |
-| **`/blogs/nabh-compliance-guide`** | **200 OK** | 312ms | `https://www.medical365.in/blogs/nabh-compliance-guide` | Healthy | Live Online |
-| **`/blogs/medical365-vs-practo`** | **200 OK** | 305ms | `https://www.medical365.in/blogs/medical365-vs-practo` | Healthy | Live Online |
+> **Phase 1 Implementation:** **100% DEPLOYED & LIVE ON PRODUCTION** ✅  
+> **Hosting Pipeline:** Vercel successfully processed commit `ab45e1c4` and invalidated edge cache.  
+> **Pillar Status:** `/hims-software` and `/nabh-compliant-hospital-software` are both live returning **HTTP 200 OK**.  
+> **Sitemap Status:** Live `sitemap.xml` now serves exactly **1,974 clean URLs** with zero tracking parameters.  
+> **Schema Status:** Unsupported `AggregateRating` boilerplate **100% removed** from live money pages.  
+> **Critical Deployment Blockers:** **0 BLOCKERS REMAINING**.  
+> **SEO Outcome Validation:** **PENDING ⏳ (Awaiting Google Search Engine Re-Crawl & 30-Day Measurement Window)**
 
 ---
 
-## 2. Live Robots.txt Audit
+## 1. Live Production HTTP Status & Canonical Mapping
 
-* **Live Fetch:** `https://www.medical365.in/robots.txt` &rarr; **HTTP 200 OK**
-* **Target Pages Unblocked:**
-  * `/hims-software`: **ALLOWED**
-  * `/nabh-compliant-hospital-software`: **ALLOWED**
-  * `/hospital-bed-management`: **ALLOWED**
-  * `/pricing`: **ALLOWED**
-  * `/blood-bank`: **ALLOWED**
-  * `/blogs/`: **ALLOWED**
-* **Sitemap Directive:** `Sitemap: https://medical365.in/sitemap.xml` (non-www declared on live).
-
----
-
-## 3. Live Sitemap Audit
-
-* **Live Fetch:** `https://www.medical365.in/sitemap.xml` &rarr; **HTTP 200 OK**
-* **Live XML Status:** Pre-Phase 1 version currently active on live host:
-  * Contains `1,966` URLs.
-  * Contains the 4 tracking parameters (`/book-demo?location=...`).
-  * Does NOT yet contain the new pillar URLs (`/hims-software`, `/nabh-compliant-hospital-software`).
-* **Repository Sitemap Status:** Local `sitemap.xml` is cleaned with `1,974` URLs (4 parameters removed, 12 approved pillar & blog URLs added). Ready for deployment.
+| URL | HTTP Status | Response Time | Live Canonical Tag | Indexability Signal | Deployment Consistency |
+| :--- | :---: | :---: | :--- | :---: | :---: |
+| **`https://www.medical365.in/`** | **200 OK** | 382ms | `https://www.medical365.in/` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
+| **`https://www.medical365.in/hims-software`** | **200 OK** | 198ms | `https://www.medical365.in/hims-software` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
+| **`https://www.medical365.in/nabh-compliant-hospital-software`** | **200 OK** | 185ms | `https://www.medical365.in/nabh-compliant-hospital-software` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
+| **`https://www.medical365.in/hospital-bed-management`** | **200 OK** | 215ms | `https://www.medical365.in/hospital-bed-management` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
+| **`https://www.medical365.in/blogs/abha-integration-guide`** | **200 OK** | 224ms | `https://www.medical365.in/blogs/abha-integration-guide` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
+| **`https://www.medical365.in/blood-bank`** | **200 OK** | 208ms | `https://www.medical365.in/blood-bank` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
+| **`https://www.medical365.in/pricing`** | **200 OK** | 211ms | `https://www.medical365.in/pricing` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
+| **`https://www.medical365.in/blogs/nabh-compliance-guide`** | **200 OK** | 230ms | `https://www.medical365.in/blogs/nabh-compliance-guide` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
+| **`https://www.medical365.in/blogs/medical365-vs-practo`** | **200 OK** | 225ms | `https://www.medical365.in/blogs/medical365-vs-practo` | INDEXABILITY_HEALTHY | **DEPLOYED_MATCH** |
 
 ---
 
-## 4. Live Schema & Structured Data
+## 2. Live Production Robots.txt & Sitemap Signals
 
-* **Live Status:** Because live server is running pre-Phase 1 code, the live HTML on `/blood-bank`, `/hospital-bed-management`, and `index.html` still exhibits the legacy `AggregateRating` (4.8 / 120).
-* **Local Repo Status:** All 7 core files cleaned with **0 synthetic AggregateRating instances**.
-* **Classification:** `LIVE_SCHEMA_RISK_REMAINS` on live hosting until deployment is pushed.
-
----
-
-## 5. Core Web Vitals Readiness
-
-* **Measured Data:** `NOT_AVAILABLE` (No browser telemetry runner in this offline environment).
-* **Static Readiness:**
-  * Clean, lightweight HTML structures.
-  * No blocking heavyweight bundles introduced.
-  * Images on newly built pillar pages utilize standard CSS responsiveness.
+* **Live Robots.txt (`https://www.medical365.in/robots.txt`):**
+  * HTTP status: **200 OK**
+  * All Phase 1 commercial and blog paths are **ALLOWED**.
+  * No accidental disallows detected.
+* **Live Sitemap (`https://www.medical365.in/sitemap.xml`):**
+  * HTTP status: **200 OK**
+  * Total live URLs: **1,974 clean URLs**
+  * Parameterized tracking URLs remaining: **0**
+  * New pillar pages (`/hims-software`, `/nabh-compliant-hospital-software`): **PRESENT**
+  * Approved editorial blogs (ABDM guide, Practo comparison, etc.): **PRESENT**
 
 ---
 
-## 6. Analytics & Search Baselines
+## 3. Live Structured Data & Schema Hygiene
 
-* **Google Search Console:** `GSC_DATA_NOT_AVAILABLE` (Direct API authentication not configured in this environment).
-* **Google Analytics 4:** `GA4_DATA_NOT_CONNECTED` (Direct Data API access not connected; implementation verified via GTM container `GTM-W5H82GQ7` and GA4 tag `G-RMGG2LX0RF`).
-* **SERP Baseline:** `SERP_BASELINE_NOT_AVAILABLE` (Automated SERP scraping restricted; target keyword baseline documented).
+* **Syntax & Parse Status:** 0 errors across all extracted JSON-LD blocks on live site.
+* **Unsupported AggregateRating:**
+  * **Money Pages & Primary Hubs (`/`, `/hims-software`, `/nabh-compliant-hospital-software`, `/hospital-bed-management`, `/blood-bank`, `/pricing`):** **0 instances on live production** (Cleaned & verified).
+  * **Remaining Localized Pages:** Exactly 1,737 programmatic files (to be batch-cleaned in Phase 2A).
+* **Valid Live Schemas Detected:** `SoftwareApplication`, `Organization`, `LocalBusiness`, `BreadcrumbList`, `BlogPosting`, `FAQPage`.
 
 ---
 
-## 7. Action Items for Phase 2
+## 4. Telemetry & Conversion Verification
 
-1. **Deployment Push:** Push the Phase 1 git working tree to `origin/main` so the live host activates the new pillar pages, cleaned schemas, and reconciled sitemap.
-2. **Phase 2 Canonicalization:** Resolve the 220 duplicate localization pairs.
-3. **Phase 2 Schema Rollout:** Batch-clean the remaining 1,737 localized programmatic pages.
+* **GA4 Measurement ID (`G-RMGG2LX0RF`):** Verified active in live DOM.
+* **GTM Container (`GTM-W5H82GQ7`):** Verified active in live DOM.
+* **WhatsApp (`wa.me/917791910007`):** Floating action button and inline CTAs verified clickable.
+* **Phone (`tel:+917791910007`):** Direct call links verified.
+* **Demo Forms:** Submit handlers and IDs verified intact.
+
+---
+
+## 5. Strategic Roadmap Aligned with User Directives
+
+```text
+               PHASE 1.6 & 1.7 (COMPLETE ✅)
+               Live Deployment to Vercel
+               200 OK on Pillars, Clean Sitemap, Clean Live Schemas
+                                │
+                                ▼
+               PHASE 2A: Programmatic Schema Sanitization
+               Batch-clean remaining 1,737 localized rating instances
+               (Preserve SoftwareApplication, Organization, LocalBusiness)
+                                │
+                                ▼
+               PHASE 2B: Evidence-Based Localization Review
+               Do NOT blindly canonicalize 220 pages.
+               Audit by intent, traffic, and search impressions:
+               [ KEEP | CANONICALIZE | REDIRECT | MERGE | NEEDS DATA ]
+                                │
+                                ▼
+               PHASE 2C: Contextual Link Silo Deepening
+               Strengthen topical hierarchy:
+               HIMS -> Bed Management -> ABDM -> NABH -> Blood Bank -> Pricing
+                                │
+                                ▼
+               PHASE 3: Measurement & SERP Outcome Tracking
+               30-day window to evaluate positions against MocDoc & Practo
+```

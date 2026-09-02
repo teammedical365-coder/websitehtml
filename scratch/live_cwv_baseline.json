@@ -9,7 +9,7 @@
       "images_without_dimensions": 6,
       "external_scripts": 3,
       "google_fonts_usage": 10,
-      "estimated_dom_size_bytes": 184641
+      "estimated_dom_size_bytes": 185903
     }
   },
   {
@@ -20,9 +20,9 @@
     "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
     "static_readiness": {
       "images_without_dimensions": 2,
-      "external_scripts": 3,
-      "google_fonts_usage": 3,
-      "estimated_dom_size_bytes": 107830
+      "external_scripts": 4,
+      "google_fonts_usage": 0,
+      "estimated_dom_size_bytes": 116363
     }
   },
   {
@@ -33,9 +33,9 @@
     "source": "NOT_AVAILABLE (No browser runtime available in this environment; reporting static readiness)",
     "static_readiness": {
       "images_without_dimensions": 2,
-      "external_scripts": 3,
-      "google_fonts_usage": 3,
-      "estimated_dom_size_bytes": 107830
+      "external_scripts": 4,
+      "google_fonts_usage": 0,
+      "estimated_dom_size_bytes": 114100
     }
   },
   {
@@ -48,7 +48,7 @@
       "images_without_dimensions": 2,
       "external_scripts": 4,
       "google_fonts_usage": 0,
-      "estimated_dom_size_bytes": 114304
+      "estimated_dom_size_bytes": 117425
     }
   },
   {
@@ -61,7 +61,7 @@
       "images_without_dimensions": 2,
       "external_scripts": 3,
       "google_fonts_usage": 1,
-      "estimated_dom_size_bytes": 110766
+      "estimated_dom_size_bytes": 112965
     }
   },
   {
@@ -74,7 +74,7 @@
       "images_without_dimensions": 2,
       "external_scripts": 4,
       "google_fonts_usage": 1,
-      "estimated_dom_size_bytes": 116297
+      "estimated_dom_size_bytes": 116547
     }
   },
   {
@@ -87,7 +87,7 @@
       "images_without_dimensions": 2,
       "external_scripts": 4,
       "google_fonts_usage": 3,
-      "estimated_dom_size_bytes": 130749
+      "estimated_dom_size_bytes": 134891
     }
   },
   {
@@ -100,7 +100,7 @@
       "images_without_dimensions": 2,
       "external_scripts": 3,
       "google_fonts_usage": 1,
-      "estimated_dom_size_bytes": 108997
+      "estimated_dom_size_bytes": 109325
     }
   },
   {

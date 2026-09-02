@@ -1,0 +1,11 @@
+{
+  "total_modified_files": 1953,
+  "total_aggregate_rating_removed": 3452,
+  "total_synthetic_review_removed": 6,
+  "distribution": {
+    "pages_with_1_rating_removed": 454,
+    "pages_with_2_ratings_removed": 1499,
+    "pages_with_3_plus_ratings_removed": 0
+  },
+  "verification_check": true
+}

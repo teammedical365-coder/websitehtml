@@ -13,43 +13,41 @@
       "FAQPage",
       "WebSite"
     ],
-    "aggregate_rating_present": true,
+    "aggregate_rating_present": false,
     "review_present": false,
-    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+    "classification": "SCHEMA_CLEAN"
   },
   {
     "url": "/hims-software",
-    "live_status": 404,
-    "json_ld_blocks_count": 2,
-    "valid_blocks": 2,
+    "live_status": 200,
+    "json_ld_blocks_count": 1,
+    "valid_blocks": 1,
     "parse_errors": 0,
     "extracted_types": [
       "SoftwareApplication",
       "Organization",
-      "LocalBusiness",
       "BreadcrumbList",
       "FAQPage"
     ],
-    "aggregate_rating_present": true,
+    "aggregate_rating_present": false,
     "review_present": false,
-    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+    "classification": "SCHEMA_CLEAN"
   },
   {
     "url": "/nabh-compliant-hospital-software",
-    "live_status": 404,
-    "json_ld_blocks_count": 2,
-    "valid_blocks": 2,
+    "live_status": 200,
+    "json_ld_blocks_count": 1,
+    "valid_blocks": 1,
     "parse_errors": 0,
     "extracted_types": [
       "SoftwareApplication",
       "Organization",
-      "LocalBusiness",
       "BreadcrumbList",
       "FAQPage"
     ],
-    "aggregate_rating_present": true,
+    "aggregate_rating_present": false,
     "review_present": false,
-    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+    "classification": "SCHEMA_CLEAN"
   },
   {
     "url": "/hospital-bed-management",
@@ -64,9 +62,9 @@
       "BreadcrumbList",
       "FAQPage"
     ],
-    "aggregate_rating_present": true,
+    "aggregate_rating_present": false,
     "review_present": false,
-    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+    "classification": "SCHEMA_CLEAN"
   },
   {
     "url": "/blogs/abha-integration-guide",
@@ -85,20 +83,19 @@
   {
     "url": "/blood-bank",
     "live_status": 200,
-    "json_ld_blocks_count": 3,
-    "valid_blocks": 3,
+    "json_ld_blocks_count": 2,
+    "valid_blocks": 2,
     "parse_errors": 0,
     "extracted_types": [
       "SoftwareApplication",
       "Organization",
       "LocalBusiness",
       "BreadcrumbList",
-      "FAQPage",
-      "Product"
+      "FAQPage"
     ],
-    "aggregate_rating_present": true,
-    "review_present": true,
-    "classification": "LIVE_SCHEMA_RISK_REMAINS"
+    "aggregate_rating_present": false,
+    "review_present": false,
+    "classification": "SCHEMA_CLEAN"
   },
   {
     "url": "/pricing",
