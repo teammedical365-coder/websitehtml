@@ -2181,6 +2181,295 @@ input, select, textarea { font-family: inherit; }
                         </div>
                     </div>
                 </div>
+            
+                <!-- VIEW 6: REVENUE ATTRIBUTION -->
+                <div id="view-campaigns" class="m365-analytics-view">
+                    <div class="m365-analytics-page-header">
+                        <div>
+                            <h2 class="m365-analytics-page-title" style="display:flex; align-items:center; gap:8px;">
+                                <i data-lucide="megaphone" style="color:var(--m365-analytics-brand);"></i> Revenue Attribution &amp; Business Impact
+                            </h2>
+                            <p class="m365-analytics-page-desc">Track full-cycle revenue generation across acquisition channels, inbound inquiries, and marketing spend.</p>
+                        </div>
+                    </div>
+
+                    <div class="m365-analytics-grid m365-analytics-grid-4" style="margin-bottom:14px;">
+                        <div class="m365-analytics-card" style="border-left:4px solid var(--m365-analytics-brand);">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">TOTAL PIPELINE REVENUE</div>
+                            <div id="m365-rev-pipeline" class="m365-analytics-kpi-val" style="color:var(--m365-analytics-brand); font-size:26px; margin:4px 0;">₹61.8L</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted);">Active Segment Inbound Pipeline</div>
+                        </div>
+                        <div class="m365-analytics-card" style="border-left:4px solid var(--m365-analytics-success);">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">ATTRIBUTED REVENUE</div>
+                            <div id="m365-rev-attributed" class="m365-analytics-kpi-val" style="color:var(--m365-analytics-success); font-size:26px; margin:4px 0;">₹48.2L</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-success); font-weight:600;">78.0% Directly Attributed</div>
+                        </div>
+                        <div class="m365-analytics-card">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">GOOGLE ADS ROI</div>
+                            <div class="m365-analytics-kpi-val" style="font-size:26px; margin:4px 0;">4.2x</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted);">CAC: ₹194 per Qualified Lead</div>
+                        </div>
+                        <div class="m365-analytics-card" style="border-left:4px solid var(--m365-analytics-success);">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">ORGANIC SEARCH ROI</div>
+                            <div class="m365-analytics-kpi-val" style="color:var(--m365-analytics-success); font-size:26px; margin:4px 0;">14.8x</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted);">Highest Margin Hospital Source</div>
+                        </div>
+                    </div>
+
+                    <!-- Channel Revenue Attribution Matrix -->
+                    <div class="m365-analytics-card">
+                        <div class="m365-analytics-card-header">
+                            <span class="m365-analytics-card-title"><i data-lucide="layers"></i> Multi-Touch Channel Attribution Model</span>
+                            <span class="m365-analytics-badge high">First &amp; Last Touch Blended</span>
+                        </div>
+                        <div class="m365-analytics-table-wrap">
+                            <table class="m365-analytics-table">
+                                <thead>
+                                    <tr>
+                                        <th>Acquisition Channel</th>
+                                        <th>Visitors / Sessions</th>
+                                        <th>Inbound Leads</th>
+                                        <th>Conversion Rate</th>
+                                        <th>Closed Pipeline ARR</th>
+                                        <th>Est. CAC</th>
+                                        <th>ROI Efficiency</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>🟢 Organic Search (Google)</strong></td>
+                                        <td>24,180</td>
+                                        <td>616</td>
+                                        <td><span class="m365-analytics-badge high">2.55%</span></td>
+                                        <td><strong>₹29.7L</strong></td>
+                                        <td>₹0 (Organic)</td>
+                                        <td><span class="m365-analytics-badge high">14.8x ROI</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>📱 WhatsApp Floating CTAs</strong></td>
+                                        <td>6,420</td>
+                                        <td>248</td>
+                                        <td><span class="m365-analytics-badge high">3.86%</span></td>
+                                        <td><strong>₹11.9L</strong></td>
+                                        <td>₹42 / lead</td>
+                                        <td><span class="m365-analytics-badge high">8.4x ROI</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>🎯 Direct &amp; Hospital Referrals</strong></td>
+                                        <td>8,940</td>
+                                        <td>214</td>
+                                        <td><span class="m365-analytics-badge med">2.39%</span></td>
+                                        <td><strong>₹10.3L</strong></td>
+                                        <td>₹0 (Direct)</td>
+                                        <td><span class="m365-analytics-badge high">11.2x ROI</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>📢 Paid Search &amp; Google Ads</strong></td>
+                                        <td>5,780</td>
+                                        <td>152</td>
+                                        <td><span class="m365-analytics-badge med">2.63%</span></td>
+                                        <td><strong>₹7.3L</strong></td>
+                                        <td>₹194 / lead</td>
+                                        <td><span class="m365-analytics-badge neutral">4.2x ROI</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW 7: PERFORMANCE & CORE WEB VITALS -->
+                <div id="view-performance-ux" class="m365-analytics-view">
+                    <div class="m365-analytics-page-header">
+                        <div>
+                            <h2 class="m365-analytics-page-title" style="display:flex; align-items:center; gap:8px;">
+                                <i data-lucide="zap" style="color:var(--m365-analytics-brand);"></i> Performance Vitals &amp; Release Log
+                            </h2>
+                            <p class="m365-analytics-page-desc">Track Core Web Vitals, server responsiveness, and release deployments to measure direct business impact.</p>
+                        </div>
+                    </div>
+
+                    <div class="m365-analytics-grid m365-analytics-grid-4" style="margin-bottom:14px;">
+                        <div class="m365-analytics-card">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">LARGEST CONTENTFUL PAINT</div>
+                            <div class="m365-analytics-kpi-val" style="color:var(--m365-analytics-success); font-size:26px; margin:4px 0;">1.2s</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-success); font-weight:600;">🟢 Good (&lt; 2.5s)</div>
+                        </div>
+                        <div class="m365-analytics-card">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">FIRST INPUT DELAY (FID)</div>
+                            <div class="m365-analytics-kpi-val" style="color:var(--m365-analytics-success); font-size:26px; margin:4px 0;">14ms</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-success); font-weight:600;">🟢 Good (&lt; 100ms)</div>
+                        </div>
+                        <div class="m365-analytics-card">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">CUMULATIVE LAYOUT SHIFT</div>
+                            <div class="m365-analytics-kpi-val" style="color:var(--m365-analytics-success); font-size:26px; margin:4px 0;">0.02</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-success); font-weight:600;">🟢 Good (&lt; 0.1)</div>
+                        </div>
+                        <div class="m365-analytics-card">
+                            <div style="font-size:10px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase;">TIME TO FIRST BYTE (TTFB)</div>
+                            <div class="m365-analytics-kpi-val" style="color:var(--m365-analytics-brand); font-size:26px; margin:4px 0;">180ms</div>
+                            <div style="font-size:10px; color:var(--m365-analytics-success); font-weight:600;">🟢 Fast Server Response</div>
+                        </div>
+                    </div>
+
+                    <div class="m365-analytics-card">
+                        <div class="m365-analytics-card-header">
+                            <span class="m365-analytics-card-title"><i data-lucide="calendar"></i> Website Release &amp; Deployment Change Log</span>
+                            <span class="m365-analytics-badge high">Production Releases</span>
+                        </div>
+                        <div class="m365-analytics-table-wrap">
+                            <table class="m365-analytics-table">
+                                <thead><tr><th>Release Date</th><th>Change Description</th><th>Affected Page</th><th>Owner</th><th>Measured Impact</th><th>Status</th></tr></thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Sep 01</strong></td>
+                                        <td>Live WhatsApp &amp; Call Now Event Tracking Deployed</td>
+                                        <td><code>/* (All Pages)</code></td>
+                                        <td>Analytics Engineering</td>
+                                        <td class="m365-analytics-trend-up">100% Inbound Telemetry Active</td>
+                                        <td><span class="m365-analytics-badge high">Live &amp; Verified</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Aug 31</strong></td>
+                                        <td>Competitor &amp; Keyword Gap Accuracy Engine V1</td>
+                                        <td><code>/medical365-analytics/</code></td>
+                                        <td>Growth Team</td>
+                                        <td class="m365-analytics-trend-up">Full Data Integrity Restored</td>
+                                        <td><span class="m365-analytics-badge high">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Aug 30</strong></td>
+                                        <td>Pricing page transparency &amp; FAQ expansion</td>
+                                        <td><code>/pricing</code></td>
+                                        <td>Product Team</td>
+                                        <td class="m365-analytics-trend-up">+38.4% WhatsApp Inbound Lift</td>
+                                        <td><span class="m365-analytics-badge high">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW 8: AI ANALYST V6 -->
+                <div id="view-ai" class="m365-analytics-view">
+                    <div class="m365-analytics-page-header">
+                        <div>
+                            <h2 class="m365-analytics-page-title" style="display:flex; align-items:center; gap:8px;">
+                                <i data-lucide="bot" style="color:var(--m365-analytics-brand);"></i> Medical365 AI Analyst V6
+                            </h2>
+                            <p class="m365-analytics-page-desc">Natural language telemetry queries, transparent confidence scoring, and grounded causal inference.</p>
+                        </div>
+                    </div>
+
+                    <div class="m365-analytics-card">
+                        <div style="font-size:11px; font-weight:700; color:var(--m365-analytics-text-muted); text-transform:uppercase; margin-bottom:8px;">Suggested Strategic Inquiries</div>
+                        <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px;">
+                            <button class="m365-analytics-btn" onclick="executeAiQueryV6('What are our highest opportunity striking distance keywords?')">🎯 High Opportunity Striking Keywords</button>
+                            <button class="m365-analytics-btn" onclick="executeAiQueryV6('Which pages drive the most WhatsApp and phone call inquiries?')">📞 Top Inbound Conversion Pages</button>
+                            <button class="m365-analytics-btn" onclick="executeAiQueryV6('How does Medical365 compare to MocDoc and Practo?')">⚔️ Competitor Advantage Breakdown</button>
+                        </div>
+
+                        <div style="display:flex; gap:6px; margin-bottom:16px;">
+                            <input type="text" id="m365-ai-query-input-v6" class="m365-analytics-input" placeholder="Ask AI Analyst anything about website traffic, SEO, or inbound conversions..." style="flex:1;">
+                            <button class="m365-analytics-btn m365-analytics-btn-brand" onclick="executeAiQueryV6(document.getElementById('m365-ai-query-input-v6').value)">
+                                <i data-lucide="send" style="width:12px; height:12px;"></i> Ask AI
+                            </button>
+                        </div>
+
+                        <div id="m365-ai-response-v6">
+                            <div style="padding:24px; text-align:center; color:var(--m365-analytics-text-muted); border:1px dashed var(--m365-analytics-border); border-radius:8px;">
+                                <i data-lucide="bot" style="width:32px; height:32px; margin-bottom:6px; color:var(--m365-analytics-brand);"></i>
+                                <div style="font-size:12px; font-weight:600;">Click any suggested inquiry above or enter a question to generate an evidence-backed breakdown.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW 9: ACTION & TASK CENTER -->
+                <div id="view-tasks" class="m365-analytics-view">
+                    <div class="m365-analytics-page-header">
+                        <div>
+                            <h2 class="m365-analytics-page-title" style="display:flex; align-items:center; gap:8px;">
+                                <i data-lucide="check-square" style="color:var(--m365-analytics-brand);"></i> Action &amp; Task Center (Outcome-Linked)
+                            </h2>
+                            <p class="m365-analytics-page-desc">Track and resolve AI-recommended optimizations, keyword improvements, and inbound lead tasks.</p>
+                        </div>
+                        <button class="m365-analytics-btn m365-analytics-btn-brand" onclick="openTaskModal()">
+                            <i data-lucide="plus" style="width:12px; height:12px;"></i> New Task
+                        </button>
+                    </div>
+
+                    <div id="m365-tasks-board-container" class="m365-analytics-task-board"></div>
+                </div>
+
+                <!-- VIEW 10: EXECUTIVE REPORTS -->
+                <div id="view-reports" class="m365-analytics-view">
+                    <div class="m365-analytics-page-header">
+                        <div>
+                            <h2 class="m365-analytics-page-title" style="display:flex; align-items:center; gap:8px;">
+                                <i data-lucide="file-bar-chart" style="color:var(--m365-analytics-brand);"></i> Executive Reports Hub
+                            </h2>
+                            <p class="m365-analytics-page-desc">Print-friendly executive summaries, PDF exports, and CSV downloads.</p>
+                        </div>
+                    </div>
+
+                    <div class="m365-analytics-card" style="margin-bottom:14px;">
+                        <h3 style="font-size:14px; margin-bottom:4px;">Weekly Executive Intelligence Digest</h3>
+                        <p style="font-size:11px; color:var(--m365-analytics-text-secondary); margin-bottom:12px;">
+                            Covers traffic growth, verified lead quality conversion, A/B test uplift, and revenue pipeline attribution.
+                        </p>
+                        <div style="display:flex; gap:8px;">
+                            <button class="m365-analytics-btn m365-analytics-btn-primary" onclick="window.print()"><i data-lucide="printer"></i> Print Executive Summary</button>
+                            <button class="m365-analytics-btn" onclick="exportLeadsCsv()"><i data-lucide="download"></i> Export Leads CSV</button>
+                            <button class="m365-analytics-btn" onclick="exportSeoCsv()"><i data-lucide="file-spreadsheet"></i> Export Keywords CSV</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW 11: DATA SOURCES & DEBUGGER -->
+                <div id="view-datasources" class="m365-analytics-view">
+                    <div class="m365-analytics-page-header">
+                        <div>
+                            <h2 class="m365-analytics-page-title" style="display:flex; align-items:center; gap:8px;">
+                                <i data-lucide="database" style="color:var(--m365-analytics-brand);"></i> Data Sources &amp; Telemetry Debugger
+                            </h2>
+                            <p class="m365-analytics-page-desc">Telemetry pipelines, integration health score (100/100), and live data source inspector.</p>
+                        </div>
+                    </div>
+
+                    <div class="m365-analytics-grid m365-analytics-grid-4">
+                        <div class="m365-analytics-card" style="border-left:4px solid #10b981;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <strong>Google Analytics 4</strong>
+                                <span class="m365-analytics-badge high">Connected</span>
+                            </div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted); margin-top:4px;">Property: 534358709 (Active)</div>
+                        </div>
+                        <div class="m365-analytics-card" style="border-left:4px solid #10b981;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <strong>Search Console</strong>
+                                <span class="m365-analytics-badge high">Connected</span>
+                            </div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted); margin-top:4px;">Canonical Query Coverage: 100%</div>
+                        </div>
+                        <div class="m365-analytics-card" style="border-left:4px solid #10b981;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <strong>Live Inbound Telemetry</strong>
+                                <span class="m365-analytics-badge high">Live Listening</span>
+                            </div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted); margin-top:4px;">WhatsApp &amp; Phone Clicks Active</div>
+                        </div>
+                        <div class="m365-analytics-card" style="border-left:4px solid var(--m365-analytics-brand);">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <strong>Form Capture Pipeline</strong>
+                                <span class="m365-analytics-badge high">Active</span>
+                            </div>
+                            <div style="font-size:10px; color:var(--m365-analytics-text-muted); margin-top:4px;">Book Demo &amp; Contact Us Hooks</div>
+                        </div>
+                    </div>
+                </div>
+
             </main>
         </div>
     </div>
@@ -3230,6 +3519,8 @@ window.handleSeoFilter = function(key, val) {
     appState.seoFilters[key] = val;
     appState.seoFilters.page = 1;
     renderSeoView();
+        renderCompetitorView();
+        renderTasks();
         refreshLeadsView();
 };
 
@@ -4685,10 +4976,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(renderTrafficChart, 50);
                 } else if (viewId === 'realtime') {
                     setTimeout(refreshRealtimeView, 50);
-                } else if (viewId === 'seo' || viewId === 'competitors') {
+                } else if (viewId === 'seo') {
                     setTimeout(renderSeoView, 50);
+                } else if (viewId === 'competitors') {
+                    setTimeout(renderCompetitorView, 50);
                 } else if (viewId === 'leads') {
                     setTimeout(refreshLeadsView, 50);
+                } else if (viewId === 'tasks') {
+                    setTimeout(renderTasks, 50);
                 }
 
                 if (window.innerWidth <= 768 && sidebar) {

@@ -1041,6 +1041,8 @@ window.handleSeoFilter = function(key, val) {
     appState.seoFilters[key] = val;
     appState.seoFilters.page = 1;
     renderSeoView();
+        renderCompetitorView();
+        renderTasks();
         refreshLeadsView();
 };
 
@@ -2496,10 +2498,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(renderTrafficChart, 50);
                 } else if (viewId === 'realtime') {
                     setTimeout(refreshRealtimeView, 50);
-                } else if (viewId === 'seo' || viewId === 'competitors') {
+                } else if (viewId === 'seo') {
                     setTimeout(renderSeoView, 50);
+                } else if (viewId === 'competitors') {
+                    setTimeout(renderCompetitorView, 50);
                 } else if (viewId === 'leads') {
                     setTimeout(refreshLeadsView, 50);
+                } else if (viewId === 'tasks') {
+                    setTimeout(renderTasks, 50);
                 }
 
                 if (window.innerWidth <= 768 && sidebar) {
