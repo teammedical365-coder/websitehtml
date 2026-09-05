@@ -1,16 +1,32 @@
 # ==============================================================================
-# MEDICAL365 ROBOTS.TXT — v3.0
-# Optimized for Google, Bing, and AI Crawlers
+# MEDICAL365 ROBOTS.TXT — v4.1 (Production SEO, AEO & Privacy Hardened)
+# Website: https://www.medical365.in
 # ==============================================================================
 
 User-agent: *
 Allow: /
 Allow: /global-styles.css
 Allow: /global-scripts.js
+Allow: /redesign.css
 Allow: /logo/
 Allow: /images/
+Allow: /images/diagrams/
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.css$
+Allow: /*.js$
 
-# Block Sensitive & System Directories
+# Block Internal Analytics, Intelligence Dashboard & API Keys
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+Disallow: /medical365-analytics-api
+Disallow: /medical365-analytics-api/
+Disallow: /*.json$
+
+# Block Sensitive, Admin & Internal System Directories
 Disallow: /admin/
 Disallow: /config/
 Disallow: /cgi-bin/
@@ -19,13 +35,67 @@ Disallow: /temp/
 Disallow: /superadmin
 Disallow: /superadmin.html
 
-# Block SEO Generated Pages & Templates
+# Block Development & SEO Template Scaffolding
 Disallow: /templates
 Disallow: /templates.html
 Disallow: /free-webpage
 Disallow: /free-webpage.html
 Disallow: /seo_template
 Disallow: /seo_template.html
+Disallow: /scratch/
 
-# Standardized Link to Sitemap
-Sitemap: https://medical365.in/sitemap.xml
+# Specific AI & LLM Search Engine Crawlers (AEO / GEO Indexing)
+User-agent: Googlebot
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+Disallow: /medical365-analytics-api/
+Disallow: /admin/
+Disallow: /superadmin
+
+User-agent: Bingbot
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+Disallow: /medical365-analytics-api/
+Disallow: /admin/
+Disallow: /superadmin
+
+User-agent: GPTBot
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+Disallow: /medical365-analytics-api/
+Disallow: /admin/
+Disallow: /superadmin
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+Disallow: /medical365-analytics-api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+Disallow: /medical365-analytics-api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+Disallow: /medical365-analytics-api/
+
+User-agent: Applebot
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+
+# Canonical XML Sitemap
+Sitemap: https://www.medical365.in/sitemap.xml
