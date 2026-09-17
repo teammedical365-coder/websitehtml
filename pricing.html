@@ -218,6 +218,173 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
   </script>
     <style>
+    
+    /* ==========================================================================
+       USABILITY HEURISTICS DESIGN TOKENS & SYSTEM (Issues 1, 2, 3, 4, 5, 6, 7, 13, 14, 15, 16)
+       ========================================================================== */
+    :root {
+      /* Type Scale (Issue 1) */
+      --text-xs: 0.75rem;    /* 12px */
+      --text-sm: 0.875rem;   /* 14px */
+      --text-base: 1rem;     /* 16px */
+      --text-md: 1.125rem;   /* 18px */
+      --text-lg: 1.25rem;    /* 20px */
+      --text-xl: 1.5rem;     /* 24px */
+      --text-2xl: 2rem;      /* 32px */
+      --text-3xl: clamp(2.25rem, 4.5vw, 3rem);
+
+      /* Semantic Text Colors (Issue 2) */
+      --color-text-primary: #0f172a;
+      --color-text-secondary: #334155;
+      --color-text-muted: #64748b;
+      --color-text-brand: #1A56DB;
+      --color-text-accent: #0D9488;
+      --color-text-inverse: #ffffff;
+
+      /* Standard Border Radii (Issue 3) */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+    }
+
+    /* Screen Reader Only utility for semantic headers (Issue 8) */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Long All-Caps Fixes (Issues 4, 5, 6) */
+    .feature-title {
+      text-transform: none !important;
+      font-size: var(--text-sm) !important;
+      font-weight: 700 !important;
+      letter-spacing: normal !important;
+      color: var(--color-text-primary) !important;
+      margin-top: 18px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .mf-cta-label {
+      text-transform: none !important;
+      font-size: var(--text-md) !important;
+      font-weight: 600 !important;
+      letter-spacing: normal !important;
+    }
+
+    .mf-col-title, .mf-cat-title {
+      text-transform: none !important;
+      font-size: var(--text-base) !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.01em !important;
+      color: #ffffff !important;
+    }
+
+    /* Small Body Text Legibility Fixes (Issue 7) */
+    .mf-copy-sm, .terms-box ul li {
+      font-size: 0.8125rem !important; /* 13px */
+      line-height: 1.6 !important;
+      color: #94a3b8 !important;
+    }
+    .terms-box ul li {
+      color: var(--color-text-secondary) !important;
+    }
+
+    /* 4-Card Responsive Balanced Grid (Issue 13) */
+    .pricing-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 20px !important;
+      align-items: stretch !important;
+    }
+
+    @media (max-width: 1200px) and (min-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .pricing-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+    }
+
+    .pricing-card {
+      display: flex !important;
+      flex-direction: column !important;
+      border-radius: var(--radius-lg, 16px) !important;
+      background: #ffffff !important;
+      padding: 32px 24px !important;
+      border: 1px solid #e2e8f0 !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+      position: relative !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+    .pricing-card.popular {
+      border: 2px solid var(--brand-blue, #1A56DB) !important;
+      box-shadow: 0 10px 30px rgba(26, 86, 219, 0.12) !important;
+    }
+    .pricing-card .btn-pricing {
+      margin-top: auto !important;
+    }
+
+    /* Strikethrough Worth Value Badge (Issue 15) */
+    .plan-worth {
+      font-size: var(--text-sm) !important;
+      color: #dc2626 !important; /* Vivid accessible red */
+      font-weight: 700 !important;
+      text-decoration: line-through !important;
+      margin-top: 4px !important;
+      display: inline-block !important;
+    }
+
+    /* Standardized CTA Buttons (Issue 14) */
+    .btn-primary, .btn-pricing-primary, .mf-btn-demo {
+      background: #1A56DB !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(26, 86, 219, 0.25) !important;
+      border-radius: var(--radius-md, 10px) !important;
+      font-weight: 700 !important;
+      transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease !important;
+    }
+
+    .btn-primary:hover, .btn-pricing-primary:hover, .mf-btn-demo:hover {
+      background: #1E429F !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 6px 20px rgba(26, 86, 219, 0.35) !important;
+    }
+
+    .btn-pricing-outline {
+      border: 2px solid #1A56DB !important;
+      color: #1A56DB !important;
+      background: #ffffff !important;
+      border-radius: var(--radius-md, 10px) !important;
+      font-weight: 700 !important;
+      transition: all 0.15s ease !important;
+    }
+
+    .btn-pricing-outline:hover {
+      background: #1A56DB !important;
+      color: #ffffff !important;
+    }
+
+    /* Services Grid (Issue 16) */
+    .mf-services-grid {
+      column-gap: 32px !important;
+      row-gap: 10px !important;
+    }
+
     /* Audit Hotfixes — Stabilising Mobile & Mega Menu */
     .mega-menu { background-color: #ffffff !important; z-index: 11000 !important; }
     .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .header-container { overflow: hidden !important; } }
@@ -872,8 +1039,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ══════════════════════════════════════════════════
          MAIN PRICING CARDS
     ══════════════════════════════════════════════════ -->
-    <section class="pricing-section" id="full-pricing" style="padding-top: 0;">
+    <section class="pricing-section" id="full-pricing" style="padding-top: 0;" aria-labelledby="pricing-plans-heading">
         <div class="container">
+            <h2 id="pricing-plans-heading" class="sr-only">Available Hospital Software Pricing Plans & Subscriptions</h2>
             <!-- Interactive Zero-Latency Plan Switcher -->
             <div class="pricing-switcher-wrapper">
                 <div class="pricing-switcher" role="tablist" aria-label="Billing frequency toggle">
@@ -1059,7 +1227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="terms-box" style="margin-top: 40px; padding: 24px; background: var(--bg-main); border-radius: 12px;">
-                <h4 style="margin-bottom: 12px; font-size: 1.1rem;">*Terms of Provision</h4>
+                <h3 style="margin-bottom: 12px; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">*Terms of Provision</h3>
                 <ul style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 20px; line-height: 1.6; margin: 0;">
                     <li style="margin-bottom: 8px;">All facilities are included uniformly across all subscription plans.</li>
                     <li style="margin-bottom: 8px;">Renewal rates for web assets (.in domain name and SSL Protocol Certification) revert to standard pricing after year one.</li>
@@ -1078,19 +1246,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
                 <div style="padding: 20px; border-radius: 8px; background: #F8FAFC; border: 1px solid #E2E8F0;">
-                    <h4 style="font-size: 15px; font-weight: 700; color: #1E293B; margin-bottom: 6px;">⚡ 24–48h Go-Live</h4>
+                    <h3 style="font-size: 15px; font-weight: 700; color: #1E293B; margin-bottom: 6px;">⚡ 24–48h Go-Live</h3>
                     <p style="font-size: 13px; color: #475569; line-height: 1.6; margin: 0;">Rapid cloud provisioning with full hospital department configuration and free role-based staff training.</p>
                 </div>
                 <div style="padding: 20px; border-radius: 8px; background: #F8FAFC; border: 1px solid #E2E8F0;">
-                    <h4 style="font-size: 15px; font-weight: 700; color: #1E293B; margin-bottom: 6px;">🔄 Free Data Migration</h4>
+                    <h3 style="font-size: 15px; font-weight: 700; color: #1E293B; margin-bottom: 6px;">🔄 Free Data Migration</h3>
                     <p style="font-size: 13px; color: #475569; line-height: 1.6; margin: 0;">Our engineering team imports your legacy patient demographic files, pharmacy stocks, and rate cards seamlessly.</p>
                 </div>
                 <div style="padding: 20px; border-radius: 8px; background: #F8FAFC; border: 1px solid #E2E8F0;">
-                    <h4 style="font-size: 15px; font-weight: 700; color: #1E293B; margin-bottom: 6px;">🔒 Encrypted Cloud Hosting</h4>
+                    <h3 style="font-size: 15px; font-weight: 700; color: #1E293B; margin-bottom: 6px;">🔒 Encrypted Cloud Hosting</h3>
                     <p style="font-size: 13px; color: #475569; line-height: 1.6; margin: 0;">ISO-compliant Indian data centers with automated hourly snapshots, role-based access control, and 99.9% uptime SLA.</p>
                 </div>
                 <div style="padding: 20px; border-radius: 8px; background: #F8FAFC; border: 1px solid #E2E8F0;">
-                    <h4 style="font-size: 15px; font-weight: 700; color: #1E293B; margin-bottom: 6px;">🇮🇳 ABDM Ready</h4>
+                    <h3 style="font-size: 15px; font-weight: 700; color: #1E293B; margin-bottom: 6px;">🇮🇳 ABDM Ready</h3>
                     <p style="font-size: 13px; color: #475569; line-height: 1.6; margin: 0;">Ayushman Bharat Digital Mission M1, M2, and M3 APIs are natively pre-configured for instant ABHA registration.</p>
                 </div>
             </div>
@@ -1117,15 +1285,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="faq-container" style="display: flex; flex-direction: column; gap: 16px;">
                 <div class="faq-item" style="background: #fff; padding: 24px; border-radius: 12px; border: 1px solid rgba(226, 232, 240, 0.8);">
-                    <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; color: var(--brand-blue);">What does "All Facilities Included" mean?</h4>
+                    <h3 class="faq-question" style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; color: var(--brand-blue);">What does "All Facilities Included" mean?</h3>
                     <p style="color: var(--text-secondary); margin: 0; line-height: 1.5;">Every plan comes with full access to our core modules including Patient Registration, EMR/EHR, Billing & Invoicing, WhatsApp Notifications, and Data Security. We don't limit features by tier, only user limits.</p>
                 </div>
                 <div class="faq-item" style="background: #fff; padding: 24px; border-radius: 12px; border: 1px solid rgba(226, 232, 240, 0.8);">
-                    <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; color: var(--brand-blue);">Can I upgrade my plan later?</h4>
+                    <h3 class="faq-question" style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; color: var(--brand-blue);">Can I upgrade my plan later?</h3>
                     <p style="color: var(--text-secondary); margin: 0; line-height: 1.5;">Yes, you can upgrade your plan at any time to add more doctors, staff accounts, or branch locations. The prorated amount will simply be applied to your new subscription cycle.</p>
                 </div>
                 <div class="faq-item" style="background: #fff; padding: 24px; border-radius: 12px; border: 1px solid rgba(226, 232, 240, 0.8);">
-                    <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; color: var(--brand-blue);">Is there a setup fee?</h4>
+                    <h3 class="faq-question" style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; color: var(--brand-blue);">Is there a setup fee?</h3>
                     <p style="color: var(--text-secondary); margin: 0; line-height: 1.5;">There are no hidden setup fees. The annual subscription covers onboarding, basic training, and support. Custom localized modules or API development may require a separate quote.</p>
                 </div>
             </div>
@@ -1567,7 +1735,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="mf-all-cats">
 
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">Hospital & Clinic Management</h4>
+                            <h3 class="mf-cat-title">Hospital & Clinic Management</h4>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="/hospital-management-software-jaipur">Top HMS Rajasthan</a></li>
@@ -1586,7 +1754,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">Clinical & Medical Ops</h4>
+                            <h3 class="mf-cat-title">Clinical & Medical Ops</h4>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="/emr-software-bikaner">EMR Bikaner</a></li>
@@ -1603,7 +1771,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <!-- Other categories simplified similarly -->
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">Patient Experience</h4>
+                            <h3 class="mf-cat-title">Patient Experience</h4>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="/hospital-online-scheduling-software-udaipur">Scheduling Udaipur</a>
@@ -1620,7 +1788,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">IT & Infrastructure</h4>
+                            <h3 class="mf-cat-title">IT & Infrastructure</h4>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="/hospital-it-cloud-migration-jaipur">Cloud Jaipur</a></li>
@@ -1634,7 +1802,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">HR & Operations</h4>
+                            <h3 class="mf-cat-title">HR & Operations</h4>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="/hospital-hrms-jaipur">HRMS Jaipur</a></li>
@@ -1649,7 +1817,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="mf-cat-block" style="grid-column: span 1;">
-                            <h4 class="mf-cat-title">Govt & Public Health</h4>
+                            <h3 class="mf-cat-title">Govt & Public Health</h4>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="/integrated-population-healthcare-management-jaipur">Public Health
