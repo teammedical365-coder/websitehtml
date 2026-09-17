@@ -39,6 +39,144 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Phase 1: Critical CSS -->
     <style>
+
+    /* ==========================================================================
+       USABILITY HEURISTICS DESIGN TOKENS (Issues 1, 2, 3)
+       Standardized 8-step type scale, 6-token text colors, 5-tier radii
+       ========================================================================== */
+    :root {
+      /* Type Scale (Issue 1) */
+      --text-xs: 0.75rem;    /* 12px */
+      --text-sm: 0.875rem;   /* 14px */
+      --text-base: 1rem;     /* 16px */
+      --text-md: 1.125rem;   /* 18px */
+      --text-lg: 1.25rem;    /* 20px */
+      --text-xl: 1.5rem;     /* 24px */
+      --text-2xl: 2rem;      /* 32px */
+      --text-3xl: clamp(2.25rem, 4.5vw, 3rem);
+
+      /* Semantic Text Colors (Issue 2) */
+      --color-text-primary: #0f172a;
+      --color-text-secondary: #334155;
+      --color-text-muted: #64748b;
+      --color-text-brand: #1A56DB;
+      --color-text-accent: #0D9488;
+      --color-text-inverse: #ffffff;
+
+      /* Standard Border Radii (Issue 3) */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+    }
+
+    /* Standardized typography & card sub fixes */
+    .card-sub {
+      font-size: 0.8125rem !important; /* 13px - Issue 4 */
+      line-height: 1.4 !important;
+      color: #64748b !important;
+      font-weight: 500 !important;
+    }
+
+    .trusted-text {
+      text-transform: none !important; /* Issue 5 */
+      font-size: 0.875rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.02em !important;
+      color: #64748b !important;
+    }
+
+    /* Standardized Primary CTA Button (Issue 12) */
+    .btn-primary, .btn-v2-primary {
+      background: #1A56DB !important;
+      color: #ffffff !important;
+      padding: 14px 28px !important;
+      border-radius: var(--radius-md, 10px) !important;
+      font-weight: 700 !important;
+      font-size: 1rem !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      border: 1px solid transparent !important;
+      box-shadow: 0 4px 14px rgba(26, 86, 219, 0.25) !important;
+      transition: all 0.15s ease !important;
+    }
+
+    .btn-primary:hover, .btn-v2-primary:hover {
+      background: #1e40af !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 6px 20px rgba(26, 86, 219, 0.35) !important;
+    }
+
+    /* Standardized Feature Grid Alignment (Issue 14) */
+    .bento-grid-redesign {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+      gap: 24px !important;
+      align-items: stretch !important;
+    }
+
+    .bento-card {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      padding: 28px 24px !important;
+      border-radius: var(--radius-lg, 16px) !important;
+      border: 1px solid #e2e8f0 !important;
+      background: #ffffff !important;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+    }
+
+    .bento-card p {
+      flex-grow: 1 !important;
+      margin-bottom: 16px !important;
+    }
+
+    /* Footer Typography & Accordion (Issues 7, 8, 9, 11, 13) */
+    .mf-col-title {
+      text-transform: none !important; /* Issue 7 */
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+    }
+
+    .mf-cat-title {
+      text-transform: none !important; /* Issue 8 */
+      font-size: 0.875rem !important;
+      font-weight: 700 !important;
+      color: #cbd5e1 !important;
+    }
+
+    .mf-copy.mf-copy-sm {
+      font-size: 0.8125rem !important; /* 13px - Issue 9 */
+      line-height: 1.55 !important;
+      color: #94a3b8 !important;
+    }
+
+    .mf-locations-accordion summary {
+      cursor: pointer;
+      color: #38bdf8;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
+      margin-top: 14px;
+      padding: 8px 14px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 8px;
+      transition: background 0.15s ease;
+    }
+    .mf-locations-accordion summary:hover {
+      background: rgba(56, 189, 248, 0.15);
+    }
+    .mf-locations-accordion summary::-webkit-details-marker { display: none; }
+
         :root {
             --brand-blue: #1A56DB; --brand-teal: #0D9488; --text-primary: #1E293B; --bg-main: #F8FAFC;
         }
@@ -352,7 +490,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                             <div class="mega-menu" id="mega-menu-content">
                                 <div class="mega-menu-inner">
-                                    <div class="mega-sidebar" role="tablist" aria-orientation="vertical">
+                                    <div class="mega-sidebar" role="tablist" aria-orientation="vertical" aria-label="Healthcare Solutions Categories">
+            <div class="mega-sidebar-group-title" style="font-size: 10.5px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.6px; padding: 8px 12px 4px;">Facilities</div>
                                         <button class="tab-btn active" role="tab" aria-selected="true"
                                             data-target="clinics">
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -976,7 +1115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <i>📈</i>
                         <div class="card-info">
                             <span class="card-title">Live Analytics</span>
-                            <span class="card-sub">Real-time monitoring</span>
+                            <span class="card-sub" style="font-size: 0.8125rem; color: #64748b;">Real-time monitoring</span>
                         </div>
                     </div>
                     
@@ -984,7 +1123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <i style="background: var(--h-teal);">✅</i>
                         <div class="card-info">
                             <span class="card-title">ABDM Verified</span>
-                            <span class="card-sub">Govt. Compliant</span>
+                            <span class="card-sub" style="font-size: 0.8125rem; color: #64748b;">Govt. Compliant</span>
                         </div>
                     </div>
 
@@ -992,7 +1131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <i>⚡</i>
                         <div class="card-info">
                             <span class="card-title">Quick Action</span>
-                            <span class="card-sub">Instant workflows</span>
+                            <span class="card-sub" style="font-size: 0.8125rem; color: #64748b;">Instant workflows</span>
                         </div>
                     </div>
                 </div>
@@ -1002,7 +1141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="logo-cloud premium-glow-bg">
         <div class="container text-center">
-            <p class="trusted-text">TRUSTED BY OVER 500+ HEALTHCARE INSTITUTIONS ACROSS INDIA</p>
+            <p class="trusted-text">Trusted by over 500+ healthcare institutions across India</p>
             <div class="logos">
                 <div class="logo-placeholder" style="animation-delay: 0.1s;">City Hospital</div>
                 <div class="logo-placeholder" style="animation-delay: 0.2s;">Apollo Care</div>
@@ -1054,7 +1193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                         <div style="flex: 1;">
                             <span style="display: block; font-weight: 800; font-size: 1.1rem; color: #1D4E9E;">300+</span>
-                            <span style="display: block; font-size: 0.7rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px;">API Integrations</span>
+                            <span style="display: block; font-size: 0.75rem; color: #64748B; text-transform: none; font-weight: 600;">API Integrations</span>
                         </div>
                         <div style="display: flex; -webkit-mask-image: linear-gradient(to right, black, transparent);">
                             <span style="font-size: 1.2rem; filter: grayscale(1);">⚡ 📁 🌐</span>
@@ -1681,7 +1820,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
-                                <h4 style="margin: 0; font-weight: 700;">Dr. Rajesh Kumar</h4>
+                                <h3 style="margin: 0; font-weight: 700; font-size: 1.05rem;">Dr. Rajesh Kumar</h3>
                                 <p style="margin: 0; font-size: 0.85rem;">CMO, City Care Hospital</p>
                             </div>
                         </div>
@@ -1696,7 +1835,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
-                                <h4 style="margin: 0; font-weight: 700;">Amit Sharma</h4>
+                                <h3 style="margin: 0; font-weight: 700; font-size: 1.05rem;">Amit Sharma</h3>
                                 <p style="margin: 0; font-size: 0.85rem;">Ops Director, HealthPlus Group</p>
                             </div>
                         </div>
@@ -1711,7 +1850,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
-                                <h4 style="margin: 0; font-weight: 700;">Neha Reddy</h4>
+                                <h3 style="margin: 0; font-weight: 700; font-size: 1.05rem;">Neha Reddy</h3>
                                 <p style="margin: 0; font-size: 0.85rem;">Hospital CFO, Zenith Healthcare</p>
                             </div>
                         </div>
@@ -1742,7 +1881,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
-                                <h4 style="margin: 0; font-weight: 700;">Amit Sharma</h4>
+                                <h3 style="margin: 0; font-weight: 700; font-size: 1.05rem;">Amit Sharma</h3>
                                 <p style="margin: 0; font-size: 0.85rem;">Ops Director, HealthPlus Group</p>
                             </div>
                         </div>
@@ -1757,7 +1896,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
-                                <h4 style="margin: 0; font-weight: 700;">Neha Reddy</h4>
+                                <h3 style="margin: 0; font-weight: 700; font-size: 1.05rem;">Neha Reddy</h3>
                                 <p style="margin: 0; font-size: 0.85rem;">Hospital CFO, Zenith Healthcare</p>
                             </div>
                         </div>
@@ -1771,21 +1910,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="badge">Ecosystem</div>
             <h3 style="font-weight: 800; font-size: 1.5rem; margin-top: 10px;">Seamless Integrations</h3>
         </div>
-        <div class="marquee-inner">
-            <span>Tally ERP 9</span>
-            <span>Razorpay</span>
-            <span>Stripe</span>
-            <span>WhatsApp API</span>
-            <span>DICOM Viewers</span>
-            <span>Biometric Devices</span>
-            <span>HL7 / FHIR</span>
-            <span>Tally ERP 9</span>
-            <span>Razorpay</span>
-            <span>Stripe</span>
-            <span>WhatsApp API</span>
-            <span>DICOM Viewers</span>
-            <span>Biometric Devices</span>
-            <span>HL7 / FHIR</span>
+        <div class="marquee-inner" style="display: flex; gap: 18px;">
+            <span style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; padding: 8px 16px; border-radius: 10px; border: 1px solid #e2e8f0; font-weight: 600; color: #1e293b;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#0D9488"><rect width="24" height="24" rx="4"/><path d="M7 7h10v3H7zm0 5h7v3H7z" fill="#fff"/></svg>
+                Tally ERP 9
+            </span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; padding: 8px 16px; border-radius: 10px; border: 1px solid #e2e8f0; font-weight: 600; color: #1e293b;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#0284c7"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="2" fill="none"/></svg>
+                Razorpay
+            </span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; padding: 8px 16px; border-radius: 10px; border: 1px solid #e2e8f0; font-weight: 600; color: #1e293b;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#6366f1"><rect x="2" y="5" width="20" height="14" rx="3" fill="#6366f1"/><path d="M6 10h4v4H6z" fill="#fff"/></svg>
+                Stripe Payments
+            </span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; padding: 8px 16px; border-radius: 10px; border: 1px solid #e2e8f0; font-weight: 600; color: #1e293b;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#22c55e"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="#22c55e"/></svg>
+                WhatsApp API
+            </span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; padding: 8px 16px; border-radius: 10px; border: 1px solid #e2e8f0; font-weight: 600; color: #1e293b;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#1A56DB"><rect x="3" y="3" width="18" height="18" rx="2" fill="#1A56DB"/><circle cx="12" cy="12" r="4" fill="#fff"/></svg>
+                DICOM 3.0 Viewers
+            </span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; padding: 8px 16px; border-radius: 10px; border: 1px solid #e2e8f0; font-weight: 600; color: #1e293b;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2a10 10 0 0 0-10 10c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" fill="#f59e0b"/></svg>
+                HL7 / FHIR Standard
+            </span>
         </div>
     </div>
 
@@ -2536,10 +2685,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </h2>
                         <span class="mf-section-sub">Hospital &amp; Clinic Software across Rajasthan</span>
                     </div>
-                    <ul class="mf-loc-grid">
-                        
-                        
-                        
+                    
+                    <ul class="mf-loc-grid" style="margin-bottom: 8px;">
                         <li><a href="healthcare-kiosk-providers-kota"><svg width="14" height="14" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -2580,107 +2727,113 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <path
                                         d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Bharatpur</a></li>
-                        <li><a href="clinic-management-system-sri-ganganagar"><svg width="14" height="14"
+                    </ul>
+                    <details class="mf-locations-accordion">
+                        <summary>
+                            <span>View all 40+ Indian Cities &amp; Regions</span>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </summary>
+                        <ul class="mf-loc-grid" style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08);">
+                            <li><a href="clinic-management-system-sri-ganganagar"><svg width="14" height="14"
                                     viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Sri Ganganagar</a></li>
-                    
-                        <li><a href="hospital-management-software-mumbai.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-mumbai.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Mumbai</a></li>
-                        <li><a href="hospital-management-software-bengaluru.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-bengaluru.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Bengaluru</a></li>
-                        <li><a href="hospital-management-software-hyderabad.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-hyderabad.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Hyderabad</a></li>
-                        <li><a href="hospital-management-software-chennai.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-chennai.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Chennai</a></li>
-                        <li><a href="hospital-management-software-kolkata.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-kolkata.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Kolkata</a></li>
-                        <li><a href="hospital-management-software-pune.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-pune.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Pune</a></li>
-                        <li><a href="hospital-management-software-ahmedabad.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-ahmedabad.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Ahmedabad</a></li>
-                        <li><a href="hospital-management-software-surat.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-surat.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Surat</a></li>
-                        <li><a href="hospital-management-software-lucknow.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-lucknow.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Lucknow</a></li>
-                        <li><a href="hospital-management-software-chandigarh.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-chandigarh.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Chandigarh</a></li>
-                        <li><a href="hospital-management-software-indore.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-indore.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Indore</a></li>
-                        <li><a href="hospital-management-software-nagpur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-nagpur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Nagpur</a></li>
-                        <li><a href="hospital-management-software-bhopal.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-bhopal.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Bhopal</a></li>
-                        <li><a href="hospital-management-software-patna.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-patna.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Patna</a></li>
-                        <li><a href="hospital-management-software-bhubaneswar.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-bhubaneswar.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Bhubaneswar</a></li>
-                        <li><a href="hospital-management-software-coimbatore.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-coimbatore.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Coimbatore</a></li>
-                        <li><a href="hospital-management-software-kochi.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-kochi.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Kochi</a></li>
-                        <li><a href="hospital-management-software-visakhapatnam.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-visakhapatnam.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Visakhapatnam</a></li>
-                        <li><a href="hospital-management-software-vadodara.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-vadodara.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Vadodara</a></li>
-                        <li><a href="hospital-management-software-nashik.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-nashik.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Nashik</a></li>
-                        <li><a href="hospital-management-software-rajkot.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-rajkot.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Rajkot</a></li>
-                        <li><a href="hospital-management-software-ludhiana.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-ludhiana.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Ludhiana</a></li>
-                        <li><a href="hospital-management-software-agra.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-agra.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Agra</a></li>
-                        <li><a href="hospital-management-software-kanpur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-kanpur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Kanpur</a></li>
-                        <li><a href="hospital-management-software-dehradun.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-dehradun.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Dehradun</a></li>
-                        <li><a href="hospital-management-software-ranchi.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-ranchi.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Ranchi</a></li>
-                        <li><a href="hospital-management-software-guwahati.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-guwahati.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Guwahati</a></li>
-                        <li><a href="hospital-management-software-delhi.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-delhi.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Delhi</a></li>
-                    
-                        <li><a href="hospital-management-software-jaipur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-jaipur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Jaipur</a></li>
-                        <li><a href="hospital-management-software-jodhpur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-jodhpur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Jodhpur</a></li>
-                        <li><a href="hospital-management-software-udaipur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <li><a href="hospital-management-software-udaipur.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                 </svg>Udaipur</a></li>
-                    </ul>
+                        </ul>
+                    </details>
                 </div>
 
                 <!-- ── DIVIDER ── -->
@@ -2703,7 +2856,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="mf-all-cats">
 
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">Hospital & Clinic Management</h4>
+                            <h3 class="mf-cat-title">Hospital & Clinic Management</h3>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="hospital-management-software-jaipur">Top HMS Rajasthan</a></li>
@@ -2722,7 +2875,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">Clinical & Medical Ops</h4>
+                            <h3 class="mf-cat-title">Clinical & Medical Ops</h3>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="emr-software-bikaner">EMR Bikaner</a></li>
@@ -2739,7 +2892,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <!-- Other categories simplified similarly -->
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">Patient Experience</h4>
+                            <h3 class="mf-cat-title">Patient Experience</h3>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="hospital-online-scheduling-software-udaipur">Scheduling Udaipur</a>
@@ -2756,7 +2909,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">IT & Infrastructure</h4>
+                            <h3 class="mf-cat-title">IT & Infrastructure</h3>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="hospital-it-cloud-migration-jaipur">Cloud Jaipur</a></li>
@@ -2770,7 +2923,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="mf-cat-block">
-                            <h4 class="mf-cat-title">HR & Operations</h4>
+                            <h3 class="mf-cat-title">HR & Operations</h3>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="hospital-hrms-jaipur">HRMS Jaipur</a></li>
@@ -2785,7 +2938,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="mf-cat-block" style="grid-column: span 1;">
-                            <h4 class="mf-cat-title">Govt & Public Health</h4>
+                            <h3 class="mf-cat-title">Govt & Public Health</h3>
                             <div class="mf-link-cols">
                                 <ul class="mf-link-col">
                                     <li><a href="integrated-population-healthcare-management-jaipur">Public Health
