@@ -1,0 +1,1346 @@
+{
+  "generatedAt": "2026-09-02T10:55:07.326Z",
+  "totalFilesModified": 67,
+  "modifiedFiles": [
+    {
+      "filename": "ecg-ekg-integration.html",
+      "slug": "ecg-ekg-integration",
+      "cluster": "CARDIOLOGY",
+      "primaryKeyword": "ECG EKG integration software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "echocardiography-reports.html",
+      "slug": "echocardiography-reports",
+      "cluster": "CARDIOLOGY",
+      "primaryKeyword": "echocardiography reporting software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "stress-test-management.html",
+      "slug": "stress-test-management",
+      "cluster": "CARDIOLOGY",
+      "primaryKeyword": "cardiac stress test software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "cardiac-risk-scoring.html",
+      "slug": "cardiac-risk-scoring",
+      "cluster": "CARDIOLOGY",
+      "primaryKeyword": "cardiac risk assessment software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "angiography-reports.html",
+      "slug": "angiography-reports",
+      "cluster": "CARDIOLOGY",
+      "primaryKeyword": "coronary angiography reporting software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "pacemaker-tracking.html",
+      "slug": "pacemaker-tracking",
+      "cluster": "CARDIOLOGY",
+      "primaryKeyword": "pacemaker tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "lipid-profile-tracking.html",
+      "slug": "lipid-profile-tracking",
+      "cluster": "CARDIOLOGY",
+      "primaryKeyword": "lipid profile tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "cardiac-history-templates.html",
+      "slug": "cardiac-history-templates",
+      "cluster": "CARDIOLOGY",
+      "primaryKeyword": "cardiology clinical documentation templates",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "eeg-reports.html",
+      "slug": "eeg-reports",
+      "cluster": "NEUROLOGY",
+      "primaryKeyword": "EEG reporting software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "mri-ct-integration.html",
+      "slug": "mri-ct-integration",
+      "cluster": "NEUROLOGY",
+      "primaryKeyword": "neuroimaging PACS integration software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "seizure-tracking.html",
+      "slug": "seizure-tracking",
+      "cluster": "NEUROLOGY",
+      "primaryKeyword": "seizure tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "cognitive-assessment.html",
+      "slug": "cognitive-assessment",
+      "cluster": "NEUROLOGY",
+      "primaryKeyword": "cognitive assessment software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "stroke-management.html",
+      "slug": "stroke-management",
+      "cluster": "NEUROLOGY",
+      "primaryKeyword": "stroke management software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "neurological-exam-forms.html",
+      "slug": "neurological-exam-forms",
+      "cluster": "NEUROLOGY",
+      "primaryKeyword": "neurology examination templates",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "growth-charts.html",
+      "slug": "growth-charts",
+      "cluster": "PEDIATRICS",
+      "primaryKeyword": "pediatric growth chart software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "vaccination-tracking.html",
+      "slug": "vaccination-tracking",
+      "cluster": "PEDIATRICS",
+      "primaryKeyword": "child vaccination tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "pediatric-dosage-calculator.html",
+      "slug": "pediatric-dosage-calculator",
+      "cluster": "PEDIATRICS",
+      "primaryKeyword": "pediatric dosage calculator software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "developmental-milestones.html",
+      "slug": "developmental-milestones",
+      "cluster": "PEDIATRICS",
+      "primaryKeyword": "child developmental milestone tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "neonatal-records.html",
+      "slug": "neonatal-records",
+      "cluster": "PEDIATRICS",
+      "primaryKeyword": "NICU neonatal records management software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "parent-communication.html",
+      "slug": "parent-communication",
+      "cluster": "PEDIATRICS",
+      "primaryKeyword": "pediatric parent communication software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "xray-imaging-integration.html",
+      "slug": "xray-imaging-integration",
+      "cluster": "ORTHOPEDICS",
+      "primaryKeyword": "orthopedic X-ray PACS integration software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "fracture-management.html",
+      "slug": "fracture-management",
+      "cluster": "ORTHOPEDICS",
+      "primaryKeyword": "fracture management documentation software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "joint-mobility-tracking.html",
+      "slug": "joint-mobility-tracking",
+      "cluster": "ORTHOPEDICS",
+      "primaryKeyword": "joint mobility and range of motion tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "implant-records.html",
+      "slug": "implant-records",
+      "cluster": "ORTHOPEDICS",
+      "primaryKeyword": "orthopedic implant tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "physiotherapy-notes.html",
+      "slug": "physiotherapy-notes",
+      "cluster": "ORTHOPEDICS",
+      "primaryKeyword": "physiotherapy clinical documentation software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "surgery-planning.html",
+      "slug": "surgery-planning",
+      "cluster": "ORTHOPEDICS",
+      "primaryKeyword": "orthopedic surgical planning software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "vision-refraction-charts.html",
+      "slug": "vision-refraction-charts",
+      "cluster": "OPHTHALMOLOGY",
+      "primaryKeyword": "ophthalmic refraction charting software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "retina-imaging-integration.html",
+      "slug": "retina-imaging-integration",
+      "cluster": "OPHTHALMOLOGY",
+      "primaryKeyword": "retinal imaging PACS integration software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "eye-pressure-tracking.html",
+      "slug": "eye-pressure-tracking",
+      "cluster": "OPHTHALMOLOGY",
+      "primaryKeyword": "intraocular pressure IOP tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "optical-prescription-mgt.html",
+      "slug": "optical-prescription-mgt",
+      "cluster": "OPHTHALMOLOGY",
+      "primaryKeyword": "optical prescription management software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "lasik-surgery-records.html",
+      "slug": "lasik-surgery-records",
+      "cluster": "OPHTHALMOLOGY",
+      "primaryKeyword": "LASIK and refractive surgery software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "dental-tooth-chart.html",
+      "slug": "dental-tooth-chart",
+      "cluster": "DENTAL",
+      "primaryKeyword": "dental tooth chart odontogram software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "dental-imaging.html",
+      "slug": "dental-imaging",
+      "cluster": "DENTAL",
+      "primaryKeyword": "dental imaging and RVG integration software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "dental-treatment-planning.html",
+      "slug": "dental-treatment-planning",
+      "cluster": "DENTAL",
+      "primaryKeyword": "dental treatment planning software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "dental-procedure-history.html",
+      "slug": "dental-procedure-history",
+      "cluster": "DENTAL",
+      "primaryKeyword": "dental procedure history and clinical notes software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "dental-insurance-billing.html",
+      "slug": "dental-insurance-billing",
+      "cluster": "DENTAL",
+      "primaryKeyword": "dental insurance billing software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "skin-image-tracking.html",
+      "slug": "skin-image-tracking",
+      "cluster": "DERMATOLOGY",
+      "primaryKeyword": "dermatology lesion and skin image tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "dermatology-photos.html",
+      "slug": "dermatology-photos",
+      "cluster": "DERMATOLOGY",
+      "primaryKeyword": "dermatology before and after photo software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "dermatology-treatment-plans.html",
+      "slug": "dermatology-treatment-plans",
+      "cluster": "DERMATOLOGY",
+      "primaryKeyword": "dermatology treatment planning software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "cosmetic-procedure-records.html",
+      "slug": "cosmetic-procedure-records",
+      "cluster": "DERMATOLOGY",
+      "primaryKeyword": "aesthetic and cosmetic procedure documentation software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "allergy-tracking.html",
+      "slug": "allergy-tracking",
+      "cluster": "DERMATOLOGY",
+      "primaryKeyword": "allergy tracking and patch test software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "cancer-staging.html",
+      "slug": "cancer-staging",
+      "cluster": "ONCOLOGY",
+      "primaryKeyword": "cancer staging documentation software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "chemotherapy-plans.html",
+      "slug": "chemotherapy-plans",
+      "cluster": "ONCOLOGY",
+      "primaryKeyword": "chemotherapy protocol and regimen management software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "radiation-therapy-records.html",
+      "slug": "radiation-therapy-records",
+      "cluster": "ONCOLOGY",
+      "primaryKeyword": "radiation oncology records management software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "tumor-tracking.html",
+      "slug": "tumor-tracking",
+      "cluster": "ONCOLOGY",
+      "primaryKeyword": "tumor response and RECIST tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "oncology-reports.html",
+      "slug": "oncology-reports",
+      "cluster": "ONCOLOGY",
+      "primaryKeyword": "comprehensive oncology reporting software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "clinical-trial-management.html",
+      "slug": "clinical-trial-management",
+      "cluster": "ONCOLOGY",
+      "primaryKeyword": "oncology clinical trial management software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "pregnancy-tracking.html",
+      "slug": "pregnancy-tracking",
+      "cluster": "GYNECOLOGY",
+      "primaryKeyword": "obstetric pregnancy tracking software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "antenatal-care-records.html",
+      "slug": "antenatal-care-records",
+      "cluster": "GYNECOLOGY",
+      "primaryKeyword": "antenatal care ANC records software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "ultrasound-reports.html",
+      "slug": "ultrasound-reports",
+      "cluster": "GYNECOLOGY",
+      "primaryKeyword": "obstetric ultrasound reporting software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "delivery-records.html",
+      "slug": "delivery-records",
+      "cluster": "GYNECOLOGY",
+      "primaryKeyword": "labor and delivery records software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "fertility-treatment-tracking.html",
+      "slug": "fertility-treatment-tracking",
+      "cluster": "GYNECOLOGY",
+      "primaryKeyword": "IVF and fertility clinic management software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "mental-health-assessments.html",
+      "slug": "mental-health-assessments",
+      "cluster": "PSYCHIATRY",
+      "primaryKeyword": "psychiatric assessment and clinical evaluation software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "therapy-session-notes.html",
+      "slug": "therapy-session-notes",
+      "cluster": "PSYCHIATRY",
+      "primaryKeyword": "therapy session notes and psychotherapy EMR software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "medication-tracking.html",
+      "slug": "medication-tracking",
+      "cluster": "PSYCHIATRY",
+      "primaryKeyword": "psychotropic medication monitoring software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "behavioral-history.html",
+      "slug": "behavioral-history",
+      "cluster": "PSYCHIATRY",
+      "primaryKeyword": "behavioral history documentation software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "confidential-records.html",
+      "slug": "confidential-records",
+      "cluster": "PSYCHIATRY",
+      "primaryKeyword": "confidential psychiatric records security software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "patient-history.html",
+      "slug": "patient-history",
+      "cluster": "GENERAL PRACTICE",
+      "primaryKeyword": "electronic patient medical history software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "diagnosis-treatment.html",
+      "slug": "diagnosis-treatment",
+      "cluster": "GENERAL PRACTICE",
+      "primaryKeyword": "clinical diagnosis and treatment planning software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "e-prescriptions.html",
+      "slug": "e-prescriptions",
+      "cluster": "GENERAL PRACTICE",
+      "primaryKeyword": "e-prescription software for doctors",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "lab-integration.html",
+      "slug": "lab-integration",
+      "cluster": "GENERAL PRACTICE",
+      "primaryKeyword": "diagnostic lab integration software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "billing-reports.html",
+      "slug": "billing-reports",
+      "cluster": "GENERAL PRACTICE",
+      "primaryKeyword": "clinic billing and revenue reporting software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "patient-registration.html",
+      "slug": "patient-registration",
+      "cluster": "CORE PLATFORM",
+      "primaryKeyword": "hospital patient registration software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "emr-ehr-system.html",
+      "slug": "emr-ehr-system",
+      "cluster": "CORE PLATFORM",
+      "primaryKeyword": "cloud EMR EHR software India",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "billing-invoicing.html",
+      "slug": "billing-invoicing",
+      "cluster": "CORE PLATFORM",
+      "primaryKeyword": "hospital billing and invoicing software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "notifications-system.html",
+      "slug": "notifications-system",
+      "cluster": "CORE PLATFORM",
+      "primaryKeyword": "hospital patient notification and messaging software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    },
+    {
+      "filename": "cloud-security.html",
+      "slug": "cloud-security",
+      "cluster": "CORE PLATFORM",
+      "primaryKeyword": "healthcare cloud security and compliance software",
+      "modifications": [
+        "Optimized <title> and unique <meta name='description'>",
+        "Added 4 valid JSON-LD schemas: SoftwareApplication, WebPage, BreadcrumbList, FAQPage",
+        "Removed generic OPD placeholder content",
+        "Injected clinical hero with primary intent H1 and dual CTAs",
+        "Injected AEO Quick Answer / Definition Box for direct answer-engine extraction",
+        "Injected 6 specialized clinical & operational capability cards",
+        "Injected 5-step clinical workflow process",
+        "Injected operational advantages & use cases (centralized, paperless, multi-disciplinary)",
+        "Injected contextual internal links into /hims-software, /emr-ehr-system, /nabh-compliant-hospital-software, /pricing, and cluster peers",
+        "Injected 4-5 specialty-specific FAQs matching exact question search queries",
+        "Preserved GA4 (G-RMGG2LX0RF) and GTM (GTM-W5H82GQ7)",
+        "Preserved original canonical tags without alteration"
+      ]
+    }
+  ]
+}

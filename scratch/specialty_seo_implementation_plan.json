@@ -1,0 +1,3419 @@
+[
+  {
+    "cluster": "CARDIOLOGY",
+    "slug": "ecg-ekg-integration",
+    "filename": "ecg-ekg-integration.html",
+    "url": "https://www.medical365.in/ecg-ekg-integration",
+    "existsInRepo": true,
+    "primaryKeyword": "ECG EKG integration software",
+    "secondaryKeywords": [
+      "cardiology EMR integration",
+      "digital ECG machine software",
+      "12-lead ECG EMR sync",
+      "ECG report management system"
+    ],
+    "longTailKeywords": [
+      "ECG integration software for hospitals India",
+      "automated ECG trace upload to EMR",
+      "DICOM ECG report management software",
+      "cardiology equipment EMR interface"
+    ],
+    "intent": "Integration / Product",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CARDIOLOGY",
+    "slug": "echocardiography-reports",
+    "filename": "echocardiography-reports.html",
+    "url": "https://www.medical365.in/echocardiography-reports",
+    "existsInRepo": true,
+    "primaryKeyword": "echocardiography reporting software",
+    "secondaryKeywords": [
+      "echo report software",
+      "cardiac ultrasound reporting",
+      "2D echo reporting system",
+      "Doppler echo EMR module"
+    ],
+    "longTailKeywords": [
+      "echocardiography report software for hospitals",
+      "digital 2D echo report templates India",
+      "cardiac Doppler reporting system for clinics",
+      "structured echo reporting in EMR"
+    ],
+    "intent": "Product / Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CARDIOLOGY",
+    "slug": "stress-test-management",
+    "filename": "stress-test-management.html",
+    "url": "https://www.medical365.in/stress-test-management",
+    "existsInRepo": true,
+    "primaryKeyword": "cardiac stress test software",
+    "secondaryKeywords": [
+      "TMT test management software",
+      "treadmill test reporting system",
+      "cardiac exercise stress test EMR",
+      "stress ECG management"
+    ],
+    "longTailKeywords": [
+      "treadmill test software for cardiology clinics",
+      "cardiac stress test reporting software India",
+      "TMT protocol tracking and automated report generation",
+      "Bruce protocol stress test recording software"
+    ],
+    "intent": "Feature / Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CARDIOLOGY",
+    "slug": "cardiac-risk-scoring",
+    "filename": "cardiac-risk-scoring.html",
+    "url": "https://www.medical365.in/cardiac-risk-scoring",
+    "existsInRepo": true,
+    "primaryKeyword": "cardiac risk assessment software",
+    "secondaryKeywords": [
+      "cardiovascular risk calculator",
+      "cardiac risk scoring system",
+      "Framingham risk score EMR",
+      "ASCVD risk calculator software"
+    ],
+    "longTailKeywords": [
+      "cardiovascular risk assessment software for clinics",
+      "automated cardiac risk scoring tool for EMR",
+      "ASCVD and QRISK calculator for Indian patients",
+      "preventive cardiology screening software"
+    ],
+    "intent": "Clinical Tool / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CARDIOLOGY",
+    "slug": "angiography-reports",
+    "filename": "angiography-reports.html",
+    "url": "https://www.medical365.in/angiography-reports",
+    "existsInRepo": true,
+    "primaryKeyword": "coronary angiography reporting software",
+    "secondaryKeywords": [
+      "cath lab reporting software",
+      "cardiac angiography report system",
+      "angio reporting module",
+      "cath lab EMR"
+    ],
+    "longTailKeywords": [
+      "coronary angiography reporting software for cath labs",
+      "digital angiography report templates for Indian hospitals",
+      "cath lab stent and vessel stenosis tracking software",
+      "structured coronary artery reporting system"
+    ],
+    "intent": "Workflow / Product",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CARDIOLOGY",
+    "slug": "pacemaker-tracking",
+    "filename": "pacemaker-tracking.html",
+    "url": "https://www.medical365.in/pacemaker-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "pacemaker tracking software",
+    "secondaryKeywords": [
+      "cardiac device follow-up system",
+      "ICD pacemaker management software",
+      "cardiac implant tracking EMR",
+      "device clinic management"
+    ],
+    "longTailKeywords": [
+      "pacemaker and ICD tracking software for hospitals",
+      "cardiac implantable device follow-up system India",
+      "pacemaker battery longevity and interrogation tracking",
+      "cardiac electrophysiology device clinic software"
+    ],
+    "intent": "Operational / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CARDIOLOGY",
+    "slug": "lipid-profile-tracking",
+    "filename": "lipid-profile-tracking.html",
+    "url": "https://www.medical365.in/lipid-profile-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "lipid profile tracking software",
+    "secondaryKeywords": [
+      "cholesterol tracking system",
+      "dyslipidemia management software",
+      "cardiac lipid trend analysis",
+      "lipid panel monitoring EMR"
+    ],
+    "longTailKeywords": [
+      "lipid profile monitoring software for cardiology clinics",
+      "automated cholesterol and triglyceride trend tracking",
+      "dyslipidemia treatment response tracking in EMR",
+      "cardiac lipid target achievement software"
+    ],
+    "intent": "Clinical Tool / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CARDIOLOGY",
+    "slug": "cardiac-history-templates",
+    "filename": "cardiac-history-templates.html",
+    "url": "https://www.medical365.in/cardiac-history-templates",
+    "existsInRepo": true,
+    "primaryKeyword": "cardiology clinical documentation templates",
+    "secondaryKeywords": [
+      "cardiac history forms EMR",
+      "cardiology consultation notes",
+      "cardiac SOAP note templates",
+      "structured cardiology examination templates"
+    ],
+    "longTailKeywords": [
+      "cardiology history taking templates for Indian hospitals",
+      "structured cardiac consultation forms in EMR",
+      "pre-op cardiac clearance documentation templates",
+      "pediatric and adult cardiology EMR templates"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "NEUROLOGY",
+    "slug": "eeg-reports",
+    "filename": "eeg-reports.html",
+    "url": "https://www.medical365.in/eeg-reports",
+    "existsInRepo": true,
+    "primaryKeyword": "EEG reporting software",
+    "secondaryKeywords": [
+      "electroencephalogram report system",
+      "neurology EEG software",
+      "digital EEG reporting EMR",
+      "video EEG management system"
+    ],
+    "longTailKeywords": [
+      "EEG reporting software for neurology clinics",
+      "digital EEG report management for Indian hospitals",
+      "routine and video EEG documentation software",
+      "neurologist EEG montage and wave analysis reporting"
+    ],
+    "intent": "Product / Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "NEUROLOGY",
+    "slug": "mri-ct-integration",
+    "filename": "mri-ct-integration.html",
+    "url": "https://www.medical365.in/mri-ct-integration",
+    "existsInRepo": true,
+    "primaryKeyword": "neuroimaging PACS integration software",
+    "secondaryKeywords": [
+      "brain MRI CT EMR integration",
+      "neurology radiology viewer",
+      "DICOM neuroimaging viewer",
+      "stroke imaging integration"
+    ],
+    "longTailKeywords": [
+      "MRI and CT scan integration software for neurology clinics",
+      "DICOM neuroimaging viewer embedded in EMR",
+      "brain CT stroke protocol integration for hospitals",
+      "radiology PACS to neurology consultation sync"
+    ],
+    "intent": "Integration / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "NEUROLOGY",
+    "slug": "seizure-tracking",
+    "filename": "seizure-tracking.html",
+    "url": "https://www.medical365.in/seizure-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "seizure tracking software",
+    "secondaryKeywords": [
+      "epilepsy management system",
+      "seizure diary EMR",
+      "antiepileptic drug monitoring software",
+      "epilepsy clinic software"
+    ],
+    "longTailKeywords": [
+      "seizure tracking and epilepsy management software for hospitals",
+      "digital seizure diary integrated with neurology EMR",
+      "pediatric and adult seizure frequency monitoring system",
+      "antiepileptic drug adherence and seizure trigger tracking"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "NEUROLOGY",
+    "slug": "cognitive-assessment",
+    "filename": "cognitive-assessment.html",
+    "url": "https://www.medical365.in/cognitive-assessment",
+    "existsInRepo": true,
+    "primaryKeyword": "cognitive assessment software",
+    "secondaryKeywords": [
+      "neurocognitive screening tools",
+      "dementia assessment software",
+      "MMSE MoCA scoring EMR",
+      "memory clinic management software"
+    ],
+    "longTailKeywords": [
+      "cognitive assessment software for neurology and memory clinics",
+      "digital MMSE and MoCA scoring system in hospital EMR",
+      "dementia and mild cognitive impairment tracking software",
+      "neuropsychological test battery recording tool"
+    ],
+    "intent": "Clinical Tool / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "NEUROLOGY",
+    "slug": "stroke-management",
+    "filename": "stroke-management.html",
+    "url": "https://www.medical365.in/stroke-management",
+    "existsInRepo": true,
+    "primaryKeyword": "stroke management software",
+    "secondaryKeywords": [
+      "acute stroke protocol software",
+      "code stroke tracking system",
+      "thrombolysis window timer EMR",
+      "NIHSS score calculator"
+    ],
+    "longTailKeywords": [
+      "acute stroke management software for emergency departments",
+      "code stroke protocol and door-to-needle tracking software",
+      "NIHSS stroke severity scoring tool for hospitals India",
+      "thrombolysis and thrombectomy clinical pathway software"
+    ],
+    "intent": "Operational / Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "NEUROLOGY",
+    "slug": "neurological-exam-forms",
+    "filename": "neurological-exam-forms.html",
+    "url": "https://www.medical365.in/neurological-exam-forms",
+    "existsInRepo": true,
+    "primaryKeyword": "neurology examination templates",
+    "secondaryKeywords": [
+      "neurological assessment forms EMR",
+      "cranial nerve exam software",
+      "motor sensory reflex documentation",
+      "neurology consultation notes"
+    ],
+    "longTailKeywords": [
+      "neurological examination documentation templates for hospitals",
+      "structured cranial nerve and motor exam forms in EMR",
+      "neurology outpatient consultation templates India",
+      "deep tendon reflex and cerebellar sign charting software"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PEDIATRICS",
+    "slug": "growth-charts",
+    "filename": "growth-charts.html",
+    "url": "https://www.medical365.in/growth-charts",
+    "existsInRepo": true,
+    "primaryKeyword": "pediatric growth chart software",
+    "secondaryKeywords": [
+      "WHO growth charts digital",
+      "IAP growth chart software India",
+      "child percentile calculator EMR",
+      "pediatric anthropometry tracking"
+    ],
+    "longTailKeywords": [
+      "pediatric growth chart software for Indian clinics",
+      "WHO and IAP child growth percentile tracking system",
+      "digital height weight head circumference tracking EMR",
+      "pediatrician growth velocity and BMI z-score software"
+    ],
+    "intent": "Product / Clinical Tool",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PEDIATRICS",
+    "slug": "vaccination-tracking",
+    "filename": "vaccination-tracking.html",
+    "url": "https://www.medical365.in/vaccination-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "child vaccination tracking software",
+    "secondaryKeywords": [
+      "pediatric immunization scheduler",
+      "IAP vaccine schedule software",
+      "vaccine due reminder system",
+      "pediatric immunization record EMR"
+    ],
+    "longTailKeywords": [
+      "child vaccination tracking software for pediatricians India",
+      "IAP immunization schedule and automated reminder software",
+      "pediatric vaccine inventory and batch tracking system",
+      "digital child immunization card with WhatsApp reminders"
+    ],
+    "intent": "Workflow / Product",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PEDIATRICS",
+    "slug": "pediatric-dosage-calculator",
+    "filename": "pediatric-dosage-calculator.html",
+    "url": "https://www.medical365.in/pediatric-dosage-calculator",
+    "existsInRepo": true,
+    "primaryKeyword": "pediatric dosage calculator software",
+    "secondaryKeywords": [
+      "child drug dose calculator",
+      "weight-based pediatric dosing EMR",
+      "pediatric medication safety software",
+      "pediatric prescription calculator"
+    ],
+    "longTailKeywords": [
+      "pediatric drug dosage calculator software for Indian doctors",
+      "weight based child dosage calculation tool inside EMR",
+      "pediatric suspension dose and concentration calculator",
+      "safe pediatric dosing tool with overdose alerts"
+    ],
+    "intent": "Clinical Tool / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PEDIATRICS",
+    "slug": "developmental-milestones",
+    "filename": "developmental-milestones.html",
+    "url": "https://www.medical365.in/developmental-milestones",
+    "existsInRepo": true,
+    "primaryKeyword": "child developmental milestone tracking software",
+    "secondaryKeywords": [
+      "pediatric milestone screening",
+      "child development checklist EMR",
+      "developmental delay detection software",
+      "infant milestone tracking"
+    ],
+    "longTailKeywords": [
+      "developmental milestone tracking software for pediatric clinics",
+      "digital child development assessment checklist in EMR",
+      "early detection of developmental delay software India",
+      "gross motor fine motor speech milestone screening tool"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PEDIATRICS",
+    "slug": "neonatal-records",
+    "filename": "neonatal-records.html",
+    "url": "https://www.medical365.in/neonatal-records",
+    "existsInRepo": true,
+    "primaryKeyword": "NICU neonatal records management software",
+    "secondaryKeywords": [
+      "neonatal ICU documentation",
+      "newborn admission record EMR",
+      "NICU clinical management system",
+      "birth details tracking software"
+    ],
+    "longTailKeywords": [
+      "NICU neonatal records management software for hospitals",
+      "digital newborn admission and APGAR score recording system",
+      "NICU phototherapy ventilator and nutrition charting software",
+      "neonatal discharge summary and follow-up tracking tool"
+    ],
+    "intent": "Operational / Product",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PEDIATRICS",
+    "slug": "parent-communication",
+    "filename": "parent-communication.html",
+    "url": "https://www.medical365.in/parent-communication",
+    "existsInRepo": true,
+    "primaryKeyword": "pediatric parent communication software",
+    "secondaryKeywords": [
+      "patient family communication portal",
+      "pediatric WhatsApp alerts system",
+      "child health guidance messaging",
+      "pediatric clinic parent engagement"
+    ],
+    "longTailKeywords": [
+      "pediatric parent communication software for clinics India",
+      "automated vaccine reminders and appointment alerts for parents",
+      "pediatric care advice and post-vaccination fever guides via WhatsApp",
+      "secure parent communication portal for child health records"
+    ],
+    "intent": "Operational / Communication",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ORTHOPEDICS",
+    "slug": "xray-imaging-integration",
+    "filename": "xray-imaging-integration.html",
+    "url": "https://www.medical365.in/xray-imaging-integration",
+    "existsInRepo": true,
+    "primaryKeyword": "orthopedic X-ray PACS integration software",
+    "secondaryKeywords": [
+      "digital X-ray viewer EMR",
+      "orthopedic radiology integration",
+      "DICOM X-ray viewing software",
+      "bone X-ray PACS module"
+    ],
+    "longTailKeywords": [
+      "orthopedic X-ray integration software for hospitals India",
+      "DICOM X-ray viewer integrated with orthopedic EMR",
+      "digital radiographic measurement tools for orthopedic surgeons",
+      "zero-footprint musculoskeletal X-ray viewing system"
+    ],
+    "intent": "Integration / Product",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ORTHOPEDICS",
+    "slug": "fracture-management",
+    "filename": "fracture-management.html",
+    "url": "https://www.medical365.in/fracture-management",
+    "existsInRepo": true,
+    "primaryKeyword": "fracture management documentation software",
+    "secondaryKeywords": [
+      "orthopedic trauma EMR",
+      "fracture classification software",
+      "AO trauma classification system",
+      "bone cast and splint tracking"
+    ],
+    "longTailKeywords": [
+      "fracture management documentation software for orthopedic clinics",
+      "AO trauma fracture classification and implant planning in EMR",
+      "bone healing and plaster cast follow-up tracking tool",
+      "orthopedic emergency trauma clinical charting software"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ORTHOPEDICS",
+    "slug": "joint-mobility-tracking",
+    "filename": "joint-mobility-tracking.html",
+    "url": "https://www.medical365.in/joint-mobility-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "joint mobility and range of motion tracking software",
+    "secondaryKeywords": [
+      "goniometry tracking software",
+      "orthopedic ROM measurement EMR",
+      "joint flexibility assessment software",
+      "arthroplasty mobility tracking"
+    ],
+    "longTailKeywords": [
+      "joint mobility and range of motion tracking software for hospitals",
+      "digital goniometer measurement documentation in EMR",
+      "post-knee replacement range of motion progress tracking",
+      "orthopedic joint stiffness and flexion extension monitoring"
+    ],
+    "intent": "Clinical Tool / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ORTHOPEDICS",
+    "slug": "implant-records",
+    "filename": "implant-records.html",
+    "url": "https://www.medical365.in/implant-records",
+    "existsInRepo": true,
+    "primaryKeyword": "orthopedic implant tracking software",
+    "secondaryKeywords": [
+      "orthopedic prosthetic registry software",
+      "surgical implant serial number EMR",
+      "joint implant traceability system",
+      "implant barcode scanner software"
+    ],
+    "longTailKeywords": [
+      "orthopedic implant tracking software for Indian hospitals",
+      "surgical prosthetic implant batch and barcode recording in EMR",
+      "knee and hip implant serial number traceability system",
+      "NABH compliant implant register for orthopedic OT"
+    ],
+    "intent": "Operational / Compliance",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ORTHOPEDICS",
+    "slug": "physiotherapy-notes",
+    "filename": "physiotherapy-notes.html",
+    "url": "https://www.medical365.in/physiotherapy-notes",
+    "existsInRepo": true,
+    "primaryKeyword": "physiotherapy clinical documentation software",
+    "secondaryKeywords": [
+      "rehabilitation assessment EMR",
+      "physiotherapy exercise prescription software",
+      "PT progress notes system",
+      "rehab physical therapy documentation"
+    ],
+    "longTailKeywords": [
+      "physiotherapy documentation software for clinics and hospitals",
+      "rehabilitation exercise plan and progress note tracking in EMR",
+      "VAS pain score and muscle power grading documentation tool",
+      "physical therapy treatment plan and package billing software"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ORTHOPEDICS",
+    "slug": "surgery-planning",
+    "filename": "surgery-planning.html",
+    "url": "https://www.medical365.in/surgery-planning",
+    "existsInRepo": true,
+    "primaryKeyword": "orthopedic surgical planning software",
+    "secondaryKeywords": [
+      "pre-op orthopedic planning EMR",
+      "joint replacement planning software",
+      "orthopedic surgical checklist system",
+      "orthopedic OT booking tool"
+    ],
+    "longTailKeywords": [
+      "orthopedic surgical planning software for hospitals India",
+      "pre-operative templating and implant requirement software",
+      "WHO surgical safety checklist for orthopedic operations",
+      "orthopedic operation theater scheduling and consent management"
+    ],
+    "intent": "Operational / Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "OPHTHALMOLOGY",
+    "slug": "vision-refraction-charts",
+    "filename": "vision-refraction-charts.html",
+    "url": "https://www.medical365.in/vision-refraction-charts",
+    "existsInRepo": true,
+    "primaryKeyword": "ophthalmic refraction charting software",
+    "secondaryKeywords": [
+      "digital vision testing EMR",
+      "eye refraction documentation system",
+      "Snellen chart recording software",
+      "optometry refraction software"
+    ],
+    "longTailKeywords": [
+      "ophthalmology refraction charting software for eye clinics",
+      "digital autorefractor and subjective refraction recording EMR",
+      "Snellen visual acuity and power prescription documentation",
+      "optometrist refraction workstation software India"
+    ],
+    "intent": "Product / Clinical Tool",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "OPHTHALMOLOGY",
+    "slug": "retina-imaging-integration",
+    "filename": "retina-imaging-integration.html",
+    "url": "https://www.medical365.in/retina-imaging-integration",
+    "existsInRepo": true,
+    "primaryKeyword": "retinal imaging PACS integration software",
+    "secondaryKeywords": [
+      "fundus camera integration EMR",
+      "OCT imaging software ophthalmology",
+      "retina photo storage system",
+      "diabetic retinopathy screening software"
+    ],
+    "longTailKeywords": [
+      "retinal imaging and fundus camera integration software for hospitals",
+      "ophthalmic OCT scan viewer embedded in patient EMR",
+      "diabetic retinopathy fundus photo grading and tracking software",
+      "digital retinal camera DICOM integration system"
+    ],
+    "intent": "Integration / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "OPHTHALMOLOGY",
+    "slug": "eye-pressure-tracking",
+    "filename": "eye-pressure-tracking.html",
+    "url": "https://www.medical365.in/eye-pressure-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "intraocular pressure IOP tracking software",
+    "secondaryKeywords": [
+      "glaucoma monitoring software",
+      "tonometry records system",
+      "eye pressure trend charting EMR",
+      "applanation tonometry software"
+    ],
+    "longTailKeywords": [
+      "intraocular pressure IOP tracking software for glaucoma clinics",
+      "digital tonometry graph and glaucoma medication monitoring in EMR",
+      "Goldmann applanation and non-contact tonometry recording tool",
+      "longitudinal eye pressure trend analysis software India"
+    ],
+    "intent": "Clinical Tool / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "OPHTHALMOLOGY",
+    "slug": "optical-prescription-mgt",
+    "filename": "optical-prescription-mgt.html",
+    "url": "https://www.medical365.in/optical-prescription-mgt",
+    "existsInRepo": true,
+    "primaryKeyword": "optical prescription management software",
+    "secondaryKeywords": [
+      "eyeglass prescription software",
+      "contact lens prescription EMR",
+      "optical shop inventory billing",
+      "spectacle power printing software"
+    ],
+    "longTailKeywords": [
+      "optical prescription management software for eye hospitals India",
+      "digital spectacle and contact lens prescription printing tool",
+      "in-house optical store billing and lens dispensing integration",
+      "spectacle power WhatsApp sharing system for patients"
+    ],
+    "intent": "Workflow / Operational",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "OPHTHALMOLOGY",
+    "slug": "lasik-surgery-records",
+    "filename": "lasik-surgery-records.html",
+    "url": "https://www.medical365.in/lasik-surgery-records",
+    "existsInRepo": true,
+    "primaryKeyword": "LASIK and refractive surgery software",
+    "secondaryKeywords": [
+      "refractive surgery documentation EMR",
+      "corneal topography records software",
+      "pachymetry LASIK screening",
+      "laser eye surgery EMR module"
+    ],
+    "longTailKeywords": [
+      "LASIK refractive surgery records management software",
+      "corneal pachymetry and topography documentation in eye EMR",
+      "pre-LASIK workup and laser parameter recording software India",
+      "post-refractive surgery visual acuity and flap check tracking"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DENTAL",
+    "slug": "dental-tooth-chart",
+    "filename": "dental-tooth-chart.html",
+    "url": "https://www.medical365.in/dental-tooth-chart",
+    "existsInRepo": true,
+    "primaryKeyword": "dental tooth chart odontogram software",
+    "secondaryKeywords": [
+      "interactive dental chart software",
+      "3D odontogram EMR",
+      "adult pediatric dental charting",
+      "tooth condition charting software"
+    ],
+    "longTailKeywords": [
+      "interactive dental tooth chart odontogram software India",
+      "adult and pediatric digital dental charting tool for clinics",
+      "tooth wise caries restoration and extraction documentation in EMR",
+      "periodontal pocket depth and odontogram charting software"
+    ],
+    "intent": "Product / Clinical Tool",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DENTAL",
+    "slug": "dental-imaging",
+    "filename": "dental-imaging.html",
+    "url": "https://www.medical365.in/dental-imaging",
+    "existsInRepo": true,
+    "primaryKeyword": "dental imaging and RVG integration software",
+    "secondaryKeywords": [
+      "dental X-ray PACS software",
+      "OPG image viewer dental EMR",
+      "intraoral camera integration",
+      "dental radiograph storage software"
+    ],
+    "longTailKeywords": [
+      "dental imaging and RVG sensor integration software for clinics",
+      "intraoral camera and OPG scan viewing software inside dental EMR",
+      "DICOM dental radiography storage and contrast enhancement tools",
+      "digital dental X-ray management system India"
+    ],
+    "intent": "Integration / Product",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DENTAL",
+    "slug": "dental-treatment-planning",
+    "filename": "dental-treatment-planning.html",
+    "url": "https://www.medical365.in/dental-treatment-planning",
+    "existsInRepo": true,
+    "primaryKeyword": "dental treatment planning software",
+    "secondaryKeywords": [
+      "dental case presentation software",
+      "multi-phase dental treatment plans",
+      "dental treatment estimation software",
+      "cosmetic dental planning EMR"
+    ],
+    "longTailKeywords": [
+      "dental treatment planning and cost estimation software for clinics",
+      "multi-phase dental treatment plan with patient consent in EMR",
+      "orthodontic and implant multi-sitting treatment plan software India",
+      "interactive dental treatment quotation and progress tracking tool"
+    ],
+    "intent": "Workflow / Commercial",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DENTAL",
+    "slug": "dental-procedure-history",
+    "filename": "dental-procedure-history.html",
+    "url": "https://www.medical365.in/dental-procedure-history",
+    "existsInRepo": true,
+    "primaryKeyword": "dental procedure history and clinical notes software",
+    "secondaryKeywords": [
+      "dental electronic records EMR",
+      "tooth-wise procedure log",
+      "dental sitting progress notes",
+      "dental clinical history software"
+    ],
+    "longTailKeywords": [
+      "dental procedure history and sitting-wise progress notes software",
+      "tooth specific dental treatment history log in hospital EMR",
+      "dentist clinical note templates for RCT extraction and fillings",
+      "longitudinal dental record tracking system India"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DENTAL",
+    "slug": "dental-insurance-billing",
+    "filename": "dental-insurance-billing.html",
+    "url": "https://www.medical365.in/dental-insurance-billing",
+    "existsInRepo": true,
+    "primaryKeyword": "dental insurance billing software",
+    "secondaryKeywords": [
+      "dental clinic billing system",
+      "dental procedure invoicing software",
+      "dental package billing EMR",
+      "cashless dental insurance claims"
+    ],
+    "longTailKeywords": [
+      "dental billing and insurance claim management software India",
+      "itemized dental procedure invoicing and installment tracking software",
+      "corporate dental health plan and package billing system",
+      "GST compliant dental clinic invoicing software with UPI payments"
+    ],
+    "intent": "Commercial / Operational",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DERMATOLOGY",
+    "slug": "skin-image-tracking",
+    "filename": "skin-image-tracking.html",
+    "url": "https://www.medical365.in/skin-image-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "dermatology lesion and skin image tracking software",
+    "secondaryKeywords": [
+      "dermoscopy image storage software",
+      "skin lesion mapping EMR",
+      "mole tracking software dermatology",
+      "dermatology photo documentation"
+    ],
+    "longTailKeywords": [
+      "dermatology skin image and lesion tracking software for clinics",
+      "dermoscopic photo mapping and serial lesion comparison in EMR",
+      "body map skin lesion documentation tool for dermatologists India",
+      "digital skin biopsy photo and pathology correlation system"
+    ],
+    "intent": "Product / Clinical Tool",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DERMATOLOGY",
+    "slug": "dermatology-photos",
+    "filename": "dermatology-photos.html",
+    "url": "https://www.medical365.in/dermatology-photos",
+    "existsInRepo": true,
+    "primaryKeyword": "dermatology before and after photo software",
+    "secondaryKeywords": [
+      "aesthetic clinic photo management",
+      "clinical photo comparison software",
+      "dermatology image gallery EMR",
+      "medical photography storage"
+    ],
+    "longTailKeywords": [
+      "dermatology before and after photo comparison software for clinics",
+      "aesthetic clinic patient photo management and consent software India",
+      "side by side clinical photo alignment and comparison tool",
+      "secure medical photography storage compliant with DPDP Act"
+    ],
+    "intent": "Product / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DERMATOLOGY",
+    "slug": "dermatology-treatment-plans",
+    "filename": "dermatology-treatment-plans.html",
+    "url": "https://www.medical365.in/dermatology-treatment-plans",
+    "existsInRepo": true,
+    "primaryKeyword": "dermatology treatment planning software",
+    "secondaryKeywords": [
+      "chronic skin disease management EMR",
+      "psoriasis acne treatment plans",
+      "dermatology protocol templates",
+      "dermatology follow-up tracking"
+    ],
+    "longTailKeywords": [
+      "dermatology treatment planning software for skin clinics India",
+      "chronic skin disease acne psoriasis and vitiligo care pathways",
+      "topical and systemic medication regimen tracking in dermatology EMR",
+      "dermatology clinical follow-up and flare-up documentation software"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DERMATOLOGY",
+    "slug": "cosmetic-procedure-records",
+    "filename": "cosmetic-procedure-records.html",
+    "url": "https://www.medical365.in/cosmetic-procedure-records",
+    "existsInRepo": true,
+    "primaryKeyword": "aesthetic and cosmetic procedure documentation software",
+    "secondaryKeywords": [
+      "botox filler injection charting",
+      "laser treatment records software",
+      "aesthetic clinic procedure EMR",
+      "chemical peel documentation system"
+    ],
+    "longTailKeywords": [
+      "cosmetic procedure documentation software for aesthetic clinics India",
+      "Botox and dermal filler facial injection mapping software",
+      "laser hair reduction and skin rejuvenation parameter recording tool",
+      "cosmetic procedure informed consent and package session tracking"
+    ],
+    "intent": "Workflow / Specialized",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "DERMATOLOGY",
+    "slug": "allergy-tracking",
+    "filename": "allergy-tracking.html",
+    "url": "https://www.medical365.in/allergy-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "allergy tracking and patch test software",
+    "secondaryKeywords": [
+      "dermatology allergy testing EMR",
+      "skin patch test recording software",
+      "contact dermatitis documentation",
+      "drug allergy alert system"
+    ],
+    "longTailKeywords": [
+      "allergy tracking and skin patch test documentation software",
+      "contact dermatitis allergen panel recording tool for dermatologists",
+      "clinical drug allergy alert integration in outpatient EMR India",
+      "prick test and patch test reaction grading software"
+    ],
+    "intent": "Clinical Tool / Safety",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ONCOLOGY",
+    "slug": "cancer-staging",
+    "filename": "cancer-staging.html",
+    "url": "https://www.medical365.in/cancer-staging",
+    "existsInRepo": true,
+    "primaryKeyword": "cancer staging documentation software",
+    "secondaryKeywords": [
+      "TNM cancer staging system EMR",
+      "oncology staging calculator",
+      "AJCC cancer staging software",
+      "tumor staging documentation"
+    ],
+    "longTailKeywords": [
+      "cancer staging documentation software for oncology hospitals India",
+      "AJCC 8th edition TNM staging calculator embedded in oncology EMR",
+      "clinical and pathological tumor staging workflow software",
+      "oncology multi-disciplinary tumor board staging record tool"
+    ],
+    "intent": "Product / Clinical Tool",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ONCOLOGY",
+    "slug": "chemotherapy-plans",
+    "filename": "chemotherapy-plans.html",
+    "url": "https://www.medical365.in/chemotherapy-plans",
+    "existsInRepo": true,
+    "primaryKeyword": "chemotherapy protocol and regimen management software",
+    "secondaryKeywords": [
+      "chemo ordering software",
+      "oncology chemotherapy protocol EMR",
+      "BSA-based chemo dosage calculator",
+      "daycare chemotherapy charting"
+    ],
+    "longTailKeywords": [
+      "chemotherapy protocol and cycle management software for hospitals",
+      "body surface area BSA chemo dosage calculator with toxicity limits",
+      "daycare chemotherapy administration and nurse verification software India",
+      "chemotherapy extravasation and premedication charting tool"
+    ],
+    "intent": "Workflow / Safety",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ONCOLOGY",
+    "slug": "radiation-therapy-records",
+    "filename": "radiation-therapy-records.html",
+    "url": "https://www.medical365.in/radiation-therapy-records",
+    "existsInRepo": true,
+    "primaryKeyword": "radiation oncology records management software",
+    "secondaryKeywords": [
+      "radiotherapy session tracking EMR",
+      "fractionation dose documentation",
+      "radiation oncology EMR module",
+      "linear accelerator session log"
+    ],
+    "longTailKeywords": [
+      "radiation oncology records management software for hospitals India",
+      "fractionated radiotherapy cumulative dose tracking in EMR",
+      "IMRT and IGRT radiation oncology treatment plan documentation",
+      "radiation toxicity and skin reaction follow-up tracking tool"
+    ],
+    "intent": "Operational / Clinical",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ONCOLOGY",
+    "slug": "tumor-tracking",
+    "filename": "tumor-tracking.html",
+    "url": "https://www.medical365.in/tumor-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "tumor response and RECIST tracking software",
+    "secondaryKeywords": [
+      "tumor size monitoring EMR",
+      "RECIST 1.1 evaluation software",
+      "oncology tumor burden tracking",
+      "target lesion response analysis"
+    ],
+    "longTailKeywords": [
+      "tumor response and RECIST 1.1 tracking software for oncology clinics",
+      "longitudinal tumor burden and target lesion measurement in EMR",
+      "complete response partial response progressive disease calculation software",
+      "oncology imaging tumor response correlation tool India"
+    ],
+    "intent": "Clinical Tool / Research",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ONCOLOGY",
+    "slug": "oncology-reports",
+    "filename": "oncology-reports.html",
+    "url": "https://www.medical365.in/oncology-reports",
+    "existsInRepo": true,
+    "primaryKeyword": "comprehensive oncology reporting software",
+    "secondaryKeywords": [
+      "tumor board documentation software",
+      "cancer summary reports EMR",
+      "multidisciplinary oncology notes",
+      "oncology discharge summary system"
+    ],
+    "longTailKeywords": [
+      "comprehensive oncology reporting and tumor board software India",
+      "multidisciplinary tumor board meeting note documentation in EMR",
+      "cancer patient longitudinal summary and staging report generator",
+      "oncology clinical audit and registry reporting tool for hospitals"
+    ],
+    "intent": "Workflow / Reporting",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "ONCOLOGY",
+    "slug": "clinical-trial-management",
+    "filename": "clinical-trial-management.html",
+    "url": "https://www.medical365.in/clinical-trial-management",
+    "existsInRepo": true,
+    "primaryKeyword": "oncology clinical trial management software",
+    "secondaryKeywords": [
+      "clinical trial patient tracking EMR",
+      "GCP compliant trial software",
+      "investigational drug tracking system",
+      "clinical research study coordinator tool"
+    ],
+    "longTailKeywords": [
+      "oncology clinical trial management software for research hospitals",
+      "GCP compliant patient screening and protocol visit tracking in EMR",
+      "investigational medical product accountability and adverse event logging",
+      "clinical trial data capture and ethics committee reporting India"
+    ],
+    "intent": "Research / Operational",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GYNECOLOGY",
+    "slug": "pregnancy-tracking",
+    "filename": "pregnancy-tracking.html",
+    "url": "https://www.medical365.in/pregnancy-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "obstetric pregnancy tracking software",
+    "secondaryKeywords": [
+      "antenatal care software",
+      "EDD pregnancy calculator EMR",
+      "trimester gestational age tracking",
+      "maternity clinical documentation"
+    ],
+    "longTailKeywords": [
+      "obstetric pregnancy tracking software for maternity hospitals India",
+      "EDD LMP gestational age calculation and milestone tracking in EMR",
+      "high-risk pregnancy flag and maternal weight gain tracking tool",
+      "trimester-wise obstetric consultation notes and checklist software"
+    ],
+    "intent": "Product / Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GYNECOLOGY",
+    "slug": "antenatal-care-records",
+    "filename": "antenatal-care-records.html",
+    "url": "https://www.medical365.in/antenatal-care-records",
+    "existsInRepo": true,
+    "primaryKeyword": "antenatal care ANC records software",
+    "secondaryKeywords": [
+      "maternal health record system",
+      "ANC visit documentation EMR",
+      "Pradhan Mantri Surakshit Matritva Abhiyan software",
+      "obstetric immunization tracking"
+    ],
+    "longTailKeywords": [
+      "antenatal care ANC records management software for clinics India",
+      "Pradhan Mantri Surakshit Matritva Abhiyan PMSMA tracking software",
+      "maternal tetanus diphtheria vaccination and iron folic acid tracking",
+      "antenatal visit clinical checklist and lab investigation EMR tool"
+    ],
+    "intent": "Clinical Workflow / Compliance",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GYNECOLOGY",
+    "slug": "ultrasound-reports",
+    "filename": "ultrasound-reports.html",
+    "url": "https://www.medical365.in/ultrasound-reports",
+    "existsInRepo": true,
+    "primaryKeyword": "obstetric ultrasound reporting software",
+    "secondaryKeywords": [
+      "fetal biometry ultrasound reporting",
+      "PNDT compliant ultrasound software",
+      "anomaly scan report system",
+      "NT scan documentation EMR"
+    ],
+    "longTailKeywords": [
+      "obstetric ultrasound reporting software for diagnostic centers India",
+      "PNDT Act compliant ultrasound documentation and reporting system",
+      "fetal biometry BPD HC AC FL and estimated fetal weight software",
+      "NT scan and anomaly ultrasound structured report templates"
+    ],
+    "intent": "Product / Compliance",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GYNECOLOGY",
+    "slug": "delivery-records",
+    "filename": "delivery-records.html",
+    "url": "https://www.medical365.in/delivery-records",
+    "existsInRepo": true,
+    "primaryKeyword": "labor and delivery records software",
+    "secondaryKeywords": [
+      "partograph software for hospitals",
+      "maternity labor room EMR",
+      "birth summary documentation system",
+      "intrapartum monitoring software"
+    ],
+    "longTailKeywords": [
+      "labor and delivery records management software for maternity hospitals",
+      "digital WHO partograph labor progress monitoring software India",
+      "normal delivery and cesarean section operative note EMR",
+      "newborn birth register and maternal delivery summary tool"
+    ],
+    "intent": "Operational / Clinical",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GYNECOLOGY",
+    "slug": "fertility-treatment-tracking",
+    "filename": "fertility-treatment-tracking.html",
+    "url": "https://www.medical365.in/fertility-treatment-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "IVF and fertility clinic management software",
+    "secondaryKeywords": [
+      "ART clinic software India",
+      "embryology lab documentation system",
+      "ovulation induction tracking EMR",
+      "IUI cycle management software"
+    ],
+    "longTailKeywords": [
+      "IVF and fertility treatment tracking software for ART clinics India",
+      "ART Act compliant embryology lab and oocyte cryopreservation software",
+      "follicular monitoring scan and ovulation induction cycle tracking EMR",
+      "IUI and IVF cycle documentation with transparent success tracking"
+    ],
+    "intent": "Specialized / Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PSYCHIATRY",
+    "slug": "mental-health-assessments",
+    "filename": "mental-health-assessments.html",
+    "url": "https://www.medical365.in/mental-health-assessments",
+    "existsInRepo": true,
+    "primaryKeyword": "psychiatric assessment and clinical evaluation software",
+    "secondaryKeywords": [
+      "mental health screening EMR",
+      "depression anxiety assessment software",
+      "PHQ-9 GAD-7 scoring system",
+      "psychiatric history software"
+    ],
+    "longTailKeywords": [
+      "psychiatric assessment and clinical documentation software for hospitals",
+      "digital PHQ-9 and GAD-7 mental health score tracking in EMR",
+      "psychiatric emergency evaluation and risk assessment software India",
+      "mental state examination MSE documentation templates for psychiatrists"
+    ],
+    "intent": "Clinical Tool / Product",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PSYCHIATRY",
+    "slug": "therapy-session-notes",
+    "filename": "therapy-session-notes.html",
+    "url": "https://www.medical365.in/therapy-session-notes",
+    "existsInRepo": true,
+    "primaryKeyword": "therapy session notes and psychotherapy EMR software",
+    "secondaryKeywords": [
+      "psychotherapy progress notes software",
+      "counseling documentation system",
+      "CBT session notes EMR",
+      "mental health therapy tracking"
+    ],
+    "longTailKeywords": [
+      "psychotherapy session notes documentation software for psychologists",
+      "CBT and counseling therapy progress notes inside secure EMR",
+      "patient therapeutic goals and homework tracking software India",
+      "psychology private practice case note management software"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PSYCHIATRY",
+    "slug": "medication-tracking",
+    "filename": "medication-tracking.html",
+    "url": "https://www.medical365.in/medication-tracking",
+    "existsInRepo": true,
+    "primaryKeyword": "psychotropic medication monitoring software",
+    "secondaryKeywords": [
+      "psychiatry drug tracking EMR",
+      "lithium clozapine monitoring software",
+      "psychiatric prescription management",
+      "metabolic side-effect tracking"
+    ],
+    "longTailKeywords": [
+      "psychotropic medication monitoring software for psychiatric clinics",
+      "lithium and clozapine therapeutic lab tracking inside hospital EMR",
+      "metabolic syndrome and antipsychotic side effect monitoring tool",
+      "psychiatric medication titration and adherence tracking system India"
+    ],
+    "intent": "Clinical Safety / Feature",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PSYCHIATRY",
+    "slug": "behavioral-history",
+    "filename": "behavioral-history.html",
+    "url": "https://www.medical365.in/behavioral-history",
+    "existsInRepo": true,
+    "primaryKeyword": "behavioral history documentation software",
+    "secondaryKeywords": [
+      "psychiatric social history EMR",
+      "longitudinal behavioral tracking",
+      "substance abuse history documentation",
+      "patient psychosocial charting"
+    ],
+    "longTailKeywords": [
+      "behavioral and psychosocial history documentation software for psychiatry",
+      "longitudinal patient behavioral episode and trigger tracking in EMR",
+      "substance use addiction and rehabilitation history software India",
+      "developmental and family psychiatric history mapping tool"
+    ],
+    "intent": "Clinical Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "PSYCHIATRY",
+    "slug": "confidential-records",
+    "filename": "confidential-records.html",
+    "url": "https://www.medical365.in/confidential-records",
+    "existsInRepo": true,
+    "primaryKeyword": "confidential psychiatric records security software",
+    "secondaryKeywords": [
+      "mental health data privacy EMR",
+      "Mental Healthcare Act 2017 compliance",
+      "restricted psychiatric chart access",
+      "psychiatry confidentiality software"
+    ],
+    "longTailKeywords": [
+      "confidential psychiatric records security software for hospitals India",
+      "Mental Healthcare Act 2017 compliant patient privacy controls in EMR",
+      "role-based privileged access for psychiatric clinical notes",
+      "DPDP Act healthcare data privacy and audit trail software"
+    ],
+    "intent": "Security / Compliance",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GENERAL PRACTICE",
+    "slug": "patient-history",
+    "filename": "patient-history.html",
+    "url": "https://www.medical365.in/patient-history",
+    "existsInRepo": true,
+    "primaryKeyword": "electronic patient medical history software",
+    "secondaryKeywords": [
+      "longitudinal patient records EMR",
+      "clinical medical history software",
+      "patient past medical history system",
+      "general practice health records"
+    ],
+    "longTailKeywords": [
+      "electronic patient medical history software for clinics India",
+      "longitudinal patient medical surgical and family history in EMR",
+      "chronic disease and childhood illness history charting tool",
+      "integrated patient health summary software for general practitioners"
+    ],
+    "intent": "Core Product / Clinical",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GENERAL PRACTICE",
+    "slug": "diagnosis-treatment",
+    "filename": "diagnosis-treatment.html",
+    "url": "https://www.medical365.in/diagnosis-treatment",
+    "existsInRepo": true,
+    "primaryKeyword": "clinical diagnosis and treatment planning software",
+    "secondaryKeywords": [
+      "ICD-10 clinical coding software",
+      "general practice clinical documentation",
+      "doctor consultation SOAP notes",
+      "treatment pathway software"
+    ],
+    "longTailKeywords": [
+      "clinical diagnosis and treatment planning software for Indian clinics",
+      "ICD-10 compliant doctor consultation and prescription software",
+      "general practitioner structured SOAP clinical notes system",
+      "differential diagnosis and evidence based treatment pathway tool"
+    ],
+    "intent": "Core Product / Clinical",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GENERAL PRACTICE",
+    "slug": "e-prescriptions",
+    "filename": "e-prescriptions.html",
+    "url": "https://www.medical365.in/e-prescriptions",
+    "existsInRepo": true,
+    "primaryKeyword": "e-prescription software for doctors",
+    "secondaryKeywords": [
+      "digital prescription software India",
+      "electronic prescribing system EMR",
+      "medical prescription generator",
+      "drug interaction prescription tool"
+    ],
+    "longTailKeywords": [
+      "e-prescription software for clinics and doctors India",
+      "digital prescription generator with WhatsApp and SMS sharing",
+      "drug interaction and dosage check e-prescribing system",
+      "medical council compliant electronic prescription software with digital signature"
+    ],
+    "intent": "Core Product / Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GENERAL PRACTICE",
+    "slug": "lab-integration",
+    "filename": "lab-integration.html",
+    "url": "https://www.medical365.in/lab-integration",
+    "existsInRepo": true,
+    "primaryKeyword": "diagnostic lab integration software",
+    "secondaryKeywords": [
+      "pathology lab EMR integration",
+      "LIMS hospital software sync",
+      "automated lab test result software",
+      "bidirectional lab analyzer interface"
+    ],
+    "longTailKeywords": [
+      "diagnostic lab integration software for clinics and hospitals India",
+      "automated pathology lab test ordering and result syncing in EMR",
+      "bidirectional laboratory machine HL7 analyzer interface software",
+      "patient abnormal lab value alert and WhatsApp report sharing tool"
+    ],
+    "intent": "Integration / Operational",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "GENERAL PRACTICE",
+    "slug": "billing-reports",
+    "filename": "billing-reports.html",
+    "url": "https://www.medical365.in/billing-reports",
+    "existsInRepo": true,
+    "primaryKeyword": "clinic billing and revenue reporting software",
+    "secondaryKeywords": [
+      "outpatient billing software India",
+      "clinic financial reports system",
+      "doctor collection and revenue dashboard",
+      "GST clinic invoicing software"
+    ],
+    "longTailKeywords": [
+      "clinic billing and financial reporting software for doctors India",
+      "daily OPD collection cash card UPI revenue summary dashboard",
+      "GST compliant medical billing and invoice management system",
+      "clinic financial reporting and accounting software with Tally export"
+    ],
+    "intent": "Commercial / Operational",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CORE PLATFORM",
+    "slug": "patient-registration",
+    "filename": "patient-registration.html",
+    "url": "https://www.medical365.in/patient-registration",
+    "existsInRepo": true,
+    "primaryKeyword": "hospital patient registration software",
+    "secondaryKeywords": [
+      "outpatient patient registration system",
+      "ABHA health ID registration EMR",
+      "hospital front desk software India",
+      "patient check-in software"
+    ],
+    "longTailKeywords": [
+      "hospital patient registration software with ABHA integration India",
+      "fast front desk patient check-in and barcode UHID generation",
+      "outpatient and inpatient digital registration software for hospitals",
+      "biometric and OTP patient demographic verification software"
+    ],
+    "intent": "Core Platform / Workflow",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CORE PLATFORM",
+    "slug": "emr-ehr-system",
+    "filename": "emr-ehr-system.html",
+    "url": "https://www.medical365.in/emr-ehr-system",
+    "existsInRepo": true,
+    "primaryKeyword": "cloud EMR EHR software India",
+    "secondaryKeywords": [
+      "hospital electronic medical records",
+      "ABDM compliant EHR system",
+      "multi-specialty EMR software",
+      "paperless hospital software"
+    ],
+    "longTailKeywords": [
+      "cloud EMR EHR software for Indian hospitals and multi-specialty clinics",
+      "ABDM and DPDP Act 2023 certified electronic medical record system",
+      "customizable specialty clinical documentation and e-prescribing EMR",
+      "offline capable fast cloud electronic health records platform India"
+    ],
+    "intent": "Core Platform / Commercial Pillar",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CORE PLATFORM",
+    "slug": "billing-invoicing",
+    "filename": "billing-invoicing.html",
+    "url": "https://www.medical365.in/billing-invoicing",
+    "existsInRepo": true,
+    "primaryKeyword": "hospital billing and invoicing software",
+    "secondaryKeywords": [
+      "medical billing system India",
+      "IPD OPD hospital billing software",
+      "TPA insurance billing management",
+      "hospital invoicing software GST"
+    ],
+    "longTailKeywords": [
+      "hospital billing and invoicing software for private hospitals India",
+      "comprehensive OPD and IPD itemized billing with TPA cashless claims",
+      "GST compliant hospital invoice generator with automated tariff schedules",
+      "hospital revenue cycle and counter payment reconciliation system"
+    ],
+    "intent": "Core Platform / Commercial",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CORE PLATFORM",
+    "slug": "notifications-system",
+    "filename": "notifications-system.html",
+    "url": "https://www.medical365.in/notifications-system",
+    "existsInRepo": true,
+    "primaryKeyword": "hospital patient notification and messaging software",
+    "secondaryKeywords": [
+      "healthcare SMS WhatsApp alerts system",
+      "hospital communication automation",
+      "appointment reminder software",
+      "patient notification engine"
+    ],
+    "longTailKeywords": [
+      "hospital patient notification and messaging software India",
+      "automated WhatsApp appointment reminder and report ready alerts",
+      "critical lab alert and doctor duty notification software for hospitals",
+      "multi-channel SMS WhatsApp and email healthcare communication system"
+    ],
+    "intent": "Core Platform / Communication",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  },
+  {
+    "cluster": "CORE PLATFORM",
+    "slug": "cloud-security",
+    "filename": "cloud-security.html",
+    "url": "https://www.medical365.in/cloud-security",
+    "existsInRepo": true,
+    "primaryKeyword": "healthcare cloud security and compliance software",
+    "secondaryKeywords": [
+      "hospital data security DPDP Act",
+      "HIPAA ISO 27001 healthcare cloud",
+      "medical data encryption software",
+      "cloud EMR security India"
+    ],
+    "longTailKeywords": [
+      "healthcare cloud data security and DPDP Act compliance software India",
+      "ISO 27001 certified cloud hospital management security architecture",
+      "end-to-end encrypted medical records and role-based access control",
+      "disaster recovery and automated cloud backups for hospital databases"
+    ],
+    "intent": "Core Platform / Security & Trust",
+    "plannedSections": [
+      "HERO (H1 + Clinical Subtitle + Dual CTAs)",
+      "AEO QUICK DEFINITION BOX (40-70 word answer to 'What is [Topic]?')",
+      "CORE SPECIALTY CAPABILITIES (6 specific clinical/operational features)",
+      "SPECIALIZED CLINICAL WORKFLOW (Requisition -> Test -> Review -> EMR Sync -> Follow-up)",
+      "OPERATIONAL ADVANTAGES & USE CASES (Centralized, Paperless, Multi-disciplinary)",
+      "TOPICAL ECOSYSTEM & INTERNAL LINKS (HIMS, EMR, NABH, Peer Specialty Modules, Pricing)",
+      "AEO / FAQ SECTION (4-5 specialty-specific Q&As)",
+      "CONVERSION CTA BANNER"
+    ],
+    "schemaUpgrades": [
+      "SoftwareApplication (Medical365 Module)",
+      "MedicalWebPage / WebPage",
+      "BreadcrumbList",
+      "FAQPage (Linked to visible on-page FAQs)"
+    ],
+    "internalLinkTargets": [
+      "/hims-software",
+      "/emr-ehr-system",
+      "/nabh-compliant-hospital-software",
+      "/pricing",
+      "https://www.medical365.in/book-demo"
+    ],
+    "safeguards": {
+      "preserveGa4": true,
+      "preserveGtm": true,
+      "zeroFakeReviews": true,
+      "zeroPhase2bImpact": true,
+      "preserveCanonical": true
+    }
+  }
+]

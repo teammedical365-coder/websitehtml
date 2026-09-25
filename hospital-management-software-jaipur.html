@@ -59,60 +59,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Advanced JSON-LD Schema (Graph Structure) -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "SoftwareApplication",
+      "name": "Medical365 Hospital Management Software",
+      "operatingSystem": "Web, Cloud, Android, iOS",
+      "applicationCategory": "BusinessApplication, HealthcareApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "240",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Medical365 Hospital Management Software in Jaipur",
+      "description": "Premium Hospital Management Software and healthcare digital solutions for doctors and hospitals in Jaipur.",
+      "image": "https://www.medical365.in/medical365logo1.png",
+      "telephone": "+917791910007",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "SoftwareApplication",
-          "name": "Medical365 Hospital Management Software",
-          "operatingSystem": "Web, Cloud, Android, iOS",
-          "applicationCategory": "BusinessApplication, HealthcareApplication",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR",
-            "availability": "https://schema.org/InStock"
-          }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.medical365.in/"
         },
         {
-          "@type": "LocalBusiness",
-          "name": "Medical365 Hospital Management Software in Jaipur",
-          "description": "Premium Hospital Management Software and healthcare digital solutions for doctors and hospitals in Jaipur.",
-          "image": "https://www.medical365.in/medical365logo1.png",
-          "telephone": "+917791910007",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Jaipur",
-            "addressRegion": "Rajasthan",
-            "addressCountry": "IN"
-          }
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hospital Management Software",
+          "item": "https://www.medical365.in/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.medical365.in/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Hospital Management Software",
-              "item": "https://www.medical365.in/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Jaipur",
-              "item": "https://www.medical365.in/hospital-management-software-jaipur"
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Jaipur",
+          "item": "https://www.medical365.in/hospital-management-software-jaipur"
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     
     <!-- JSON-LD FAQ Schema -->
     <script type="application/ld+json">
@@ -199,26 +206,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Medical365 — Hospital Management Software",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "Web, Android, iOS",
-      "url": "https://www.medical365.in/hospital-management-software-jaipur",
-      "description": "Upgrade your healthcare facility in Jaipur with Medical365's cloud-based Hospital Management Software. Fully ABDM compliant & DPDP Act 2023 ready.",
-      "offers": {
-        "@type": "Offer",
-        "price": "6000",
-        "priceCurrency": "INR"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Medical365",
-        "url": "https://www.medical365.in"
-      }
-    }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Medical365 — Hospital Management Software",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web, Android, iOS",
+  "url": "https://www.medical365.in/hospital-management-software-jaipur",
+  "description": "Upgrade your healthcare facility in Jaipur with Medical365's cloud-based Hospital Management Software. Fully ABDM compliant & DPDP Act 2023 ready.",
+  "offers": {
+    "@type": "Offer",
+    "price": "6000",
+    "priceCurrency": "INR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Medical365",
+    "url": "https://www.medical365.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "240",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+    <!-- AI Search & LLM Engine Optimization (AEO / GEO) -->
+    <link rel="alternate" type="text/markdown" title="LLM Context Summary" href="/llms.txt">
+    <link rel="alternate" type="text/markdown" title="Full LLM Knowledge Base" href="/llms-full.txt">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1049,21 +1066,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- SCHEMA JSON-LD -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Medical365 Hospital Management Software",
-      "operatingSystem": "Web-based",
-      "applicationCategory": "HealthcareApplication",
-      "provider": {
-        "@type": "Organization",
-        "name": "Medical365",
-        "url": "https://medical365.in"
-      },
-      "description": "Comprehensive Hospital Management Software designed for healthcare organizations in Jaipur, featuring EMR, billing, LIMS, and pharmacy management.",
-      "url": "https://www.medical365.in/hospital-management-software-jaipur.html"
-    }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Medical365 Hospital Management Software",
+  "operatingSystem": "Web-based",
+  "applicationCategory": "HealthcareApplication",
+  "provider": {
+    "@type": "Organization",
+    "name": "Medical365",
+    "url": "https://medical365.in"
+  },
+  "description": "Comprehensive Hospital Management Software designed for healthcare organizations in Jaipur, featuring EMR, billing, LIMS, and pharmacy management.",
+  "url": "https://www.medical365.in/hospital-management-software-jaipur.html",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "240",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

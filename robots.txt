@@ -97,5 +97,10 @@ Allow: /
 Disallow: /medical365-analytics
 Disallow: /medical365-analytics/
 
-# Canonical XML Sitemap
+# Canonical XML Sitemap & LLM Discovery Feeds
 Sitemap: https://www.medical365.in/sitemap.xml
+
+# AI & LLM Machine Context (AEO / GEO Feeds)
+# llms.txt: https://www.medical365.in/llms.txt
+# llms-full.txt: https://www.medical365.in/llms-full.txt
+

@@ -1,0 +1,205 @@
+{
+  "totalFilesAudited": 67,
+  "highBoilerplateSentencesCount": 47,
+  "topBoilerplateSentences": [
+    {
+      "sentence": "it streamlines patient data capture, ensures seamless integration with hospital emr/ehr systems , and provides clinicians with instant access to diagnostic histories, structured templates, and longitudinal patient charts compliant with indian abdm standards.",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "core clinical & operational capabilities",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "purpose-built tools to enhance diagnostic accuracy, eliminate paper records, and speed up physician workflows.",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "how it works: step-by-step clinical workflow",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "a seamless digital journey from patient consultation to permanent health records.",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "doctor orders test or procedure during opd/ipd consultation in 1 click.",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "clinical technician or specialist conducts examination using standard protocols.",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "measurements, images, or traces sync directly into the patient's digital chart.",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "consultant reviews findings, applies structured notes, and signs report electronically.",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    },
+    {
+      "sentence": "available instantly across departments, patient portal, and abdm health locker.",
+      "occurrences": 67,
+      "sampleFiles": [
+        "ecg-ekg-integration.html",
+        "echocardiography-reports.html",
+        "stress-test-management.html"
+      ]
+    }
+  ],
+  "workflowMismatchCount": 9,
+  "workflowMismatches": [
+    {
+      "slug": "parent-communication",
+      "filename": "parent-communication.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    },
+    {
+      "slug": "dental-insurance-billing",
+      "filename": "dental-insurance-billing.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    },
+    {
+      "slug": "clinical-trial-management",
+      "filename": "clinical-trial-management.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    },
+    {
+      "slug": "confidential-records",
+      "filename": "confidential-records.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    },
+    {
+      "slug": "billing-reports",
+      "filename": "billing-reports.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    },
+    {
+      "slug": "patient-registration",
+      "filename": "patient-registration.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    },
+    {
+      "slug": "billing-invoicing",
+      "filename": "billing-invoicing.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    },
+    {
+      "slug": "notifications-system",
+      "filename": "notifications-system.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    },
+    {
+      "slug": "cloud-security",
+      "filename": "cloud-security.html",
+      "issue": "Non-clinical module has clinical test workflow (Requisition -> Test -> Execution)"
+    }
+  ],
+  "highSimilarityPairCount": 2211,
+  "highestSimilarityPairs": [
+    {
+      "fileA": "cardiac-risk-scoring.html",
+      "fileB": "lipid-profile-tracking.html",
+      "similarityPercent": 63.09
+    },
+    {
+      "fileA": "echocardiography-reports.html",
+      "fileB": "angiography-reports.html",
+      "similarityPercent": 62.06
+    },
+    {
+      "fileA": "vaccination-tracking.html",
+      "fileB": "developmental-milestones.html",
+      "similarityPercent": 62.04
+    },
+    {
+      "fileA": "pacemaker-tracking.html",
+      "fileB": "lipid-profile-tracking.html",
+      "similarityPercent": 61.82
+    },
+    {
+      "fileA": "echocardiography-reports.html",
+      "fileB": "pacemaker-tracking.html",
+      "similarityPercent": 61.51
+    },
+    {
+      "fileA": "echocardiography-reports.html",
+      "fileB": "lipid-profile-tracking.html",
+      "similarityPercent": 61.48
+    },
+    {
+      "fileA": "eeg-reports.html",
+      "fileB": "stroke-management.html",
+      "similarityPercent": 61.2
+    },
+    {
+      "fileA": "stress-test-management.html",
+      "fileB": "cardiac-risk-scoring.html",
+      "similarityPercent": 61.19
+    },
+    {
+      "fileA": "angiography-reports.html",
+      "fileB": "lipid-profile-tracking.html",
+      "similarityPercent": 61.12
+    },
+    {
+      "fileA": "ecg-ekg-integration.html",
+      "fileB": "lipid-profile-tracking.html",
+      "similarityPercent": 61.08
+    }
+  ],
+  "pagesWithZeroBodyImages": 67,
+  "cannibalizationFlagsCount": 1,
+  "cannibalizationFlags": [
+    {
+      "slug": "therapy-session-notes",
+      "issue": "H1 ('\n        therapy session notes and psychotherapy emr software\n      ') targets broad HMS/EMR instead of specialty niche"
+    }
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "totalAudited": 67,
+  "htmlStructureErrors": 0,
+  "titleErrors": 0,
+  "h1Errors": 0,
+  "metaDescriptionErrors": 0,
+  "canonicalErrors": 0,
+  "accidentalNoindex": 0,
+  "jsonLdParseErrors": 0,
+  "fakeAggregateRatings": 0,
+  "fakeReviews": 0,
+  "missingGa4": 0,
+  "missingGtm": 0,
+  "phase2bViolations": 0,
+  "pagesDetails": [
+    {
+      "filename": "ecg-ekg-integration.html",
+      "title": "ECG EKG integration software | Medical365",
+      "h1": "ECG EKG integration software",
+      "canonical": "https://www.medical365.in/ecg-ekg-integration",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "echocardiography-reports.html",
+      "title": "Echocardiography reporting software | Medical365",
+      "h1": "Echocardiography reporting software",
+      "canonical": "https://www.medical365.in/echocardiography-reports",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "stress-test-management.html",
+      "title": "Cardiac stress test software | Medical365",
+      "h1": "Cardiac stress test software",
+      "canonical": "https://www.medical365.in/stress-test-management",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "cardiac-risk-scoring.html",
+      "title": "Cardiac risk assessment software | Medical365",
+      "h1": "Cardiac risk assessment software",
+      "canonical": "https://www.medical365.in/cardiac-risk-scoring",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "angiography-reports.html",
+      "title": "Coronary angiography reporting software | Medical365",
+      "h1": "Coronary angiography reporting software",
+      "canonical": "https://www.medical365.in/angiography-reports",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "pacemaker-tracking.html",
+      "title": "Pacemaker tracking software | Medical365",
+      "h1": "Pacemaker tracking software",
+      "canonical": "https://www.medical365.in/pacemaker-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "lipid-profile-tracking.html",
+      "title": "Lipid profile tracking software | Medical365",
+      "h1": "Lipid profile tracking software",
+      "canonical": "https://www.medical365.in/lipid-profile-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "cardiac-history-templates.html",
+      "title": "Cardiology clinical documentation templates | Medical365",
+      "h1": "Cardiology clinical documentation templates",
+      "canonical": "https://www.medical365.in/cardiac-history-templates",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "eeg-reports.html",
+      "title": "EEG reporting software | Medical365",
+      "h1": "EEG reporting software",
+      "canonical": "https://www.medical365.in/eeg-reports",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "mri-ct-integration.html",
+      "title": "Neuroimaging PACS integration software | Medical365",
+      "h1": "Neuroimaging PACS integration software",
+      "canonical": "https://www.medical365.in/mri-ct-integration",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "seizure-tracking.html",
+      "title": "Seizure tracking software | Medical365",
+      "h1": "Seizure tracking software",
+      "canonical": "https://www.medical365.in/seizure-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "cognitive-assessment.html",
+      "title": "Cognitive assessment software | Medical365",
+      "h1": "Cognitive assessment software",
+      "canonical": "https://www.medical365.in/cognitive-assessment",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "stroke-management.html",
+      "title": "Stroke management software | Medical365",
+      "h1": "Stroke management software",
+      "canonical": "https://www.medical365.in/stroke-management",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "neurological-exam-forms.html",
+      "title": "Neurology examination templates | Medical365",
+      "h1": "Neurology examination templates",
+      "canonical": "https://www.medical365.in/neurological-exam-forms",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "growth-charts.html",
+      "title": "Pediatric growth chart software | Medical365",
+      "h1": "Pediatric growth chart software",
+      "canonical": "https://www.medical365.in/growth-charts",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "vaccination-tracking.html",
+      "title": "Child vaccination tracking software | Medical365",
+      "h1": "Child vaccination tracking software",
+      "canonical": "https://www.medical365.in/vaccination-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "pediatric-dosage-calculator.html",
+      "title": "Pediatric dosage calculator software | Medical365",
+      "h1": "Pediatric dosage calculator software",
+      "canonical": "https://www.medical365.in/pediatric-dosage-calculator",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "developmental-milestones.html",
+      "title": "Child developmental milestone tracking software | Medical365",
+      "h1": "Child developmental milestone tracking software",
+      "canonical": "https://www.medical365.in/developmental-milestones",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "neonatal-records.html",
+      "title": "NICU neonatal records management software | Medical365",
+      "h1": "NICU neonatal records management software",
+      "canonical": "https://www.medical365.in/neonatal-records",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "parent-communication.html",
+      "title": "Pediatric parent communication software | Medical365",
+      "h1": "Pediatric parent communication software",
+      "canonical": "https://www.medical365.in/parent-communication",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "xray-imaging-integration.html",
+      "title": "Orthopedic X-ray PACS integration software | Medical365",
+      "h1": "Orthopedic X-ray PACS integration software",
+      "canonical": "https://www.medical365.in/xray-imaging-integration",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "fracture-management.html",
+      "title": "Fracture management documentation software | Medical365",
+      "h1": "Fracture management documentation software",
+      "canonical": "https://www.medical365.in/fracture-management",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "joint-mobility-tracking.html",
+      "title": "Joint mobility and range of motion tracking software | Medical365",
+      "h1": "Joint mobility and range of motion tracking software",
+      "canonical": "https://www.medical365.in/joint-mobility-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "implant-records.html",
+      "title": "Orthopedic implant tracking software | Medical365",
+      "h1": "Orthopedic implant tracking software",
+      "canonical": "https://www.medical365.in/implant-records",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "physiotherapy-notes.html",
+      "title": "Physiotherapy clinical documentation software | Medical365",
+      "h1": "Physiotherapy clinical documentation software",
+      "canonical": "https://www.medical365.in/physiotherapy-notes",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "surgery-planning.html",
+      "title": "Orthopedic surgical planning software | Medical365",
+      "h1": "Orthopedic surgical planning software",
+      "canonical": "https://www.medical365.in/surgery-planning",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "vision-refraction-charts.html",
+      "title": "Ophthalmic refraction charting software | Medical365",
+      "h1": "Ophthalmic refraction charting software",
+      "canonical": "https://www.medical365.in/vision-refraction-charts",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "retina-imaging-integration.html",
+      "title": "Retinal imaging PACS integration software | Medical365",
+      "h1": "Retinal imaging PACS integration software",
+      "canonical": "https://www.medical365.in/retina-imaging-integration",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "eye-pressure-tracking.html",
+      "title": "Intraocular pressure IOP tracking software | Medical365",
+      "h1": "Intraocular pressure IOP tracking software",
+      "canonical": "https://www.medical365.in/eye-pressure-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "optical-prescription-mgt.html",
+      "title": "Optical prescription management software | Medical365",
+      "h1": "Optical prescription management software",
+      "canonical": "https://www.medical365.in/optical-prescription-mgt",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "lasik-surgery-records.html",
+      "title": "LASIK and refractive surgery software | Medical365",
+      "h1": "LASIK and refractive surgery software",
+      "canonical": "https://www.medical365.in/lasik-surgery-records",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "dental-tooth-chart.html",
+      "title": "Dental tooth chart odontogram software | Medical365",
+      "h1": "Dental tooth chart odontogram software",
+      "canonical": "https://www.medical365.in/dental-tooth-chart",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "dental-imaging.html",
+      "title": "Dental imaging and RVG integration software | Medical365",
+      "h1": "Dental imaging and RVG integration software",
+      "canonical": "https://www.medical365.in/dental-imaging",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "dental-treatment-planning.html",
+      "title": "Dental treatment planning software | Medical365",
+      "h1": "Dental treatment planning software",
+      "canonical": "https://www.medical365.in/dental-treatment-planning",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "dental-procedure-history.html",
+      "title": "Dental procedure history and clinical notes software | Medical365",
+      "h1": "Dental procedure history and clinical notes software",
+      "canonical": "https://www.medical365.in/dental-procedure-history",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "dental-insurance-billing.html",
+      "title": "Dental insurance billing software | Medical365",
+      "h1": "Dental insurance billing software",
+      "canonical": "https://www.medical365.in/dental-insurance-billing",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "skin-image-tracking.html",
+      "title": "Dermatology lesion and skin image tracking software | Medical365",
+      "h1": "Dermatology lesion and skin image tracking software",
+      "canonical": "https://www.medical365.in/skin-image-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "dermatology-photos.html",
+      "title": "Dermatology before and after photo software | Medical365",
+      "h1": "Dermatology before and after photo software",
+      "canonical": "https://www.medical365.in/dermatology-photos",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "dermatology-treatment-plans.html",
+      "title": "Dermatology treatment planning software | Medical365",
+      "h1": "Dermatology treatment planning software",
+      "canonical": "https://www.medical365.in/dermatology-treatment-plans",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "cosmetic-procedure-records.html",
+      "title": "Aesthetic and cosmetic procedure documentation software | Medical365",
+      "h1": "Aesthetic and cosmetic procedure documentation software",
+      "canonical": "https://www.medical365.in/cosmetic-procedure-records",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "allergy-tracking.html",
+      "title": "Allergy tracking and patch test software | Medical365",
+      "h1": "Allergy tracking and patch test software",
+      "canonical": "https://www.medical365.in/allergy-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "cancer-staging.html",
+      "title": "Cancer staging documentation software | Medical365",
+      "h1": "Cancer staging documentation software",
+      "canonical": "https://www.medical365.in/cancer-staging",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "chemotherapy-plans.html",
+      "title": "Chemotherapy protocol and regimen management software | Medical365",
+      "h1": "Chemotherapy protocol and regimen management software",
+      "canonical": "https://www.medical365.in/chemotherapy-plans",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "radiation-therapy-records.html",
+      "title": "Radiation oncology records management software | Medical365",
+      "h1": "Radiation oncology records management software",
+      "canonical": "https://www.medical365.in/radiation-therapy-records",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "tumor-tracking.html",
+      "title": "Tumor response and RECIST tracking software | Medical365",
+      "h1": "Tumor response and RECIST tracking software",
+      "canonical": "https://www.medical365.in/tumor-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "oncology-reports.html",
+      "title": "Comprehensive oncology reporting software | Medical365",
+      "h1": "Comprehensive oncology reporting software",
+      "canonical": "https://www.medical365.in/oncology-reports",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "clinical-trial-management.html",
+      "title": "Oncology clinical trial management software | Medical365",
+      "h1": "Oncology clinical trial management software",
+      "canonical": "https://www.medical365.in/clinical-trial-management",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "pregnancy-tracking.html",
+      "title": "Obstetric pregnancy tracking software | Medical365",
+      "h1": "Obstetric pregnancy tracking software",
+      "canonical": "https://www.medical365.in/pregnancy-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "antenatal-care-records.html",
+      "title": "Antenatal care ANC records software | Medical365",
+      "h1": "Antenatal care ANC records software",
+      "canonical": "https://www.medical365.in/antenatal-care-records",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "ultrasound-reports.html",
+      "title": "Obstetric ultrasound reporting software | Medical365",
+      "h1": "Obstetric ultrasound reporting software",
+      "canonical": "https://www.medical365.in/ultrasound-reports",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "delivery-records.html",
+      "title": "Labor and delivery records software | Medical365",
+      "h1": "Labor and delivery records software",
+      "canonical": "https://www.medical365.in/delivery-records",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "fertility-treatment-tracking.html",
+      "title": "IVF and fertility clinic management software | Medical365",
+      "h1": "IVF and fertility clinic management software",
+      "canonical": "https://www.medical365.in/fertility-treatment-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "mental-health-assessments.html",
+      "title": "Psychiatric assessment and clinical evaluation software | Medical365",
+      "h1": "Psychiatric assessment and clinical evaluation software",
+      "canonical": "https://www.medical365.in/mental-health-assessments",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "therapy-session-notes.html",
+      "title": "Therapy session notes and psychotherapy EMR software | Medical365",
+      "h1": "Therapy session notes and psychotherapy EMR software",
+      "canonical": "https://www.medical365.in/therapy-session-notes",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "medication-tracking.html",
+      "title": "Psychotropic medication monitoring software | Medical365",
+      "h1": "Psychotropic medication monitoring software",
+      "canonical": "https://www.medical365.in/medication-tracking",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "behavioral-history.html",
+      "title": "Behavioral history documentation software | Medical365",
+      "h1": "Behavioral history documentation software",
+      "canonical": "https://www.medical365.in/behavioral-history",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "confidential-records.html",
+      "title": "Confidential psychiatric records security software | Medical365",
+      "h1": "Confidential psychiatric records security software",
+      "canonical": "https://www.medical365.in/confidential-records",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "patient-history.html",
+      "title": "Electronic patient medical history software | Medical365",
+      "h1": "Electronic patient medical history software",
+      "canonical": "https://www.medical365.in/patient-history",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "diagnosis-treatment.html",
+      "title": "Clinical diagnosis and treatment planning software | Medical365",
+      "h1": "Clinical diagnosis and treatment planning software",
+      "canonical": "https://www.medical365.in/diagnosis-treatment",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "e-prescriptions.html",
+      "title": "E-prescription software for doctors | Medical365",
+      "h1": "E-prescription software for doctors",
+      "canonical": "https://www.medical365.in/e-prescriptions",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "lab-integration.html",
+      "title": "Diagnostic lab integration software | Medical365",
+      "h1": "Diagnostic lab integration software",
+      "canonical": "https://www.medical365.in/lab-integration",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "billing-reports.html",
+      "title": "Clinic billing and revenue reporting software | Medical365",
+      "h1": "Clinic billing and revenue reporting software",
+      "canonical": "https://www.medical365.in/billing-reports",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "patient-registration.html",
+      "title": "Hospital patient registration software | Medical365",
+      "h1": "Hospital patient registration software",
+      "canonical": "https://www.medical365.in/patient-registration",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "emr-ehr-system.html",
+      "title": "Cloud EMR EHR software India | Medical365",
+      "h1": "Cloud EMR EHR software India",
+      "canonical": "https://www.medical365.in/emr-ehr-system",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "billing-invoicing.html",
+      "title": "Hospital billing and invoicing software | Medical365",
+      "h1": "Hospital billing and invoicing software",
+      "canonical": "https://www.medical365.in/billing-invoicing",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "notifications-system.html",
+      "title": "Hospital patient notification and messaging software | Medical365",
+      "h1": "Hospital patient notification and messaging software",
+      "canonical": "https://www.medical365.in/notifications-system",
+      "jsonLdBlocks": 4
+    },
+    {
+      "filename": "cloud-security.html",
+      "title": "Healthcare cloud security and compliance software | Medical365",
+      "h1": "Healthcare cloud security and compliance software",
+      "canonical": "https://www.medical365.in/cloud-security",
+      "jsonLdBlocks": 4
+    }
+  ]
+}

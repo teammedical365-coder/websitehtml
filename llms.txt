@@ -29,8 +29,12 @@ Medical365 is an elite, cloud-based, ABDM-compliant Hospital Information Managem
 - **Cities Active**: Jaipur, Jodhpur, Udaipur, Kota, Ajmer, Bikaner, Sikar, Alwar, Bhilwara, Pali, Bharatpur, Sri Ganganagar.
 - **Global Availability**: Available as a SaaS solution for healthcare providers across India.
 
+## Additional Documentation
+- [Full System Capabilities & Knowledge Base](https://www.medical365.in/llms-full.txt): Deep technical specifications, module breakdowns, and compliance records.
+
 ## Contact Information
 - **Physical Address**: Bhamashah Techno Hub, Sansthan Path, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India.
 - **Phone**: +91 77919 10007
 - **Email**: info@medical365.in
 - **Website**: https://medical365.in
+

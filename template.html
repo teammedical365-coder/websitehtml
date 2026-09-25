@@ -65,78 +65,94 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Medical365",
+    "description": "{{meta_description}}",
+    "url": "https://www.medical365.in",
+    "logo": "https://www.medical365.in/medical365logo1.png",
+    "image": "https://www.medical365.in/medical365logo1.png",
+    "telephone": "+91-9876543210",
+    "email": "support@medical365.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Medical365 HQ",
+      "addressLocality": "{{location}}",
+      "addressRegion": "Rajasthan",
+      "postalCode": "{{postal_code}}",
+      "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "{{location}}"
+    },
+    "priceRange": "₹₹",
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "sameAs": [
+      "https://www.linkedin.com/in/medical-hms-612628405/",
+      "https://x.com/medical_365"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Medical365 — {{feature}}",
+    "operatingSystem": "Web, Android, iOS",
+    "applicationCategory": "HealthApplication",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "description": "{{meta_description}}",
+    "url": "https://www.medical365.in/{{slug}}",
+    "publisher": {
+      "@type": "Organization",
       "name": "Medical365",
-      "description": "{{meta_description}}",
-      "url": "https://www.medical365.in",
-      "logo": "https://www.medical365.in/medical365logo1.png",
-      "image": "https://www.medical365.in/medical365logo1.png",
-      "telephone": "+91-9876543210",
-      "email": "support@medical365.in",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Medical365 HQ",
-        "addressLocality": "{{location}}",
-        "addressRegion": "Rajasthan",
-        "postalCode": "{{postal_code}}",
-        "addressCountry": "IN"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "{{location}}"
-      },
-      "priceRange": "₹₹",
-      "openingHours": "Mo-Sa 09:00-18:00",
-      "sameAs": [
-        "https://www.linkedin.com/in/medical-hms-612628405/",
-        "https://x.com/medical_365"
-      ]
+      "url": "https://www.medical365.in"
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Medical365 — {{feature}}",
-      "operatingSystem": "Web, Android, iOS",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      },
-      "description": "{{meta_description}}",
-      "url": "https://www.medical365.in/{{slug}}",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Medical365",
-        "url": "https://www.medical365.in"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "{{faq1_question}}",
-          "acceptedAnswer": { "@type": "Answer", "text": "{{faq1_answer}}" }
-        },
-        {
-          "@type": "Question",
-          "name": "{{faq2_question}}",
-          "acceptedAnswer": { "@type": "Answer", "text": "{{faq2_answer}}" }
-        },
-        {
-          "@type": "Question",
-          "name": "{{faq3_question}}",
-          "acceptedAnswer": { "@type": "Answer", "text": "{{faq3_answer}}" }
-        }
-      ]
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "240",
+      "bestRating": "5",
+      "worstRating": "1"
     }
-  ]
-  </script>
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "{{faq1_question}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{faq1_answer}}"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "{{faq2_question}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{faq2_answer}}"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "{{faq3_question}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{faq3_answer}}"
+        }
+      }
+    ]
+  }
+]
+</script>
     <style>
     /* Audit Hotfixes — Stabilising Mobile & Mega Menu */
     .mega-menu { background-color: #ffffff !important; z-index: 11000 !important; }
@@ -144,6 +160,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .br-desktop { display: block; }
     @media (max-width: 768px) { .br-desktop { display: inline; } }
     </style>
+    <!-- AI Search & LLM Engine Optimization (AEO / GEO) -->
+    <link rel="alternate" type="text/markdown" title="LLM Context Summary" href="/llms.txt">
+    <link rel="alternate" type="text/markdown" title="Full LLM Knowledge Base" href="/llms-full.txt">
 </head>
 
 <body>

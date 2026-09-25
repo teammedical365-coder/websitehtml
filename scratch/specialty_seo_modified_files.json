@@ -1,0 +1,410 @@
+[
+  {
+    "slug": "ecg-ekg-integration",
+    "filename": "ecg-ekg-integration.html",
+    "cluster": "CARDIOLOGY",
+    "primaryKeyword": "ECG EKG integration software"
+  },
+  {
+    "slug": "echocardiography-reports",
+    "filename": "echocardiography-reports.html",
+    "cluster": "CARDIOLOGY",
+    "primaryKeyword": "echocardiography reporting software"
+  },
+  {
+    "slug": "stress-test-management",
+    "filename": "stress-test-management.html",
+    "cluster": "CARDIOLOGY",
+    "primaryKeyword": "cardiac stress test software"
+  },
+  {
+    "slug": "cardiac-risk-scoring",
+    "filename": "cardiac-risk-scoring.html",
+    "cluster": "CARDIOLOGY",
+    "primaryKeyword": "cardiac risk assessment software"
+  },
+  {
+    "slug": "angiography-reports",
+    "filename": "angiography-reports.html",
+    "cluster": "CARDIOLOGY",
+    "primaryKeyword": "coronary angiography reporting software"
+  },
+  {
+    "slug": "pacemaker-tracking",
+    "filename": "pacemaker-tracking.html",
+    "cluster": "CARDIOLOGY",
+    "primaryKeyword": "pacemaker tracking software"
+  },
+  {
+    "slug": "lipid-profile-tracking",
+    "filename": "lipid-profile-tracking.html",
+    "cluster": "CARDIOLOGY",
+    "primaryKeyword": "lipid profile tracking software"
+  },
+  {
+    "slug": "cardiac-history-templates",
+    "filename": "cardiac-history-templates.html",
+    "cluster": "CARDIOLOGY",
+    "primaryKeyword": "cardiology clinical documentation templates"
+  },
+  {
+    "slug": "eeg-reports",
+    "filename": "eeg-reports.html",
+    "cluster": "NEUROLOGY",
+    "primaryKeyword": "EEG reporting software"
+  },
+  {
+    "slug": "mri-ct-integration",
+    "filename": "mri-ct-integration.html",
+    "cluster": "NEUROLOGY",
+    "primaryKeyword": "neuroimaging PACS integration software"
+  },
+  {
+    "slug": "seizure-tracking",
+    "filename": "seizure-tracking.html",
+    "cluster": "NEUROLOGY",
+    "primaryKeyword": "seizure tracking software"
+  },
+  {
+    "slug": "cognitive-assessment",
+    "filename": "cognitive-assessment.html",
+    "cluster": "NEUROLOGY",
+    "primaryKeyword": "cognitive assessment software"
+  },
+  {
+    "slug": "stroke-management",
+    "filename": "stroke-management.html",
+    "cluster": "NEUROLOGY",
+    "primaryKeyword": "stroke management software"
+  },
+  {
+    "slug": "neurological-exam-forms",
+    "filename": "neurological-exam-forms.html",
+    "cluster": "NEUROLOGY",
+    "primaryKeyword": "neurology examination templates"
+  },
+  {
+    "slug": "growth-charts",
+    "filename": "growth-charts.html",
+    "cluster": "PEDIATRICS",
+    "primaryKeyword": "pediatric growth chart software"
+  },
+  {
+    "slug": "vaccination-tracking",
+    "filename": "vaccination-tracking.html",
+    "cluster": "PEDIATRICS",
+    "primaryKeyword": "child vaccination tracking software"
+  },
+  {
+    "slug": "pediatric-dosage-calculator",
+    "filename": "pediatric-dosage-calculator.html",
+    "cluster": "PEDIATRICS",
+    "primaryKeyword": "pediatric dosage calculator software"
+  },
+  {
+    "slug": "developmental-milestones",
+    "filename": "developmental-milestones.html",
+    "cluster": "PEDIATRICS",
+    "primaryKeyword": "child developmental milestone tracking software"
+  },
+  {
+    "slug": "neonatal-records",
+    "filename": "neonatal-records.html",
+    "cluster": "PEDIATRICS",
+    "primaryKeyword": "NICU neonatal records management software"
+  },
+  {
+    "slug": "parent-communication",
+    "filename": "parent-communication.html",
+    "cluster": "PEDIATRICS",
+    "primaryKeyword": "pediatric parent communication software"
+  },
+  {
+    "slug": "xray-imaging-integration",
+    "filename": "xray-imaging-integration.html",
+    "cluster": "ORTHOPEDICS",
+    "primaryKeyword": "orthopedic X-ray PACS integration software"
+  },
+  {
+    "slug": "fracture-management",
+    "filename": "fracture-management.html",
+    "cluster": "ORTHOPEDICS",
+    "primaryKeyword": "fracture management documentation software"
+  },
+  {
+    "slug": "joint-mobility-tracking",
+    "filename": "joint-mobility-tracking.html",
+    "cluster": "ORTHOPEDICS",
+    "primaryKeyword": "joint mobility and range of motion tracking software"
+  },
+  {
+    "slug": "implant-records",
+    "filename": "implant-records.html",
+    "cluster": "ORTHOPEDICS",
+    "primaryKeyword": "orthopedic implant tracking software"
+  },
+  {
+    "slug": "physiotherapy-notes",
+    "filename": "physiotherapy-notes.html",
+    "cluster": "ORTHOPEDICS",
+    "primaryKeyword": "physiotherapy clinical documentation software"
+  },
+  {
+    "slug": "surgery-planning",
+    "filename": "surgery-planning.html",
+    "cluster": "ORTHOPEDICS",
+    "primaryKeyword": "orthopedic surgical planning software"
+  },
+  {
+    "slug": "vision-refraction-charts",
+    "filename": "vision-refraction-charts.html",
+    "cluster": "OPHTHALMOLOGY",
+    "primaryKeyword": "ophthalmic refraction charting software"
+  },
+  {
+    "slug": "retina-imaging-integration",
+    "filename": "retina-imaging-integration.html",
+    "cluster": "OPHTHALMOLOGY",
+    "primaryKeyword": "retinal imaging PACS integration software"
+  },
+  {
+    "slug": "eye-pressure-tracking",
+    "filename": "eye-pressure-tracking.html",
+    "cluster": "OPHTHALMOLOGY",
+    "primaryKeyword": "intraocular pressure IOP tracking software"
+  },
+  {
+    "slug": "optical-prescription-mgt",
+    "filename": "optical-prescription-mgt.html",
+    "cluster": "OPHTHALMOLOGY",
+    "primaryKeyword": "optical prescription management software"
+  },
+  {
+    "slug": "lasik-surgery-records",
+    "filename": "lasik-surgery-records.html",
+    "cluster": "OPHTHALMOLOGY",
+    "primaryKeyword": "LASIK and refractive surgery software"
+  },
+  {
+    "slug": "dental-tooth-chart",
+    "filename": "dental-tooth-chart.html",
+    "cluster": "DENTAL",
+    "primaryKeyword": "dental tooth chart odontogram software"
+  },
+  {
+    "slug": "dental-imaging",
+    "filename": "dental-imaging.html",
+    "cluster": "DENTAL",
+    "primaryKeyword": "dental imaging and RVG integration software"
+  },
+  {
+    "slug": "dental-treatment-planning",
+    "filename": "dental-treatment-planning.html",
+    "cluster": "DENTAL",
+    "primaryKeyword": "dental treatment planning software"
+  },
+  {
+    "slug": "dental-procedure-history",
+    "filename": "dental-procedure-history.html",
+    "cluster": "DENTAL",
+    "primaryKeyword": "dental procedure history and clinical notes software"
+  },
+  {
+    "slug": "dental-insurance-billing",
+    "filename": "dental-insurance-billing.html",
+    "cluster": "DENTAL",
+    "primaryKeyword": "dental insurance billing software"
+  },
+  {
+    "slug": "skin-image-tracking",
+    "filename": "skin-image-tracking.html",
+    "cluster": "DERMATOLOGY",
+    "primaryKeyword": "dermatology lesion and skin image tracking software"
+  },
+  {
+    "slug": "dermatology-photos",
+    "filename": "dermatology-photos.html",
+    "cluster": "DERMATOLOGY",
+    "primaryKeyword": "dermatology before and after photo software"
+  },
+  {
+    "slug": "dermatology-treatment-plans",
+    "filename": "dermatology-treatment-plans.html",
+    "cluster": "DERMATOLOGY",
+    "primaryKeyword": "dermatology treatment planning software"
+  },
+  {
+    "slug": "cosmetic-procedure-records",
+    "filename": "cosmetic-procedure-records.html",
+    "cluster": "DERMATOLOGY",
+    "primaryKeyword": "aesthetic and cosmetic procedure documentation software"
+  },
+  {
+    "slug": "allergy-tracking",
+    "filename": "allergy-tracking.html",
+    "cluster": "DERMATOLOGY",
+    "primaryKeyword": "allergy tracking and patch test software"
+  },
+  {
+    "slug": "cancer-staging",
+    "filename": "cancer-staging.html",
+    "cluster": "ONCOLOGY",
+    "primaryKeyword": "cancer staging documentation software"
+  },
+  {
+    "slug": "chemotherapy-plans",
+    "filename": "chemotherapy-plans.html",
+    "cluster": "ONCOLOGY",
+    "primaryKeyword": "chemotherapy protocol and regimen management software"
+  },
+  {
+    "slug": "radiation-therapy-records",
+    "filename": "radiation-therapy-records.html",
+    "cluster": "ONCOLOGY",
+    "primaryKeyword": "radiation oncology records management software"
+  },
+  {
+    "slug": "tumor-tracking",
+    "filename": "tumor-tracking.html",
+    "cluster": "ONCOLOGY",
+    "primaryKeyword": "tumor response and RECIST tracking software"
+  },
+  {
+    "slug": "oncology-reports",
+    "filename": "oncology-reports.html",
+    "cluster": "ONCOLOGY",
+    "primaryKeyword": "comprehensive oncology reporting software"
+  },
+  {
+    "slug": "clinical-trial-management",
+    "filename": "clinical-trial-management.html",
+    "cluster": "ONCOLOGY",
+    "primaryKeyword": "oncology clinical trial management software"
+  },
+  {
+    "slug": "pregnancy-tracking",
+    "filename": "pregnancy-tracking.html",
+    "cluster": "GYNECOLOGY",
+    "primaryKeyword": "obstetric pregnancy tracking software"
+  },
+  {
+    "slug": "antenatal-care-records",
+    "filename": "antenatal-care-records.html",
+    "cluster": "GYNECOLOGY",
+    "primaryKeyword": "antenatal care ANC records software"
+  },
+  {
+    "slug": "ultrasound-reports",
+    "filename": "ultrasound-reports.html",
+    "cluster": "GYNECOLOGY",
+    "primaryKeyword": "obstetric ultrasound reporting software"
+  },
+  {
+    "slug": "delivery-records",
+    "filename": "delivery-records.html",
+    "cluster": "GYNECOLOGY",
+    "primaryKeyword": "labor and delivery records software"
+  },
+  {
+    "slug": "fertility-treatment-tracking",
+    "filename": "fertility-treatment-tracking.html",
+    "cluster": "GYNECOLOGY",
+    "primaryKeyword": "IVF and fertility clinic management software"
+  },
+  {
+    "slug": "mental-health-assessments",
+    "filename": "mental-health-assessments.html",
+    "cluster": "PSYCHIATRY",
+    "primaryKeyword": "psychiatric assessment and clinical evaluation software"
+  },
+  {
+    "slug": "therapy-session-notes",
+    "filename": "therapy-session-notes.html",
+    "cluster": "PSYCHIATRY",
+    "primaryKeyword": "therapy session notes and psychotherapy EMR software"
+  },
+  {
+    "slug": "medication-tracking",
+    "filename": "medication-tracking.html",
+    "cluster": "PSYCHIATRY",
+    "primaryKeyword": "psychotropic medication monitoring software"
+  },
+  {
+    "slug": "behavioral-history",
+    "filename": "behavioral-history.html",
+    "cluster": "PSYCHIATRY",
+    "primaryKeyword": "behavioral history documentation software"
+  },
+  {
+    "slug": "confidential-records",
+    "filename": "confidential-records.html",
+    "cluster": "PSYCHIATRY",
+    "primaryKeyword": "confidential psychiatric records security software"
+  },
+  {
+    "slug": "patient-history",
+    "filename": "patient-history.html",
+    "cluster": "GENERAL PRACTICE",
+    "primaryKeyword": "electronic patient medical history software"
+  },
+  {
+    "slug": "diagnosis-treatment",
+    "filename": "diagnosis-treatment.html",
+    "cluster": "GENERAL PRACTICE",
+    "primaryKeyword": "clinical diagnosis and treatment planning software"
+  },
+  {
+    "slug": "e-prescriptions",
+    "filename": "e-prescriptions.html",
+    "cluster": "GENERAL PRACTICE",
+    "primaryKeyword": "e-prescription software for doctors"
+  },
+  {
+    "slug": "lab-integration",
+    "filename": "lab-integration.html",
+    "cluster": "GENERAL PRACTICE",
+    "primaryKeyword": "diagnostic lab integration software"
+  },
+  {
+    "slug": "billing-reports",
+    "filename": "billing-reports.html",
+    "cluster": "GENERAL PRACTICE",
+    "primaryKeyword": "clinic billing and revenue reporting software"
+  },
+  {
+    "slug": "patient-registration",
+    "filename": "patient-registration.html",
+    "cluster": "CORE PLATFORM",
+    "primaryKeyword": "hospital patient registration software"
+  },
+  {
+    "slug": "emr-ehr-system",
+    "filename": "emr-ehr-system.html",
+    "cluster": "CORE PLATFORM",
+    "primaryKeyword": "cloud EMR EHR software India"
+  },
+  {
+    "slug": "billing-invoicing",
+    "filename": "billing-invoicing.html",
+    "cluster": "CORE PLATFORM",
+    "primaryKeyword": "hospital billing and invoicing software"
+  },
+  {
+    "slug": "notifications-system",
+    "filename": "notifications-system.html",
+    "cluster": "CORE PLATFORM",
+    "primaryKeyword": "hospital patient notification and messaging software"
+  },
+  {
+    "slug": "cloud-security",
+    "filename": "cloud-security.html",
+    "cluster": "CORE PLATFORM",
+    "primaryKeyword": "healthcare cloud security and compliance software"
+  },
+  {
+    "slug": "appointment-scheduling",
+    "filename": "appointment-scheduling.html",
+    "cluster": "CORE PLATFORM",
+    "primaryKeyword": "hospital appointment scheduling software"
+  }
+]

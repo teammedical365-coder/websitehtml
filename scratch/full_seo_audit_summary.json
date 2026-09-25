@@ -1,0 +1,61 @@
+{
+  "totalHtmlFiles": 1974,
+  "specialtyPagesCount": 68,
+  "specialtyTotalWords": 152751,
+  "specialtyAvgWords": 2246,
+  "specialtyMinWords": 2169,
+  "specialtyMaxWords": 2439,
+  "specialtyClusters": {
+    "CARDIOLOGY": {
+      "count": 8,
+      "words": 18261
+    },
+    "ORTHOPEDICS": {
+      "count": 6,
+      "words": 13375
+    },
+    "NEUROLOGY": {
+      "count": 6,
+      "words": 13353
+    },
+    "PEDIATRICS": {
+      "count": 6,
+      "words": 13424
+    },
+    "OPHTHALMOLOGY": {
+      "count": 5,
+      "words": 11200
+    },
+    "DENTAL": {
+      "count": 5,
+      "words": 11047
+    },
+    "DERMATOLOGY": {
+      "count": 5,
+      "words": 11118
+    },
+    "ONCOLOGY": {
+      "count": 6,
+      "words": 13513
+    },
+    "GYNECOLOGY": {
+      "count": 5,
+      "words": 11492
+    },
+    "PSYCHIATRY": {
+      "count": 4,
+      "words": 9015
+    },
+    "CORE": {
+      "count": 12,
+      "words": 26953
+    }
+  },
+  "totalFaqsAcrossSpecialties": 408,
+  "totalCapabilities": 408,
+  "totalSchemasAcrossSpecialties": 272,
+  "jsonErrors": 0,
+  "phase2bPairs": 220,
+  "sitemapExists": true,
+  "robotsExists": true
+}

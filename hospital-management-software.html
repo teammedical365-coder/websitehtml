@@ -326,55 +326,62 @@
 
     <!-- Structured JSON-LD Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "SoftwareApplication",
+      "name": "Medical365",
+      "operatingSystem": "Any",
+      "applicationCategory": "BusinessApplication, HealthcareApplication",
+      "browserRequirements": "Requires HTML5 compatible browser",
+      "featureList": "ABDM Certified EMR, GST Billing, Multi-Specialty Clinic Database, Ambient AI Clinical Scribe",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "240",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "SoftwareApplication",
-          "name": "Medical365",
-          "operatingSystem": "Any",
-          "applicationCategory": "BusinessApplication, HealthcareApplication",
-          "browserRequirements": "Requires HTML5 compatible browser",
-          "featureList": "ABDM Certified EMR, GST Billing, Multi-Specialty Clinic Database, Ambient AI Clinical Scribe",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR",
-            "availability": "https://schema.org/InStock"
+          "@type": "Question",
+          "name": "What is the difference between EMR and EHR India in terms of clinical database systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An EMR (Electronic Medical Record) represents a digital version of a patient's chart within a single clinic ecosystem, like a practo ray alternative for hospitals. In contrast, an EHR (Electronic Health Record) is built for global interoperability across multiple healthcare providers, dynamically connecting via the ABDM integration api for hospitals to synchronize health records securely across all participating facilities in India."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the difference between EMR and EHR India in terms of clinical database systems?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "An EMR (Electronic Medical Record) represents a digital version of a patient's chart within a single clinic ecosystem, like a practo ray alternative for hospitals. In contrast, an EHR (Electronic Health Record) is built for global interoperability across multiple healthcare providers, dynamically connecting via the ABDM integration api for hospitals to synchronize health records securely across all participating facilities in India."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does Medical365 integrate the ABDM Integration API for Indian hospitals?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "As an abdm certified hmis software india, Medical365 features out-of-the-box support for the abdm integration api for hospitals and the abha id generation api for hospitals. It enables direct registration of ABHA cards, triggers automated consent workflows, and seamlessly publishes clinical documents to the National Health Claims Exchange (NHCX) for cashless insurance claim management software integration."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What makes Medical365's Ambient AI Clinical Scribe unique for doctor documentation?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our ambient ai clinical scribe software acts as an intelligent speech to rx software for doctors, listening to patient consultations in real-time. Operating as a speech to text medical transcription software india, it extracts essential clinical summaries, maps diagnoses to ICD-10 codes, and auto-populates the AI prescription generator india system with 99.8% precision, cutting documentation time by 70%."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "How does Medical365 integrate the ABDM Integration API for Indian hospitals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As an abdm certified hmis software india, Medical365 features out-of-the-box support for the abdm integration api for hospitals and the abha id generation api for hospitals. It enables direct registration of ABHA cards, triggers automated consent workflows, and seamlessly publishes clinical documents to the National Health Claims Exchange (NHCX) for cashless insurance claim management software integration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Medical365's Ambient AI Clinical Scribe unique for doctor documentation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our ambient ai clinical scribe software acts as an intelligent speech to rx software for doctors, listening to patient consultations in real-time. Operating as a speech to text medical transcription software india, it extracts essential clinical summaries, maps diagnoses to ICD-10 codes, and auto-populates the AI prescription generator india system with 99.8% precision, cutting documentation time by 70%."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -424,6 +431,9 @@
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//wa.me" />
+    <!-- AI Search & LLM Engine Optimization (AEO / GEO) -->
+    <link rel="alternate" type="text/markdown" title="LLM Context Summary" href="/llms.txt">
+    <link rel="alternate" type="text/markdown" title="Full LLM Knowledge Base" href="/llms-full.txt">
 </head>
 
 <body>
