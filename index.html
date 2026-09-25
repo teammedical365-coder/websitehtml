@@ -471,6 +471,158 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     }
     </script>
+    <style>
+        /* Medical365 AI Floating Chatbot (Positioned Above WhatsApp FAB) */
+        .m365-ai-fab {
+            position: fixed;
+            bottom: 104px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1A56DB 0%, #0D9488 100%);
+            border: none;
+            box-shadow: 0 6px 20px rgba(26, 86, 219, 0.38);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+        }
+        .m365-ai-fab:hover {
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 0 10px 28px rgba(26, 86, 219, 0.48);
+        }
+        .m365-ai-fab:active {
+            transform: scale(0.96);
+        }
+        .m365-ai-badge {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            background: #10B981;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 6px;
+            border-radius: 9999px;
+            border: 2px solid #ffffff;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+        .m365-ai-window {
+            position: fixed;
+            bottom: 175px;
+            right: 30px;
+            width: 420px;
+            height: 620px;
+            max-height: calc(100vh - 200px);
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 16px 48px rgba(15, 23, 42, 0.22), 0 2px 10px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e2e8f0;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            animation: m365AiSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes m365AiSlideUp {
+            from { opacity: 0; transform: translateY(16px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .m365-ai-header {
+            background: linear-gradient(135deg, #1A56DB 0%, #0D9488 100%);
+            color: #ffffff;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .m365-ai-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .m365-ai-avatar {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .m365-ai-title {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+        .m365-ai-status {
+            font-size: 11.5px;
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 2px;
+            font-weight: 500;
+        }
+        .m365-ai-dot {
+            width: 7px;
+            height: 7px;
+            background: #34D399;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #34D399;
+        }
+        .m365-ai-close-btn {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 26px;
+            cursor: pointer;
+            line-height: 1;
+            opacity: 0.85;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+        }
+        .m365-ai-close-btn:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .m365-ai-body {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            background: #f8fafc;
+        }
+        .m365-ai-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @media (max-width: 480px) {
+            .m365-ai-fab {
+                bottom: 96px;
+                right: 20px;
+                width: 54px;
+                height: 54px;
+            }
+            .m365-ai-window {
+                bottom: 80px;
+                right: 12px;
+                left: 12px;
+                width: auto;
+                height: 78vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -3050,6 +3202,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div><!-- /mf-container -->
         </div><!-- /mf-body -->
 
+                <!-- Medical365 AI Floating Chatbot (Above WhatsApp) -->
+        <div id="m365-ai-chat-wrapper">
+            <button id="m365-ai-trigger" class="m365-ai-fab" aria-label="Chat with Medical365 AI Assistant" title="Ask Medical365 AI">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 8V4H8"></path>
+                    <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                    <path d="M2 14h2"></path>
+                    <path d="M20 14h2"></path>
+                    <path d="M15 13v2"></path>
+                    <path d="M9 13v2"></path>
+                </svg>
+                <span class="m365-ai-badge">AI</span>
+            </button>
+
+            <!-- Chatbot Window Modal -->
+            <div id="m365-ai-modal" class="m365-ai-window" style="display: none;">
+                <div class="m365-ai-header">
+                    <div class="m365-ai-header-left">
+                        <div class="m365-ai-avatar">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+                                <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                                <path d="M12 8V4H8"></path>
+                                <path d="M9 13v2"></path>
+                                <path d="M15 13v2"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="m365-ai-title">Medical365 AI Assistant</div>
+                            <div class="m365-ai-status"><span class="m365-ai-dot"></span> Online • ABDM & EMR Expert</div>
+                        </div>
+                    </div>
+                    <button id="m365-ai-close" class="m365-ai-close-btn" aria-label="Close Chat">&times;</button>
+                </div>
+                <div class="m365-ai-body">
+                    <iframe id="m365-ai-iframe" data-src="https://cloud.fastgpt.io/chat/share?appId=6ab6144b96981a6fe9a68ad4" frameborder="0" allow="clipboard-write"></iframe>
+                </div>
+            </div>
+        </div>
+
         <!-- WhatsApp Floating Button -->
         <a href="https://wa.me/917791910007?text=Hi%20Medical365%2C%20I%27d%20like%20to%20book%20a%20free%20demo"
             class="mf-wa-fab" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
@@ -3162,8 +3353,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     })();
   </script>
 
-    <!-- Medical365 AI Chatbot (FastGPT) -->
-    <script src="https://cloud.fastgpt.io/js/fastgpt-web-chat.js" id="fastgpt-chat" data-app-id="6ab6144b96981a6fe9a68ad4" defer></script>
+      <script>
+    // Medical365 AI Chatbot Interactive Controller
+    (function() {
+        var trigger = document.getElementById('m365-ai-trigger');
+        var modal = document.getElementById('m365-ai-modal');
+        var closeBtn = document.getElementById('m365-ai-close');
+        var iframe = document.getElementById('m365-ai-iframe');
+        if (!trigger || !modal) return;
+
+        var isLoaded = false;
+        function openChat() {
+            if (!isLoaded && iframe && iframe.dataset.src) {
+                iframe.src = iframe.dataset.src;
+                isLoaded = true;
+            }
+            modal.style.display = 'flex';
+        }
+        function closeChat() {
+            modal.style.display = 'none';
+        }
+
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (modal.style.display === 'none' || modal.style.display === '') {
+                openChat();
+            } else {
+                closeChat();
+            }
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeChat();
+            });
+        }
+
+        // Close on clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            if (modal.style.display === 'flex' && !modal.contains(e.target) && !trigger.contains(e.target)) {
+                closeChat();
+            }
+        });
+    })();
+  </script>
 </body>
 
 </html>
