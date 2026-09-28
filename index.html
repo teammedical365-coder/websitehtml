@@ -11,25 +11,48 @@
             }, 1200);
         });
     </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W5H82GQ7');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RMGG2LX0RF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!-- High-Performance Non-Blocking Analytics (Deferred until Idle) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        function loadAnalytics() {
+            if (window.__analyticsLoaded) return;
+            window.__analyticsLoaded = true;
+            
+            // GTM
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-W5H82GQ7');
 
-  gtag('config', 'G-RMGG2LX0RF');
-</script>
+            // GA4
+            var gaScript = document.createElement('script');
+            gaScript.async = true;
+            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-RMGG2LX0RF';
+            document.head.appendChild(gaScript);
+            gtag('js', new Date());
+            gtag('config', 'G-RMGG2LX0RF');
+        }
+
+        // Trigger on first user interaction or when browser is idle
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(function() { setTimeout(loadAnalytics, 2500); });
+        } else {
+            window.addEventListener('load', function() { setTimeout(loadAnalytics, 2000); });
+        }
+        ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(function(e) {
+            window.addEventListener(e, loadAnalytics, { once: true, passive: true });
+        });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
+    <!-- Preload Critical LCP Hero Image -->
+    <link rel="preload" as="image" href="img/redesign/medical365_dashboard_v2.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="img/redesign/clinic_management_isometric.webp" type="image/webp">
+
+    <link rel="icon" type="image/jpeg" href="medical365fav.webp">
     <link rel="canonical" href="https://www.medical365.in/">
 
     <!-- High-Performance Font Loading -->
@@ -677,7 +700,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="header-container">
             <a style="display: flex; align-items: center; text-decoration: none;" href="/" class="logo"
                 aria-label="Medical365 Home"><img fetchpriority="high"
-                    src="medical365fav.jpg" alt="MEDICAL365" class="logo-img"><span
+                    src="medical365fav.webp" alt="MEDICAL365" class="logo-img"><span
                     class="logo-text"><span>MEDICAL</span><span style="color: #37B39C;">365</span></span></a>
 
             <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-label="Open navigation menu">
@@ -689,7 +712,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <nav class="main-nav" id="main-nav">
                 <div class="mobile-menu-header">
                     <div class="logo-mobile-wrapper">
-                        <img loading="lazy" src="medical365fav.jpg" alt="MEDICAL365" class="logo-img-mobile">
+                        <img loading="lazy" src="medical365fav.webp" alt="MEDICAL365" class="logo-img-mobile">
                         <span class="logo-text"><span>MEDICAL</span><span style="color: #37B39C;">365</span></span>
                     </div>
                 </div>
@@ -1330,8 +1353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
             <div class="hero-right" style="animation-delay: 0.5s;">
                 <div class="anti-gravity-scene">
-                    <img src="img/redesign/medical365_dashboard_v2.png" alt="Medical365 Dashboard" 
-                         class="dashboard-center">
+                    <img fetchpriority="high" loading="eager" decoding="async" width="900" height="520" src="img/redesign/medical365_dashboard_v2.webp" alt="Medical365 Dashboard" class="dashboard-center">
                     
                     <div class="float-card v-analytics">
                         <i>📈</i>
@@ -1399,7 +1421,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="pain-visual" style="margin-top: 60px; position: relative; animation-delay: 0.4s;">
-                <img src="img/redesign/clinic_management_isometric.png" alt="Hospital Operational Dashboard" 
+                <img loading="lazy" decoding="async" src="img/redesign/clinic_management_isometric.webp" alt="Hospital Operational Dashboard" 
                      style="width: 100%; border-radius: var(--redesign-radius-lg); box-shadow: var(--redesign-shadow); filter: drop-shadow(0 20px 30px rgba(0,0,0,0.08)); transform: perspective(1000px) rotateY(-2deg);">
                 
                 <!-- Floating Info Cards to fill white space -->
@@ -1902,7 +1924,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="bento-grid-redesign">
             <!-- 1. HERO BENTO (Smart EMR) -->
             <div class="bento-card bento-hero">
-                <img src="img/redesign/emr_icon_3d_1775221267246.png" alt="Smart EMR" class="bento-icon" loading="lazy"
+                <img src="img/redesign/emr_icon_3d_1775221267246.webp" alt="Smart EMR" class="bento-icon" loading="lazy"
                     width="64" height="64">
                 <h3>Smart EMR & EHR</h3>
                 <p>Streamline patient records with intuitive, specialty-specific charting, fast data retrieval, and
@@ -1911,7 +1933,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="emr" class="btn-secondary" style="padding: 8px 20px; font-size: 0.85rem;">Learn
                         More</a>
                 </div>
-                <img src="img/redesign/medical365_doctor_ui_new.png" alt="EMR UI" class="bento-img"
+                <img src="img/redesign/medical365_doctor_ui_new.webp" alt="EMR UI" class="bento-img"
                     style="opacity: 0.8; margin-top: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"
                     loading="lazy" width="400" height="300">
             </div>
@@ -1920,7 +1942,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="bento-card bento-medium"
                 style="animation-delay: 0.1s; background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);">
                 <div style="display: flex; align-items: center; gap: 24px;">
-                    <img src="img/redesign/rcm_icon_3d_1775221290252.png" alt="Revenue Cycle" class="bento-icon"
+                    <img src="img/redesign/rcm_icon_3d_1775221290252.webp" alt="Revenue Cycle" class="bento-icon"
                         loading="lazy" width="64" height="64">
                     <div>
                         <h3>Revenue Cycle (RCM)</h3>
@@ -2038,7 +2060,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             is incredibly fast, and our doctors love the customized specialty templates. It's the
                             best investment we've made.</p>
                         <div class="author-meta">
-                            <img src="img/redesign/avatar_set_3d_1775221404479.png" alt="Dr. Rajesh"
+                            <img src="img/redesign/avatar_set_3d_1775221404479.webp" alt="Dr. Rajesh"
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
@@ -2053,7 +2075,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             quarter. Claim rejections dropped by 40%, and our financial reporting is finally crystal
                             clear.</p>
                         <div class="author-meta">
-                            <img src="img/redesign/avatar_set_3d_1775221404479.png" alt="Amit Sharma"
+                            <img src="img/redesign/avatar_set_3d_1775221404479.webp" alt="Amit Sharma"
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
@@ -2068,7 +2090,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             cloud sync works flawlessly across our 12 locations. The central dashboard is a game
                             changer.</p>
                         <div class="author-meta">
-                            <img src="img/redesign/avatar_set_3d_1775221404479.png" alt="Neha Reddy"
+                            <img src="img/redesign/avatar_set_3d_1775221404479.webp" alt="Neha Reddy"
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
@@ -2084,7 +2106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             is incredibly fast, and our doctors love the customized specialty templates. It's the
                             best investment we've made.</p>
                         <div class="author-meta">
-                            <img src="img/redesign/avatar_set_3d_1775221404479.png" alt="Dr. Rajesh"
+                            <img src="img/redesign/avatar_set_3d_1775221404479.webp" alt="Dr. Rajesh"
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
@@ -2099,7 +2121,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             quarter. Claim rejections dropped by 40%, and our financial reporting is finally crystal
                             clear.</p>
                         <div class="author-meta">
-                            <img src="img/redesign/avatar_set_3d_1775221404479.png" alt="Amit Sharma"
+                            <img src="img/redesign/avatar_set_3d_1775221404479.webp" alt="Amit Sharma"
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
@@ -2114,7 +2136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             cloud sync works flawlessly across our 12 locations. The central dashboard is a game
                             changer.</p>
                         <div class="author-meta">
-                            <img src="img/redesign/avatar_set_3d_1775221404479.png" alt="Neha Reddy"
+                            <img src="img/redesign/avatar_set_3d_1775221404479.webp" alt="Neha Reddy"
                                 class="author-avatar" style="width: 50px; height: 50px; object-fit: cover;"
                                 loading="lazy" width="50" height="50">
                             <div>
@@ -2190,7 +2212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="security-visual" style="animation-delay: 0.3s;">
-                <img src="img/redesign/secure_cloud_isometric.png" alt="Data Security"
+                <img src="img/redesign/secure_cloud_isometric.webp" alt="Data Security"
                     class="security-visual" loading="lazy" style="width: 100%; border-radius: 20px; box-shadow: 0 40px 80px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2);">
             </div>
         </div>
@@ -2507,11 +2529,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Admin and Management content would be toggled via JS -->
             </div>
             <div class="audience-visual-wrap">
-                <img src="img/redesign/medical365_doctor_ui_new.png" alt="Doctor Interface"
+                <img loading="lazy" decoding="async" src="img/redesign/medical365_doctor_ui_new.webp" alt="Doctor Interface"
                     class="audience-img active" id="doctor-img">
-                <img src="img/redesign/medical365_admin_ui_new.png" alt="Admin Interface" class="audience-img"
+                <img loading="lazy" decoding="async" src="img/redesign/medical365_admin_ui_new.webp" alt="Admin Interface" class="audience-img"
                     id="admin-img">
-                <img src="img/redesign/medical365_management_ui_new.png" alt="Management Dashboard"
+                <img loading="lazy" decoding="async" src="img/redesign/medical365_management_ui_new.webp" alt="Management Dashboard"
                     class="audience-img" id="management-img">
             </div>
         </div>
@@ -3280,7 +3302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="m365-spinner"></div>
                         <span>Connecting to Medical365 AI...</span>
                     </div>
-                    <iframe id="m365-ai-iframe" src="https://cloud.fastgpt.io/chat/share?shareId=mgf9GHRSyOVAa5FcDtPgfbD9" frameborder="0" allow="microphone; camera; clipboard-write; web-share" onload="var l=document.getElementById('m365-ai-loader');if(l){l.style.opacity='0';setTimeout(function(){l.style.display='none';},300);}"></iframe>
+                    <iframe id="m365-ai-iframe" data-src="https://cloud.fastgpt.io/chat/share?shareId=mgf9GHRSyOVAa5FcDtPgfbD9" src="about:blank" frameborder="0" allow="microphone; camera; clipboard-write; web-share" onload="var l=document.getElementById('m365-ai-loader');if(l){l.style.opacity='0';setTimeout(function(){l.style.display='none';},300);}"></iframe>
                 </div>
             </div>
         </div>
