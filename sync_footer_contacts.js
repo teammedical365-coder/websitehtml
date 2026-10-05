@@ -164,7 +164,7 @@ const newFooter = `<footer id="mega-footer" role="contentinfo">
                                 <div>
                                     <span class="mf-contact-label">Address</span>
                                     <address class="mf-contact-val">Bhamashah Techno Hub, Sansthan Path, Jhalana
-                                        Gram,<br>Malviya Nagar, Jaipur, Rajasthan 302017</address>
+                                        Gram,<br>Bhamashah Techno Hub Sansthan Path, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017</address>
                                 </div>
                             </div>
                             <div class="mf-contact-item">

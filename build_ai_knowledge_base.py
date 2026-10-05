@@ -155,7 +155,7 @@ def process_workspace():
     kb_content.append("- **Category**: Cloud-based Hospital Information Management System (HIMS) & Electronic Medical Record (EMR/EHR) Platform")
     kb_content.append("- **Official Website**: https://www.medical365.in")
     kb_content.append("- **Target Audience**: Independent Clinics, Multi-specialty Hospitals, Polyclinics, Diagnostic Centers, and Healthcare Chains across India.")
-    kb_content.append("- **Headquarters**: Bhamashah Techno Hub, Sansthan Path, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India")
+    kb_content.append("- **Headquarters**: Bhamashah Techno Hub, Sansthan Path, Jhalana Gram, Bhamashah Techno Hub Sansthan Path, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India")
     kb_content.append("- **Phone Support / Sales**: +91 77919 10007")
     kb_content.append("- **Email**: info@medical365.in\n")
 

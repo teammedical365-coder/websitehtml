@@ -7,7 +7,7 @@
 - **Category**: Cloud-based Hospital Information Management System (HIMS) & Electronic Medical Record (EMR/EHR) Platform
 - **Official Website**: https://www.medical365.in
 - **Target Audience**: Independent Clinics, Multi-specialty Hospitals, Polyclinics, Diagnostic Centers, and Healthcare Chains across India.
-- **Headquarters**: Bhamashah Techno Hub, Sansthan Path, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India
+- **Headquarters**: Bhamashah Techno Hub, Sansthan Path, Jhalana Gram, Bhamashah Techno Hub Sansthan Path, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan 302017, India
 - **Phone Support / Sales**: +91 77919 10007
 - **Email**: info@medical365.in
 
