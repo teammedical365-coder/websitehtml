@@ -32,35 +32,66 @@
             --primary-blue: #1A56DB;
             --primary-teal: #0D9488;
             --text-dark: #0F172A;
+            --text-body: #1E293B;
             --text-muted: #475569;
             --bg-light: #F8FAFC;
             --card-border: #E2E8F0;
         }
         body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg-light); color: var(--text-dark); margin: 0; padding-top: 88px; }
-        .hero-hub { background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%); color: #fff; padding: 70px 24px 80px; text-align: center; }
-        .hero-hub h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em; }
-        .hero-hub p { font-size: 1.2rem; max-width: 780px; margin: 0 auto 30px; color: #E2E8F0; line-height: 1.6; }
-        .badge-pill { display: inline-block; background: rgba(59, 130, 246, 0.25); border: 1px solid rgba(147, 197, 253, 0.4); color: #93C5FD; padding: 6px 18px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 20px; }
         
-        .container-hub { max-width: 1300px; margin: -40px auto 80px; padding: 0 20px; }
-        .region-card { background: #fff; border-radius: 16px; border: 1px solid var(--card-border); box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05); padding: 36px 32px; margin-bottom: 40px; }
+        /* Hero Section */
+        .hero-hub { background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%); color: #FFFFFF !important; padding: 75px 24px 85px; text-align: center; }
+        .hero-hub h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em; color: #FFFFFF !important; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
+        .hero-hub p { font-size: 1.2rem; max-width: 780px; margin: 0 auto 30px; color: #F1F5F9 !important; line-height: 1.6; opacity: 0.95; }
+        .badge-pill { display: inline-block; background: rgba(59, 130, 246, 0.3); border: 1px solid rgba(147, 197, 253, 0.6); color: #BFDBFE !important; padding: 7px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; letter-spacing: 0.02em; }
+        
+        /* Containers & Cards */
+        .container-hub { max-width: 1300px; margin: -40px auto 80px; padding: 0 20px; position: relative; z-index: 10; }
+        .region-card { background: #FFFFFF; border-radius: 16px; border: 1px solid var(--card-border); box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06); padding: 36px 32px; margin-bottom: 40px; }
         .region-header { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
         .region-icon { font-size: 2rem; }
-        .region-title { font-size: 1.6rem; font-weight: 700; color: var(--text-dark); margin: 0; }
-        .region-desc { color: var(--text-muted); font-size: 1rem; margin-bottom: 28px; }
+        .region-title { font-size: 1.6rem; font-weight: 800; color: var(--text-dark) !important; margin: 0; }
+        .region-desc { color: var(--text-muted) !important; font-size: 1.05rem; margin-bottom: 28px; }
         
+        /* City Grid & Boxes */
         .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        .city-box { background: #F8FAFC; border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; transition: all 0.2s ease-in-out; }
-        .city-box:hover { transform: translateY(-3px); border-color: var(--primary-blue); box-shadow: 0 8px 20px rgba(26, 86, 219, 0.08); background: #FFFFFF; }
-        .city-name { font-size: 1.15rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
-        .city-links { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 1.8; }
-        .city-links a { color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
-        .city-links a:hover { color: var(--primary-teal); font-weight: 600; text-decoration: underline; }
+        .city-box { background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 22px; transition: all 0.2s ease-in-out; box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04); }
+        .city-box:hover { transform: translateY(-3px); border-color: var(--primary-blue); box-shadow: 0 12px 28px rgba(26, 86, 219, 0.12); background: #FFFFFF; }
+        .city-name { font-size: 1.2rem; font-weight: 800; color: #1A56DB !important; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #F1F5F9; padding-bottom: 8px; }
+        .city-links { list-style: none; padding: 0; margin: 0; font-size: 0.93rem; line-height: 1.85; }
+        .city-links li { color: #64748B; margin-bottom: 3px; }
+        .city-links a { color: #1E293B !important; text-decoration: none; font-weight: 600; transition: all 0.15s ease; }
+        .city-links a:hover { color: #0D9488 !important; text-decoration: underline; }
         
-        .cta-banner { background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal)); color: #fff; border-radius: 16px; padding: 48px; text-align: center; margin-top: 50px; }
-        .cta-banner h2 { font-size: 2rem; font-weight: 800; margin-bottom: 14px; }
-        .cta-banner p { font-size: 1.1rem; max-width: 650px; margin: 0 auto 28px; opacity: 0.95; }
-        .btn-cta { background: #FFFFFF; color: var(--primary-blue); padding: 14px 34px; font-weight: 700; border-radius: 10px; text-decoration: none; display: inline-block; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+        /* CTA Banner */
+        .cta-banner { background: linear-gradient(135deg, #1A56DB, #0D9488); color: #FFFFFF !important; border-radius: 16px; padding: 50px 30px; text-align: center; margin-top: 50px; box-shadow: 0 15px 35px rgba(26, 86, 219, 0.2); }
+        .cta-banner h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 14px; color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
+        .cta-banner p { font-size: 1.15rem; max-width: 680px; margin: 0 auto 28px; color: #F8FAFC !important; opacity: 0.98; line-height: 1.6; }
+        .btn-cta { background: #FFFFFF !important; color: #1A56DB !important; padding: 14px 36px; font-size: 1.05rem; font-weight: 800; border-radius: 10px; text-decoration: none; display: inline-block; box-shadow: 0 6px 18px rgba(0,0,0,0.2); transition: all 0.2s ease; }
+        .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); background: #F8FAFC !important; }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            .hero-hub { padding: 50px 16px 65px; }
+            .hero-hub h1 { font-size: 1.85rem; line-height: 1.25; }
+            .hero-hub p { font-size: 1rem; margin-bottom: 20px; }
+            .container-hub { margin-top: -30px; padding: 0 14px; margin-bottom: 50px; }
+            .region-card { padding: 22px 16px; margin-bottom: 24px; border-radius: 14px; }
+            .region-title { font-size: 1.35rem; }
+            .region-desc { font-size: 0.95rem; margin-bottom: 20px; }
+            .city-grid { grid-template-columns: 1fr; gap: 14px; }
+            .city-box { padding: 16px 14px; }
+            .city-name { font-size: 1.1rem; margin-bottom: 10px; }
+            .cta-banner { padding: 32px 18px; border-radius: 14px; margin-top: 30px; }
+            .cta-banner h2 { font-size: 1.55rem; }
+            .cta-banner p { font-size: 1rem; margin-bottom: 20px; }
+            .btn-cta { width: 100%; box-sizing: border-box; text-align: center; padding: 12px 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-hub h1 { font-size: 1.6rem; }
+            .badge-pill { font-size: 0.8rem; padding: 6px 14px; }
+        }
     </style>
 </head>
 <body>
