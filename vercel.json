@@ -1,3 +1,45 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/demo",
+      "destination": "/book-demo",
+      "permanent": true
+    },
+    {
+      "source": "/healthcare-crm-software-udaipur",
+      "destination": "/healthcare-crm-udaipur",
+      "permanent": true
+    },
+    {
+      "source": "/opd-management",
+      "destination": "/outpatient",
+      "permanent": true
+    },
+    {
+      "source": "/ipd-management",
+      "destination": "/inpatient",
+      "permanent": true
+    },
+    {
+      "source": "/laboratory-management",
+      "destination": "/lims",
+      "permanent": true
+    },
+    {
+      "source": "/radiology-management",
+      "destination": "/ris-pacs",
+      "permanent": true
+    },
+    {
+      "source": "/pharmacy-management",
+      "destination": "/pharmacy",
+      "permanent": true
+    },
+    {
+      "source": "/pages/:slug*",
+      "destination": "/:slug*",
+      "permanent": true
+    }
+  ]
 }
