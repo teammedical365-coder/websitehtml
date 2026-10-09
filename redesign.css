@@ -692,30 +692,69 @@
     100% { transform: translateX(-50%); }
 }
 
-/* LOGO MARQUEE */
+/* SEAMLESS INTEGRATIONS ECOSYSTEM MARQUEE */
 .marquee-container {
-    padding: 40px 0;
-    background: #fff;
+    padding: 48px 0;
+    background: #ffffff;
     overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 8px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
 }
 
 .marquee-inner {
     display: flex;
-    gap: 80px;
-    animation: marquee-redesign 40s linear infinite;
+    width: max-content;
+    gap: 16px;
+    animation: marquee-redesign 32s linear infinite;
+    will-change: transform;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.marquee-inner span {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    opacity: 0.4;
+.marquee-wrapper:hover .marquee-inner,
+.marquee-wrapper:active .marquee-inner {
+    animation-play-state: paused;
+}
+
+.integration-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: #1e293b;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
     white-space: nowrap;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.integration-chip:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.integration-chip svg {
+    flex-shrink: 0;
 }
 
 @keyframes marquee-redesign {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
 }
 
 /* SECURITY DARK CARD */
@@ -972,7 +1011,19 @@
     .bento-hero, .bento-medium, .bento-small { grid-column: span 1; }
     .logo-cloud { padding: 30px 0; }
     .logos { gap: 30px; }
-    .marquee-inner span { font-size: 1.1rem; }
+    .marquee-container { padding: 32px 0; }
+    .marquee-wrapper {
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+    }
+    .marquee-inner { gap: 12px; animation-duration: 22s; }
+    .integration-chip {
+        padding: 8px 14px;
+        font-size: 0.8125rem;
+        gap: 8px;
+        border-radius: 10px;
+    }
+    .integration-chip svg { width: 16px; height: 16px; }
     .impact-cta-prelude { padding: 40px 0 !important; }
     .audience-section { padding: 40px 0 !important; }
     .trust-section { padding: 80px 0 !important; } /* Restore breathing room below sticky header on mobile */
