@@ -30,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="canonical" href="https://www.medical365.in/book-demo" />
     <link rel="stylesheet" href="global-styles.css?v=4.5">
     <link rel="icon" type="image/jpeg" href="medical365fav.jpg">
-    <script src="https://web3forms.com/client/script.js" async defer></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -203,12 +202,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             box-shadow: 0 20px 35px -10px rgba(29, 78, 158, 0.4);
         }
 
-        .h-captcha {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-        }
-
         .step {
             display: flex;
             gap: 24px;
@@ -312,11 +305,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 font-size: 0.98rem;
                 line-height: 1.6;
             }
-            .h-captcha {
-                max-width: 100%;
-                overflow-x: auto;
-                margin: 16px 0;
-            }
         }
 
         @media (max-width: 480px) {
@@ -332,10 +320,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             .form-title {
                 font-size: 1.45rem;
-            }
-            .h-captcha {
-                transform: scale(0.92);
-                transform-origin: center center;
             }
         }
 
@@ -1228,7 +1212,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <textarea id="message" name="challenges"
                                     placeholder="e.g. We struggle with appointment scheduling and patient billing..."></textarea>
                             </div>
-                            <div class="h-captcha" data-captcha="true"></div>
+                            <!-- Web3Forms Honeypot (Spam Bot Protection) -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <!-- Free Interactive Math Captcha -->
+                            <div class="math-captcha-container">
+                                <div class="math-captcha-box">
+                                    <label class="math-captcha-label">
+                                        Security Check:
+                                        <span class="math-problem-badge math-problem-text">...</span>
+                                    </label>
+                                    <div class="math-captcha-input-row">
+                                        <input type="number" class="math-captcha-input" placeholder="Enter sum" required autocomplete="off">
+                                        <button type="button" class="math-captcha-refresh" title="New math question" aria-label="Refresh Captcha">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <p class="captcha-error-msg">Incorrect answer. Please solve the new problem.</p>
+                                </div>
+                            </div>
                             <button type="submit" class="form-submit">Schedule My Free Demo →</button>
                             <p class="form-note">
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"

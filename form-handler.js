@@ -14,9 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         'contact-form': document.getElementById('contact-form')
     };
 
+    // --- MATH CAPTCHA STATE ---
+    var mathCaptchaState = {};
+
     // --- INITIALIZATION ---
     // Handle Topic Chips in Contact Form (Keep original functionality)
     initTopicChips();
+    initMathCaptcha();
 
     // Attach AJAX handlers to both forms
     Object.keys(forms).forEach(function(formId) {
@@ -41,6 +45,36 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
+        }
+
+        // Math Captcha validation
+        var captchaContainer = form.querySelector('.math-captcha-container');
+        if (captchaContainer) {
+            var captchaInput = captchaContainer.querySelector('.math-captcha-input');
+            var errorEl = captchaContainer.querySelector('.captcha-error-msg');
+            var expectedAnswer = mathCaptchaState[form.id];
+            var userAnswer = parseInt(captchaInput ? captchaInput.value.trim() : '', 10);
+
+            if (isNaN(userAnswer) || userAnswer !== expectedAnswer) {
+                if (errorEl) {
+                    errorEl.style.display = 'block';
+                }
+                if (captchaInput) {
+                    captchaInput.focus();
+                    captchaInput.style.borderColor = '#dc2626';
+                }
+                if (typeof mathCaptchaState[form.id + '_refresh'] === 'function') {
+                    mathCaptchaState[form.id + '_refresh']();
+                }
+                return;
+            } else {
+                if (errorEl) {
+                    errorEl.style.display = 'none';
+                }
+                if (captchaInput) {
+                    captchaInput.style.borderColor = '';
+                }
+            }
         }
 
         // 1. UI State: Disable button and show loading state
@@ -112,6 +146,49 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         }
+    }
+
+    /**
+     * Logic for Free Interactive Math Captcha
+     */
+    function initMathCaptcha() {
+        var captchaContainers = document.querySelectorAll('.math-captcha-container');
+        captchaContainers.forEach(function(container) {
+            var form = container.closest('form');
+            if (!form) return;
+            var formId = form.id;
+            var problemEl = container.querySelector('.math-problem-text');
+            var inputEl = container.querySelector('.math-captcha-input');
+            var refreshBtn = container.querySelector('.math-captcha-refresh');
+            var errorEl = container.querySelector('.captcha-error-msg');
+
+            function generateProblem() {
+                var num1 = Math.floor(Math.random() * 9) + 1; // 1 to 9
+                var num2 = Math.floor(Math.random() * 9) + 1; // 1 to 9
+                mathCaptchaState[formId] = num1 + num2;
+                if (problemEl) {
+                    problemEl.textContent = num1 + ' + ' + num2 + ' = ?';
+                }
+                if (inputEl) {
+                    inputEl.value = '';
+                    inputEl.style.borderColor = '';
+                }
+                if (errorEl) {
+                    errorEl.style.display = 'none';
+                }
+            }
+
+            generateProblem();
+
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    generateProblem();
+                });
+            }
+
+            mathCaptchaState[formId + '_refresh'] = generateProblem;
+        });
     }
 
     /**
