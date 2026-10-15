@@ -37,6 +37,85 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .header-container { overflow: hidden !important; } } } }
     .br-desktop { display: block; }
     @media (max-width: 768px) { .br-desktop { display: inline; } }
+
+    body {
+        background-color: #f8fafc;
+        padding-top: 100px;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        color: #1e293b;
+    }
+    .landingpages-wrap {
+        max-width: 1200px;
+        margin: 40px auto 80px;
+        padding: 0 20px;
+    }
+    .landingpages-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .landingpages-header h1 {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 800;
+        color: #1D4E9E;
+        margin-bottom: 12px;
+        letter-spacing: -0.02em;
+    }
+    .landingpages-header p {
+        color: #64748b;
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .landingpages-card {
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+        overflow: hidden;
+    }
+    .landingpages-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+    }
+    .landingpages-table th {
+        background: #f1f5f9;
+        color: #0f172a;
+        font-weight: 700;
+        text-align: left;
+        padding: 16px 20px;
+        border-bottom: 2px solid #e2e8f0;
+    }
+    .landingpages-table td {
+        padding: 14px 20px;
+        border-bottom: 1px solid #f1f5f9;
+        vertical-align: middle;
+    }
+    .landingpages-table tr:hover {
+        background-color: #f8fafc;
+    }
+    .landingpages-table a {
+        color: #1D4E9E;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .landingpages-table a:hover {
+        color: #37B39C;
+        text-decoration: underline;
+    }
+    .landingpages-table code {
+        background: #f1f5f9;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #475569;
+        font-family: monospace;
+    }
+    @media (max-width: 768px) {
+        .landingpages-wrap { padding: 0 14px; margin-top: 20px; }
+        .landingpages-table th, .landingpages-table td { padding: 10px 12px; font-size: 0.85rem; }
+    }
     </style>
 
     <script type="application/ld+json">
@@ -81,7 +160,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5H82GQ7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->\n<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+<!-- End Google Tag Manager (noscript) -->
+<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
 
 <header class="main-header" id="main-header">
         <div class="header-container">
@@ -700,13 +780,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="https://www.medical365.in/book-demo" class="btn-primary">Book Demo</a>
             </div>
         </div>
-    </header>\n
-<h1>Medical365 — Local SEO Landing Pages</h1>
-<p>57 pages generated targeting Rajasthan healthcare market · All pages are production-ready HTML</p>
-<table>
-<thead><tr><th>#</th><th>Page Title</th><th>Slug / URL</th></tr></thead>
-<tbody>
-<tr><td>1</td><td><a href="/abha-compliance-software-hospitals-kota" target="_blank">Abha Compliance Software Hospitals Kota</a></td><td><code>abha-compliance-software-hospitals-kota</code></td></tr>
+    </header>
+
+<main class="landingpages-wrap">
+    <div class="landingpages-header">
+        <span class="badge" style="display:inline-block; background:rgba(55,179,156,0.1); color:#37B39C; padding:6px 16px; border-radius:50px; font-weight:700; font-size:0.85rem; margin-bottom:12px;">Rajasthan Regional Coverage</span>
+        <h1>Medical365 — Local SEO Landing Pages</h1>
+        <p>57 pages targeting the Rajasthan healthcare market · All pages are production-ready HTML</p>
+    </div>
+    <div class="landingpages-card">
+        <table class="landingpages-table">
+        <thead><tr><th>#</th><th>Page Title</th><th>Slug / URL</th></tr></thead>
+        <tbody>
+        <tr><td>1</td><td><a href="/abha-compliance-software-hospitals-kota" target="_blank">Abha Compliance Software Hospitals Kota</a></td><td><code>abha-compliance-software-hospitals-kota</code></td></tr>
 <tr><td>2</td><td><a href="/accounts-payable-software-hospitals-tonk-road" target="_blank">Accounts Payable Software Hospitals Tonk Road</a></td><td><code>accounts-payable-software-hospitals-tonk-road</code></td></tr>
 <tr><td>3</td><td><a href="/best-hospital-management-software-rajasthan" target="_blank">Best Hospital Management Software Rajasthan</a></td><td><code>best-hospital-management-software-rajasthan</code></td></tr>
 <tr><td>4</td><td><a href="/blood-bank-software-udaipur" target="_blank">Blood Bank Software Udaipur</a></td><td><code>blood-bank-software-udaipur</code></td></tr>
@@ -722,7 +808,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <tr><td>14</td><td><a href="/fhir-hl7-compliant-software-rajasthan" target="_blank">Fhir Hl7 Compliant Software Rajasthan</a></td><td><code>fhir-hl7-compliant-software-rajasthan</code></td></tr>
 <tr><td>15</td><td><a href="/healthcare-billing-software-ajmer" target="_blank">Healthcare Billing Software Ajmer</a></td><td><code>healthcare-billing-software-ajmer</code></td></tr>
 <tr><td>16</td><td><a href="/healthcare-cloud-migration-services-jaipur" target="_blank">Healthcare Cloud Migration Services Jaipur</a></td><td><code>healthcare-cloud-migration-services-jaipur</code></td></tr>
-<tr><td>17</td><td><a href="/healthcare-crm-software-udaipur" target="_blank">Healthcare Crm Software Udaipur</a></td><td><code>healthcare-crm-software-udaipur</code></td></tr>
+<tr><td>17</td><td><a href="/healthcare-crm-udaipur" target="_blank">Healthcare Crm Software Udaipur</a></td><td><code>healthcare-crm-udaipur</code></td></tr>
 <tr><td>18</td><td><a href="/healthcare-data-security-compliance-c-scheme" target="_blank">Healthcare Data Security Compliance C Scheme</a></td><td><code>healthcare-data-security-compliance-c-scheme</code></td></tr>
 <tr><td>19</td><td><a href="/healthcare-digital-marketing-services-rajasthan" target="_blank">Healthcare Digital Marketing Services Rajasthan</a></td><td><code>healthcare-digital-marketing-services-rajasthan</code></td></tr>
 <tr><td>20</td><td><a href="/healthcare-feedback-satisfaction-surveys-alwar" target="_blank">Healthcare Feedback Satisfaction Surveys Alwar</a></td><td><code>healthcare-feedback-satisfaction-surveys-alwar</code></td></tr>
@@ -764,8 +850,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <tr><td>56</td><td><a href="/vaccine-management-system-bharatpur" target="_blank">Vaccine Management System Bharatpur</a></td><td><code>vaccine-management-system-bharatpur</code></td></tr>
 <tr><td>57</td><td><a href="/virtual-opd-software-ajmer" target="_blank">Virtual Opd Software Ajmer</a></td><td><code>virtual-opd-software-ajmer</code></td></tr>
 
-</tbody>
-</table>
+        </tbody>
+        </table>
+    </div>
+</main>
     
 
 <!-- ═══════════════════════════════════════════════════════════════
