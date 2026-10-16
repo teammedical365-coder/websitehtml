@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-    <title>Medical365 Leads | Staff & CRM Login</title>
+    <title>Medical365 Leads · CRM & Lead Management</title>
     <link rel="icon" type="image/jpeg" href="/medical365fav.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         :root {
-            --brand-blue: #1D4E9E;
-            --brand-cyan: #0ea5e9;
-            --brand-emerald: #10b981;
-            --brand-purple: #8b5cf6;
-            --brand-amber: #f59e0b;
-            --slate-900: #0f172a;
-            --slate-800: #1e293b;
-            --slate-700: #334155;
-            --slate-600: #475569;
-            --slate-500: #64748b;
-            --slate-100: #f1f5f9;
-            --slate-50: #f8fafc;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --primary-light: #eef2ff;
+            --sidebar-bg: #ffffff;
+            --sidebar-border: #f1f5f9;
+            --sidebar-text: #475569;
+            --sidebar-text-hover: #0f172a;
+            --bg-body: #f8fafc;
+            --card-bg: #ffffff;
+            --card-border: #f1f5f9;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --text-sub: #94a3b8;
+            --radius-md: 12px;
+            --radius-lg: 16px;
         }
 
         * {
@@ -33,84 +36,54 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #090d16;
-            color: #f8fafc;
+            background: var(--bg-body);
+            color: var(--text-main);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            position: relative;
             overflow-x: hidden;
         }
 
-        /* Ambient Glow Background */
-        .bg-glow {
-            position: fixed;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(30, 64, 175, 0.05) 50%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
         /* ══════════════════════════════════════════════════════════
-           LOGIN VIEW
+           1. LOGIN OVERLAY / VIEW
            ══════════════════════════════════════════════════════════ */
         #login-view {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex: 1;
-            padding: 32px 16px;
-            position: relative;
-            z-index: 10;
+            min-height: 100vh;
+            padding: 24px;
+            background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #090d16 100%);
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
         }
 
         .login-card {
             width: 100%;
-            max-width: 480px;
-            background: rgba(15, 23, 42, 0.85);
+            max-width: 460px;
+            background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-            animation: fadeIn 0.4s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.97); }
-            to { opacity: 1; transform: scale(1); }
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+            color: #fff;
         }
 
         .login-header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1D4E9E 50%, #0284c7 100%);
-            padding: 28px 24px;
+            background: linear-gradient(135deg, #3730a3 0%, #4f46e5 50%, #0284c7 100%);
+            padding: 30px 24px;
             text-align: center;
-            position: relative;
-        }
-
-        .brand-icon-box {
-            display: inline-flex;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
-            margin-bottom: 12px;
-            backdrop-filter: blur(4px);
         }
 
         .login-header h1 {
-            font-size: 1.4rem;
-            font-weight: 900;
+            font-size: 1.45rem;
+            font-weight: 800;
             letter-spacing: -0.02em;
         }
 
         .login-header p {
-            font-size: 0.78rem;
-            color: #bae6fd;
+            font-size: 0.8rem;
+            color: #c7d2fe;
             margin-top: 4px;
         }
 
@@ -118,784 +91,1621 @@
             padding: 28px 24px;
         }
 
-        .section-label {
-            font-size: 0.72rem;
-            font-weight: 800;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        /* Role Selector Tabs */
         .role-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .role-tab {
             background: rgba(30, 41, 59, 0.6);
             border: 1.5px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 12px 6px;
+            border-radius: 12px;
+            padding: 10px 4px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
             color: #cbd5e1;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             font-weight: 700;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
 
         .role-tab:hover {
             border-color: rgba(255, 255, 255, 0.25);
-            background: rgba(30, 41, 59, 0.9);
         }
 
         .role-tab.active-superadmin {
             border-color: #a855f7;
-            background: rgba(168, 85, 247, 0.15);
-            color: #e9d5ff;
-            box-shadow: 0 0 16px rgba(168, 85, 247, 0.25);
+            background: rgba(168, 85, 247, 0.2);
+            color: #f3e8ff;
         }
 
         .role-tab.active-sales {
-            border-color: #0ea5e9;
-            background: rgba(14, 165, 233, 0.15);
-            color: #bae6fd;
-            box-shadow: 0 0 16px rgba(14, 165, 233, 0.25);
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.2);
+            color: #dbeafe;
         }
 
         .role-tab.active-telecaller {
             border-color: #f59e0b;
-            background: rgba(245, 158, 11, 0.15);
+            background: rgba(245, 158, 11, 0.2);
             color: #fef3c7;
-            box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
         }
 
-        /* Role Info Banner */
-        .role-banner {
-            padding: 10px 14px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-        }
-
-        .role-banner.superadmin-mode {
-            background: rgba(168, 85, 247, 0.1);
-            border: 1px solid rgba(168, 85, 247, 0.3);
-            color: #d8b4fe;
-        }
-
-        .role-banner.sales-mode {
-            background: rgba(14, 165, 233, 0.1);
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            color: #7dd3fc;
-        }
-
-        .role-banner.telecaller-mode {
-            background: rgba(245, 158, 11, 0.1);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            color: #fcd34d;
-        }
-
-        /* Form Controls */
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.74rem;
-            font-weight: 700;
-            color: #cbd5e1;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-            letter-spacing: 0.03em;
-        }
-
-        .input-wrapper {
-            position: relative;
-        }
-
-        .input-icon {
-            position: absolute;
-            left: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #64748b;
-            pointer-events: none;
-            width: 16px;
-            height: 16px;
-        }
-
-        .form-input {
+        .login-input {
             width: 100%;
             background: rgba(30, 41, 59, 0.8);
             border: 1.5px solid rgba(255, 255, 255, 0.1);
-            border-radius: 14px;
-            padding: 13px 14px 13px 40px;
-            font-size: 0.88rem;
+            border-radius: 12px;
+            padding: 12px 14px 12px 40px;
+            font-size: 0.86rem;
             color: #fff;
             outline: none;
-            transition: all 0.2s ease;
+            margin-bottom: 14px;
         }
 
-        .form-input:focus {
-            border-color: #0ea5e9;
-            background: rgba(30, 41, 59, 1);
-            box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
-        }
-
-        .submit-btn {
+        .login-btn {
             width: 100%;
-            background: linear-gradient(135deg, #1D4E9E 0%, #0284c7 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%);
             color: #fff;
             border: none;
-            border-radius: 14px;
-            padding: 14px;
-            font-size: 0.92rem;
-            font-weight: 800;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 10px 20px -5px rgba(29, 78, 158, 0.4);
-            margin-top: 8px;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 25px -5px rgba(29, 78, 158, 0.5);
-        }
-
-        /* 1-Click Quick Buttons */
-        .quick-login-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-top: 20px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .quick-btn {
-            background: rgba(30, 41, 59, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
-            padding: 10px 8px;
+            padding: 13px;
+            font-size: 0.92rem;
+            font-weight: 700;
             cursor: pointer;
-            text-align: left;
-            transition: all 0.2s ease;
-            color: #fff;
-        }
-
-        .quick-btn:hover {
-            background: rgba(30, 41, 59, 1);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .quick-btn-title {
-            font-size: 0.76rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .quick-btn-pass {
-            font-size: 0.68rem;
-            color: #94a3b8;
-            font-family: monospace;
-            margin-top: 2px;
-        }
-
-        .login-footer {
-            padding: 12px 24px;
-            background: rgba(15, 23, 42, 0.6);
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            text-align: center;
-            font-size: 0.72rem;
-            color: #64748b;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 8px;
+            margin-top: 6px;
         }
 
         /* ══════════════════════════════════════════════════════════
-           AUTHENTICATED CRM DASHBOARD VIEW
+           2. CRM SHELL LAYOUT (MATCHING EXACT SCREENSHOT)
            ══════════════════════════════════════════════════════════ */
-        #crm-view {
+        #crm-app {
             display: none;
-            flex-direction: column;
             min-height: 100vh;
-            background: #f8fafc;
-            color: #0f172a;
+            flex-direction: row;
         }
 
-        .crm-topbar {
-            height: 64px;
-            background: #0f172a;
-            color: #fff;
-            padding: 0 24px;
+        /* SIDEBAR */
+        aside.sidebar {
+            width: 240px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--sidebar-border);
+            display: flex;
+            flex-direction: column;
+            shrink: 0;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .sidebar-brand-box {
+            padding: 18px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #1e293b;
+            border-bottom: 1px solid var(--sidebar-border);
         }
 
-        .crm-brand {
+        .sidebar-brand {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-weight: 900;
-            font-size: 1.05rem;
-        }
-
-        .crm-user-chip {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .role-pill {
-            padding: 4px 10px;
-            border-radius: 8px;
-            font-size: 0.72rem;
+            font-size: 1.1rem;
             font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
+            color: #0284c7;
+            text-decoration: none;
+            letter-spacing: -0.01em;
         }
 
-        .role-pill.superadmin { background: #8b5cf6; color: #fff; }
-        .role-pill.sales { background: #0284c7; color: #fff; }
-        .role-pill.telecaller { background: #d97706; color: #fff; }
-
-        .signout-btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: #cbd5e1;
-            border: none;
-            padding: 6px 12px;
+        .brand-badge {
+            width: 32px;
+            height: 32px;
+            background: #0284c7;
             border-radius: 8px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            gap: 6px;
-        }
-
-        .signout-btn:hover {
-            background: #ef4444;
+            justify-content: center;
             color: #fff;
         }
 
-        .crm-content {
-            padding: 24px;
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            space-y: 20px;
+        .collapse-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text-sub);
+            padding: 4px;
+            border-radius: 6px;
         }
 
-        /* KPI Cards */
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
+        .collapse-btn:hover {
+            background: #f1f5f9;
+            color: var(--text-main);
         }
 
-        .kpi-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 16px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .kpi-label {
-            font-size: 0.72rem;
-            font-weight: 700;
-            color: #64748b;
-            text-transform: uppercase;
-        }
-
-        .kpi-value {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #0f172a;
-            margin-top: 4px;
-        }
-
-        .kpi-sub {
-            font-size: 0.72rem;
-            color: #0ea5e9;
-            font-weight: 600;
-            margin-top: 2px;
-        }
-
-        /* Table Card */
-        .leads-table-card {
-            background: #fff;
-            border-radius: 20px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-        }
-
-        .table-toolbar {
+        /* Sidebar Profile Pill */
+        .sidebar-user-pill {
             padding: 16px 20px;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--sidebar-border);
+        }
+
+        .user-avatar-circle {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #6366f1;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 800;
+            shrink: 0;
+        }
+
+        .user-details h4 {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .user-details span {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        /* Sidebar Nav Links */
+        .sidebar-nav {
+            padding: 14px 12px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .nav-group-title {
+            font-size: 0.68rem;
+            font-weight: 800;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0 10px;
+            margin-bottom: 4px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .nav-item:hover {
+            background: #f8fafc;
+            color: var(--sidebar-text-hover);
+        }
+
+        .nav-item.active {
+            background: #eef2ff;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .nav-item i {
+            width: 17px;
+            height: 17px;
+            stroke-width: 2.2;
+        }
+
+        .sidebar-footer {
+            padding: 14px 20px;
+            border-top: 1px solid var(--sidebar-border);
+            display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 12px;
-            border-bottom: 1px solid #e2e8f0;
         }
 
-        .table-search {
+        /* MAIN CONTENT VIEW */
+        main.main-viewport {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-body);
+        }
+
+        /* Top Header Navbar */
+        header.top-navbar {
+            height: 64px;
+            background: #ffffff;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+            position: sticky;
+            top: 0;
+            z-index: 90;
+        }
+
+        .header-search {
             position: relative;
-            width: 320px;
+            width: 440px;
         }
 
-        .table-search input {
+        .header-search input {
             width: 100%;
-            padding: 9px 12px 9px 36px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 10px;
-            border: 1px solid #cbd5e1;
+            padding: 9px 14px 9px 38px;
             font-size: 0.82rem;
+            color: var(--text-main);
             outline: none;
+            transition: all 0.2s;
         }
 
-        .table-search i {
+        .header-search input:focus {
+            background: #fff;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .header-search i {
             position: absolute;
             left: 12px;
             top: 50%;
             transform: translateY(-50%);
             color: #94a3b8;
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
         }
 
-        table.leads-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.82rem;
-            text-align: left;
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
 
-        table.leads-table th {
-            background: #f8fafc;
-            padding: 12px 16px;
+        .header-icon-btn {
+            background: transparent;
+            border: none;
+            color: #64748b;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-icon-btn:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        .header-user-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* DASHBOARD CONTENT CONTAINER */
+        .dashboard-container {
+            padding: 24px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        /* Dashboard Title & Top Action Ribbon */
+        .dash-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .dash-titles h1 {
+            font-size: 1.5rem;
             font-weight: 800;
-            color: #475569;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            border-bottom: 1px solid #e2e8f0;
+            color: #0f172a;
+            letter-spacing: -0.02em;
         }
 
-        table.leads-table td {
-            padding: 14px 16px;
+        .dash-titles p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .dash-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .dropdown-pill {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-main);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn-white {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-white:hover {
+            background: #f8fafc;
+        }
+
+        .btn-add-lead {
+            background: #4f46e5;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+            transition: all 0.2s;
+        }
+
+        .btn-add-lead:hover {
+            background: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        /* ══════════════════════════════════════════════════════════
+           3. FOUR TOP KPI METRIC CARDS
+           ══════════════════════════════════════════════════════════ */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        @media (max-width: 1100px) {
+            .kpi-row { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .kpi-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+        }
+
+        .kpi-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .kpi-icon-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .kpi-icon-purple { background: #f5f3ff; color: #7c3aed; }
+        .kpi-icon-cyan { background: #ecfeff; color: #06b6d4; }
+        .kpi-icon-green { background: #ecfdf5; color: #10b981; }
+        .kpi-icon-rose { background: #fff1f2; color: #f43f5e; }
+
+        .kpi-text h3 {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .kpi-text .kpi-num {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1.1;
+            margin-top: 2px;
+        }
+
+        .kpi-subtext {
+            font-size: 0.72rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .kpi-sub-green { color: #10b981; }
+        .kpi-sub-muted { color: #64748b; }
+
+        /* Mini Chart Visuals */
+        .mini-bar-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            height: 38px;
+        }
+
+        .mini-bar {
+            width: 5px;
+            border-radius: 2px;
+        }
+
+        /* ══════════════════════════════════════════════════════════
+           4. MIDDLE ROW: 3 ANALYTICS WIDGETS
+           ══════════════════════════════════════════════════════════ */
+        .mid-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 18px;
+        }
+
+        @media (max-width: 1200px) {
+            .mid-grid { grid-template-columns: 1fr; }
+        }
+
+        .card-widget {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            padding: 22px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .widget-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .widget-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        /* Leads By Status Bars */
+        .status-bars-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 180px;
+            padding-top: 20px;
             border-bottom: 1px solid #f1f5f9;
         }
 
-        table.leads-table tr:hover {
-            background: #f8fafc;
+        .status-bar-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            width: 13%;
         }
 
-        .status-badge {
-            display: inline-block;
-            padding: 4px 10px;
+        .status-val-pill {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #0284c7;
+        }
+
+        .status-pillar {
+            width: 100%;
+            background: #e2e8f0;
+            border-radius: 4px 4px 0 0;
+            transition: height 0.4s ease;
+        }
+
+        .status-pillar.active-pillar {
+            background: #0284c7;
+        }
+
+        .status-label {
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: #64748b;
+            text-align: center;
+        }
+
+        /* Lead Sources Horizontal Progress Bars */
+        .sources-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .source-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.78rem;
+        }
+
+        .source-name {
+            width: 80px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .source-bar-track {
+            flex: 1;
+            height: 7px;
+            background: #f1f5f9;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .source-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .source-percent {
+            width: 55px;
+            text-align: right;
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        /* ══════════════════════════════════════════════════════════
+           5. BOTTOM ROW: RECENT LEADS, REMINDERS, TODAY ACTIVITY
+           ══════════════════════════════════════════════════════════ */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 18px;
+        }
+
+        @media (max-width: 1200px) {
+            .bottom-grid { grid-template-columns: 1fr; }
+        }
+
+        .view-all-link {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #4f46e5;
+            text-decoration: none;
+        }
+
+        /* Recent Leads Mini Table */
+        table.recent-leads-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.78rem;
+        }
+
+        table.recent-leads-table th {
+            text-align: left;
+            font-size: 0.68rem;
+            font-weight: 800;
+            color: #94a3b8;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        table.recent-leads-table td {
+            padding: 12px 0;
+            border-bottom: 1px solid #f8fafc;
+        }
+
+        .pill-new {
+            background: #f1f5f9;
+            color: #334155;
+            padding: 2px 8px;
             border-radius: 6px;
             font-size: 0.72rem;
-            font-weight: 700;
+            font-weight: 600;
         }
 
-        .status-new { background: #eff6ff; color: #1d4ed8; }
-        .status-contacted { background: #faf5ff; color: #7e22ce; }
-        .status-booked { background: #fffbeb; color: #b45309; }
-        .status-won { background: #ecfdf5; color: #047857; }
-
-        .btn-wa {
-            display: inline-flex;
+        /* Today Activity Item */
+        .activity-item {
+            display: flex;
             align-items: center;
-            gap: 4px;
-            background: #10b981;
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: 8px;
+            gap: 14px;
+            padding: 10px 0;
+        }
+
+        .activity-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .activity-count {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1;
+        }
+
+        .activity-desc {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: #fff;
+            width: 100%;
+            max-width: 520px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .modal-head {
+            padding: 20px 24px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-head h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .modal-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .input-label {
             font-size: 0.72rem;
             font-weight: 700;
-            text-decoration: none;
-            transition: all 0.2s ease;
+            color: #475569;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: block;
         }
 
-        .btn-wa:hover {
-            background: #059669;
-        }
-
-        .btn-call {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background: #1D4E9E;
-            color: #fff;
-            padding: 6px 12px;
+        .modal-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cbd5e1;
             border-radius: 8px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            margin-left: 6px;
+            font-size: 0.82rem;
+            outline: none;
         }
 
-        .btn-call:hover {
-            background: #173d7d;
+        .modal-input:focus {
+            border-color: #4f46e5;
+        }
+
+        .modal-footer {
+            padding: 16px 24px;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="bg-glow"></div>
 
     <!-- ══════════════════════════════════════════════════════════
-         VIEW 1: LOGIN PORTAL
+         1. LOGIN PORTAL (SUPERADMIN, SALES, TELECALLER)
          ══════════════════════════════════════════════════════════ -->
-    <main id="login-view">
+    <div id="login-view">
         <div class="login-card">
             <div class="login-header">
-                <div class="brand-icon-box">
-                    <i data-lucide="activity" style="width: 28px; height: 28px; color: #fff;"></i>
-                </div>
-                <h1>Medical 365 Leads</h1>
-                <p>Enterprise Hospital & Clinical Lead Management</p>
+                <h1>Medical 365 CRM</h1>
+                <p>Enterprise Healthcare Lead Management & Hospital Triage</p>
             </div>
 
             <div class="login-body">
-                <div class="section-label">
-                    <span>Select Portal Role:</span>
-                    <span style="color: #38bdf8; font-size: 0.68rem; text-transform: none;">Auto-fills credentials</span>
+                <div style="font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 8px;">
+                    Select Your Role:
                 </div>
 
-                <!-- 3 Role Tabs -->
                 <div class="role-grid">
-                    <div class="role-tab active-superadmin" id="tab-superadmin" onclick="switchRole('Superadmin')">
-                        <i data-lucide="shield-check" style="width: 18px; height: 18px;"></i>
+                    <div class="role-tab active-superadmin" id="tab-superadmin" onclick="switchLoginRole('Superadmin')">
+                        <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
                         <span>Superadmin</span>
                     </div>
-                    <div class="role-tab" id="tab-sales" onclick="switchRole('Sales')">
-                        <i data-lucide="trending-up" style="width: 18px; height: 18px;"></i>
+                    <div class="role-tab" id="tab-sales" onclick="switchLoginRole('Sales')">
+                        <i data-lucide="trending-up" style="width: 16px; height: 16px;"></i>
                         <span>Sales</span>
                     </div>
-                    <div class="role-tab" id="tab-telecaller" onclick="switchRole('Telecaller')">
-                        <i data-lucide="phone-call" style="width: 18px; height: 18px;"></i>
+                    <div class="role-tab" id="tab-telecaller" onclick="switchLoginRole('Telecaller')">
+                        <i data-lucide="phone-call" style="width: 16px; height: 16px;"></i>
                         <span>Telecaller</span>
                     </div>
                 </div>
 
-                <!-- Active Role Scope Banner -->
-                <div class="role-banner superadmin-mode" id="role-banner">
-                    <i data-lucide="check-circle" style="width: 16px; height: 16px; shrink: 0;"></i>
-                    <span id="role-banner-text">Superadmin: Master access across hospital analytics, leads & staff records.</span>
-                </div>
-
-                <!-- Error Notice -->
-                <div id="error-box" style="display: none; background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; color: #fca5a5; padding: 10px 14px; border-radius: 12px; font-size: 0.75rem; margin-bottom: 16px; font-weight: 600;">
-                    Invalid credentials. Please click one of the role buttons below.
-                </div>
-
-                <!-- Login Form -->
-                <form id="loginForm" onsubmit="handleLoginSubmit(event)">
-                    <div class="form-group">
-                        <label>Work Email</label>
-                        <div class="input-wrapper">
-                            <i data-lucide="mail" class="input-icon"></i>
-                            <input type="email" id="emailInput" class="form-input" value="superadmin@medical365.in" required>
-                        </div>
+                <form onsubmit="handleAuthSubmit(event)">
+                    <div style="position: relative;">
+                        <i data-lucide="mail" style="position: absolute; left: 14px; top: 14px; color: #64748b; width: 16px; height: 16px;"></i>
+                        <input type="email" id="loginEmail" class="login-input" value="superadmin@medical365.in" required>
                     </div>
 
-                    <div class="form-group">
-                        <label>Password</label>
-                        <div class="input-wrapper">
-                            <i data-lucide="lock" class="input-icon"></i>
-                            <input type="password" id="passwordInput" class="form-input" value="superadmin123" required>
-                        </div>
+                    <div style="position: relative;">
+                        <i data-lucide="lock" style="position: absolute; left: 14px; top: 14px; color: #64748b; width: 16px; height: 16px;"></i>
+                        <input type="password" id="loginPassword" class="login-input" value="superadmin123" required>
                     </div>
 
-                    <button type="submit" class="submit-btn" id="submitBtn">
-                        <span id="submitBtnText">Sign In as Superadmin</span>
+                    <button type="submit" class="login-btn">
+                        <span id="loginBtnText">Sign In as Superadmin</span>
                         <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
                     </button>
                 </form>
 
-                <!-- 1-Click Quick Direct Sign-In -->
-                <div class="quick-login-grid">
-                    <div class="quick-btn" onclick="directLogin('Superadmin')">
-                        <div class="quick-btn-title" style="color: #c084fc;">
-                            <i data-lucide="shield-check" style="width: 14px; height: 14px;"></i> Superadmin
-                        </div>
-                        <div class="quick-btn-pass">superadmin123</div>
-                    </div>
-
-                    <div class="quick-btn" onclick="directLogin('Sales')">
-                        <div class="quick-btn-title" style="color: #38bdf8;">
-                            <i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> Sales
-                        </div>
-                        <div class="quick-btn-pass">sales123</div>
-                    </div>
-
-                    <div class="quick-btn" onclick="directLogin('Telecaller')">
-                        <div class="quick-btn-title" style="color: #fbbf24;">
-                            <i data-lucide="phone-call" style="width: 14px; height: 14px;"></i> Telecaller
-                        </div>
-                        <div class="quick-btn-pass">telecaller123</div>
-                    </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; pt-2; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <button type="button" onclick="instantLogin('Superadmin')" style="background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3); border-radius: 8px; padding: 8px 4px; color: #d8b4fe; font-size: 0.7rem; font-weight: 700; cursor: pointer;">
+                        Superadmin (1-Click)
+                    </button>
+                    <button type="button" onclick="instantLogin('Sales')" style="background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; padding: 8px 4px; color: #93c5fd; font-size: 0.7rem; font-weight: 700; cursor: pointer;">
+                        Sales (1-Click)
+                    </button>
+                    <button type="button" onclick="instantLogin('Telecaller')" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); border-radius: 8px; padding: 8px 4px; color: #fde68a; font-size: 0.7rem; font-weight: 700; cursor: pointer;">
+                        Telecaller (1-Click)
+                    </button>
                 </div>
-            </div>
-
-            <div class="login-footer">
-                <i data-lucide="lock" style="width: 12px; height: 12px; color: #10b981;"></i>
-                <span>256-Bit SSL Encrypted Healthcare Portal • ABDM / ABHA Ready</span>
             </div>
         </div>
-    </main>
+    </div>
 
     <!-- ══════════════════════════════════════════════════════════
-         VIEW 2: AUTHENTICATED LEADS DASHBOARD (DIRECT ON PRODUCTION)
+         2. CRM APPLICATION VIEW (MATCHING EXACT SCREENSHOT)
          ══════════════════════════════════════════════════════════ -->
-    <div id="crm-view">
-        <header class="crm-topbar">
-            <div class="crm-brand">
-                <i data-lucide="activity" style="color: #0ea5e9;"></i>
-                <span>Medical 365 CRM</span>
-            </div>
-
-            <div class="crm-user-chip">
-                <span class="role-pill superadmin" id="crm-role-badge">Superadmin</span>
-                <span id="crm-user-name" style="font-size: 0.82rem; font-weight: 700;">Dr. Rajesh V.</span>
-                <button class="signout-btn" onclick="handleSignOut()">
-                    <i data-lucide="log-out" style="width: 14px; height: 14px;"></i>
-                    <span>Sign Out</span>
+    <div id="crm-app">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-brand-box">
+                <a href="/leads" class="sidebar-brand">
+                    <div class="brand-badge">
+                        <i data-lucide="heart-pulse" style="width: 18px; height: 18px;"></i>
+                    </div>
+                    <span>Medical 365</span>
+                </a>
+                <button class="collapse-btn" title="Collapse sidebar">
+                    <i data-lucide="chevron-left" style="width: 18px; height: 18px;"></i>
                 </button>
             </div>
-        </header>
 
-        <main class="crm-content">
-            <!-- KPIs -->
-            <div class="kpi-grid">
-                <div class="kpi-card">
-                    <div class="kpi-label">Total Inbound Leads</div>
-                    <div class="kpi-value" id="kpi-total">142</div>
-                    <div class="kpi-sub">Website & Campaigns</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-label">Active in Pipeline</div>
-                    <div class="kpi-value" id="kpi-active" style="color: #0284c7;">86</div>
-                    <div class="kpi-sub">Under Telecaller Follow-up</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-label">Consultations Booked</div>
-                    <div class="kpi-value" id="kpi-booked" style="color: #d97706;">34</div>
-                    <div class="kpi-sub">OPD Visits Scheduled</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-label">Pipeline Value (₹)</div>
-                    <div class="kpi-value" id="kpi-val" style="color: #059669;">₹18.5L</div>
-                    <div class="kpi-sub">High-Ticket Procedures</div>
+            <!-- Profile Pill -->
+            <div class="sidebar-user-pill">
+                <div class="user-avatar-circle" id="sb-avatar">O</div>
+                <div class="user-details">
+                    <h4 id="sb-name">owner</h4>
+                    <span id="sb-role">Owner</span>
                 </div>
             </div>
 
-            <!-- Leads Registry Table -->
-            <div class="leads-table-card">
-                <div class="table-toolbar">
-                    <div>
-                        <h2 style="font-size: 1rem; font-weight: 800; color: #0f172a;">Live Patient & Hospital Leads</h2>
-                        <p style="font-size: 0.74rem; color: #64748b; margin-top: 2px;">Real-time inquiries received from medical365.in</p>
+            <nav class="sidebar-nav">
+                <!-- Dashboard -->
+                <a class="nav-item active">
+                    <i data-lucide="layout-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <!-- LEADS -->
+                <div>
+                    <div class="nav-group-title">Leads</div>
+                    <a class="nav-item">
+                        <i data-lucide="table"></i>
+                        <span>All Leads</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="star"></i>
+                        <span>New Leads</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="zap"></i>
+                        <span>Active Leads</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="check-circle-2"></i>
+                        <span>Order Placed</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="x-circle"></i>
+                        <span>Lost Leads</span>
+                    </a>
+                </div>
+
+                <!-- COMMUNICATION -->
+                <div>
+                    <div class="nav-group-title">Communication</div>
+                    <a class="nav-item">
+                        <i data-lucide="phone"></i>
+                        <span>Call Reports</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="calendar"></i>
+                        <span>Meetings</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="bell"></i>
+                        <span>Reminders</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="refresh-cw"></i>
+                        <span>Follow Ups</span>
+                    </a>
+                </div>
+
+                <!-- TOOLS -->
+                <div>
+                    <div class="nav-group-title">Tools</div>
+                    <a class="nav-item">
+                        <i data-lucide="upload"></i>
+                        <span>Import Leads</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="user-check"></i>
+                        <span>Assign Leads</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="database"></i>
+                        <span>Data Management</span>
+                    </a>
+                </div>
+
+                <!-- REPORTS -->
+                <div>
+                    <div class="nav-group-title">Reports</div>
+                    <a class="nav-item">
+                        <i data-lucide="bar-chart-2"></i>
+                        <span>Leads Reports</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="phone-call"></i>
+                        <span>Call Reports</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="clock"></i>
+                        <span>Meeting Reports</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="trending-up"></i>
+                        <span>Performance</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="radio"></i>
+                        <span>Call Ingestion</span>
+                    </a>
+                </div>
+
+                <!-- SETTINGS -->
+                <div>
+                    <div class="nav-group-title">Settings</div>
+                    <a class="nav-item">
+                        <i data-lucide="plus-square"></i>
+                        <span>Custom Fields</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="sliders"></i>
+                        <span>Field Arrangement</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="file-text"></i>
+                        <span>Report Builder</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="rss"></i>
+                        <span>Lead Feeds</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="message-square"></i>
+                        <span>Message Templates</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="users"></i>
+                        <span>Staff</span>
+                    </a>
+                    <a class="nav-item">
+                        <i data-lucide="slash"></i>
+                        <span>Do Not Record</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button onclick="handleLogout()" style="background: transparent; border: none; font-size: 0.78rem; font-weight: 600; color: #ef4444; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <i data-lucide="log-out" style="width: 14px; height: 14px;"></i> Log Out
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN VIEWPORT -->
+        <main class="main-viewport">
+            <!-- TOP NAVBAR -->
+            <header class="top-navbar">
+                <div class="header-search">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="globalSearch" placeholder="Search leads by name, phone, email or anything said on a call..." oninput="handleSearch(this.value)">
+                </div>
+
+                <div class="header-actions">
+                    <button class="header-icon-btn" title="Settings">
+                        <i data-lucide="settings" style="width: 18px; height: 18px;"></i>
+                    </button>
+                    <button class="header-icon-btn" title="Notifications">
+                        <i data-lucide="bell" style="width: 18px; height: 18px;"></i>
+                    </button>
+                    <div class="header-user-btn">
+                        <div class="user-avatar-circle" id="top-avatar" style="background: #2563eb; width: 32px; height: 32px;">O</div>
+                        <div style="text-align: left;">
+                            <div style="font-size: 0.78rem; font-weight: 800; text-transform: uppercase;" id="top-user-name">OWNER</div>
+                            <div style="font-size: 0.7rem; color: #64748b;" id="top-user-role">Owner</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- DASHBOARD CONTAINER -->
+            <div class="dashboard-container">
+                <!-- Title & Control Ribbon -->
+                <div class="dash-header-row">
+                    <div class="dash-titles">
+                        <h1>Dashboard</h1>
+                        <p>Overview of your lead management activities · showing all callers</p>
                     </div>
 
-                    <div class="table-search">
-                        <i data-lucide="search"></i>
-                        <input type="text" id="leadSearch" placeholder="Search patient, phone, specialty, city..." oninput="filterLeads()">
+                    <div class="dash-controls">
+                        <select class="dropdown-pill">
+                            <option>All callers</option>
+                            <option>Pooja Sharma (Telecaller)</option>
+                            <option>Vikram Malhotra (Sales)</option>
+                            <option>Dr. Rajesh V. (Admin)</option>
+                        </select>
+
+                        <select class="dropdown-pill">
+                            <option>Last 30 Days</option>
+                            <option>Today</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                        </select>
+
+                        <button class="btn-white">Apply</button>
+                        <button class="btn-white">
+                            <i data-lucide="sliders" style="width: 14px; height: 14px;"></i> Customize
+                        </button>
+                        <button class="btn-add-lead" onclick="openAddLeadModal()">
+                            <i data-lucide="plus" style="width: 16px; height: 16px;"></i> Add Lead
+                        </button>
                     </div>
                 </div>
 
-                <div style="overflow-x: auto;">
-                    <table class="leads-table">
-                        <thead>
-                            <tr>
-                                <th>Patient / Facility</th>
-                                <th>Phone & Email</th>
-                                <th>Clinical Requirement</th>
-                                <th>City</th>
-                                <th>Urgency Score</th>
-                                <th>Stage Status</th>
-                                <th style="text-align: right;">1-Click Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="leadsTableBody">
-                            <!-- Populated dynamically -->
-                        </tbody>
-                    </table>
+                <!-- 1. FOUR TOP KPI METRIC CARDS -->
+                <div class="kpi-row">
+                    <!-- Total Leads -->
+                    <div class="kpi-card">
+                        <div class="kpi-left">
+                            <div class="kpi-icon-circle kpi-icon-purple">
+                                <i data-lucide="users" style="width: 22px; height: 22px;"></i>
+                            </div>
+                            <div class="kpi-text">
+                                <h3>Total Leads</h3>
+                                <div class="kpi-num" id="stat-total-leads">54</div>
+                                <div class="kpi-subtext kpi-sub-green">+ 54 new (30d)</div>
+                            </div>
+                        </div>
+                        <div class="mini-bar-chart">
+                            <div class="mini-bar" style="height: 100%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Active Leads -->
+                    <div class="kpi-card">
+                        <div class="kpi-left">
+                            <div class="kpi-icon-circle kpi-icon-cyan">
+                                <i data-lucide="activity" style="width: 22px; height: 22px;"></i>
+                            </div>
+                            <div class="kpi-text">
+                                <h3>Active Leads</h3>
+                                <div class="kpi-num" id="stat-active-leads">54</div>
+                                <div class="kpi-subtext kpi-sub-muted">100% of pipeline</div>
+                            </div>
+                        </div>
+                        <div class="mini-bar-chart">
+                            <div class="mini-bar" style="height: 100%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Won -->
+                    <div class="kpi-card">
+                        <div class="kpi-left">
+                            <div class="kpi-icon-circle kpi-icon-green">
+                                <i data-lucide="award" style="width: 22px; height: 22px;"></i>
+                            </div>
+                            <div class="kpi-text">
+                                <h3>Won</h3>
+                                <div class="kpi-num" id="stat-won-leads">0</div>
+                                <div class="kpi-subtext kpi-sub-green">0% win rate</div>
+                            </div>
+                        </div>
+                        <div class="mini-bar-chart">
+                            <div class="mini-bar" style="height: 100%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Lost Leads -->
+                    <div class="kpi-card">
+                        <div class="kpi-left">
+                            <div class="kpi-icon-circle kpi-icon-rose">
+                                <i data-lucide="x-circle" style="width: 22px; height: 22px;"></i>
+                            </div>
+                            <div class="kpi-text">
+                                <h3>Lost Leads</h3>
+                                <div class="kpi-num" id="stat-lost-leads">0</div>
+                                <div class="kpi-subtext kpi-sub-muted">0% of total</div>
+                            </div>
+                        </div>
+                        <div class="mini-bar-chart">
+                            <div class="mini-bar" style="height: 100%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 2. MIDDLE ROW (3 ANALYTICS WIDGETS) -->
+                <div class="mid-grid">
+                    <!-- Leads by Status -->
+                    <div class="card-widget">
+                        <div class="widget-header">
+                            <div class="widget-title">Leads by Status</div>
+                            <i data-lucide="more-horizontal" style="color: #94a3b8; width: 16px; height: 16px;"></i>
+                        </div>
+
+                        <div class="status-bars-container">
+                            <div class="status-bar-col">
+                                <span class="status-val-pill" id="bar-new-val">54 (100%)</span>
+                                <div class="status-pillar active-pillar" style="height: 140px;"></div>
+                                <span class="status-label">New</span>
+                            </div>
+                            <div class="status-bar-col">
+                                <span class="status-val-pill">0 (0%)</span>
+                                <div class="status-pillar" style="height: 4px;"></div>
+                                <span class="status-label">Contacted</span>
+                            </div>
+                            <div class="status-bar-col">
+                                <span class="status-val-pill">0 (0%)</span>
+                                <div class="status-pillar" style="height: 4px;"></div>
+                                <span class="status-label">Qualified</span>
+                            </div>
+                            <div class="status-bar-col">
+                                <span class="status-val-pill">0 (0%)</span>
+                                <div class="status-pillar" style="height: 4px;"></div>
+                                <span class="status-label">Quoted</span>
+                            </div>
+                            <div class="status-bar-col">
+                                <span class="status-val-pill">0 (0%)</span>
+                                <div class="status-pillar" style="height: 4px;"></div>
+                                <span class="status-label">Won</span>
+                            </div>
+                            <div class="status-bar-col">
+                                <span class="status-val-pill">0 (0%)</span>
+                                <div class="status-pillar" style="height: 4px;"></div>
+                                <span class="status-label">Lost</span>
+                            </div>
+                            <div class="status-bar-col">
+                                <span class="status-val-pill">0 (0%)</span>
+                                <div class="status-pillar" style="height: 4px;"></div>
+                                <span class="status-label">On Hold</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leads Trend -->
+                    <div class="card-widget">
+                        <div class="widget-header">
+                            <div class="widget-title">Leads Trend</div>
+                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; background: #f8fafc; padding: 4px 8px; border-radius: 6px; border: 1px solid #e2e8f0;">Last 30 Days</span>
+                        </div>
+
+                        <!-- SVG Line Area Chart -->
+                        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                            <svg viewBox="0 0 320 140" style="width: 100%; height: 140px; overflow: visible;">
+                                <defs>
+                                    <linearGradient id="trendGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25"/>
+                                        <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M 0 15 L 20 120 L 80 120 L 140 120 L 180 120 L 210 105 L 240 120 L 260 108 L 290 120 L 320 115 L 320 135 L 0 135 Z" fill="url(#trendGrad)"/>
+                                <path d="M 0 15 L 20 120 L 80 120 L 140 120 L 180 120 L 210 105 L 240 120 L 260 108 L 290 120 L 320 115" fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.64rem; color: #94a3b8; font-weight: 600; margin-top: 8px;">
+                                <span>Sep 17</span>
+                                <span>Sep 23</span>
+                                <span>Sep 29</span>
+                                <span>Oct 5</span>
+                                <span>Oct 11</span>
+                                <span>Oct 16</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lead Source -->
+                    <div class="card-widget">
+                        <div class="widget-header">
+                            <div class="widget-title">Lead Source</div>
+                            <i data-lucide="more-horizontal" style="color: #94a3b8; width: 16px; height: 16px;"></i>
+                        </div>
+
+                        <div class="sources-list">
+                            <div class="source-row">
+                                <span class="source-name">Exhibition</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent">0% (0)</span>
+                            </div>
+                            <div class="source-row">
+                                <span class="source-name">IndiaMART</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent">0% (0)</span>
+                            </div>
+                            <div class="source-row">
+                                <span class="source-name">Referral</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent">0% (0)</span>
+                            </div>
+                            <div class="source-row">
+                                <span class="source-name">Social Media</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent">0% (0)</span>
+                            </div>
+                            <div class="source-row">
+                                <span class="source-name">Walk-in</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent">0% (0)</span>
+                            </div>
+                            <div class="source-row">
+                                <span class="source-name" style="font-weight: 800; color: #0f172a;">Website</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 100%; background: #475569;"></div></div>
+                                <span class="source-percent" style="font-weight: 800; color: #0f172a;" id="source-website-val">100% (54)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. BOTTOM ROW: RECENT LEADS, REMINDERS, TODAY ACTIVITY -->
+                <div class="bottom-grid">
+                    <!-- Recent Leads Table -->
+                    <div class="card-widget">
+                        <div class="widget-header">
+                            <div class="widget-title">Recent Leads</div>
+                            <a href="#all" class="view-all-link">View All</a>
+                        </div>
+
+                        <table class="recent-leads-table">
+                            <thead>
+                                <tr>
+                                    <th>LEAD NAME</th>
+                                    <th>STATUS</th>
+                                    <th>SOURCE</th>
+                                    <th>ADDED ON</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentLeadsTbody">
+                                <!-- Populated dynamically from storage & website submissions -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Upcoming Reminders -->
+                    <div class="card-widget">
+                        <div class="widget-header">
+                            <div class="widget-title">Upcoming Reminders</div>
+                            <a href="#all" class="view-all-link">View All</a>
+                        </div>
+
+                        <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 0.82rem;">
+                            No upcoming reminders
+                        </div>
+                    </div>
+
+                    <!-- Today's Activity -->
+                    <div class="card-widget">
+                        <div class="widget-header">
+                            <div class="widget-title">Today&apos;s Activity</div>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: #f5f3ff; color: #7c3aed;">
+                                    <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
+                                </div>
+                                <div>
+                                    <div class="activity-count">0</div>
+                                    <div class="activity-desc">Calls Made</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: #ecfeff; color: #06b6d4;">
+                                    <i data-lucide="calendar" style="width: 18px; height: 18px;"></i>
+                                </div>
+                                <div>
+                                    <div class="activity-count">0</div>
+                                    <div class="activity-desc">Meetings Scheduled</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: #fffbeb; color: #d97706;">
+                                    <i data-lucide="user-plus" style="width: 18px; height: 18px;"></i>
+                                </div>
+                                <div>
+                                    <div class="activity-count" id="today-leads-count">0</div>
+                                    <div class="activity-desc">Leads Added Today</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon" style="background: #ecfdf5; color: #10b981;">
+                                    <i data-lucide="award" style="width: 18px; height: 18px;"></i>
+                                </div>
+                                <div>
+                                    <div class="activity-count">0</div>
+                                    <div class="activity-desc">Won</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer style="text-align: center; font-size: 0.74rem; color: #94a3b8; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+                    © 2026 Medical 365. All rights reserved.
+                </footer>
             </div>
         </main>
     </div>
 
     <!-- ══════════════════════════════════════════════════════════
-         INTERACTIVE JAVASCRIPT LOGIC
+         ADD LEAD MODAL (FULL FIELD SET FROM SCREENSHOT)
+         ══════════════════════════════════════════════════════════ -->
+    <div class="modal-overlay" id="addLeadModal">
+        <div class="modal-card">
+            <div class="modal-head">
+                <h3>Add New Lead</h3>
+                <button onclick="closeAddLeadModal()" style="background: transparent; border: none; cursor: pointer; color: #64748b;">
+                    <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+                </button>
+            </div>
+
+            <form onsubmit="handleManualAddLead(event)">
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Lead Name *</label>
+                            <input type="text" id="mLeadName" class="modal-input" placeholder="e.g. Ranjith nk" required>
+                        </div>
+                        <div>
+                            <label class="input-label">Phone Number *</label>
+                            <input type="tel" id="mLeadPhone" class="modal-input" placeholder="+91 98290 12345" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Email Address</label>
+                            <input type="email" id="mLeadEmail" class="modal-input" placeholder="lead@example.com">
+                        </div>
+                        <div>
+                            <label class="input-label">Source</label>
+                            <select id="mLeadSource" class="modal-input">
+                                <option>Website</option>
+                                <option>IndiaMART</option>
+                                <option>Referral</option>
+                                <option>Social Media</option>
+                                <option>Walk-in</option>
+                                <option>Exhibition</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Facility / Requirement</label>
+                            <input type="text" id="mLeadReq" class="modal-input" placeholder="e.g. Hospital Software / TKR">
+                        </div>
+                        <div>
+                            <label class="input-label">City</label>
+                            <input type="text" id="mLeadCity" class="modal-input" placeholder="e.g. Jaipur">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" onclick="closeAddLeadModal()" class="btn-white">Cancel</button>
+                    <button type="submit" class="btn-add-lead">Save Lead</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         CLIENT LOGIC & REAL-TIME WEBSITE SUBMISSION DISPLAY
          ══════════════════════════════════════════════════════════ -->
     <script>
         var currentRole = 'Superadmin';
 
-        var roleCredentials = {
-            'Superadmin': { email: 'superadmin@medical365.in', pass: 'superadmin123', name: 'Dr. Rajesh V. (Superadmin)', banner: 'Superadmin: Master access across hospital analytics, leads & staff records.' },
-            'Sales': { email: 'sales@medical365.in', pass: 'sales123', name: 'Vikram Malhotra (Sales)', banner: 'Sales: High-value treatment estimates, deal pipeline, conversion & revenue tracking.' },
-            'Telecaller': { email: 'telecaller@medical365.in', pass: 'telecaller123', name: 'Pooja Sharma (Telecaller)', banner: 'Telecaller: Inbound patient calling, follow-ups, triage scoring & OPD booking.' }
+        var roleMap = {
+            'Superadmin': { email: 'superadmin@medical365.in', pass: 'superadmin123', name: 'OWNER', role: 'Superadmin', avatar: 'O', bg: '#4f46e5' },
+            'Sales': { email: 'sales@medical365.in', pass: 'sales123', name: 'VIKRAM', role: 'Sales', avatar: 'S', bg: '#0284c7' },
+            'Telecaller': { email: 'telecaller@medical365.in', pass: 'telecaller123', name: 'POOJA', role: 'Telecaller', avatar: 'T', bg: '#d97706' }
         };
 
-        var mockLeads = [
-            { id: 'MED-8921', name: 'Rameshwar Lal Sharma', phone: '+91 98290 12345', email: 'rameshwar@gmail.com', req: 'Total Knee Replacement (TKR)', city: 'Jaipur', score: 92, status: 'Consultation Booked' },
-            { id: 'MED-7634', name: 'Sunita Aggarwal', phone: '+91 98101 54321', email: 'sunita.ag@outlook.com', req: 'Coronary Angioplasty / Stent', city: 'Delhi', score: 88, status: 'Contacted' },
-            { id: 'MED-4321', name: 'Pooja Verma', phone: '+91 94140 87654', email: 'pooja.verma@yahoo.com', req: 'IVF & Fertility Treatment', city: 'Alwar', score: 79, status: 'New Inquiry' },
-            { id: 'MED-5512', name: 'Devendra Meena', phone: '+91 97841 23456', email: 'dev.meena@gmail.com', req: 'Laparoscopic Cholecystectomy', city: 'Kota', score: 85, status: 'Consultation Booked' },
-            { id: 'MED-3329', name: 'Vikas Shekhawat', phone: '+91 99280 45678', email: 'vikas.shekh@gmail.com', req: 'ACL Arthroscopic Knee Repair', city: 'Jodhpur', score: 74, status: 'Treatment Started' },
-            { id: 'MED-2201', name: 'Dr. Ashok Singhal (Apex Clinic)', phone: '+91 94141 11223', email: 'apex.clinic@gmail.com', req: 'ABHA / ABDM M1/M2 Integration', city: 'Bhilwara', score: 95, status: 'New Inquiry' }
+        // Initial leads matching user screenshot
+        var baselineLeads = [
+            { id: '1', name: 'Ranjith nk', status: 'New', source: 'Website', addedOn: 'Oct 15, 2026' },
+            { id: '2', name: 'roman', status: 'New', source: 'Website', addedOn: 'Oct 15, 2026' },
+            { id: '3', name: 'Darshan', status: 'New', source: 'Website', addedOn: 'Oct 12, 2026' },
+            { id: '4', name: 'manpreet', status: 'New', source: 'Website', addedOn: 'Oct 12, 2026' },
+            { id: '5', name: 'Bajrang Sultania', status: 'New', source: 'Website', addedOn: 'Oct 12, 2026' }
         ];
 
-        function switchRole(role) {
+        function switchLoginRole(role) {
             currentRole = role;
-            document.getElementById('error-box').style.display = 'none';
-
-            // Update Tab Active Classes
             document.getElementById('tab-superadmin').className = 'role-tab' + (role === 'Superadmin' ? ' active-superadmin' : '');
             document.getElementById('tab-sales').className = 'role-tab' + (role === 'Sales' ? ' active-sales' : '');
             document.getElementById('tab-telecaller').className = 'role-tab' + (role === 'Telecaller' ? ' active-telecaller' : '');
 
-            // Update Banner
-            var banner = document.getElementById('role-banner');
-            banner.className = 'role-banner ' + role.toLowerCase() + '-mode';
-            document.getElementById('role-banner-text').textContent = roleCredentials[role].banner;
-
-            // Update Inputs
-            document.getElementById('emailInput').value = roleCredentials[role].email;
-            document.getElementById('passwordInput').value = roleCredentials[role].pass;
-            document.getElementById('submitBtnText').textContent = 'Sign In as ' + role;
+            document.getElementById('loginEmail').value = roleMap[role].email;
+            document.getElementById('loginPassword').value = roleMap[role].pass;
+            document.getElementById('loginBtnText').textContent = 'Sign In as ' + role;
         }
 
-        function handleLoginSubmit(e) {
+        function handleAuthSubmit(e) {
             e.preventDefault();
-            var email = document.getElementById('emailInput').value.trim().toLowerCase();
-            var pass = document.getElementById('passwordInput').value.trim();
+            var email = document.getElementById('loginEmail').value.toLowerCase().trim();
+            var pass = document.getElementById('loginPassword').value.trim();
 
-            var matchedRole = null;
-            if (email.includes('superadmin') || email.includes('admin')) {
-                if (pass === 'superadmin123' || pass === 'admin123') matchedRole = 'Superadmin';
-            } else if (email.includes('sales')) {
-                if (pass === 'sales123') matchedRole = 'Sales';
-            } else if (email.includes('telecaller') || email.includes('triage')) {
-                if (pass === 'telecaller123') matchedRole = 'Telecaller';
-            } else if (email.includes('@')) {
-                matchedRole = currentRole;
-            }
+            var authedRole = 'Superadmin';
+            if (email.includes('sales')) authedRole = 'Sales';
+            else if (email.includes('telecaller')) authedRole = 'Telecaller';
 
-            if (matchedRole) {
-                launchCRM(matchedRole);
-            } else {
-                document.getElementById('error-box').style.display = 'block';
-            }
+            launchDashboard(authedRole);
         }
 
-        function directLogin(role) {
-            switchRole(role);
-            launchCRM(role);
+        function instantLogin(role) {
+            switchLoginRole(role);
+            launchDashboard(role);
         }
 
-        function launchCRM(role) {
-            sessionStorage.setItem('m365_logged_role', role);
+        function launchDashboard(role) {
+            sessionStorage.setItem('m365_auth_role', role);
 
             document.getElementById('login-view').style.display = 'none';
-            document.getElementById('crm-view').style.display = 'flex';
+            document.getElementById('crm-app').style.display = 'flex';
 
-            var roleBadge = document.getElementById('crm-role-badge');
-            roleBadge.textContent = role;
-            roleBadge.className = 'role-pill ' + role.toLowerCase();
-            document.getElementById('crm-user-name').textContent = roleCredentials[role].name;
+            var cfg = roleMap[role] || roleMap['Superadmin'];
+            document.getElementById('sb-avatar').textContent = cfg.avatar;
+            document.getElementById('sb-avatar').style.background = cfg.bg;
+            document.getElementById('sb-name').textContent = cfg.name.toLowerCase();
+            document.getElementById('sb-role').textContent = cfg.role;
 
-            renderTable(mockLeads);
+            document.getElementById('top-avatar').textContent = cfg.avatar;
+            document.getElementById('top-avatar').style.background = cfg.bg;
+            document.getElementById('top-user-name').textContent = cfg.name;
+            document.getElementById('top-user-role').textContent = cfg.role;
+
+            loadAndRenderLeads();
             lucide.createIcons();
         }
 
-        function handleSignOut() {
-            sessionStorage.removeItem('m365_logged_role');
-            document.getElementById('crm-view').style.display = 'none';
+        function handleLogout() {
+            sessionStorage.removeItem('m365_auth_role');
+            document.getElementById('crm-app').style.display = 'none';
             document.getElementById('login-view').style.display = 'flex';
         }
 
+        // ══════════════════════════════════════════════════════════
+        // LEADS DATA LOADING (MERGING BASELINE + LIVE WEBSITE SUBMISSIONS)
+        // ══════════════════════════════════════════════════════════
+        function getCombinedLeads() {
+            var liveWebsiteLeads = [];
+            try {
+                liveWebsiteLeads = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+            } catch(e) {}
+
+            return liveWebsiteLeads.concat(baselineLeads);
+        }
+
+        function loadAndRenderLeads() {
+            var leads = getCombinedLeads();
+            var count = leads.length;
+
+            // Update KPI cards matching screenshot
+            document.getElementById('stat-total-leads').textContent = count;
+            document.getElementById('stat-active-leads').textContent = count;
+            document.getElementById('bar-new-val').textContent = count + ' (100%)';
+            document.getElementById('source-website-val').textContent = '100% (' + count + ')';
+
+            // Check if leads added today
+            var todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            var todayCount = leads.filter(function(l) { return l.addedOn === todayStr; }).length;
+            document.getElementById('today-leads-count').textContent = todayCount;
+
+            renderTable(leads.slice(0, 10));
+        }
+
         function renderTable(leads) {
-            var tbody = document.getElementById('leadsTableBody');
+            var tbody = document.getElementById('recentLeadsTbody');
             tbody.innerHTML = '';
 
             leads.forEach(function(lead) {
-                var cleanPhone = lead.phone.replace(/[^0-9]/g, '');
-                var waLink = 'https://wa.me/' + cleanPhone + '?text=' + encodeURIComponent('Namaste ' + lead.name + ', this is regarding your inquiry with Medical365.');
-
-                var statusClass = 'status-new';
-                if (lead.status === 'Contacted') statusClass = 'status-contacted';
-                else if (lead.status === 'Consultation Booked') statusClass = 'status-booked';
-                else if (lead.status === 'Treatment Started') statusClass = 'status-won';
-
-                var row = document.createElement('tr');
-                row.innerHTML = 
-                    '<td><strong>' + lead.name + '</strong><br><span style="font-size:0.7rem; color:#64748b;">ID: ' + lead.id + '</span></td>' +
-                    '<td><span style="font-family:monospace; font-weight:700;">' + lead.phone + '</span><br><span style="font-size:0.7rem; color:#64748b;">' + lead.email + '</span></td>' +
-                    '<td><strong>' + lead.req + '</strong></td>' +
-                    '<td>' + lead.city + '</td>' +
-                    '<td><span style="font-weight:900; color:' + (lead.score >= 85 ? '#059669' : '#d97706') + ';">' + lead.score + '/100</span></td>' +
-                    '<td><span class="status-badge ' + statusClass + '">' + lead.status + '</span></td>' +
-                    '<td style="text-align: right;">' +
-                        '<a href="' + waLink + '" target="_blank" class="btn-wa"><i data-lucide="message-square" style="width:12px; height:12px;"></i> WhatsApp</a>' +
-                        '<a href="tel:' + lead.phone + '" class="btn-call"><i data-lucide="phone" style="width:12px; height:12px;"></i> Call</a>' +
-                    '</td>';
-                tbody.appendChild(row);
+                var tr = document.createElement('tr');
+                tr.innerHTML = 
+                    '<td><strong>' + lead.name + '</strong></td>' +
+                    '<td><span class="pill-new">' + lead.status + '</span></td>' +
+                    '<td style="color:#64748b;">' + lead.source + '</td>' +
+                    '<td style="color:#64748b;">' + lead.addedOn + '</td>';
+                tbody.appendChild(tr);
             });
-
-            lucide.createIcons();
         }
 
-        function filterLeads() {
-            var q = document.getElementById('leadSearch').value.toLowerCase().trim();
-            var filtered = mockLeads.filter(function(l) {
-                return l.name.toLowerCase().includes(q) ||
-                       l.phone.toLowerCase().includes(q) ||
-                       l.req.toLowerCase().includes(q) ||
-                       l.city.toLowerCase().includes(q) ||
-                       l.status.toLowerCase().includes(q);
+        function handleSearch(q) {
+            var all = getCombinedLeads();
+            if (!q.trim()) {
+                renderTable(all.slice(0, 10));
+                return;
+            }
+            var s = q.toLowerCase();
+            var filtered = all.filter(function(l) {
+                return l.name.toLowerCase().includes(s) || (l.phone && l.phone.includes(s));
             });
             renderTable(filtered);
         }
 
-        // Auto-login if session exists
+        function openAddLeadModal() {
+            document.getElementById('addLeadModal').style.display = 'flex';
+        }
+
+        function closeAddLeadModal() {
+            document.getElementById('addLeadModal').style.display = 'none';
+        }
+
+        function handleManualAddLead(e) {
+            e.preventDefault();
+            var name = document.getElementById('mLeadName').value.trim();
+            var phone = document.getElementById('mLeadPhone').value.trim();
+            var email = document.getElementById('mLeadEmail').value.trim();
+            var source = document.getElementById('mLeadSource').value;
+            var req = document.getElementById('mLeadReq').value.trim();
+            var city = document.getElementById('mLeadCity').value.trim();
+
+            var newLead = {
+                id: 'MAN-' + Date.now().toString().slice(-4),
+                name: name,
+                phone: phone,
+                email: email,
+                source: source,
+                status: 'New',
+                requirement: req,
+                city: city,
+                addedOn: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+                timestamp: Date.now()
+            };
+
+            var existing = [];
+            try {
+                existing = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+            } catch(err) {}
+
+            existing.unshift(newLead);
+            localStorage.setItem('m365_crm_leads', JSON.stringify(existing));
+
+            closeAddLeadModal();
+            loadAndRenderLeads();
+        }
+
+        // Auto-check on load
         window.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
-            var savedRole = sessionStorage.getItem('m365_logged_role');
-            if (savedRole && roleCredentials[savedRole]) {
-                launchCRM(savedRole);
+            var saved = sessionStorage.getItem('m365_auth_role');
+            if (saved && roleMap[saved]) {
+                launchDashboard(saved);
             }
         });
     </script>

@@ -93,6 +93,48 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.forEach(function(value, key){
             object[key] = value;
         });
+
+        // Capture attribution metadata
+        object.source_page_url = window.location.href;
+        object.page_title = document.title;
+        object.submitted_at = new Date().toISOString();
+
+        // ══════════════════════════════════════════════════════════
+        // SYNC DIRECTLY TO MEDICAL365 CRM
+        // ══════════════════════════════════════════════════════════
+        try {
+            var existingLeads = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+            var leadFullName = [object.first_name, object.last_name].filter(Boolean).join(' ') || object.name || 'Anonymous Website Visitor';
+            var formattedDate = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            
+            var crmLead = {
+                id: 'MED-' + Math.floor(1000 + Math.random() * 9000),
+                name: leadFullName,
+                phone: object.phone_number || object.phone || '',
+                email: object.email || '',
+                status: 'New',
+                source: 'Website',
+                organization: object.organization_name || object.facility_name || '',
+                facilityType: object.facility_type || '',
+                bedCount: object.bed_count || '',
+                challenges: object.challenges || object.message || '',
+                addedOn: formattedDate,
+                timestamp: Date.now()
+            };
+
+            existingLeads.unshift(crmLead);
+            localStorage.setItem('m365_crm_leads', JSON.stringify(existingLeads));
+
+            // Also send to backend webhook relay
+            fetch('/api/webhooks', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(object)
+            }).catch(function() {});
+        } catch(e) {
+            console.warn('CRM sync error:', e);
+        }
+
         var json = JSON.stringify(object);
 
         // 3. Submit using fetch (supported by all modern browsers, for IE fallback would need XHR)
