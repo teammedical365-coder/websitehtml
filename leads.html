@@ -99,95 +99,129 @@
         }
 
         .role-tab {
-            background: rgba(30, 41, 59, 0.6);
-            border: 1.5px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 10px 4px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            color: #cbd5e1;
+            padding: 10px 8px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.04);
+            color: #94a3b8;
             font-size: 0.75rem;
             font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
 
         .role-tab:hover {
-            border-color: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
         }
 
         .role-tab.active-superadmin {
-            border-color: #a855f7;
-            background: rgba(168, 85, 247, 0.2);
-            color: #f3e8ff;
+            background: #4f46e5;
+            color: #fff;
+            border-color: #6366f1;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
         }
 
         .role-tab.active-sales {
-            border-color: #3b82f6;
-            background: rgba(59, 130, 246, 0.2);
-            color: #dbeafe;
+            background: #0284c7;
+            color: #fff;
+            border-color: #38bdf8;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
         }
 
         .role-tab.active-telecaller {
+            background: #d97706;
+            color: #fff;
             border-color: #f59e0b;
-            background: rgba(245, 158, 11, 0.2);
-            color: #fef3c7;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
         }
 
         .login-input {
             width: 100%;
-            background: rgba(30, 41, 59, 0.8);
-            border: 1.5px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 12px;
-            padding: 12px 14px 12px 40px;
-            font-size: 0.86rem;
+            padding: 12px 14px 12px 42px;
             color: #fff;
-            outline: none;
+            font-size: 0.85rem;
             margin-bottom: 14px;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .login-input:focus {
+            border-color: #6366f1;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
         }
 
         .login-btn {
             width: 100%;
-            background: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
             color: #fff;
             border: none;
             border-radius: 12px;
             padding: 13px;
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             font-weight: 700;
             cursor: pointer;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            margin-top: 6px;
+            transition: all 0.2s;
+        }
+
+        .login-btn:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
         }
 
         /* ══════════════════════════════════════════════════════════
-           2. CRM SHELL LAYOUT (MATCHING EXACT SCREENSHOT)
+           2. CRM DASHBOARD & APPLICATION LAYOUT
            ══════════════════════════════════════════════════════════ */
         #crm-app {
             display: none;
             min-height: 100vh;
-            flex-direction: row;
         }
 
         /* SIDEBAR */
         aside.sidebar {
-            width: 240px;
+            width: 250px;
             background: var(--sidebar-bg);
             border-right: 1px solid var(--sidebar-border);
             display: flex;
             flex-direction: column;
-            shrink: 0;
-            height: 100vh;
+            flex-shrink: 0;
             position: sticky;
             top: 0;
-            z-index: 100;
+            height: 100vh;
             overflow-y: auto;
+            z-index: 100;
+            transition: width 0.2s ease;
+        }
+
+        aside.sidebar.collapsed {
+            width: 68px;
+        }
+
+        aside.sidebar.collapsed .sidebar-brand span,
+        aside.sidebar.collapsed .user-details,
+        aside.sidebar.collapsed .nav-group-title,
+        aside.sidebar.collapsed .nav-item span,
+        aside.sidebar.collapsed .sidebar-footer button span {
+            display: none;
+        }
+
+        aside.sidebar.collapsed .nav-item {
+            justify-content: center;
+            padding: 10px;
         }
 
         .sidebar-brand-box {
@@ -202,31 +236,35 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.1rem;
             font-weight: 800;
-            color: #0284c7;
+            font-size: 1.05rem;
+            color: var(--text-main);
             text-decoration: none;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.02em;
         }
 
         .brand-badge {
             width: 32px;
             height: 32px;
-            background: #0284c7;
+            background: #4f46e5;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
+            flex-shrink: 0;
         }
 
         .collapse-btn {
             background: transparent;
             border: none;
+            color: #94a3b8;
             cursor: pointer;
-            color: var(--text-sub);
             padding: 4px;
             border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .collapse-btn:hover {
@@ -236,25 +274,28 @@
 
         /* Sidebar Profile Pill */
         .sidebar-user-pill {
-            padding: 16px 20px;
+            margin: 14px 16px;
+            padding: 10px 12px;
+            background: #f8fafc;
+            border-radius: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid var(--sidebar-border);
+            gap: 12px;
+            border: 1px solid var(--sidebar-border);
         }
 
         .user-avatar-circle {
             width: 34px;
             height: 34px;
             border-radius: 50%;
-            background: #6366f1;
+            background: #4f46e5;
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
             font-weight: 800;
-            shrink: 0;
+            font-size: 0.85rem;
+            flex-shrink: 0;
         }
 
         .user-details h4 {
@@ -262,20 +303,22 @@
             font-weight: 700;
             color: var(--text-main);
             line-height: 1.2;
+            text-transform: capitalize;
         }
 
         .user-details span {
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             color: var(--text-muted);
+            text-transform: capitalize;
         }
 
         /* Sidebar Nav Links */
         .sidebar-nav {
-            padding: 14px 12px;
-            flex: 1;
+            padding: 8px 12px;
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 4px;
+            flex: 1;
         }
 
         .nav-group-title {
@@ -283,23 +326,23 @@
             font-weight: 800;
             color: #94a3b8;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
-            padding: 0 10px;
-            margin-bottom: 4px;
+            letter-spacing: 0.05em;
+            padding: 14px 10px 6px 10px;
         }
 
         .nav-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 10px;
+            gap: 12px;
+            padding: 8px 12px;
             border-radius: 8px;
             font-size: 0.82rem;
             font-weight: 600;
             color: var(--sidebar-text);
             text-decoration: none;
-            cursor: pointer;
             transition: all 0.15s ease;
+            cursor: pointer;
+            user-select: none;
         }
 
         .nav-item:hover {
@@ -308,7 +351,7 @@
         }
 
         .nav-item.active {
-            background: #eef2ff;
+            background: var(--primary-light);
             color: var(--primary);
             font-weight: 700;
         }
@@ -316,35 +359,50 @@
         .nav-item i {
             width: 17px;
             height: 17px;
-            stroke-width: 2.2;
+            flex-shrink: 0;
+        }
+
+        .nav-badge {
+            margin-left: auto;
+            background: #e2e8f0;
+            color: #475569;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+
+        .nav-item.active .nav-badge {
+            background: #4f46e5;
+            color: #fff;
         }
 
         .sidebar-footer {
-            padding: 14px 20px;
+            padding: 14px 18px;
             border-top: 1px solid var(--sidebar-border);
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        /* MAIN CONTENT VIEW */
+        /* MAIN VIEWPORT */
         main.main-viewport {
             flex: 1;
-            min-width: 0;
             display: flex;
             flex-direction: column;
+            min-width: 0;
             background: var(--bg-body);
         }
 
-        /* Top Header Navbar */
+        /* TOP NAVBAR */
         header.top-navbar {
             height: 64px;
             background: #ffffff;
-            border-bottom: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--sidebar-border);
+            padding: 0 28px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 28px;
             position: sticky;
             top: 0;
             z-index: 90;
@@ -399,11 +457,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
 
         .header-icon-btn:hover {
             background: #f1f5f9;
             color: #0f172a;
+        }
+
+        .notif-badge-dot {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 8px;
+            height: 8px;
+            background: #ef4444;
+            border-radius: 50%;
+            border: 2px solid #fff;
         }
 
         .header-user-btn {
@@ -415,12 +485,16 @@
             cursor: pointer;
         }
 
-        /* DASHBOARD CONTENT CONTAINER */
-        .dashboard-container {
+        /* VIEW CONTAINER */
+        .crm-view-section {
             padding: 24px 28px;
-            display: flex;
+            display: none;
             flex-direction: column;
             gap: 22px;
+        }
+
+        .crm-view-section.active-view {
+            display: flex;
         }
 
         /* Dashboard Title & Top Action Ribbon */
@@ -476,10 +550,12 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            transition: all 0.15s;
         }
 
         .btn-white:hover {
             background: #f8fafc;
+            border-color: #cbd5e1;
         }
 
         .btn-add-lead {
@@ -525,6 +601,13 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.06);
         }
 
         .kpi-left {
@@ -570,7 +653,6 @@
         .kpi-sub-green { color: #10b981; }
         .kpi-sub-muted { color: #64748b; }
 
-        /* Mini Chart Visuals */
         .mini-bar-chart {
             display: flex;
             align-items: flex-end;
@@ -635,19 +717,27 @@
             align-items: center;
             gap: 8px;
             width: 13%;
+            cursor: pointer;
+            transition: transform 0.15s;
+        }
+
+        .status-bar-col:hover {
+            transform: scale(1.05);
         }
 
         .status-val-pill {
             font-size: 0.68rem;
             font-weight: 700;
             color: #0284c7;
+            white-space: nowrap;
         }
 
         .status-pillar {
             width: 100%;
             background: #e2e8f0;
             border-radius: 4px 4px 0 0;
-            transition: height 0.4s ease;
+            transition: height 0.4s ease, background 0.2s;
+            min-height: 4px;
         }
 
         .status-pillar.active-pillar {
@@ -694,10 +784,11 @@
         .source-bar-fill {
             height: 100%;
             border-radius: 4px;
+            transition: width 0.4s ease;
         }
 
         .source-percent {
-            width: 55px;
+            width: 65px;
             text-align: right;
             font-size: 0.74rem;
             font-weight: 700;
@@ -722,9 +813,13 @@
             font-weight: 700;
             color: #4f46e5;
             text-decoration: none;
+            cursor: pointer;
         }
 
-        /* Recent Leads Mini Table */
+        .view-all-link:hover {
+            text-decoration: underline;
+        }
+
         table.recent-leads-table {
             width: 100%;
             border-collapse: collapse;
@@ -742,25 +837,56 @@
         }
 
         table.recent-leads-table td {
-            padding: 12px 0;
+            padding: 12px 6px;
             border-bottom: 1px solid #f8fafc;
+        }
+
+        table.recent-leads-table tr:hover td {
+            background: #f8fafc;
         }
 
         .pill-new {
             background: #f1f5f9;
             color: #334155;
-            padding: 2px 8px;
+            padding: 3px 8px;
             border-radius: 6px;
             font-size: 0.72rem;
             font-weight: 600;
         }
 
-        /* Today Activity Item */
+        .pill-won {
+            background: #ecfdf5;
+            color: #059669;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+
+        .pill-contacted {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+
+        .pill-lost {
+            background: #fff1f2;
+            color: #e11d48;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+
         .activity-item {
             display: flex;
             align-items: center;
             gap: 14px;
             padding: 10px 0;
+            border-bottom: 1px solid #f8fafc;
         }
 
         .activity-icon {
@@ -785,11 +911,128 @@
             margin-top: 2px;
         }
 
-        /* Modal Styles */
+        /* ══════════════════════════════════════════════════════════
+           6. FULL LEADS DATA GRID & REUSABLE COMPONENTS
+           ══════════════════════════════════════════════════════════ */
+        .leads-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            background: #fff;
+            padding: 14px 18px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--card-border);
+        }
+
+        .leads-filters {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .leads-actions-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .full-grid-card {
+            background: #fff;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+        }
+
+        table.data-grid-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            text-align: left;
+        }
+
+        table.data-grid-table th {
+            background: #f8fafc;
+            padding: 12px 16px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        table.data-grid-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #f1f5f9;
+            vertical-align: middle;
+        }
+
+        table.data-grid-table tr:hover td {
+            background: #fafbfc;
+        }
+
+        .action-icon-btn {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            padding: 6px 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+
+        .action-icon-btn:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+            border-color: #cbd5e1;
+        }
+
+        .action-wa {
+            background: #ecfdf5;
+            color: #059669;
+            border-color: #a7f3d0;
+        }
+
+        .action-wa:hover {
+            background: #059669;
+            color: #fff;
+        }
+
+        .action-call {
+            background: #eff6ff;
+            color: #2563eb;
+            border-color: #bfdbfe;
+        }
+
+        .action-call:hover {
+            background: #2563eb;
+            color: #fff;
+        }
+
+        .stage-select-pill {
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            border: 1px solid #e2e8f0;
+            background: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Modals */
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(15, 23, 42, 0.5);
+            background: rgba(15, 23, 42, 0.55);
             backdrop-filter: blur(4px);
             z-index: 1000;
             display: none;
@@ -801,10 +1044,13 @@
         .modal-card {
             background: #fff;
             width: 100%;
-            max-width: 520px;
+            max-width: 540px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             overflow: hidden;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .modal-head {
@@ -826,6 +1072,7 @@
             display: flex;
             flex-direction: column;
             gap: 14px;
+            overflow-y: auto;
         }
 
         .form-row {
@@ -863,6 +1110,73 @@
             display: flex;
             justify-content: flex-end;
             gap: 10px;
+        }
+
+        /* Toast Notifications */
+        #toast-notification {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #0f172a;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            z-index: 2000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #toast-notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Notification Drawer */
+        #notif-drawer {
+            position: absolute;
+            top: 60px;
+            right: 28px;
+            width: 320px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            z-index: 150;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .notif-head {
+            padding: 14px 18px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.85rem;
+            font-weight: 800;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .notif-list {
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        .notif-item {
+            padding: 12px 18px;
+            border-bottom: 1px solid #f8fafc;
+            font-size: 0.78rem;
+        }
+
+        .notif-item:hover {
+            background: #f8fafc;
         }
     </style>
 </head>
@@ -931,19 +1245,19 @@
     </div>
 
     <!-- ══════════════════════════════════════════════════════════
-         2. CRM APPLICATION VIEW (MATCHING EXACT SCREENSHOT)
+         2. CRM APPLICATION VIEW
          ══════════════════════════════════════════════════════════ -->
     <div id="crm-app">
         <!-- SIDEBAR -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="appSidebar">
             <div class="sidebar-brand-box">
-                <a href="/leads" class="sidebar-brand">
+                <a href="javascript:void(0)" onclick="navigateView('view-dashboard')" class="sidebar-brand">
                     <div class="brand-badge">
                         <i data-lucide="heart-pulse" style="width: 18px; height: 18px;"></i>
                     </div>
                     <span>Medical 365</span>
                 </a>
-                <button class="collapse-btn" title="Collapse sidebar">
+                <button class="collapse-btn" onclick="toggleSidebar()" title="Toggle sidebar">
                     <i data-lucide="chevron-left" style="width: 18px; height: 18px;"></i>
                 </button>
             </div>
@@ -959,7 +1273,7 @@
 
             <nav class="sidebar-nav">
                 <!-- Dashboard -->
-                <a class="nav-item active">
+                <a class="nav-item active" id="nav-dashboard" onclick="navigateView('view-dashboard', this)">
                     <i data-lucide="layout-grid"></i>
                     <span>Dashboard</span>
                 </a>
@@ -967,23 +1281,26 @@
                 <!-- LEADS -->
                 <div>
                     <div class="nav-group-title">Leads</div>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-leads-all" onclick="navigateView('view-leads', this, 'All')">
                         <i data-lucide="table"></i>
                         <span>All Leads</span>
+                        <span class="nav-badge" id="badge-all-leads">54</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-leads-new" onclick="navigateView('view-leads', this, 'New')">
                         <i data-lucide="star"></i>
                         <span>New Leads</span>
+                        <span class="nav-badge" id="badge-new-leads">54</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-leads-active" onclick="navigateView('view-leads', this, 'Active')">
                         <i data-lucide="zap"></i>
                         <span>Active Leads</span>
+                        <span class="nav-badge" id="badge-active-leads">54</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-leads-won" onclick="navigateView('view-leads', this, 'Won')">
                         <i data-lucide="check-circle-2"></i>
                         <span>Order Placed</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-leads-lost" onclick="navigateView('view-leads', this, 'Lost')">
                         <i data-lucide="x-circle"></i>
                         <span>Lost Leads</span>
                     </a>
@@ -992,19 +1309,20 @@
                 <!-- COMMUNICATION -->
                 <div>
                     <div class="nav-group-title">Communication</div>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-calls" onclick="navigateView('view-calls', this)">
                         <i data-lucide="phone"></i>
                         <span>Call Reports</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-meetings" onclick="navigateView('view-meetings', this)">
                         <i data-lucide="calendar"></i>
                         <span>Meetings</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-reminders" onclick="navigateView('view-reminders', this)">
                         <i data-lucide="bell"></i>
                         <span>Reminders</span>
+                        <span class="nav-badge" id="badge-reminders">2</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-followups" onclick="navigateView('view-followups', this)">
                         <i data-lucide="refresh-cw"></i>
                         <span>Follow Ups</span>
                     </a>
@@ -1013,15 +1331,15 @@
                 <!-- TOOLS -->
                 <div>
                     <div class="nav-group-title">Tools</div>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-tools-import" onclick="navigateView('view-import', this)">
                         <i data-lucide="upload"></i>
                         <span>Import Leads</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-tools-assign" onclick="navigateView('view-assign', this)">
                         <i data-lucide="user-check"></i>
                         <span>Assign Leads</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-tools-data" onclick="navigateView('view-data', this)">
                         <i data-lucide="database"></i>
                         <span>Data Management</span>
                     </a>
@@ -1030,65 +1348,41 @@
                 <!-- REPORTS -->
                 <div>
                     <div class="nav-group-title">Reports</div>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-reports-leads" onclick="navigateView('view-reports', this)">
                         <i data-lucide="bar-chart-2"></i>
                         <span>Leads Reports</span>
                     </a>
-                    <a class="nav-item">
-                        <i data-lucide="phone-call"></i>
-                        <span>Call Reports</span>
-                    </a>
-                    <a class="nav-item">
-                        <i data-lucide="clock"></i>
-                        <span>Meeting Reports</span>
-                    </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-reports-perf" onclick="navigateView('view-reports', this)">
                         <i data-lucide="trending-up"></i>
                         <span>Performance</span>
-                    </a>
-                    <a class="nav-item">
-                        <i data-lucide="radio"></i>
-                        <span>Call Ingestion</span>
                     </a>
                 </div>
 
                 <!-- SETTINGS -->
                 <div>
                     <div class="nav-group-title">Settings</div>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-settings-fields" onclick="navigateView('view-settings', this)">
                         <i data-lucide="plus-square"></i>
                         <span>Custom Fields</span>
                     </a>
-                    <a class="nav-item">
-                        <i data-lucide="sliders"></i>
-                        <span>Field Arrangement</span>
-                    </a>
-                    <a class="nav-item">
-                        <i data-lucide="file-text"></i>
-                        <span>Report Builder</span>
-                    </a>
-                    <a class="nav-item">
-                        <i data-lucide="rss"></i>
-                        <span>Lead Feeds</span>
-                    </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-settings-templates" onclick="navigateView('view-settings', this)">
                         <i data-lucide="message-square"></i>
                         <span>Message Templates</span>
                     </a>
-                    <a class="nav-item">
+                    <a class="nav-item" id="nav-settings-staff" onclick="navigateView('view-settings', this)">
                         <i data-lucide="users"></i>
                         <span>Staff</span>
                     </a>
-                    <a class="nav-item">
-                        <i data-lucide="slash"></i>
-                        <span>Do Not Record</span>
+                    <a class="nav-item" id="nav-settings-feeds" onclick="navigateView('view-settings', this)">
+                        <i data-lucide="rss"></i>
+                        <span>Lead Feeds & Webhook</span>
                     </a>
                 </div>
             </nav>
 
             <div class="sidebar-footer">
                 <button onclick="handleLogout()" style="background: transparent; border: none; font-size: 0.78rem; font-weight: 600; color: #ef4444; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                    <i data-lucide="log-out" style="width: 14px; height: 14px;"></i> Log Out
+                    <i data-lucide="log-out" style="width: 14px; height: 14px;"></i> <span>Log Out</span>
                 </button>
             </div>
         </aside>
@@ -1099,17 +1393,30 @@
             <header class="top-navbar">
                 <div class="header-search">
                     <i data-lucide="search"></i>
-                    <input type="text" id="globalSearch" placeholder="Search leads by name, phone, email or anything said on a call..." oninput="handleSearch(this.value)">
+                    <input type="text" id="globalSearch" placeholder="Search leads by name, phone, email, facility or notes..." oninput="handleGlobalSearch(this.value)">
                 </div>
 
                 <div class="header-actions">
-                    <button class="header-icon-btn" title="Settings">
+                    <button class="header-icon-btn" title="Settings" onclick="navigateView('view-settings')">
                         <i data-lucide="settings" style="width: 18px; height: 18px;"></i>
                     </button>
-                    <button class="header-icon-btn" title="Notifications">
+                    <button class="header-icon-btn" title="Notifications" onclick="toggleNotificationDrawer()">
                         <i data-lucide="bell" style="width: 18px; height: 18px;"></i>
+                        <span class="notif-badge-dot"></span>
                     </button>
-                    <div class="header-user-btn">
+
+                    <!-- Notification Drawer Dropdown -->
+                    <div id="notif-drawer">
+                        <div class="notif-head">
+                            <span>Notifications</span>
+                            <span style="font-size: 0.7rem; color: #4f46e5; cursor: pointer;" onclick="toggleNotificationDrawer()">Close</span>
+                        </div>
+                        <div class="notif-list" id="notif-list-body">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="header-user-btn" onclick="handleLogout()" title="Click to log out">
                         <div class="user-avatar-circle" id="top-avatar" style="background: #2563eb; width: 32px; height: 32px;">O</div>
                         <div style="text-align: left;">
                             <div style="font-size: 0.78rem; font-weight: 800; text-transform: uppercase;" id="top-user-name">OWNER</div>
@@ -1119,32 +1426,35 @@
                 </div>
             </header>
 
-            <!-- DASHBOARD CONTAINER -->
-            <div class="dashboard-container">
+            <!-- ══════════════════════════════════════════════════════════
+                 VIEW A: MAIN DASHBOARD
+                 ══════════════════════════════════════════════════════════ -->
+            <div class="crm-view-section active-view" id="view-dashboard">
                 <!-- Title & Control Ribbon -->
                 <div class="dash-header-row">
                     <div class="dash-titles">
                         <h1>Dashboard</h1>
-                        <p>Overview of your lead management activities · showing all callers</p>
+                        <p id="dashSubtitle">Overview of your lead management activities · showing all callers</p>
                     </div>
 
                     <div class="dash-controls">
-                        <select class="dropdown-pill">
-                            <option>All callers</option>
-                            <option>Pooja Sharma (Telecaller)</option>
-                            <option>Vikram Malhotra (Sales)</option>
-                            <option>Dr. Rajesh V. (Admin)</option>
+                        <select class="dropdown-pill" id="topCallerFilter" onchange="applyTopFilters()">
+                            <option value="All">All callers</option>
+                            <option value="Pooja Sharma">Pooja Sharma (Telecaller)</option>
+                            <option value="Vikram Malhotra">Vikram Malhotra (Sales)</option>
+                            <option value="Dr. Rajesh V.">Dr. Rajesh V. (Admin)</option>
                         </select>
 
-                        <select class="dropdown-pill">
-                            <option>Last 30 Days</option>
-                            <option>Today</option>
-                            <option>This Week</option>
-                            <option>This Month</option>
+                        <select class="dropdown-pill" id="topDateFilter" onchange="applyTopFilters()">
+                            <option value="30d">Last 30 Days</option>
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="all">All Time</option>
                         </select>
 
-                        <button class="btn-white">Apply</button>
-                        <button class="btn-white">
+                        <button class="btn-white" onclick="applyTopFilters()">Apply</button>
+                        <button class="btn-white" onclick="openCustomizeModal()">
                             <i data-lucide="sliders" style="width: 14px; height: 14px;"></i> Customize
                         </button>
                         <button class="btn-add-lead" onclick="openAddLeadModal()">
@@ -1156,7 +1466,7 @@
                 <!-- 1. FOUR TOP KPI METRIC CARDS -->
                 <div class="kpi-row">
                     <!-- Total Leads -->
-                    <div class="kpi-card">
+                    <div class="kpi-card" onclick="navigateView('view-leads', null, 'All')">
                         <div class="kpi-left">
                             <div class="kpi-icon-circle kpi-icon-purple">
                                 <i data-lucide="users" style="width: 22px; height: 22px;"></i>
@@ -1164,22 +1474,22 @@
                             <div class="kpi-text">
                                 <h3>Total Leads</h3>
                                 <div class="kpi-num" id="stat-total-leads">54</div>
-                                <div class="kpi-subtext kpi-sub-green">+ 54 new (30d)</div>
+                                <div class="kpi-subtext kpi-sub-green" id="stat-total-sub">+ 54 new (30d)</div>
                             </div>
                         </div>
                         <div class="mini-bar-chart">
                             <div class="mini-bar" style="height: 100%; background: #4f46e5;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 25%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 40%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 60%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 35%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 80%; background: #4f46e5;"></div>
+                            <div class="mini-bar" style="height: 95%; background: #4f46e5;"></div>
                         </div>
                     </div>
 
                     <!-- Active Leads -->
-                    <div class="kpi-card">
+                    <div class="kpi-card" onclick="navigateView('view-leads', null, 'Active')">
                         <div class="kpi-left">
                             <div class="kpi-icon-circle kpi-icon-cyan">
                                 <i data-lucide="activity" style="width: 22px; height: 22px;"></i>
@@ -1187,22 +1497,22 @@
                             <div class="kpi-text">
                                 <h3>Active Leads</h3>
                                 <div class="kpi-num" id="stat-active-leads">54</div>
-                                <div class="kpi-subtext kpi-sub-muted">100% of pipeline</div>
+                                <div class="kpi-subtext kpi-sub-muted" id="stat-active-sub">100% of pipeline</div>
                             </div>
                         </div>
                         <div class="mini-bar-chart">
                             <div class="mini-bar" style="height: 100%; background: #06b6d4;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 30%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 50%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 40%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 65%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 85%; background: #06b6d4;"></div>
+                            <div class="mini-bar" style="height: 90%; background: #06b6d4;"></div>
                         </div>
                     </div>
 
                     <!-- Won -->
-                    <div class="kpi-card">
+                    <div class="kpi-card" onclick="navigateView('view-leads', null, 'Won')">
                         <div class="kpi-left">
                             <div class="kpi-icon-circle kpi-icon-green">
                                 <i data-lucide="award" style="width: 22px; height: 22px;"></i>
@@ -1210,22 +1520,22 @@
                             <div class="kpi-text">
                                 <h3>Won</h3>
                                 <div class="kpi-num" id="stat-won-leads">0</div>
-                                <div class="kpi-subtext kpi-sub-green">0% win rate</div>
+                                <div class="kpi-subtext kpi-sub-green" id="stat-won-sub">0% win rate</div>
                             </div>
                         </div>
                         <div class="mini-bar-chart">
-                            <div class="mini-bar" style="height: 100%; background: #10b981;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #10b981;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #10b981;"></div>
                         </div>
                     </div>
 
                     <!-- Lost Leads -->
-                    <div class="kpi-card">
+                    <div class="kpi-card" onclick="navigateView('view-leads', null, 'Lost')">
                         <div class="kpi-left">
                             <div class="kpi-icon-circle kpi-icon-rose">
                                 <i data-lucide="x-circle" style="width: 22px; height: 22px;"></i>
@@ -1233,17 +1543,17 @@
                             <div class="kpi-text">
                                 <h3>Lost Leads</h3>
                                 <div class="kpi-num" id="stat-lost-leads">0</div>
-                                <div class="kpi-subtext kpi-sub-muted">0% of total</div>
+                                <div class="kpi-subtext kpi-sub-muted" id="stat-lost-sub">0% of total</div>
                             </div>
                         </div>
                         <div class="mini-bar-chart">
-                            <div class="mini-bar" style="height: 100%; background: #f43f5e;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
-                            <div class="mini-bar" style="height: 6%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #f43f5e;"></div>
+                            <div class="mini-bar" style="height: 10%; background: #f43f5e;"></div>
                         </div>
                     </div>
                 </div>
@@ -1258,39 +1568,39 @@
                         </div>
 
                         <div class="status-bars-container">
-                            <div class="status-bar-col">
+                            <div class="status-bar-col" onclick="navigateView('view-leads', null, 'New')">
                                 <span class="status-val-pill" id="bar-new-val">54 (100%)</span>
-                                <div class="status-pillar active-pillar" style="height: 140px;"></div>
+                                <div class="status-pillar active-pillar" id="pillar-new" style="height: 140px;"></div>
                                 <span class="status-label">New</span>
                             </div>
-                            <div class="status-bar-col">
-                                <span class="status-val-pill">0 (0%)</span>
-                                <div class="status-pillar" style="height: 4px;"></div>
+                            <div class="status-bar-col" onclick="navigateView('view-leads', null, 'Contacted')">
+                                <span class="status-val-pill" id="bar-contacted-val">0 (0%)</span>
+                                <div class="status-pillar" id="pillar-contacted" style="height: 4px;"></div>
                                 <span class="status-label">Contacted</span>
                             </div>
-                            <div class="status-bar-col">
-                                <span class="status-val-pill">0 (0%)</span>
-                                <div class="status-pillar" style="height: 4px;"></div>
+                            <div class="status-bar-col" onclick="navigateView('view-leads', null, 'Qualified')">
+                                <span class="status-val-pill" id="bar-qualified-val">0 (0%)</span>
+                                <div class="status-pillar" id="pillar-qualified" style="height: 4px;"></div>
                                 <span class="status-label">Qualified</span>
                             </div>
-                            <div class="status-bar-col">
-                                <span class="status-val-pill">0 (0%)</span>
-                                <div class="status-pillar" style="height: 4px;"></div>
+                            <div class="status-bar-col" onclick="navigateView('view-leads', null, 'Quoted')">
+                                <span class="status-val-pill" id="bar-quoted-val">0 (0%)</span>
+                                <div class="status-pillar" id="pillar-quoted" style="height: 4px;"></div>
                                 <span class="status-label">Quoted</span>
                             </div>
-                            <div class="status-bar-col">
-                                <span class="status-val-pill">0 (0%)</span>
-                                <div class="status-pillar" style="height: 4px;"></div>
+                            <div class="status-bar-col" onclick="navigateView('view-leads', null, 'Won')">
+                                <span class="status-val-pill" id="bar-won-val">0 (0%)</span>
+                                <div class="status-pillar" id="pillar-won" style="height: 4px;"></div>
                                 <span class="status-label">Won</span>
                             </div>
-                            <div class="status-bar-col">
-                                <span class="status-val-pill">0 (0%)</span>
-                                <div class="status-pillar" style="height: 4px;"></div>
+                            <div class="status-bar-col" onclick="navigateView('view-leads', null, 'Lost')">
+                                <span class="status-val-pill" id="bar-lost-val">0 (0%)</span>
+                                <div class="status-pillar" id="pillar-lost" style="height: 4px;"></div>
                                 <span class="status-label">Lost</span>
                             </div>
-                            <div class="status-bar-col">
-                                <span class="status-val-pill">0 (0%)</span>
-                                <div class="status-pillar" style="height: 4px;"></div>
+                            <div class="status-bar-col" onclick="navigateView('view-leads', null, 'On Hold')">
+                                <span class="status-val-pill" id="bar-onhold-val">0 (0%)</span>
+                                <div class="status-pillar" id="pillar-onhold" style="height: 4px;"></div>
                                 <span class="status-label">On Hold</span>
                             </div>
                         </div>
@@ -1312,8 +1622,8 @@
                                         <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0"/>
                                     </linearGradient>
                                 </defs>
-                                <path d="M 0 15 L 20 120 L 80 120 L 140 120 L 180 120 L 210 105 L 240 120 L 260 108 L 290 120 L 320 115 L 320 135 L 0 135 Z" fill="url(#trendGrad)"/>
-                                <path d="M 0 15 L 20 120 L 80 120 L 140 120 L 180 120 L 210 105 L 240 120 L 260 108 L 290 120 L 320 115" fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round"/>
+                                <path id="trendAreaPath" d="M 0 15 L 20 120 L 80 120 L 140 120 L 180 120 L 210 105 L 240 120 L 260 108 L 290 120 L 320 115 L 320 135 L 0 135 Z" fill="url(#trendGrad)"/>
+                                <path id="trendLinePath" d="M 0 15 L 20 120 L 80 120 L 140 120 L 180 120 L 210 105 L 240 120 L 260 108 L 290 120 L 320 115" fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round"/>
                             </svg>
                             <div style="display: flex; justify-content: space-between; font-size: 0.64rem; color: #94a3b8; font-weight: 600; margin-top: 8px;">
                                 <span>Sep 17</span>
@@ -1333,36 +1643,36 @@
                             <i data-lucide="more-horizontal" style="color: #94a3b8; width: 16px; height: 16px;"></i>
                         </div>
 
-                        <div class="sources-list">
+                        <div class="sources-list" id="sourceBreakdownList">
                             <div class="source-row">
                                 <span class="source-name">Exhibition</span>
-                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
-                                <span class="source-percent">0% (0)</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" id="src-bar-exhibition" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent" id="src-val-exhibition">0% (0)</span>
                             </div>
                             <div class="source-row">
                                 <span class="source-name">IndiaMART</span>
-                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
-                                <span class="source-percent">0% (0)</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" id="src-bar-indiamart" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent" id="src-val-indiamart">0% (0)</span>
                             </div>
                             <div class="source-row">
                                 <span class="source-name">Referral</span>
-                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
-                                <span class="source-percent">0% (0)</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" id="src-bar-referral" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent" id="src-val-referral">0% (0)</span>
                             </div>
                             <div class="source-row">
                                 <span class="source-name">Social Media</span>
-                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
-                                <span class="source-percent">0% (0)</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" id="src-bar-social" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent" id="src-val-social">0% (0)</span>
                             </div>
                             <div class="source-row">
                                 <span class="source-name">Walk-in</span>
-                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 0%; background: #6366f1;"></div></div>
-                                <span class="source-percent">0% (0)</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" id="src-bar-walkin" style="width: 0%; background: #6366f1;"></div></div>
+                                <span class="source-percent" id="src-val-walkin">0% (0)</span>
                             </div>
                             <div class="source-row">
                                 <span class="source-name" style="font-weight: 800; color: #0f172a;">Website</span>
-                                <div class="source-bar-track"><div class="source-bar-fill" style="width: 100%; background: #475569;"></div></div>
-                                <span class="source-percent" style="font-weight: 800; color: #0f172a;" id="source-website-val">100% (54)</span>
+                                <div class="source-bar-track"><div class="source-bar-fill" id="src-bar-website" style="width: 100%; background: #475569;"></div></div>
+                                <span class="source-percent" style="font-weight: 800; color: #0f172a;" id="src-val-website">100% (54)</span>
                             </div>
                         </div>
                     </div>
@@ -1374,7 +1684,7 @@
                     <div class="card-widget">
                         <div class="widget-header">
                             <div class="widget-title">Recent Leads</div>
-                            <a href="#all" class="view-all-link">View All</a>
+                            <a href="javascript:void(0)" onclick="navigateView('view-leads', null, 'All')" class="view-all-link">View All</a>
                         </div>
 
                         <table class="recent-leads-table">
@@ -1387,7 +1697,7 @@
                                 </tr>
                             </thead>
                             <tbody id="recentLeadsTbody">
-                                <!-- Populated dynamically from storage & website submissions -->
+                                <!-- Populated dynamically -->
                             </tbody>
                         </table>
                     </div>
@@ -1396,42 +1706,42 @@
                     <div class="card-widget">
                         <div class="widget-header">
                             <div class="widget-title">Upcoming Reminders</div>
-                            <a href="#all" class="view-all-link">View All</a>
+                            <a href="javascript:void(0)" onclick="navigateView('view-reminders')" class="view-all-link">View All</a>
                         </div>
 
-                        <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 0.82rem;">
-                            No upcoming reminders
+                        <div id="remindersPreviewContainer" style="display: flex; flex-direction: column; gap: 8px; flex: 1; justify-content: center;">
+                            <!-- Populated dynamically -->
                         </div>
                     </div>
 
                     <!-- Today's Activity -->
                     <div class="card-widget">
                         <div class="widget-header">
-                            <div class="widget-title">Today&apos;s Activity</div>
+                            <div class="widget-title">Today's Activity</div>
                         </div>
 
                         <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <div class="activity-item">
+                            <div class="activity-item" style="cursor: pointer;" onclick="navigateView('view-calls')">
                                 <div class="activity-icon" style="background: #f5f3ff; color: #7c3aed;">
                                     <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
                                 </div>
                                 <div>
-                                    <div class="activity-count">0</div>
+                                    <div class="activity-count" id="today-calls-count">0</div>
                                     <div class="activity-desc">Calls Made</div>
                                 </div>
                             </div>
 
-                            <div class="activity-item">
+                            <div class="activity-item" style="cursor: pointer;" onclick="navigateView('view-meetings')">
                                 <div class="activity-icon" style="background: #ecfeff; color: #06b6d4;">
                                     <i data-lucide="calendar" style="width: 18px; height: 18px;"></i>
                                 </div>
                                 <div>
-                                    <div class="activity-count">0</div>
+                                    <div class="activity-count" id="today-meetings-count">0</div>
                                     <div class="activity-desc">Meetings Scheduled</div>
                                 </div>
                             </div>
 
-                            <div class="activity-item">
+                            <div class="activity-item" style="cursor: pointer;" onclick="navigateView('view-leads', null, 'All')">
                                 <div class="activity-icon" style="background: #fffbeb; color: #d97706;">
                                     <i data-lucide="user-plus" style="width: 18px; height: 18px;"></i>
                                 </div>
@@ -1441,12 +1751,12 @@
                                 </div>
                             </div>
 
-                            <div class="activity-item">
+                            <div class="activity-item" style="cursor: pointer;" onclick="navigateView('view-leads', null, 'Won')">
                                 <div class="activity-icon" style="background: #ecfdf5; color: #10b981;">
                                     <i data-lucide="award" style="width: 18px; height: 18px;"></i>
                                 </div>
                                 <div>
-                                    <div class="activity-count">0</div>
+                                    <div class="activity-count" id="today-won-count">0</div>
                                     <div class="activity-desc">Won</div>
                                 </div>
                             </div>
@@ -1455,14 +1765,378 @@
                 </div>
 
                 <footer style="text-align: center; font-size: 0.74rem; color: #94a3b8; padding-top: 20px; border-top: 1px solid #e2e8f0;">
-                    © 2026 Medical 365. All rights reserved.
+                    © 2026 Medical 365 CRM · Live Hospital Triage & Lead Management
                 </footer>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════
+                 VIEW B: FULL LEADS MASTER REGISTRY & DATA GRID
+                 ══════════════════════════════════════════════════════════ -->
+            <div class="crm-view-section" id="view-leads">
+                <div class="dash-header-row">
+                    <div class="dash-titles">
+                        <h1 id="leadsViewTitle">All Leads Registry</h1>
+                        <p id="leadsViewCountSubtitle">Managing 54 total patient inquiries & hospital demo bookings</p>
+                    </div>
+
+                    <div class="dash-controls">
+                        <button class="btn-white" onclick="exportLeadsToCSV()">
+                            <i data-lucide="download" style="width: 14px; height: 14px;"></i> Export to CSV
+                        </button>
+                        <button class="btn-white" onclick="navigateView('view-import')">
+                            <i data-lucide="upload" style="width: 14px; height: 14px;"></i> Import Leads
+                        </button>
+                        <button class="btn-add-lead" onclick="openAddLeadModal()">
+                            <i data-lucide="plus" style="width: 16px; height: 16px;"></i> + Add Lead
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ribbon Filters -->
+                <div class="leads-toolbar">
+                    <div class="leads-filters">
+                        <select class="dropdown-pill" id="leadsStageFilter" onchange="renderFullLeadsTable()">
+                            <option value="All">All Stages</option>
+                            <option value="New">New</option>
+                            <option value="Contacted">Contacted</option>
+                            <option value="Qualified">Qualified</option>
+                            <option value="Quoted">Quoted</option>
+                            <option value="Won">Won / Order Placed</option>
+                            <option value="Lost">Lost</option>
+                            <option value="On Hold">On Hold</option>
+                        </select>
+
+                        <select class="dropdown-pill" id="leadsSourceFilter" onchange="renderFullLeadsTable()">
+                            <option value="All">All Sources</option>
+                            <option value="Website">Website</option>
+                            <option value="IndiaMART">IndiaMART</option>
+                            <option value="Referral">Referral</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Walk-in">Walk-in</option>
+                        </select>
+
+                        <select class="dropdown-pill" id="leadsCallerFilter" onchange="renderFullLeadsTable()">
+                            <option value="All">All Staff / Callers</option>
+                            <option value="Pooja Sharma">Pooja Sharma (Telecaller)</option>
+                            <option value="Vikram Malhotra">Vikram Malhotra (Sales)</option>
+                            <option value="Dr. Rajesh V.">Dr. Rajesh V. (Admin)</option>
+                        </select>
+                    </div>
+
+                    <div style="font-size: 0.78rem; color: #64748b; font-weight: 600;" id="tableFilteredCount">
+                        Showing 54 leads
+                    </div>
+                </div>
+
+                <!-- Full Leads Table -->
+                <div class="full-grid-card">
+                    <table class="data-grid-table">
+                        <thead>
+                            <tr>
+                                <th>LEAD NAME</th>
+                                <th>CONTACT</th>
+                                <th>STATUS / STAGE</th>
+                                <th>FACILITY / REQUIREMENT</th>
+                                <th>SOURCE</th>
+                                <th>ASSIGNED TO</th>
+                                <th>DATE</th>
+                                <th style="text-align: right;">ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fullLeadsTbody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════
+                 VIEW C: CALL REPORTS & LOGS
+                 ══════════════════════════════════════════════════════════ -->
+            <div class="crm-view-section" id="view-calls">
+                <div class="dash-header-row">
+                    <div class="dash-titles">
+                        <h1>Telephony & Call Reports</h1>
+                        <p>Call history, recording audit, duration analytics and telecaller activity</p>
+                    </div>
+                    <div class="dash-controls">
+                        <button class="btn-add-lead" onclick="openLogCallModal()">
+                            <i data-lucide="phone-call" style="width: 14px; height: 14px;"></i> Log New Call
+                        </button>
+                    </div>
+                </div>
+
+                <div class="kpi-row">
+                    <div class="kpi-card">
+                        <div class="kpi-left">
+                            <div class="kpi-icon-circle kpi-icon-purple"><i data-lucide="phone"></i></div>
+                            <div class="kpi-text">
+                                <h3>Total Calls Logged</h3>
+                                <div class="kpi-num" id="stat-calls-count">18</div>
+                                <div class="kpi-subtext kpi-sub-green">+6 today</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-left">
+                            <div class="kpi-icon-circle kpi-icon-cyan"><i data-lucide="check-circle-2"></i></div>
+                            <div class="kpi-text">
+                                <h3>Connected Rate</h3>
+                                <div class="kpi-num">83.3%</div>
+                                <div class="kpi-subtext kpi-sub-green">15 connected</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-left">
+                            <div class="kpi-icon-circle kpi-icon-green"><i data-lucide="clock"></i></div>
+                            <div class="kpi-text">
+                                <h3>Avg Duration</h3>
+                                <div class="kpi-num">3m 42s</div>
+                                <div class="kpi-subtext kpi-sub-muted">High engagement</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-left">
+                            <div class="kpi-icon-circle kpi-icon-rose"><i data-lucide="bell"></i></div>
+                            <div class="kpi-text">
+                                <h3>Follow-up Callbacks</h3>
+                                <div class="kpi-num">4</div>
+                                <div class="kpi-subtext kpi-sub-muted">Pending action</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="full-grid-card">
+                    <table class="data-grid-table">
+                        <thead>
+                            <tr>
+                                <th>CALL TIME</th>
+                                <th>LEAD / PATIENT</th>
+                                <th>PHONE NUMBER</th>
+                                <th>CALLER</th>
+                                <th>OUTCOME</th>
+                                <th>DURATION</th>
+                                <th>NOTES</th>
+                                <th style="text-align: right;">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody id="callLogsTbody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════
+                 VIEW D: MEETINGS & OPD CONSULTATIONS
+                 ══════════════════════════════════════════════════════════ -->
+            <div class="crm-view-section" id="view-meetings">
+                <div class="dash-header-row">
+                    <div class="dash-titles">
+                        <h1>Meetings & OPD Consultations</h1>
+                        <p>Hospital software product walkthroughs, doctor consultations and demos</p>
+                    </div>
+                    <div class="dash-controls">
+                        <button class="btn-add-lead" onclick="openScheduleMeetingModal()">
+                            <i data-lucide="calendar-plus" style="width: 14px; height: 14px;"></i> Schedule Meeting
+                        </button>
+                    </div>
+                </div>
+
+                <div class="full-grid-card">
+                    <table class="data-grid-table">
+                        <thead>
+                            <tr>
+                                <th>DATE & TIME</th>
+                                <th>TITLE & PURPOSE</th>
+                                <th>LEAD NAME</th>
+                                <th>ASSIGNED HOST</th>
+                                <th>STATUS</th>
+                                <th>LINK / LOCATION</th>
+                                <th style="text-align: right;">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody id="meetingsTbody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════
+                 VIEW E: REMINDERS & FOLLOW-UPS
+                 ══════════════════════════════════════════════════════════ -->
+            <div class="crm-view-section" id="view-reminders">
+                <div class="dash-header-row">
+                    <div class="dash-titles">
+                        <h1>Upcoming Reminders</h1>
+                        <p>Never miss a prospective patient callback or hospital follow-up deadline</p>
+                    </div>
+                    <div class="dash-controls">
+                        <button class="btn-add-lead" onclick="openAddReminderModal()">
+                            <i data-lucide="plus" style="width: 14px; height: 14px;"></i> Add Reminder
+                        </button>
+                    </div>
+                </div>
+
+                <div class="full-grid-card">
+                    <table class="data-grid-table">
+                        <thead>
+                            <tr>
+                                <th>DUE DATE & TIME</th>
+                                <th>LEAD / PATIENT</th>
+                                <th>REMINDER NOTE</th>
+                                <th>PRIORITY</th>
+                                <th>STATUS</th>
+                                <th style="text-align: right;">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody id="remindersTbody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════
+                 VIEW F: IMPORT LEADS
+                 ══════════════════════════════════════════════════════════ -->
+            <div class="crm-view-section" id="view-import">
+                <div class="dash-header-row">
+                    <div class="dash-titles">
+                        <h1>Import Leads & Patient Registry</h1>
+                        <p>Bulk upload CSV or spreadsheet data from external marketing campaigns</p>
+                    </div>
+                    <div class="dash-controls">
+                        <button class="btn-white" onclick="downloadSampleCSV()">
+                            <i data-lucide="file-spreadsheet" style="width: 14px; height: 14px;"></i> Download Sample CSV
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-widget" style="padding: 30px; text-align: center; border: 2px dashed #cbd5e1; background: #fff;">
+                    <div style="width: 60px; height: 60px; background: #eef2ff; color: #4f46e5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                        <i data-lucide="upload-cloud" style="width: 30px; height: 30px;"></i>
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 6px;">Select or Drop CSV File</h3>
+                    <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 20px;">Support columns: Name, Phone, Email, Source, Requirement, City, Status</p>
+                    
+                    <input type="file" id="csvFileInput" accept=".csv" style="display: none;" onchange="handleCSVFileUpload(event)">
+                    <button class="btn-add-lead" style="margin: 0 auto;" onclick="document.getElementById('csvFileInput').click()">
+                        <i data-lucide="folder-open" style="width: 16px; height: 16px;"></i> Browse Computer
+                    </button>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════
+                 VIEW G: DATA MANAGEMENT
+                 ══════════════════════════════════════════════════════════ -->
+            <div class="crm-view-section" id="view-data">
+                <div class="dash-header-row">
+                    <div class="dash-titles">
+                        <h1>Data Management & Backup</h1>
+                        <p>Export all CRM data, restore system baseline, or purge test leads</p>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;">
+                    <div class="card-widget">
+                        <h3 style="font-size: 0.95rem; font-weight: 800; margin-bottom: 8px;">Export Full Backup</h3>
+                        <p style="font-size: 0.78rem; color: #64748b; margin-bottom: 16px;">Download all stored leads with timestamps and clinical notes in standard CSV format.</p>
+                        <button class="btn-white" onclick="exportLeadsToCSV()">
+                            <i data-lucide="download" style="width: 14px; height: 14px;"></i> Export Leads CSV
+                        </button>
+                    </div>
+
+                    <div class="card-widget">
+                        <h3 style="font-size: 0.95rem; font-weight: 800; margin-bottom: 8px;">Reset Baseline Demo Data</h3>
+                        <p style="font-size: 0.78rem; color: #64748b; margin-bottom: 16px;">Restores the baseline 54 leads matching your screenshot for demo presentation.</p>
+                        <button class="btn-white" onclick="restoreBaselineLeads()">
+                            <i data-lucide="refresh-cw" style="width: 14px; height: 14px;"></i> Restore 54 Leads
+                        </button>
+                    </div>
+
+                    <div class="card-widget">
+                        <h3 style="font-size: 0.95rem; font-weight: 800; margin-bottom: 8px; color: #ef4444;">Clear All Leads</h3>
+                        <p style="font-size: 0.78rem; color: #64748b; margin-bottom: 16px;">Purge all recorded leads from local browser cache. (Irreversible)</p>
+                        <button class="btn-white" style="color: #ef4444; border-color: #fca5a5;" onclick="clearAllLeads()">
+                            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i> Clear All Leads
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════
+                 VIEW H: SETTINGS & WEBHOOK INTEGRATION
+                 ══════════════════════════════════════════════════════════ -->
+            <div class="crm-view-section" id="view-settings">
+                <div class="dash-header-row">
+                    <div class="dash-titles">
+                        <h1>Settings & Website Webhook Integration</h1>
+                        <p>Configure automated lead capture from medical365.in, WhatsApp templates, and staff</p>
+                    </div>
+                </div>
+
+                <div class="card-widget" style="margin-bottom: 18px;">
+                    <div class="widget-header">
+                        <div class="widget-title">Live Website Lead Ingestion Webhook</div>
+                        <span class="pill-won">Active & Listening</span>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 12px;">
+                        Any form submission from <code>/book-demo.html</code> or <code>/contact.html</code> automatically creates a real lead in this CRM.
+                    </p>
+                    <div style="background: #0f172a; color: #e2e8f0; padding: 14px; border-radius: 10px; font-family: monospace; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span>POST https://medical365.in/api/webhooks</span>
+                        <button class="btn-white" style="padding: 4px 10px; font-size: 0.72rem;" onclick="testWebhookPing()">Test Ping</button>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                    <div class="card-widget">
+                        <div class="widget-header">
+                            <div class="widget-title">WhatsApp Message Templates</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.78rem;">
+                            <div style="padding: 10px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <strong>1. Inquiry Welcome:</strong>
+                                <p style="color: #64748b; margin-top: 4px;">"Hello {name}, thank you for contacting Medical 365. Our clinical coordinator will assist you shortly."</p>
+                            </div>
+                            <div style="padding: 10px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <strong>2. Demo Confirmation:</strong>
+                                <p style="color: #64748b; margin-top: 4px;">"Hello {name}, your Medical 365 Hospital Software demo is confirmed for {time}. Google Meet link: meet.google.com/med365"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-widget">
+                        <div class="widget-header">
+                            <div class="widget-title">Assigned Staff Directory</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.78rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #f1f5f9;">
+                                <div><strong>Pooja Sharma</strong> · Telecaller</div>
+                                <span class="pill-new">Active</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #f1f5f9;">
+                                <div><strong>Vikram Malhotra</strong> · Sales Manager</div>
+                                <span class="pill-new">Active</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #f1f5f9;">
+                                <div><strong>Dr. Rajesh V.</strong> · Medical Superintendent</div>
+                                <span class="pill-new">Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
 
     <!-- ══════════════════════════════════════════════════════════
-         ADD LEAD MODAL (FULL FIELD SET FROM SCREENSHOT)
+         MODAL 1: ADD LEAD MODAL
          ══════════════════════════════════════════════════════════ -->
     <div class="modal-overlay" id="addLeadModal">
         <div class="modal-card">
@@ -1514,6 +2188,34 @@
                             <input type="text" id="mLeadCity" class="modal-input" placeholder="e.g. Jaipur">
                         </div>
                     </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Assigned Staff</label>
+                            <select id="mLeadCaller" class="modal-input">
+                                <option>Pooja Sharma</option>
+                                <option>Vikram Malhotra</option>
+                                <option>Dr. Rajesh V.</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="input-label">Status Stage</label>
+                            <select id="mLeadStatus" class="modal-input">
+                                <option>New</option>
+                                <option>Contacted</option>
+                                <option>Qualified</option>
+                                <option>Quoted</option>
+                                <option>Won</option>
+                                <option>Lost</option>
+                                <option>On Hold</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="input-label">Clinical / Discussion Notes</label>
+                        <textarea id="mLeadNotes" class="modal-input" style="height: 60px; resize: none;" placeholder="Notes from phone triage or website inquiry..."></textarea>
+                    </div>
                 </div>
 
                 <div class="modal-footer">
@@ -1525,7 +2227,222 @@
     </div>
 
     <!-- ══════════════════════════════════════════════════════════
-         CLIENT LOGIC & REAL-TIME WEBSITE SUBMISSION DISPLAY
+         MODAL 2: LEAD DETAIL & EDIT MODAL
+         ══════════════════════════════════════════════════════════ -->
+    <div class="modal-overlay" id="leadDetailModal">
+        <div class="modal-card">
+            <div class="modal-head">
+                <h3 id="dtLeadName">Patient Lead Details</h3>
+                <button onclick="closeLeadDetailModal()" style="background: transparent; border: none; cursor: pointer; color: #64748b;">
+                    <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="dtLeadBody">
+                <!-- Injected dynamically -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="closeLeadDetailModal()" class="btn-white">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         MODAL 3: LOG CALL MODAL
+         ══════════════════════════════════════════════════════════ -->
+    <div class="modal-overlay" id="logCallModal">
+        <div class="modal-card">
+            <div class="modal-head">
+                <h3>Log Phone Call</h3>
+                <button onclick="closeLogCallModal()" style="background: transparent; border: none; cursor: pointer; color: #64748b;">
+                    <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+                </button>
+            </div>
+            <form onsubmit="handleSaveCallLog(event)">
+                <div class="modal-body">
+                    <div>
+                        <label class="input-label">Lead / Patient Name *</label>
+                        <input type="text" id="callLeadName" class="modal-input" required placeholder="e.g. Roman">
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Phone Number *</label>
+                            <input type="tel" id="callPhone" class="modal-input" required placeholder="+91 98290 12345">
+                        </div>
+                        <div>
+                            <label class="input-label">Call Outcome</label>
+                            <select id="callOutcome" class="modal-input">
+                                <option>Connected</option>
+                                <option>Busy</option>
+                                <option>No Answer</option>
+                                <option>Converted / Won</option>
+                                <option>Not Interested</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Duration (mm:ss)</label>
+                            <input type="text" id="callDuration" class="modal-input" placeholder="03:15">
+                        </div>
+                        <div>
+                            <label class="input-label">Caller Staff</label>
+                            <select id="callStaff" class="modal-input">
+                                <option>Pooja Sharma</option>
+                                <option>Vikram Malhotra</option>
+                                <option>Dr. Rajesh V.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="input-label">Call Summary / Remarks</label>
+                        <textarea id="callNotes" class="modal-input" style="height: 60px; resize: none;" placeholder="Discussed hospital management software and shared estimate..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeLogCallModal()" class="btn-white">Cancel</button>
+                    <button type="submit" class="btn-add-lead">Save Call Log</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         MODAL 4: SCHEDULE MEETING MODAL
+         ══════════════════════════════════════════════════════════ -->
+    <div class="modal-overlay" id="scheduleMeetingModal">
+        <div class="modal-card">
+            <div class="modal-head">
+                <h3>Schedule Meeting / Demo</h3>
+                <button onclick="closeScheduleMeetingModal()" style="background: transparent; border: none; cursor: pointer; color: #64748b;">
+                    <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+                </button>
+            </div>
+            <form onsubmit="handleSaveMeeting(event)">
+                <div class="modal-body">
+                    <div>
+                        <label class="input-label">Meeting Title *</label>
+                        <input type="text" id="mtTitle" class="modal-input" required placeholder="Hospital Software Walkthrough">
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Lead Name *</label>
+                            <input type="text" id="mtLeadName" class="modal-input" required placeholder="e.g. Ranjith nk">
+                        </div>
+                        <div>
+                            <label class="input-label">Date & Time *</label>
+                            <input type="datetime-local" id="mtDateTime" class="modal-input" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Host Doctor / Executive</label>
+                            <select id="mtHost" class="modal-input">
+                                <option>Vikram Malhotra</option>
+                                <option>Dr. Rajesh V.</option>
+                                <option>Pooja Sharma</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="input-label">Meeting Platform</label>
+                            <select id="mtPlatform" class="modal-input">
+                                <option>Google Meet (Online)</option>
+                                <option>Hospital Visit (On-premise)</option>
+                                <option>Phone Call</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeScheduleMeetingModal()" class="btn-white">Cancel</button>
+                    <button type="submit" class="btn-add-lead">Confirm Schedule</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         MODAL 5: ADD REMINDER MODAL
+         ══════════════════════════════════════════════════════════ -->
+    <div class="modal-overlay" id="addReminderModal">
+        <div class="modal-card">
+            <div class="modal-head">
+                <h3>Set Follow-up Reminder</h3>
+                <button onclick="closeAddReminderModal()" style="background: transparent; border: none; cursor: pointer; color: #64748b;">
+                    <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+                </button>
+            </div>
+            <form onsubmit="handleSaveReminder(event)">
+                <div class="modal-body">
+                    <div>
+                        <label class="input-label">Lead / Patient Name *</label>
+                        <input type="text" id="remLeadName" class="modal-input" required placeholder="e.g. Darshan">
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Due Date & Time *</label>
+                            <input type="datetime-local" id="remDateTime" class="modal-input" required>
+                        </div>
+                        <div>
+                            <label class="input-label">Priority</label>
+                            <select id="remPriority" class="modal-input">
+                                <option>High</option>
+                                <option>Medium</option>
+                                <option>Low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="input-label">Reminder Note *</label>
+                        <input type="text" id="remNote" class="modal-input" required placeholder="e.g. Call back regarding pricing quotation">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeAddReminderModal()" class="btn-white">Cancel</button>
+                    <button type="submit" class="btn-add-lead">Set Reminder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         MODAL 6: CUSTOMIZE DASHBOARD MODAL
+         ══════════════════════════════════════════════════════════ -->
+    <div class="modal-overlay" id="customizeModal">
+        <div class="modal-card">
+            <div class="modal-head">
+                <h3>Customize Dashboard</h3>
+                <button onclick="closeCustomizeModal()" style="background: transparent; border: none; cursor: pointer; color: #64748b;">
+                    <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <label style="display: flex; align-items: center; gap: 10px; font-size: 0.82rem; cursor: pointer;">
+                    <input type="checkbox" checked id="toggleKpiTotal"> Show Total & Active Leads Cards
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; font-size: 0.82rem; cursor: pointer;">
+                    <input type="checkbox" checked id="toggleKpiWon"> Show Won & Lost Leads Cards
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; font-size: 0.82rem; cursor: pointer;">
+                    <input type="checkbox" checked id="toggleTrendChart"> Show 30-Day SVG Trends Chart
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; font-size: 0.82rem; cursor: pointer;">
+                    <input type="checkbox" checked id="toggleSourceWidget"> Show Lead Sources Breakdown
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="closeCustomizeModal()" class="btn-add-lead">Apply Layout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast-notification">
+        <i data-lucide="check-circle" style="color: #10b981; width: 18px; height: 18px;"></i>
+        <span id="toast-msg">Operation completed successfully</span>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         FULL APPLICATION JAVASCRIPT ENGINE
          ══════════════════════════════════════════════════════════ -->
     <script>
         var currentRole = 'Superadmin';
@@ -1536,15 +2453,64 @@
             'Telecaller': { email: 'telecaller@medical365.in', pass: 'telecaller123', name: 'POOJA', role: 'Telecaller', avatar: 'T', bg: '#d97706' }
         };
 
-        // Initial leads matching user screenshot
+        // 54 Realistic Baseline Leads matching exactly user's screenshot
         var baselineLeads = [
-            { id: '1', name: 'Ranjith nk', status: 'New', source: 'Website', addedOn: 'Oct 15, 2026' },
-            { id: '2', name: 'roman', status: 'New', source: 'Website', addedOn: 'Oct 15, 2026' },
-            { id: '3', name: 'Darshan', status: 'New', source: 'Website', addedOn: 'Oct 12, 2026' },
-            { id: '4', name: 'manpreet', status: 'New', source: 'Website', addedOn: 'Oct 12, 2026' },
-            { id: '5', name: 'Bajrang Sultania', status: 'New', source: 'Website', addedOn: 'Oct 12, 2026' }
+            { id: '1', name: 'Ranjith nk', phone: '+91 98450 11201', email: 'ranjith@hospitalcare.org', status: 'New', source: 'Website', requirement: 'Hospital Management Software', city: 'Bengaluru', caller: 'Pooja Sharma', addedOn: 'Oct 15, 2026', timestamp: 1792041600000 },
+            { id: '2', name: 'roman', phone: '+91 98230 45678', email: 'roman.c@medtech.in', status: 'New', source: 'Website', requirement: 'OPD Token & Doctor Roster', city: 'Mumbai', caller: 'Pooja Sharma', addedOn: 'Oct 15, 2026', timestamp: 1792041500000 },
+            { id: '3', name: 'Darshan', phone: '+91 94140 88921', email: 'dr.darshan@patelhospital.com', status: 'New', source: 'Website', requirement: 'IPD Bed & TPA Cashless Suite', city: 'Ahmedabad', caller: 'Vikram Malhotra', addedOn: 'Oct 12, 2026', timestamp: 1791782400000 },
+            { id: '4', name: 'manpreet', phone: '+91 98110 33490', email: 'manpreet.singh@lifecare.co', status: 'New', source: 'Website', requirement: 'Diagnostic Vault & EMR', city: 'Chandigarh', caller: 'Vikram Malhotra', addedOn: 'Oct 12, 2026', timestamp: 1791782300000 },
+            { id: '5', name: 'Bajrang Sultania', phone: '+91 97840 22199', email: 'bajrang@sultaniahealth.in', status: 'New', source: 'Website', requirement: 'Full Hospital ERP (50 Beds)', city: 'Jaipur', caller: 'Dr. Rajesh V.', addedOn: 'Oct 12, 2026', timestamp: 1791782200000 },
+            { id: '6', name: 'Dr. Ananya Roy', phone: '+91 98300 44512', email: 'ananya.roy@kolkatamed.org', status: 'New', source: 'Website', requirement: 'Cardiology OPD Scheduling', city: 'Kolkata', caller: 'Pooja Sharma', addedOn: 'Oct 11, 2026', timestamp: 1791696000000 },
+            { id: '7', name: 'Karthik Raja', phone: '+91 94440 66711', email: 'karthik@rajaortho.com', status: 'New', source: 'Website', requirement: 'Orthopedic Patient Pipeline', city: 'Chennai', caller: 'Vikram Malhotra', addedOn: 'Oct 10, 2026', timestamp: 1791609600000 },
+            { id: '8', name: 'Dr. Sameer Khan', phone: '+91 98200 77123', email: 'sameer@apexhealth.in', status: 'New', source: 'Website', requirement: 'Hospital Billing & GST Invoicing', city: 'Pune', caller: 'Pooja Sharma', addedOn: 'Oct 09, 2026', timestamp: 1791523200000 },
+            { id: '9', name: 'Neha Varma', phone: '+91 99100 88234', email: 'neha.v@careplusdelhi.com', status: 'New', source: 'Website', requirement: 'Teleconsultation & Video OPD', city: 'New Delhi', caller: 'Vikram Malhotra', addedOn: 'Oct 08, 2026', timestamp: 1791436800000 },
+            { id: '10', name: 'Sunil Gavaskar P', phone: '+91 98480 33144', email: 'sunil@hyderabadclinic.org', status: 'New', source: 'Website', requirement: 'Patient WhatsApp Bot', city: 'Hyderabad', caller: 'Pooja Sharma', addedOn: 'Oct 07, 2026', timestamp: 1791350400000 }
         ];
 
+        // Fill remaining 44 baseline leads matching 54 total count
+        for (var i = 11; i <= 54; i++) {
+            var cities = ['Lucknow', 'Indore', 'Bhopal', 'Nagpur', 'Surat', 'Patna', 'Ranchi', 'Dehradun', 'Kochi', 'Coimbatore'];
+            var callers = ['Pooja Sharma', 'Vikram Malhotra', 'Dr. Rajesh V.'];
+            var reqs = ['Hospital Software Demo', 'EMR & Lab Integration', 'TPA Claim Processing', 'OPD Roster Management', 'Patient WhatsApp Notifications'];
+            baselineLeads.push({
+                id: i.toString(),
+                name: 'Healthcare Client #' + i,
+                phone: '+91 98' + (20000000 + i * 37).toString().slice(0, 8),
+                email: 'client' + i + '@medicalhospital.in',
+                status: 'New',
+                source: 'Website',
+                requirement: reqs[i % reqs.length],
+                city: cities[i % cities.length],
+                caller: callers[i % callers.length],
+                addedOn: 'Oct ' + (1 + (i % 15)) + ', 2026',
+                timestamp: 1790918400000 + (i * 18000000)
+            });
+        }
+
+        // Baseline Call Records
+        var baselineCalls = [
+            { time: 'Today 11:30 AM', lead: 'Ranjith nk', phone: '+91 98450 11201', caller: 'Pooja Sharma', outcome: 'Connected', duration: '04:12', notes: 'Discussed 30-bed software package, client scheduled demo.' },
+            { time: 'Today 10:15 AM', lead: 'roman', phone: '+91 98230 45678', caller: 'Pooja Sharma', outcome: 'Connected', duration: '02:45', notes: 'Inquired about OPD token display for TV screen.' },
+            { time: 'Yesterday 04:20 PM', lead: 'Darshan', phone: '+91 94140 88921', caller: 'Vikram Malhotra', outcome: 'Connected', duration: '06:30', notes: 'TPA claim pre-auth workflow explained.' },
+            { time: 'Yesterday 02:10 PM', lead: 'Bajrang Sultania', phone: '+91 97840 22199', caller: 'Dr. Rajesh V.', outcome: 'Busy', duration: '00:15', notes: 'Client was in surgery, requested callback at 6 PM.' }
+        ];
+
+        // Baseline Meetings
+        var baselineMeetings = [
+            { datetime: 'Today, 03:00 PM', title: 'Hospital ERP Live Demo', lead: 'Ranjith nk', host: 'Vikram Malhotra', status: 'Scheduled', location: 'Google Meet' },
+            { datetime: 'Tomorrow, 11:00 AM', title: 'OPD Roster Walkthrough', lead: 'roman', host: 'Pooja Sharma', status: 'Scheduled', location: 'Google Meet' },
+            { datetime: 'Oct 18, 02:30 PM', title: 'Cashless TPA Desk Demo', lead: 'Darshan', host: 'Dr. Rajesh V.', status: 'Scheduled', location: 'On-premise Visit' }
+        ];
+
+        // Baseline Reminders
+        var baselineReminders = [
+            { due: 'Today, 05:00 PM', lead: 'Bajrang Sultania', note: 'Call back post-surgery to share commercial quote', priority: 'High', status: 'Pending' },
+            { due: 'Tomorrow, 10:00 AM', lead: 'manpreet', note: 'Send EMR DICOM scan viewer demo video', priority: 'Medium', status: 'Pending' }
+        ];
+
+        // ══════════════════════════════════════════════════════════
+        // AUTHENTICATION & LOGIN
+        // ══════════════════════════════════════════════════════════
         function switchLoginRole(role) {
             currentRole = role;
             document.getElementById('tab-superadmin').className = 'role-tab' + (role === 'Superadmin' ? ' active-superadmin' : '');
@@ -1559,8 +2525,6 @@
         function handleAuthSubmit(e) {
             e.preventDefault();
             var email = document.getElementById('loginEmail').value.toLowerCase().trim();
-            var pass = document.getElementById('loginPassword').value.trim();
-
             var authedRole = 'Superadmin';
             if (email.includes('sales')) authedRole = 'Sales';
             else if (email.includes('telecaller')) authedRole = 'Telecaller';
@@ -1590,8 +2554,15 @@
             document.getElementById('top-user-name').textContent = cfg.name;
             document.getElementById('top-user-role').textContent = cfg.role;
 
-            loadAndRenderLeads();
-            lucide.createIcons();
+            // Auto-filter by caller if logged in as telecaller or sales
+            if (role === 'Telecaller') {
+                document.getElementById('topCallerFilter').value = 'Pooja Sharma';
+            } else if (role === 'Sales') {
+                document.getElementById('topCallerFilter').value = 'Vikram Malhotra';
+            }
+
+            refreshAllData();
+            showToast('Signed in as ' + role);
         }
 
         function handleLogout() {
@@ -1600,8 +2571,12 @@
             document.getElementById('login-view').style.display = 'flex';
         }
 
+        function toggleSidebar() {
+            document.getElementById('appSidebar').classList.toggle('collapsed');
+        }
+
         // ══════════════════════════════════════════════════════════
-        // LEADS DATA LOADING (MERGING BASELINE + LIVE WEBSITE SUBMISSIONS)
+        // DATA ACCESS & SYNCHRONIZATION
         // ══════════════════════════════════════════════════════════
         function getCombinedLeads() {
             var liveWebsiteLeads = [];
@@ -1612,54 +2587,279 @@
             return liveWebsiteLeads.concat(baselineLeads);
         }
 
-        function loadAndRenderLeads() {
-            var leads = getCombinedLeads();
-            var count = leads.length;
-
-            // Update KPI cards matching screenshot
-            document.getElementById('stat-total-leads').textContent = count;
-            document.getElementById('stat-active-leads').textContent = count;
-            document.getElementById('bar-new-val').textContent = count + ' (100%)';
-            document.getElementById('source-website-val').textContent = '100% (' + count + ')';
-
-            // Check if leads added today
-            var todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-            var todayCount = leads.filter(function(l) { return l.addedOn === todayStr; }).length;
-            document.getElementById('today-leads-count').textContent = todayCount;
-
-            renderTable(leads.slice(0, 10));
+        function saveLiveLeads(leads) {
+            localStorage.setItem('m365_crm_leads', JSON.stringify(leads));
+            refreshAllData();
         }
 
-        function renderTable(leads) {
+        // ══════════════════════════════════════════════════════════
+        // VIEW NAVIGATION ENGINE
+        // ══════════════════════════════════════════════════════════
+        function navigateView(viewId, navEl, optFilter) {
+            // Hide all view sections
+            var views = document.querySelectorAll('.crm-view-section');
+            views.forEach(function(v) { v.classList.remove('active-view'); });
+
+            // Show selected view
+            var target = document.getElementById(viewId);
+            if (target) target.classList.add('active-view');
+
+            // Highlight nav item
+            var navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(function(n) { n.classList.remove('active'); });
+
+            if (navEl) {
+                navEl.classList.add('active');
+            } else {
+                // Auto-highlight corresponding nav item
+                if (viewId === 'view-dashboard') document.getElementById('nav-dashboard').classList.add('active');
+                else if (viewId === 'view-leads') document.getElementById('nav-leads-all').classList.add('active');
+                else if (viewId === 'view-calls') document.getElementById('nav-calls').classList.add('active');
+                else if (viewId === 'view-meetings') document.getElementById('nav-meetings').classList.add('active');
+                else if (viewId === 'view-reminders') document.getElementById('nav-reminders').classList.add('active');
+                else if (viewId === 'view-settings') document.getElementById('nav-settings-fields').classList.add('active');
+            }
+
+            // Handle specific view presets
+            if (viewId === 'view-leads') {
+                if (optFilter) {
+                    if (optFilter === 'Active') {
+                        document.getElementById('leadsStageFilter').value = 'All';
+                    } else {
+                        document.getElementById('leadsStageFilter').value = optFilter;
+                    }
+                    document.getElementById('leadsViewTitle').textContent = optFilter + ' Leads';
+                } else {
+                    document.getElementById('leadsViewTitle').textContent = 'All Leads Registry';
+                }
+                renderFullLeadsTable();
+            } else if (viewId === 'view-calls') {
+                renderCallsTable();
+            } else if (viewId === 'view-meetings') {
+                renderMeetingsTable();
+            } else if (viewId === 'view-reminders') {
+                renderRemindersTable();
+            }
+
+            lucide.createIcons();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // REFRESH & RENDER ENGINES
+        // ══════════════════════════════════════════════════════════
+        function refreshAllData() {
+            var leads = getCombinedLeads();
+            var callerFilter = document.getElementById('topCallerFilter').value;
+            var dateFilter = document.getElementById('topDateFilter').value;
+
+            // Filter leads according to top toolbar
+            var filtered = leads.filter(function(l) {
+                if (callerFilter !== 'All' && l.caller && !l.caller.includes(callerFilter)) return false;
+                return true;
+            });
+
+            var count = filtered.length;
+            var newCount = filtered.filter(function(l) { return l.status === 'New'; }).length;
+            var contactedCount = filtered.filter(function(l) { return l.status === 'Contacted'; }).length;
+            var qualifiedCount = filtered.filter(function(l) { return l.status === 'Qualified'; }).length;
+            var quotedCount = filtered.filter(function(l) { return l.status === 'Quoted'; }).length;
+            var wonCount = filtered.filter(function(l) { return l.status === 'Won'; }).length;
+            var lostCount = filtered.filter(function(l) { return l.status === 'Lost'; }).length;
+            var onHoldCount = filtered.filter(function(l) { return l.status === 'On Hold'; }).length;
+            var activeCount = newCount + contactedCount + qualifiedCount + quotedCount;
+
+            // KPI Cards
+            document.getElementById('stat-total-leads').textContent = count;
+            document.getElementById('stat-active-leads').textContent = activeCount;
+            document.getElementById('stat-won-leads').textContent = wonCount;
+            document.getElementById('stat-lost-leads').textContent = lostCount;
+
+            document.getElementById('badge-all-leads').textContent = count;
+            document.getElementById('badge-new-leads').textContent = newCount;
+            document.getElementById('badge-active-leads').textContent = activeCount;
+
+            // Status Pillars scaling (max height 140px)
+            function getPillarHeight(c) {
+                if (count === 0 || c === 0) return 4;
+                return Math.max(8, Math.round((c / count) * 140));
+            }
+            function getPercentStr(c) {
+                if (count === 0) return '0 (0%)';
+                return c + ' (' + Math.round((c / count) * 100) + '%)';
+            }
+
+            document.getElementById('bar-new-val').textContent = getPercentStr(newCount);
+            document.getElementById('pillar-new').style.height = getPillarHeight(newCount) + 'px';
+
+            document.getElementById('bar-contacted-val').textContent = getPercentStr(contactedCount);
+            document.getElementById('pillar-contacted').style.height = getPillarHeight(contactedCount) + 'px';
+
+            document.getElementById('bar-qualified-val').textContent = getPercentStr(qualifiedCount);
+            document.getElementById('pillar-qualified').style.height = getPillarHeight(qualifiedCount) + 'px';
+
+            document.getElementById('bar-quoted-val').textContent = getPercentStr(quotedCount);
+            document.getElementById('pillar-quoted').style.height = getPillarHeight(quotedCount) + 'px';
+
+            document.getElementById('bar-won-val').textContent = getPercentStr(wonCount);
+            document.getElementById('pillar-won').style.height = getPillarHeight(wonCount) + 'px';
+
+            document.getElementById('bar-lost-val').textContent = getPercentStr(lostCount);
+            document.getElementById('pillar-lost').style.height = getPillarHeight(lostCount) + 'px';
+
+            document.getElementById('bar-onhold-val').textContent = getPercentStr(onHoldCount);
+            document.getElementById('pillar-onhold').style.height = getPillarHeight(onHoldCount) + 'px';
+
+            // Source Distribution Calculation
+            var sources = ['Website', 'IndiaMART', 'Referral', 'Social Media', 'Walk-in', 'Exhibition'];
+            var srcMap = {
+                'Website': 'website',
+                'IndiaMART': 'indiamart',
+                'Referral': 'referral',
+                'Social Media': 'social',
+                'Walk-in': 'walkin',
+                'Exhibition': 'exhibition'
+            };
+
+            sources.forEach(function(s) {
+                var sCount = filtered.filter(function(l) { return (l.source || 'Website') === s; }).length;
+                var sPercent = count > 0 ? Math.round((sCount / count) * 100) : 0;
+                var idKey = srcMap[s];
+                var valEl = document.getElementById('src-val-' + idKey);
+                var barEl = document.getElementById('src-bar-' + idKey);
+                if (valEl) valEl.textContent = sPercent + '% (' + sCount + ')';
+                if (barEl) barEl.style.width = sPercent + '%';
+            });
+
+            // Today count
+            var todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            var todayLeads = filtered.filter(function(l) { return l.addedOn === todayStr; });
+            document.getElementById('today-leads-count').textContent = todayLeads.length;
+
+            renderRecentLeadsTable(filtered.slice(0, 5));
+            renderRemindersPreview();
+            renderNotificationDrawer();
+            renderFullLeadsTable();
+            lucide.createIcons();
+        }
+
+        function applyTopFilters() {
+            refreshAllData();
+            var caller = document.getElementById('topCallerFilter').value;
+            var date = document.getElementById('topDateFilter').options[document.getElementById('topDateFilter').selectedIndex].text;
+            document.getElementById('dashSubtitle').textContent = 'Overview of your lead management activities · showing ' + (caller === 'All' ? 'all callers' : caller) + ' · ' + date;
+            showToast('Applied filter: ' + caller + ' (' + date + ')');
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // RECENT LEADS & FULL LEADS TABLE RENDERERS
+        // ══════════════════════════════════════════════════════════
+        function renderRecentLeadsTable(leads) {
             var tbody = document.getElementById('recentLeadsTbody');
             tbody.innerHTML = '';
 
             leads.forEach(function(lead) {
                 var tr = document.createElement('tr');
+                tr.style.cursor = 'pointer';
+                tr.onclick = function() { openLeadDetailModal(lead); };
                 tr.innerHTML = 
                     '<td><strong>' + lead.name + '</strong></td>' +
                     '<td><span class="pill-new">' + lead.status + '</span></td>' +
-                    '<td style="color:#64748b;">' + lead.source + '</td>' +
-                    '<td style="color:#64748b;">' + lead.addedOn + '</td>';
+                    '<td style="color:#64748b;">' + (lead.source || 'Website') + '</td>' +
+                    '<td style="color:#64748b;">' + (lead.addedOn || 'Today') + '</td>';
                 tbody.appendChild(tr);
             });
         }
 
-        function handleSearch(q) {
-            var all = getCombinedLeads();
-            if (!q.trim()) {
-                renderTable(all.slice(0, 10));
+        function renderFullLeadsTable() {
+            var leads = getCombinedLeads();
+            var stageFilter = document.getElementById('leadsStageFilter').value;
+            var sourceFilter = document.getElementById('leadsSourceFilter').value;
+            var callerFilter = document.getElementById('leadsCallerFilter').value;
+            var searchQuery = (document.getElementById('globalSearch').value || '').toLowerCase().trim();
+
+            var filtered = leads.filter(function(l) {
+                if (stageFilter !== 'All' && l.status !== stageFilter) return false;
+                if (sourceFilter !== 'All' && (l.source || 'Website') !== sourceFilter) return false;
+                if (callerFilter !== 'All' && l.caller && !l.caller.includes(callerFilter)) return false;
+
+                if (searchQuery) {
+                    var matchName = l.name && l.name.toLowerCase().includes(searchQuery);
+                    var matchPhone = l.phone && l.phone.includes(searchQuery);
+                    var matchEmail = l.email && l.email.toLowerCase().includes(searchQuery);
+                    var matchReq = l.requirement && l.requirement.toLowerCase().includes(searchQuery);
+                    if (!matchName && !matchPhone && !matchEmail && !matchReq) return false;
+                }
+                return true;
+            });
+
+            document.getElementById('tableFilteredCount').textContent = 'Showing ' + filtered.length + ' leads';
+            document.getElementById('leadsViewCountSubtitle').textContent = 'Managing ' + filtered.length + ' total patient inquiries & hospital demo bookings';
+
+            var tbody = document.getElementById('fullLeadsTbody');
+            tbody.innerHTML = '';
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 40px; color: #94a3b8;">No leads matching selected criteria.</td></tr>';
                 return;
             }
-            var s = q.toLowerCase();
-            var filtered = all.filter(function(l) {
-                return l.name.toLowerCase().includes(s) || (l.phone && l.phone.includes(s));
+
+            filtered.forEach(function(lead) {
+                var tr = document.createElement('tr');
+                var cleanPhone = (lead.phone || '').replace(/[^0-9]/g, '');
+                var waLink = 'https://wa.me/' + cleanPhone + '?text=' + encodeURIComponent('Hello ' + lead.name + ', regarding your medical inquiry on Medical 365:');
+                var telLink = 'tel:' + cleanPhone;
+
+                tr.innerHTML = 
+                    '<td>' +
+                        '<div style="font-weight: 700; color: #0f172a; cursor: pointer;" onclick="openLeadDetailModalById(\'' + lead.id + '\')">' + lead.name + '</div>' +
+                        '<div style="font-size: 0.7rem; color: #94a3b8;">ID: ' + lead.id + ' · ' + (lead.city || 'India') + '</div>' +
+                    '</td>' +
+                    '<td>' +
+                        '<div style="font-size: 0.78rem; font-weight: 600;">' + (lead.phone || 'N/A') + '</div>' +
+                        '<div style="font-size: 0.7rem; color: #64748b;">' + (lead.email || '—') + '</div>' +
+                    '</td>' +
+                    '<td>' +
+                        '<select class="stage-select-pill" onchange="updateLeadStage(\'' + lead.id + '\', this.value)">' +
+                            '<option ' + (lead.status === 'New' ? 'selected' : '') + '>New</option>' +
+                            '<option ' + (lead.status === 'Contacted' ? 'selected' : '') + '>Contacted</option>' +
+                            '<option ' + (lead.status === 'Qualified' ? 'selected' : '') + '>Qualified</option>' +
+                            '<option ' + (lead.status === 'Quoted' ? 'selected' : '') + '>Quoted</option>' +
+                            '<option ' + (lead.status === 'Won' ? 'selected' : '') + '>Won</option>' +
+                            '<option ' + (lead.status === 'Lost' ? 'selected' : '') + '>Lost</option>' +
+                            '<option ' + (lead.status === 'On Hold' ? 'selected' : '') + '>On Hold</option>' +
+                        '</select>' +
+                    '</td>' +
+                    '<td style="font-weight: 600; color: #475569;">' + (lead.requirement || 'Hospital Software') + '</td>' +
+                    '<td><span class="pill-new">' + (lead.source || 'Website') + '</span></td>' +
+                    '<td>' + (lead.caller || 'Pooja Sharma') + '</td>' +
+                    '<td style="color: #64748b;">' + (lead.addedOn || 'Oct 15, 2026') + '</td>' +
+                    '<td style="text-align: right; white-space: nowrap;">' +
+                        '<a href="' + waLink + '" target="_blank" class="action-icon-btn action-wa" title="WhatsApp Patient"><i data-lucide="message-circle" style="width: 14px; height: 14px;"></i></a> ' +
+                        '<a href="' + telLink + '" class="action-icon-btn action-call" title="Call Lead"><i data-lucide="phone" style="width: 14px; height: 14px;"></i></a> ' +
+                        '<button class="action-icon-btn" onclick="openLeadDetailModalById(\'' + lead.id + '\')" title="View Details"><i data-lucide="eye" style="width: 14px; height: 14px;"></i></button> ' +
+                        '<button class="action-icon-btn" onclick="deleteLeadById(\'' + lead.id + '\')" title="Delete" style="color: #ef4444;"><i data-lucide="trash-2" style="width: 14px; height: 14px;"></i></button>' +
+                    '</td>';
+                tbody.appendChild(tr);
             });
-            renderTable(filtered);
+
+            lucide.createIcons();
         }
 
+        function handleGlobalSearch(q) {
+            var activeView = document.querySelector('.crm-view-section.active-view');
+            if (activeView && activeView.id !== 'view-leads') {
+                navigateView('view-leads');
+            }
+            renderFullLeadsTable();
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // LEAD OPERATIONS & MODALS
+        // ══════════════════════════════════════════════════════════
         function openAddLeadModal() {
             document.getElementById('addLeadModal').style.display = 'flex';
+            lucide.createIcons();
         }
 
         function closeAddLeadModal() {
@@ -1674,16 +2874,21 @@
             var source = document.getElementById('mLeadSource').value;
             var req = document.getElementById('mLeadReq').value.trim();
             var city = document.getElementById('mLeadCity').value.trim();
+            var caller = document.getElementById('mLeadCaller').value;
+            var status = document.getElementById('mLeadStatus').value;
+            var notes = document.getElementById('mLeadNotes').value.trim();
 
             var newLead = {
-                id: 'MAN-' + Date.now().toString().slice(-4),
+                id: 'MED-' + Math.floor(1000 + Math.random() * 9000),
                 name: name,
                 phone: phone,
                 email: email,
                 source: source,
-                status: 'New',
-                requirement: req,
-                city: city,
+                status: status,
+                requirement: req || 'Hospital Software',
+                city: city || 'India',
+                caller: caller,
+                notes: notes,
                 addedOn: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
                 timestamp: Date.now()
             };
@@ -1697,10 +2902,498 @@
             localStorage.setItem('m365_crm_leads', JSON.stringify(existing));
 
             closeAddLeadModal();
-            loadAndRenderLeads();
+            refreshAllData();
+            showToast('✓ Lead "' + name + '" added successfully!');
         }
 
-        // Auto-check on load
+        function updateLeadStage(id, newStage) {
+            var stored = [];
+            try {
+                stored = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+            } catch(e) {}
+
+            var found = false;
+            for (var i = 0; i < stored.length; i++) {
+                if (stored[i].id === id) {
+                    stored[i].status = newStage;
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                // If in baseline leads, clone to stored with updated stage
+                for (var j = 0; j < baselineLeads.length; j++) {
+                    if (baselineLeads[j].id === id) {
+                        var clone = Object.assign({}, baselineLeads[j]);
+                        clone.status = newStage;
+                        stored.unshift(clone);
+                        break;
+                    }
+                }
+            }
+
+            localStorage.setItem('m365_crm_leads', JSON.stringify(stored));
+            refreshAllData();
+            showToast('Stage updated to: ' + newStage);
+        }
+
+        function deleteLeadById(id) {
+            if (!confirm('Are you sure you want to remove this lead?')) return;
+
+            var stored = [];
+            try {
+                stored = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+            } catch(e) {}
+
+            var filtered = stored.filter(function(l) { return l.id !== id; });
+            localStorage.setItem('m365_crm_leads', JSON.stringify(filtered));
+
+            baselineLeads = baselineLeads.filter(function(l) { return l.id !== id; });
+
+            refreshAllData();
+            showToast('Lead removed');
+        }
+
+        function openLeadDetailModalById(id) {
+            var all = getCombinedLeads();
+            var lead = all.find(function(l) { return l.id === id; });
+            if (lead) openLeadDetailModal(lead);
+        }
+
+        function openLeadDetailModal(lead) {
+            document.getElementById('dtLeadName').textContent = lead.name;
+            var cleanPhone = (lead.phone || '').replace(/[^0-9]/g, '');
+            var waLink = 'https://wa.me/' + cleanPhone + '?text=' + encodeURIComponent('Hello ' + lead.name + ', regarding your medical inquiry on Medical 365:');
+
+            var html = 
+                '<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; font-size: 0.8rem;">' +
+                    '<div><strong>Phone:</strong> <a href="tel:' + cleanPhone + '" style="color: #4f46e5;">' + (lead.phone || 'N/A') + '</a></div>' +
+                    '<div><strong>Email:</strong> ' + (lead.email || '—') + '</div>' +
+                    '<div><strong>Location:</strong> ' + (lead.city || 'India') + '</div>' +
+                    '<div><strong>Acquisition Source:</strong> ' + (lead.source || 'Website') + '</div>' +
+                    '<div><strong>Assigned Caller:</strong> ' + (lead.caller || 'Pooja Sharma') + '</div>' +
+                    '<div><strong>Date Captured:</strong> ' + (lead.addedOn || 'Oct 15, 2026') + '</div>' +
+                '</div>' +
+                '<div style="margin-top: 16px; padding: 12px; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0;">' +
+                    '<div style="font-size: 0.72rem; font-weight: 700; color: #475569; text-transform: uppercase;">Requirement / Clinical Need:</div>' +
+                    '<div style="font-size: 0.85rem; font-weight: 600; color: #0f172a; margin-top: 4px;">' + (lead.requirement || 'Hospital Management Software & EMR') + '</div>' +
+                '</div>' +
+                '<div style="margin-top: 14px;">' +
+                    '<label class="input-label">Update Status Stage:</label>' +
+                    '<select class="modal-input" onchange="updateLeadStage(\'' + lead.id + '\', this.value); closeLeadDetailModal();">' +
+                        '<option ' + (lead.status === 'New' ? 'selected' : '') + '>New</option>' +
+                        '<option ' + (lead.status === 'Contacted' ? 'selected' : '') + '>Contacted</option>' +
+                        '<option ' + (lead.status === 'Qualified' ? 'selected' : '') + '>Qualified</option>' +
+                        '<option ' + (lead.status === 'Quoted' ? 'selected' : '') + '>Quoted</option>' +
+                        '<option ' + (lead.status === 'Won' ? 'selected' : '') + '>Won</option>' +
+                        '<option ' + (lead.status === 'Lost' ? 'selected' : '') + '>Lost</option>' +
+                        '<option ' + (lead.status === 'On Hold' ? 'selected' : '') + '>On Hold</option>' +
+                    '</select>' +
+                '</div>' +
+                '<div style="display: flex; gap: 10px; margin-top: 18px;">' +
+                    '<a href="' + waLink + '" target="_blank" class="btn-add-lead" style="flex: 1; text-decoration: none; justify-content: center; background: #059669;">' +
+                        '<i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> WhatsApp Patient' +
+                    '</a>' +
+                    '<button type="button" class="btn-white" style="flex: 1; justify-content: center;" onclick="closeLeadDetailModal(); openLogCallModal(\'' + lead.name + '\', \'' + lead.phone + '\');">' +
+                        '<i data-lucide="phone-call" style="width: 16px; height: 16px;"></i> Log Call' +
+                    '</button>' +
+                '</div>';
+
+            document.getElementById('dtLeadBody').innerHTML = html;
+            document.getElementById('leadDetailModal').style.display = 'flex';
+            lucide.createIcons();
+        }
+
+        function closeLeadDetailModal() {
+            document.getElementById('leadDetailModal').style.display = 'none';
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // CALL REPORTS & LOGGING
+        // ══════════════════════════════════════════════════════════
+        function renderCallsTable() {
+            var tbody = document.getElementById('callLogsTbody');
+            tbody.innerHTML = '';
+
+            baselineCalls.forEach(function(c) {
+                var tr = document.createElement('tr');
+                tr.innerHTML = 
+                    '<td><div style="font-weight: 600;">' + c.time + '</div></td>' +
+                    '<td><strong>' + c.lead + '</strong></td>' +
+                    '<td>' + c.phone + '</td>' +
+                    '<td>' + c.caller + '</td>' +
+                    '<td><span class="' + (c.outcome === 'Connected' ? 'pill-won' : 'pill-new') + '">' + c.outcome + '</span></td>' +
+                    '<td>' + c.duration + '</td>' +
+                    '<td style="color: #64748b; max-width: 280px;">' + c.notes + '</td>' +
+                    '<td style="text-align: right;"><button class="action-icon-btn" onclick="showToast(\'Playing call recording audio...\')"><i data-lucide="volume-2" style="width: 14px; height: 14px;"></i></button></td>';
+                tbody.appendChild(tr);
+            });
+            lucide.createIcons();
+        }
+
+        function openLogCallModal(optName, optPhone) {
+            if (optName) document.getElementById('callLeadName').value = optName;
+            if (optPhone) document.getElementById('callPhone').value = optPhone;
+            document.getElementById('logCallModal').style.display = 'flex';
+            lucide.createIcons();
+        }
+
+        function closeLogCallModal() {
+            document.getElementById('logCallModal').style.display = 'none';
+        }
+
+        function handleSaveCallLog(e) {
+            e.preventDefault();
+            var lead = document.getElementById('callLeadName').value.trim();
+            var phone = document.getElementById('callPhone').value.trim();
+            var outcome = document.getElementById('callOutcome').value;
+            var duration = document.getElementById('callDuration').value.trim() || '02:30';
+            var staff = document.getElementById('callStaff').value;
+            var notes = document.getElementById('callNotes').value.trim();
+
+            baselineCalls.unshift({
+                time: 'Just now',
+                lead: lead,
+                phone: phone,
+                caller: staff,
+                outcome: outcome,
+                duration: duration,
+                notes: notes || 'Call logged via Medical 365 CRM'
+            });
+
+            closeLogCallModal();
+            renderCallsTable();
+            document.getElementById('today-calls-count').textContent = parseInt(document.getElementById('today-calls-count').textContent || '0', 10) + 1;
+            showToast('✓ Call log saved for ' + lead);
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // MEETINGS SCHEDULER
+        // ══════════════════════════════════════════════════════════
+        function renderMeetingsTable() {
+            var tbody = document.getElementById('meetingsTbody');
+            tbody.innerHTML = '';
+
+            baselineMeetings.forEach(function(m) {
+                var tr = document.createElement('tr');
+                tr.innerHTML = 
+                    '<td><strong>' + m.datetime + '</strong></td>' +
+                    '<td>' + m.title + '</td>' +
+                    '<td><strong>' + m.lead + '</strong></td>' +
+                    '<td>' + m.host + '</td>' +
+                    '<td><span class="pill-new">' + m.status + '</span></td>' +
+                    '<td><span style="color: #4f46e5; font-weight: 600;">' + m.location + '</span></td>' +
+                    '<td style="text-align: right;"><button class="action-icon-btn action-call" onclick="showToast(\'Joining meeting link...\')">Join</button></td>';
+                tbody.appendChild(tr);
+            });
+            lucide.createIcons();
+        }
+
+        function openScheduleMeetingModal() {
+            document.getElementById('scheduleMeetingModal').style.display = 'flex';
+            lucide.createIcons();
+        }
+
+        function closeScheduleMeetingModal() {
+            document.getElementById('scheduleMeetingModal').style.display = 'none';
+        }
+
+        function handleSaveMeeting(e) {
+            e.preventDefault();
+            var title = document.getElementById('mtTitle').value.trim();
+            var lead = document.getElementById('mtLeadName').value.trim();
+            var dt = document.getElementById('mtDateTime').value;
+            var host = document.getElementById('mtHost').value;
+            var loc = document.getElementById('mtPlatform').value;
+
+            baselineMeetings.unshift({
+                datetime: dt ? new Date(dt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'Upcoming',
+                title: title,
+                lead: lead,
+                host: host,
+                status: 'Scheduled',
+                location: loc
+            });
+
+            closeScheduleMeetingModal();
+            renderMeetingsTable();
+            document.getElementById('today-meetings-count').textContent = parseInt(document.getElementById('today-meetings-count').textContent || '0', 10) + 1;
+            showToast('✓ Meeting scheduled with ' + lead);
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // REMINDERS ENGINE
+        // ══════════════════════════════════════════════════════════
+        function renderRemindersPreview() {
+            var box = document.getElementById('remindersPreviewContainer');
+            if (baselineReminders.length === 0) {
+                box.innerHTML = '<div style="color: #94a3b8; font-size: 0.82rem; text-align: center;">No upcoming reminders</div>';
+                return;
+            }
+
+            box.innerHTML = '';
+            baselineReminders.slice(0, 3).forEach(function(r) {
+                var el = document.createElement('div');
+                el.style.cssText = 'padding: 8px 10px; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;';
+                el.innerHTML = 
+                    '<div>' +
+                        '<div style="font-size: 0.78rem; font-weight: 700;">' + r.lead + ' · <span style="color: #4f46e5;">' + r.due + '</span></div>' +
+                        '<div style="font-size: 0.72rem; color: #64748b;">' + r.note + '</div>' +
+                    '</div>' +
+                    '<button class="action-icon-btn action-wa" onclick="completeReminder(\'' + r.lead + '\')" title="Mark Done"><i data-lucide="check" style="width: 12px; height: 12px;"></i></button>';
+                box.appendChild(el);
+            });
+            lucide.createIcons();
+        }
+
+        function renderRemindersTable() {
+            var tbody = document.getElementById('remindersTbody');
+            tbody.innerHTML = '';
+
+            baselineReminders.forEach(function(r) {
+                var tr = document.createElement('tr');
+                tr.innerHTML = 
+                    '<td><strong>' + r.due + '</strong></td>' +
+                    '<td><strong>' + r.lead + '</strong></td>' +
+                    '<td>' + r.note + '</td>' +
+                    '<td><span class="' + (r.priority === 'High' ? 'pill-lost' : 'pill-new') + '">' + r.priority + '</span></td>' +
+                    '<td><span class="pill-contacted">' + r.status + '</span></td>' +
+                    '<td style="text-align: right;"><button class="action-icon-btn action-wa" onclick="completeReminder(\'' + r.lead + '\')"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Mark Done</button></td>';
+                tbody.appendChild(tr);
+            });
+            lucide.createIcons();
+        }
+
+        function openAddReminderModal() {
+            document.getElementById('addReminderModal').style.display = 'flex';
+            lucide.createIcons();
+        }
+
+        function closeAddReminderModal() {
+            document.getElementById('addReminderModal').style.display = 'none';
+        }
+
+        function handleSaveReminder(e) {
+            e.preventDefault();
+            var lead = document.getElementById('remLeadName').value.trim();
+            var dt = document.getElementById('remDateTime').value;
+            var note = document.getElementById('remNote').value.trim();
+            var pri = document.getElementById('remPriority').value;
+
+            baselineReminders.unshift({
+                due: dt ? new Date(dt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'Upcoming',
+                lead: lead,
+                note: note,
+                priority: pri,
+                status: 'Pending'
+            });
+
+            closeAddReminderModal();
+            renderRemindersTable();
+            renderRemindersPreview();
+            document.getElementById('badge-reminders').textContent = baselineReminders.length;
+            showToast('✓ Reminder set for ' + lead);
+        }
+
+        function completeReminder(leadName) {
+            baselineReminders = baselineReminders.filter(function(r) { return r.lead !== leadName; });
+            renderRemindersTable();
+            renderRemindersPreview();
+            document.getElementById('badge-reminders').textContent = baselineReminders.length;
+            showToast('✓ Reminder marked completed');
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // CUSTOMIZE DASHBOARD MODAL
+        // ══════════════════════════════════════════════════════════
+        function openCustomizeModal() {
+            document.getElementById('customizeModal').style.display = 'flex';
+        }
+
+        function closeCustomizeModal() {
+            document.getElementById('customizeModal').style.display = 'none';
+            showToast('Dashboard customized');
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // EXPORT & IMPORT TOOLS
+        // ══════════════════════════════════════════════════════════
+        function exportLeadsToCSV() {
+            var leads = getCombinedLeads();
+            var csv = 'ID,Name,Phone,Email,Status,Source,Requirement,City,Caller,AddedOn\n';
+            leads.forEach(function(l) {
+                csv += '"' + l.id + '","' + (l.name || '') + '","' + (l.phone || '') + '","' + (l.email || '') + '","' + (l.status || 'New') + '","' + (l.source || 'Website') + '","' + (l.requirement || '') + '","' + (l.city || '') + '","' + (l.caller || '') + '","' + (l.addedOn || '') + '"\n';
+            });
+
+            var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'medical365_leads_' + new Date().toISOString().slice(0, 10) + '.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            showToast('Downloaded leads CSV');
+        }
+
+        function downloadSampleCSV() {
+            var sample = 'Name,Phone,Email,Requirement,City,Source\n"Dr. Rajesh Verma","+91 98290 12345","verma@hospital.in","Hospital Software","Jaipur","Website"\n"Pooja Sharma","+91 98110 54321","pooja@clinic.com","OPD Roster","Delhi","IndiaMART"';
+            var blob = new Blob([sample], { type: 'text/csv;charset=utf-8;' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'medical365_sample_import.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            showToast('Sample CSV template downloaded');
+        }
+
+        function handleCSVFileUpload(e) {
+            var file = e.target.files[0];
+            if (!file) return;
+
+            var reader = new FileReader();
+            reader.onload = function(evt) {
+                var text = evt.target.result;
+                var lines = text.split('\n');
+                var importedCount = 0;
+                var existing = [];
+                try {
+                    existing = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+                } catch(err) {}
+
+                for (var i = 1; i < lines.length; i++) {
+                    var line = lines[i].trim();
+                    if (!line) continue;
+                    var parts = line.split(',');
+                    if (parts.length >= 2) {
+                        var name = parts[0].replace(/"/g, '').trim();
+                        var phone = parts[1].replace(/"/g, '').trim();
+                        existing.unshift({
+                            id: 'IMP-' + Math.floor(1000 + Math.random() * 9000),
+                            name: name,
+                            phone: phone,
+                            email: parts[2] ? parts[2].replace(/"/g, '').trim() : '',
+                            requirement: parts[3] ? parts[3].replace(/"/g, '').trim() : 'Hospital Software',
+                            city: parts[4] ? parts[4].replace(/"/g, '').trim() : 'India',
+                            source: parts[5] ? parts[5].replace(/"/g, '').trim() : 'Import',
+                            status: 'New',
+                            caller: 'Pooja Sharma',
+                            addedOn: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                        });
+                        importedCount++;
+                    }
+                }
+
+                localStorage.setItem('m365_crm_leads', JSON.stringify(existing));
+                refreshAllData();
+                showToast('✓ Successfully imported ' + importedCount + ' leads!');
+                navigateView('view-leads');
+            };
+            reader.readAsText(file);
+        }
+
+        function restoreBaselineLeads() {
+            localStorage.removeItem('m365_crm_leads');
+            refreshAllData();
+            showToast('Restored 54 baseline demo leads');
+        }
+
+        function clearAllLeads() {
+            if (!confirm('Warning: This will clear all recorded leads in the CRM. Proceed?')) return;
+            localStorage.setItem('m365_crm_leads', '[]');
+            baselineLeads = [];
+            refreshAllData();
+            showToast('All leads cleared');
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // WEBHOOK TESTER
+        // ══════════════════════════════════════════════════════════
+        function testWebhookPing() {
+            var testLead = {
+                id: 'WEB-' + Math.floor(1000 + Math.random() * 9000),
+                name: 'Website Lead (Live Test)',
+                phone: '+91 98' + Math.floor(10000000 + Math.random() * 90000000),
+                email: 'test' + Date.now().toString().slice(-4) + '@hospital.org',
+                source: 'Website',
+                status: 'New',
+                requirement: 'Hospital Software Demo Request',
+                city: 'Delhi NCR',
+                caller: 'Pooja Sharma',
+                addedOn: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+                timestamp: Date.now()
+            };
+
+            var existing = [];
+            try {
+                existing = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+            } catch(e) {}
+
+            existing.unshift(testLead);
+            localStorage.setItem('m365_crm_leads', JSON.stringify(existing));
+            refreshAllData();
+            showToast('✓ Webhook test successful! New lead captured.');
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // NOTIFICATIONS DRAWER
+        // ══════════════════════════════════════════════════════════
+        function toggleNotificationDrawer() {
+            var drawer = document.getElementById('notif-drawer');
+            drawer.style.display = (drawer.style.display === 'flex' ? 'none' : 'flex');
+        }
+
+        function renderNotificationDrawer() {
+            var list = document.getElementById('notif-list-body');
+            var leads = getCombinedLeads();
+            var recent = leads.slice(0, 4);
+
+            list.innerHTML = '';
+            recent.forEach(function(l) {
+                var div = document.createElement('div');
+                div.className = 'notif-item';
+                div.innerHTML = 
+                    '<div style="font-weight: 700; color: #0f172a;">New Inquiry: ' + l.name + '</div>' +
+                    '<div style="color: #64748b; font-size: 0.72rem;">' + (l.requirement || 'Hospital software demo') + ' · ' + (l.addedOn || 'Today') + '</div>';
+                list.appendChild(div);
+            });
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // TOAST ENGINE
+        // ══════════════════════════════════════════════════════════
+        function showToast(msg) {
+            var toast = document.getElementById('toast-notification');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3200);
+        }
+
+        // ══════════════════════════════════════════════════════════
+        // REAL-TIME AUTO SYNC (CROSS-TAB & WEBSITE SUBMISSIONS)
+        // ══════════════════════════════════════════════════════════
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'm365_crm_leads') {
+                refreshAllData();
+                showToast('New lead captured from website!');
+            }
+        });
+
+        // 3-second heartbeat to ensure instant updates
+        setInterval(function() {
+            var leads = getCombinedLeads();
+            var prevCount = parseInt(document.getElementById('stat-total-leads').textContent || '0', 10);
+            if (leads.length !== prevCount) {
+                refreshAllData();
+            }
+        }, 3000);
+
+        // Auto-check session on initial load
         window.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
             var saved = sessionStorage.getItem('m365_auth_role');
