@@ -34,6 +34,8 @@ Disallow: /private/
 Disallow: /temp/
 Disallow: /superadmin
 Disallow: /superadmin.html
+Disallow: /leads
+Disallow: /leads.html
 
 # Block Development & SEO Template Scaffolding
 Disallow: /templates
