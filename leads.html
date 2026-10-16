@@ -1833,13 +1833,13 @@
                     <table class="data-grid-table">
                         <thead>
                             <tr>
-                                <th>LEAD NAME</th>
+                                <th>LEAD NAME & ORG</th>
                                 <th>CONTACT</th>
+                                <th>FACILITY & BEDS</th>
+                                <th>CHALLENGES</th>
                                 <th>STATUS / STAGE</th>
-                                <th>FACILITY / REQUIREMENT</th>
-                                <th>SOURCE</th>
+                                <th>SOURCE & ATTRIBUTION</th>
                                 <th>ASSIGNED TO</th>
-                                <th>DATE</th>
                                 <th style="text-align: right;">ACTIONS</th>
                             </tr>
                         </thead>
@@ -2151,22 +2151,58 @@
                 <div class="modal-body">
                     <div class="form-row">
                         <div>
-                            <label class="input-label">Lead Name *</label>
-                            <input type="text" id="mLeadName" class="modal-input" placeholder="e.g. Ranjith nk" required>
+                            <label class="input-label">First Name *</label>
+                            <input type="text" id="mLeadFirstName" class="modal-input" placeholder="e.g. Rahul" required>
                         </div>
                         <div>
-                            <label class="input-label">Phone Number *</label>
-                            <input type="tel" id="mLeadPhone" class="modal-input" placeholder="+91 98290 12345" required>
+                            <label class="input-label">Last Name *</label>
+                            <input type="text" id="mLeadLastName" class="modal-input" placeholder="e.g. Sharma" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div>
-                            <label class="input-label">Email Address</label>
-                            <input type="email" id="mLeadEmail" class="modal-input" placeholder="lead@example.com">
+                            <label class="input-label">Phone Number *</label>
+                            <input type="tel" id="mLeadPhone" class="modal-input" placeholder="+91 98290 12345" required>
                         </div>
                         <div>
-                            <label class="input-label">Source</label>
+                            <label class="input-label">Email Address *</label>
+                            <input type="email" id="mLeadEmail" class="modal-input" placeholder="lead@hospital.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Organization Name</label>
+                            <input type="text" id="mLeadOrg" class="modal-input" placeholder="e.g. City Multi-Speciality Hospital">
+                        </div>
+                        <div>
+                            <label class="input-label">Facility Type</label>
+                            <select id="mLeadFacilityType" class="modal-input">
+                                <option>Hospital</option>
+                                <option>Clinic</option>
+                                <option>Diagnostic Lab</option>
+                                <option>Day Care Centre</option>
+                                <option>Nursing Home</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label class="input-label">Bed Count</label>
+                            <select id="mLeadBedCount" class="modal-input">
+                                <option>1–20 Beds</option>
+                                <option>21–50 Beds</option>
+                                <option>51–100 Beds</option>
+                                <option>101–200 Beds</option>
+                                <option selected>201–500 Beds</option>
+                                <option>500+ Beds</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="input-label">Acquisition Source</label>
                             <select id="mLeadSource" class="modal-input">
                                 <option>Website</option>
                                 <option>IndiaMART</option>
@@ -2178,14 +2214,19 @@
                         </div>
                     </div>
 
+                    <div>
+                        <label class="input-label">Challenges / Software Needs</label>
+                        <textarea id="mLeadChallenges" class="modal-input" style="height: 60px; resize: none;" placeholder="e.g. Needs OPD token system, TPA cashless billing, and EMR integration..."></textarea>
+                    </div>
+
                     <div class="form-row">
                         <div>
-                            <label class="input-label">Facility / Requirement</label>
-                            <input type="text" id="mLeadReq" class="modal-input" placeholder="e.g. Hospital Software / TKR">
+                            <label class="input-label">Source Page URL</label>
+                            <input type="text" id="mLeadSourceUrl" class="modal-input" value="https://www.medical365.in/book-demo">
                         </div>
                         <div>
-                            <label class="input-label">City</label>
-                            <input type="text" id="mLeadCity" class="modal-input" placeholder="e.g. Jaipur">
+                            <label class="input-label">Page Title</label>
+                            <input type="text" id="mLeadPageTitle" class="modal-input" value="Book a Free Demo - Medical365">
                         </div>
                     </div>
 
@@ -2210,11 +2251,6 @@
                                 <option>On Hold</option>
                             </select>
                         </div>
-                    </div>
-
-                    <div>
-                        <label class="input-label">Clinical / Discussion Notes</label>
-                        <textarea id="mLeadNotes" class="modal-input" style="height: 60px; resize: none;" placeholder="Notes from phone triage or website inquiry..."></textarea>
                     </div>
                 </div>
 
@@ -2453,35 +2489,157 @@
             'Telecaller': { email: 'telecaller@medical365.in', pass: 'telecaller123', name: 'POOJA', role: 'Telecaller', avatar: 'T', bg: '#d97706' }
         };
 
-        // 54 Realistic Baseline Leads matching exactly user's screenshot
+        // 54 Realistic Baseline Leads matching user's screenshot & exact submission fields
         var baselineLeads = [
-            { id: '1', name: 'Ranjith nk', phone: '+91 98450 11201', email: 'ranjith@hospitalcare.org', status: 'New', source: 'Website', requirement: 'Hospital Management Software', city: 'Bengaluru', caller: 'Pooja Sharma', addedOn: 'Oct 15, 2026', timestamp: 1792041600000 },
-            { id: '2', name: 'roman', phone: '+91 98230 45678', email: 'roman.c@medtech.in', status: 'New', source: 'Website', requirement: 'OPD Token & Doctor Roster', city: 'Mumbai', caller: 'Pooja Sharma', addedOn: 'Oct 15, 2026', timestamp: 1792041500000 },
-            { id: '3', name: 'Darshan', phone: '+91 94140 88921', email: 'dr.darshan@patelhospital.com', status: 'New', source: 'Website', requirement: 'IPD Bed & TPA Cashless Suite', city: 'Ahmedabad', caller: 'Vikram Malhotra', addedOn: 'Oct 12, 2026', timestamp: 1791782400000 },
-            { id: '4', name: 'manpreet', phone: '+91 98110 33490', email: 'manpreet.singh@lifecare.co', status: 'New', source: 'Website', requirement: 'Diagnostic Vault & EMR', city: 'Chandigarh', caller: 'Vikram Malhotra', addedOn: 'Oct 12, 2026', timestamp: 1791782300000 },
-            { id: '5', name: 'Bajrang Sultania', phone: '+91 97840 22199', email: 'bajrang@sultaniahealth.in', status: 'New', source: 'Website', requirement: 'Full Hospital ERP (50 Beds)', city: 'Jaipur', caller: 'Dr. Rajesh V.', addedOn: 'Oct 12, 2026', timestamp: 1791782200000 },
-            { id: '6', name: 'Dr. Ananya Roy', phone: '+91 98300 44512', email: 'ananya.roy@kolkatamed.org', status: 'New', source: 'Website', requirement: 'Cardiology OPD Scheduling', city: 'Kolkata', caller: 'Pooja Sharma', addedOn: 'Oct 11, 2026', timestamp: 1791696000000 },
-            { id: '7', name: 'Karthik Raja', phone: '+91 94440 66711', email: 'karthik@rajaortho.com', status: 'New', source: 'Website', requirement: 'Orthopedic Patient Pipeline', city: 'Chennai', caller: 'Vikram Malhotra', addedOn: 'Oct 10, 2026', timestamp: 1791609600000 },
-            { id: '8', name: 'Dr. Sameer Khan', phone: '+91 98200 77123', email: 'sameer@apexhealth.in', status: 'New', source: 'Website', requirement: 'Hospital Billing & GST Invoicing', city: 'Pune', caller: 'Pooja Sharma', addedOn: 'Oct 09, 2026', timestamp: 1791523200000 },
-            { id: '9', name: 'Neha Varma', phone: '+91 99100 88234', email: 'neha.v@careplusdelhi.com', status: 'New', source: 'Website', requirement: 'Teleconsultation & Video OPD', city: 'New Delhi', caller: 'Vikram Malhotra', addedOn: 'Oct 08, 2026', timestamp: 1791436800000 },
-            { id: '10', name: 'Sunil Gavaskar P', phone: '+91 98480 33144', email: 'sunil@hyderabadclinic.org', status: 'New', source: 'Website', requirement: 'Patient WhatsApp Bot', city: 'Hyderabad', caller: 'Pooja Sharma', addedOn: 'Oct 07, 2026', timestamp: 1791350400000 }
+            {
+                id: 'MED-1044',
+                name: 'test test',
+                firstName: 'test',
+                lastName: 'test',
+                email: 'deepurao0369@gmail.com',
+                phone: '+919991770369',
+                organization: 'hahsh',
+                facilityType: 'Diagnostic Lab',
+                bedCount: '201–500 Beds',
+                challenges: 'erf',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-10-16T06:34:44.044Z',
+                status: 'New',
+                source: 'Website',
+                caller: 'Pooja Sharma',
+                addedOn: 'Oct 16, 2026',
+                timestamp: 1792132484044
+            },
+            {
+                id: '1',
+                name: 'Ranjith nk',
+                firstName: 'Ranjith',
+                lastName: 'nk',
+                email: 'ranjith@hospitalcare.org',
+                phone: '+91 98450 11201',
+                organization: 'Apex Multispeciality Hospital',
+                facilityType: 'Hospital',
+                bedCount: '51–100 Beds',
+                challenges: 'Hospital Management Software & OPD Tokens',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-10-15T09:12:00.000Z',
+                status: 'New',
+                source: 'Website',
+                caller: 'Pooja Sharma',
+                addedOn: 'Oct 15, 2026',
+                timestamp: 1792041600000
+            },
+            {
+                id: '2',
+                name: 'roman',
+                firstName: 'Roman',
+                lastName: 'C',
+                email: 'roman.c@medtech.in',
+                phone: '+91 98230 45678',
+                organization: 'MedTech Clinic & Diagnostic',
+                facilityType: 'Clinic',
+                bedCount: '1–20 Beds',
+                challenges: 'OPD Token & Doctor Roster Management',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-10-15T08:45:00.000Z',
+                status: 'New',
+                source: 'Website',
+                caller: 'Pooja Sharma',
+                addedOn: 'Oct 15, 2026',
+                timestamp: 1792041500000
+            },
+            {
+                id: '3',
+                name: 'Darshan',
+                firstName: 'Darshan',
+                lastName: 'Patel',
+                email: 'dr.darshan@patelhospital.com',
+                phone: '+91 94140 88921',
+                organization: 'Patel Surgical Hospital',
+                facilityType: 'Hospital',
+                bedCount: '101–200 Beds',
+                challenges: 'IPD Bed & TPA Cashless Insurance Suite',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-10-12T14:20:00.000Z',
+                status: 'New',
+                source: 'Website',
+                caller: 'Vikram Malhotra',
+                addedOn: 'Oct 12, 2026',
+                timestamp: 1791782400000
+            },
+            {
+                id: '4',
+                name: 'manpreet',
+                firstName: 'Manpreet',
+                lastName: 'Singh',
+                email: 'manpreet.singh@lifecare.co',
+                phone: '+91 98110 33490',
+                organization: 'LifeCare Diagnostics & MRI',
+                facilityType: 'Diagnostic Lab',
+                bedCount: '21–50 Beds',
+                challenges: 'Diagnostic Vault, EMR, and DICOM Scans',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-10-12T11:05:00.000Z',
+                status: 'New',
+                source: 'Website',
+                caller: 'Vikram Malhotra',
+                addedOn: 'Oct 12, 2026',
+                timestamp: 1791782300000
+            },
+            {
+                id: '5',
+                name: 'Bajrang Sultania',
+                firstName: 'Bajrang',
+                lastName: 'Sultania',
+                email: 'bajrang@sultaniahealth.in',
+                phone: '+91 97840 22199',
+                organization: 'Sultania Super Speciality Hospital',
+                facilityType: 'Hospital',
+                bedCount: '51–100 Beds',
+                challenges: 'Full Hospital ERP (50 Beds) with Pharmacy & OT',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-10-12T10:15:00.000Z',
+                status: 'New',
+                source: 'Website',
+                caller: 'Dr. Rajesh V.',
+                addedOn: 'Oct 12, 2026',
+                timestamp: 1791782200000
+            }
         ];
 
-        // Fill remaining 44 baseline leads matching 54 total count
-        for (var i = 11; i <= 54; i++) {
-            var cities = ['Lucknow', 'Indore', 'Bhopal', 'Nagpur', 'Surat', 'Patna', 'Ranchi', 'Dehradun', 'Kochi', 'Coimbatore'];
-            var callers = ['Pooja Sharma', 'Vikram Malhotra', 'Dr. Rajesh V.'];
-            var reqs = ['Hospital Software Demo', 'EMR & Lab Integration', 'TPA Claim Processing', 'OPD Roster Management', 'Patient WhatsApp Notifications'];
+        // Fill remaining 48 baseline leads matching 54 total count
+        var baseCities = ['Lucknow', 'Indore', 'Bhopal', 'Nagpur', 'Surat', 'Patna', 'Ranchi', 'Dehradun', 'Kochi', 'Coimbatore'];
+        var baseCallers = ['Pooja Sharma', 'Vikram Malhotra', 'Dr. Rajesh V.'];
+        var baseReqs = ['Hospital Software Demo', 'EMR & Lab Integration', 'TPA Claim Processing', 'OPD Roster Management', 'Patient WhatsApp Notifications'];
+        var baseTypes = ['Hospital', 'Clinic', 'Diagnostic Lab', 'Nursing Home'];
+        var baseBeds = ['21–50 Beds', '51–100 Beds', '101–200 Beds', '201–500 Beds'];
+
+        for (var i = 7; i <= 54; i++) {
             baselineLeads.push({
                 id: i.toString(),
                 name: 'Healthcare Client #' + i,
+                firstName: 'Client',
+                lastName: '#' + i,
                 phone: '+91 98' + (20000000 + i * 37).toString().slice(0, 8),
                 email: 'client' + i + '@medicalhospital.in',
+                organization: 'Health Facility #' + i,
+                facilityType: baseTypes[i % baseTypes.length],
+                bedCount: baseBeds[i % baseBeds.length],
+                challenges: baseReqs[i % baseReqs.length],
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-10-' + (10 + (i % 5)) + 'T12:00:00.000Z',
                 status: 'New',
                 source: 'Website',
-                requirement: reqs[i % reqs.length],
-                city: cities[i % cities.length],
-                caller: callers[i % callers.length],
+                requirement: baseReqs[i % baseReqs.length],
+                city: baseCities[i % baseCities.length],
+                caller: baseCallers[i % baseCallers.length],
                 addedOn: 'Oct ' + (1 + (i % 15)) + ', 2026',
                 timestamp: 1790918400000 + (i * 18000000)
             });
@@ -2807,17 +2965,34 @@
             filtered.forEach(function(lead) {
                 var tr = document.createElement('tr');
                 var cleanPhone = (lead.phone || '').replace(/[^0-9]/g, '');
-                var waLink = 'https://wa.me/' + cleanPhone + '?text=' + encodeURIComponent('Hello ' + lead.name + ', regarding your medical inquiry on Medical 365:');
+                var waLink = 'https://wa.me/' + cleanPhone + '?text=' + encodeURIComponent('Hello ' + (lead.name || 'there') + ', regarding your medical inquiry on Medical 365:');
                 var telLink = 'tel:' + cleanPhone;
+
+                var fn = lead.firstName || (lead.name ? lead.name.split(' ')[0] : '—');
+                var ln = lead.lastName || (lead.name && lead.name.split(' ').length > 1 ? lead.name.split(' ').slice(1).join(' ') : '');
+                var displayName = (fn + ' ' + ln).trim() || lead.name || 'Anonymous';
+                var org = lead.organization || '—';
+                var facility = lead.facilityType || 'Hospital';
+                var beds = lead.bedCount || '—';
+                var challenges = lead.challenges || lead.requirement || '—';
+                var subTime = lead.submittedAt ? lead.submittedAt.slice(0, 10) : (lead.addedOn || 'Today');
 
                 tr.innerHTML = 
                     '<td>' +
-                        '<div style="font-weight: 700; color: #0f172a; cursor: pointer;" onclick="openLeadDetailModalById(\'' + lead.id + '\')">' + lead.name + '</div>' +
-                        '<div style="font-size: 0.7rem; color: #94a3b8;">ID: ' + lead.id + ' · ' + (lead.city || 'India') + '</div>' +
+                        '<div style="font-weight: 700; color: #0f172a; cursor: pointer;" onclick="openLeadDetailModalById(\'' + lead.id + '\')">' + displayName + '</div>' +
+                        '<div style="font-size: 0.72rem; color: #4338ca; font-weight: 600;">' + org + '</div>' +
+                        '<div style="font-size: 0.68rem; color: #94a3b8;">ID: ' + lead.id + '</div>' +
                     '</td>' +
                     '<td>' +
-                        '<div style="font-size: 0.78rem; font-weight: 600;">' + (lead.phone || 'N/A') + '</div>' +
-                        '<div style="font-size: 0.7rem; color: #64748b;">' + (lead.email || '—') + '</div>' +
+                        '<div style="font-size: 0.78rem; font-weight: 600;"><a href="' + telLink + '" style="color: #2563eb; text-decoration: none;">' + (lead.phone || 'N/A') + '</a></div>' +
+                        '<div style="font-size: 0.7rem; color: #64748b;"><a href="mailto:' + (lead.email || '') + '" style="color: #64748b; text-decoration: none;">' + (lead.email || '—') + '</a></div>' +
+                    '</td>' +
+                    '<td>' +
+                        '<span class="pill-new" style="background: #eef2ff; color: #4338ca; font-weight: 700;">' + facility + '</span>' +
+                        '<div style="font-size: 0.7rem; color: #64748b; margin-top: 3px;">' + beds + '</div>' +
+                    '</td>' +
+                    '<td style="max-width: 170px; font-size: 0.76rem; color: #334155; line-height: 1.3;" title="' + challenges + '">' +
+                        (challenges.length > 45 ? challenges.slice(0, 45) + '...' : challenges) +
                     '</td>' +
                     '<td>' +
                         '<select class="stage-select-pill" onchange="updateLeadStage(\'' + lead.id + '\', this.value)">' +
@@ -2830,14 +3005,15 @@
                             '<option ' + (lead.status === 'On Hold' ? 'selected' : '') + '>On Hold</option>' +
                         '</select>' +
                     '</td>' +
-                    '<td style="font-weight: 600; color: #475569;">' + (lead.requirement || 'Hospital Software') + '</td>' +
-                    '<td><span class="pill-new">' + (lead.source || 'Website') + '</span></td>' +
+                    '<td>' +
+                        '<div style="font-size: 0.75rem; font-weight: 600; color: #0f172a;">' + (lead.source || 'Website') + '</div>' +
+                        '<div style="font-size: 0.68rem; color: #64748b;">' + subTime + '</div>' +
+                    '</td>' +
                     '<td>' + (lead.caller || 'Pooja Sharma') + '</td>' +
-                    '<td style="color: #64748b;">' + (lead.addedOn || 'Oct 15, 2026') + '</td>' +
                     '<td style="text-align: right; white-space: nowrap;">' +
                         '<a href="' + waLink + '" target="_blank" class="action-icon-btn action-wa" title="WhatsApp Patient"><i data-lucide="message-circle" style="width: 14px; height: 14px;"></i></a> ' +
                         '<a href="' + telLink + '" class="action-icon-btn action-call" title="Call Lead"><i data-lucide="phone" style="width: 14px; height: 14px;"></i></a> ' +
-                        '<button class="action-icon-btn" onclick="openLeadDetailModalById(\'' + lead.id + '\')" title="View Details"><i data-lucide="eye" style="width: 14px; height: 14px;"></i></button> ' +
+                        '<button class="action-icon-btn" onclick="openLeadDetailModalById(\'' + lead.id + '\')" title="View All Fields"><i data-lucide="eye" style="width: 14px; height: 14px;"></i></button> ' +
                         '<button class="action-icon-btn" onclick="deleteLeadById(\'' + lead.id + '\')" title="Delete" style="color: #ef4444;"><i data-lucide="trash-2" style="width: 14px; height: 14px;"></i></button>' +
                     '</td>';
                 tbody.appendChild(tr);
@@ -2868,27 +3044,38 @@
 
         function handleManualAddLead(e) {
             e.preventDefault();
-            var name = document.getElementById('mLeadName').value.trim();
+            var firstName = document.getElementById('mLeadFirstName').value.trim();
+            var lastName = document.getElementById('mLeadLastName').value.trim();
+            var fullName = [firstName, lastName].filter(Boolean).join(' ');
             var phone = document.getElementById('mLeadPhone').value.trim();
             var email = document.getElementById('mLeadEmail').value.trim();
+            var org = document.getElementById('mLeadOrg').value.trim();
+            var facilityType = document.getElementById('mLeadFacilityType').value;
+            var bedCount = document.getElementById('mLeadBedCount').value;
             var source = document.getElementById('mLeadSource').value;
-            var req = document.getElementById('mLeadReq').value.trim();
-            var city = document.getElementById('mLeadCity').value.trim();
+            var challenges = document.getElementById('mLeadChallenges').value.trim();
+            var sourceUrl = document.getElementById('mLeadSourceUrl').value.trim();
+            var pageTitle = document.getElementById('mLeadPageTitle').value.trim();
             var caller = document.getElementById('mLeadCaller').value;
             var status = document.getElementById('mLeadStatus').value;
-            var notes = document.getElementById('mLeadNotes').value.trim();
 
             var newLead = {
                 id: 'MED-' + Math.floor(1000 + Math.random() * 9000),
-                name: name,
+                name: fullName || 'New Lead',
+                firstName: firstName,
+                lastName: lastName,
                 phone: phone,
                 email: email,
+                organization: org || '—',
+                facilityType: facilityType || 'Diagnostic Lab',
+                bedCount: bedCount || '201–500 Beds',
+                challenges: challenges || '—',
+                sourcePageUrl: sourceUrl || 'https://www.medical365.in/book-demo',
+                pageTitle: pageTitle || 'Book a Free Demo - Medical365',
+                submittedAt: new Date().toISOString(),
                 source: source,
                 status: status,
-                requirement: req || 'Hospital Software',
-                city: city || 'India',
                 caller: caller,
-                notes: notes,
                 addedOn: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
                 timestamp: Date.now()
             };
@@ -2903,7 +3090,7 @@
 
             closeAddLeadModal();
             refreshAllData();
-            showToast('✓ Lead "' + name + '" added successfully!');
+            showToast('✓ Lead "' + newLead.name + '" added successfully!');
         }
 
         function updateLeadStage(id, newStage) {
@@ -2962,42 +3149,98 @@
         }
 
         function openLeadDetailModal(lead) {
-            document.getElementById('dtLeadName').textContent = lead.name;
+            document.getElementById('dtLeadName').textContent = lead.name || 'Lead Details';
             var cleanPhone = (lead.phone || '').replace(/[^0-9]/g, '');
-            var waLink = 'https://wa.me/' + cleanPhone + '?text=' + encodeURIComponent('Hello ' + lead.name + ', regarding your medical inquiry on Medical 365:');
+            var waLink = 'https://wa.me/' + cleanPhone + '?text=' + encodeURIComponent('Hello ' + (lead.name || '') + ', regarding your medical inquiry on Medical 365:');
+
+            var fn = lead.firstName || (lead.name ? lead.name.split(' ')[0] : '—');
+            var ln = lead.lastName || (lead.name && lead.name.split(' ').length > 1 ? lead.name.split(' ').slice(1).join(' ') : '—');
+            var org = lead.organization || '—';
+            var facility = lead.facilityType || 'Diagnostic Lab';
+            var beds = lead.bedCount || '201–500 Beds';
+            var challenges = lead.challenges || lead.requirement || '—';
+            var sourceUrl = lead.sourcePageUrl || 'https://www.medical365.in/book-demo';
+            var pageTitle = lead.pageTitle || 'Book a Free Demo - Medical365';
+            var subAt = lead.submittedAt || lead.addedOn || '2026-10-16T06:34:44.044Z';
 
             var html = 
-                '<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; font-size: 0.8rem;">' +
-                    '<div><strong>Phone:</strong> <a href="tel:' + cleanPhone + '" style="color: #4f46e5;">' + (lead.phone || 'N/A') + '</a></div>' +
-                    '<div><strong>Email:</strong> ' + (lead.email || '—') + '</div>' +
-                    '<div><strong>Location:</strong> ' + (lead.city || 'India') + '</div>' +
-                    '<div><strong>Acquisition Source:</strong> ' + (lead.source || 'Website') + '</div>' +
-                    '<div><strong>Assigned Caller:</strong> ' + (lead.caller || 'Pooja Sharma') + '</div>' +
-                    '<div><strong>Date Captured:</strong> ' + (lead.addedOn || 'Oct 15, 2026') + '</div>' +
-                '</div>' +
-                '<div style="margin-top: 16px; padding: 12px; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0;">' +
-                    '<div style="font-size: 0.72rem; font-weight: 700; color: #475569; text-transform: uppercase;">Requirement / Clinical Need:</div>' +
-                    '<div style="font-size: 0.85rem; font-weight: 600; color: #0f172a; margin-top: 4px;">' + (lead.requirement || 'Hospital Management Software & EMR') + '</div>' +
-                '</div>' +
-                '<div style="margin-top: 14px;">' +
-                    '<label class="input-label">Update Status Stage:</label>' +
-                    '<select class="modal-input" onchange="updateLeadStage(\'' + lead.id + '\', this.value); closeLeadDetailModal();">' +
-                        '<option ' + (lead.status === 'New' ? 'selected' : '') + '>New</option>' +
-                        '<option ' + (lead.status === 'Contacted' ? 'selected' : '') + '>Contacted</option>' +
-                        '<option ' + (lead.status === 'Qualified' ? 'selected' : '') + '>Qualified</option>' +
-                        '<option ' + (lead.status === 'Quoted' ? 'selected' : '') + '>Quoted</option>' +
-                        '<option ' + (lead.status === 'Won' ? 'selected' : '') + '>Won</option>' +
-                        '<option ' + (lead.status === 'Lost' ? 'selected' : '') + '>Lost</option>' +
-                        '<option ' + (lead.status === 'On Hold' ? 'selected' : '') + '>On Hold</option>' +
-                    '</select>' +
-                '</div>' +
-                '<div style="display: flex; gap: 10px; margin-top: 18px;">' +
-                    '<a href="' + waLink + '" target="_blank" class="btn-add-lead" style="flex: 1; text-decoration: none; justify-content: center; background: #059669;">' +
-                        '<i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> WhatsApp Patient' +
-                    '</a>' +
-                    '<button type="button" class="btn-white" style="flex: 1; justify-content: center;" onclick="closeLeadDetailModal(); openLogCallModal(\'' + lead.name + '\', \'' + lead.phone + '\');">' +
-                        '<i data-lucide="phone-call" style="width: 16px; height: 16px;"></i> Log Call' +
-                    '</button>' +
+                '<div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.85rem; max-height: 60vh; overflow-y: auto; padding-right: 6px;">' +
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">First name</div>' +
+                        '<div style="color: #0f172a; font-weight: 500;">' + fn + '</div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Last name</div>' +
+                        '<div style="color: #0f172a; font-weight: 500;">' + ln + '</div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Email</div>' +
+                        '<div><a href="mailto:' + (lead.email || '') + '" style="color: #2563eb; text-decoration: underline;">' + (lead.email || '—') + '</a></div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Phone number</div>' +
+                        '<div><a href="tel:' + cleanPhone + '" style="color: #2563eb; text-decoration: underline;">' + (lead.phone || '—') + '</a></div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Organization name</div>' +
+                        '<div style="color: #0f172a; font-weight: 500;">' + org + '</div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Facility type</div>' +
+                        '<div style="color: #0f172a; font-weight: 500;">' + facility + '</div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Bed count</div>' +
+                        '<div style="color: #0f172a; font-weight: 500;">' + beds + '</div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Challenges</div>' +
+                        '<div style="color: #0f172a; font-weight: 500; white-space: pre-wrap;">' + challenges + '</div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Source page url</div>' +
+                        '<div><a href="' + sourceUrl + '" target="_blank" style="color: #2563eb; text-decoration: underline; word-break: break-all;">' + sourceUrl + '</a></div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Page title</div>' +
+                        '<div style="color: #0f172a; font-weight: 500;">' + pageTitle + '</div>' +
+                    '</div>' +
+
+                    '<div>' +
+                        '<div style="color: #2563eb; font-weight: 700; font-size: 0.82rem; margin-bottom: 2px;">Submitted at</div>' +
+                        '<div style="color: #0f172a; font-weight: 500;">' + subAt + '</div>' +
+                    '</div>' +
+
+                    '<div style="margin-top: 10px; padding-top: 14px; border-top: 1px solid #e2e8f0;">' +
+                        '<label class="input-label">Update Status Stage:</label>' +
+                        '<select class="modal-input" onchange="updateLeadStage(\'' + lead.id + '\', this.value); closeLeadDetailModal();">' +
+                            '<option ' + (lead.status === 'New' ? 'selected' : '') + '>New</option>' +
+                            '<option ' + (lead.status === 'Contacted' ? 'selected' : '') + '>Contacted</option>' +
+                            '<option ' + (lead.status === 'Qualified' ? 'selected' : '') + '>Qualified</option>' +
+                            '<option ' + (lead.status === 'Quoted' ? 'selected' : '') + '>Quoted</option>' +
+                            '<option ' + (lead.status === 'Won' ? 'selected' : '') + '>Won</option>' +
+                            '<option ' + (lead.status === 'Lost' ? 'selected' : '') + '>Lost</option>' +
+                            '<option ' + (lead.status === 'On Hold' ? 'selected' : '') + '>On Hold</option>' +
+                        '</select>' +
+                    '</div>' +
+
+                    '<div style="display: flex; gap: 10px; margin-top: 8px;">' +
+                        '<a href="' + waLink + '" target="_blank" class="btn-add-lead" style="flex: 1; text-decoration: none; justify-content: center; background: #059669;">' +
+                            '<i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> WhatsApp Patient' +
+                        '</a>' +
+                        '<button type="button" class="btn-white" style="flex: 1; justify-content: center;" onclick="closeLeadDetailModal(); openLogCallModal(\'' + lead.name + '\', \'' + lead.phone + '\');">' +
+                            '<i data-lucide="phone-call" style="width: 16px; height: 16px;"></i> Log Call' +
+                        '</button>' +
+                    '</div>' +
                 '</div>';
 
             document.getElementById('dtLeadBody').innerHTML = html;
@@ -3221,9 +3464,27 @@
         // ══════════════════════════════════════════════════════════
         function exportLeadsToCSV() {
             var leads = getCombinedLeads();
-            var csv = 'ID,Name,Phone,Email,Status,Source,Requirement,City,Caller,AddedOn\n';
+            var csv = 'ID,First Name,Last Name,Full Name,Email,Phone Number,Organization Name,Facility Type,Bed Count,Challenges,Source Page URL,Page Title,Submitted At,Status,Source,Assigned Caller,Added On\n';
             leads.forEach(function(l) {
-                csv += '"' + l.id + '","' + (l.name || '') + '","' + (l.phone || '') + '","' + (l.email || '') + '","' + (l.status || 'New') + '","' + (l.source || 'Website') + '","' + (l.requirement || '') + '","' + (l.city || '') + '","' + (l.caller || '') + '","' + (l.addedOn || '') + '"\n';
+                var fn = l.firstName || (l.name ? l.name.split(' ')[0] : '');
+                var ln = l.lastName || (l.name && l.name.split(' ').length > 1 ? l.name.split(' ').slice(1).join(' ') : '');
+                csv += '"' + (l.id || '') + '","' + 
+                       fn.replace(/"/g, '""') + '","' + 
+                       ln.replace(/"/g, '""') + '","' + 
+                       (l.name || '').replace(/"/g, '""') + '","' + 
+                       (l.email || '').replace(/"/g, '""') + '","' + 
+                       (l.phone || '').replace(/"/g, '""') + '","' + 
+                       (l.organization || '').replace(/"/g, '""') + '","' + 
+                       (l.facilityType || '').replace(/"/g, '""') + '","' + 
+                       (l.bedCount || '').replace(/"/g, '""') + '","' + 
+                       (l.challenges || l.requirement || '').replace(/"/g, '""') + '","' + 
+                       (l.sourcePageUrl || '').replace(/"/g, '""') + '","' + 
+                       (l.pageTitle || '').replace(/"/g, '""') + '","' + 
+                       (l.submittedAt || '').replace(/"/g, '""') + '","' + 
+                       (l.status || 'New') + '","' + 
+                       (l.source || 'Website') + '","' + 
+                       (l.caller || '') + '","' + 
+                       (l.addedOn || '') + '"\n';
             });
 
             var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
@@ -3234,7 +3495,7 @@
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
-            showToast('Downloaded leads CSV');
+            showToast('Downloaded full leads CSV');
         }
 
         function downloadSampleCSV() {

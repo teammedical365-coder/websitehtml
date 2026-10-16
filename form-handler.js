@@ -110,6 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
             var crmLead = {
                 id: 'MED-' + Math.floor(1000 + Math.random() * 9000),
                 name: leadFullName,
+                firstName: object.first_name || '',
+                lastName: object.last_name || '',
                 phone: object.phone_number || object.phone || '',
                 email: object.email || '',
                 status: 'New',
@@ -118,6 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 facilityType: object.facility_type || '',
                 bedCount: object.bed_count || '',
                 challenges: object.challenges || object.message || '',
+                sourcePageUrl: object.source_page_url || window.location.href,
+                pageTitle: object.page_title || document.title,
+                submittedAt: object.submitted_at || new Date().toISOString(),
+                caller: 'Pooja Sharma',
                 addedOn: formattedDate,
                 timestamp: Date.now()
             };
