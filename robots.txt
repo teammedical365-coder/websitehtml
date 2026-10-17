@@ -63,6 +63,14 @@ Disallow: /medical365-analytics-api/
 Disallow: /admin/
 Disallow: /superadmin
 
+User-agent: Yandex
+Allow: /
+Disallow: /medical365-analytics
+Disallow: /medical365-analytics/
+Disallow: /medical365-analytics-api/
+Disallow: /admin/
+Disallow: /superadmin
+
 User-agent: GPTBot
 Allow: /
 Disallow: /medical365-analytics
