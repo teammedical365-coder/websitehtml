@@ -31,10 +31,11 @@ function extractUrls(filePath) {
   return [];
 }
 
+const sitemapUrls = extractUrls("sitemap.xml");
 const mainUrls = extractUrls("sitemap-main.xml");
 const locUrls = extractUrls("sitemap-locations.xml");
 
-const allUrls = Array.from(new Set([...urls, ...mainUrls, ...locUrls]));
+const allUrls = Array.from(new Set([...urls, ...sitemapUrls, ...mainUrls, ...locUrls]));
 
 // IndexNow allows up to 10,000 URLs per request
 const payload = JSON.stringify({
