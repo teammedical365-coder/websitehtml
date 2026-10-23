@@ -2052,10 +2052,10 @@
                     </div>
 
                     <div class="card-widget">
-                        <h3 style="font-size: 0.95rem; font-weight: 800; margin-bottom: 8px;">Reset Baseline Demo Data</h3>
-                        <p style="font-size: 0.78rem; color: #64748b; margin-bottom: 16px;">Restores the baseline 54 leads matching your screenshot for demo presentation.</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 800; margin-bottom: 8px;">Reset Production Leads</h3>
+                        <p style="font-size: 0.78rem; color: #64748b; margin-bottom: 16px;">Restores the baseline 7 production leads from verified submissions.</p>
                         <button class="btn-white" onclick="restoreBaselineLeads()">
-                            <i data-lucide="refresh-cw" style="width: 14px; height: 14px;"></i> Restore 54 Leads
+                            <i data-lucide="refresh-cw" style="width: 14px; height: 14px;"></i> Restore 7 Production Leads
                         </button>
                     </div>
 
@@ -2362,7 +2362,7 @@
                     <div class="form-row">
                         <div>
                             <label class="input-label">Lead Name *</label>
-                            <input type="text" id="mtLeadName" class="modal-input" required placeholder="e.g. Ranjith nk">
+                            <input type="text" id="mtLeadName" class="modal-input" required placeholder="e.g. Dr. Deep Patel">
                         </div>
                         <div>
                             <label class="input-label">Date & Time *</label>
@@ -2489,181 +2489,183 @@
             'Telecaller': { email: 'telecaller@medical365.in', pass: 'telecaller123', name: 'POOJA', role: 'Telecaller', avatar: 'T', bg: '#d97706' }
         };
 
-        // 54 Realistic Baseline Leads matching user's screenshot & exact submission fields
+        // 7 Verified Production Leads with standardized schema mapping
         var baselineLeads = [
             {
-                id: 'MED-1044',
-                name: 'test test',
-                firstName: 'test',
-                lastName: 'test',
-                email: 'deepurao0369@gmail.com',
-                phone: '+919991770369',
-                organization: 'hahsh',
-                facilityType: 'Diagnostic Lab',
-                bedCount: '201–500 Beds',
-                challenges: 'erf',
+                id: 'MED-2001',
+                name: 'Dr velentina sogra',
+                firstName: 'Dr velentina',
+                lastName: 'sogra',
+                fullName: 'Dr velentina sogra',
+                email: 'velentinasogra97@gmail.com',
+                phone: '+919009779047',
+                organization: 'indore',
+                facilityType: 'Other',
+                bedCount: null,
+                challenges: 'im in the ayurvedic brand which is selling cbd products im an ayurvedic dr who is consultant dr in this company they are telling me whstever the orders we get from website you create a prescription in which companys name or logo will not be shown that prescription will only be made on your name that means teleconsultation done via will not be shown is it right and what are the rules',
+                sourceUrl: 'https://www.medical365.in/book-demo',
                 sourcePageUrl: 'https://www.medical365.in/book-demo',
                 pageTitle: 'Book a Free Demo - Medical365',
-                submittedAt: '2026-10-16T06:34:44.044Z',
+                submittedAt: '2026-10-21T06:38:43.284Z',
                 status: 'New',
                 source: 'Website',
                 caller: 'Pooja Sharma',
-                addedOn: 'Oct 16, 2026',
-                timestamp: 1792132484044
+                addedOn: 'Oct 21, 2026',
+                timestamp: 1792564723284
             },
             {
-                id: '1',
-                name: 'Ranjith nk',
-                firstName: 'Ranjith',
-                lastName: 'nk',
-                email: 'ranjith@hospitalcare.org',
-                phone: '+91 98450 11201',
-                organization: 'Apex Multispeciality Hospital',
-                facilityType: 'Hospital',
-                bedCount: '51–100 Beds',
-                challenges: 'Hospital Management Software & OPD Tokens',
-                sourcePageUrl: 'https://www.medical365.in/book-demo',
-                pageTitle: 'Book a Free Demo - Medical365',
-                submittedAt: '2026-10-15T09:12:00.000Z',
-                status: 'New',
-                source: 'Website',
-                caller: 'Pooja Sharma',
-                addedOn: 'Oct 15, 2026',
-                timestamp: 1792041600000
-            },
-            {
-                id: '2',
-                name: 'roman',
-                firstName: 'Roman',
-                lastName: 'C',
-                email: 'roman.c@medtech.in',
-                phone: '+91 98230 45678',
-                organization: 'MedTech Clinic & Diagnostic',
-                facilityType: 'Clinic',
-                bedCount: '1–20 Beds',
-                challenges: 'OPD Token & Doctor Roster Management',
-                sourcePageUrl: 'https://www.medical365.in/book-demo',
-                pageTitle: 'Book a Free Demo - Medical365',
-                submittedAt: '2026-10-15T08:45:00.000Z',
-                status: 'New',
-                source: 'Website',
-                caller: 'Pooja Sharma',
-                addedOn: 'Oct 15, 2026',
-                timestamp: 1792041500000
-            },
-            {
-                id: '3',
-                name: 'Darshan',
-                firstName: 'Darshan',
+                id: 'MED-2002',
+                name: 'Dr. Deep Patel',
+                firstName: 'Dr. Deep',
                 lastName: 'Patel',
-                email: 'dr.darshan@patelhospital.com',
-                phone: '+91 94140 88921',
-                organization: 'Patel Surgical Hospital',
-                facilityType: 'Hospital',
-                bedCount: '101–200 Beds',
-                challenges: 'IPD Bed & TPA Cashless Insurance Suite',
+                fullName: 'Dr. Deep Patel',
+                email: 'Wandervester@gmail.com',
+                phone: '+919913280768',
+                organization: 'Shubham Cancer Center',
+                facilityType: 'Clinic / Polyclinic',
+                bedCount: '1–10 Doctors',
+                challenges: 'Would like to see the Oncology Specific products',
+                sourceUrl: 'https://www.medical365.in/book-demo',
                 sourcePageUrl: 'https://www.medical365.in/book-demo',
                 pageTitle: 'Book a Free Demo - Medical365',
-                submittedAt: '2026-10-12T14:20:00.000Z',
-                status: 'New',
+                submittedAt: '2026-10-19T11:50:36.741Z',
+                status: 'Contacted',
                 source: 'Website',
                 caller: 'Vikram Malhotra',
-                addedOn: 'Oct 12, 2026',
-                timestamp: 1791782400000
+                addedOn: 'Oct 19, 2026',
+                timestamp: 1792410636741
             },
             {
-                id: '4',
-                name: 'manpreet',
-                firstName: 'Manpreet',
-                lastName: 'Singh',
-                email: 'manpreet.singh@lifecare.co',
-                phone: '+91 98110 33490',
-                organization: 'LifeCare Diagnostics & MRI',
+                id: 'MED-2003',
+                name: 'Tovindra Sahu',
+                firstName: 'Tovindra',
+                lastName: 'Sahu',
+                fullName: 'Tovindra Sahu',
+                email: 'tovindra@gmail.com',
+                phone: '+919214086878',
+                organization: 'Getwell Polyclinic & Hospital',
                 facilityType: 'Diagnostic Lab',
-                bedCount: '21–50 Beds',
-                challenges: 'Diagnostic Vault, EMR, and DICOM Scans',
+                bedCount: '1–10 Doctors',
+                challenges: null,
+                sourceUrl: 'https://www.medical365.in/book-demo',
                 sourcePageUrl: 'https://www.medical365.in/book-demo',
                 pageTitle: 'Book a Free Demo - Medical365',
-                submittedAt: '2026-10-12T11:05:00.000Z',
+                submittedAt: '2026-10-15T00:00:00.000Z',
+                status: 'New',
+                source: 'Website',
+                caller: 'Pooja Sharma',
+                addedOn: 'Oct 15, 2026',
+                timestamp: 1792022400000
+            },
+            {
+                id: 'MED-2004',
+                name: 'Anshuman Dewan',
+                firstName: 'Anshuman',
+                lastName: 'Dewan',
+                fullName: 'Anshuman Dewan',
+                email: 'anshuman9@hotmail.com',
+                phone: '+919425111727',
+                organization: 'Hospital',
+                facilityType: 'Other',
+                bedCount: '11–50 Beds',
+                challenges: null,
+                sourceUrl: 'https://www.medical365.in/book-demo',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-10-10T00:00:00.000Z',
                 status: 'New',
                 source: 'Website',
                 caller: 'Vikram Malhotra',
-                addedOn: 'Oct 12, 2026',
-                timestamp: 1791782300000
+                addedOn: 'Oct 10, 2026',
+                timestamp: 1791590400000
             },
             {
-                id: '5',
-                name: 'Bajrang Sultania',
-                firstName: 'Bajrang',
-                lastName: 'Sultania',
-                email: 'bajrang@sultaniahealth.in',
-                phone: '+91 97840 22199',
-                organization: 'Sultania Super Speciality Hospital',
-                facilityType: 'Hospital',
-                bedCount: '51–100 Beds',
-                challenges: 'Full Hospital ERP (50 Beds) with Pharmacy & OT',
+                id: 'MED-2005',
+                name: 'shubham dadhich',
+                firstName: 'shubham',
+                lastName: 'dadhich',
+                fullName: 'shubham dadhich',
+                email: 'dadhich.shubham20@gmail.com',
+                phone: '+918385800378',
+                organization: 'SHREE RAMCHANDRA MEMORIAL HOSPITAL',
+                facilityType: 'Multi-Specialty Hospital',
+                bedCount: '11–50 Beds',
+                challenges: 'REQUIRE A ABDM COLLABORATED SOFTWARE',
+                sourceUrl: 'https://www.medical365.in/book-demo',
                 sourcePageUrl: 'https://www.medical365.in/book-demo',
                 pageTitle: 'Book a Free Demo - Medical365',
-                submittedAt: '2026-10-12T10:15:00.000Z',
+                submittedAt: '2026-09-16T07:42:00.000Z',
+                status: 'Qualified',
+                source: 'Website',
+                caller: 'Pooja Sharma',
+                addedOn: 'Sep 16, 2026',
+                timestamp: 1789544520000
+            },
+            {
+                id: 'MED-2006',
+                name: 'Nimisha G',
+                firstName: 'Nimisha',
+                lastName: 'G',
+                fullName: 'Nimisha G',
+                email: 'gmlnimisha@gmail.com',
+                phone: '+919646437456',
+                organization: 'Meridian Projects',
+                facilityType: 'Other',
+                bedCount: null,
+                challenges: null,
+                sourceUrl: 'https://www.medical365.in/book-demo',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-09-13T03:50:00.000Z',
                 status: 'New',
                 source: 'Website',
-                caller: 'Dr. Rajesh V.',
-                addedOn: 'Oct 12, 2026',
-                timestamp: 1791782200000
+                caller: 'Vikram Malhotra',
+                addedOn: 'Sep 13, 2026',
+                timestamp: 1789271400000
+            },
+            {
+                id: 'MED-2007',
+                name: 'Aamil raza',
+                firstName: 'Aamil',
+                lastName: 'raza',
+                fullName: 'Aamil raza',
+                email: 'rnhprna@gmail.com',
+                phone: '+919205950905',
+                organization: 'RNH',
+                facilityType: 'Specialty Hospital',
+                bedCount: '11–50 Beds',
+                challenges: null,
+                sourceUrl: 'https://www.medical365.in/book-demo',
+                sourcePageUrl: 'https://www.medical365.in/book-demo',
+                pageTitle: 'Book a Free Demo - Medical365',
+                submittedAt: '2026-09-12T20:01:00.000Z',
+                status: 'New',
+                source: 'Website',
+                caller: 'Pooja Sharma',
+                addedOn: 'Sep 12, 2026',
+                timestamp: 1789243260000
             }
         ];
 
-        // Fill remaining 48 baseline leads matching 54 total count
-        var baseCities = ['Lucknow', 'Indore', 'Bhopal', 'Nagpur', 'Surat', 'Patna', 'Ranchi', 'Dehradun', 'Kochi', 'Coimbatore'];
-        var baseCallers = ['Pooja Sharma', 'Vikram Malhotra', 'Dr. Rajesh V.'];
-        var baseReqs = ['Hospital Software Demo', 'EMR & Lab Integration', 'TPA Claim Processing', 'OPD Roster Management', 'Patient WhatsApp Notifications'];
-        var baseTypes = ['Hospital', 'Clinic', 'Diagnostic Lab', 'Nursing Home'];
-        var baseBeds = ['21–50 Beds', '51–100 Beds', '101–200 Beds', '201–500 Beds'];
-
-        for (var i = 7; i <= 54; i++) {
-            baselineLeads.push({
-                id: i.toString(),
-                name: 'Healthcare Client #' + i,
-                firstName: 'Client',
-                lastName: '#' + i,
-                phone: '+91 98' + (20000000 + i * 37).toString().slice(0, 8),
-                email: 'client' + i + '@medicalhospital.in',
-                organization: 'Health Facility #' + i,
-                facilityType: baseTypes[i % baseTypes.length],
-                bedCount: baseBeds[i % baseBeds.length],
-                challenges: baseReqs[i % baseReqs.length],
-                sourcePageUrl: 'https://www.medical365.in/book-demo',
-                pageTitle: 'Book a Free Demo - Medical365',
-                submittedAt: '2026-10-' + (10 + (i % 5)) + 'T12:00:00.000Z',
-                status: 'New',
-                source: 'Website',
-                requirement: baseReqs[i % baseReqs.length],
-                city: baseCities[i % baseCities.length],
-                caller: baseCallers[i % baseCallers.length],
-                addedOn: 'Oct ' + (1 + (i % 15)) + ', 2026',
-                timestamp: 1790918400000 + (i * 18000000)
-            });
-        }
-
-        // Baseline Call Records
+        // Production Call Records
         var baselineCalls = [
-            { time: 'Today 11:30 AM', lead: 'Ranjith nk', phone: '+91 98450 11201', caller: 'Pooja Sharma', outcome: 'Connected', duration: '04:12', notes: 'Discussed 30-bed software package, client scheduled demo.' },
-            { time: 'Today 10:15 AM', lead: 'roman', phone: '+91 98230 45678', caller: 'Pooja Sharma', outcome: 'Connected', duration: '02:45', notes: 'Inquired about OPD token display for TV screen.' },
-            { time: 'Yesterday 04:20 PM', lead: 'Darshan', phone: '+91 94140 88921', caller: 'Vikram Malhotra', outcome: 'Connected', duration: '06:30', notes: 'TPA claim pre-auth workflow explained.' },
-            { time: 'Yesterday 02:10 PM', lead: 'Bajrang Sultania', phone: '+91 97840 22199', caller: 'Dr. Rajesh V.', outcome: 'Busy', duration: '00:15', notes: 'Client was in surgery, requested callback at 6 PM.' }
+            { time: 'Today 11:30 AM', lead: 'Dr. Deep Patel', phone: '+919913280768', caller: 'Vikram Malhotra', outcome: 'Connected', duration: '05:20', notes: 'Discussed Oncology Specific products and treatment planning modules.' },
+            { time: 'Yesterday 03:15 PM', lead: 'shubham dadhich', phone: '+918385800378', caller: 'Pooja Sharma', outcome: 'Connected', duration: '04:10', notes: 'Reviewed ABDM M1/M2 collaboration & digital health record exchange for 50-bed hospital.' },
+            { time: 'Oct 21 02:40 PM', lead: 'Dr velentina sogra', phone: '+919009779047', caller: 'Pooja Sharma', outcome: 'Connected', duration: '06:45', notes: 'Consulted regarding Ayurvedic teleconsultation guidelines and e-prescription compliance.' },
+            { time: 'Oct 16 10:15 AM', lead: 'Tovindra Sahu', phone: '+919214086878', caller: 'Vikram Malhotra', outcome: 'Busy', duration: '00:20', notes: 'Requested callback in afternoon regarding diagnostic lab module.' }
         ];
 
-        // Baseline Meetings
+        // Production Meetings
         var baselineMeetings = [
-            { datetime: 'Today, 03:00 PM', title: 'Hospital ERP Live Demo', lead: 'Ranjith nk', host: 'Vikram Malhotra', status: 'Scheduled', location: 'Google Meet' },
-            { datetime: 'Tomorrow, 11:00 AM', title: 'OPD Roster Walkthrough', lead: 'roman', host: 'Pooja Sharma', status: 'Scheduled', location: 'Google Meet' },
-            { datetime: 'Oct 18, 02:30 PM', title: 'Cashless TPA Desk Demo', lead: 'Darshan', host: 'Dr. Rajesh V.', status: 'Scheduled', location: 'On-premise Visit' }
+            { datetime: 'Today, 03:00 PM', title: 'Oncology Module Walkthrough', lead: 'Dr. Deep Patel', host: 'Vikram Malhotra', status: 'Scheduled', location: 'Google Meet' },
+            { datetime: 'Tomorrow, 11:30 AM', title: 'ABDM Collaboration Live Demo', lead: 'shubham dadhich', host: 'Pooja Sharma', status: 'Scheduled', location: 'Google Meet' },
+            { datetime: 'Friday, 02:00 PM', title: 'Teleconsultation Compliance Session', lead: 'Dr velentina sogra', host: 'Vikram Malhotra', status: 'Scheduled', location: 'Virtual' }
         ];
 
-        // Baseline Reminders
+        // Production Reminders
         var baselineReminders = [
-            { due: 'Today, 05:00 PM', lead: 'Bajrang Sultania', note: 'Call back post-surgery to share commercial quote', priority: 'High', status: 'Pending' },
-            { due: 'Tomorrow, 10:00 AM', lead: 'manpreet', note: 'Send EMR DICOM scan viewer demo video', priority: 'Medium', status: 'Pending' }
+            { due: 'Today, 04:30 PM', lead: 'Dr. Deep Patel', note: 'Share oncology product brochure and pricing estimate', priority: 'High', status: 'Pending' },
+            { due: 'Tomorrow, 10:00 AM', lead: 'shubham dadhich', note: 'Send ABDM integration documentation and MoHFW guidelines', priority: 'High', status: 'Pending' }
         ];
 
         // ══════════════════════════════════════════════════════════
@@ -2739,7 +2741,15 @@
         function getCombinedLeads() {
             var liveWebsiteLeads = [];
             try {
-                liveWebsiteLeads = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+                var stored = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+                // Filter out any legacy dummy records from previous testing
+                liveWebsiteLeads = stored.filter(function(l) {
+                    if (!l) return false;
+                    if (l.id === 'MED-1044' || l.name === 'test test' || l.email === 'deepurao0369@gmail.com') return false;
+                    if (l.name && l.name.indexOf('Healthcare Client #') === 0) return false;
+                    if (['1', '2', '3', '4', '5', '6'].indexOf(l.id) !== -1) return false;
+                    return true;
+                });
             } catch(e) {}
 
             return liveWebsiteLeads.concat(baselineLeads);
@@ -3559,7 +3569,7 @@
         function restoreBaselineLeads() {
             localStorage.removeItem('m365_crm_leads');
             refreshAllData();
-            showToast('Restored 54 baseline demo leads');
+            showToast('Restored 7 production leads');
         }
 
         function clearAllLeads() {

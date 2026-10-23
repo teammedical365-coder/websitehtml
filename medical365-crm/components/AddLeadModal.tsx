@@ -136,7 +136,7 @@ export default function AddLeadModal() {
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Ranjith NK"
+                  placeholder="e.g. Dr. Deep Patel"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-3 py-2 text-sm bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"

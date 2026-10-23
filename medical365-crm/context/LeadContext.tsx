@@ -31,7 +31,7 @@ interface LeadContextType {
 
 const LeadContext = createContext<LeadContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'medical365_crm_leads_v1';
+const STORAGE_KEY = 'medical365_crm_leads_v2';
 
 export function LeadProvider({ children }: { children: React.ReactNode }) {
   const [leads, setLeads] = useState<Lead[]>(initialLeads);
@@ -43,11 +43,20 @@ export function LeadProvider({ children }: { children: React.ReactNode }) {
   // Load from LocalStorage and sync with API on mount
   useEffect(() => {
     try {
+      // Clear legacy mock storage key if present
+      localStorage.removeItem('medical365_crm_leads_v1');
+
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          setLeads(parsed);
+          // Filter out legacy dummy mock leads
+          const valid = parsed.filter((l: Lead) => !['MED-101', 'MED-102', 'MED-103', 'MED-104', 'MED-105', 'MED-106', 'MED-107'].includes(l.id));
+          if (valid.length > 0) {
+            setLeads(valid);
+          } else {
+            setLeads(initialLeads);
+          }
         }
       }
     } catch {
