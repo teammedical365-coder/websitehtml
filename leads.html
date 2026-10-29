@@ -1460,6 +1460,9 @@
                         <button class="btn-add-lead" onclick="openAddLeadModal()">
                             <i data-lucide="plus" style="width: 16px; height: 16px;"></i> Add Lead
                         </button>
+                        <button class="btn-add-lead" onclick="testWhatsAppInquiryPing()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);" title="Simulate incoming WhatsApp lead to test dashboard reception">
+                            <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> Test WhatsApp Lead
+                        </button>
                     </div>
                 </div>
 
@@ -1670,6 +1673,13 @@
                                 <span class="source-percent" id="src-val-walkin">0% (0)</span>
                             </div>
                             <div class="source-row">
+                                <span class="source-name" style="font-weight: 700; color: #059669; display: flex; align-items: center; gap: 5px;">
+                                    <i data-lucide="message-circle" style="width: 14px; height: 14px; color: #10b981;"></i> WhatsApp
+                                </span>
+                                <div class="source-bar-track"><div class="source-bar-fill" id="src-bar-whatsapp" style="width: 0%; background: #10b981;"></div></div>
+                                <span class="source-percent" style="font-weight: 700; color: #059669;" id="src-val-whatsapp">0% (0)</span>
+                            </div>
+                            <div class="source-row">
                                 <span class="source-name" style="font-weight: 800; color: #0f172a;">Website</span>
                                 <div class="source-bar-track"><div class="source-bar-fill" id="src-bar-website" style="width: 100%; background: #475569;"></div></div>
                                 <span class="source-percent" style="font-weight: 800; color: #0f172a;" id="src-val-website">100% (54)</span>
@@ -1809,6 +1819,7 @@
                         <select class="dropdown-pill" id="leadsSourceFilter" onchange="renderFullLeadsTable()">
                             <option value="All">All Sources</option>
                             <option value="Website">Website</option>
+                            <option value="WhatsApp">WhatsApp</option>
                             <option value="IndiaMART">IndiaMART</option>
                             <option value="Referral">Referral</option>
                             <option value="Social Media">Social Media</option>
@@ -2205,6 +2216,7 @@
                             <label class="input-label">Acquisition Source</label>
                             <select id="mLeadSource" class="modal-input">
                                 <option>Website</option>
+                                <option>WhatsApp</option>
                                 <option>IndiaMART</option>
                                 <option>Referral</option>
                                 <option>Social Media</option>
@@ -2489,8 +2501,30 @@
             'Telecaller': { email: 'telecaller@medical365.in', pass: 'telecaller123', name: 'POOJA', role: 'Telecaller', avatar: 'T', bg: '#d97706' }
         };
 
-        // 7 Verified Production Leads with standardized schema mapping
+        // Production Leads with standardized schema mapping
         var baselineLeads = [
+            {
+                id: 'MED-WA-1001',
+                name: 'Dr. Suresh Kumar (City Care)',
+                firstName: 'Dr. Suresh',
+                lastName: 'Kumar',
+                fullName: 'Dr. Suresh Kumar',
+                email: 'dr.suresh@citycare.org',
+                phone: '+919829014285',
+                organization: 'City Care Hospital',
+                facilityType: 'Multi-Specialty Hospital',
+                bedCount: '51–200 Beds',
+                challenges: 'Inquired on WhatsApp for ABDM M1/M2 software compliance, OPD billing, and live demo.',
+                sourceUrl: 'https://www.medical365.in/clinic-management-system-jaipur.html',
+                sourcePageUrl: 'https://www.medical365.in/clinic-management-system-jaipur.html',
+                pageTitle: 'Clinic Management System Jaipur - Medical365',
+                submittedAt: '2026-10-28T10:15:00.000Z',
+                status: 'New',
+                source: 'WhatsApp',
+                caller: 'Pooja Sharma',
+                addedOn: 'Oct 28, 2026',
+                timestamp: 1793182500000
+            },
             {
                 id: 'MED-2001',
                 name: 'Dr velentina sogra',
@@ -2752,6 +2786,48 @@
                 });
             } catch(e) {}
 
+            // Ingest any WhatsApp inquiries or events from m365_captured_leads
+            try {
+                var captured = JSON.parse(localStorage.getItem('m365_captured_leads') || '[]');
+                captured.forEach(function(cap) {
+                    if (!cap) return;
+                    var alreadyExists = liveWebsiteLeads.some(function(l) {
+                        return (l.id && l.id === cap.id) || (l.phone && cap.phone && l.phone === cap.phone && Math.abs((l.timestamp || 0) - new Date(cap.timestamp || 0).getTime()) < 60000);
+                    });
+                    if (!alreadyExists && (cap.type === 'whatsapp' || cap.source === 'WhatsApp')) {
+                        var parsedCity = 'Jaipur';
+                        if (cap.sourcePage) {
+                            var cm = cap.sourcePage.match(/-([a-z]+)\.html/i);
+                            if (cm && cm[1]) parsedCity = cm[1].charAt(0).toUpperCase() + cm[1].slice(1);
+                        }
+                        liveWebsiteLeads.unshift({
+                            id: cap.id || ('MED-WA-' + Math.floor(1000 + Math.random() * 9000)),
+                            name: cap.name || 'WhatsApp Inquiry',
+                            firstName: 'WhatsApp',
+                            lastName: 'Inquiry',
+                            fullName: cap.name || 'WhatsApp Inquiry',
+                            phone: cap.phone || '+91 77919 10007',
+                            email: cap.email && cap.email !== '—' ? cap.email : '',
+                            organization: cap.organization || 'Website Visitor',
+                            facilityType: cap.facilityType || 'Clinic / Hospital',
+                            bedCount: cap.bedCount || '—',
+                            challenges: cap.message || 'WhatsApp inquiry initiated on website',
+                            requirement: 'WhatsApp Live Demo & Inquiry (' + parsedCity + ')',
+                            sourceUrl: cap.sourcePage || 'https://www.medical365.in',
+                            sourcePageUrl: cap.sourcePage || 'https://www.medical365.in',
+                            pageTitle: 'Medical 365',
+                            submittedAt: cap.timestamp || new Date().toISOString(),
+                            status: cap.status || 'New',
+                            source: 'WhatsApp',
+                            caller: 'Pooja Sharma',
+                            city: parsedCity,
+                            addedOn: new Date(cap.timestamp || Date.now()).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+                            timestamp: new Date(cap.timestamp || Date.now()).getTime()
+                        });
+                    }
+                });
+            } catch(e) {}
+
             return liveWebsiteLeads.concat(baselineLeads);
         }
 
@@ -2879,9 +2955,10 @@
             document.getElementById('pillar-onhold').style.height = getPillarHeight(onHoldCount) + 'px';
 
             // Source Distribution Calculation
-            var sources = ['Website', 'IndiaMART', 'Referral', 'Social Media', 'Walk-in', 'Exhibition'];
+            var sources = ['Website', 'WhatsApp', 'IndiaMART', 'Referral', 'Social Media', 'Walk-in', 'Exhibition'];
             var srcMap = {
                 'Website': 'website',
+                'WhatsApp': 'whatsapp',
                 'IndiaMART': 'indiamart',
                 'Referral': 'referral',
                 'Social Media': 'social',
@@ -2930,10 +3007,14 @@
                 var tr = document.createElement('tr');
                 tr.style.cursor = 'pointer';
                 tr.onclick = function() { openLeadDetailModal(lead); };
+                var srcLabel = lead.source || 'Website';
+                var srcBadge = (srcLabel === 'WhatsApp') 
+                    ? '<span style="color:#059669; font-weight:700; display:inline-flex; align-items:center; gap:3px;"><i data-lucide="message-circle" style="width:12px;height:12px;"></i> WhatsApp</span>'
+                    : '<span style="color:#64748b;">' + srcLabel + '</span>';
                 tr.innerHTML = 
                     '<td><strong>' + lead.name + '</strong></td>' +
                     '<td><span class="pill-new">' + lead.status + '</span></td>' +
-                    '<td style="color:#64748b;">' + (lead.source || 'Website') + '</td>' +
+                    '<td>' + srcBadge + '</td>' +
                     '<td style="color:#64748b;">' + (lead.addedOn || 'Today') + '</td>';
                 tbody.appendChild(tr);
             });
@@ -3016,7 +3097,9 @@
                         '</select>' +
                     '</td>' +
                     '<td>' +
-                        '<div style="font-size: 0.75rem; font-weight: 600; color: #0f172a;">' + (lead.source || 'Website') + '</div>' +
+                        ((lead.source === 'WhatsApp')
+                            ? '<div style="font-size: 0.75rem; font-weight: 700; color: #059669; display: flex; align-items: center; gap: 4px;"><i data-lucide="message-circle" style="width: 13px; height: 13px; color: #10b981;"></i> WhatsApp</div>'
+                            : '<div style="font-size: 0.75rem; font-weight: 600; color: #0f172a;">' + (lead.source || 'Website') + '</div>') +
                         '<div style="font-size: 0.68rem; color: #64748b;">' + subTime + '</div>' +
                     '</td>' +
                     '<td>' + (lead.caller || 'Pooja Sharma') + '</td>' +
@@ -3609,6 +3692,68 @@
             showToast('✓ Webhook test successful! New lead captured.');
         }
 
+        function testWhatsAppInquiryPing() {
+            var sampleNames = ['Dr. Suresh Kumar (City Care)', 'Dr. Neha Agarwal (Apollo Clinic)', 'Pooja Verma (Lifeline Hospital)', 'Dr. Rajesh Solanki (Apex Polyclinic)'];
+            var sampleCities = ['Jaipur', 'Delhi NCR', 'Ahmedabad', 'Mumbai', 'Bhopal'];
+            var randName = sampleNames[Math.floor(Math.random() * sampleNames.length)];
+            var randCity = sampleCities[Math.floor(Math.random() * sampleCities.length)];
+            var randPhone = '+91 98' + Math.floor(10000000 + Math.random() * 90000000);
+
+            var testWhatsAppLead = {
+                id: 'MED-WA-' + Math.floor(1000 + Math.random() * 9000),
+                name: randName,
+                firstName: randName.split(' ')[0],
+                lastName: randName.split(' ').slice(1).join(' '),
+                fullName: randName,
+                phone: randPhone,
+                email: 'dr.' + randName.toLowerCase().replace(/[^a-z]/g, '').slice(0, 8) + '@hospital.org',
+                source: 'WhatsApp',
+                status: 'New',
+                organization: randName.includes('(') ? randName.split('(')[1].replace(')', '') : 'Private Medical Practice',
+                facilityType: 'Clinic / Polyclinic',
+                bedCount: '1–10 Doctors',
+                challenges: 'Hi, I would like to inquire about Medical 365 ABDM software demo, EMR, and OPD billing integration.',
+                requirement: 'WhatsApp Live Clinical Inquiry (' + randCity + ')',
+                sourceUrl: 'https://www.medical365.in/clinic-management-system-jaipur.html',
+                sourcePageUrl: 'https://www.medical365.in/clinic-management-system-jaipur.html',
+                pageTitle: 'Clinic Management System - Medical365',
+                city: randCity,
+                caller: 'Pooja Sharma',
+                addedOn: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+                timestamp: Date.now()
+            };
+
+            var existing = [];
+            try {
+                existing = JSON.parse(localStorage.getItem('m365_crm_leads') || '[]');
+            } catch(e) {}
+
+            existing.unshift(testWhatsAppLead);
+            localStorage.setItem('m365_crm_leads', JSON.stringify(existing));
+
+            // Also keep m365_captured_leads and medical365_crm_leads_v2 in sync
+            try {
+                var cap = JSON.parse(localStorage.getItem('m365_captured_leads') || '[]');
+                cap.unshift({
+                    id: testWhatsAppLead.id,
+                    type: 'whatsapp',
+                    name: testWhatsAppLead.name,
+                    phone: testWhatsAppLead.phone,
+                    organization: testWhatsAppLead.organization,
+                    facilityType: testWhatsAppLead.facilityType,
+                    message: testWhatsAppLead.challenges,
+                    sourcePage: testWhatsAppLead.sourceUrl,
+                    status: 'New',
+                    source: 'WhatsApp',
+                    timestamp: new Date().toISOString()
+                });
+                localStorage.setItem('m365_captured_leads', JSON.stringify(cap.slice(0, 100)));
+            } catch(e) {}
+
+            refreshAllData();
+            showToast('✓ WhatsApp inquiry received in dashboard! (' + testWhatsAppLead.name + ')');
+        }
+
         // ══════════════════════════════════════════════════════════
         // NOTIFICATIONS DRAWER
         // ══════════════════════════════════════════════════════════
@@ -3649,10 +3794,14 @@
         // REAL-TIME AUTO SYNC (CROSS-TAB & WEBSITE SUBMISSIONS)
         // ══════════════════════════════════════════════════════════
         window.addEventListener('storage', function(e) {
-            if (e.key === 'm365_crm_leads') {
+            if (e.key === 'm365_crm_leads' || e.key === 'm365_captured_leads' || e.key === 'medical365_crm_leads_v2') {
                 refreshAllData();
-                showToast('New lead captured from website!');
+                showToast('New lead captured from website / WhatsApp!');
             }
+        });
+        window.addEventListener('m365_lead_captured', function() {
+            refreshAllData();
+            showToast('New WhatsApp lead captured!');
         });
 
         // 3-second heartbeat to ensure instant updates

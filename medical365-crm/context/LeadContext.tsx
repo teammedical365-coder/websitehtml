@@ -82,6 +82,34 @@ export function LeadProvider({ children }: { children: React.ReactNode }) {
         }
       })
       .catch(() => {});
+
+    // Listen for live lead capture events from website forms and WhatsApp inquiries
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === STORAGE_KEY || e.key === 'm365_crm_leads' || e.key === 'm365_captured_leads') {
+        try {
+          const v2 = localStorage.getItem(STORAGE_KEY);
+          if (v2) {
+            setLeads(JSON.parse(v2));
+          }
+        } catch {}
+      }
+    };
+    const handleLiveCapture = () => {
+      try {
+        const v2 = localStorage.getItem(STORAGE_KEY);
+        if (v2) {
+          setLeads(JSON.parse(v2));
+        }
+      } catch {}
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    window.addEventListener('m365_lead_captured', handleLiveCapture);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('m365_lead_captured', handleLiveCapture);
+    };
   }, []);
 
   // Sync to LocalStorage on change

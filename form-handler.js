@@ -129,14 +129,65 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             existingLeads.unshift(crmLead);
-            localStorage.setItem('m365_crm_leads', JSON.stringify(existingLeads));
+            localStorage.setItem('m365_crm_leads', JSON.stringify(existingLeads.slice(0, 100)));
+
+            // Also keep medical365_crm_leads_v2 & m365_captured_leads in sync
+            try {
+                var v2Leads = JSON.parse(localStorage.getItem('medical365_crm_leads_v2') || '[]');
+                v2Leads.unshift({
+                    id: crmLead.id,
+                    name: crmLead.name,
+                    phone: crmLead.phone,
+                    email: crmLead.email,
+                    gender: 'Other',
+                    requirement: 'Facility: ' + (crmLead.facilityType || 'Hospital') + ' • Bed Count: ' + (crmLead.bedCount || '—'),
+                    department: 'Hospital Administration & IT',
+                    status: 'New Inquiry',
+                    source: 'Website',
+                    assignedTo: 'Nurse Sneha (Triage Coordinator)',
+                    value: 75000,
+                    score: 75,
+                    priority: 'High',
+                    city: 'Jaipur',
+                    notes: crmLead.challenges,
+                    addedOn: new Date().toISOString().split('T')[0]
+                });
+                localStorage.setItem('medical365_crm_leads_v2', JSON.stringify(v2Leads.slice(0, 100)));
+            } catch(e) {}
+
+            try {
+                var capLeads = JSON.parse(localStorage.getItem('m365_captured_leads') || '[]');
+                capLeads.unshift({
+                    id: crmLead.id,
+                    type: form.id === 'demo-form' ? 'book_demo' : 'contact_form',
+                    name: crmLead.name,
+                    email: crmLead.email,
+                    phone: crmLead.phone,
+                    organization: crmLead.organization,
+                    facilityType: crmLead.facilityType,
+                    bedCount: crmLead.bedCount,
+                    message: crmLead.challenges,
+                    sourcePage: window.location.pathname,
+                    referrer: document.referrer || 'direct',
+                    status: 'New',
+                    timestamp: new Date().toISOString()
+                });
+                localStorage.setItem('m365_captured_leads', JSON.stringify(capLeads.slice(0, 100)));
+            } catch(e) {}
+
+            try {
+                window.dispatchEvent(new CustomEvent('m365_lead_captured', { detail: crmLead }));
+            } catch(e) {}
 
             // Also send to backend webhook relay
-            fetch('/api/webhooks', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(object)
-            }).catch(function() {});
+            var webhookUrls = ['/api/webhooks', 'http://localhost:3000/api/webhooks', '/api/leads/record'];
+            webhookUrls.forEach(function(u) {
+                fetch(u, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(object)
+                }).catch(function() {});
+            });
         } catch(e) {
             console.warn('CRM sync error:', e);
         }

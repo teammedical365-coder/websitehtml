@@ -9,6 +9,7 @@ export type LeadStatus =
 
 export type LeadSource = 
   | 'Website' 
+  | 'WhatsApp'
   | 'Practo' 
   | 'Google Ads' 
   | 'Doctor Referral' 
@@ -79,6 +80,7 @@ export const medicalDepartments = [
 
 export const allSources: LeadSource[] = [
   'Website',
+  'WhatsApp',
   'Practo',
   'Google Ads',
   'Doctor Referral',
@@ -113,6 +115,37 @@ export const formatCurrency = (amount: number): string => {
 };
 
 export const initialLeads: Lead[] = [
+  {
+    id: 'MED-WA-1001',
+    name: 'Dr. Suresh Kumar (City Care Hospital)',
+    firstName: 'Dr. Suresh',
+    lastName: 'Kumar',
+    fullName: 'Dr. Suresh Kumar',
+    phone: '+919829014285',
+    email: 'dr.suresh@citycare.org',
+    gender: 'Other',
+    requirement: 'WhatsApp Live Clinical Inquiry: ABDM Compliance & Hospital EMR Demo (Jaipur)',
+    department: 'Hospital Administration & IT',
+    organization: 'City Care Hospital',
+    facilityType: 'Multi-Specialty Hospital',
+    bedCount: '51–200 Beds',
+    challenges: 'Inquired on WhatsApp for ABDM M1/M2/M3 compliance and cashless TPA billing software demonstration.',
+    sourceUrl: 'https://www.medical365.in/clinic-management-system-jaipur.html',
+    sourcePageUrl: 'https://www.medical365.in/clinic-management-system-jaipur.html',
+    pageTitle: 'Clinic Management System Jaipur - Medical365',
+    submittedAt: '2026-10-28T10:15:00.000Z',
+    status: 'New Inquiry',
+    source: 'WhatsApp',
+    assignedTo: 'Nurse Sneha (Triage Coordinator)',
+    value: 180000,
+    insuranceType: 'Cashless TPA',
+    score: 88,
+    priority: 'High',
+    city: 'Jaipur',
+    notes: 'Inbound WhatsApp inquiry from Jaipur clinic management page. Needs live demo on Google Meet.',
+    nextAction: 'Confirm Google Meet demo slot via WhatsApp coordinator',
+    addedOn: '2026-10-28'
+  },
   {
     id: 'MED-2001',
     name: 'Dr velentina sogra (indore)',
