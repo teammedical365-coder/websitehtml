@@ -30,7 +30,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const { searchQuery, setSearchQuery, openAddModal, metrics } = useLeads();
   const { user, logout } = useAuth();
 
-  if (pathname === '/login') {
+  if (pathname === '/login' || pathname?.startsWith('/compare')) {
     return <>{children}</>;
   }
 
