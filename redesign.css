@@ -1091,7 +1091,7 @@
     .header-container { 
         padding: 0 20px !important;
         max-width: 100vw !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
     
     /* Prevent any element from causing horizontal scroll */
@@ -1934,9 +1934,19 @@
         text-decoration: none;
     }
 
-    /* Shift WhatsApp floating FAB above sticky bar so no overlap occurs */
+    /* Redundant with mobile sticky bar's WhatsApp button - hide to prevent overlap with AI chatbot */
+    #mega-footer .mf-wa-fab,
     .mf-wa-fab {
+        display: none !important;
+    }
+
+    /* Position AI Chatbot FAB cleanly above sticky bar without collision */
+    .m365-ai-fab {
         bottom: 76px !important;
+        right: 16px !important;
+        width: 52px !important;
+        height: 52px !important;
+        z-index: 9990 !important;
     }
 
     body {

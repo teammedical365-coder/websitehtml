@@ -603,7 +603,7 @@ p, li {
     overflow: visible; 
 }
 @media (max-width: 768px) {
-    .header-container { overflow: hidden !important; }
+    .header-container { overflow: visible !important; }
 }
 
 .main-header.scrolled .header-container {
@@ -1087,30 +1087,48 @@ p, li {
 
 @media (max-width: 1199px) {
 
-    /* hide desktop CTA button */
-    .header-cta {
-        display: none;
+    /* Eliminate backdrop-filter on mobile so main-header does not create a containing block that traps fixed drawer */
+    .main-header {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background-color: #ffffff !important;
+        overflow: visible !important;
     }
 
-    /* ── hamburger ── */
+    .header-container {
+        overflow: visible !important;
+    }
+
+    /* hide desktop CTA button */
+    .header-cta {
+        display: none !important;
+    }
+
+    /* ── hamburger (44x44px touch target) ── */
     .mobile-toggle {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 28px;
-        height: 20px;
-        padding: 0;
-        background: none;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 8px;
+        background: transparent;
         border: none;
         cursor: pointer;
         flex-shrink: 0;
         position: relative;
-        z-index: 21000 !important; /* Above drawer (20000) */
+        z-index: 26000 !important; /* Above drawer (25000) */
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .mobile-toggle .bar {
         display: block;
-        width: 100%;
+        width: 24px;
         height: 2.5px;
         background: var(--brand-blue);
         border-radius: 3px;
@@ -1123,7 +1141,7 @@ p, li {
 
     /* ✕  */
     .mobile-toggle[aria-expanded="true"] .top-bar {
-        transform: translateY(8.75px) rotate(45deg);
+        transform: translateY(7.5px) rotate(45deg);
     }
 
     .mobile-toggle[aria-expanded="true"] .mid-bar {
@@ -1132,47 +1150,54 @@ p, li {
     }
 
     .mobile-toggle[aria-expanded="true"] .bot-bar {
-        transform: translateY(-8.75px) rotate(-45deg);
+        transform: translateY(-7.5px) rotate(-45deg);
     }
 
-    /* ── dim overlay (NO backdrop-filter — causes blur bug) ── */
+    /* ── dim overlay ── */
     .mobile-overlay {
-        position: fixed;
-        inset: 0;
-        background: transparent;
-        /* overlay removed for accessibility */
-        z-index: 9995; /* Audit fix: ensuring overlay is below toggle but above FAB */
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .3s ease, visibility .3s ease;
+        position: fixed !important;
+        inset: 0 !important;
+        background: rgba(15, 23, 42, 0.45) !important;
+        z-index: 24000 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: opacity .3s ease, visibility .3s ease !important;
     }
 
     .mobile-overlay.active {
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
     }
 
     /* ── slide-in drawer ── */
     .main-nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: min(85vw, 360px);
-        height: 100vh;
-        height: 100dvh;
-        background: #fff;
-        z-index: 20000 !important; /* Above everything including main-header (10000) */
-        display: flex;
-        flex-direction: column;
-        transform: translateX(100%);
-        transition: transform .35s cubic-bezier(.4, 0, .2, 1);
-        box-shadow: -6px 0 32px rgba(0, 0, 0, .12);
-        overflow: hidden;
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: min(85vw, 360px) !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        background: #ffffff !important;
+        z-index: 25000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        transform: translateX(100%) !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        opacity: 0 !important;
+        transition: transform .35s cubic-bezier(.4, 0, .2, 1), opacity .25s ease, visibility .35s !important;
+        box-shadow: -6px 0 32px rgba(0, 0, 0, .15) !important;
+        overflow: hidden !important;
         will-change: transform;
     }
 
     .main-nav.active {
-        transform: translateX(0);
+        transform: translateX(0) !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        opacity: 1 !important;
     }
 
     /* ── drawer header ── */
@@ -1234,6 +1259,11 @@ p, li {
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         overscroll-behavior: contain;
+        touch-action: pan-y;
+    }
+
+    body.menu-open {
+        overflow: hidden !important;
     }
 
     .nav-body::-webkit-scrollbar {

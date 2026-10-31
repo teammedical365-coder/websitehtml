@@ -179,6 +179,7 @@ function initGlobalScripts() {
     var toggleBtn  = document.getElementById('mobile-toggle');
     var nav        = document.getElementById('main-nav');
     var overlay    = document.getElementById('mobile-overlay');
+    var closeBtn   = document.getElementById('close-menu');
     var solBtn     = document.querySelector('.solutions-toggle');
     var megaMenu   = document.getElementById('mega-menu-content');
     var prevFocus  = null;
@@ -188,8 +189,8 @@ function initGlobalScripts() {
         prevFocus = document.activeElement;
         nav.classList.add('active');
         if (overlay) { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); }
-        document.body.style.overflow    = 'hidden';
-        document.body.style.touchAction = 'none';
+        document.body.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
         if (toggleBtn) {
             toggleBtn.setAttribute('aria-expanded', 'true');
             toggleBtn.setAttribute('aria-label', 'Close navigation menu');
@@ -205,8 +206,8 @@ function initGlobalScripts() {
         if (!nav) return;
         nav.classList.remove('active');
         if (overlay) { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); }
-        document.body.style.overflow    = '';
-        document.body.style.touchAction = '';
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
         if (toggleBtn) {
             toggleBtn.setAttribute('aria-expanded', 'false');
             toggleBtn.setAttribute('aria-label', 'Open navigation menu');
@@ -227,7 +228,8 @@ function initGlobalScripts() {
     }
 
     if (toggleBtn) {
-        toggleBtn.addEventListener('click', function() {
+        toggleBtn.addEventListener('click', function(e) {
+            if (e && e.preventDefault) e.preventDefault();
             if (nav && nav.classList.contains('active')) {
                 closeMenu();
             } else {
@@ -235,8 +237,17 @@ function initGlobalScripts() {
             }
         });
     }
-    if (overlay)   overlay.addEventListener('click',     closeMenu);
-    if (overlay)   overlay.addEventListener('touchend', function(e) { e.preventDefault(); closeMenu(); });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            closeMenu();
+        });
+    }
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+        overlay.addEventListener('touchend', function(e) { e.preventDefault(); closeMenu(); });
+        overlay.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+    }
 
     /* Escape key */
     document.addEventListener('keydown', function (e) {
@@ -283,6 +294,7 @@ function initGlobalScripts() {
     /* cleanup on resize to desktop */
     window.addEventListener('resize', function () {
         if (window.innerWidth >= 1200) {
+            document.body.classList.remove('menu-open');
             document.body.style.overflow    = '';
             document.body.style.touchAction = '';
             if (nav)       nav.classList.remove('active');
