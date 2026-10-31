@@ -271,11 +271,13 @@ function initGlobalScripts() {
             }
         });
 
-        /* close on any real link click */
+        /* close on in-page anchor links so the scrolled section is visible */
         nav.querySelectorAll('a[href]').forEach(function (a) {
             a.addEventListener('click', function () {
                 var href = a.getAttribute('href');
-                if (href && !href.startsWith('#')) closeMenu();
+                if (href && href.startsWith('#') && href !== '#' && href.length > 1) {
+                    closeMenu();
+                }
             });
         });
     }

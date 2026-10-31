@@ -720,3 +720,30 @@
   transform: translateY(-1px);
 }
 
+/* ==========================================================================
+   Contrast & Legibility Guarantees
+   ========================================================================== */
+.cmp-table th {
+  color: #FFFFFF !important;
+}
+.cmp-table th.m365-col {
+  color: #FFFFFF !important;
+  background: var(--cmp-brand-teal) !important;
+}
+.cmp-table th.comp-col {
+  color: #FFFFFF !important;
+}
+.cmp-cta-banner h3 {
+  color: #FFFFFF !important;
+}
+.cmp-cta-banner p {
+  color: #CCFBF1 !important;
+}
+.cmp-tco-title {
+  color: var(--cmp-text-primary) !important;
+}
+.cmp-tco-item strong {
+  color: var(--cmp-text-primary) !important;
+}
+
+

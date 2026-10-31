@@ -5538,5 +5538,101 @@ p, li {
     display: none;
 }
 
+/* ==========================================================================
+   GLOBAL HIGH-CONTRAST & TEXT VISIBILITY ENFORCEMENT
+   Guarantees all text in dark sections/cards has full visibility and contrast
+   ========================================================================== */
+
+/* Dark Containers Universal Contrast */
+.security-dark-card,
+.bottom-cta,
+.roi-section,
+.cta-banner,
+.cmp-cta-banner,
+.impact-cta-prelude,
+[style*="background: #0F172A"],
+[style*="background: #1E293B"],
+[style*="background: #0C2340"],
+[style*="background: #06111d"],
+[style*="linear-gradient(135deg, #1E293B"],
+[style*="linear-gradient(135deg, #0F172A"],
+[style*="linear-gradient(135deg, var(--brand-blue)"],
+[style*="linear-gradient(135deg, #1A56DB"] {
+    color: #FFFFFF !important;
+}
+
+/* Headings in dark containers */
+.security-dark-card h1, .security-dark-card h2, .security-dark-card h3, .security-dark-card h4, .security-dark-card .section-title,
+.bottom-cta h1, .bottom-cta h2, .bottom-cta h3, .bottom-cta h4, .bottom-cta .section-title,
+.roi-section h1, .roi-section h2, .roi-section h3, .roi-section h4, .roi-section .section-title,
+.cta-banner h1, .cta-banner h2, .cta-banner h3, .cta-banner h4, .cta-banner .section-title,
+.cmp-cta-banner h1, .cmp-cta-banner h2, .cmp-cta-banner h3, .cmp-cta-banner h4, .cmp-cta-banner .section-title,
+.impact-cta-prelude h1, .impact-cta-prelude h2, .impact-cta-prelude h3, .impact-cta-prelude h4 {
+    color: #FFFFFF !important;
+}
+
+/* Paragraphs & Subtext in dark containers */
+.security-dark-card p,
+.bottom-cta p,
+.roi-section p,
+.cta-banner p,
+.cmp-cta-banner p,
+.impact-cta-prelude p {
+    color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* High Contrast CTA buttons inside dark sections */
+.bottom-cta .btn-primary,
+.cta-banner .btn-primary,
+.roi-section .btn-primary,
+.bottom-cta a.btn-primary,
+.bottom-cta .hero-buttons a.btn-primary {
+    background: #FFFFFF !important;
+    color: #1A56DB !important;
+    border: none !important;
+    font-weight: 800 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+.bottom-cta .btn-primary:hover,
+.cta-banner .btn-primary:hover,
+.roi-section .btn-primary:hover,
+.bottom-cta a.btn-primary:hover,
+.bottom-cta .hero-buttons a.btn-primary:hover {
+    background: #F8FAFC !important;
+    color: #1E429F !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Plan 4 & Dark Pricing Cards Text Contrast */
+.pricing-card[style*="background: #0F172A"] *,
+.pricing-card[style*="background:#0F172A"] *,
+.pricing-card[style*="background: #1E293B"] *,
+.pricing-card[style*="background:#1E293B"] * {
+    color: #FFFFFF;
+}
+
+.pricing-card[style*="background: #0F172A"] .feature-title,
+.pricing-card[style*="background:#0F172A"] .feature-title,
+.pricing-card[style*="background: #1E293B"] .feature-title,
+.pricing-card[style*="background:#1E293B"] .feature-title {
+    color: #38BDF8 !important;
+}
+
+.pricing-card[style*="background: #0F172A"] .plan-features li,
+.pricing-card[style*="background:#0F172A"] .plan-features li,
+.pricing-card[style*="background: #1E293B"] .plan-features li,
+.pricing-card[style*="background:#1E293B"] .plan-features li {
+    color: #E2E8F0 !important;
+}
+
+.pricing-card[style*="background: #0F172A"] .plan-features li svg,
+.pricing-card[style*="background:#0F172A"] .plan-features li svg {
+    color: #38BDF8 !important;
+}
+
+
 
 
