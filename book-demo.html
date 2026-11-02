@@ -75,6 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .text-gradient {
             background: linear-gradient(135deg, #1D4E9E, #37B39C);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -1156,7 +1157,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div id="form-wrapper">
                         <h2 class="form-title">Request Your Free Demo</h2>
                         <p class="form-subtitle">Fill in your details and we'll get back to you within 24 hours.</p>
-                        <form id="demo-form" action="https://api.web3forms.com/submit" method="POST">
+                        <form id="demo-form" action="https://leadmanagementsystem-hdtp.onrender.com/api/integrations/leads/website" method="POST">
+                            <!-- Anti-bot honeypot field (hidden from human visitors) -->
+                            <input type="text" name="_hp_trap" style="display:none !important;" tabindex="-1" autocomplete="off" />
                             <input type="hidden" name="access_key" value="a58a7a41-4d2b-4c70-baa6-8255ee7f5be0">
                             <div class="form-row">
                                 <div class="form-group">
@@ -1234,7 +1237,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <p class="captcha-error-msg">Incorrect answer. Please solve the new problem.</p>
                                 </div>
                             </div>
-                            <button type="submit" class="form-submit">Schedule My Free Demo →</button>
+                            <button type="submit" id="leads365-demo-submit-btn" class="form-submit">Schedule My Free Demo →</button>
+                            <div id="leads365-status" class="leads365-status" style="margin-top: 15px; display: none; padding: 12px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; text-align: center; line-height: 1.4;"></div>
                             <p class="form-note">
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
