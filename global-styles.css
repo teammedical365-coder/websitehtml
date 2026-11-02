@@ -1088,6 +1088,78 @@ p, li {
     color: var(--brand-blue);
 }
 
+/* ── Header Dual CTAs (Free Sign Up & Book Demo) ── */
+.header-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.header-cta .btn-signup-header,
+.header-cta .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 22px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.btn-signup-header {
+    background: #ffffff;
+    color: var(--brand-teal);
+    border: 1.5px solid var(--brand-teal);
+    border-radius: 10px;
+    padding: 10.5px 22px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    line-height: 1.25;
+}
+
+.btn-signup-header:hover {
+    background: var(--brand-teal-light);
+    color: var(--brand-teal);
+    border-color: var(--brand-teal);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13, 148, 136, 0.18);
+}
+
+.btn-signup-header:active {
+    transform: translateY(0);
+}
+
+@media (min-width: 1200px) and (max-width: 1360px) {
+    .nav-links {
+        gap: 22px;
+    }
+    .header-container {
+        padding: 0 16px;
+    }
+    .header-cta {
+        gap: 8px;
+    }
+    .header-cta .btn-primary,
+    .header-cta .btn-signup-header {
+        height: 40px;
+        padding: 0 15px;
+        font-size: 0.88rem;
+    }
+}
+
 /* ====================================================
            MOBILE MENU  —  clean rewrite
            ==================================================== */
@@ -1544,9 +1616,11 @@ p, li {
         padding-bottom: 10px;
     }
 
-    /* ── drawer bottom CTA ── */
+    /* ── drawer bottom CTAs (Free Sign Up & Book Demo) ── */
     .mobile-cta-wrapper {
-        display: block;
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
         padding: 16px 20px 28px;
         border-top: 1px solid var(--border-light);
         background: #fff;
@@ -1554,14 +1628,35 @@ p, li {
         pointer-events: auto !important;
     }
 
-    .mobile-cta-wrapper .btn-primary {
-        display: block;
-        width: 100%;
+    .mobile-cta-wrapper .btn-primary,
+    .mobile-cta-wrapper .btn-signup-header {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100% !important;
         text-align: center;
-        padding: 14px;
+        padding: 13px 18px;
         font-size: 1rem;
+        border-radius: 10px;
+        box-sizing: border-box;
         pointer-events: auto !important;
         cursor: pointer;
+        min-height: 46px;
+        text-decoration: none;
+        line-height: 1.25;
+    }
+
+    .mobile-cta-wrapper .btn-signup-header {
+        background: #ffffff;
+        color: var(--brand-teal);
+        border: 1.5px solid var(--brand-teal);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .mobile-cta-wrapper .btn-signup-header:hover,
+    .mobile-cta-wrapper .btn-signup-header:active {
+        background: var(--brand-teal-light);
+        color: var(--brand-teal);
     }
 
     .btn-primary::before,
