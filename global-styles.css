@@ -5894,16 +5894,22 @@ p, li {
     gap: 60px;
     align-items: center;
     padding: 0 24px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .hero-text {
     position: relative;
     z-index: 2;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-visual {
     position: relative;
     z-index: 2;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-card {
@@ -5988,13 +5994,24 @@ p, li {
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 50px;
+        gap: 36px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
     }
     .hero-buttons {
         justify-content: center;
     }
     .hero-card-header {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-inner {
+        padding: 0 !important;
+        gap: 28px;
     }
 }
 
