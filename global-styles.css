@@ -1093,6 +1093,37 @@ p, li {
         -webkit-backdrop-filter: none !important;
         background-color: #ffffff !important;
         overflow: visible !important;
+        z-index: 20000 !important;
+    }
+
+    body.menu-open {
+        overflow: hidden !important;
+        touch-action: none !important;
+    }
+
+    /* Elevate header above backdrop (24000) when drawer is open so nav items receive touches */
+    body.menu-open .main-header {
+        z-index: 25000 !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        border-bottom-color: transparent !important;
+        box-shadow: none !important;
+        pointer-events: none !important;
+    }
+
+    /* Keep drawer and hamburger button interactive, while clicks outside fall through to backdrop */
+    body.menu-open .main-header .main-nav,
+    body.menu-open .main-header .mobile-toggle {
+        pointer-events: auto !important;
+    }
+
+    /* Disable floating action buttons during menu-open so they never interfere */
+    body.menu-open #m365-mobile-sticky-bar,
+    body.menu-open .m365-ai-fab,
+    body.menu-open .mf-wa-fab {
+        pointer-events: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
 
     .header-container {
@@ -1212,7 +1243,7 @@ p, li {
         background: #fff;
     }
     
-    .main-header.scrolled + .main-nav .mobile-menu-header {
+    .main-header.scrolled .mobile-menu-header {
         height: 72px;
     }
 
@@ -1304,6 +1335,10 @@ p, li {
         color: var(--text-primary);
         border-radius: 0;
         background: transparent;
+        cursor: pointer;
+        pointer-events: auto !important;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(29, 90, 159, 0.1);
         transition:
             background var(--transition-fast),
             color var(--transition-fast);
@@ -1498,6 +1533,7 @@ p, li {
         border-top: 1px solid var(--border-light);
         background: #fff;
         flex-shrink: 0;
+        pointer-events: auto !important;
     }
 
     .mobile-cta-wrapper .btn-primary {
@@ -1506,6 +1542,15 @@ p, li {
         text-align: center;
         padding: 14px;
         font-size: 1rem;
+        pointer-events: auto !important;
+        cursor: pointer;
+    }
+
+    .btn-primary::before,
+    .btn-primary::after,
+    .btn-v2-primary::before,
+    .btn-v2-primary::after {
+        pointer-events: none !important;
     }
 }
 

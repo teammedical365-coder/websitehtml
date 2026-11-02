@@ -188,26 +188,37 @@ function initGlobalScripts() {
         if (!nav) return;
         prevFocus = document.activeElement;
         nav.classList.add('active');
-        if (overlay) { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); }
+        if (overlay) { 
+            overlay.classList.add('active'); 
+            overlay.setAttribute('aria-hidden', 'false'); 
+        }
         document.body.classList.add('menu-open');
         document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none';
         if (toggleBtn) {
             toggleBtn.setAttribute('aria-expanded', 'true');
             toggleBtn.setAttribute('aria-label', 'Close navigation menu');
         }
-        /* focus first item after slide completes */
+        /* focus first item after slide completes on non-touch devices only */
         setTimeout(function () {
-            var first = nav.querySelector('button:not([disabled]), a[href]');
-            if (first) first.focus();
+            var isTouch = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+            if (!isTouch) {
+                var first = nav.querySelector('button:not([disabled]), a[href]');
+                if (first) first.focus();
+            }
         }, 370);
     }
 
-    function closeMenu() {
+    function closeMenu(returnFocus) {
         if (!nav) return;
         nav.classList.remove('active');
-        if (overlay) { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); }
+        if (overlay) { 
+            overlay.classList.remove('active'); 
+            overlay.setAttribute('aria-hidden', 'true'); 
+        }
         document.body.classList.remove('menu-open');
         document.body.style.overflow = '';
+        document.body.style.touchAction = '';
         if (toggleBtn) {
             toggleBtn.setAttribute('aria-expanded', 'false');
             toggleBtn.setAttribute('aria-label', 'Open navigation menu');
@@ -224,7 +235,9 @@ function initGlobalScripts() {
                 if (pane) slideUp(pane, 10); // close instantly on drawer close
             }
         });
-        if (prevFocus) prevFocus.focus();
+        if (returnFocus !== false && prevFocus && typeof prevFocus.focus === 'function') {
+            prevFocus.focus();
+        }
     }
 
     if (toggleBtn) {
@@ -244,9 +257,17 @@ function initGlobalScripts() {
         });
     }
     if (overlay) {
-        overlay.addEventListener('click', closeMenu);
-        overlay.addEventListener('touchend', function(e) { e.preventDefault(); closeMenu(); });
-        overlay.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+        overlay.addEventListener('click', function (e) {
+            e.preventDefault();
+            closeMenu();
+        });
+        overlay.addEventListener('touchend', function(e) { 
+            e.preventDefault(); 
+            closeMenu(); 
+        });
+        overlay.addEventListener('touchmove', function(e) { 
+            e.preventDefault(); 
+        }, { passive: false });
     }
 
     /* Escape key */
@@ -254,7 +275,7 @@ function initGlobalScripts() {
         if (e.key === 'Escape' && nav && nav.classList.contains('active')) closeMenu();
     });
 
-    /* focus trap */
+    /* focus trap & link navigation */
     if (nav) {
         nav.addEventListener('keydown', function (e) {
             if (e.key !== 'Tab') return;
@@ -271,15 +292,42 @@ function initGlobalScripts() {
             }
         });
 
-        /* close on in-page anchor links so the scrolled section is visible */
-        nav.querySelectorAll('a[href]').forEach(function (a) {
-            a.addEventListener('click', function () {
-                var href = a.getAttribute('href');
-                if (href && href.startsWith('#') && href !== '#' && href.length > 1) {
-                    closeMenu();
-                }
-            });
+        /* Delegated link click listener for all nav links (static and dynamically created accordion items) */
+        nav.addEventListener('click', function (e) {
+            var a = e.target.closest('a[href]');
+            if (!a) return;
+            var href = a.getAttribute('href');
+            if (!href || href === '#' || href.startsWith('javascript:')) {
+                e.preventDefault();
+                return;
+            }
+            if (href.startsWith('#')) {
+                closeMenu();
+            } else {
+                // Allow browser native navigation to proceed, then close drawer for back-button history state
+                setTimeout(function () {
+                    closeMenu(false);
+                }, 120);
+            }
         });
+
+        /* Close button inside mobile menu header if present */
+        var headerClose = nav.querySelector('.close-menu');
+        if (headerClose) {
+            headerClose.addEventListener('click', function (e) {
+                e.preventDefault();
+                closeMenu();
+            });
+        }
+
+        /* Make mobile logo clickable to home */
+        var mobileLogo = nav.querySelector('.logo-mobile-wrapper');
+        if (mobileLogo && !mobileLogo.closest('a')) {
+            mobileLogo.style.cursor = 'pointer';
+            mobileLogo.addEventListener('click', function () {
+                window.location.href = '/';
+            });
+        }
     }
 
     /* solutions toggle */
