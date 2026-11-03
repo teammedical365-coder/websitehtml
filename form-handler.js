@@ -1,13 +1,13 @@
 /**
  * Medical365 - Form Handler
  * - Contact Form (#contact-form): Handled via Web3Forms API and redirects to thank-you.html (No Leads365 CRM call)
- * - Book a Demo Form (#demo-form): Integrated with Leads365 CRM API (source: 'Medical365 Website - Book a Demo')
+ * - Book a Demo Form (#demo-form): Integrated with Leads365 CRM API (source: 'Website')
  */
 
 document.addEventListener('DOMContentLoaded', function() {
     // --- LEADS365 CRM CONFIGURATION (BOOK A DEMO FORM ONLY) ---
     var LEADS365_ENDPOINT = "https://leadmanagementsystem-hdtp.onrender.com/api/integrations/leads/website";
-    var LEADS365_SITE_KEY = "lf_site_09935392e422b89c71c5bffbeb959c97";
+    var LEADS365_SITE_KEY = "lf_site_8a931b7f0132ecb5252602a95c1cf696";
 
     // --- WEB3FORMS CONFIGURATION (CONTACT FORM ONLY) ---
     var WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
@@ -128,7 +128,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * BOOK A DEMO FORM HANDLER - Leads365 CRM API Integration
+    /**
+     * Helper to display status notification on form
+     */
+    function showFormStatus(statusDiv, text, isError) {
+        if (!statusDiv) return;
+        statusDiv.textContent = text;
+        statusDiv.style.color = isError ? '#b91c1c' : '#15803d';
+        statusDiv.style.backgroundColor = isError ? '#fef2f2' : '#f0fdf4';
+        statusDiv.style.border = isError ? '1px solid #fecaca' : '1px solid #bbf7d0';
+        statusDiv.style.display = 'block';
+    }
+
+    /**
+     * BOOK A DEMO / LEAD CAPTURE FORM HANDLER - Leads365 CRM API Integration
      * Specifically connects #demo-form to Leads365 CRM.
      */
     async function handleDemoFormSubmit(event) {
@@ -161,57 +174,104 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // 1. UI State: Disable button and show Sending...
-        btn.disabled = true;
-        form.dataset.submitting = 'true';
-        btn.textContent = 'Sending...';
-        if (statusDiv) {
-            statusDiv.style.display = 'none';
-            statusDiv.textContent = '';
-        }
-
-        // 2. Prepare Data & Map Form Fields to Leads365 CRM Payload
         var formData = new FormData(form);
 
-        var firstName = formData.get('first_name') || '';
-        var lastName = formData.get('last_name') || '';
-        var fullName = (firstName + ' ' + lastName).trim() || formData.get('name') || 'Demo Inquirer';
-        var email = (formData.get('email') || '').trim();
-        var phone = (formData.get('phone_number') || formData.get('phone') || '').trim();
+        // 1. Mandatory Full Name Validation
+        var firstName = (formData.get('first_name') || '').trim();
+        var lastName = (formData.get('last_name') || '').trim();
+        var rawName = (formData.get('name') || '').trim();
+        var fullName = (firstName + (lastName ? ' ' + lastName : '')).trim() || rawName;
 
-        // Additional demo fields preserved in message
-        var orgName = formData.get('organization_name') || '';
-        var facType = formData.get('facility_type') || '';
-        var bedCount = formData.get('bed_count') || '';
-        var challenges = formData.get('challenges') || formData.get('message') || '';
+        if (!fullName) {
+            showFormStatus(statusDiv, 'Please enter your full name.', true);
+            var nameInput = form.querySelector('#first-name') || form.querySelector('[name="name"]') || form.querySelector('[name="first_name"]');
+            if (nameInput) nameInput.focus();
+            return;
+        }
+
+        // 2. Mandatory Phone Number Validation
+        var phone = (formData.get('phone_number') || formData.get('phone') || '').trim();
+        if (!phone) {
+            showFormStatus(statusDiv, 'Please enter your phone number.', true);
+            var phoneInput = form.querySelector('#phone') || form.querySelector('[name="phone_number"]') || form.querySelector('[name="phone"]');
+            if (phoneInput) phoneInput.focus();
+            return;
+        }
+
+        // 3. Optional Email Validation (must be valid if provided)
+        var email = (formData.get('email') || '').trim();
+        if (email) {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showFormStatus(statusDiv, 'Please enter a valid email address.', true);
+                var emailInput = form.querySelector('#email') || form.querySelector('[name="email"]');
+                if (emailInput) emailInput.focus();
+                return;
+            }
+        }
+
+        // 4. Optional Message and Additional Facility Details
+        var challenges = (formData.get('challenges') || formData.get('message') || '').trim();
+        var orgName = (formData.get('organization_name') || '').trim();
+        var facType = (formData.get('facility_type') || '').trim();
+        var bedCount = (formData.get('bed_count') || '').trim();
 
         var demoDetails = [];
         if (orgName) demoDetails.push('Organization: ' + orgName);
         if (facType) demoDetails.push('Facility Type: ' + facType);
         if (bedCount) demoDetails.push('Beds/Doctors: ' + bedCount);
-        if (challenges) demoDetails.push('Challenges: ' + challenges);
+        if (challenges) demoDetails.push('Notes: ' + challenges);
 
         var message = challenges;
         if (demoDetails.length > 0) {
             message = challenges ? (challenges + '\n\n[' + demoDetails.join(' | ') + ']') : demoDetails.join(' | ');
         }
 
+        // 5. Honeypot check (_hp_trap)
+        var hpTrap = (formData.get('_hp_trap') || '').trim();
+        if (hpTrap) {
+            showFormStatus(statusDiv, 'Thank you! Your demo request has been received.', false);
+            form.reset();
+            return;
+        }
+
+        // 6. UI State: Disable button and show Sending...
+        btn.disabled = true;
+        form.dataset.submitting = 'true';
+        btn.innerHTML = '<span style="display:inline-flex; align-items:center; justify-content:center; gap:8px;">' +
+            '<svg class="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">' +
+                '<circle cx="12" cy="12" r="10" stroke-opacity="0.25" stroke="currentColor"></circle>' +
+                '<path d="M4 12a8 8 0 018-8" stroke="currentColor"></path>' +
+            '</svg>' +
+            'Sending...' +
+            '</span>';
+
+        if (statusDiv) {
+            statusDiv.style.display = 'none';
+            statusDiv.textContent = '';
+        }
+
+        // 7. Prepare Data & Map Form Fields to Leads365 CRM Payload
         var payload = {
             name: fullName,
             email: email,
             phone: phone,
             message: message,
-            _hp_trap: formData.get('_hp_trap') || '',
+            _hp_trap: hpTrap,
             landingPage: window.location.href,
-            source: 'Medical365 Website - Book a Demo'
+            source: 'Website'
         };
 
         // Sync local demo storage
         var localObj = {};
         formData.forEach(function(v, k) { localObj[k] = v; });
+        localObj.name = fullName;
+        localObj.email = email;
+        localObj.phone = phone;
+        localObj.message = message;
         syncLocalLeadStorage(form, localObj);
 
-        // 3. API Submission with Idempotency Key & Safe Error Handling
+        // 8. API Submission with Idempotency Key & Safe Error Handling
         try {
             var idempotencyKey = generateIdempotencyKey();
             var response = await fetch(LEADS365_ENDPOINT, {
@@ -239,13 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Confirmed Success
-            if (statusDiv) {
-                statusDiv.textContent = 'Thank you! Your demo request has been received.';
-                statusDiv.style.color = '#15803d';
-                statusDiv.style.backgroundColor = '#f0fdf4';
-                statusDiv.style.border = '1px solid #bbf7d0';
-                statusDiv.style.display = 'block';
-            }
+            showFormStatus(statusDiv, 'Thank you! Your demo request has been received. Our team will contact you shortly.', false);
             form.reset();
 
             // Refresh captcha on successful submit
@@ -253,13 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 mathCaptchaState[form.id + '_refresh']();
             }
         } catch (err) {
-            if (statusDiv) {
-                statusDiv.textContent = 'Error: ' + err.message;
-                statusDiv.style.color = '#b91c1c';
-                statusDiv.style.backgroundColor = '#fef2f2';
-                statusDiv.style.border = '1px solid #fecaca';
-                statusDiv.style.display = 'block';
-            }
+            showFormStatus(statusDiv, 'Error: ' + err.message, true);
             console.error('Leads365 CRM demo submission error:', err);
         } finally {
             btn.disabled = false;
@@ -267,7 +315,6 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.innerHTML = originalBtnText;
         }
     }
-
     /**
      * Shared Math Captcha Validation
      */
