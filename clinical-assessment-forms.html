@@ -45,7 +45,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <style>
     /* Audit Hotfixes — Stabilising Mobile & Mega Menu */
     .mega-menu { background-color: #ffffff !important; z-index: 11000 !important; }
-    .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .main-header { z-index: 10000 !important; } .header-container { overflow: visible !important; } @media (max-width: 768px) { .header-container { overflow: visible !important; } } } }
+    .main-header { z-index: 10000 !important; }
+    .header-container { overflow: visible !important; }
+    @media (max-width: 768px) {
+        .main-header { z-index: 10000 !important; }
+        .header-container { overflow: visible !important; }
+    }
     .br-desktop { display: block; }
     @media (max-width: 768px) { .br-desktop { display: inline; } }
     </style>
@@ -730,11 +735,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </ul>
                 </div>
                 <div class="mobile-cta-wrapper">
+                    <a href="https://signup.medical365.in/" class="btn-signup-header">Free Sign Up</a>
                     <a href="https://www.medical365.in/book-demo" class="btn-primary">Book a Free Demo</a>
                 </div>
             </nav>
 
             <div class="header-cta">
+                <a href="https://signup.medical365.in/" class="btn-signup-header">Free Sign Up</a>
                 <a href="https://www.medical365.in/book-demo" class="btn-primary">Book Demo</a>
             </div>
         </div>
@@ -748,7 +755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="fade-in-up" style="animation-delay:0.2s">Create, deploy, and analyse clinical assessment forms for intake, follow-ups, screening, and audits. No coding required — just drag, drop, and publish.</p>
       <div class="hero-buttons fade-in-up" style="animation-delay:0.3s">
         <a href="https://www.medical365.in/book-demo" class="btn-primary btn-lg">Book a Free Demo</a>
-        <a href="contact" class="btn-secondary btn-lg">Talk to Sales</a>
+        <a href="/contact" class="btn-secondary btn-lg">Talk to Sales</a>
       </div>
     </div>
     <div class="hero-visual fade-in-left" style="animation-delay:0.3s">
@@ -859,7 +866,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="justify-center">
       <a href="https://www.medical365.in/book-demo" class="btn-primary btn-lg">Book a Free Demo</a>
-      <a href="contact" class="btn-outline-white btn-lg">Contact Sales</a>
+      <a href="/contact" class="btn-outline-white btn-lg">Contact Sales</a>
     </div>
   </div>
 </section>

@@ -458,7 +458,7 @@
     position: sticky;
     top: 150px;
     flex: 1;
-    min-width: 400px;
+    min-width: min(100%, 360px);
     display: flex; /* Force vertical flow to prevent overlap issues */
     flex-direction: column;
     align-items: flex-start;
@@ -511,7 +511,7 @@
 
 .pain-scroll-right {
     flex: 1.2;
-    min-width: 400px;
+    min-width: min(100%, 360px);
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -986,6 +986,8 @@
     }
     
     .impact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .pain-sticky-left { position: static; min-width: 100%; text-align: center; align-items: center; }
+    .pain-scroll-right { min-width: 100%; gap: 24px; }
     .s-timeline-container { padding: 40px 0; }
     .s-svg-path { display: none; }
     .step-nodes { gap: 60px; }
