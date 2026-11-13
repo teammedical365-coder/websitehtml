@@ -1,7 +1,7 @@
 /**
  * Medical365 - Form Handler
  * - Contact Form (#contact-form): Handled via Web3Forms API and redirects to thank-you.html (No Leads365 CRM call)
- * - Book a Demo Form (#demo-form): Integrated with Leads365 CRM API (source: 'Website')
+ * - Book a Demo Form (#demo-form): Integrated with Leads365 CRM API (source: 'Website') + Automated Email Notification via Web3Forms
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var LEADS365_ENDPOINT = "https://leadmanagementsystem-hdtp.onrender.com/api/integrations/leads/website";
     var LEADS365_SITE_KEY = "lf_site_8a931b7f0132ecb5252602a95c1cf696";
 
-    // --- WEB3FORMS CONFIGURATION (CONTACT FORM ONLY) ---
+    // --- WEB3FORMS CONFIGURATION ---
     var WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+    var WEB3FORMS_ACCESS_KEY = "a58a7a41-4d2b-4c70-baa6-8255ee7f5be0";
     var THANK_YOU_PAGE = "thank-you.html";
 
     // --- MATH CAPTCHA STATE ---
@@ -296,6 +297,76 @@ document.addEventListener('DOMContentLoaded', function() {
                     (data && (data.error || data.message)) ||
                     'Failed to submit demo enquiry (HTTP ' + response.status + ')'
                 );
+            }
+
+            // Extract CRM Lead ID if provided by Leads365 backend
+            var crmLeadId = (data.data && (data.data.id || data.data._id)) || data.lead_id || data.leadId || null;
+
+            // 9. Confirmed Success: Trigger Email Notification via previously configured Web3Forms
+            // (Priority 7 & 8: Triggered ONLY after successful CRM lead creation; failure does NOT rollback CRM lead)
+            try {
+                var emailAccessKey = formData.get('access_key') || WEB3FORMS_ACCESS_KEY;
+                var emailPayload = {
+                    access_key: emailAccessKey,
+                    subject: 'New Medical365 Demo Lead: ' + fullName + (orgName ? ' (' + orgName + ')' : ''),
+                    from_name: 'Medical365 Leads',
+                    name: fullName,
+                    phone: phone
+                };
+
+                if (email) {
+                    emailPayload.email = email;
+                }
+
+                if (orgName) {
+                    emailPayload.company = orgName;
+                }
+
+                if (facType) {
+                    emailPayload.facility_type = facType;
+                }
+
+                if (bedCount) {
+                    emailPayload.bed_count = bedCount;
+                }
+
+                var requestedService = facType ? (facType + (bedCount ? ' (' + bedCount + ')' : '')) : '';
+                if (requestedService) {
+                    emailPayload.requested_product_service = requestedService;
+                }
+
+                if (challenges) {
+                    emailPayload.enquiry_message = challenges;
+                }
+
+                emailPayload.lead_source = 'Website';
+
+                if (crmLeadId) {
+                    emailPayload.crm_lead_id = crmLeadId;
+                }
+
+                emailPayload.submission_date_time = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) + ' IST';
+                emailPayload.source_page_url = window.location.href;
+                emailPayload.page_title = document.title;
+
+                var emailResponse = await fetch(WEB3FORMS_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(emailPayload)
+                });
+
+                var emailResult = await emailResponse.json().catch(function() { return {}; });
+                if (!emailResponse.ok || !emailResult.success) {
+                    console.warn('[Leads365] CRM lead created successfully (ID: ' + crmLeadId + '), but email notification delivery failed:', emailResult);
+                } else {
+                    console.log('[Leads365] Email notification successfully delivered for CRM lead:', crmLeadId);
+                }
+            } catch (emailError) {
+                // Priority 8: Email failure must not delete or roll back a successfully created CRM lead
+                console.error('[Leads365] CRM lead created successfully (ID: ' + crmLeadId + '), but email notification encountered error:', emailError);
             }
 
             // Confirmed Success
