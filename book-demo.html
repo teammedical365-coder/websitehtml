@@ -506,6 +506,293 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- AI Search & LLM Engine Optimization (AEO / GEO) -->
     <link rel="alternate" type="text/markdown" title="LLM Context Summary" href="/llms.txt">
     <link rel="alternate" type="text/markdown" title="Full LLM Knowledge Base" href="/llms-full.txt">
+
+    <!-- Scoped Medical365 Video Walkthrough Styles -->
+    <style id="m365-vid-styles">
+      .m365-vid-section {
+        padding: 80px 24px;
+        background: #f8fafc;
+        border-top: 1px solid #e2e8f0;
+        border-bottom: 1px solid #e2e8f0;
+        position: relative;
+      }
+      .m365-vid-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .m365-vid-header {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto 48px;
+      }
+      .m365-vid-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        background: rgba(37, 99, 235, 0.08);
+        color: #2563eb;
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        border-radius: 9999px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+      .m365-vid-heading {
+        font-size: clamp(1.85rem, 4vw, 2.65rem);
+        font-weight: 800;
+        color: #0f172a;
+        line-height: 1.25;
+        margin: 0 0 16px;
+        letter-spacing: -0.02em;
+      }
+      .m365-vid-subheading {
+        font-size: 1.05rem;
+        color: #64748b;
+        line-height: 1.6;
+        margin: 0;
+      }
+      .m365-vid-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+      .m365-vid-grid-single {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .m365-vid-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+      .m365-vid-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+        border-color: #cbd5e1;
+      }
+      .m365-vid-facade {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        background: #0f172a;
+        overflow: hidden;
+        cursor: pointer;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .m365-vid-thumb {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+      .m365-vid-card:hover .m365-vid-thumb {
+        transform: scale(1.03);
+        filter: brightness(0.95);
+      }
+      .m365-vid-badge-duration {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(15, 23, 42, 0.85);
+        backdrop-filter: blur(4px);
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 6px;
+        z-index: 2;
+        pointer-events: none;
+        letter-spacing: 0.02em;
+      }
+      .m365-vid-play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 58px;
+        height: 58px;
+        background: #dc2626;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 20px rgba(220, 38, 38, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.9);
+        transition: transform 0.25s ease, background-color 0.25s ease;
+        z-index: 2;
+      }
+      .m365-vid-play-btn svg {
+        margin-left: 3px;
+        fill: #ffffff;
+        width: 24px;
+        height: 24px;
+      }
+      .m365-vid-facade:hover .m365-vid-play-btn {
+        transform: translate(-50%, -50%) scale(1.12);
+        background: #b91c1c;
+      }
+      .m365-vid-body {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .m365-vid-part-tag {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #2563eb;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
+      .m365-vid-card-title {
+        font-size: 1.18rem;
+        font-weight: 700;
+        color: #0f172a;
+        line-height: 1.35;
+        margin: 0 0 10px;
+      }
+      .m365-vid-card-desc {
+        font-size: 0.92rem;
+        color: #475569;
+        line-height: 1.55;
+        margin: 0 0 20px;
+        flex-grow: 1;
+      }
+      .m365-vid-card-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #2563eb;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: color 0.2s ease, gap 0.2s ease;
+      }
+      .m365-vid-card-cta:hover {
+        color: #1d4ed8;
+        gap: 10px;
+      }
+      .m365-vid-single-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px;
+        margin-top: 8px;
+      }
+      .m365-vid-btn-signup {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        background: #0FAE9B;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s ease;
+      }
+      .m365-vid-btn-signup:hover {
+        background: #0c8c7d;
+      }
+      .m365-vid-btn-demo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        background: #2563eb;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s ease;
+      }
+      .m365-vid-btn-demo:hover {
+        background: #1d4ed8;
+      }
+      @media (max-width: 960px) {
+        .m365-vid-grid {
+          grid-template-columns: 1fr;
+          max-width: 580px;
+          margin: 0 auto;
+        }
+        .m365-vid-section {
+          padding: 60px 18px;
+        }
+      }
+    </style>
+
+    <!-- Medical365 Video Walkthrough ItemList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Medical365 Video Walkthrough Series",
+      "description": "A 3-part video walkthrough covering setup, online appointment scheduling, and OPD consultations with digital billing on Medical365.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "VideoObject",
+            "name": "How to Log In & Set Up Medical365: Free Clinic Software for Doctors | Part 1",
+            "description": "Create your free clinic account in under a minute with your practice details and doctor profile.",
+            "thumbnailUrl": [
+              "https://i.ytimg.com/vi/kOS98w6jbI8/hqdefault.jpg"
+            ],
+            "uploadDate": "2026-11-17T00:00:00+05:30",
+            "duration": "PT57S",
+            "contentUrl": "https://www.youtube.com/watch?v=kOS98w6jbI8",
+            "embedUrl": "https://www.youtube-nocookie.com/embed/kOS98w6jbI8"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "VideoObject",
+            "name": "How to Manage Patient Appointments Online: Medical365 Free Plan | Part 2",
+            "description": "Log in securely with OTP, register patients, and schedule OPD appointments with fee tracking.",
+            "thumbnailUrl": [
+              "https://i.ytimg.com/vi/H32lYVDt7yA/hqdefault.jpg"
+            ],
+            "uploadDate": "2026-11-17T00:00:00+05:30",
+            "duration": "PT2M22S",
+            "contentUrl": "https://www.youtube.com/watch?v=H32lYVDt7yA",
+            "embedUrl": "https://www.youtube-nocookie.com/embed/H32lYVDt7yA"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "VideoObject",
+            "name": "Track Patients, Payments & Follow-Ups in One Portal: Medical365 | Part 3",
+            "description": "Run live OPD consultations, download PDF prescriptions, monitor collections, and track revisits.",
+            "thumbnailUrl": [
+              "https://i.ytimg.com/vi/Ma2u_6bh_EM/hqdefault.jpg"
+            ],
+            "uploadDate": "2026-11-17T00:00:00+05:30",
+            "duration": "PT2M48S",
+            "contentUrl": "https://www.youtube.com/watch?v=Ma2u_6bh_EM",
+            "embedUrl": "https://www.youtube-nocookie.com/embed/Ma2u_6bh_EM"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -1340,6 +1627,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 ═══════════════════════════════════════════════════════════════ -->
     
 
+    <!-- ═══════════════════════════════════════════════════════════════
+         MEDICAL365 3-PART VIDEO WALKTHROUGH SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="m365-video-walkthrough" class="m365-vid-section">
+        <div class="m365-vid-container">
+            <div class="m365-vid-header">
+                <span class="m365-vid-pill">▶ Interactive Video Walkthrough</span>
+                <h2 class="m365-vid-heading">See Medical365 in Action: 3-Step Walkthrough</h2>
+                <p class="m365-vid-subheading">Watch how doctors and clinics set up in under 60 seconds, automate patient appointment queues, and run OPD consultations with instant digital prescriptions.</p>
+            </div>
+
+            <div class="m365-vid-grid">
+                <!-- Card 1: Setup -->
+                <div class="m365-vid-card">
+                    <div class="m365-vid-facade" data-video-id="kOS98w6jbI8" data-video-title="How to Log In & Set Up Medical365: Free Clinic Software for Doctors | Part 1" role="button" tabindex="0" aria-label="Play Part 1: How to Log In & Set Up Medical365">
+                        <img src="https://i.ytimg.com/vi/kOS98w6jbI8/hqdefault.jpg" alt="How to Log In & Set Up Medical365 Clinic Software Thumbnail" class="m365-vid-thumb" loading="lazy" width="480" height="360">
+                        <div class="m365-vid-play-btn" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <span class="m365-vid-badge-duration">0:57</span>
+                    </div>
+                    <div class="m365-vid-body">
+                        <div class="m365-vid-part-tag">Part 1 • Clinic Setup</div>
+                        <h3 class="m365-vid-card-title">Log In & Set Up Your Clinic</h3>
+                        <p class="m365-vid-card-desc">Create your free clinic account in under a minute with your practice details and doctor profile.</p>
+                        <button type="button" class="m365-vid-card-cta" onclick="this.closest('.m365-vid-card').querySelector('.m365-vid-facade').click()">
+                            Watch Video (0:57) <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Appointments -->
+                <div class="m365-vid-card">
+                    <div class="m365-vid-facade" data-video-id="H32lYVDt7yA" data-video-title="How to Manage Patient Appointments Online: Medical365 Free Plan | Part 2" role="button" tabindex="0" aria-label="Play Part 2: How to Manage Patient Appointments Online">
+                        <img src="https://i.ytimg.com/vi/H32lYVDt7yA/hqdefault.jpg" alt="How to Manage Patient Appointments Online Medical365 Thumbnail" class="m365-vid-thumb" loading="lazy" width="480" height="360">
+                        <div class="m365-vid-play-btn" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <span class="m365-vid-badge-duration">2:22</span>
+                    </div>
+                    <div class="m365-vid-body">
+                        <div class="m365-vid-part-tag">Part 2 • Appointments & Queue</div>
+                        <h3 class="m365-vid-card-title">Manage Appointments Online</h3>
+                        <p class="m365-vid-card-desc">Log in securely with OTP, register patients, and schedule OPD appointments with fee tracking.</p>
+                        <button type="button" class="m365-vid-card-cta" onclick="this.closest('.m365-vid-card').querySelector('.m365-vid-facade').click()">
+                            Watch Video (2:22) <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Consultations, Payments & Follow-ups -->
+                <div class="m365-vid-card">
+                    <div class="m365-vid-facade" data-video-id="Ma2u_6bh_EM" data-video-title="Track Patients, Payments & Follow-Ups in One Portal: Medical365 | Part 3" role="button" tabindex="0" aria-label="Play Part 3: Track Patients, Payments & Follow-Ups">
+                        <img src="https://i.ytimg.com/vi/Ma2u_6bh_EM/hqdefault.jpg" alt="Track Patients, Payments & Follow-Ups in One Portal Medical365 Thumbnail" class="m365-vid-thumb" loading="lazy" width="480" height="360">
+                        <div class="m365-vid-play-btn" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <span class="m365-vid-badge-duration">2:48</span>
+                    </div>
+                    <div class="m365-vid-body">
+                        <div class="m365-vid-part-tag">Part 3 • Clinical & Billing</div>
+                        <h3 class="m365-vid-card-title">Rx, Payments & Follow-Ups</h3>
+                        <p class="m365-vid-card-desc">Run live OPD consultations, download PDF prescriptions, monitor collections, and track revisits.</p>
+                        <button type="button" class="m365-vid-card-cta" onclick="this.closest('.m365-vid-card').querySelector('.m365-vid-facade').click()">
+                            Watch Video (2:48) <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer id="mega-footer" role="contentinfo">
 
         <!-- ── TOP CTA BAR ── -->
@@ -1950,6 +2309,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
     <script src="global-scripts.js?v=5.0"></script>
     <script src="form-handler.js?v=1.0"></script>
+
+    <!-- Medical365 Video Walkthrough Facade Script -->
+    <script id="m365-vid-script">
+    (function() {
+        function initM365VideoFacades() {
+            var facades = document.querySelectorAll('.m365-vid-facade[data-video-id]');
+            facades.forEach(function(facade) {
+                if (facade.getAttribute('data-m365-init') === 'true') return;
+                facade.setAttribute('data-m365-init', 'true');
+                
+                function playVideo() {
+                    var vidId = facade.getAttribute('data-video-id');
+                    var vidTitle = facade.getAttribute('data-video-title') || 'Medical365 Video Walkthrough';
+                    if (!vidId) return;
+                    
+                    var iframe = document.createElement('iframe');
+                    iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(vidId) + '?autoplay=1&rel=0');
+                    iframe.setAttribute('title', vidTitle);
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                    iframe.setAttribute('allowfullscreen', '1');
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '0';
+                    iframe.style.left = '0';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.border = '0';
+                    
+                    facade.innerHTML = '';
+                    facade.appendChild(iframe);
+                }
+                
+                facade.addEventListener('click', playVideo);
+                facade.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        playVideo();
+                    }
+                });
+            });
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initM365VideoFacades);
+        } else {
+            initM365VideoFacades();
+        }
+    })();
+    </script>
 </body>
 
 </html>
