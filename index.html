@@ -1031,6 +1031,184 @@
           padding: 60px 18px;
         }
       }
+
+      /* Video Tour Popup Modal */
+      .m365-vid-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.85);
+        backdrop-filter: blur(8px);
+        z-index: 999999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+      .m365-vid-modal-overlay.active {
+        display: flex;
+        opacity: 1;
+      }
+      .m365-vid-modal-container {
+        background: #0f172a;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+        max-width: 920px;
+        width: 100%;
+        overflow: hidden;
+        box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        animation: m365ModalScaleIn 0.25s ease-out;
+      }
+      @keyframes m365ModalScaleIn {
+        from { transform: scale(0.95); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      .m365-vid-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 22px;
+        background: #1e293b;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .m365-vid-modal-title {
+        color: #f8fafc;
+        font-size: 1.05rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+      }
+      .m365-vid-modal-title-pill {
+        background: #2563eb;
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 9999px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .m365-vid-modal-close {
+        background: rgba(255, 255, 255, 0.08);
+        border: none;
+        color: #94a3b8;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.25rem;
+        line-height: 1;
+        transition: all 0.2s ease;
+      }
+      .m365-vid-modal-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        transform: rotate(90deg);
+      }
+      .m365-vid-modal-player-wrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #000000;
+      }
+      .m365-vid-modal-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .m365-vid-modal-tabs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background: #1e293b;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .m365-vid-modal-tab-btn {
+        background: transparent;
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 14px 16px;
+        color: #94a3b8;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .m365-vid-modal-tab-btn:hover {
+        background: rgba(255, 255, 255, 0.04);
+        color: #f1f5f9;
+      }
+      .m365-vid-modal-tab-btn.active {
+        background: rgba(37, 99, 235, 0.12);
+        border-bottom-color: #3b82f6;
+        color: #ffffff;
+      }
+      .m365-vid-modal-tab-tag {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #38bdf8;
+        letter-spacing: 0.04em;
+      }
+      .m365-vid-modal-tab-name {
+        font-size: 0.875rem;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .m365-vid-modal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 22px;
+        background: #0f172a;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .m365-vid-modal-footer-text {
+        color: #94a3b8;
+        font-size: 0.85rem;
+      }
+      .m365-vid-modal-footer-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      @media (max-width: 700px) {
+        .m365-vid-modal-tabs {
+          grid-template-columns: 1fr;
+        }
+        .m365-vid-modal-tab-btn {
+          padding: 10px 14px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .m365-vid-modal-tab-btn.active {
+          border-left: 3px solid #3b82f6;
+          border-bottom-color: rgba(255, 255, 255, 0.06);
+        }
+        .m365-vid-modal-footer {
+          flex-direction: column;
+          align-items: stretch;
+          text-align: center;
+        }
+        .m365-vid-modal-footer-actions {
+          justify-content: center;
+        }
+      }
     </style>
 
     <!-- Medical365 Video Walkthrough ItemList Schema -->
@@ -1746,7 +1924,10 @@
                 </p>
                 <div class="cta-group" style="animation-delay: 0.3s;">
                     <a href="https://www.medical365.in/book-demo" class="btn-v2-primary">Book a Free Demo</a>
-                    <a href="#platform" class="btn-v2-secondary">Platform Tour</a>
+                    <a href="#platform" class="btn-v2-secondary m365-vid-tour-trigger" id="m365-hero-tour-btn" role="button" aria-haspopup="dialog" style="display:inline-flex;align-items:center;gap:7px;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform:translateY(-0.5px);"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Watch Video Tour</span>
+                    </a>
                 </div>
 
                 <div class="trust-stats" style="animation-delay: 0.4s;">
@@ -4845,9 +5026,48 @@
         })();
     </script>
 
-    <!-- Medical365 Video Walkthrough Facade Script -->
+    <!-- Medical365 Video Tour Popup Modal -->
+    <div id="m365-video-modal" class="m365-vid-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="m365-modal-title" style="display:none;">
+        <div class="m365-vid-modal-container">
+            <div class="m365-vid-modal-header">
+                <h3 id="m365-modal-title" class="m365-vid-modal-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#3b82f6" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                    <span>Medical365 Video Tour</span>
+                    <span class="m365-vid-modal-title-pill">Interactive</span>
+                </h3>
+                <button type="button" class="m365-vid-modal-close" id="m365-modal-close-btn" aria-label="Close video tour modal">&times;</button>
+            </div>
+            <div class="m365-vid-modal-player-wrap">
+                <iframe id="m365-modal-iframe" class="m365-vid-modal-iframe" src="" title="Medical365 Platform Tour" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="m365-vid-modal-tabs" role="tablist" aria-label="Video Walkthrough Parts">
+                <button type="button" class="m365-vid-modal-tab-btn active" role="tab" aria-selected="true" data-video-id="kOS98w6jbI8" data-video-title="Part 1: How to Log In & Set Up Medical365">
+                    <span class="m365-vid-modal-tab-tag">Part 1 • 0:57</span>
+                    <span class="m365-vid-modal-tab-name">Log In & Setup</span>
+                </button>
+                <button type="button" class="m365-vid-modal-tab-btn" role="tab" aria-selected="false" data-video-id="H32lYVDt7yA" data-video-title="Part 2: How to Manage Patient Appointments Online">
+                    <span class="m365-vid-modal-tab-tag">Part 2 • 2:22</span>
+                    <span class="m365-vid-modal-tab-name">Appointments & Queue</span>
+                </button>
+                <button type="button" class="m365-vid-modal-tab-btn" role="tab" aria-selected="false" data-video-id="Ma2u_6bh_EM" data-video-title="Part 3: Track Patients, Payments & Follow-Ups">
+                    <span class="m365-vid-modal-tab-tag">Part 3 • 2:48</span>
+                    <span class="m365-vid-modal-tab-name">Rx, Billing & Follow-Ups</span>
+                </button>
+            </div>
+            <div class="m365-vid-modal-footer">
+                <span class="m365-vid-modal-footer-text">Want a personalized 1-on-1 walkthrough for your clinic or hospital?</span>
+                <div class="m365-vid-modal-footer-actions">
+                    <a href="https://www.medical365.in/book-demo" class="btn-v2-primary" style="padding:8px 18px;font-size:0.875rem;border-radius:8px;">Book Free Demo</a>
+                    <a href="#platform" class="m365-vid-modal-scroll-link" id="m365-modal-scroll-btn" style="color:#94a3b8;font-size:0.85rem;text-decoration:underline;">View All 3 Cards Below ↓</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medical365 Video Walkthrough & Modal Controller Script -->
     <script id="m365-vid-script">
     (function() {
+        // Facades on in-page cards
         function initM365VideoFacades() {
             var facades = document.querySelectorAll('.m365-vid-facade[data-video-id]');
             facades.forEach(function(facade) {
@@ -4885,10 +5105,111 @@
                 });
             });
         }
+
+        // Modal controller
+        function initM365VideoModal() {
+            var modal = document.getElementById('m365-video-modal');
+            var iframe = document.getElementById('m365-modal-iframe');
+            var closeBtn = document.getElementById('m365-modal-close-btn');
+            var scrollBtn = document.getElementById('m365-modal-scroll-btn');
+            var tabs = document.querySelectorAll('.m365-vid-modal-tab-btn');
+            var triggers = document.querySelectorAll('.m365-vid-tour-trigger');
+
+            if (!modal || !iframe) return;
+
+            function loadVideo(vidId, vidTitle) {
+                iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(vidId) + '?autoplay=1&rel=0');
+                if (vidTitle) iframe.setAttribute('title', vidTitle);
+            }
+
+            function openModal(initialVidId, initialTitle) {
+                var targetId = initialVidId || 'kOS98w6jbI8';
+                tabs.forEach(function(tab) {
+                    var isActive = (tab.getAttribute('data-video-id') === targetId);
+                    tab.classList.toggle('active', isActive);
+                    tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    if (isActive && !initialTitle) {
+                        initialTitle = tab.getAttribute('data-video-title');
+                    }
+                });
+                loadVideo(targetId, initialTitle);
+                modal.style.display = 'flex';
+                // Trigger reflow for CSS opacity transition
+                void modal.offsetWidth;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                iframe.setAttribute('src', '');
+                document.body.style.overflow = '';
+                setTimeout(function() {
+                    if (!modal.classList.contains('active')) {
+                        modal.style.display = 'none';
+                    }
+                }, 250);
+            }
+
+            triggers.forEach(function(trigger) {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var vidId = trigger.getAttribute('data-video-id') || 'kOS98w6jbI8';
+                    var vidTitle = trigger.getAttribute('data-video-title');
+                    openModal(vidId, vidTitle);
+                });
+            });
+
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    var vidId = tab.getAttribute('data-video-id');
+                    var vidTitle = tab.getAttribute('data-video-title');
+                    tabs.forEach(function(t) {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+                    loadVideo(vidId, vidTitle);
+                });
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            if (scrollBtn) {
+                scrollBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    closeModal();
+                    var targetSection = document.getElementById('m365-video-walkthrough') || document.getElementById('platform');
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+        }
+
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initM365VideoFacades);
+            document.addEventListener('DOMContentLoaded', function() {
+                initM365VideoFacades();
+                initM365VideoModal();
+            });
         } else {
             initM365VideoFacades();
+            initM365VideoModal();
         }
     })();
     </script>
