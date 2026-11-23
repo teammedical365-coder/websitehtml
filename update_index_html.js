@@ -5,7 +5,7 @@ const indexPath = path.join(__dirname, 'index.html');
 let content = fs.readFileSync(indexPath, 'utf8');
 
 // Title verification - ensure it's exact
-let newTitle = '<title>Medical365 | #1 Hospital Management Software India | ABDM & NABH Compliant</title>';
+let newTitle = '<title>Medical365 | Hospital Management Software India | ABDM Compliant</title>';
 content = content.replace(/<title>.*?<\/title>/is, newTitle);
 
 // Add missing meta tags
@@ -33,7 +33,7 @@ const orgSchema = `
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Medical365",
-  "alternateName": "Medical365 by Chonexa Technologies",
+  "alternateName": ["Medical 365"],
   "url": "https://www.medical365.in",
   "logo": "https://www.medical365.in/medical365logo1.png",
   "description": "India's #1 ABDM compliant Hospital Management Software for hospitals, clinics and multi-specialty facilities.",
@@ -70,6 +70,7 @@ const webSiteSchema = `
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Medical365",
+  "alternateName": "Medical 365",
   "url": "https://www.medical365.in",
   "potentialAction": {
     "@type": "SearchAction",
