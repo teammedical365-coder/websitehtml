@@ -322,22 +322,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       color: var(--color-text-secondary) !important;
     }
 
-    /* 2-Card Responsive Balanced Grid */
+    /* 1-Card Responsive Balanced Grid */
     .pricing-grid {
-      display: grid !important;
-      grid-template-columns: repeat(2, minmax(280px, 460px)) !important;
+      display: flex !important;
       justify-content: center !important;
-      gap: 32px !important;
       align-items: stretch !important;
-      max-width: 960px !important;
-      margin: 0 auto !important;
+      max-width: 480px !important;
+      width: 100% !important;
+      margin: 30px auto 0 !important;
     }
 
-    @media (max-width: 767px) {
-      .pricing-grid {
-        grid-template-columns: 1fr !important;
-        gap: 24px !important;
-      }
+    .pricing-card {
+      max-width: 480px !important;
+      width: 100% !important;
     }
 
     .pricing-card {
@@ -1068,42 +1065,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="pricing-section" id="full-pricing" style="padding-top: 0;" aria-labelledby="pricing-plans-heading">
         <div class="container">
             <h2 id="pricing-plans-heading" class="sr-only">Available Hospital Software Pricing Plans & Subscriptions</h2>
-            <!-- Interactive Zero-Latency Plan Switcher -->
-            <div class="pricing-switcher-wrapper">
-                <div class="pricing-switcher" role="tablist" aria-label="Billing frequency toggle">
-                    <button type="button" class="switch-btn active" id="btn-annual" role="tab" aria-selected="true" aria-controls="full-pricing">
-                        Billed Annually <span class="discount-pill">Save 50%</span>
-                    </button>
-                    <button type="button" class="switch-btn" id="btn-monthly" role="tab" aria-selected="false" aria-controls="full-pricing">
-                        Billed Monthly
-                    </button>
-                </div>
-            </div>
-
-            <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                
-                <!-- Plan 1 -->
-                <div class="pricing-card">
-                    <div class="badge-offer">50% SPECIAL OFF</div>
-                    <h3 class="plan-name">Starter Plan</h3>
-                    <p class="plan-desc">Optimized for individual Doctors & Clinics.</p>
-                    <div class="plan-price-wrapper">
-                        <div class="plan-price"><span>₹</span><span id="price-starter">6,000</span><span id="period-starter"> / Year</span></div>
-                        <span class="plan-worth" id="worth-starter">Worth: ₹12,000</span>
-                        <span class="plan-price-sub" id="sub-starter">₹500/month (billed annually)</span>
-                    </div>
-                    <h4 class="feature-title">Operational Provision</h4>
-                    <ul class="plan-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> 1 Doctor Account</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> 1 Receptionist Account</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Unlimited Patients</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> All Facilities Included*</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Dedicated Support</li>
-                    </ul>
-<a href="https://www.medical365.in/book-demo" class="btn-pricing btn-pricing-outline">Select Starter Plan</a>
-                </div>
-
-                <!-- Plan 4 -->
+            <div class="pricing-grid">
+                <!-- Enterprise Plan -->
                 <div class="pricing-card">
                     <div class="badge-offer">BESPOKE SLA</div>
                     <h3 class="plan-name">Enterprise Plan</h3>
@@ -1120,9 +1083,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> All Facilities Included*</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Dedicated Account Manager</li>
                     </ul>
-<a href="https://www.medical365.in/book-demo" class="btn-pricing btn-pricing-outline">Contact Sales</a>
+                    <a href="https://www.medical365.in/book-demo" class="btn-pricing btn-pricing-outline">Contact Sales</a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -1909,75 +1871,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script src="global-scripts.js"></script>
 
-  <script>
-    // Zero-Latency Android Plan Switcher Engine
-    (function() {
-        var btnAnnual = document.getElementById('btn-annual');
-        var btnMonthly = document.getElementById('btn-monthly');
-        if (!btnAnnual || !btnMonthly) return;
-
-        var priceStarter = document.getElementById('price-starter');
-        var periodStarter = document.getElementById('period-starter');
-        var worthStarter = document.getElementById('worth-starter');
-        var subStarter = document.getElementById('sub-starter');
-
-        function switchBilling(mode) {
-            if (mode === 'annual') {
-                btnAnnual.classList.add('active');
-                btnAnnual.setAttribute('aria-selected', 'true');
-                btnMonthly.classList.remove('active');
-                btnMonthly.setAttribute('aria-selected', 'false');
-
-                if (priceStarter) priceStarter.textContent = '6,000';
-                if (periodStarter) periodStarter.textContent = ' / Year';
-                if (worthStarter) worthStarter.style.display = 'inline-block';
-                if (subStarter) subStarter.textContent = '₹500/month (billed annually)';
-
-                // Show 50% OFF badges only on Annual Plan
-                var offerBadges = document.querySelectorAll('#full-pricing .pricing-card .badge-offer');
-                offerBadges.forEach(function(b) {
-                    if (b.textContent.includes('OFF')) b.style.display = 'inline-block';
-                });
-            } else {
-                btnMonthly.classList.add('active');
-                btnMonthly.setAttribute('aria-selected', 'true');
-                btnAnnual.classList.remove('active');
-                btnAnnual.setAttribute('aria-selected', 'false');
-
-                if (priceStarter) priceStarter.textContent = '1,000';
-                if (periodStarter) periodStarter.textContent = ' / Month';
-                if (worthStarter) worthStarter.style.display = 'none';
-                if (subStarter) subStarter.textContent = 'Flexible monthly billing';
-
-                // Hide 50% OFF badges on Monthly Plan
-                var offerBadges = document.querySelectorAll('#full-pricing .pricing-card .badge-offer');
-                offerBadges.forEach(function(b) {
-                    if (b.textContent.includes('OFF')) b.style.display = 'none';
-                });
-            }
-        }
-
-        // Fast pointerdown event fires with 0ms latency on Android
-        btnAnnual.addEventListener('pointerdown', function() {
-            switchBilling('annual');
-        }, { passive: true });
-
-        btnMonthly.addEventListener('pointerdown', function() {
-            switchBilling('monthly');
-        }, { passive: true });
-
-        // Standard click listener for keyboard and screen-readers
-        btnAnnual.addEventListener('click', function(e) {
-            e.preventDefault();
-            switchBilling('annual');
-        });
-
-        btnMonthly.addEventListener('click', function(e) {
-            e.preventDefault();
-            switchBilling('monthly');
-        });
-    })();
-  </script>
 
 </body>
 </html>
