@@ -50,7 +50,7 @@ const orgSchema = `
   },
   "areaServed": "IN",
   "sameAs": [
-    "https://www.linkedin.com/in/medical-hms-612628405/",
+    "https://www.linkedin.com/company/medical365/",
     "https://x.com/medical_365",
     "https://www.facebook.com/medical365HMS/",
     "https://www.youtube.com/@Medical365-HMS",
