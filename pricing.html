@@ -322,25 +322,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       color: var(--color-text-secondary) !important;
     }
 
-    /* 4-Card Responsive Balanced Grid (Issue 13) */
+    /* 2-Card Responsive Balanced Grid */
     .pricing-grid {
       display: grid !important;
-      grid-template-columns: repeat(4, 1fr) !important;
-      gap: 20px !important;
+      grid-template-columns: repeat(2, minmax(280px, 460px)) !important;
+      justify-content: center !important;
+      gap: 32px !important;
       align-items: stretch !important;
-    }
-
-    @media (max-width: 1200px) and (min-width: 768px) {
-      .pricing-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 24px !important;
-      }
+      max-width: 960px !important;
+      margin: 0 auto !important;
     }
 
     @media (max-width: 767px) {
       .pricing-grid {
         grid-template-columns: 1fr !important;
-        gap: 20px !important;
+        gap: 24px !important;
       }
     }
 
@@ -1105,50 +1101,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Dedicated Support</li>
                     </ul>
 <a href="https://www.medical365.in/book-demo" class="btn-pricing btn-pricing-outline">Select Starter Plan</a>
-                </div>
-
-                <!-- Plan 2 -->
-                <div class="pricing-card popular">
-                    <div class="badge-popular">Most Popular</div>
-                    <div class="badge-offer">50% SPECIAL OFF</div>
-                    <h3 class="plan-name">Clinic Basic</h3>
-                    <p class="plan-desc">Optimized For Multi Doctors & Clinics.</p>
-                    <div class="plan-price-wrapper">
-                        <div class="plan-price"><span>₹</span><span id="price-clinic">15,000</span><span id="period-clinic"> / Year</span></div>
-                        <span class="plan-worth" id="worth-clinic">Worth: ₹30,000</span>
-                        <span class="plan-price-sub" id="sub-clinic">₹1,250/month (billed annually)</span>
-                    </div>
-                    <h4 class="feature-title">Operational Provision</h4>
-                    <ul class="plan-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Up to 5 Doctor Accounts</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> 4 Staff Accounts (Reception + Admin + 2)</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Unlimited Patients</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> All Facilities Included*</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Dedicated Support</li>
-                    </ul>
-<a href="https://www.medical365.in/book-demo" class="btn-pricing btn-pricing-primary">Select Clinic Basic</a>
-                </div>
-
-                <!-- Plan 3 -->
-                <div class="pricing-card">
-                    <div class="badge-offer">50% SPECIAL OFF</div>
-                    <h3 class="plan-name">Multi-Specialty Starter</h3>
-                    <p class="plan-desc">Optimized For Multi-Specialty Hospitals And Diagnostic Centers.</p>
-                    <div class="plan-price-wrapper">
-                        <div class="plan-price"><span>₹</span><span id="price-multi">30,000</span><span id="period-multi"> / Year</span></div>
-                        <span class="plan-worth" id="worth-multi">Worth: ₹60,000</span>
-                        <span class="plan-price-sub" id="sub-multi">₹2,500/month (billed annually)</span>
-                    </div>
-                    <h4 class="feature-title">Operational Provision</h4>
-                    <ul class="plan-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Up to 15 Doctor Accounts</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Up to 25 Staff Accounts</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> 1 Branch Location</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Unlimited Patients</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> All Facilities Included*</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg> Dedicated Support</li>
-                    </ul>
-<a href="https://www.medical365.in/book-demo" class="btn-pricing btn-pricing-outline">Select Multi-Specialty</a>
                 </div>
 
                 <!-- Plan 4 -->
@@ -1969,16 +1921,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         var worthStarter = document.getElementById('worth-starter');
         var subStarter = document.getElementById('sub-starter');
 
-        var priceClinic = document.getElementById('price-clinic');
-        var periodClinic = document.getElementById('period-clinic');
-        var worthClinic = document.getElementById('worth-clinic');
-        var subClinic = document.getElementById('sub-clinic');
-
-        var priceMulti = document.getElementById('price-multi');
-        var periodMulti = document.getElementById('period-multi');
-        var worthMulti = document.getElementById('worth-multi');
-        var subMulti = document.getElementById('sub-multi');
-
         function switchBilling(mode) {
             if (mode === 'annual') {
                 btnAnnual.classList.add('active');
@@ -1990,16 +1932,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 if (periodStarter) periodStarter.textContent = ' / Year';
                 if (worthStarter) worthStarter.style.display = 'inline-block';
                 if (subStarter) subStarter.textContent = '₹500/month (billed annually)';
-
-                if (priceClinic) priceClinic.textContent = '15,000';
-                if (periodClinic) periodClinic.textContent = ' / Year';
-                if (worthClinic) worthClinic.style.display = 'inline-block';
-                if (subClinic) subClinic.textContent = '₹1,250/month (billed annually)';
-
-                if (priceMulti) priceMulti.textContent = '30,000';
-                if (periodMulti) periodMulti.textContent = ' / Year';
-                if (worthMulti) worthMulti.style.display = 'inline-block';
-                if (subMulti) subMulti.textContent = '₹2,500/month (billed annually)';
 
                 // Show 50% OFF badges only on Annual Plan
                 var offerBadges = document.querySelectorAll('#full-pricing .pricing-card .badge-offer');
@@ -2016,16 +1948,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 if (periodStarter) periodStarter.textContent = ' / Month';
                 if (worthStarter) worthStarter.style.display = 'none';
                 if (subStarter) subStarter.textContent = 'Flexible monthly billing';
-
-                if (priceClinic) priceClinic.textContent = '2,500';
-                if (periodClinic) periodClinic.textContent = ' / Month';
-                if (worthClinic) worthClinic.style.display = 'none';
-                if (subClinic) subClinic.textContent = 'Flexible monthly billing';
-
-                if (priceMulti) priceMulti.textContent = '5,000';
-                if (periodMulti) periodMulti.textContent = ' / Month';
-                if (worthMulti) worthMulti.style.display = 'none';
-                if (subMulti) subMulti.textContent = 'Flexible monthly billing';
 
                 // Hide 50% OFF badges on Monthly Plan
                 var offerBadges = document.querySelectorAll('#full-pricing .pricing-card .badge-offer');
